@@ -1,0 +1,32 @@
+# Nexus Brain - Dockerfile (Surgical Fix)
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Gerekli bağımlılıklar
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Bağımlılıkları kopyala ve kur
+COPY src/requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Kaynak kodları kopyala
+COPY src/ /app/src/
+
+# Veri dizinlerini oluştur
+RUN mkdir -p /data/memory /data/chroma
+
+# Çevre değişkenleri
+ENV AI_SYNC_DATA=/data
+ENV AI_SYNC_PORT=8900
+ENV OLLAMA_URL=http://192.168.1.186:4602
+ENV PYTHONPATH=/app/src
+
+# PORT'u aç
+EXPOSE 8900
+
+# Tırnak Hatası Giderilmiş CMD (JSON Array Format)
+CMD ["python", "src/mcp_server.py"]

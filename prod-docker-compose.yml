@@ -1,0 +1,31 @@
+services:
+  nexus-brain:
+    build: .
+    container_name: nexus-brain
+    ports:
+      - "8900:8900"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - CHROMA_DATA_DIR=/app/data/chroma
+      - OLLAMA_HOST=http://192.168.1.186:4602
+      - EMBED_MODEL=nomic-embed-text
+      - LLM_MODEL=llama3.2
+    restart: unless-stopped
+
+  nexus-monitor:
+    image: python:3.11-slim
+    container_name: nexus-monitor
+    volumes:
+      - .:/app
+    working_dir: /app
+    environment:
+      - INFLUXDB_URL=http://192.168.1.186:8086
+      - INFLUXDB_TOKEN=ha-influx-premium-token-2024-v2
+      - INFLUXDB_ORG=evatechnosoft
+      - INFLUXDB_BUCKET=homeassistant
+      - OLLAMA_HOST=http://192.168.1.186:4602
+    command: /bin/sh -c "pip install requests influxdb-client && python nexus_monitor.py"
+    restart: unless-stopped
+    depends_on:
+      - nexus-brain
