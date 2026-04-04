@@ -3,6 +3,5 @@
 *.tar.gz
 files/
 fq/
-*.json
 *.log
 node_modules/

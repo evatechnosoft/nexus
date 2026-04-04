@@ -1,0 +1,26 @@
+{
+    "AnalistAgent": {
+        "role": "Research",
+        "stamina": 88.28125,
+        "luck": 80.0,
+        "tokens": 15000,
+        "limit": 128000,
+        "status": "Active"
+    },
+    "FetchAgent": {
+        "role": "WebData",
+        "stamina": 64.84375,
+        "luck": 80.0,
+        "tokens": 45000,
+        "limit": 128000,
+        "status": "Active"
+    },
+    "DesignAgent": {
+        "role": "UI/UX",
+        "stamina": 100,
+        "luck": 80.0,
+        "tokens": 0,
+        "limit": 128000,
+        "status": "Rested & Refreshed"
+    }
+}

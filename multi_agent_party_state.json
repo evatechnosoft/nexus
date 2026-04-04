@@ -1,0 +1,71 @@
+{
+    "AnalistAgent": {
+        "role": "Research",
+        "stamina": 90.625,
+        "vitality": 100,
+        "strength": 50,
+        "luck": 80.0,
+        "skills": [
+            {
+                "name": "Search",
+                "icon": "🔍"
+            },
+            {
+                "name": "Memory",
+                "icon": "🧠"
+            }
+        ],
+        "buffs": [
+            {
+                "name": "FOCUSED",
+                "icon": "🔥",
+                "effect": "+10% Luck"
+            }
+        ],
+        "debuffs": [],
+        "status": "Active",
+        "last_update": 1775293976.0196724
+    },
+    "FetchAgent": {
+        "role": "WebData",
+        "stamina": 62.5,
+        "vitality": 90,
+        "strength": 50,
+        "luck": 80.0,
+        "skills": [
+            {
+                "name": "Web",
+                "icon": "🌐"
+            },
+            {
+                "name": "Auth",
+                "icon": "🔑"
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "status": "Active",
+        "last_update": 1775293976.0218399
+    },
+    "DesignAgent": {
+        "role": "UI/UX",
+        "stamina": 100,
+        "vitality": 80,
+        "strength": 80.75,
+        "luck": 80.0,
+        "skills": [
+            {
+                "name": "Code",
+                "icon": "💻"
+            },
+            {
+                "name": "Visual",
+                "icon": "🎨"
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "status": "Rested & Compressing...",
+        "last_update": 1775293976.0229917
+    }
+}
