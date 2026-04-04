@@ -1,0 +1,41 @@
+name: ai-brain
+
+services:
+  ai-brain:
+    build:
+      context: ../files
+      dockerfile: Dockerfile
+    image: ai-brain:latest
+    container_name: ai-brain
+    ports:
+      - "8900:8900"
+    volumes:
+      - ./data:/data
+    environment:
+      - AI_SYNC_DATA=/data
+      - AI_SYNC_PORT=8900
+      - OLLAMA_URL=http://host.docker.internal:11434
+      - EMBED_MODEL=nomic-embed-text
+      - LLM_MODEL=llama3.2
+      - SYNC_TOKEN=changeme
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+    labels:
+      icon: https://cdn-icons-png.flaticon.com/512/2621/2621303.png
+    x-casaos:
+      author: self
+      category: self
+      hostname: ""
+      icon: https://cdn-icons-png.flaticon.com/512/2621/2621303.png
+      index: /health
+      is_uncontrolled: false
+      port_map: "8900"
+      scheme: http
+      store_app_id: ai-brain
+      title:
+        en_us: AI Brain MCP Server
