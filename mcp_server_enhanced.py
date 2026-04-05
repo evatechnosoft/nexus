@@ -160,8 +160,40 @@ async def ask_brain(question: str) -> dict:
 async def health_endpoint(request: Request):
     return JSONResponse({"status": "ok", "indexed": col.count()})
 
+async def sync_endpoint(request: Request):
+    token = request.headers.get("X-Sync-Token")
+    if token != SYNC_TOKEN:
+        return JSONResponse({"error": "Unauthorized"}, status_code=401)
+    
+    try:
+        data = await request.json()
+        files = data.get("files", {})
+        updated = []
+        errors = []
+        
+        for filename, content in files.items():
+            if not filename.endswith(".md"): filename += ".md"
+            safe_name = os.path.basename(filename)
+            path = MEMORY_DIR / safe_name
+            try:
+                path.write_text(content, encoding="utf-8")
+                await _index_file(safe_name, content)
+                updated.append(safe_name)
+            except Exception as e:
+                errors.append(f"{safe_name}: {str(e)}")
+        
+        return JSONResponse({
+            "status": "success",
+            "updated": updated,
+            "errors": errors,
+            "indexed": col.count()
+        })
+    except Exception as e:
+        return JSONResponse({"error": str(e)}, status_code=500)
+
 app = Starlette(routes=[
     Route("/health", health_endpoint, methods=["GET"]),
+    Route("/sync", sync_endpoint, methods=["POST"]),
     Mount("/", app=mcp.http_app(path="/mcp")),
 ], lifespan=asynccontextmanager(lambda app: (yield)))
 

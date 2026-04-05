@@ -5,11 +5,11 @@ from pathlib import Path
 
 # MCP Sunucusu (ZimaOS veya Localhost)
 # Kullanıcının "mcp kurduk ya orda herşey" dediği evrensel adres.
-MCP_URL = "http://localhost:8900/sync"
+MCP_URL = "http://192.168.1.186:8900/sync"
 SYNC_TOKEN = "changeme"  # mcp_server.py içindeki varsayılan token
 
 # Gönderilecek zeka (kurallar) dizini
-RULES_DIR = Path("brain/shared/rules")
+RULES_DIR = Path(r"C:\projects\skills\brain\shared\rules")
 
 def sync_rules():
     if not RULES_DIR.exists():
