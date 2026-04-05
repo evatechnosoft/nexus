@@ -104,7 +104,11 @@ Skill'leri Lazy-Load Yap
 Global'deki her skill HER mesajda yeniden yuklenir - kullanmasan bile
 10 global skill = her mesajda 10 skill'in token'i
 Cogu skill'i proje seviyesine tasi: 2 global + 8 proje = buyuk tasarruf
-
+Headless Mode (--print)
+claude --print "bu fonksiyondaki bug'i bul" < auth.js
+Oturum overhead'i sifir - claude.md, MCP, skill yuklemesi yok
+Tek seferlik isler icin ideali hizli + ucuz
+![checklisti uyarla bize](image-1.png)
 dry-run tarama yap
 nasıl kullanılacağını yapımıza nasıl oturacağını açıkla planla  hatırlat 
 
