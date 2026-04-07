@@ -130,6 +130,14 @@ metrics_state = {
     "reconcile_runs": 0,
 }
 
+# Load persisted reconcile run count
+try:
+    _runs_file = DATA_DIR / "data" / "reconcile_runs.txt"
+    if _runs_file.exists():
+        metrics_state["reconcile_runs"] = int(_runs_file.read_text())
+except Exception:
+    pass
+
 # Model capabilities
 MODEL_CAPABILITIES = {
     "claude": {
@@ -212,6 +220,16 @@ async def reconcile_report(request: Request):
     metrics_state["reconcile_nexus_synced"]  = data.get("nexus_synced", 0)
     metrics_state["reconcile_duration_s"]    = data.get("duration_s", 0.0)
     metrics_state["reconcile_runs"]         += 1
+    # Persist run count so restarts don't lose history
+    try:
+        runs_file = DATA_DIR / "data" / "reconcile_runs.txt"
+        runs_file.parent.mkdir(parents=True, exist_ok=True)
+        prev = int(runs_file.read_text()) if runs_file.exists() else 0
+        total = prev + 1
+        runs_file.write_text(str(total))
+        metrics_state["reconcile_runs"] = total
+    except Exception:
+        pass
     return {"status": "ok", "run": metrics_state["reconcile_runs"]}
 
 
