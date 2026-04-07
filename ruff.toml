@@ -1,0 +1,17 @@
+line-length = 100
+target-version = "py311"
+
+[lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]
+
+[format]
+quote-style = "double"
+
+[lint.per-file-ignores]
+"nexus-hub/core/agentops-nexus/**" = ["ALL"]
+"nexus-hub/core/nexus-brain/**" = ["ALL"]
+"nexus-hub/core/ops-automation-system/**" = ["ALL"]
+"nexus-hub/core/mcp_server.py" = ["ALL"]
+"nexus-hub/core/nexus-sync.py" = ["ALL"]
+"nexus-hub/core/ai-discovery.py" = ["ALL"]

@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pydantic>=2.6
+httpx
+requests
+fastembed
+Levenshtein
+duckduckgo-search

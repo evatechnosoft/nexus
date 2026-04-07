@@ -1,0 +1,7 @@
+.venv/
+*.zip
+*.tar.gz
+files/
+fq/
+*.log
+node_modules/

@@ -1,0 +1,7 @@
+[submodule "projects/nexus-fetcher"]
+	path = projects/nexus-fetcher
+	url = https://github.com/evatechnosoft/nexus-fetcher.git
+
+[submodule "projects/nexus-sales"]
+	path = projects/nexus-sales
+	url = https://github.com/evatechnosoft/nexus-sales.git
