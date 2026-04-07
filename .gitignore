@@ -5,3 +5,31 @@ files/
 fq/
 *.log
 node_modules/
+
+# Local side projects (own repos elsewhere)
+nexus-hub/core/nexus-brain/
+nexus-hub/core/agentops-nexus/
+nexus-hub/core/ops-automation-system/
+nexus-hub/core/projects/
+
+# Local work files (not for repo)
+*.json
+*.png
+*.webp
+brain/
+ops/
+deploy/
+skills/
+.gpt/
+.claude/
+.dollhousemcp/
+.ruff_cache/
+data/history/
+data/scripts/
+NEXUS-*.md
+MASTER_HANDOFF.md
+GEMINI.md
+work.md
+excalidraw.log
+__pycache__/
+*.pyc
