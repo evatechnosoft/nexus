@@ -120,6 +120,14 @@ metrics_state = {
     "fetch_errors": 0,
     "hybrid_searches": 0,
     "vector_searches": 0,
+    # Phase 3: Reconcile (nightly sync)
+    "reconcile_last_ts": 0,
+    "reconcile_files_local": 0,
+    "reconcile_files_github": 0,
+    "reconcile_pushed": 0,
+    "reconcile_nexus_synced": 0,
+    "reconcile_duration_s": 0.0,
+    "reconcile_runs": 0,
 }
 
 # Model capabilities
@@ -193,6 +201,20 @@ async def health():
     }
 
 
+@app.post("/api/reconcile/report")
+async def reconcile_report(request: Request):
+    """Receive nightly reconcile stats from Windows client."""
+    data = await request.json()
+    metrics_state["reconcile_last_ts"]       = data.get("ts", int(time.time()))
+    metrics_state["reconcile_files_local"]   = data.get("files_local", 0)
+    metrics_state["reconcile_files_github"]  = data.get("files_github", 0)
+    metrics_state["reconcile_pushed"]        = data.get("pushed", 0)
+    metrics_state["reconcile_nexus_synced"]  = data.get("nexus_synced", 0)
+    metrics_state["reconcile_duration_s"]    = data.get("duration_s", 0.0)
+    metrics_state["reconcile_runs"]         += 1
+    return {"status": "ok", "run": metrics_state["reconcile_runs"]}
+
+
 @app.get("/metrics")
 async def metrics():
     uptime_s = int(time.time() - metrics_state["start_time"])
@@ -245,6 +267,27 @@ nexus_hybrid_searches_total {metrics_state["hybrid_searches"]}
 # HELP nexus_vector_searches_total Total vector search requests
 # TYPE nexus_vector_searches_total counter
 nexus_vector_searches_total {metrics_state["vector_searches"]}
+# HELP nexus_reconcile_last_timestamp Unix timestamp of last nightly reconcile
+# TYPE nexus_reconcile_last_timestamp gauge
+nexus_reconcile_last_timestamp {metrics_state["reconcile_last_ts"]}
+# HELP nexus_reconcile_runs_total Total reconcile runs since restart
+# TYPE nexus_reconcile_runs_total counter
+nexus_reconcile_runs_total {metrics_state["reconcile_runs"]}
+# HELP nexus_reconcile_files_local Files found locally in last reconcile
+# TYPE nexus_reconcile_files_local gauge
+nexus_reconcile_files_local {metrics_state["reconcile_files_local"]}
+# HELP nexus_reconcile_files_github Files found on GitHub in last reconcile
+# TYPE nexus_reconcile_files_github gauge
+nexus_reconcile_files_github {metrics_state["reconcile_files_github"]}
+# HELP nexus_reconcile_pushed_total Files pushed to GitHub in last reconcile
+# TYPE nexus_reconcile_pushed_total gauge
+nexus_reconcile_pushed_total {metrics_state["reconcile_pushed"]}
+# HELP nexus_reconcile_nexus_synced_total Files synced to Nexus in last reconcile
+# TYPE nexus_reconcile_nexus_synced_total gauge
+nexus_reconcile_nexus_synced_total {metrics_state["reconcile_nexus_synced"]}
+# HELP nexus_reconcile_duration_seconds Duration of last reconcile in seconds
+# TYPE nexus_reconcile_duration_seconds gauge
+nexus_reconcile_duration_seconds {metrics_state["reconcile_duration_s"]:.1f}
 """)
 
 
