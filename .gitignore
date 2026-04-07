@@ -19,7 +19,7 @@ nexus-hub/core/projects/
 brain/
 ops/
 deploy/
-skills/
+/skills/
 .gpt/
 .claude/
 .dollhousemcp/
