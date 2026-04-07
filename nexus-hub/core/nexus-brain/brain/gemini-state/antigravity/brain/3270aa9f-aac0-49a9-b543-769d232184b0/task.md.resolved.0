@@ -1,0 +1,5 @@
+# Task: Running Local Flask App
+
+- [/] Check Docker status and local files
+- [ ] Run the Flask application via Docker Compose
+- [ ] Verify the application is running

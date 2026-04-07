@@ -1,0 +1,12 @@
+# Task: Verify Evario Odyssey game environment and functionality
+
+## Checklist
+- [ ] Verify transparency of character and clouds (no white boxes/checkerboards)
+- [ ] Verify sky gradient and floating clouds look beautiful
+- [ ] Verify movement (Left/Right arrow)
+- [ ] Verify jumping (Space/Up arrow)
+- [ ] Capture recording of the "Sky World" environment (automatic)
+
+## Notes
+- Localhost URL: http://localhost:5173/
+- Page ID: 5C541E7F90841E1C5ECCB72A38285376

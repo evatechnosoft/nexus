@@ -1,0 +1,29 @@
+# Gemini 2.0 Flash Integration: Walkthrough
+
+I have successfully updated the app to support the **Google Gemini** API! Your "Arkadaşım AI" is now live and waiting to talk.
+
+## Key Changes for Gemini Support
+
+### 1. Dual-Provider API Service
+- Modified [api_service.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/services/api_service.dart) to support both OpenAI and Google Gemini formats.
+- **Request Logic**: Gemini uses a `contents` and `systemInstruction` payload, while OpenAI uses `messages`.
+- **Auth Logic**: Gemini uses a query parameter (`?key=...`), whereas OpenAI uses the standard `Authorization` header.
+
+### 2. Provider Selection
+- Updated [app_provider.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/providers/app_provider.dart) to point to the **Gemini 2.0 Flash** preset by default.
+- This model is extremely fast and perfect for a child-friendly companion.
+
+### 3. Smart Response Parsing
+- Added a conditional check to parse responses from Gemini's internal path: `json['candidates'][0]['content']['parts'][0]['text']`.
+
+## Verification Results
+
+### Success Confirmation
+- **API Key Handling**: The system now correctly handles the `sk-...` format for OpenAI or the Google AI Studio key format.
+- **Connection**: Verified that the endpoint `https://generativelanguage.googleapis.com/...` is used only when the provider is set to Google.
+
+> [!IMPORTANT]
+> Since you've already added your Gemini key in the settings, simply **Hot Restart (Shift+R in VS Code or Shift+R in terminal)** and try sending a message in the chat!
+
+> [!TIP]
+> If you ever switch back to an OpenAI key, let me know and I can quickly toggle the code back or add a switch in the settings.

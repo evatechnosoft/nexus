@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_TASK",
+  "summary": "Task list for implementing domain-based routing and multi-language support for Evaitec. This includes geo-location detection, domain-specific redirection, and a basic localization structure.",
+  "updatedAt": "2026-03-24T07:25:08.944719700Z"
+}

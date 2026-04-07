@@ -1,0 +1,43 @@
+# Proje Kontrolü ve İyileştirme Planı
+
+Projeyi incelediğimde uygulamanın çalışmasını engelleyen bazı kritik eksiklikler ve hatalar tespit ettim.
+
+## User Review Required
+
+> [!IMPORTANT]
+> Uygulamanın çalışabilmesi için `routes/sync.js` ve `routes/photos.js` dosyalarının mevcut olması gerekiyor, ancak bu dosyalar dizinde bulunamadı. Bu durum uygulamanın çökmesine neden olacaktır.
+
+> [!WARNING]
+> `.env` dosyası bulunamadı. Sadece `.env.txt` mevcut. Uygulama varsayılan olarak `.env` dosyasını beklemektedir.
+
+## Proposed Changes
+
+### Yapılandırma ve Hata Düzeltmeleri
+
+#### [MODIFY] [schema.sql](file:///c:/projects/SportApp/schema.sql)
+- 128. satırdaki hatalı index tanımını (`CREATE INDEX IF date);`) düzelteceğim. Muhtemelen `body_measurements` tablosu için bir index eksik.
+
+#### [NEW] [.env](file:///c:/projects/SportApp/.env)
+- `.env.txt` dosyasını `.env` olarak kopyalayacağım/oluşturacağım.
+
+### Eksik Rotaların Oluşturulması
+
+#### [NEW] [sync.js](file:///c:/projects/SportApp/routes/sync.js)
+- `server.js` tarafından beklenen ama eksik olan senkronizasyon rotasını (placeholder olarak) oluşturacağım.
+
+#### [NEW] [photos.js](file:///c:/projects/SportApp/routes/photos.js)
+- `server.js` tarafından beklenen ama eksik olan fotoğraf yönetim rotasını (placeholder olarak) oluşturacağım.
+
+## Open Questions
+
+1. `sync.js` ve `photos.js` dosyaları daha önce var mıydı yoksa sıfırdan temel fonksiyonlarla mı oluşturmamı istersiniz?
+2. `schema.sql` içindeki 128. satır hangi tablo için index olmalıydı? (Tahminim: `body_measurements`)
+
+## Verification Plan
+
+### Automated Tests
+- `node --check server.js` ile sözdizimi hatalarını kontrol edeceğim.
+- `npm run start` ile uygulamanın ayağa kalkıp kalmadığını test edeceğim.
+
+### Manual Verification
+- `/api/health` uç noktasına istek atarak veritabanı bağlantısını ve uygulama sağlığını kontrol edeceğim.

@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary": "Implementation plan for creating a food delivery website model and mock design. Uses @architect for modeling, @ux-ui-designer for visuals via generate_image, and @mocksite-builder for page structure. Final delivery will be a comprehensive walkthrough with diagrams and images.",
+  "updatedAt": "2026-03-27T13:54:25.510199400Z"
+}

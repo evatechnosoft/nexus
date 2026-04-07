@@ -1,0 +1,134 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (128,42)<a class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge IconButtonBase-module_wrapper_6zbMGy SoftButton-module_wrapper_G6z4vn SoftButton-module_default_EF-egQ ScribdTopBar-module_hamburger__C9NjV IconButtonBase-module_large_hJBmho' href='#sidebar' />
+	Open navigation menu
+[1] (181,42)<a class='ScribdTopBar-module_logo__AsKt6' href='/' />
+	[2] (181,42)<img  />
+[3] (366,41)<label >Search />
+	Search
+	[4] (366,42)<input class='SearchForm-module_searchInput__l73oF SearchForm-module_searchInputScribd__Up4Ft' id='header_search_input' placeholder='Search' role='combobox' />
+[5] (451,42)<button class='TextButton-module_wrapper__ZwW-w TextButton-module_default__ekglb SearchForm-module_clearButton__ggRgX SearchForm-module_clearButtonScribd__XJbMU' />
+	[6] (451,42)<span  />
+		[7] (451,42)<span >Clear search />
+			[8] (451,42)<span  />
+			Clear search
+[9] (481,42)<button class='TextButton-module_wrapper__ZwW-w TextButton-module_default__ekglb SearchForm-module_searchButton__4f-rn no_spinner' />
+	[10] (476,42)<span  />
+		[11] (476,42)<span >Search />
+			[12] (476,42)<span  />
+			Search
+[13] (568,42)<button class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge SoftButton-module_wrapper_G6z4vn DropdownTrigger-module_wrapper_-Xf-At LanguageDropdown-module_menuHandle__PCSMM SoftButton-module_default_EF-egQ ButtonShared-module_small_h7nQ0w SoftButton-module_withIcon_OBSH-T' id='ldhandle' />
+	en
+	Change Language
+[14] (631,42)<a class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge SoftButton-module_wrapper_G6z4vn SoftButton-module_default_EF-egQ ButtonShared-module_small_h7nQ0w SoftButton-module_withIcon_OBSH-T' href='/upload-document' />
+	Upload
+[15] (698,42)<button class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge SoftButton-module_wrapper_G6z4vn DropdownTrigger-module_wrapper_-Xf-At SoftButton-module_default_EF-egQ ButtonShared-module_small_h7nQ0w SoftButton-module_withIcon_OBSH-T' id='udhandle' />
+	Sign in
+[16] (812,42)<button class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge AccentButton-module_wrapper_W6vQ8z ScribdTopBar-module_cta__AnzYq SubscribeCTAButton-module_wrapper__lDIgE SubscribeCTAButton-module_en-US__W29KM AccentButton-module_default_4Uc-A6 ButtonShared-module_large_DzeAnG' />
+	Download free for 30 days
+[17] (500,142)<li  />
+	[18] (500,142)<article  />
+		[19] (500,142)<a class='ListItem-module_linkOverlay__H60l3' href='https://www.scribd.com/document/836418922/Captain-Code-Unleash-Your-Coding-Superpower-with-Python'>Captain Code Unleash Your Coding Superpower With Python />
+			Captain Code Unleash Your Coding Superpower With Python
+		0 ratings
+		2K views
+		401 pages
+		[20] (524,103)<a class='ButtonCore-module_wrapper_MkTb9s TextButton-module_wrapper_ZwW-wM TextButton-module_default_ekglbr Title-module_wrapper__JyBs6 Document-module_title__PFDfb' href='https://www.scribd.com/document/836418922/Captain-Code-Unleash-Your-Coding-Superpower-with-Python' />
+			[21] (396,103)<span  />
+				[22] (396,103)<span  />
+					[23] (396,103)<h3 >Captain Code Unleash Your Coding Superpower With Python />
+		Description
+		The document is a comprehensive guide titled 'Captain Code: Unleash Your Coding Superpower with Python' aimed at teaching coding through engaging activities and games. It covers various programming concepts using Python, including functions, libraries, and game development, structured into three parts: fun and games, adventure, and racing around. Additionally, it emphasizes Pearson's commitment to diversity, equity, and inclusion in educational content.
+		[24] (524,223)<div  />
+			[25] (308,223)<div  />
+				[26] (308,223)<div >Uploaded by />
+					Uploaded by
+					[27] (299,222)<a class='SingleAuthorByline-module_singleAuthorLink__pUULL SingleAuthorByline-module_documentAuthorLink__dXwMI' href='/users/844578083'>Tony Buổi Tối />
+					on March 7, 2025
+			[28] (478,223)<div  />
+				[29] (440,223)<a class='wrapper__text_button ContentTag-module_wrapper__mQN8o CategoryContentTags-module_contentTagItem__u220T ContentSection-module_categoryTags__ZYyJC ContentSection-module_categoryTagsScribd__DogZ- ContentTag-module_outline__Mtf4y' href='https://www.scribd.com/docs/Computers'>Computers />
+				[30] (512,223)<a class='wrapper__text_button ContentTag-module_wrapper__mQN8o CategoryContentTags-module_contentTagItem__u220T ContentSection-module_categoryTags__ZYyJC ContentSection-module_categoryTagsScribd__DogZ- ContentTag-module_outline__Mtf4y' href='https://www.scribd.com/docs/Computers/Programming'>Programming />
+		Save Captain Code Unleash Your Coding Superpower With Python for later
+[31] (500,437)<li  />
+	[32] (500,437)<article  />
+		[33] (500,437)<a class='ListItem-module_linkOverlay__H60l3' href='https://www.scribd.com/document/623424228/English-Code-5-Phonics-Book'>English Code 5 Phonics Book />
+			English Code 5 Phonics Book
+		[34] (545,393)<div  />
+			[35] (524,393)<div  />
+				100%
+				(
+				1
+				)
+				226 views
+				50 pages
+				[36] (524,398)<a class='ButtonCore-module_wrapper_MkTb9s TextButton-module_wrapper_ZwW-wM TextButton-module_default_ekglbr Title-module_wrapper__JyBs6 Document-module_title__PFDfb' href='https://www.scribd.com/document/623424228/English-Code-5-Phonics-Book' />
+					[37] (305,398)<span  />
+						[38] (305,398)<span  />
+							[39] (305,398)<h3 >English Code 5 Phonics Book />
+				[40] (315,439)<div  />
+					[41] (315,439)<div >Uploaded by />
+						Uploaded by
+						[42] (301,439)<a class='SingleAuthorByline-module_singleAuthorLink__pUULL SingleAuthorByline-module_documentAuthorLink__dXwMI' href='/users/259943680'>bernalylabsan />
+						on February 2, 2023
+			[43] (847,359)<div  />
+				[44] (835,359)<div  />
+					[45] (835,359)<button class='TextButton-module_wrapper__ZwW-w TextButton-module_default__ekglb DownloadButton-module_downloadButton__yR8-x' />
+						[46] (835,359)<span  />
+							[47] (835,359)<span  />
+								[48] (835,359)<span  />
+				[49] (855,359)<div  />
+					[50] (855,359)<button class='PrimaryFunctionButton-module_wrapper__c70e3 PrimaryFunctionButton-module_default__fux4y PrimaryFunctionButton-module_l__QlRLS' role='button'>Save English Code 5 Phonics Book for later />
+						[51] (855,359)<span  />
+						Save English Code 5 Phonics Book for later
+[52] (500,732)<li  />
+	[53] (500,732)<article  />
+		[54] (500,732)<a class='ListItem-module_linkOverlay__H60l3' href='https://www.scribd.com/document/626188430/English-Code-Phonics-Book-2'>English Code Phonics Book 2 />
+			English Code Phonics Book 2
+		[55] (545,688)<div  />
+			[56] (524,688)<div  />
+				100%
+				(
+				3
+				)
+				5K views
+				51 pages
+				[57] (524,693)<a class='ButtonCore-module_wrapper_MkTb9s TextButton-module_wrapper_ZwW-wM TextButton-module_default_ekglbr Title-module_wrapper__JyBs6 Document-module_title__PFDfb' href='https://www.scribd.com/document/626188430/English-Code-Phonics-Book-2' />
+					[58] (305,693)<span  />
+						[59] (305,693)<span  />
+							[60] (305,693)<h3 >English Code Phonics Book 2 />
+				[61] (322,734)<div  />
+					[62] (322,734)<div >Uploaded by />
+						Uploaded by
+						[63] (306,734)<a class='SingleAuthorByline-module_singleAuthorLink__pUULL SingleAuthorByline-module_documentAuthorLink__dXwMI' href='/users/518865366'>Jezabel Escobar />
+						on February 16, 2023
+			[64] (847,654)<div  />
+				[65] (835,654)<div  />
+					[66] (835,654)<button class='TextButton-module_wrapper__ZwW-w TextButton-module_default__ekglb DownloadButton-module_downloadButton__yR8-x' />
+						[67] (835,654)<span  />
+							[68] (835,654)<span  />
+								[69] (835,654)<span  />
+				[70] (855,654)<div  />
+					[71] (855,654)<button class='PrimaryFunctionButton-module_wrapper__c70e3 PrimaryFunctionButton-module_default__fux4y PrimaryFunctionButton-module_l__QlRLS' role='button'>Save English Code Phonics Book 2 for later />
+						[72] (855,654)<span  />
+						Save English Code Phonics Book 2 for later
+English Code Level 1 Unit 7 Vocabulary
+0 ratings
+0 views
+20 pages
+[73] (331,988)<span  />
+	[74] (331,988)<span  />
+		[75] (331,988)<h3 >English Code Level 1 Unit 7 Vocabulary />
+[76] (847,949)<div  />
+	[77] (835,949)<div  />
+		[78] (835,949)<button class='TextButton-module_wrapper__ZwW-w TextButton-module_default__ekglb DownloadButton-module_downloadButton__yR8-x' />
+			[79] (835,949)<span  />
+				[80] (835,949)<span  />
+					[81] (835,949)<span  />
+	[82] (855,949)<div  />
+		[83] (855,949)<button class='PrimaryFunctionButton-module_wrapper__c70e3 PrimaryFunctionButton-module_default__fux4y PrimaryFunctionButton-module_l__QlRLS' role='button'>Save English Code Level 1 Unit 7 Vocabulary for later />
+			[84] (855,949)<span  />
+			Save English Code Level 1 Unit 7 Vocabulary for later
+
+</current_dom>

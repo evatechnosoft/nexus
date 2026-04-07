@@ -1,0 +1,60 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (71,35)<a class='navbar-brand' href='/'>IT INVENTORY />
+	[1] (20,35)<i  />
+	[2] (117,35)<span >PRO />
+[3] (667,35)<a class='nav-link px-3' href='/'>Dashboard />
+	[4] (642,34)<i  />
+[5] (743,35)<a class='nav-link px-3' href='/requests/'>Talepler />
+	[6] (724,34)<i  />
+[7] (814,35)<a class='nav-link px-3' href='/inventory/'>Envanter />
+	[8] (793,34)<i  />
+[9] (887,35)<a class='nav-link px-3' href='/assignments/'>Atamalar />
+	[10] (866,34)<i  />
+[11] (955,35)<a class='nav-link dropdown-toggle px-3' href='#'>Excel />
+	[12] (939,34)<i  />
+[13] (959,85)<a class='dropdown-item py-2' href='/excel/export'>Dışa Aktar />
+	[14] (937,85)<i  />
+[15] (959,121)<a class='dropdown-item py-2' href='/excel/import-page'>İçe Aktar />
+	[16] (937,120)<i  />
+Dashboard
+10
+Toplam Cihaz
+5
+Depoda
+4
+Dağıtıldı
+0
+Bekleyen Talep
+[17] (83,316)<a class='btn btn-primary px-4 shadow-sm' href='/requests/'>Yeni Talep Oluştur />
+	[18] (44,315)<i  />
+[19] (189,316)<a class='btn btn-outline-secondary px-4' href='/inventory/'>Cihaz Ekle />
+	[20] (167,313)<i  />
+[21] (286,316)<a class='btn btn-outline-secondary px-4' href='/excel/export'>Excel'e Aktar />
+	[22] (257,313)<i  />
+Son Talepler
+Talep Eden
+Departman
+Cihaz
+Durum
+Tarih
+Zeynep Kaya
+zeynep.kaya@company.com
+Yazılımcı
+Laptop
+Onaylandı
+28.03.2026
+[23] (910,524)<a class='btn btn-sm btn-outline-secondary border-0' href='/requests/2/detail' />
+	[24] (910,524)<i  />
+Ahmet Yılmaz
+ahmet.yilmaz@company.com
+Yazılımcı
+Laptop
+Onaylandı
+28.03.2026
+[25] (910,603)<a class='btn btn-sm btn-outline-secondary border-0' href='/requests/1/detail' />
+	[26] (910,603)<i  />
+
+</current_dom>

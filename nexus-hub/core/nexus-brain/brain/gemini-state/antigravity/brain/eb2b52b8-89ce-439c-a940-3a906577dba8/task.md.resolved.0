@@ -1,0 +1,4 @@
+# Task List
+
+- [ ] Remove background from `logo.png` using rembg
+- [ ] Share the resulting `logo_transparent.png` with the user

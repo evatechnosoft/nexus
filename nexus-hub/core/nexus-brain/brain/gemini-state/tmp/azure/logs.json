@@ -1,0 +1,30 @@
+[
+  {
+    "sessionId": "e871b47c-4ee2-4491-9ced-094e6ffaa500",
+    "messageId": 0,
+    "type": "user",
+    "message": "1",
+    "timestamp": "2026-03-31T06:23:43.862Z"
+  },
+  {
+    "sessionId": "e871b47c-4ee2-4491-9ced-094e6ffaa500",
+    "messageId": 1,
+    "type": "user",
+    "message": "login",
+    "timestamp": "2026-03-31T06:31:12.592Z"
+  },
+  {
+    "sessionId": "e871b47c-4ee2-4491-9ced-094e6ffaa500",
+    "messageId": 2,
+    "type": "user",
+    "message": "/auth signin",
+    "timestamp": "2026-03-31T06:43:20.942Z"
+  },
+  {
+    "sessionId": "1ddff24c-61ff-49e9-8815-578dbeeef859",
+    "messageId": 0,
+    "type": "user",
+    "message": "1",
+    "timestamp": "2026-03-31T06:44:05.680Z"
+  }
+]

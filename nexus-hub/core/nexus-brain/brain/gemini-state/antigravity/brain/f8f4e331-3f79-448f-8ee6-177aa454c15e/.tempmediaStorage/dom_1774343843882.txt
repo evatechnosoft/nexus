@@ -1,0 +1,32 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (94,37)<a aria-label='Microsoft' class='c-logo c-sgl-stk-uhfLogo' href='https://www.microsoft.com' id='uhfLogo'>Microsoft />
+	[1] (91,34)<img class='c-image' role='presentation' />
+	Microsoft
+[2] (176,37)<a aria-label='Support' class='c-logo c-cat-logo' href='https://support.microsoft.com/en-us' id='uhfCatLogo' />
+	[3] (178,34)<span >Support />
+[4] (235,33)<a class='c-uhf-nav-link' href='https://www.microsoft.com/microsoft-365?ocid=cmmttvzgpuy' id='c-shellmenu_0'>Microsoft 365 />
+[5] (285,33)<a class='c-uhf-nav-link' href='https://www.microsoft.com/microsoft-365/microsoft-office?ocid=cmml7tr0rib' id='c-shellmenu_1'>Office />
+[6] (334,35)<button id='c-shellmenu_2'>Products />
+[7] (389,35)<button id='c-shellmenu_11'>Devices />
+[8] (460,35)<button id='c-shellmenu_19'>Account & billing />
+[9] (535,35)<button id='c-shellmenu_22'>Resources />
+[10] (609,35)<a class='c-uhf-nav-link' href='https://go.microsoft.com/fwlink/?linkid=849747' id='buyInstallButton'>Buy Microsoft 365 />
+[11] (789,35)<button class='c-button-logo all-ms-nav' />
+	[12] (787,35)<span >All Microsoft />
+[13] (851,34)<button aria-label='Search for help' class='c-glyph' id='search' />
+	[14] (844,36)<span role='presentation'>Search />
+[15] (917,36)<a aria-label='Sign in to your account' class='mectrl_resetStyle mectrl_trigger' href='https://support.microsoft.com/tr-tr/authentication/signin?ru=https%3A%2F%2Fsupport.microsoft.com%2Ftr-tr%2Ftopic%2Ff0a85c90-13c3-4c57-b2ac-6178a05c871d' id='mectrl_main_trigger' />
+	[16] (884,5)<span >Sign in to your account />
+	[17] (917,36)<div class='mectrl_topHeader' role='presentation' />
+		[18] (901,36)<div >Sign in />
+		[19] (934,36)<div class='mectrl_profilepic mectrl_glyph mectrl_signIn_circle_glyph' id='mectrl_headerPicture' role='presentation' />
+Sorry, page not found
+Try searching Microsoft Support to find a solution
+[20] (255,287)<input class='supHomeAndLandingPageSearchBox' id='supHomeAndLandingPageSearchBox' placeholder='How can we help you?' />
+[21] (392,287)<button class='supHomeAndLandingPageSearchButton' id='searchsubmit' title='Search' />
+	[22] (392,292)<span  />
+
+</current_dom>

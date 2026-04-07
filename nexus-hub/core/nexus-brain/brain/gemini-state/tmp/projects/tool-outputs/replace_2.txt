@@ -1,0 +1,27 @@
+Successfully modified file: C:\projects\agentops-nexus\routers\ops.py (1 replacements). Here is the updated code:
+from fastapi import APIRouter, Depends, HTTPException, Request
+from sqlalchemy.orm import Session
+from database import get_db
+from repositories.ops_repo import OpsRepository
+
+router = APIRouter(prefix="/api/v1/ops", tags=["Operations"])
+
+def get_ops_repo(db: Session = Depends(get_db)):
+    return OpsRepository(db)
+
+@router.get("/projects")
+def get_projects(repo: OpsRepository = Depends(get_ops_repo)):
+    return repo.get_all_projects()
+
+@router.post("/projects")
+async def create_project(name: str, root_path: str, description: str = None, git_url: str = None, repo: OpsRepository = Depends(get_ops_repo)):
+    return repo.create_project(name, root_path, description, git_url)
+
+@router.post("/health/{project_id}")
+async def update_health(project_id: int, request: Request, repo: OpsRepository = Depends(get_ops_repo)):
+    payload = await request.json()
+    return repo.update_project_health(project_id, payload)
+
+@router.get("/skills")
+def get_skills(repo: OpsRepository = Depends(get_ops_repo)):
+    return repo.get_all_skills()

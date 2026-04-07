@@ -1,0 +1,48 @@
+# Multi-Environment Deployment & PR Workflow Plan
+
+The goal is to transition from a manual "push to all" style to a professional **Dev -> Test -> Prod** workflow using GitHub branches and environment-specific configurations on the DeanOS server.
+
+## User Review Required
+
+> [!IMPORTANT]
+> **Port Assignments:** I've assigned Port **9600** for Production and **9700** for Testing. Please let me know if these conflict with other services on your DeanOS server.
+>
+> **SSH Access:** The `deploy.ps1` script will now attempt to automatically update the server using `ssh dean`. Ensure your `coolos` key (now standardized as `deanos`) remains operational.
+
+## Proposed Changes
+
+### [NEW] Environment Files
+- [NEW] `.env.dev`: Local development settings.
+- [NEW] `.env.test`: DeanOS testing settings (Port 9700).
+- [NEW] `.env.prod`: DeanOS production settings (Port 9600).
+
+### [MODIFY] [deploy.ps1](file:///c:/projects/it-inventory/deploy.ps1)
+- Refactor the script to:
+  1. Detect the current Git branch.
+  2. Push changes specifically for that branch.
+  3. If on `test` or `main`, trigger a remote SSH command to the DeanOS server to pull and restart the corresponding container.
+
+### [MODIFY] [docker-compose.yml](file:///c:/projects/it-inventory/docker-compose.yml)
+- Update port mapping to use `${PORT}` variables so that a single compose file can support multiple environments (by changing the `.env` file used).
+
+### [NEW] [deploy_deanos.sh](file:///c:/projects/it-inventory/deploy_deanos.sh)
+- A robust server-side bash script that:
+  - Takes an environment argument (test/prod).
+  - Switches to the correct branch.
+  - Applies the correct `.env` settings.
+  - Restarts the Docker container with the verified `HOME=$PWD` and `docker compose` (space) pattern.
+
+## Workflow Summary
+1.  **Development:** Work on `dev` branch. Test locally on `http://localhost:9600`.
+2.  **Testing:** Merge `dev` -> `test`. `deploy.ps1` triggers DeanOS to update the **Test Container** (`http://192.168.1.186:9700`).
+3.  **Production:** Merge `test` -> `main`. `deploy.ps1` triggers DeanOS to update the **Prod Container** (`http://192.168.1.186:9600`).
+
+## Verification Plan
+
+### Automated Tests
+- Terminal check for branch detection logic in `deploy.ps1`.
+- Verify `.env` variable injection via `docker compose config`.
+
+### Manual Verification
+- Deploy to `test` branch and verify access on Port 9700.
+- Deploy to `main` branch and verify access on Port 9600.

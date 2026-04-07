@@ -1,0 +1,30 @@
+# Fix Azure DevOps Deployment to Azure Web Service
+
+The user is unable to deploy to Azure Web Service from the DevOps repo. The investigation of [azure-pipelines-1.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-1.yml) and [azure-pipelines.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines.yml) revealed differing `azureSubscription` service connection IDs and potential configuration mismatches.
+
+## User Review Required
+
+> [!IMPORTANT]
+> The error message `/home/vsts/work/r1/a/**/*.zip` usually appears in **Classic Release Pipelines** (UI-based). Eğer Azure DevOps'ta "Releases" sekmesini kullanıyorsanız, oradaki "Package or folder" kısmını düzeltmeniz gerekir.
+>
+> Eğer **YAML Pipeline** (azure-pipelines.yml) kullanıyorsanız:
+> 1. Hangi Service Connection isminin doğru olduğunu onaylayın.
+> 2. [azure-pipelines-1.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-1.yml) içindeki paket yolunu daha esnek hale getireceğiz.
+
+## Proposed Changes
+
+### CI/CD Pipeline Configuration
+
+#### [MODIFY] [azure-pipelines-1.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-1.yml)
+
+- Paket bulma hatasını gidermek için `package` yolunu `$(Pipeline.Workspace)/**/*.zip` olarak güncelleyin. Bu, `drop` klasörü içindeki herhangi bir zip dosyasını otomatik olarak bulacaktır.
+- `runtimeStack` değerini `NODE|20LTS` (veya `NODE|20-lts`) olarak kontrol edin (mevcut hali doğru olabilir ama wildcard kullanımı kritik).
+- `ArchiveFiles` ve `upload` adımlarının doğru çalıştığından emin olmak için stage yapısını kontrol edin.
+
+## Verification Plan
+
+### Manual Verification
+1. **Trigger Pipeline**: Run the pipeline manually in Azure DevOps on the `only-web` branch.
+2. **Check Logs**: Monitor the `Deploy` stage logs in Azure DevOps.
+3. **Verify Site**: If the deployment succeeds, verify that `https://layersupv2.azurewebsites.net` is live.
+4. **Confirm App Settings**: If it still fails, check the "Configuration" -> "General settings" in the Azure Portal for the Web App to ensure the "Stack settings" match Node 20.

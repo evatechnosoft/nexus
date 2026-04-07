@@ -1,0 +1,1 @@
+{"success":true,"message":"Okay, I've remembered that: \"Hata Giderme ve Çözüm Yolu: FastAPI/Uvicorn projelerinde .env dosyasının okunabilmi için 'python-dotenv' kütüphanesi mutlaka import edilip 'load_dotenv()' çağrılmalıdır. Port çakışmalarını önlemek için yerel/test ortamlarında 4550 portu, üretim ortamında 4500 portu standart olarak tercih edilir.\""}

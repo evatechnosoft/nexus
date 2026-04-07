@@ -1,0 +1,10 @@
+# ZimaOS Dashboard Link Repair Checklist
+
+- [ ] Navigate to http://192.168.1.186
+- [ ] Login (if needed, use admin/deanos)
+- [ ] Update Home Assistant (8123)
+- [ ] Update ESPHome (6052)
+- [ ] Update AdGuard Home (3000)
+- [ ] Update Grafana (3000)
+- [ ] Update/Create Uptime Kuma (3001)
+- [ ] Verify each app opens correctly from the dashboard

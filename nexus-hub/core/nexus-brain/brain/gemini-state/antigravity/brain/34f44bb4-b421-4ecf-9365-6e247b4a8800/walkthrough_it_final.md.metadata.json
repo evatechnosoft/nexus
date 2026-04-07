@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_WALKTHROUGH",
+  "summary": "IT Inventory sistemi için modernizasyon ve hata giderme süreci tamamlandı. Tasarım Premium Dark Glassmorphism'e geçirildi, e-posta parser'ı tablo ve çoklu kişi desteği kazandı, sistem çakışmaları (Portainer) giderilerek port 8001 üzerine taşındı.",
+  "updatedAt": "2026-03-28T17:23:18.022179400Z"
+}

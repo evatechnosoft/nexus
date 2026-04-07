@@ -1,0 +1,12 @@
+# IT Inventory Dashboard Verification
+
+## Plan
+- [/] Open http://192.168.1.186:8001
+- [ ] Capture screenshot of the dashboard
+- [ ] Verify Dark Glassmorphism theme
+- [ ] Confirm port 8001 is active and app is healthy
+- [ ] Report status
+
+## Notes
+- Target URL: http://192.168.1.186:8001
+- Design: Premium Dark Glassmorphism

@@ -1,0 +1,10 @@
+# Task: Fix ZimaOS Cloud Backup Error
+
+The user is getting `failed to create subtask 0: create task failed: unknown error` when taking a cloud backup.
+
+- [ ] Analyze the error message and its origin <!-- id: 0 -->
+- [ ] Connect to the ZimaOS server (`192.168.1.186`) <!-- id: 1 -->
+- [ ] Check CasaOS/Files logs for backup errors <!-- id: 2 -->
+- [ ] Verify cloud storage connection (Rclone/CasaOS) <!-- id: 3 -->
+- [ ] Fix the underlying issue (e.g., token update, permission fix) <!-- id: 4 -->
+- [ ] Verify the backup works <!-- id: 5 -->

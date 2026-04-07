@@ -1,0 +1,39 @@
+# Akıllı Market Hatırlatıcı (Geofencing) Uygulama Planı 🛒📍
+
+Bu özellik, kullanıcının notlarındaki alışveriş kalemlerini coğrafi konumla birleştirerek, ilgili bir marketin yakınına gelindiğinde otomatik uyarı verilmesini sağlar.
+
+## Kullanıcı İncelemesi Gerekli
+
+> [!IMPORTANT]
+> - Konum servislerinin "Her Zaman" (Always) açık olması veya uygulama ön plandayken aktif olması gerekir.
+> - Market lokasyonları için şimdilik popüler zincirlerin (BİM, A101, vb.) örnek konumlarını veya kullanıcının en çok gittiği marketleri manuel/otomatik ekleyebileceği bir yapı kuracağız.
+
+## Önerilen Değişiklikler
+
+### 1. Model Güncellemeleri ✨
+#### [MODIFY] [location_models.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/models/location_models.dart)
+- `LocationTask` modeline `linkedNoteId` alanı ekleyerek notlarla görevleri birbirine bağlayacağız.
+- Market kategorileri (Market, Eczane, Kırtasiye vb.) için bir enum ekleyeceğiz.
+
+### 2. Akıllı Not Tarama Mantığı 🧠
+#### [MODIFY] [app_provider.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/providers/app_provider.dart)
+- Yeni bir not eklendiğinde içeriği "ekmek", "süt", "deterjan" gibi kelimeler için taranacak.
+- Eğer alışverişle ilgiliyse, otomatik olarak bir `LocationTask` (Konum Görevi) oluşturulacak.
+
+### 3. Konum Servisi & Geofencing 📍
+#### [MODIFY] [location_service.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/services/location_service.dart)
+- `GeofenceMonitor` içindeki kontrol sıklığını ve algoritmayı optimize edeceğiz.
+- Kullanıcı bir markete 500m yakınına geldiğinde `onReminder` callback'ini tetikleyeceğiz.
+
+### 4. UI & Bildirimler 🔔
+#### [MODIFY] [chat_screen.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/screens/chat/chat_screen.dart)
+- Konum uyarısı geldiğinde **Ev@iTec**'in chat ekranında özel bir baloncuğu/sesli uyarısı belirecek: *"Hey! Yakınlarda bir BİM var, notlarındaki ekmeği almayı unutma! 🛒"*
+
+## Doğrulama Planı
+
+### Otomatik Testler
+- Farklı koordinatlarda (market içi/dışı) sahte konum verileriyle tetik mekanizmasının çalıştığını doğrulayacağız.
+
+### Manuel Doğrulama
+- Notlara "BİM'den ekmek al" yazınca konum görevleri listesine otomatik düşüp düşmediği kontrol edilecek.
+- Harita ekranında market ikonlarının yakınına gelince uyarı mekanizması test edilecek.

@@ -1,0 +1,28 @@
+# Task: Running Local Flask App
+
+- [x] Check Docker status and local files
+- [x] Run the Flask application via Docker Compose
+- [x] Verify the application is running
+- [x] Update plan to include local Postgres
+- [x] Restart all services and verify
+- [x] Research and explain WiFi activation
+- [x] Troubleshoot WiFi disconnection when Ethernet is unplugged
+- [x] Provide WiFi priority commands to the user
+- [x] Grant passwordless sudo to the user on ZimaOS
+- [x] Setting up SSH key-based authentication
+- [x] Configure SSH config file on Windows
+- [x] Troubleshoot SSH connection and password issues
+- [x] Manual key installation via ZimaOS terminal (DeanOS) - Fixed with sudo
+- [x] Verify SSH access to DeanOS / zimaos
+- [/] Create `evanotes` database on ZimaOS
+- [x] Provide connection string and credentials
+- [/] Fix Docker config permission issues on ZimaOS
+- [x] Correct invalid group for chown
+- [/] Grant full system permissions (sudo & storage) to `dean`
+- [x] Verify permissions and conclude troubleshooting
+- [x] List running applications and subdomains for Cloudflare Tunnel
+- [x] Provide final subdomain list to the user
+- [x] Redirect main site to ZimaOS dashboard
+- [x] Explain Cloudflare Tunnel management (Dashboard vs Config)
+- [/] Explain Nginx Proxy Manager (NPM) for external access
+- [ ] Provide final walkthrough and summary

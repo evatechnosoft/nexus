@@ -1,0 +1,7 @@
+# Tasks
+
+- [ ] Fix invalid constant value error in [app_theme.dart](file:///c:/projects/Antigravity/shmarthouse/shmarthouse_app/lib/core/theme/app_theme.dart) [/]
+    - [ ] Remove `const` from `textTheme` [ ]
+    - [ ] Remove `const` from `appBarTheme` [ ]
+    - [ ] Remove `const` from `navigationRailTheme` [ ]
+- [ ] Verify fix by checking for remaining constant errors [ ]

@@ -1,0 +1,28 @@
+# System Polish & Resilience Plan (v4)
+
+The user reports that the dashboard shows 0 requests (despite them existing), some emails are still ignored, and the UI feels "cramped" or stuck. Also, a `NameError` is still being reported.
+
+## Proposed Changes
+
+### 1. Dashboard Logic (`main.py`)
+- **Fix**: Update the `dashboard` function to sum both `RequestStatus.pending` ("Beklemede") and `RequestStatus.pending_approval` ("Onay Bekliyor"). This ensures that automatically created requests are visible in the total count.
+
+### 2. Email Resilience (`email_watcher.py`)
+- **Action Detection**: Add more Turkish synonyms (Giriş, Kurulum, Talep, Donanım) to `_detect_action_type`.
+- **Robust Soft Match**: Update the check to look through the entire `parsed_data` list and accept any entry that has at least a Name or Email.
+- **Safety**: Ensure `parsing_input` is replaced everywhere by `body_text`.
+
+### 3. UI Aesthetics (`static/style.css` & `templates/base.html`)
+- **Layout**: Increase the `.container-fluid` padding and `.card` margins to prevent the "cramped" feeling.
+- **Excel Dropdown**: Adjust the `z-index` and `margin-top` to ensure it doesn't overlap or get stuck.
+- **Mobile View**: Ensure tables have enough breathing room.
+
+## Verification Plan
+
+### Automated Tests
+- Run `python -m uvicorn main:app --port 9292` (Restart).
+- Run `simulate_test.py` and verify Dashboard increments.
+
+### Manual Verification
+- Check the Dashboard counter in the browser.
+- Verify the Excel dropdown interaction.

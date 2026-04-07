@@ -1,0 +1,17 @@
+# Task: Verify Dashboard Mock Data
+
+## Checklist
+- [x] Refresh http://localhost:8080
+- [/] Wait for application to load (Persistent blank screen/loading loop)
+- [ ] Verify if dashboard shows data (e.g., 450.5 W)
+- [ ] Verify no NetworkException is shown
+- [ ] Take screenshot of the successful state
+
+## Observations
+- Browser opened at localhost:8080.
+- Console logs show a loop: loading 655 scripts, then injecting script tag, then loading again.
+- Page remains blank despite waiting for several minutes.
+- Tested http://localhost:8080/nonexistent (same behavior).
+- Tested http://127.0.0.1:8080/ (same behavior).
+- Screenshot confirms a completely blank white viewport.
+- Application title is correct ("shmarthouse_app"), so the server is serving the correct initial HTML.

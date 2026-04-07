@@ -1,0 +1,9 @@
+# Task Checklist
+- [ ] Open http://localhost:5000/week/1
+- [ ] Verify "Anahtar Kelimeler" cards (hello, goodbye, etc.) have Turkish meanings
+- [ ] Click "hello" card and verify expansion (Okunuş, Heceleme)
+- [ ] Take screenshot of expanded "hello" card
+- [ ] Open http://localhost:5000/week/2
+- [ ] Verify color word cards (red, blue, etc.)
+- [ ] Take screenshot of color cards
+- [ ] Long-press "red" card for 1 second and verify pulse animation/'speaking' style

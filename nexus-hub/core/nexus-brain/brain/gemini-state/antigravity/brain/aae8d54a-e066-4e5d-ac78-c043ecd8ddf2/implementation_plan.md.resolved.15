@@ -1,0 +1,35 @@
+# Infrastructure Fix: Resolving Read-Only and Exited issues on ZimaOS
+
+Our current goal is to stabilize the Coolify V4 infrastructure on ZimaOS to allow successful Git operations and Application deployments. 
+
+## User Review Required
+
+> [!IMPORTANT]
+> To bypass ZimaOS's strict `Read-only` container root filesystem, we need to redirect the container's HOME directory and ensure full host-to-container permission mapping. This will require a restart of the Coolify V4 stack.
+
+## Proposed Changes
+
+### [Component] Coolify V4 Infrastructure (DeanOS)
+
+#### [MODIFY] [docker-compose.yml](file:///DATA/AppData/coolify-v4/docker-compose.yml)
+- **Environment:** Add `HOME=/var/www/html` to the `coolify-v4` service. This redirects SSH key generation from the restricted `/root/.ssh` to the writable app storage.
+- **Volumes:** Ensure the `./ssh-root` mapping is robust.
+
+#### [EXECUTE] [Server Commands]
+1. **Permission Force:** Set `chmod -R 777 /DATA/AppData/coolify-v4/ssh-root` and `ssh` folders to eliminate any UID mismatches temporarily for diagnostics.
+2. **Stack Restart:** `docker compose up -d --force-recreate`.
+
+## Open Questions
+
+> [!NOTE]
+> - Hocam, şu an 'Exited' gören uygulama senin az önce ayağa kaldırmaya çalıştığımız yeni it-inventory mi? (Büyük ihtimalle evet). 
+> - Bu değişiklikten sonra SSH anahtarını kaydetmeyi tekrar deneyeceğiz. 
+
+## Verification Plan
+
+### Automated Verification
+- We will monitor the `coolify-v4` logs for any further `tee` or `permission denied` errors during Git/SSH operations.
+- We will check if the `it-inventory` status turns GREEN (Healthy) in the Coolify UI.
+
+### Manual Verification
+- User to re-attempt the "Save Key" or "Deploy" action in the Coolify dashboard.

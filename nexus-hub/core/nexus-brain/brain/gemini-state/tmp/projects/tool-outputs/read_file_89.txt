@@ -1,0 +1,9 @@
+<tool_output_masked>
+{
+  "output": "# APIFlow Operations Automation - Multi-Project Setup Guide\n\n## Overview\n\nThis guide explains how to set up and customize the APIFlow operational automation system (backup, health checks, restore validation) for any new project.\n\
+... [TRUNCATED] ...
+ckpoints\n- [ ] Encryption for sensitive checkpoint files\n- [ ] Multi-language script support (Go, Rust, Node.js runners)\n\n---\n\n**Questions?** Check `.ops-config.json` schema at `ops-config-schema.json`\n\n**Docs version:** 1.0 (2026-03-31)\n"
+}
+
+Output too large. Full output available at: C:\Users\Deacjx\.gemini\tmp\projects\tool-outputs\session-a366de38-25fd-4d3a-9bce-f8a0bc9646e6\read_file_read_file_1775209197975_0_wyghdp.txt
+</tool_output_masked>

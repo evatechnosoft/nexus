@@ -1,0 +1,12 @@
+[0] (328,53)<a href='https://okdebrid.com'>Home />
+[1] (381,53)<a href='https://okdebrid.com/about'>About Us />
+[2] (500,53)<a aria-label='OkDebrid' class='uk-navbar-item uk-logo' href='https://okdebrid.com' />
+[3] (617,53)<a href='https://okdebrid.com/contact'>Contact />
+[4] (667,53)<a href='https://okdebrid.com/article'>Blog />
+Enter a valid  link:
+[5] (500,650)<textarea id='links' placeholder='Input your  link here. ' />
+[6] (326,766)<button class='uk-button uk-button-primary choose-button' id='generate_prem_links'>Get Premium Link />
+[7] (420,766)<button class='uk-button uk-button-primary choose-button' id='reset_generator'>Reset />
+[8] (311,836)<button class='uk-button uk-button-primary '>Download />
+English-Code-2-Activity-Book-frenglish
+51.17 MB

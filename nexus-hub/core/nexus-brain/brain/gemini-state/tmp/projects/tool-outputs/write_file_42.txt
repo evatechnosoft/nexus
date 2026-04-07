@@ -1,0 +1,4 @@
+Successfully created and wrote to new file: C:\projects\agentops-nexus\.env. Here is the updated code:
+APP_PORT=4550
+APP_ENV=DEV
+DATABASE_URL=sqlite:///./data/inventory.db

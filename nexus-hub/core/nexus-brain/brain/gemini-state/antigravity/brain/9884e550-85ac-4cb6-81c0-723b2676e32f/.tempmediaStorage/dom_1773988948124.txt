@@ -1,0 +1,19 @@
+[0] (809,102)<button class='logout-btn'>Çıkış Yap 🚪 />
+📚 English Learning Hub
+Müfredat Takip ve Değerlendirme
+[1] (470,307)<button class='nav-btn active'>👦 Öğrenci />
+[2] (539,307)<button class='nav-btn'>👨‍👩‍👧 Veli />
+Derslerim 👦
+[3] (273,643)<div class='card' />
+	[4] (204,531)<span >Hafta 01 />
+	[5] (273,576)<h3 >Welcome! />
+	[6] (273,618)<p >İlk gün — selamlaşma, sayılar, yaş />
+	[7] (273,670)<div >💬 Excellent work on colors! />
+	[8] (273,747)<div  />
+		[9] (273,754)<button class='btn btn-primary btn-sm'>🌟 Anket />
+[10] (500,643)<div class='card' />
+	[11] (431,531)<span >Hafta 02 />
+	[12] (500,593)<h3 >Unit 1: Birthday Fun! — Bölüm 1 />
+	[13] (500,665)<p >Doğum günü kartı yapımı — renkler ve doğum günü kelimeleri />
+	[14] (500,746)<div  />
+		[15] (500,752)<button class='btn btn-primary btn-sm'>🌟 Anket />

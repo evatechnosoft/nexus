@@ -1,0 +1,22 @@
+# Resilience & UI Improvement Plan (v3)
+
+The user reports that real emails are ignored because "Onboarding/Offboarding" keywords are not found, and the Excel dropdown blocks the view.
+
+## Proposed Changes
+
+### 1. Email Processing Logic (`email_watcher.py`)
+- **Action Detection**: Add synonyms (E-posta, İsim, Soyad, Kurulum, Laptop) to triggers.
+- **Soft Matching**: If no "onboarding" keyword is found, but `parse_email` returns a name and email, the system will now proceed with "onboarding" as a default instead of ignoring the mail.
+- **Better Logging**: Log "Soft Match" for partially matching emails to help debugging.
+
+### 2. UI Fixes (`templates/base.html`, `static/style.css`)
+- **Excel Dropdown**: Add explicit `z-index: 2000` to the menu and ensure it doesn't open on hover to prevent "stuck" states on touch/mobile devices.
+- **Content Visibility**: Ensure the dropdown closes correctly when clicking outside or item selection.
+
+## Verification Plan
+
+### Automated Tests
+- Run `python simulate_test.py` with an email that has NO "onboarding" keyword but has table data to verify "Soft Match" logic.
+
+### Manual Verification
+- Verify the Excel dropdown behavior in the browser.

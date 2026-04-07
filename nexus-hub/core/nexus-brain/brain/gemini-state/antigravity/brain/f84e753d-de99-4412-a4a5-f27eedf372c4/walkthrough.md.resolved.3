@@ -1,0 +1,33 @@
+# Walkthrough - Domain, Service & DNS Resolution
+
+I have resolved the domain issues, fixed the syntax error in the application, and verified the services on ZimaOS.
+
+## 1. Syntax Error & Logic Fix
+- **Fixed [app.py](file:///c:/projects/github/casatozima/src/app.py):** Resolved a syntax error introduced during deployment. The application is now running correctly.
+- **Domain Logic:** Removed the automatic redirect from `.com` to `.com.tr`. All traffic now stays on `evaitec.com`.
+
+## 2. DNS Configuration (Crucial)
+The automated Cloudflare DNS update failed (likely due to permissions). **You must manually add CNAME records** in your Cloudflare Dashboard for the subdomains to work.
+
+**Target for all CNAMEs:** `3a8d470d-4b6e-431c-b1a4-0a05463759ef.cfargotunnel.com`
+
+Please add the following **CNAME** records in Cloudflare:
+- `evaitec.com` -> `3a8d470d-4b6e-431c-b1a4-0a05463759ef.cfargotunnel.com`
+- `api.evaitec.com` -> `3a8d470d-4b6e-431c-b1a4-0a05463759ef.cfargotunnel.com`
+- `dev.evaitec.com` -> `3a8d470d-4b6e-431c-b1a4-0a05463759ef.cfargotunnel.com`
+- `test.evaitec.com` -> `3a8d470d-4b6e-431c-b1a4-0a05463759ef.cfargotunnel.com`
+- `prod.evaitec.com` -> `3a8d470d-4b6e-431c-b1a4-0a05463759ef.cfargotunnel.com`
+- `cloud.evaitec.com` -> `3a8d470d-4b6e-431c-b1a4-0a05463759ef.cfargotunnel.com`
+
+## 3. Nextcloud Trusted Domains
+I have added the new domains to the Nextcloud configuration.
+- Added `cloud.evaitec.com`
+- Added `evaitec.com`
+
+## 4. Service Verification
+Verified that services are responding on their respective ports:
+- **Adminer (db.evaitec.com):** Online (Port 8080)
+- **Nextcloud (cloud.evaitec.com):** Online (Port 10081)
+- **Flask (prod/api/test/dev):** Online (Ports 5005-5010)
+
+Once you add the CNAME records in Cloudflare, all subdomains should be accessible immediately.

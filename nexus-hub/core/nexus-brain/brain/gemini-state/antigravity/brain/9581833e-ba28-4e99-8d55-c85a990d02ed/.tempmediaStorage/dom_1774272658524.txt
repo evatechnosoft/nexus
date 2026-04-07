@@ -1,0 +1,121 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (20,30)<button class='relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-2.5 border-1 outline-none focus-visible:ring-2 bg-transparent border-transparent text-surface-900 dark:text-surface-0 hover:bg-surface-800/10 active:bg-surface-800/20 focus-visible:ring-surface-900/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[1] (20,30)<span  />
+[2] (44,30)<button class='relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-2.5 border-1 outline-none focus-visible:ring-2 bg-transparent border-transparent text-surface-900 dark:text-surface-0 hover:bg-surface-800/10 active:bg-surface-800/20 focus-visible:ring-surface-900/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[3] (44,30)<span  />
+13:30
+Monday, March 23, 2026
+System
+2
+CPU
+1.6W / 44.00°C
+4
+RAM
+31 GB
+CPU
+RAM
+Quadro P620
+GPU 0W
+[4] (120,755)<div >41°C />
+1
+VRAM
+61.9 MB / 4 GB
+Storage
+[5] (258,868)<button class='rounded-full text-white -mr-2 -mt-1 focus-visible:ring-none relative items-center inline-flex text-center align-bottom justify-center flex-row text-base p-2 gap-2 rounded-2.5 border-1 outline-none focus-visible:ring-2 bg-transparent border-transparent text-surface-900 dark:text-surface-0 hover:bg-surface-800/10 active:bg-surface-800/20 focus-visible:ring-surface-900/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[6] (258,868)<span  />
+Healthy
+Used: 11.1 GB
+Total: 490 GB
+Stable Diffusion
+Stable Diffusion is a deep learning, text-to-image model, It is primarily used to generate detailed images conditioned on text descriptions
+Try now
+Remote Access
+[7] (922,245)<button class='ml-1 flex-shrink-0 text-white relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-full border-1 outline-none focus-visible:ring-2 bg-transparent border-transparent text-surface-500 dark:text-surface-300 hover:bg-[#333333]/5 active:bg-[#333333]/9 dark:hover:bg-white/5 dark:active:bg-white/9 focus-visible:ring-primary-500/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[8] (922,245)<span  />
+Configure Remote Access to access your home cloud remotely from anywhere.
+[9] (905,423)<button aria-label='Learn more' class='float-right relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-2.5 border-1 border-[#333333]/5 hover:border-[#333333]/9 outline-none focus-visible:ring-2 text-white bg-primary-500 hover:bg-primary-600 active:bg-primary-700 dark:hover:bg-primary-400 dark:active:bg-primary-300 focus-visible:ring-primary-500/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[10] (905,423)<span >Learn more />
+File Management
+[11] (925,354)<span  />
+	[12] (925,354)<img  />
+Drag icons to sort.
+[13] (421,550)<div  />
+	[14] (421,550)<span  />
+		[15] (421,550)<i  />
+Apps
+[16] (931,550)<div class='dropdown-trigger' />
+	[17] (931,549)<span  />
+		[18] (931,549)<i  />
+[19] (351,701)<figure  />
+	[20] (351,701)<img  />
+[21] (351,773)<a class='block one-line max-w-36'>App Store />
+[22] (483,701)<figure  />
+	[23] (483,701)<img  />
+[24] (483,773)<a class='block one-line max-w-36'>Files />
+[25] (616,701)<figure  />
+	[26] (616,701)<img  />
+[27] (616,773)<a class='block one-line max-w-36'>Backup />
+[28] (748,701)<figure  />
+	[29] (748,701)<img  />
+[30] (748,773)<a class='block one-line max-w-36'>ZVM />
+[31] (881,701)<figure  />
+	[32] (881,701)<img  />
+[33] (881,773)<a class='block one-line max-w-36'>PeerDrop />
+[34] (351,971)<figure  />
+	[35] (351,971)<img  />
+[36] (531,892)<div class='dropdown-trigger' />
+[37] (483,971)<figure  />
+	[38] (483,971)<img  />
+ZimaCube 2 Pioneer Program Is Live — 10 Free Units + Pre-Order Now Open
+Zima Hardware 3D Printed Setup Challenge is now live🔥 Win ZimaCube 2!
+Chinese New Year Holiday Break + Giveaway Time 🎁
+ZimaOS v1.5.4 Released: Encrypted Folders Introduced, Storage and File Experience Upgraded
+📢 IW Biweekly #2: ZimaBoard Builds, ZORM Open Source, and ZimaOS Updates
+ZimaBoard 2 Pricing Update (Effective Feb 6, 2026)
+📢 IW Biweekly #1: 350TB Build, Alpha Tests & Community Highlights
+Value In, Value Out: IceWhale 2025 Year-End Letter & the Launch of IceWhale Makes Fund
+[39] (109,980)<a class='intro-text' href='https://community.zimaspace.com/t/holiday-notice-see-you-back-on-october-9th/6083'>Holiday Notice: See you back on October 9th! />
+Introducing ZimaOS 1.5: A Simplified, Focused and Open NAS OS
+[40] (910,970)<button class='rounded-full relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-2.5 border-1 border-[#333333]/5 hover:border-[#333333]/9 outline-none focus-visible:ring-2 text-surface-900 dark:text-white bg-surface-100 hover:bg-surface-200 active:bg-surface-300 dark:bg-surface-800 dark:hover:bg-surface-700 dark:active:bg-surface-600 focus-visible:ring-primary-500/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[41] (910,970)<span  />
+[42] (940,970)<button class='rounded-full relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-2.5 border-1 border-[#333333]/5 hover:border-[#333333]/9 outline-none focus-visible:ring-2 text-surface-900 dark:text-white bg-surface-100 hover:bg-surface-200 active:bg-surface-300 dark:bg-surface-800 dark:hover:bg-surface-700 dark:active:bg-surface-600 focus-visible:ring-primary-500/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[43] (940,970)<span  />
+[44] (970,970)<button class='rounded-full relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-2.5 border-1 border-[#333333]/5 hover:border-[#333333]/9 outline-none focus-visible:ring-2 text-surface-900 dark:text-white bg-surface-100 hover:bg-surface-200 active:bg-surface-300 dark:bg-surface-800 dark:hover:bg-surface-700 dark:active:bg-surface-600 focus-visible:ring-primary-500/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[45] (970,970)<span  />
+[46] (305,182)<div  />
+	[47] (271,182)<img  />
+	[48] (296,182)<div  />
+		[49] (296,182)<div  />
+[50] (305,261)<div  />
+	[51] (291,261)<span  />
+[52] (305,310)<div  />
+	[53] (291,310)<span  />
+[54] (305,358)<div  />
+	[55] (292,358)<span  />
+[56] (305,407)<div  />
+	[57] (286,407)<span  />
+[58] (267,830)<button class='rounded relative items-center inline-flex text-center align-bottom justify-center flex-row text-base p-2 gap-2 rounded-2.5 border-1 outline-none focus-visible:ring-2 bg-transparent border-transparent text-surface-900 dark:text-surface-0 hover:bg-surface-800/10 active:bg-surface-800/20 focus-visible:ring-surface-900/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[59] (267,830)<span  />
+[60] (735,174)<button aria-label='Check' class='flex-shrink-0 relative items-center inline-flex text-center align-bottom justify-center flex-row text-base p-2 gap-2 rounded-2.5 border-1 outline-none focus-visible:ring-2 bg-transparent border-transparent text-surface-900 dark:text-surface-0 hover:bg-surface-800/10 active:bg-surface-800/20 focus-visible:ring-surface-900/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[61] (735,174)<span  />
+[62] (554,529)<div class='flex-grow overflow-y-scroll border rounded-xl bg-white p-3' id='settings-page' scrollable='true' />
+	[63] (693,264)<button aria-label='Get ZimaOS+' class='h-7 relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-2.5 border-1 border-[#333333]/5 hover:border-[#333333]/9 outline-none focus-visible:ring-2 text-white bg-primary-500 hover:bg-primary-600 active:bg-primary-700 dark:hover:bg-primary-400 dark:active:bg-primary-300 focus-visible:ring-primary-500/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+		[64] (693,264)<span  />
+	[65] (487,367)<div class='focus-visible:outline-none' role='button' />
+		[66] (487,367)<div  />
+	[67] (407,413)<button aria-label='Device info' class='h-7 relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-2.5 border-1 border-[#333333]/5 hover:border-[#333333]/9 outline-none focus-visible:ring-2 text-surface-900 dark:text-white bg-surface-100 hover:bg-surface-200 active:bg-surface-300 dark:bg-surface-800 dark:hover:bg-surface-700 dark:active:bg-surface-600 focus-visible:ring-primary-500/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+		[68] (407,413)<span  />
+	[69] (426,626)<button aria-label='Change wallpaper' class='w-full mobile:w-fit relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-2.5 border-1 border-[#333333]/5 hover:border-[#333333]/9 outline-none focus-visible:ring-2 text-surface-900 dark:text-white bg-surface-100 hover:bg-surface-200 active:bg-surface-300 dark:bg-surface-800 dark:hover:bg-surface-700 dark:active:bg-surface-600 focus-visible:ring-primary-500/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+		[70] (392,626)<span  />
+		[71] (433,626)<span  />
+	[72] (646,705)<div  />
+		[73] (637,705)<span aria-label='English US' class='leading-5 block flex-auto bg-transparent border-0 text-surface-800 dark:text-white/80 placeholder:text-surface-400 dark:placeholder:text-surface-500 w-[1%] py-1.5 px-3 rounded-none transition duration-200 focus:outline-none focus:shadow-none relative cursor-pointer overflow-hidden overflow-ellipsis whitespace-nowrap appearance-none' role='combobox' />
+		[74] (707,705)<div  />
+	[75] (646,784)<div  />
+		[76] (637,784)<span aria-label='(GMT+3) Europe/Istanbul' class='leading-5 block flex-auto bg-transparent border-0 text-surface-800 dark:text-white/80 placeholder:text-surface-400 dark:placeholder:text-surface-500 w-[1%] py-1.5 px-3 rounded-none transition duration-200 focus:outline-none focus:shadow-none relative cursor-pointer overflow-hidden overflow-ellipsis whitespace-nowrap appearance-none' role='combobox' />
+		[77] (707,784)<div  />
+
+</current_dom>

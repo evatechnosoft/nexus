@@ -1,0 +1,44 @@
+# Kilo Takibi Gelişmiş Grafik Sistemi Planı
+
+Bu plan, kullanıcının kilosunu farklı zaman dilimlerinde (7 Gün, Aylık, Yıllık) ve farklı görselleştirme türlerinde (Bar, Çizgi/Eğri) takip edebilmesini sağlar.
+
+## User Review Required
+
+> [!IMPORTANT]
+> - Grafik verileri backend'den `weight_logs` tablosundan çekilecek.
+> - Büyük veri setleri (Yıllık) için aylık ortalamalar üzerinden bir sadeleştirme yapılacak.
+> - Dinamik seçimler Dashboard üzerinde küçük bir 'Ayarlar' ikonu veya toggle grubu ile sunulacak.
+
+## Proposed Changes
+
+### [Component] State & Service
+
+#### [MODIFY] [AppState](file:///c:/projects/SportApp/mobile_app/lib/main.dart)
+- `weightRange`: '7D', '1M', '1Y' (default: '7D')
+- `weightChartType`: 'bar', 'line' (default: 'line')
+- Bu seçimleri her oturumda hatırlamak için `FlutterSecureStorage`'a kaydet.
+
+#### [MODIFY] [HealthService](file:///c:/projects/SportApp/mobile_app/lib/services/health_service.dart)
+- `fetchWeightHistory(range)`: Seçilen zaman dilimine göre kilo verilerini çeken metot. Backend `/pull` endpoint'i zaten 180 güne kadar veriyi dönüyor; ancak yıllık görünüm için `/sync/pull` içindeki limitleri kontrol edip gerekirse yeni bir endpoint tasarlanabilir veya mevcut veriler ölçeklenebilir.
+
+### [Component] Dashboard UI
+
+#### [MODIFY] [DashboardScreen](file:///c:/projects/SportApp/mobile_app/lib/screens/dashboard_screen.dart)
+- `_buildWeightChart` metodunu tamamen yenile:
+    - Üst kısma **7G / 30G / 1Y** ve **📊 / 📈** seçicilerini ekle.
+    - `fl_chart` kütüphanesini kullanarak dinamik `BarChart` ve `LineChart` geçişlerini sağla.
+    - Dashboard stiline (Glass, Neo vb.) uygun renk paletlerini koru.
+
+## Open Questions
+
+- Yıllık veri yoksa boş bir görünüm mü yoksa örnek veri (simülasyon) mi istersiniz?
+- Senelik görünüm için her ayı mı yoksa her haftayı mı baz alalım? (Öneri: Aylık ortalama).
+
+## Verification Plan
+
+### Automated Tests
+- Seçilen zaman filtresinin doğru veri setini (`List<FlSpot>`) oluşturduğu birim testlerle kontrol edilecek.
+
+### Manual Verification
+- Dashboard'da '7G'den '1Y'ye geçildiğinde grafiğin anında güncellendiği doğrulanacak.
+- Bar ve Çizgi grafiği arası geçişlerin akıcılığı test edilecek.

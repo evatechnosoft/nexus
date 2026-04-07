@@ -1,0 +1,126 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (20,30)<button class='relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-2.5 border-1 outline-none focus-visible:ring-2 bg-transparent border-transparent text-surface-900 dark:text-surface-0 hover:bg-surface-800/10 active:bg-surface-800/20 focus-visible:ring-surface-900/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[1] (20,30)<span  />
+[2] (44,30)<button class='relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-2.5 border-1 outline-none focus-visible:ring-2 bg-transparent border-transparent text-surface-900 dark:text-surface-0 hover:bg-surface-800/10 active:bg-surface-800/20 focus-visible:ring-surface-900/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[3] (44,30)<span  />
+13:31
+Monday, March 23, 2026
+System
+2
+CPU
+1.6W / 44.00°C
+4
+RAM
+31 GB
+CPU
+RAM
+Quadro P620
+GPU 0W
+[4] (120,755)<div >41°C />
+1
+VRAM
+61.9 MB / 4 GB
+Storage
+Healthy
+Used: 11.1 GB
+Total: 490 GB
+Stable Diffusion
+Stable Diffusion is a deep learning, text-to-image model, It is primarily used to generate detailed images conditioned on text descriptions
+Try now
+Remote Access
+[5] (922,245)<button class='ml-1 flex-shrink-0 text-white relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-full border-1 outline-none focus-visible:ring-2 bg-transparent border-transparent text-surface-500 dark:text-surface-300 hover:bg-[#333333]/5 active:bg-[#333333]/9 dark:hover:bg-white/5 dark:active:bg-white/9 focus-visible:ring-primary-500/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[6] (922,245)<span  />
+Configure Remote Access to access your home cloud remotely from anywhere.
+[7] (905,423)<button aria-label='Learn more' class='float-right relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-2.5 border-1 border-[#333333]/5 hover:border-[#333333]/9 outline-none focus-visible:ring-2 text-white bg-primary-500 hover:bg-primary-600 active:bg-primary-700 dark:hover:bg-primary-400 dark:active:bg-primary-300 focus-visible:ring-primary-500/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[8] (905,423)<span >Learn more />
+File Management
+[9] (925,354)<span  />
+	[10] (925,354)<img  />
+Drag icons to sort.
+[11] (421,550)<div  />
+	[12] (421,550)<span  />
+		[13] (421,550)<i  />
+Apps
+[14] (931,550)<div class='dropdown-trigger' />
+	[15] (931,549)<span  />
+		[16] (931,549)<i  />
+[17] (351,701)<figure  />
+	[18] (351,701)<img  />
+[19] (351,773)<a class='block one-line max-w-36'>App Store />
+[20] (483,701)<figure  />
+	[21] (483,701)<img  />
+[22] (483,773)<a class='block one-line max-w-36'>Files />
+[23] (616,701)<figure  />
+	[24] (616,701)<img  />
+[25] (616,773)<a class='block one-line max-w-36'>Backup />
+[26] (748,701)<figure  />
+	[27] (748,701)<img  />
+[28] (748,773)<a class='block one-line max-w-36'>ZVM />
+[29] (881,701)<figure  />
+	[30] (881,701)<img  />
+[31] (881,773)<a class='block one-line max-w-36'>PeerDrop />
+[32] (351,971)<figure  />
+	[33] (351,971)<img  />
+[34] (531,892)<div class='dropdown-trigger' />
+[35] (483,971)<figure  />
+	[36] (483,971)<img  />
+ZimaCube 2 Pioneer Program Is Live — 10 Free Units + Pre-Order Now Open
+[37] (167,980)<a class='intro-text' href='https://community.zimaspace.com/t/zima-hardware-3d-printed-setup-challenge-is-now-live-win-zimacube-2/8170'>Zima Hardware 3D Printed Setup Challenge is now live🔥 Win ZimaCube 2! />
+Chinese New Year Holiday Break + Giveaway Time 🎁
+[38] (910,970)<button class='rounded-full relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-2.5 border-1 border-[#333333]/5 hover:border-[#333333]/9 outline-none focus-visible:ring-2 text-surface-900 dark:text-white bg-surface-100 hover:bg-surface-200 active:bg-surface-300 dark:bg-surface-800 dark:hover:bg-surface-700 dark:active:bg-surface-600 focus-visible:ring-primary-500/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[39] (910,970)<span  />
+[40] (940,970)<button class='rounded-full relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-2.5 border-1 border-[#333333]/5 hover:border-[#333333]/9 outline-none focus-visible:ring-2 text-surface-900 dark:text-white bg-surface-100 hover:bg-surface-200 active:bg-surface-300 dark:bg-surface-800 dark:hover:bg-surface-700 dark:active:bg-surface-600 focus-visible:ring-primary-500/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[41] (940,970)<span  />
+[42] (970,970)<button class='rounded-full relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-2.5 border-1 border-[#333333]/5 hover:border-[#333333]/9 outline-none focus-visible:ring-2 text-surface-900 dark:text-white bg-surface-100 hover:bg-surface-200 active:bg-surface-300 dark:bg-surface-800 dark:hover:bg-surface-700 dark:active:bg-surface-600 focus-visible:ring-primary-500/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[43] (970,970)<span  />
+[44] (283,147)<div  />
+	[45] (245,147)<img  />
+	[46] (273,147)<div  />
+		[47] (273,147)<div >dean />
+[48] (283,235)<div  />
+	[49] (267,235)<span >General />
+[50] (283,288)<div  />
+	[51] (268,288)<span >Storage />
+[52] (283,342)<div  />
+	[53] (269,342)<span >Network />
+[54] (283,396)<div  />
+	[55] (263,396)<span >Apps />
+[56] (241,867)<button class='rounded relative items-center inline-flex text-center align-bottom justify-center flex-row text-base p-2 gap-2 rounded-2.5 border-1 outline-none focus-visible:ring-2 bg-transparent border-transparent text-surface-900 dark:text-surface-0 hover:bg-surface-800/10 active:bg-surface-800/20 focus-visible:ring-surface-900/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[57] (241,867)<span  />
+Network
+[58] (761,138)<button aria-label='Check' class='flex-shrink-0 relative items-center inline-flex text-center align-bottom justify-center flex-row text-base p-2 gap-2 rounded-2.5 border-1 outline-none focus-visible:ring-2 bg-transparent border-transparent text-surface-900 dark:text-surface-0 hover:bg-surface-800/10 active:bg-surface-800/20 focus-visible:ring-surface-900/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[59] (761,138)<span  />
+Connection
+Ethernet
+eth0
+100 Mbps
+/
+1 Gbps
+DHCP
+[60] (731,298)<button class='relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-2.5 border-1 outline-none focus-visible:ring-2 bg-transparent border-transparent text-surface-500 dark:text-surface-300 hover:bg-[#333333]/5 active:bg-[#333333]/9 dark:hover:bg-white/5 dark:active:bg-white/9 focus-visible:ring-primary-500/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[61] (731,298)<span  />
+Virtual Network (Remote)
+zt3lfpgodn
+Static IP
+10.147.12.1
+Wireless
+wlan0
+DHCP
+[62] (731,498)<button class='relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-2.5 border-1 outline-none focus-visible:ring-2 bg-transparent border-transparent text-surface-500 dark:text-surface-300 hover:bg-[#333333]/5 active:bg-[#333333]/9 dark:hover:bg-white/5 dark:active:bg-white/9 focus-visible:ring-primary-500/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[63] (731,498)<span  />
+Remote access
+[64] (389,634)<a class='text-blue-500' href='https://find.zimaspace.com/'>Zima Client />
+enables seamless access to your essential data and applications anytime, anywhere. Your Network ID is unique and critical to the security of your device—please keep it confidential and avoid sharing it with untrusted individuals.
+[65] (728,635)<input class='peer w-full h-full absolute top-0 left-0 z-10 p-0 m-0 opacity-0 rounded-2xl outline-none appearance-none cursor-pointer' role='switch' />
+Remote ID:
+a9ed7873278b4b4a
+[66] (688,753)<button aria-label='Copy ID' class='relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-2.5 border-1 border-[#333333]/5 hover:border-[#333333]/9 outline-none focus-visible:ring-2 text-surface-900 dark:text-white bg-surface-100 hover:bg-surface-200 active:bg-surface-300 dark:bg-surface-800 dark:hover:bg-surface-700 dark:active:bg-surface-600 focus-visible:ring-primary-500/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[67] (670,753)<span  />
+	[68] (696,753)<span >Copy ID />
+[69] (731,753)<button class='relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-2.5 border-1 border-[#333333]/5 hover:border-[#333333]/9 outline-none focus-visible:ring-2 text-surface-900 dark:text-white bg-surface-100 hover:bg-surface-200 active:bg-surface-300 dark:bg-surface-800 dark:hover:bg-surface-700 dark:active:bg-surface-600 focus-visible:ring-primary-500/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[70] (731,753)<span  />
+
+</current_dom>

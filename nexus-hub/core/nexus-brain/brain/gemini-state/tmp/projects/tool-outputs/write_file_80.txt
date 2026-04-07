@@ -1,0 +1,50 @@
+Successfully created and wrote to new file: C:\projects\agentops-nexus\.gitignore. Here is the updated code:
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+
+# Configuration
+.env
+.env.dev
+.env.prod
+.env.test
+
+# Database
+*.sqlite
+*.db
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project Specific
+*.zip
+*.tar.gz
+diff.txt
+test_output.txt
+data/
+output/
+temp/

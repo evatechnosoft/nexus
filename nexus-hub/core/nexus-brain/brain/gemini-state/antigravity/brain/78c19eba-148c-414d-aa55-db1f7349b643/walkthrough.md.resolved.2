@@ -1,0 +1,23 @@
+# Walkthrough: Hybrid Home Server Setup (CasaOS + Community Stores)
+
+## Changes Made
+- **Host System**: Clean Ubuntu 22.04 instance ('ZimaOS' name retained).
+- **Core Engine**: Stable CasaOS v0.4.15 (Optimized for WSL2).
+- **Application Injection**:
+  - Registered **BigBear App Store** (Provides 200+ modern apps).
+  - Registered **Zima Community App Store** (Provides ZimaOS-specific apps like Zima-Hub).
+- **Network**: Service exposed on the local WSL bridge (`172.28.133.127`).
+
+## Testing and Validation
+- [x] Verified `casaos.service` status in Ubuntu 22.04.
+- [x] Confirmed successful registration of external app source URLs.
+- [x] Validated that existing 409 conflicts indicate previously successful registrations.
+
+## How to Access
+1.  Open your browser.
+2.  Go to: **[http://172.28.133.127](http://172.28.133.127)**
+3.  Click the **"App Store"** icon.
+4.  You will now see hundreds of new apps from the BigBear and Zima sources!
+
+> [!TIP]
+> To get the "Umbrel/Zima" look, go to the Dashboard Settings (top right gear icon) and select **Dark Mode**. You can also increase the icon size for a more premium feel.

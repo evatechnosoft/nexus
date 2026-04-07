@@ -1,0 +1,48 @@
+# Duygu Analizi & Hareketli Karakter Modları Uygulama Planı
+
+Bu plan, uygulamanın duygusal zekasını artıracak ve "Arkadaşım AI" karakterine görsel bir kimlik (hareketli avatar) kazandıracaktır.
+
+## User Review Required
+
+> [!IMPORTANT]
+> Karakter modları AI'nın **tüm konuşma tarzını** değiştirecektir.
+> Duygu analizi için `fl_chart` kütüphanesi kullanılacaktır.
+
+## Proposed Changes
+
+### 1. Karakter Modları (Personalities)
+#### [NEW] [personality_models.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/models/personality_models.dart)
+- `AiPersonality` sınıfı: `name`, `systemPrompt`, `avatarEmoji`, `primaryColor`.
+- Modlar: **Bilge Öğretmen**, **Masalcı Dede/Abla**, **Oyun Arkadaşı**.
+
+#### [MODIFY] [api_service.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/services/api_service.dart)
+- `buildSystemPrompt` metodunun seçilen kişiliğe göre dinamikleşmesi.
+
+### 2. Hareketli Avatar (Animated Avatar)
+#### [MODIFY] [chat_screen.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/screens/chat/chat_screen.dart)
+- AppBar'da veya mesajların yanında, AI konuşurken **zıplayan, göz kırpan veya renk değiştiren** premium bir avatar.
+- `flutter_animate` ile "canlı" hissettiren mikro-animasyonlar.
+
+### 3. Duygu Analizi ve Grafikler
+#### [MODIFY] [pubspec.yaml](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/pubspec.yaml)
+- `fl_chart` kütüphanesinin eklenmesi.
+
+#### [MODIFY] [note.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/models/note.dart) & [user_profile.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/models/user_profile.dart)
+- Notlara ve profile `mood` (mutlu, üzgün, heyecanlı vb.) alanı eklenmesi.
+
+#### [NEW] [stats_screen.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/screens/stats/stats_screen.dart)
+- Haftalık duygu değişimini gösteren şık bir **Çizgi Grafik (Line Chart)** veya **Pasta Grafik (Pie Chart)**.
+
+## Open Questions
+
+1. **Avatar Görseli**: Şu an emoji tabanlı mı ilerleyelim (hızlı), yoksa `generate_image` ile özel bir karakter mi oluşturayım? (Emoji tabanlı olanlar `flutter_animate` ile çok tatlı yapılabiliyor).
+2. **Analiz**: AI, sohbetin sonunda çocuğun o anki ruh halini tahmin edip gizlice kaydetsin mi?
+
+## Verification Plan
+
+### Automated Tests
+- Kişilik bazlı prompt doğruluğu testleri.
+
+### Manual Verification
+- Farklı modlarda AI'nın üslup değişikliğinin kontrolü.
+- Grafiğin veriye göre anlık güncellenmesinin testi.

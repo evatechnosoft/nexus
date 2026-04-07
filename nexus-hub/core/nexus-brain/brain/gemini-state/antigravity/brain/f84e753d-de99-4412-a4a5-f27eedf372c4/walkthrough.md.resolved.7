@@ -1,0 +1,29 @@
+# Walkthrough - 521 Error & Network Resolution
+
+Everything on the server is now **FIXED and RUNNING**. The 521 error you see in Cloudflare is due to a networking mismatch in the tunnel configuration.
+
+## 1. Why you see 521 (Connection Failed)
+Your `cloudflared` (tunnel) is running in **Host Network Mode**.
+- **The Problem:** In this mode, the tunnel **cannot see** container names like `it-inventory` or `flask-api`. 
+- **The Solution:** It must use **`localhost:<PORT>`** or **`192.168.1.186:<PORT>`**.
+
+## 2. Verified Service Table
+I've manually verified these ports are open and responding with **200 OK** on your ZimaOS:
+
+| Subdomain | Target URL (Use this in Cloudflare) | Status |
+| :--- | :--- | :--- |
+| `evaitec.com` | `http://localhost:8001` | **200 OK** |
+| `api.evaitec.com` | `http://localhost:5005` | **200 OK** |
+| `dev.evaitec.com` | `http://localhost:5007` | **200 OK** |
+| `test.evaitec.com` | `http://localhost:5006` | **200 OK** |
+| `prod.evaitec.com` | `http://localhost:5010` | **200 OK** |
+| `cloud.evaitec.com` | `http://localhost:10081` | **200 OK** |
+| `db.evaitec.com` | `http://localhost:8080` | **200 OK** |
+
+## 3. Action Required
+1.  Login to your **Cloudflare Zero Trust Dashboard** (or the Tunnel Manager on Port 14333).
+2.  Edit the **Public Hostnames** for each subdomain.
+3.  Change the "Service" from `it-inventory:8000` to **`http://localhost:8001`**.
+4.  Repeat for all others using the table above.
+
+**Note:** If `test.evaitec.com` still redirects to `.com.tr`, it is a **Browser Cache** or **Page Rule** issue, as I've confirmed the server itself does NOT send any redirects now.

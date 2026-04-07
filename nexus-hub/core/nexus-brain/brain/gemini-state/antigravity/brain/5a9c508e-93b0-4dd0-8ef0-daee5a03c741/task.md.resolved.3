@@ -1,0 +1,6 @@
+- [ ] Update `main.py` dashboard count to include "Onay Bekliyor"
+- [ ] Stabilize `email_watcher.py`: Final `parsing_input` removal & robust Soft Match
+- [ ] Fix Layout Padding in `static/style.css` (The 'cramped' UI fix)
+- [ ] Final Excel Dropdown interaction fix in `templates/base.html`
+- [ ] Restart Uvicorn Server on port 9292
+- [ ] Verify with `simulate_test.py` and Dashboard check

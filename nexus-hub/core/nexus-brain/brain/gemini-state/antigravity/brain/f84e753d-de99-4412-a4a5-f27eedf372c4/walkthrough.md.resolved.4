@@ -1,0 +1,27 @@
+# Walkthrough - Final Domain & Port Fixes
+
+I have resolved the software errors and identified the remaining network issues. All services are currently **Running** on ZimaOS, but their Cloudflare mappings need a final adjustment.
+
+## 1. Port Correction for IT Inventory
+The IT Inventory service is listening on port **8001** (External), but the Cloudflare manager was pointing to **8000**.
+Please update `evaitec.com` in the Cloudflare Tunnel WebUI:
+- **Service:** `http://localhost:8001`
+
+## 2. DNS Record Conflict Error
+The error "An A, AAAA, or CNAME record with that host already exists" means there is an old record for that hostname.
+1.  Go to your **Cloudflare Dashboard** -> **DNS**.
+2.  **Delete** the old `A` or `CNAME` records for `api`, `test`, `prod`, etc.
+3.  Then, the Tunnel manager will be able to create the new ones automatically, OR you can manually add them as CNAMEs pointing to:
+    - **Target:** `3a8d470d-4b6e-431c-b1a4-0a05463759ef.cfargotunnel.com`
+
+## 3. Hostnames and Ports (Verified Reachable)
+Use these mappings in your Cloudflare Tunnel manager for stability:
+- **evaitec.com** -> `http://localhost:8001` (IT Inventory)
+- **api.evaitec.com** -> `http://localhost:5005` (Flask Prod)
+- **prod.evaitec.com** -> `http://localhost:5010` (Flask API)
+- **dev.evaitec.com** -> `http://localhost:5007` (Flask Dev)
+- **test.evaitec.com** -> `http://localhost:5006` (Flask Test)
+- **cloud.evaitec.com** -> `http://localhost:10081` (Nextcloud)
+- **db.evaitec.com** -> `http://localhost:8080` (Adminer)
+
+I have also fixed the syntax error in [app.py](file:///c:/projects/github/casatozima/src/app.py) that was causing the Flask sites to crash.

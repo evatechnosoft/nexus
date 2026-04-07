@@ -1,0 +1,177 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Erişilebilirlik Bağlantıları
+Ana içeriğe geç
+Erişilebilirlik yardımı
+Erişilebilirlikle ilgili geri bildirim
+[0] (77,70)<a aria-label='Google Anasayfası'na Git' href='https://www.google.com/webhp?hl=tr&sa=X&ved=0ahUKEwikxYmEkKyTAxVNh_0HHY_HKlUQPAgI' id='logo' title='Google Anasayfası'na Git' />
+[1] (345,68)<textarea aria-label='Ara' class='gLFyf' id='APjFqb' role='combobox' />
+[2] (560,68)<div  />
+	[3] (558,68)<div aria-label='Temizle' class='M2vV3 vOY7J' role='button' />
+		[4] (558,68)<span  />
+	[5] (574,68)<span  />
+[6] (590,68)<div aria-label='Harf çevirme aracı' class='Umvnrc' role='button' />
+	[7] (590,68)<span  />
+[8] (615,68)<div aria-label='Sesle arama yapın' class='XDyW0e' role='button' />
+[9] (641,68)<div aria-label='Görselle arama' class='nDcEnd' role='button' />
+[10] (670,68)<button aria-label='Ara' class='HZVG1b Tg7LZd' />
+	[11] (666,68)<div  />
+		[12] (666,68)<span  />
+[13] (878,69)<div aria-label='Ayarlar' class='fLciMb' id='og-te' role='button' />
+	[14] (878,71)<div  />
+		[15] (878,69)<span  />
+[16] (907,69)<a aria-label='Google uygulamaları' class='gb_B' href='https://www.google.com.tr/intl/tr/about/products?tab=wh' role='button' />
+[17] (955,69)<a aria-label='Oturum açın' class='gb_A' href='https://accounts.google.com/ServiceLogin?hl=tr&passive=true&continue=https://www.google.com/search%3Fq%3Dsite:docer.pl%2B%2522english%2Bcode%2522&ec=futura_srp_og_si_72236_p'>Oturum açın />
+	Oturum açın
+Filtreler ve Konular
+[18] (164,144)<a class='XVMlrc C6AK7c' href='/search?q=site:docer.pl+%22english+code%22&sca_esv=f818ef0c6d37c692&udm=50&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLfDIfEXPwaXG5eHvO7qyO_mxvB-_pt2ZyNJIVa-ipFUKTmBSN5jpCnMZfMlGMEdGx-GBpsSQdV8aA6FIHgXhkSE1F1GJfG95_zwE6o1wVfxiO-snycjB9A1j3-FGxNfaGngqePgnDCvVQiETN7RS2-fp64dai_EcIDbCJk3REDGeEWo_5LmNu9ougA8VJFKNu-EjJNNQSOZnfiCee32q_rSZ10Et&aep=1&ntc=1&sa=X&ved=2ahUKEwikxYmEkKyTAxVNh_0HHY_HKlUQ2J8OegQIDhAE' />
+	[19] (164,144)<div  />
+		[20] (164,155)<div  />
+			[21] (164,148)<span >AI Modu />
+[22] (207,144)<a class='C6AK7c' role='link' />
+	Tümü
+[23] (252,144)<a class='C6AK7c' href='/search?sca_esv=f818ef0c6d37c692&udm=2&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLfDIfEXPwaXG5eHvO7qyO_mxvB-_pt2ZyNJIVa-ipFUKTmBSN5jpCnMZfMlGMEdGx-GBpsSQdV8aA6FIHgXhkSE1F1GJfG95_zwE6o1wVfxiO-snycjB9A1j3-FGxNfaGngqePgnDCvVQiETN7RS2-fp64dai_EcIDbCJk3REDGeEWo_5LmNu9ougA8VJFKNu-EjJNNQSOZnfiCee32q_rSZ10Et&q=site:docer.pl+%22english+code%22&sa=X&ved=2ahUKEwikxYmEkKyTAxVNh_0HHY_HKlUQtKgLegQIFBAB' />
+	[24] (252,144)<div  />
+		[25] (252,155)<span >Görseller />
+[26] (303,144)<a class='C6AK7c' href='/search?sca_esv=f818ef0c6d37c692&udm=28&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLfDIfEXPwaXG5eHvO7qyO_mxvB-_pt2ZyNJIVa-ipFUKTmBSN5jpCnMZfMlGMEdGx-GBpsSQdV8aA6FIHgXhkSE1F1GJfG95_zwE6o1wVfxiO-snycjB9A1j3-FGxNfaGngqePgnDCvVQiETN7RS2-fp64dai_EcIDbCJk3REDGeEWo_5LmNu9ougA8VJFKNu-EjJNNQSOZnfiCee32q_rSZ10Et&q=site:docer.pl+%22english+code%22&ved=1t:220175&ictx=111' />
+	[27] (303,144)<div  />
+		[28] (303,155)<span >Alışveriş />
+[29] (351,144)<a class='C6AK7c' href='/search?sca_esv=f818ef0c6d37c692&udm=7&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLfDIfEXPwaXG5eHvO7qyO_mxvB-_pt2ZyNJIVa-ipFUKTmBSN5jpCnMZfMlGMEdGx-GBpsSQdV8aA6FIHgXhkSE1F1GJfG95_zwE6o1wVfxiO-snycjB9A1j3-FGxNfaGngqePgnDCvVQiETN7RS2-fp64dai_EcIDbCJk3REDGeEWo_5LmNu9ougA8VJFKNu-EjJNNQSOZnfiCee32q_rSZ10Et&q=site:docer.pl+%22english+code%22&sa=X&ved=2ahUKEwikxYmEkKyTAxVNh_0HHY_HKlUQtKgLegQIERAB' />
+	[30] (351,144)<div  />
+		[31] (351,155)<span >Videolar />
+[32] (400,144)<a class='C6AK7c' href='/search?sca_esv=f818ef0c6d37c692&q=site:docer.pl+%22english+code%22&tbm=nws&source=lnms&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLfDIfEXPwaXG5eHvO7qyO_mxvB-_pt2ZyNJIVa-ipFUKTmBSN5jpCnMZfMlGMEdGx-GBpsSQdV8aA6FIHgXhkSE1F1GJfG95_zwE6o1wVfxiO-snycjB9A1j3-FGxNfaGngqePgnDCvVQiETN7RS2-fp64dai_EcIDbCJk3REDGeEWo_5LmNu9ougA8VJFKNu-EjJNNQSOZnfiCee32q_rSZ10Et&sa=X&ved=2ahUKEwikxYmEkKyTAxVNh_0HHY_HKlUQ0pQJegQIEhAB' />
+	[33] (400,144)<div  />
+		[34] (400,155)<span >Haberler />
+[35] (459,144)<a class='C6AK7c' href='/search?sca_esv=f818ef0c6d37c692&udm=39&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLfDIfEXPwaXG5eHvO7qyO_mxvB-_pt2ZyNJIVa-ipFUKTmBSN5jpCnMZfMlGMEdGx-GBpsSQdV8aA6FIHgXhkSE1F1GJfG95_zwE6o1wVfxiO-snycjB9A1j3-FGxNfaGngqePgnDCvVQiETN7RS2-fp64dai_EcIDbCJk3REDGeEWo_5LmNu9ougA8VJFKNu-EjJNNQSOZnfiCee32q_rSZ10Et&q=site:docer.pl+%22english+code%22&sa=X&ved=2ahUKEwikxYmEkKyTAxVNh_0HHY_HKlUQs6gLegQIEBAB' />
+	[36] (459,144)<div  />
+		[37] (459,155)<span >Kısa videolar />
+[38] (527,144)<div class='mTpL7c' role='button' />
+	[39] (527,144)<div  />
+		[40] (527,155)<div  />
+			[41] (521,148)<span >Daha fazla />
+			[42] (548,148)<span  />
+[43] (589,144)<div class='mOKdDc' id='hdtb-tls' role='button' />
+	[44] (589,144)<div  />
+		[45] (589,155)<div  />
+			[46] (584,148)<span >Araçlar />
+			[47] (604,148)<span  />
+[48] (165,209)<a aria-label='File ekle' class='nPDzT T3FoJb' href='/search?sca_esv=f818ef0c6d37c692&q=English+File+code&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c--j-8-rgrpNPCZhmSlXPgOAd7uJsiDSMchbCQEv_VSKHHcjRN6K6MgdNAI9R5I6NXPwsEyfj_TZuW32Yi0e4P6dJ-RfY7R7HNSBEouBpGqs8lIyUk0lj5cM3OH5R5vTNPuXJTHCIRCMuOYr4Awybs-oyGnEkiIu3dpFjD5Ddbl7jyGcGAvLr0Sq95Uo06zEJn2o87WOQ3mWtvgawtMKvPvY2k5Ao&sa=X&ved=2ahUKEwikxYmEkKyTAxVNh_0HHY_HKlUQxKsJKAB6BAgVEAE&ictx=0' role='link' />
+	[49] (165,209)<div  />
+		[50] (165,209)<span >File />
+[51] (206,209)<a aria-label='Form ekle' class='nPDzT T3FoJb' href='/search?sca_esv=f818ef0c6d37c692&q=code+form+of+english&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-zicBFwnMy5mp_ocYtJoMVhX0gvJcEfTgJ1XHIvTrZpxUimMw4rhME6K0UV4uax8lENr5J00v84GlFKMUDJEomK8Mpi3WQhOpjEkc_3UgTg4zlQkfOWUNTWA7iCD0rA3vBDweX2Ypc4bZQ6wALLSQ9YBSrkEYk0Ts0nfY9yPLlQ-Lmi3h6P8a3btnX_giNrGPeEVMoMHgLnwi9giQv2x8oJsqAYg&sa=X&ved=2ahUKEwikxYmEkKyTAxVNh_0HHY_HKlUQxKsJKAF6BAgaEAE&ictx=0' role='link' />
+	[52] (206,209)<div  />
+		[53] (206,209)<span >Form />
+[54] (249,209)<a aria-label='Gtip ekle' class='nPDzT T3FoJb' href='/search?sca_esv=f818ef0c6d37c692&q=Gtip+code+english&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c--j-8-rgrpNPCZhmSlXPgOAd7uJsiDSMchbCQEv_VSKHHcjRN6K6MgdNAI9R5I6NX3uWYGyrKSs1jItqlz56z6Io8mSUckpGLQvtkxpH5EcKFlrV99FVRcIgd8fx_hM-lhEqLw88mXzHWi_4RmqLGgCB4cMOusT4b_C9hKfXtl399m4YrnR8qTCdbDkqwCP5LEhWOpk-aqdliyt4VXosPNKHcXHA&sa=X&ved=2ahUKEwikxYmEkKyTAxVNh_0HHY_HKlUQxKsJKAJ6BAgZEAE&ictx=0' role='link' />
+	[55] (249,209)<div  />
+		[56] (249,209)<span >Gtip />
+[57] (302,209)<a aria-label='Language ekle' class='nPDzT T3FoJb' href='/search?sca_esv=f818ef0c6d37c692&q=English+language+code&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-FxGX_h13JKBCeunnz-8_cwV-sFP0GTKPOy0ffetIAqQXsuv6pgZHOPxNAzu2owfYudBm5dSs-O8F1YlLoHVzYzmLLzmwYeheLN7oekyqSLNUJrYqNpmGhw6V4wB_M7iXx68Bv-TObdUpfBJrLkAxPv8Qsf1BRWNmmP90i1QORs_AF-QPT6fiXAkfRXr4aCn3VHOlakQ-UU_MhCWf252AcESGvlw&sa=X&ved=2ahUKEwikxYmEkKyTAxVNh_0HHY_HKlUQxKsJKAN6BAgYEAE&ictx=0' role='link' />
+	[58] (302,209)<div  />
+		[59] (302,209)<span >Language />
+[60] (360,209)<a aria-label='Letters ekle' class='nPDzT T3FoJb' href='/search?sca_esv=f818ef0c6d37c692&q=English+letters+code&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-rvXnL-566AJPGCDUGBnzj_pyPHujHP125fm9SySWRK56yyaV3Xr8iiNUO9IrzMKlcfJSV-ssSNmzDIQOC2QytJ-ncLGCSFtPpXi5djThmVhZAXUGZNDUZpM0Dy-Zppeb5ChPgxqWUR6uHy-_bxo7lXIhyKj8AmUXKCp0ZniIj-7PE2zrHH6jGMrtBXcUccVsJ3KrJbFAP9YjqPge4LW3rfuZZLQ&sa=X&ved=2ahUKEwikxYmEkKyTAxVNh_0HHY_HKlUQxKsJKAR6BAgWEAE&ictx=0' role='link' />
+	[61] (360,209)<div  />
+		[62] (360,209)<span >Letters />
+[63] (414,209)<a aria-label='Pearson ekle' class='nPDzT T3FoJb' href='/search?sca_esv=f818ef0c6d37c692&q=English+Code+Pearson&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-rvXnL-566AJPGCDUGBnzj_pyPHujHP125fm9SySWRK56yyaV3Xr8iiNUO9IrzMKlYMNfYWcQhQKRon_ht6Yvv5sKqxRQ30x0kFzbAzlZRcdSh9P-r61ms8i34gyiCcdLR4evr08ibQRK6Azb1djFXC46eyoTUV2uUI6cdcHgdc_NrW3Dzfy6-Ik02QSykThLr80OAKsHUtMRiz7IyOQ2fd8eHcA&sa=X&ved=2ahUKEwikxYmEkKyTAxVNh_0HHY_HKlUQxKsJKAV6BAhOEAE&ictx=0' role='link' />
+	[64] (414,209)<div  />
+		[65] (414,209)<span >Pearson />
+Looking for results in English?
+[66] (967,328)<a href='#' />
+	[67] (967,325)<span  />
+[68] (853,358)<a href='/setprefs?sig=0_AFLdylOmlmYTb9A6MfmhoVa_RsI%3D&source=en_ignored_notification&prev=https://www.google.com/search?q%3Dsite:docer.pl%2B%2522english%2Bcode%2522&hl=en&sa=X&ved=2ahUKEwikxYmEkKyTAxVNh_0HHY_HKlUQhoQCKAF6BAgMEAQ'>Change to English />
+[69] (876,389)<a href='#'>kullanmaya devam et />
+	[70] (833,388)<span >Türkçe />
+[71] (841,432)<a class='fl' href='/preferences?lang=1&hl=tr&sa=X&ved=2ahUKEwikxYmEkKyTAxVNh_0HHY_HKlUQiIQCKAN6BAgMEAY#languages'>Dil ayarları />
+Arama Sonuçları
+[72] (298,324)<a class='zReHs' href='https://docer.pl/doc/5e55snx' />
+	[73] (298,350)<h3 >English Code Brochure Parent Information Interactive />
+	[74] (206,303)<div  />
+		[75] (206,303)<div  />
+			[76] (156,303)<span  />
+				[77] (156,303)<div  />
+					[78] (156,303)<img  />
+			[79] (219,303)<div  />
+				[80] (219,291)<div  />
+					[81] (219,291)<span >Docer.pl />
+				[82] (219,316)<div  />
+					[83] (219,316)<cite class='qLRx3b tjvcx GvPZzd dTxz9 cHaqb' role='text'>https://docer.pl />
+						[84] (232,315)<span class='ylgVCe ob9lvb' role='text'>› doc />
+·
+[85] (294,316)<a class='dEEN8c' href='https://translate.google.com/translate?u=https://docer.pl/doc/5e55snx&hl=tr&sl=en&tl=tr&client=search' />
+	[86] (294,315)<span >Bu sayfanın çevirisini yap />
+[87] (352,315)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[88] (352,315)<span  />
+		[89] (352,316)<span  />
+2 Ağu 2025
+—
+8-13 4
+English Code
+helps students develop a coding mindset to support creative English language learning. The materials encourage creativity, ...
+[90] (265,517)<a class='zReHs' href='https://docer.pl/doc/8xvcn0n' />
+	[91] (265,543)<h3 >Pearson - English Code 5 Student s Book />
+	[92] (206,496)<div  />
+		[93] (206,496)<div  />
+			[94] (156,496)<span  />
+				[95] (156,496)<div  />
+					[96] (156,496)<img  />
+			[97] (219,496)<div  />
+				[98] (219,485)<div  />
+					[99] (219,485)<span >Docer.pl />
+				[100] (219,510)<div  />
+					[101] (219,510)<cite class='qLRx3b tjvcx GvPZzd dTxz9 cHaqb' role='text'>https://docer.pl />
+						[102] (232,509)<span class='ylgVCe ob9lvb' role='text'>› doc />
+·
+[103] (294,510)<a class='dEEN8c' href='https://translate.google.com/translate?u=https://docer.pl/doc/8xvcn0n&hl=tr&sl=en&tl=tr&client=search' />
+	[104] (294,509)<span >Bu sayfanın çevirisini yap />
+[105] (352,508)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[106] (352,508)<span  />
+		[107] (352,510)<span  />
+Pearson -
+English Code
+5 Student s Book. Dokument: pdf 33.4 MB. 1, 2, 3, 4, 5. Opublikowany: 2023-05-27. Pobierz plik *.pdf. Pobieranie plików większych niż 1 ...
+[108] (275,711)<a class='zReHs' href='https://docer.pl/doc/15nv1n8' />
+	[109] (275,736)<h3 >English Code BrE L1 Checkpoint Test 1 U1-2 />
+	[110] (206,690)<div  />
+		[111] (206,690)<div  />
+			[112] (156,690)<span  />
+				[113] (156,690)<div  />
+					[114] (156,690)<img  />
+			[115] (219,690)<div  />
+				[116] (219,678)<div  />
+					[117] (219,678)<span >Docer.pl />
+				[118] (219,703)<div  />
+					[119] (219,703)<cite class='qLRx3b tjvcx GvPZzd dTxz9 cHaqb' role='text'>https://docer.pl />
+						[120] (232,702)<span class='ylgVCe ob9lvb' role='text'>› doc />
+·
+[121] (294,703)<a class='dEEN8c' href='https://translate.google.com/translate?u=https://docer.pl/doc/15nv1n8&hl=tr&sl=en&tl=tr&client=search' />
+	[122] (294,702)<span >Bu sayfanın çevirisini yap />
+[123] (352,702)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[124] (352,702)<span  />
+		[125] (352,703)<span  />
+11 Kas 2024
+—
+English Code
+BrE L1 Checkpoint Test 1 U1-2 · 1 There are two aeroplanes. · 2 There is one train. · 3 There are ten crayons. · 4 There are eight ...
+[126] (271,904)<a class='zReHs' href='https://docer.pl/doc/cxv80x8' />
+	[127] (271,930)<h3 >English Code BrE L5 Progression Test U3-4 />
+	[128] (206,883)<div  />
+		[129] (206,883)<div  />
+			[130] (156,883)<span  />
+				[131] (156,883)<div  />
+					[132] (156,883)<img  />
+			[133] (219,883)<div  />
+				[134] (219,871)<div  />
+					[135] (219,871)<span >Docer.pl />
+				[136] (219,896)<div  />
+					[137] (219,896)<cite class='qLRx3b tjvcx GvPZzd dTxz9 cHaqb' role='text'>https://docer.pl />
+						[138] (232,896)<span class='ylgVCe ob9lvb' role='text'>› doc />
+·
+[139] (294,896)<a class='dEEN8c' href='https://translate.google.com/translate?u=https://docer.pl/doc/cxv80x8&hl=tr&sl=en&tl=tr&client=search' />
+	[140] (294,896)<span >Bu sayfanın çevirisini yap />
+[141] (352,895)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[142] (352,895)<span  />
+		[143] (352,896)<span  />
+English Code
+BrE L5 Progression Test U3-4 · 1 What does Harry like? · 2 What activity does Sue love? · 3 What does Sam like better? · 4 Where does Lucy like eating ...
+
+</current_dom>

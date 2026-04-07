@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haftalık Ders Detayı — English Hub</title>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #ec4899;
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --glass: rgba(255, 255, 255, 0.95);
+            --text-main: #1f2937;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--bg-gradient);
+            min-height: 100vh;
+            padding: 40px 20px;
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            position: relative;
+        }
+
+        .header-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .back-btn {
+            background: white;
+            border: 1px solid #e5e7eb;
+            padding: 8px 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .back-btn:hover { background: #f9fafb; border-color: var(--primary); }
+
+        .settings-btn {
+            background: white;
+            border: 1px solid #e5e7eb;
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.2s;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+        .settings-btn:hover { border-color: var(--primary); color: var(--primary); transform: rotate(45deg); }
+
+        h1 { font-size: 2.2rem; color: var(--primary); margin-bottom: 10px; }
+        .subtitle { font-size: 1.1rem; color: #6b7280; margin-bottom: 30px; }
+
+        .section { margin-bottom: 30px; }
+        .section-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 15px; border-bottom: 2px solid #eef2ff; padding-bottom: 5px; }
+
+        .word-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 15px; }
+        .word-card { 
+            background: var(--card-bg, white); padding: 20px; border-radius: 20px; border: 2px solid #eef2ff; 
+            text-align: center; transition: all 0.3s; cursor: pointer; user-select: none;
+            position: relative; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        .word-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 15px 25px -5px rgba(0,0,0,0.1); }
+        .word-card:active { transform: scale(0.95); opacity: 0.8; }
+        .word-card.speaking { border-color: var(--secondary); box-shadow: 0 0 15px var(--secondary); animation: pulse 1s infinite alternate; }
+        
+        @keyframes pulse { from { box-shadow: 0 0 10px var(--secondary); } to { box-shadow: 0 0 25px var(--secondary); } }
+
+        .word-text { font-size: 1.4rem; font-weight: 800; color: var(--primary); margin-bottom: 5px; }
+        .word-tr { font-size: 0.95rem; color: #6b7280; font-weight: 600; background: #fef2f2; padding: 4px 8px; border-radius: 8px; display: inline-block; margin-top: 5px; }
+        .word-extra { font-size: 1.05rem; color: #4b5563; margin-top: 12px; padding-top: 12px; border-top: 1px dashed #e5e7eb; text-align: left; line-height: 1.5; }
+        .word-extra b { color: var(--primary); font-weight: 700; opacity: 0.8; }
+        .ph-bracket { color: var(--secondary); font-weight: 900; margin: 0 2px; }
+        .sy-dash { color: #f59e0b; font-weight: 900; }
+        .ph-text, .sy-text { font-family: 'Inter', sans-serif; font-weight: 500; color: #374151; }
+        
+        .spelling-display { 
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+            background: var(--primary); color: white; border-radius: 20px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 3rem; font-weight: 900; z-index: 10;
+            display: none; transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .word-card.spelling .spelling-display { display: flex; animation: zoomIn 0.2s; }
+
+        /* Settings Drawer */
+        .drawer-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.3); z-index: 100;
+            display: none; opacity: 0; transition: opacity 0.3s;
+        }
+        .drawer {
+            position: fixed; top: 0; right: -320px; width: 320px; height: 100%;
+            background: white; z-index: 101; padding: 30px;
+            box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+            transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .drawer.open { right: 0; }
+        .drawer-overlay.open { display: block; opacity: 1; }
+        
+        .drawer-title { font-size: 1.5rem; font-weight: 800; margin-bottom: 25px; color: var(--primary); display: flex; align-items: center; gap: 10px; }
+        .setting-item { margin-bottom: 25px; }
+        .setting-label { display: block; font-weight: 600; margin-bottom: 10px; font-size: 0.9rem; color: #4b5563; }
+        
+        .slider-container { display: flex; align-items: center; gap: 15px; }
+        input[type="range"] { flex: 1; cursor: pointer; accent-color: var(--primary); }
+        .val-badge { background: #eef2ff; color: var(--primary); padding: 2px 8px; border-radius: 6px; font-weight: 700; min-width: 45px; text-align: center; }
+
+        .tone-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .tone-btn { 
+            padding: 12px; border: 2px solid #eef2ff; border-radius: 12px; 
+            cursor: pointer; text-align: center; font-weight: 600; transition: all 0.2s;
+        }
+        .tone-btn.active { border-color: var(--primary); background: #eef2ff; color: var(--primary); }
+        .tone-btn span { display: block; font-size: 1.2rem; margin-bottom: 4px; }
+
+        @keyframes zoomIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+
+        .book-ref { background: #fdf2f8; padding: 20px; border-radius: 16px; border-left: 5px solid #ec4899; }
+        .loading { text-align: center; padding: 50px; font-size: 1.2rem; color: white; }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="week-container" style="display: none;">
+        <div class="header-actions">
+            <button class="back-btn" onclick="location.href='/'">← Geri Dön</button>
+            <button class="settings-btn" onclick="toggleDrawer(true)">⚙️</button>
+        </div>
+        
+        <h1 id="w-title"></h1>
+        <p class="subtitle" id="w-topik"></p>
+
+        <div class="section">
+            <h2 class="section-title">📚 Kitap Referansları</h2>
+            <div class="book-ref" id="w-books"></div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🗝️ Anahtar Kelimeler (Vocabulary)</h2>
+            <p style="margin-bottom: 15px; font-size: 0.9rem; color: #666;">
+                🎯 <b>Tıkla:</b> Okunuşunu dinle | 🖱️ <b>Basılı Tut:</b> Harf harf kodlamasını dinle
+            </p>
+            <div class="word-grid" id="w-kelimeler"></div>
+        </div>
+
+        <div class="section" id="project-section">
+            <h2 class="section-title">🚀 STEM / Proje</h2>
+            <p id="w-proje"></p>
+        </div>
+    </div>
+
+    <!-- Settings Drawer -->
+    <div class="drawer-overlay" id="overlay" onclick="toggleDrawer(false)"></div>
+    <div class="drawer" id="drawer">
+        <div class="drawer-title">⚙️ Ses Ayarları</div>
+        
+        <div class="setting-item">
+            <label class="setting-label">Okuma Hızı (Speed)</label>
+            <div class="slider-container">
+                <input type="range" id="rate-slider" min="0.5" max="2" step="0.1" value="1" oninput="updateSetting('rate', this.value)">
+                <span class="val-badge" id="rate-val">1.0x</span>
+            </div>
+        </div>
+
+        <div class="setting-item">
+            <label class="setting-label">Voice (Cinsiyet)</label>
+            <div class="tone-btns">
+                <div class="tone-btn" id="gen-female" onclick="updateSetting('gender', 'female')">
+                    <span>👩</span> Female
+                </div>
+                <div class="tone-btn" id="gen-male" onclick="updateSetting('gender', 'male')">
+                    <span>👨</span> Male
+                </div>
+            </div>
+        </div>
+
+        <div class="setting-item">
+            <label class="setting-label">Tone (Tonlama)</label>
+            <div class="tone-btns">
+                <div class="tone-btn" id="tone-child" onclick="updateSetting('tone', 'child')">
+                    <span>👶</span> Child (10 yo)
+                </div>
+                <div class="tone-btn" id="tone-adult" onclick="updateSetting('tone', 'adult')">
+                    <span>👩‍🏫</span> Adult (30 yo)
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 0.8rem; color: #9ca3af; margin-top: 40px; line-height: 1.4;">
+            * Settings are saved automatically.
+        </p>
+    </div>
+
+    <div id="loader" class="loading">Yükleniyor...</div>
+
+    <script>
+        const haftaNum = window.location.pathname.split('/').pop();
+        let synth = window.speechSynthesis;
+        let activeSpellingId = null;
+        
+        // Settings State
+        let settings = {
+            rate: 1.0,
+            gender: 'female',
+            tone: 'adult' // child or adult
+        };
+
+        const SPELLING_COLORS = [
+            '#6366f1', '#ec4899', '#f59e0b', '#10b981', '#ef4444', '#8b5cf6', '#06b6d4'
+        ];
+
+        const CARD_COLORS = [
+            'rgba(99, 102, 241, 0.08)', 
+            'rgba(236, 72, 153, 0.08)', 
+            'rgba(245, 158, 11, 0.08)', 
+            'rgba(16, 185, 129, 0.08)', 
+            'rgba(139, 92, 246, 0.08)', 
+            'rgba(6, 182, 212, 0.08)'
+        ];
+
+        function loadSettings() {
+            const saved = localStorage.getItem('english_hub_settings');
+            if (saved) {
+                settings = JSON.parse(saved);
+                document.getElementById('rate-slider').value = settings.rate;
+                document.getElementById('rate-val').innerText = settings.rate.toFixed(1) + 'x';
+            }
+            updateSettingsUI();
+        }
+
+        function updateSetting(key, val) {
+            settings[key] = key === 'rate' ? parseFloat(val) : val;
+            if (key === 'rate') {
+                document.getElementById('rate-val').innerText = settings.rate.toFixed(1) + 'x';
+            } else {
+                updateSettingsUI();
+            }
+            localStorage.setItem('english_hub_settings', JSON.stringify(settings));
+        }
+
+        function updateSettingsUI() {
+            document.getElementById('gen-female').classList.toggle('active', settings.gender === 'female');
+            document.getElementById('gen-male').classList.toggle('active', settings.gender === 'male');
+            document.getElementById('tone-child').classList.toggle('active', settings.tone === 'child');
+            document.getElementById('tone-adult').classList.toggle('active', settings.tone === 'adult');
+        }
+
+        // Handle async voice loading for some browsers
+        if (synth.onvoiceschanged !== undefined) {
+            synth.onvoiceschanged = () => { /* Voices loaded */ };
+        }
+
+        function getBestVoice() {
+            const voices = synth.getVoices();
+            const langMatches = voices.filter(v => v.lang.startsWith('en'));
+            if (langMatches.length === 0) return null;
+
+            // Refined gender heuristic
+            const femaleKeywords = ['female', 'zira', 'samantha', 'catherine', 'hazel', 'lisa', 'heera', 'serena', 'moira', 'victoria'];
+            const maleKeywords = ['male', 'david', 'mark', 'ravi', 'sean', 'daniel', 'oliver', 'alex'];
+            
+            const targetKeywords = settings.gender === 'female' ? femaleKeywords : maleKeywords;
+            
+            // Try to find a match by keyword
+            let best = langMatches.find(v => targetKeywords.some(k => v.name.toLowerCase().includes(k)));
+            
+            // Fallback: If no keyword match, still try to find ANY match for the other gender if current gender failed?
+            // No, better to fallback to any English voice but prioritize preferred gender.
+            return best || langMatches[0];
+        }
+
+        function toggleDrawer(open) {
+            document.getElementById('drawer').classList.toggle('open', open);
+            document.getElementById('overlay').classList.toggle('open', open);
+        }
+
+        async function loadWeek() {
+            loadSettings();
+            try {
+                const res = await fetch(`/api/week/${haftaNum}`);
+                if (!res.ok) throw new Error("Week data not found");
+                const data = await res.json();
+
+                document.getElementById('w-title').innerText = `Hafta ${data.hafta}: ${data.unite}`;
+                document.getElementById('w-topik').innerText = data.topik;
+                
+                let booksHtml = `<strong>Student Book:</strong> Sayfa ${data.sb_pages?.start || '?'}-${data.sb_pages?.end || '?'}`;
+                if(data.wb_pages) booksHtml += `<br><strong>Workbook:</strong> Sayfa ${data.wb_pages.start}-${data.wb_pages.end}`;
+                document.getElementById('w-books').innerHTML = booksHtml;
+
+                renderWords(data.kelimeler || []);
+                
+                if(data.proje) {
+                    document.getElementById('w-proje').innerText = data.proje;
+                } else {
+                    document.getElementById('project-section').style.display = 'none';
+                }
+
+                document.getElementById('week-container').style.display = 'block';
+                document.getElementById('loader').style.display = 'none';
+
+            } catch (e) {
+                document.getElementById('loader').innerHTML = `<p style="color:red">Hata: ${e.message}</p>`;
+            }
+        }
+
+        function renderWords(words) {
+            const container = document.getElementById('w-kelimeler');
+            container.innerHTML = words.map((k, i) => {
+                const isObj = typeof k === 'object';
+                const word = isObj ? k.w : k;
+                const tr = isObj ? k.tr : '';
+                const ph = isObj ? k.ph : '';
+                const sy = isObj ? k.sy : '';
+                const cardColor = CARD_COLORS[i % CARD_COLORS.length];
+
+                return `
+                    <div class="word-card" id="word-${i}" 
+                         style="--card-bg: ${cardColor}"
+                         oncontextmenu="return false;"
+                         onmousedown="startPress(event, ${i})" onmouseup="endPress(event, ${i}, '${word}')" 
+                         ontouchstart="startPress(event, ${i})" ontouchend="endPress(event, ${i}, '${word}')">
+                        <div class="spelling-display" id="spell-disp-${i}"></div>
+                        <div class="word-text">${word}</div>
+                        <div class="word-tr">${tr}</div>
+                        <div class="word-extra">
+                            <b>🗣️ Okunuş:</b> <span class="ph-bracket">[</span><span class="ph-text">${(ph || '...').replace(/-/g, '<span class="sy-dash">-</span>')}</span><span class="ph-bracket">]</span><br>
+                            <b>🧩 Heceleme:</b> <span class="sy-text">${(sy || '...').replace(/-/g, '<span class="sy-dash">-</span>')}</span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        let pressTimer;
+        let isLongPress = false;
+
+        function startPress(e, i) {
+            isLongPress = false;
+            pressTimer = setTimeout(() => {
+                isLongPress = true;
+                const word = document.querySelectorAll('.word-text')[i].innerText;
+                spellWord(word, i);
+            }, 600);
+        }
+
+        function endPress(e, i, word) {
+            clearTimeout(pressTimer);
+            if (!isLongPress) {
+                speak(word, i);
+            }
+        }
+
+        function speak(text, index = null) {
+            if (synth.speaking) synth.cancel();
+            
+            // Cancel any ongoing spelling
+            activeSpellingId = null;
+            document.querySelectorAll('.word-card').forEach(c => {
+                c.classList.remove('spelling', 'speaking');
+            });
+            document.querySelectorAll('.spelling-display').forEach(d => {
+                d.innerText = '';
+                d.style.backgroundColor = '';
+            });
+
+            const utter = new SpeechSynthesisUtterance(text);
+            utter.voice = getBestVoice();
+            
+            // Age Simulation Logic (Child 10yo vs Adult 30yo)
+            if (settings.tone === 'child') {
+                utter.pitch = 1.6;
+                utter.rate = settings.rate * 1.1;
+            } else {
+                utter.pitch = 0.9;
+                utter.rate = settings.rate;
+            }
+            
+            if (index !== null) {
+                const card = document.getElementById(`word-${index}`);
+                card.classList.add('speaking');
+                utter.onend = () => card.classList.remove('speaking');
+                utter.onerror = () => card.classList.remove('speaking');
+            }
+            
+            synth.speak(utter);
+        }
+
+        function spellWord(word, index) {
+            if (synth.speaking) synth.cancel();
+            
+            // Set new active ID to cancel any background spelling loops
+            activeSpellingId = Math.random();
+            const myId = activeSpellingId;
+
+            // Reset UI states for all other cards
+            document.querySelectorAll('.word-card').forEach(c => {
+                c.classList.remove('spelling', 'speaking');
+            });
+            document.querySelectorAll('.spelling-display').forEach(d => {
+                d.innerText = '';
+                d.style.backgroundColor = '';
+            });
+
+            const card = document.getElementById(`word-${index}`);
+            const display = document.getElementById(`spell-disp-${index}`);
+            card.classList.add('spelling');
+            
+            const letters = word.split('');
+            let current = 0;
+
+            function nextLetter() {
+                // If a new spelling/speaking task started, stop this loop
+                if (activeSpellingId !== myId) return;
+
+                if (current < letters.length) {
+                    const l = letters[current].toUpperCase();
+                    display.innerText = l;
+                    
+                    // Color transition
+                    display.style.backgroundColor = SPELLING_COLORS[current % SPELLING_COLORS.length];
+                    
+                    const utter = new SpeechSynthesisUtterance(l);
+                    utter.voice = getBestVoice();
+                    
+                    // Unified spelling speed + age simulation
+                    if (settings.tone === 'child') {
+                        utter.pitch = 1.6;
+                        utter.rate = Math.max(0.4, (settings.rate * 0.5) * 1.1);
+                    } else {
+                        utter.pitch = 0.9;
+                        utter.rate = Math.max(0.4, settings.rate * 0.5);
+                    }
+                    
+                    utter.onend = () => {
+                        if (activeSpellingId !== myId) return;
+                        current++;
+                        setTimeout(nextLetter, 150);
+                    };
+                    synth.speak(utter);
+                } else {
+                    card.classList.remove('spelling');
+                    display.style.backgroundColor = '';
+                    display.innerText = '';
+                    activeSpellingId = null;
+                }
+            }
+            
+            nextLetter();
+        }
+
+        loadWeek();
+    </script>
+</body>
+</html>

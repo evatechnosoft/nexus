@@ -1,0 +1,9 @@
+# Checklist
+- [x] Login as 'student'/'123' at http://localhost:5000
+- [x] Navigate to http://localhost:5000/week/1
+- [x] Click on "hello" card and screenshot
+- [x] Verify "merhaba" visibility
+- [x] Navigate to http://localhost:5000/api/week/1 and screenshot JSON
+- [x] Verify JSON objects
+- [x] Navigate to http://localhost:5000/week/2
+- [x] Long-press "red" card and screenshot pulse

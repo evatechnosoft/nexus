@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary": "Implementation plan for domain-based routing and multi-language support (i18n) for the Evaitec project. Includes geo-location strategy (Cloudflare headers), URL structure for different domains, and a flexible localization system in Flask.",
+  "updatedAt": "2026-03-24T07:25:19.140961100Z"
+}

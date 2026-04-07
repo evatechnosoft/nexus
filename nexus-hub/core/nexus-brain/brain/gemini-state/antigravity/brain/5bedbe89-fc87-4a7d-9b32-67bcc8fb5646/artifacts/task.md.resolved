@@ -1,0 +1,17 @@
+- [ ] **1. Temel Onarım ve Temizlik**
+  - [ ] `pubspec.yaml` birleşme hatasını gider (`google_sign_in` / `flutter_test`)
+  - [ ] `theme.dart` içindeki bozuk satırları temizle
+  - [ ] Tüm modellerdeki (`UserProfile`, `LocationTask` vb.) tırnak ve yazım hatalarını onar
+- [ ] **2. Eksik Servislerin Yazılması**
+  - [ ] `StorageService` (Yerel Veri Yönetimi)
+  - [ ] `ApiService` (AI Entegrasyonu)
+  - [ ] `LocationService` & `GeofenceMonitor` (Konum Takibi)
+  - [ ] `AppProvider` (Uygulama Durum Yönetimi)
+- [ ] **3. UI ve Navigasyon**
+  - [ ] `routes.dart` (32 ekranın rotalandırılması)
+  - [ ] `SplashScreen` ve `OnboardingScreen` (Kullanıcı Tanıma)
+  - [ ] `HomeScreen` (Ana Dashboard)
+  - [ ] `ChatScreen` (AI Arkadaş Arayüzü)
+- [ ] **4. Final Kontroller**
+  - [ ] Diğer 28 ekran için taslak (placeholder) yapılması
+  - [ ] `flutter pub get` ve hata analizi

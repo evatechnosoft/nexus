@@ -1,0 +1,3 @@
+{
+  "output": "Output: Traceback (most recent call last):\n  File \"C:\\projects\\agentops-nexus\\main.py\", line 15, in <module>\n    from routers import inventory, requests, assignments, departments, ops\n  File \"C:\\projects\\agentops-nexus\\routers\\requests.py\", line 10, in <module>\n    import email_watcher\n  File \"C:\\projects\\agentops-nexus\\email_watcher.py\", line 26, in <module>\n    from inventory_score import rank_devices\nModuleNotFoundError: No module named 'inventory_score'\nExit Code: 1\nProcess Group PGID: 41488"
+}

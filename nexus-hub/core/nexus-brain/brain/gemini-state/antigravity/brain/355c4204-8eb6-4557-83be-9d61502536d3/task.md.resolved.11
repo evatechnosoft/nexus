@@ -1,0 +1,27 @@
+# Task: Fix Azure DevOps Pipeline Deployment
+
+- [x] Analyze pipeline configuration and identify errors
+    - [x] Review [azure-pipelines-1.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-1.yml)
+    - [x] Review [azure-pipelines.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines.yml)
+    - [x] Check [package.json](file:///c:/projects/Layers/LayersupCom_v2/package.json) and app structure
+    - [x] Identify "No package found" error source (Classic Release vs YAML)
+- [x] Create implementation plan to fix deployment issues
+- [x] Update pipeline configuration
+    - [x] Correct `package` path to `$(Pipeline.Workspace)/**/*.zip` in YAML
+    - [x] Update `runtimeStack` to canonical format
+    - [x] Advise user on matching changes for Classic Release if used
+- [x] Push changes to `dev` branch
+    - [x] Create/checkout `dev` branch
+    - [x] Commit changes
+    - [x] Push to origin
+- [x] Restoration
+    - [x] Restore `latest.zip` from previous commit
+    - [x] Commit and push `latest.zip` to `dev` and `Dev` branches
+- [x] Pipeline Optimization
+    - [x] Add `Dev` branch to pipeline triggers
+    - [x] Remove manual `latest.zip` to allow pipeline artifact creation
+- [x] Provide walkthrough and verify with user
+- [ ] Zip and FTP Deployment
+    - [x] Create `deployment.zip` (excluding .git and node_modules)
+    - [x] Provide FTP instructions to user
+    - [ ] (Optional) Try `az webapp deployment` with zip

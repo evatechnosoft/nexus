@@ -1,0 +1,32 @@
+# Gemini Model Güncelleme Planı
+
+Kullanıcının belirttiği "tam ad" gereksinimi (örneğin `gemini-1.5-flash-latest` veya `gemini-2.0-flash`) doğrultusunda, uygulamadaki tüm Gemini referanslarını güncelleyeceğiz. Ayrıca, gelecekte kolayca model değiştirilebilmesi için ayarlara "Model Seçimi" opsiyonu ekleyeceğiz.
+
+## Önerilen Değişiklikler
+
+### 1. Backend ([ai.js](file:///c:/projects/SportApp/routes/ai.js))
+Backend'de haftalık özet çıkaran AI servisini güncelleyeceğiz.
+- Mevcut olan `gemini-1.5-flash`'ı varsayılan olarak `gemini-1.5-flash-latest` yapacağız.
+- Eğer kullanıcı ayarlarında bir model seçmişse, backend'in bunu kullanmasını sağlayacağız.
+
+### 2. Mobil Uygulama ([gemini_service.dart](file:///c:/projects/SportApp/mobile_app/lib/services/gemini_service.dart))
+Mobil taraftaki AI analiz ve chat fonksiyonlarını güncelleyeceğiz.
+- `gemini-1.5-flash` yerine kullanıcı ayarlarından gelen model adını kullanacak şekilde refaktör edeceğiz.
+- Varsayılan değeri `gemini-1.5-flash-latest` olarak belirleyeceğiz.
+
+### 3. Mobil Ayarlar ([settings_screen.dart](file:///c:/projects/SportApp/mobile_app/lib/screens/settings_screen.dart))
+Ayarlar ekranına bir `Dropdown` ekleyerek kullanıcının model seçmesini sağlayacağız.
+- Seçenekler: `gemini-1.5-flash-latest`, `gemini-1.5-pro-latest`, `gemini-2.0-flash`.
+
+### 4. Web Uygulaması ([index.html](file:///c:/projects/SportApp/public/index.html) & [app.js](file:///c:/projects/SportApp/public/app.js))
+Web arayüzündeki ayarlar kısmına model seçimini ekleyeceğiz.
+- `app.js` içerisindeki Gemini başlatma mantığını güncelleyerek seçilen modeli kullanmasını sağlayacağız.
+
+## Doğrulama Planı
+1. **Backend Testi**: Manuel bir API çağrısı ile yeni model adının çalışıp çalışmadığını kontrol edeceğiz.
+2. **Web Testi**: Tarayıcı üzerinden yeni model adıyla AI analizini deneyeceğiz.
+3. **Mobil Kod Kontrolü**: Flutter kodunun yeni model parametrelerini doğru aldığını statik olarak doğrulayacağız.
+
+## Açık Sorular
+- Kullanıcının API anahtarı `gemini-2.0-flash` (experimental) modelini destekliyor mu? Eğer destekliyorsa varsayılanı direkt 2.0 yapabiliriz.
+- Modellerin tam listesini (Flash, Pro, Experimental) sabit bir listede mi tutalım yoksa serbest metin girişi mi olsun? (Dropdown daha güvenli görünüyor)

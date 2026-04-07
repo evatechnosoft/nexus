@@ -1,0 +1,11 @@
+- [ ] **Aşama 1: Kod Düzeltmeleri**
+    - [ ] `main.py`: E-posta izleyicinin Gmail için de başlamasını sağla
+- [ ] **Aşama 2: Yerel Dizin Sadeleştirme (Refactor)**
+    - [ ] Tüm dosyaları `inventory_app/` dışına çıkar
+    - [ ] `docker-compose.yml` yollarını güncelle
+- [ ] **Aşama 3: Sunucu Güncelleme ve Dağıtım**
+    - [ ] Yeni sadeleşmiş yapıyı sunucuya aktar
+    - [ ] Mevcut konteyneri durdur, yeni yapıyla `--build` et
+- [ ] **Aşama 4: Handoff ve Doğrulama**
+    - [ ] `handoff.md` dosyasını oluştur
+    - [ ] Günlükleri (logs) kontrol et: "İzleyici aktif" görünüyor mu?

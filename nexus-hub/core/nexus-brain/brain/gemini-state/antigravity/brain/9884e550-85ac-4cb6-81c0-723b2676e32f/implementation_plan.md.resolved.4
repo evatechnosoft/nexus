@@ -1,0 +1,29 @@
+# İnteraktif Kelime Kartları Uygulama Planı
+
+Kullanıcıların kelimelere tıkladığında okunuşunu duyabileceği, basılı tuttuğunda ise harf harf kodlamasını dinleyebileceği interaktif bir sistem kurulacaktır.
+
+## Önerilen Değişiklikler
+
+### [Müfredat Verisi]
+[curriculum.json](file:///c:/Users/Deacjx/Documents/English%20code/_learning-plan/curriculum.json) içindeki `kelimeler` dizisi, sadece metin yerine zengin objeleri de destekleyecek şekilde güncellenecektir.
+- **Eski**: `["red", "blue"]`
+- **Yeni**: `[{"w": "red", "tr": "kırmızı", "p": "red", "s": "red"}]` (w: word, tr: anlam, p: pronunciation, s: syllables)
+
+### [Ders Detay Sayfası]
+[week.html](file:///c:/Users/Deacjx/Documents/English%20code/_learning-plan/web/week.html) dosyası yeni interaktif kart yapısını ve ses motorunu içerecek şekilde güncellenecektir.
+
+#### [MODIFY] [week.html](file:///c:/Users/Deacjx/Documents/English code/_learning-plan/web/week.html)
+- `SpeechSynthesis` entegrasyonu: Tarayıcının yerleşik ses motoru kullanılacaktır.
+- `long-press` tespiti: `mousedown`/`touchstart` olayları ile manuel zamanlayıcı kurulacaktır.
+- Kelime Kartı UI: Tıklanabilir, hover efektli ve premium görünümlü kartlar.
+
+## Doğrulama Planı
+
+### Otomatik Testler
+- Kartların doğru render edildiğinin kontrolü.
+- Speech API desteğinin kontrolü.
+
+### Manuel Doğrulama
+- Kelimeye tıklandığında sesin çıkması.
+- Basılı tutulduğunda harf harf (R-E-D şeklinde) seslendirme yapması.
+- Anlam ve heceleme bilgilerinin kartlarda görünmesi.

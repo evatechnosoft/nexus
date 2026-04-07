@@ -1,0 +1,55 @@
+# Email Queue System Implementation Plan
+
+The user reports that emails are not being processed reliably and wants a "queue system" where incoming requests wait in a proper form for processing.
+
+## Current Issues
+- Emails are processed immediately upon fetching; if parsing fails, the email is marked as read but no request is created.
+- Minimal visibility into "failed" or "ignored" emails.
+- Sequential processing might be slow if notifications are triggered synchronously.
+
+## Proposed Changes
+
+### 1. Database Model [models.py]
+- **[NEW]** `EmailQueue`: Stores raw email data before processing.
+  - `id` (PK)
+  - `message_id` (Unique, to prevent duplicate fetching)
+  - `subject`, `body`, `sender_email`, `sender_name`
+  - `received_at`
+  - `status`: `pending`, `processed`, `failed`, `ignored`
+  - `error_message`: Logs parsing errors.
+  - `request_id`: ForeignKey to `Request` if successfully created.
+
+### 2. Email Watchers [email_watcher.py, graph_watcher.py]
+- Refactor to **ONLY FETCH** and **SAVE** to `EmailQueue`.
+- The watcher will no longer call `_process_message` directly.
+- Emails will be saved with `status='pending'`.
+
+### 3. Queue Processor [email_watcher.py]
+- **[NEW]** `process_email_queue(db)` function:
+  - Fetches all `pending` or `failed` (for retry) emails from `EmailQueue`.
+  - Attempts to parse them using existing `email_parser.py` logic.
+  - Creates `Request` objects upon success.
+  - Updates `EmailQueue` status and links the `request_id`.
+
+### 4. UI / Dashboard [routers/requests.py + templates]
+- **[NEW]** Router endpoint `/email-queue`: Lists all entries in `EmailQueue`.
+- **[NEW]** Template `email_queue.html`: Displays the queue with status indicators (badges) and error messages.
+- **[NEW]** Action to "Retry" or "Force Process": Useful if the user wants to manually trigger parsing after a fix.
+
+### 5. main.py
+- Update the background scheduler to run both the **Fetcher** and the **Processor**.
+
+## User Review Required
+> [!IMPORTANT]
+> - Should we automatically retry `failed` emails, or leave them for manual intervention?
+> - Do you want to receive a notification (e.g. email/slack) when an email fails to parse into a request?
+
+## Verification Plan
+### Automated Tests
+- Run `test_parsing.py` to ensure parser still works with new data flow.
+- Mock incoming emails to verify they land in the `EmailQueue` table first.
+
+### Manual Verification
+- Send a test email, verify it appears in the new "Email Queue" UI.
+- Verify that valid emails proceed to create "Pending Approval" requests.
+- Verify that invalid emails stay in the queue with a "Failed" status and visible error.

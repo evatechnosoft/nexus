@@ -1,0 +1,146 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Erişilebilirlik Bağlantıları
+Ana içeriğe geç
+Erişilebilirlik yardımı
+Erişilebilirlikle ilgili geri bildirim
+[0] (77,70)<a aria-label='Google Anasayfası'na Git' href='https://www.google.com/webhp?hl=tr&sa=X&ved=0ahUKEwip7o3DhqyTAxX0RPEDHYMEKtAQPAgI' id='logo' title='Google Anasayfası'na Git' />
+[1] (346,69)<textarea aria-label='Ara' class='gLFyf' id='APjFqb' role='combobox' />
+[2] (561,69)<div  />
+	[3] (560,69)<div aria-label='Temizle' class='M2vV3 vOY7J' role='button' />
+		[4] (560,69)<span  />
+	[5] (576,69)<span  />
+[6] (591,69)<div aria-label='Harf çevirme aracı' class='Umvnrc' role='button' />
+	[7] (591,69)<span  />
+[8] (617,69)<div aria-label='Sesle arama yapın' class='XDyW0e' role='button' />
+[9] (642,69)<div aria-label='Görselle arama' class='nDcEnd' role='button' />
+[10] (672,69)<button aria-label='Ara' class='HZVG1b Tg7LZd' />
+	[11] (668,69)<div  />
+		[12] (668,69)<span  />
+[13] (868,69)<div aria-label='Ayarlar' class='fLciMb' id='og-te' role='button' />
+	[14] (868,72)<div  />
+		[15] (868,69)<span  />
+[16] (897,69)<a aria-label='Google uygulamaları' class='gb_B' href='https://www.google.com.tr/intl/tr/about/products?tab=wh' role='button' />
+[17] (945,69)<a aria-label='Oturum açın' class='gb_A' href='https://accounts.google.com/ServiceLogin?hl=tr&passive=true&continue=https://www.google.com/search%3Fq%3D%2522English%2BCode%2B1%2522%2B%2522Class%2BAudio%2522%2B(site:mediafire.com%2BOR%2Bsite:mega.nz%2BOR%2Bsite:drive.google.com)&ec=futura_srp_og_si_72236_p'>Oturum açın />
+	Oturum açın
+Filtreler ve Konular
+[18] (165,145)<a class='XVMlrc C6AK7c' href='/search?q=English+Code+1+Class+Audio+(site:mediafire.com+OR+site:mega.nz+OR+site:drive.google.com)&sca_esv=f818ef0c6d37c692&udm=50&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLQJoVswXu7Xoldd5UH6fMIpVmXy93SCOvvhdXj3lBBc6ULDr0rdqW0XXkPsl2-Jih-qC6250-f_OUTh8K8FdvUorACWHzAra4_CRUdTOlBKPHo6YEcU9zqzagvSlQSa4YclOi8HPK7kTMl-byuGKKRjkUN8P0B8PnFRGr9JIOdnAPQUO0KoqxJdbAHTz3mIUo0deGrK9gVXSQwAPWnQ-rXAIgkBu&aep=1&ntc=1&sa=X&ved=2ahUKEwip7o3DhqyTAxX0RPEDHYMEKtAQ2J8OegQIDxAE' />
+	[19] (165,145)<div  />
+		[20] (165,156)<div  />
+			[21] (165,149)<span >AI Modu />
+[22] (209,145)<a class='C6AK7c' role='link' />
+	Tümü
+[23] (255,145)<a class='C6AK7c' href='/search?sca_esv=f818ef0c6d37c692&udm=2&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLQJoVswXu7Xoldd5UH6fMIpVmXy93SCOvvhdXj3lBBc6ULDr0rdqW0XXkPsl2-Jih-qC6250-f_OUTh8K8FdvUorACWHzAra4_CRUdTOlBKPHo6YEcU9zqzagvSlQSa4YclOi8HPK7kTMl-byuGKKRjkUN8P0B8PnFRGr9JIOdnAPQUO0KoqxJdbAHTz3mIUo0deGrK9gVXSQwAPWnQ-rXAIgkBu&q=English+Code+1+Class+Audio+(site:mediafire.com+OR+site:mega.nz+OR+site:drive.google.com)&sa=X&ved=2ahUKEwip7o3DhqyTAxX0RPEDHYMEKtAQtKgLegQIFhAB' />
+	[24] (255,145)<div  />
+		[25] (255,156)<span >Görseller />
+[26] (308,145)<a class='C6AK7c' href='/search?sca_esv=f818ef0c6d37c692&udm=7&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLQJoVswXu7Xoldd5UH6fMIpVmXy93SCOvvhdXj3lBBc6ULDr0rdqW0XXkPsl2-Jih-qC6250-f_OUTh8K8FdvUorACWHzAra4_CRUdTOlBKPHo6YEcU9zqzagvSlQSa4YclOi8HPK7kTMl-byuGKKRjkUN8P0B8PnFRGr9JIOdnAPQUO0KoqxJdbAHTz3mIUo0deGrK9gVXSQwAPWnQ-rXAIgkBu&q=English+Code+1+Class+Audio+(site:mediafire.com+OR+site:mega.nz+OR+site:drive.google.com)&sa=X&ved=2ahUKEwip7o3DhqyTAxX0RPEDHYMEKtAQtKgLegQIFRAB' />
+	[27] (308,145)<div  />
+		[28] (308,156)<span >Videolar />
+[29] (358,145)<a class='C6AK7c' href='/search?sca_esv=f818ef0c6d37c692&udm=28&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLQJoVswXu7Xoldd5UH6fMIpVmXy93SCOvvhdXj3lBBc6ULDr0rdqW0XXkPsl2-Jih-qC6250-f_OUTh8K8FdvUorACWHzAra4_CRUdTOlBKPHo6YEcU9zqzagvSlQSa4YclOi8HPK7kTMl-byuGKKRjkUN8P0B8PnFRGr9JIOdnAPQUO0KoqxJdbAHTz3mIUo0deGrK9gVXSQwAPWnQ-rXAIgkBu&q=English+Code+1+Class+Audio+(site:mediafire.com+OR+site:mega.nz+OR+site:drive.google.com)&ved=1t:220175&ictx=111' />
+	[30] (358,145)<div  />
+		[31] (358,156)<span >Alışveriş />
+[32] (418,145)<a class='C6AK7c' href='/search?sca_esv=f818ef0c6d37c692&udm=39&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLQJoVswXu7Xoldd5UH6fMIpVmXy93SCOvvhdXj3lBBc6ULDr0rdqW0XXkPsl2-Jih-qC6250-f_OUTh8K8FdvUorACWHzAra4_CRUdTOlBKPHo6YEcU9zqzagvSlQSa4YclOi8HPK7kTMl-byuGKKRjkUN8P0B8PnFRGr9JIOdnAPQUO0KoqxJdbAHTz3mIUo0deGrK9gVXSQwAPWnQ-rXAIgkBu&q=English+Code+1+Class+Audio+(site:mediafire.com+OR+site:mega.nz+OR+site:drive.google.com)&sa=X&ved=2ahUKEwip7o3DhqyTAxX0RPEDHYMEKtAQs6gLegQIExAB' />
+	[33] (418,145)<div  />
+		[34] (418,156)<span >Kısa videolar />
+[35] (477,145)<a class='C6AK7c' href='/search?sca_esv=f818ef0c6d37c692&q=English+Code+1+Class+Audio+(site:mediafire.com+OR+site:mega.nz+OR+site:drive.google.com)&udm=36&source=lnms&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLQJoVswXu7Xoldd5UH6fMIpVmXy93SCOvvhdXj3lBBc6ULDr0rdqW0XXkPsl2-Jih-qC6250-f_OUTh8K8FdvUorACWHzAra4_CRUdTOlBKPHo6YEcU9zqzagvSlQSa4YclOi8HPK7kTMl-byuGKKRjkUN8P0B8PnFRGr9JIOdnAPQUO0KoqxJdbAHTz3mIUo0deGrK9gVXSQwAPWnQ-rXAIgkBu&sa=X&ved=2ahUKEwip7o3DhqyTAxX0RPEDHYMEKtAQ0pQJegQIEhAB' />
+	[36] (477,145)<div  />
+		[37] (477,156)<span >Kitaplar />
+[38] (537,145)<div class='mTpL7c' role='button' />
+	[39] (537,145)<div  />
+		[40] (537,156)<div  />
+			[41] (531,149)<span >Daha fazla />
+			[42] (559,149)<span  />
+[43] (602,145)<div class='mOKdDc' id='hdtb-tls' role='button' />
+	[44] (602,145)<div  />
+		[45] (602,156)<div  />
+			[46] (596,149)<span >Araçlar />
+			[47] (617,149)<span  />
+Looking for results in English?
+[48] (957,266)<a href='#' />
+	[49] (957,264)<span  />
+[50] (843,297)<a href='/setprefs?sig=0_AFLdylOmlmYTb9A6MfmhoVa_RsI%3D&source=en_ignored_notification&prev=https://www.google.com/search?q%3D%2522English%2BCode%2B1%2522%2B%2522Class%2BAudio%2522%2B(site:mediafire.com%2BOR%2Bsite:mega.nz%2BOR%2Bsite:drive.google.com)&hl=en&sa=X&ved=2ahUKEwip7o3DhqyTAxX0RPEDHYMEKtAQhoQCKAF6BAgMEAQ'>Change to English />
+[51] (866,328)<a href='#'>kullanmaya devam et />
+	[52] (823,327)<span >Türkçe />
+[53] (830,371)<a class='fl' href='/preferences?lang=1&hl=tr&sa=X&ved=2ahUKEwip7o3DhqyTAxX0RPEDHYMEKtAQiIQCKAN6BAgMEAY#languages'>Dil ayarları />
+"English Code 1" "Class Audio" (site:mediafire.com OR site:mega.nz OR site:drive.google.com)
+için hiçbir sonuç bulunamadı.
+[54] (315,362)<a href='/search?sca_esv=f818ef0c6d37c692&q=English+Code+1+Class+Audio+(site:mediafire.com+OR+site:mega.nz+OR+site:drive.google.com)&sa=X&ved=2ahUKEwip7o3DhqyTAxX0RPEDHYMEKtAQgwN6BAgREAE' />
+	[55] (315,362)<b >English Code 1 Class Audio (site:mediafire.com OR site:mega.nz OR site:drive.google.com) />
+için sonuçlar (tırnak işareti olmadan):
+Arama Sonuçları
+[56] (220,467)<a class='zReHs' href='https://drive.google.com/?tab=wo&authuser=0' />
+	[57] (159,492)<h3 >PDF />
+	[58] (220,446)<div  />
+		[59] (220,446)<div  />
+			[60] (156,446)<span  />
+				[61] (156,446)<div  />
+					[62] (156,446)<img  />
+			[63] (232,446)<div  />
+				[64] (232,434)<div  />
+					[65] (232,434)<span >Google />
+				[66] (232,459)<div  />
+					[67] (232,459)<cite class='qLRx3b tjvcx GvPZzd dTxz9 cHaqb' role='text'>https://drive.google.com />
+						[68] (261,458)<span class='ylgVCe ob9lvb' role='text'>› ... />
+·
+[69] (321,459)<a class='dEEN8c' href='https://translate.google.com/translate?u=https://drive.google.com/?tab%3Dwo%26authuser%3D0&hl=tr&sl=en&tl=tr&client=search' />
+	[70] (321,458)<span >Bu sayfanın çevirisini yap />
+[71] (378,458)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[72] (378,458)<span  />
+		[73] (378,459)<span  />
+Bu sayfada bilgi yok.
+[74] (177,555)<a class='OaRzMc' href='https://support.google.com/webmasters/answer/7489871?hl=tr'>Nedenini öğrenin />
+Eksik:
+Code
+‎
+Audio (
+[75] (274,682)<a class='zReHs' href='https://drive.google.com/a/bcps.org/open?id=1do2eFCjcqUprslyXlKrG3XfXh1SJMe3DxdbS4Q3wB0o' />
+	[76] (274,706)<h3 >Classroom Curriculum Resources June 2019 />
+	[77] (231,661)<div  />
+		[78] (231,661)<div  />
+			[79] (156,661)<span  />
+				[80] (156,661)<div  />
+					[81] (156,661)<img  />
+			[82] (244,661)<div  />
+				[83] (244,649)<div  />
+					[84] (244,649)<span >Google />
+				[85] (244,674)<div  />
+					[86] (244,674)<cite class='qLRx3b tjvcx GvPZzd cHaqb' role='text'>https://drive.google.com />
+						[87] (285,673)<span class='ylgVCe ob9lvb' role='text'>› bcps.org › open />
+[88] (328,673)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[89] (328,673)<span  />
+		[90] (328,674)<span  />
+New resources every year for
+1
+hour lessons on coding plugged and unplugged, ios, android, install and browser, yes. 77. Hour of
+Code
+(Beyond). website ...
+[91] (220,875)<a class='zReHs' href='https://drive.google.com/drive/quota' />
+	[92] (166,900)<h3 >Sign in />
+	[93] (220,854)<div  />
+		[94] (220,854)<div  />
+			[95] (156,854)<span  />
+				[96] (156,854)<div  />
+					[97] (156,854)<img  />
+			[98] (232,854)<div  />
+				[99] (232,842)<div  />
+					[100] (232,842)<span >Google />
+				[101] (232,868)<div  />
+					[102] (232,868)<cite class='qLRx3b tjvcx GvPZzd dTxz9 cHaqb' role='text'>https://drive.google.com />
+						[103] (261,867)<span class='ylgVCe ob9lvb' role='text'>› ... />
+·
+[104] (321,868)<a class='dEEN8c' href='https://translate.google.com/translate?u=https://drive.google.com/drive/quota&hl=tr&sl=en&tl=tr&client=search' />
+	[105] (321,867)<span >Bu sayfanın çevirisini yap />
+[106] (378,866)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[107] (378,866)<span  />
+		[108] (378,868)<span  />
+Access Google Drive with a Google account (for personal use) or Google Workspace account (for business use).
+Eksik:
+Code
+‎
+Class
+‎
+Audio (
+
+</current_dom>

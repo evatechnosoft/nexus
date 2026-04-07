@@ -1,0 +1,44 @@
+# Multi-Environment Deployment & PR Workflow Plan (v2)
+
+Based on your feedback, I've updated the plan to include identified environment badges in the UI and a structured branching strategy.
+
+## User Review Required
+
+> [!IMPORTANT]
+> **Environment Badges:** I will implement a badge in the top-right corner that updates based on the current environment:
+> - **DEV:** Yellow (Local)
+> - **TEST:** Red (DeanOS @ 9700)
+> - **PROD:** Green (DeanOS @ 9600)
+
+## Proposed Changes
+
+### [NEW] Environment Files
+- `.env.dev`: `APP_ENV=DEV`, `PORT=9600` (Local conflict check).
+- `.env.test`: `APP_ENV=TEST`, `PORT=9700`.
+- `.env.prod`: `APP_ENV=PROD`, `PORT=9600`.
+
+### [MODIFY] [base.html](file:///c:/projects/it-inventory/templates/base.html)
+- Update the bottom environment badge colors:
+  - `PROD` -> Green (#10b981)
+  - `TEST` -> Red (#ef4444)
+  - `DEV` -> Yellow (#f59e0b)
+
+### [MODIFY] [deploy.ps1](file:///c:/projects/it-inventory/deploy.ps1)
+- Refactor to handle the "PR Merge" logic:
+  - If on `dev`: Commit & push to `origin dev`. (Local restart).
+  - If on `test`: Merge from `dev`, push to `origin test`, trigger **DeanOS TEST** update.
+  - If on `main`: Merge from `test`, push to `origin main`, trigger **DeanOS PROD** update.
+
+### [NEW] [deploy_deanos.sh](file:///c:/projects/it-inventory/deploy_deanos.sh)
+- A server-side script identifying which container to update based on the branch.
+- Standardizes command to `sudo HOME=$PWD docker compose up -d --build`.
+
+## Verification Plan
+
+### Automated Tests
+- Build and verify badge visibility locally on Port 9600.
+- Check `git fetch` access on DeanOS.
+
+### Manual Verification
+- Deploy to `test` and check for the **Red TEST Badge** at `http://192.168.1.186:9700`.
+- Deploy to `main` and check for the **Green PROD Badge** at `http://192.168.1.186:9600`.

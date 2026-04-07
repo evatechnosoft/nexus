@@ -1,0 +1,25 @@
+# IT Inventory V3: Premium UI & Robust Parsing
+
+Upgrade the user interface to a premium "next-gen" look and enhance the email parser for complex horizontal tables.
+
+## 1. Premium UI Upgrade (`base.html` & `static/style.css`)
+- **Aesthetics**: Swap standard Bootstrap colors for a curated "Night Owl" or "Glassmorphism" theme.
+- **Typography**: Import `Plus Jakarta Sans` from Google Fonts.
+- **Components**:
+  - **Glass Navbar**: Semi-transparent with `backdrop-filter: blur(10px)`.
+  - **Vibrant Background**: Subtle animated mesh gradient background.
+  - **Modern Cards**: Use `padding: 2rem`, `border-radius: 20px`, and `box-shadow: 0 10px 30px rgba(0,0,0,0.1)`.
+- **Navigation**: Improve sidebar or top-nav with active-state animations.
+
+## 2. Horizontal Table Support (`email_parser.py`)
+- **Multi-line Regex**: Allow matching labels on one line and values on the next if no colon is present.
+- **Improved Tokenization**: Better handling of HTML-to-text transitions for `<tr>` and `<td>`.
+- **Keyword Protection**: Ensure labels like "Ad Soyad" don't match partial strings within values.
+
+## 3. Communication Fixes (`.env` & `notifier.py`)
+- **APP_BASE_URL**: Ensure approval links use a configurable base URL instead of `localhost`.
+- **Turkish Localization**: Ensure all UI elements use clean, modern Turkish terminology.
+
+## 4. Verification
+- **Visual Audit**: Capture the new dashboard screenshot.
+- **Sample Parsing**: Test with a "Horizontal Table" email.

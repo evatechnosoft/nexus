@@ -1,0 +1,6 @@
+# Enhanced Device Selection Implementation Tasks
+
+- [ ] Update `email_watcher.py` to generate multiple approval tokens for ranked devices
+- [ ] Update `notifier.py` to render the detailed ranked list with individual selection buttons
+- [ ] Update `routers/approval.py` to handle multi-token invalidation
+- [ ] Final Verification and Testing

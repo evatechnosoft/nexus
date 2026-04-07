@@ -1,0 +1,38 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Çıkış Yap 🚪
+📚 English Learning Hub
+Müfredat Takip ve Değerlendirme
+👦 Öğrenci
+👨‍🏫 Öğretmen
+👨‍👩‍👧 Veli
+Aktif Hafta:
+➕ Yeni Ders
+Öğrenci:
+student
+Tüm Haftalar ve Değerlendirme
+continue
+Hafta 01
+Welcome!
+İlk gün — selamlaşma, sayılar, yaş
+📝 Değerlendir
+Hafta 02
+Unit 1: Birthday Fun! — Bölüm 1
+Doğum günü kartı yapımı — renkler ve doğum günü kelimeleri
+📝 Değerlendir
+Hafta 03
+Unit 1: Birthday Fun! — Bölüm 2 + Proje
+Doğum günü sahnesi ve proje tamamlama
+📝 Değerlendir
+Ders Değerlendirmesi
+Hafta 01: Welcome!
+[0] (356,364)<label >Ders Durumu: />
+[1] (500,420)<select id='e-status' />
+[2] (373,475)<label >Geri Bildirim / Notlar: />
+[3] (500,560)<textarea id='e-notes' placeholder='Öğrenciye not bırakın...' />
+[4] (471,704)<button class='btn btn-primary'>Kaydet />
+[5] (650,697)<button class='btn'>İptal />
+
+</current_dom>

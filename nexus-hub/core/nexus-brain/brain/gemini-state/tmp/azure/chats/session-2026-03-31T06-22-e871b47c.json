@@ -1,0 +1,72 @@
+{
+  "sessionId": "e871b47c-4ee2-4491-9ced-094e6ffaa500",
+  "projectHash": "a980b005a29fb6e02270639b71cb508cf27581396d23c085325fe2bc198a0f63",
+  "startTime": "2026-03-31T06:24:45.678Z",
+  "lastUpdated": "2026-03-31T06:44:01.355Z",
+  "messages": [
+    {
+      "id": "fff9495f-3e98-4c08-b8f4-fc7dad966ec1",
+      "timestamp": "2026-03-31T06:24:45.678Z",
+      "type": "user",
+      "content": [
+        {
+          "text": "1"
+        }
+      ]
+    },
+    {
+      "id": "3fb28e9a-5f12-442f-bf66-b504cfa42ef4",
+      "timestamp": "2026-03-31T06:28:36.663Z",
+      "type": "error",
+      "content": "[API Error: exception TypeError: fetch failed sending request]"
+    },
+    {
+      "id": "ee06ab3d-a752-47d5-aa7e-72689dea9b94",
+      "timestamp": "2026-03-31T06:28:36.663Z",
+      "type": "info",
+      "content": "This request failed. Press F12 for diagnostics, or run /settings and change \"Error Verbosity\" to full for full details."
+    },
+    {
+      "id": "050aac70-4604-4c10-8510-d31594815b05",
+      "timestamp": "2026-03-31T06:32:09.631Z",
+      "type": "user",
+      "content": [
+        {
+          "text": "login"
+        }
+      ]
+    },
+    {
+      "id": "56501664-3e5d-4efb-a7ea-8fb79a956c11",
+      "timestamp": "2026-03-31T06:36:06.697Z",
+      "type": "error",
+      "content": "[API Error: exception TypeError: fetch failed sending request]"
+    },
+    {
+      "id": "37311335-b99e-4dde-98e2-6ecd64ecd198",
+      "timestamp": "2026-03-31T06:36:06.698Z",
+      "type": "info",
+      "content": "This request failed. Press F12 for diagnostics, or run /settings and change \"Error Verbosity\" to full for full details."
+    },
+    {
+      "id": "8f690fa7-7a45-4b0e-9e55-5dd6cb451e66",
+      "timestamp": "2026-03-31T06:43:24.408Z",
+      "type": "info",
+      "content": "\n\nAttempting to open authentication page in your browser.\nOtherwise navigate to:\n\nhttps://accounts.google.com/o/oauth2/v2/auth?redirect_uri=http%3A%2F%2F127.0.0.1%3A56953%2Foauth2callback&access_type=offline&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&state=3a751dcac7536d8a68d437923495e399f90717baa049993d2fe6dec154402f3d&response_type=code&client_id=681255809395-oo8ft2oprdrnp9e3aqf6av3hmdib135j.apps.googleusercontent.com\n\n\n"
+    },
+    {
+      "id": "1d2f4cd6-b56b-46af-9f94-26902c4dd19f",
+      "timestamp": "2026-03-31T06:43:24.437Z",
+      "type": "info",
+      "content": "Waiting for authentication...\n"
+    },
+    {
+      "id": "5e8feac8-6292-43c6-bbce-96eaa064be04",
+      "timestamp": "2026-03-31T06:43:31.017Z",
+      "type": "info",
+      "content": "Authentication succeeded\n"
+    }
+  ],
+  "kind": "main",
+  "summary": "User wants to log in."
+}

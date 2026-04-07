@@ -1,0 +1,28 @@
+<tool_output_masked>
+Output: Directory: C:\projects\global-shared
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         3/31/2026     17:26                01-guides
+d-----         3/31/2026     15:48                02-decisions
+d-----         3/31/2026     15:48                03-templates
+d-----         3/31/2026     15:48                04-scripts
+d-----         3/31/2026     15:48                05-handoffs
+
+... [19 lines omitted] ...
+
+-a----         3/31/2026     19:00           2733 .ops-config.json
+-a----         3/31/2026     19:07           5582 DEPLOYMENT-GUIDE.md
+-a----         3/31/2026     19:00           7307 ops-config-schema.json
+-a----         3/31/2026     19:00          12228 OPS-MULTIPROJECT-GUIDE.md
+-a----         3/31/2026     19:00           4921 ops-scheduler-cron.sh
+-a----         3/31/2026     19:00           2135 ops-scheduler-health.xml
+-a----         3/31/2026     19:00           1991 ops-scheduler-restore.xml
+-a----         3/31/2026     19:00           2116 ops-scheduler-windows.xml
+-a----         3/31/2026     19:01          11184 ops-setup.ps1
+-a----         3/31/2026     19:01           6915 README.md
+Process Group PGID: 35804
+
+Output too large. Full output available at: C:\Users\Deacjx\.gemini\tmp\projects\tool-outputs\session-a366de38-25fd-4d3a-9bce-f8a0bc9646e6\run_shell_command_run_shell_command_1775209165261_0_g4ug4k.txt
+</tool_output_masked>

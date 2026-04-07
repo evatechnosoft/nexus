@@ -1,0 +1,10 @@
+# Home Assistant Recovery Progress Tracking
+
+## Checklist
+- [ ] Open http://192.168.1.186:8123
+- [ ] Determine if the page shows a setup screen or a login/dashboard
+- [ ] Report findings to the user
+
+## Findings
+- Original data directory: `/var/lib/casaos_data/AppData/homeassistant/config/`
+- Target URL: http://192.168.1.186:8123

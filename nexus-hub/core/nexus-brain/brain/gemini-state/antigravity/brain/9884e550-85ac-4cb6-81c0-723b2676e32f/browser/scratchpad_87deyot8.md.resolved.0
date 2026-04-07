@@ -1,0 +1,12 @@
+# Task: Verify English Hub Week Details
+
+## Progress
+- [ ] Open http://localhost:5000/week/1
+- [ ] Verify "hello" / "merhaba"
+- [ ] Click / Verify "Okunuş" ([he-low]), "Heceleme" (hel-lo)
+- [ ] Screenshot expanded "hello"
+- [ ] Open http://localhost:5000/week/2
+- [ ] Verify "red" / "kırmızı"
+- [ ] Long-press "red" / check "speaking" class
+- [ ] Screenshot "red"
+- [ ] Check console for SpeechSynthesis errors

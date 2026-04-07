@@ -1,0 +1,53 @@
+# ZimaOS Nginx Proxy Manager (NPM) Bağlantı Rehberi
+
+Bu rehber, ZimaOS üzerinde kurduğunuz Nginx Proxy Manager'a nasıl erişeceğinizi ve kendi alan adınızı (domain) nasıl bağlayacağınızı adım adım açıklar.
+
+## 1. Yönetim Paneline Erişim
+Nginx Proxy Manager varsayılan olarak **81** portunu kullanır.
+
+- **Adres:** `http://<ZimaOS-IP-Adresiniz>:81`
+- **Varsayılan Giriş Bilgileri:**
+  - **Email:** `admin@example.com`
+  - **Şifre:** `changeme`
+
+> [!IMPORTANT]
+> İlk girişte sistem sizden bu bilgileri güncellemenizi isteyecektir. Güvenliğiniz için güçlü bir şifre belirleyin.
+
+---
+
+## 2. Port Yönlendirme (Modem Ayarları)
+Dış dünyadan domaininizle erişim sağlamak için modeminizden ZimaOS cihazınıza şu portları yönlendirmeniz gerekir:
+
+| Dış Port | İç Port (ZimaOS) | Protokol | Açıklama |
+| :--- | :--- | :--- | :--- |
+| 80 | 80 | TCP | HTTP trafiği için |
+| 443 | 443 | TCP | HTTPS (SSL) trafiği için |
+
+> [!WARNING]
+> **ZimaOS Port Çakışması:** Eğer ZimaOS arayüzü de 80 veya 443 portunu kullanıyorsa NPM çalışmayabilir. Bu durumda ZimaOS ayarlarından web arayüz portunu (örneğin 85'e) değiştirmeniz gerekebilir.
+
+---
+
+## 3. Domain Bağlama (Proxy Host Ekleme)
+Alan adınızı bir servise yönlendirmek için NPM panelinde şu adımları izleyin:
+
+1. **Hosts** -> **Proxy Hosts** -> **Add Proxy Host** butonuna tıklayın.
+2. **Details Sekmesi:**
+   - **Domain Names:** `domaininiz.com` veya `sub.domaininiz.com` yazın.
+   - **Scheme:** `http` (veya servisiniz https ise https).
+   - **Forward Name/IP:** ZimaOS'un yerel IP'sini veya servis Docker üzerindeyse konteyner adını yazın.
+   - **Forward Port:** Yönlendirmek istediğiniz servisin portu (örn: 8080).
+   - **Block Common Exploits:** İşaretlemeniz önerilir.
+3. **SSL Sekmesi:**
+   - **SSL Certificate:** `Request a new SSL Certificate` seçin.
+   - **Force SSL:** İşaretleyin.
+   - **I Agree to the Let's Encrypt Terms:** İşaretleyin.
+4. **Save** butonuna basın.
+
+---
+
+## 4. SSL (Let's Encrypt) Hakkında
+Eğer SSL hatası alıyorsanız:
+- Modemden 80 ve 443 portlarının açık olduğundan emin olun.
+- Domaininizin DNS (A Record) ayarlarının ev IP'nize doğru yönlendiğinden emin olun.
+- Cloudflare kullanıyorsanız "Proxy" modunu geçici olarak kapatıp deneyebilirsiniz.

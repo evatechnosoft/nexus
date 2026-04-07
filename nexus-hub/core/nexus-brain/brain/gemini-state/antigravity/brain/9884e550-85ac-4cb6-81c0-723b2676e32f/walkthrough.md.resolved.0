@@ -1,0 +1,40 @@
+# Walkthrough - Organizing English Code Materials
+
+The English Code materials have been organized by moving them into level-specific folders and renaming them to a cleaner, standardized format.
+
+## Changes Made
+
+### Level-Specific Organization
+
+All PDF files that were previously in the root directory have been moved to their corresponding folders:
+
+- **English code 2**
+    - `Level 2 - Grammar Book.pdf`
+    - `Level 2 - Student's Book.pdf`
+    - `Level 2 - Student's Book 1.pdf`
+    - `Level 2 - Workbook.pdf`
+- **English code 3**
+    - `Level 3 - Student's Book.pdf`
+- **English code 5**
+    - `Level 5 - Unit 1.pdf`
+    - `Level 5 - Workbook.pdf`
+- **English code 6**
+    - `Level 6 - Assessment Book.pdf`
+    - `Level 6 - Student's Book.pdf`
+- **English code starter**
+    - `Starter - Teacher's Edition.pdf`
+
+## Verification Results
+
+### Automated Verification
+The file moves were executed via the command line and verified by listing the contents of each destination folder.
+
+### Manual Verification
+The root directory `c:\Users\Deacjx\Documents\English code` now only contains:
+- Existing level folders.
+- `_downloads` folder.
+- `all.md` file.
+- `links.pdf` file.
+- `english-code-sample-pack` folder.
+
+All specific "pdfcoffee.com_" files have been successfully processed.

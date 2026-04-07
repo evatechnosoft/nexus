@@ -1,0 +1,36 @@
+# Customizable Dynamic Gauge System
+
+This phase implements a generic, highly customizable layout system where users can rearrange and configure gauges on the fly.
+
+## Proposed Changes
+
+### [Component] Domain & Configuration
+#### [NEW] [gauge_config.dart](file:///c:/projects/claude+antigravity/projects/car_dash/lib/domain/models/gauge_config.dart)
+- Model for gauge properties: `id`, `type`, `position`, `scale`, `accentColor`, `maxValue`.
+
+### [Component] Generic Gauge Framework
+#### [NEW] [gauge_layout_wrapper.dart](file:///c:/projects/claude+antigravity/projects/car_dash/lib/presentation/widgets/gauge_layout_wrapper.dart)
+- A draggable wrapper for gauges.
+- Implements `LongPress` for moving, `DoubleTap` for settings.
+#### [MODIFY] [futuristic_gauge.dart](file:///c:/projects/claude+antigravity/projects/car_dash/lib/presentation/widgets/futuristic_gauge.dart)
+- Refactor to take `GaugeConfig` and render based on its type.
+
+### [Component] New Gauge Implementation
+#### [NEW] [rpm_gauge_painter.dart](file:///c:/projects/claude+antigravity/projects/car_dash/lib/presentation/painters/rpm_gauge_painter.dart)
+- Circular RPM gauge with red-line segments.
+#### [NEW] [current_gauge_painter.dart](file:///c:/projects/claude+antigravity/projects/car_dash/lib/presentation/painters/current_gauge_painter.dart)
+- Horizontal bar for amperage/voltage.
+
+### [Component] Settings & Layout
+#### [NEW] [settings_screen.dart](file:///c:/projects/claude+antigravity/projects/car_dash/lib/presentation/screens/settings_screen.dart)
+- Interface to add/remove gauges and edit global themes.
+#### [MODIFY] [main.dart](file:///c:/projects/claude+antigravity/projects/car_dash/lib/main.dart)
+- Update to use a dynamic list of gauges managed by the controller.
+
+## Verification Plan
+### Automated Tests
+- Test drag-and-drop mechanics using `browser_drag_pixel_to_pixel`.
+- Verify persistence of layout after re-loading.
+### Manual Verification
+- Rearrange gauges and verify positions are saved.
+- Check that RPM and Speed gauges respond uniquely to the mock data.

@@ -1,0 +1,21 @@
+# Home Assistant Acil Kurtarma Planı (Evinizi Geri Getirme)
+
+Bu plan, Home Assistant konteynerinin yanlış yola (`/DATA/AppData/config`) bakmasını engelleyip, doğrulanmış orijinal verilerinizin olduğu yola (`/var/lib/casaos_data/AppData/homeassistant/config`) geri dönmesini sağlamak için hazırlanmıştır.
+
+## Kullanıcı İletişimi (KRİTİK)
+- **Veri Güvenliği:** `/var/lib/casaos_data/AppData/homeassistant/config/` altındaki 9.1MB'lık veri tabanınız ve size özel `trusted_proxies` ayarlarınızın yerinde olduğu doğrulanmıştır. 🛡️
+- **Hızlı Geri Dönüş:** Konteynerin saniyeler içinde silinip yeni yolla ayağa kaldırılması sonucunda hiçbir ayarınız kaybolmadan "Eviniz" geri gelecektir.
+
+## Yapılacak Değişiklikler
+
+### 1. Home Assistant Konteyner Restorasyonu
+- Mevcut `homeassistant-homeassistant-1` konteynerini durdurup sileceğim.
+- Konteyneri şu birimle (`volume`) yeniden ayağa kaldıracağım: 
+  - **-v /var/lib/casaos_data/AppData/homeassistant/config:/config**
+
+### 2. Dashboard Link Tamiri (Final)
+- PostgreSQL üzerinden simge linkini bu yeni duruma ve `:8123` portuna sabitleyeceğim.
+
+## Doğrulama Planı
+- Home Assistant arayüzünde eski cihazların ve otomasyonların göründüğü teyit edilecek.
+- Dashboard simgesinin doğrudan uygulamayı açtığı doğrulanacak.

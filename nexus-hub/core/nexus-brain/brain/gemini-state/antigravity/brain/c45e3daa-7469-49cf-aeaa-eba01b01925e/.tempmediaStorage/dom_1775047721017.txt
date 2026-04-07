@@ -1,0 +1,96 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+DEAN
+OS
+Inventory
+Dashboard
+Talepler
+E-posta Kuyruğu
+Envanter
+Atamalar
+Excel
+Cihaz Envanteri
+Kurumsal donanım varlıklarını yönetin ve takip edin.
+Yeni Cihaz Ekle
+10
+Serviste
+Depoda
+Kullanımda
+Serviste
+Cihaz Ara (Seri No, Marka, Model)
+Durum
+Tür
+Filtrele
+Envanter Kodu
+Tür
+Marka / Model
+Seri No
+IMEI
+Durum
+Notlar
+İşlem
+ENV-0009
+Laptop
+ASUS
+VivoBook 16
+ASUSVB16001
+—
+Depoda
+Test cihazı - ASUS VivoBook 16
+Güncelle
+ENV-0010
+Laptop
+Apple
+MacBook Air M2
+MBAM2AIR001
+—
+Serviste
+Test cihazı - Apple MacBook Air M2
+Güncelle
+ENV-0006
+Laptop
+Dell
+XPS 15 9530
+DELLXPS9530001
+—
+Dağıtıldı
+Test cihazı - Dell XPS 15 9530
+Güncelle
+ENV-0007
+Laptop
+Lenovo
+ThinkPad X1 Carbon Gen 12
+TPXC12GEN001
+—
+Depoda
+Test cihazı - Lenovo ThinkPad X1 Carbon Gen 12
+Güncelle
+ENV-0008
+Laptop
+HP
+Pavilion 15-eh3000
+HPPAV15EH001
+—
+Depoda
+Test cihazı - HP Pavilion 15-eh3000
+Güncelle
+Yeni Cihaz Ekle
+[0] (620,287)<button class='btn-close btn-close-white' />
+[1] (401,350)<label class='form-label small text-muted text-uppercase fw-bold ls-1 mb-2'>Cihaz Türü />
+[2] (441,375)<select class='form-select bg-dark border-secondary border-opacity-50 text-white p-2' />
+[3] (513,350)<label class='form-label small text-muted text-uppercase fw-bold ls-1 mb-2'>Marka />
+[4] (559,375)<input class='form-control bg-dark border-secondary border-opacity-50 text-white p-2' placeholder='Örn: Apple, Dell' />
+[5] (395,411)<label class='form-label small text-muted text-uppercase fw-bold ls-1 mb-2'>Model />
+[6] (441,435)<input class='form-control bg-dark border-secondary border-opacity-50 text-white p-2' placeholder='Örn: MacBook Air M2' />
+[7] (525,411)<label class='form-label small text-muted text-uppercase fw-bold ls-1 mb-2'>Seri Numarası * />
+[8] (559,435)<input class='form-control bg-dark border-secondary border-opacity-50 text-white p-2' />
+[9] (408,472)<label class='form-label small text-muted text-uppercase fw-bold ls-1 mb-2'>IMEI (Opsiyonel) />
+[10] (441,496)<input class='form-control bg-dark border-secondary border-opacity-50 text-white p-2' />
+[11] (396,532)<label class='form-label small text-muted text-uppercase fw-bold ls-1 mb-2'>Notlar />
+[12] (500,572)<textarea class='form-control bg-dark border-secondary border-opacity-50 text-white p-2' />
+[13] (545,664)<button class='btn btn-link text-white text-decoration-none'>İptal />
+[14] (589,664)<button class='btn btn-primary px-5 shadow-lg'>Cihazı Kaydet />
+
+</current_dom>

@@ -1,0 +1,74 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+📚 English Learning Hub
+English Code Starter — 12 Haftalık İngilizce Öğrenme Planı
+[0] (165,272)<button class='nav-btn active'>👧 Öğrenci />
+[1] (258,272)<button class='nav-btn'>👨‍🏫 Öğretmen />
+[2] (341,272)<button class='nav-btn'>👨‍👩‍👧 Veli />
+[3] (417,272)<button class='nav-btn'>⚙️ Ayarlar />
+Merhaba! 👋
+Bu haftanın dersini seç:
+[4] (193,608)<div class='week-card' />
+	[5] (193,505)<h3 >Hafta 01 />
+	[6] (193,547)<p  />
+		[7] (160,547)<strong >Welcome! />
+	[8] (193,593)<p >İlk gün — selamlaşma, sayılar, yaş />
+	[9] (193,651)<p >16 kelime | SB pp. 4-7 />
+[10] (344,608)<div class='week-card' />
+	[11] (344,505)<h3 >Hafta 02 />
+	[12] (344,563)<p  />
+		[13] (341,562)<strong >Unit 1: Birthday Fun! — Bölüm 1 />
+	[14] (344,639)<p >Doğum günü kartı yapımı — renkler ve doğum günü kelimeleri />
+	[15] (344,713)<p >14 kelime | SB pp. 8-13 />
+[16] (495,608)<div class='week-card' />
+	[17] (495,505)<h3 >Hafta 03 />
+	[18] (495,563)<p  />
+		[19] (492,562)<strong >Unit 1: Birthday Fun! — Bölüm 2 + Proje />
+	[20] (495,624)<p >Doğum günü sahnesi ve proje tamamlama />
+	[21] (495,682)<p >1 kelime | SB pp. 14-17 />
+[22] (646,608)<div class='week-card' />
+	[23] (646,505)<h3 >Hafta 04 />
+	[24] (646,563)<p  />
+		[25] (641,562)<strong >Unit 2: Mud Kitchen — Bölüm 1 />
+	[26] (646,624)<p >Öğle yemeği masası — mutfak eşyaları />
+	[27] (646,682)<p >9 kelime | SB pp. 18-23 />
+[28] (797,608)<div class='week-card' />
+	[29] (797,505)<h3 >Hafta 05 />
+	[30] (797,563)<p  />
+		[31] (796,562)<strong >Unit 2: Mud Kitchen — Bölüm 2 + Checkpoint 1 />
+	[32] (797,624)<p >Hikaye tamamlama ve ilk ölçme />
+	[33] (797,682)<p >1 kelime | SB pp. 24-29 />
+[34] (193,915)<div class='week-card'>8 kelime | SB pp. 30-37 />
+	[35] (193,827)<h3 >Hafta 06 />
+	[36] (193,885)<p  />
+		[37] (187,884)<strong >Unit 3: Music Time! — Bölüm 1 />
+	[38] (193,946)<p >Müzik aletleri, dans, Let's cümlesi />
+	8 kelime | SB pp. 30-37
+[39] (344,915)<div class='week-card'>1 kelime | SB pp. 38-41 />
+	[40] (344,827)<h3 >Hafta 07 />
+	[41] (344,885)<p  />
+		[42] (343,884)<strong >Unit 3: Music Time! — Proje + Unit 4 Başlangıcı />
+	[43] (344,946)<p >Müzik projesi ve hayvan tanıtımı />
+	1 kelime | SB pp. 38-41
+[44] (495,915)<div class='week-card'>1 kelime | SB pp. 42-47 />
+	[45] (495,827)<h3 >Hafta 08 />
+	[46] (495,885)<p  />
+		[47] (493,884)<strong >Unit 4: At the Farm — Bölüm 2 + Checkpoint 2 />
+	[48] (495,946)<p >Çiftlik hayvanları ve Checkpoint 2 />
+	1 kelime | SB pp. 42-47
+[49] (646,915)<div class='week-card'>9 kelime | SB pp. 48-53 />
+	[50] (646,827)<h3 >Hafta 09 />
+	[51] (646,885)<p  />
+		[52] (641,884)<strong >Unit 5: My Dinosaur — Bölüm 1 />
+	[53] (646,946)<p >Dinozor tanıştırması ve bedeni öğrenme />
+	9 kelime | SB pp. 48-53
+[54] (797,915)<div class='week-card'>1 kelime | SB pp. 54-57 />
+	[55] (797,827)<h3 >Hafta 10 />
+	[56] (797,885)<p  />
+		[57] (797,884)<strong >Unit 5: My Dinosaur — Proje + Unit 6 Başlangıcı />
+	[58] (797,946)<p >Dinozor sunumu ve piknik tanıştırması />
+	1 kelime | SB pp. 54-57
+
+</current_dom>

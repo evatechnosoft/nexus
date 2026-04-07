@@ -1,0 +1,40 @@
+# Test Ortamı Port ve Email Parser Düzeltme Planı
+
+Önceki denemede, test ortamının (9600) açılmamasının ana sebebinin `sudo` ile çalıştırılan `docker compose` komutunun ortam değişkenlerini (HOST_PORT) görmemesi olduğu belirlenmiştir. Ayrıca e-posta ayrıştırıcısındaki tablo kayma sorunu için mantık iyileştirmesi yapılacaktır.
+
+## Kullanıcı İncelemesi Gerekli
+
+> [!IMPORTANT]
+> - `HOST_PORT` değişkeni artık doğrudan `.env.test` ve `.env.prod` dosyalarına eklenecektir. Bu sayede `sudo` kısıtlamalarından etkilenmeden Docker tarafında okunabilecektir.
+> - `email_parser.py` içindeki tablo işleme mantığı `zip_longest` benzeri bir yapı ile daha esnek hale getirilecektir.
+
+## Önerilen Değişiklikler
+
+### 1. Ortam Dosyaları (.env)
+
+#### [MODIFY] [.env.test](file:///c:/projects/it-inventory/.env.test)
+- `HOST_PORT=9600` eklenecek.
+
+#### [MODIFY] [.env.prod](file:///c:/projects/it-inventory/.env.prod)
+- `HOST_PORT=9700` eklenecek.
+
+### 2. Mantık İyileştirmeleri (Logic)
+
+#### [MODIFY] [email_parser.py](file:///c:/projects/it-inventory/email_parser.py)
+- `zip` kullanımı yerine, eksik hücreleri de tolere edebilen bir eşleştirme mantığı eklenecek.
+- Çoklu boşluk ile ayrılmış tabloların tespiti güçlendirilecek.
+
+### 3. Dağıtım Scripti
+
+#### [MODIFY] [deploy_deanos.sh](file:///c:/projects/it-inventory/deploy_deanos.sh)
+- `HOST_PORT` export işlemi yerine `.env` dosyasından okunacağı için gerekirse komutlar sadeleştirilecek.
+- `DOCKER_CONFIG` yolu korunacak.
+
+## Doğrulama Planı
+
+### Otomatik Doğrulama
+- `.\deploy.ps1` (test) çalıştırıldıktan sonra `ssh deanos "sudo docker inspect it-inventory"` ile port eşleşmesi (9600:8000) kontrol edilecek.
+
+### Manuel Doğrulama
+- Tarayıcı subagent'ı ile `http://192.168.1.186:9600` adresine tekrar gidilecek.
+- Test amaçlı bir tablo içeren e-postanın (email_parser testi) doğruluğu kontrol edilecek.

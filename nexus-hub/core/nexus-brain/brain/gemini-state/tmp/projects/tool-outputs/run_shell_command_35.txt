@@ -1,0 +1,27 @@
+<tool_output_masked>
+Command was cancelled by user before it could complete. Below is the output before it was cancelled:
+>>> MAIN.PY STARTING <<<
+C:\projects\agentops-nexus\main.py:41: DeprecationWarning: 
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+        
+  @app.on_event("startup")
+C:\projects\agentops-nexus\main.py:83: DeprecationWarning: 
+
+... [10 lines omitted] ...
+
+>>> MAIN.PY STARTING <<<
+INFO:     Started server process [34384]
+INFO:     Waiting for application startup.
+2026-04-03 13:22:24,811 - INFO - E-posta adresleri (EXCHANGE_EMAIL/GMAIL_EMAIL) tanımlı değil — izleyici devre dışı.
+INFO:     Application startup complete.
+2026-04-03 13:22:24,823 - INFO - 4 changes detected
+2026-04-03 13:23:25,393 - INFO - 3 changes detected
+2026-04-03 13:23:25,753 - INFO - 1 change detected
+2026-04-03 13:26:25,771 - INFO - 3 changes detected
+2026-04-03 13:26:26,151 - INFO - 1 change detected
+
+Output too large. Full output available at: C:\Users\Deacjx\.gemini\tmp\projects\tool-outputs\session-a366de38-25fd-4d3a-9bce-f8a0bc9646e6\run_shell_command_run_shell_command_1775211736142_0_54l3t.txt
+</tool_output_masked>

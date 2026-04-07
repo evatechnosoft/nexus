@@ -1,0 +1,31 @@
+# English Learning Hub: Gelişmiş Özellikler İş Listesi
+
+- [x] Mimari ve Güvenlik Planlaması [x]
+    - [x] [users.json](file:///c:/Users/Deacjx/Documents/English%20code/_learning-plan/users.json) yapısını tasarla
+    - [x] [server.py](file:///c:/Users/Deacjx/Documents/English%20code/_learning-plan/server.py) auth (giriş/çıkış) mekanizmasını planla
+- [x] Müfredat Kontrolü (Öğretmen)
+    - [x] `active_week` (aktif hafta) alanı ekle
+    - [x] Öğretmenin yeni ders ekleyebilmesi için API ekle
+- [x] Frontend Güncellemeleri
+    - [x] Login ekranı (Kullanıcı adı/Şifre)
+    - [x] Rol bazlı görünüm kısıtlaması (Öğrenci sadece aktif haftayı görür)
+    - [x] Öğretmen için "Hafta Ekle" formu
+- [x] Ders Değerlendirme Sistemi (Öğretmen)
+    - [x] "Passed", "Continue", "Repeat" durumlarını ekle
+    - [x] Öğretmen için geri bildirim (feedback) alanı
+- [x] Memnuniyet Anketi (Öğrenci/Veli)
+    - [x] Her ders için basit bir anket/rating sistemi
+- [x] Raporlama Görünümü
+    - [x] Eklenen: Veli İlerleme Çubuğu
+- [x] İnteraktif Kelime Kartları
+    - [x] Kelime detayları için [curriculum.json](file:///c:/Users/Deacjx/Documents/English%20code/_learning-plan/curriculum.json) yapısını güncelle (anlam, okunuş, hece)
+    - [x] [week.html](file:///c:/Users/Deacjx/Documents/English%20code/_learning-plan/web/week.html) içinde SpeechSynthesis API (seslendirme) entegrasyonu
+    - [x] Tıklama (Okunuş + Detay) ve Uzun Basma (Harf harf kodlama) mantığını ekle
+    - [x] Kelime kartları için modern UI tasarımı
+    - [x] **Arayüz İyileştirmesi**: Kart bilgilerinin sürekli açık kalması ve harf görselleştirici
+    - [x] **Gelişmiş Ayarlar Çekmecesi (Settings Drawer)**: Hız ayarı (0.5-2x) ve Tonlama (Çocuk/Yetişkin) seçeneği
+    - [x] **Ses Seçimi**: Kadın/Erkek ses seçeneği
+    - [x] **Hata Giderimi**: Harf kodlama çakışması (stuck issue) fix
+    - [x] **UI Sadeleştirme**: "Female, Male, Child" isimlendirmeleri
+    - [ ] **Ton Optimizasyonu**: 10 yaş (Child) ve 30 yaş (Adult) simülasyonu
+    - [x] **Görsel Bildirimler**: Harf geçişlerinde renkli vurgu (aynı harflerin ayrımı için)

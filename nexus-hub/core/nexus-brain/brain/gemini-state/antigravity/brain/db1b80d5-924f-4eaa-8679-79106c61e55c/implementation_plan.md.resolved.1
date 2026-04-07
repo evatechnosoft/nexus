@@ -1,0 +1,54 @@
+# SportApp Pro Ayarlar & Gemini AI Planı 🛠️
+
+Uygulamayı daha akıllı ve kişiselleştirilebilir hale getirmek için Gemini API entegrasyonu ve gelişmiş bir Tema (Customization) sistemi ekleyeceğiz.
+
+## Kullanıcı İncelemesi Gerekli
+
+> [!IMPORTANT]
+> **Gemini API Güvenliği:** API anahtarı `localStorage` (tarayıcı önbelleği) üzerinde saklanacaktır. Bu, anahtarı hardcode etmekten daha güvenlidir ancak tarayıcıya erişimi olanların anahtarı görebileceği unutulmamalıdır.
+> **Dinamik Fontlar:** Seçilen fontların (Inter, Syne, vb.) Google Fonts üzerinden yüklendiğinden emin olunacaktır.
+
+## Önerilen Değişiklikler
+
+### 1. Ayarlar (Settings) Paneli
+
+#### [NEW] [Settings Tab Container](file:///c:/projects/SportApp/public/index.html)
+- Alt navigasyona (Nav) "⚙️ AYARLAR" butonu eklenecek.
+- Yeni bir `tab-settings` sekmesi oluşturulacak. İçeriği:
+    - **AI Konfigürasyonu:** Gemini API Key girişi ve model seçimi.
+    - **Görünüm Seçenekleri:**
+        - **Tema:** Dark / Light.
+        - **Yazı Tipi:** Syne, Inter, Montserrat, Outfit.
+        - **Kutu Stili:** Glassmorphism (Blur), Flat (Düz), Neomorphic (Soft Shadow), Outline (Çizgisel).
+        - **İkon Seti:** Emoji, Minimalist, Bold.
+
+### 2. Dinamik Tema Sistemi
+
+#### [MODIFY] [style.css](file:///c:/projects/SportApp/public/style.css)
+- Tüm renk ve stil değerleri CSS değişkenlerine (`--radius`, `--blur`, `--shadow`) bağlanacak.
+- Tema sınıfları eklenecek:
+    - `.style-neo`: Neomorphic gölgeler ve yumuşak geçişler.
+    - `.style-glass`: Yüksek bulanıklık ve ince kenarlıklar.
+    - `.style-flat`: Keskin kenarlar ve opak renkler.
+- Font sınıfları: `.font-syne`, `.font-inter`, vb.
+
+### 3. Gemini AI İşlemcisi
+
+#### [MODIFY] [app.js](file:///c:/projects/SportApp/public/app.js)
+- **State Güncellemesi:** `DS()` fonksiyonuna `settings` objesi (`geminiKey`, `theme`, `font`, `style`) eklenecek.
+- **applySettings():** Sayfa yüklendiğinde ve ayar değiştiğinde `body` etiketine ilgili sınıfları uygulayan fonksiyon.
+- **Gemini Entegrasyonu:**
+    - `handleMealPhoto` ve `handleChatText` fonksiyonları, eğer API anahtarı varsa `GoogleGenerativeAI` kütüphanesini kullanarak gerçek analiz yapacak.
+    - Anahtar yoksa mevcut Mock (simülasyon) sistemi devam edecek.
+
+## Doğrulama Planı
+
+### Manuel Doğrulama
+1. **Tema Değişimi:** Ayarlardan "Neo" stilini ve "Inter" fontunu seçince uygulamanın anlık değişip değişmediği kontrol edilecek.
+2. **AI Testi:** Geçerli bir Gemini Key girilip bir yemek fotoğrafı taratıldığında, mock veri yerine gerçek (farklı) bir analiz gelip gelmediği doğrulanacak.
+3. **Kalıcılık:** Sayfa yenilendiğinde ayarların korunup korunmadığına bakılacak.
+
+## Ek Sorular
+
+- **İkon Seti:** Minimalist ikonlar için harici bir kütüphane (FontAwesome vb.) mi ekleyelim yoksa SVG tabanlı mı ilerleyelim? (Hız için SVG/Emoji önerilir).
+- **Dil Desteği:** Dil seçiminde İngilizce desteği de eklemeli miyiz? (Şu an TR odaklıyız).

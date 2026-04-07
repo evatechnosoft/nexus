@@ -1,0 +1,22 @@
+# Hitfile Downloader Selector Identification
+
+## Plan
+- [/] Navigate to https://hitfile.net/download/free/MbmVOy3
+- [ ] Identify if "Free Download" button is present or already on download page
+- [ ] Find selector for 60-second countdown timer
+- [ ] Find selector for CAPTCHA area
+- [ ] Find selector for final "Download" button
+- [ ] Identify anti-bot challenges (hCaptcha, reCAPTCHA, Cloudflare, etc.)
+
+## Findings
+- **Initial Page State**: The page shows "In free mode" with a wait time (currently 25+ minutes).
+- **Free Download Button**: Element `a.file-block__link_free` (index [10]) seems to be the one, but it shows a long wait time.
+- **Anti-bot**: Cloudflare Turnstile "Verify you are human" is visible.
+- **Selectors**:
+    - Free Button: `a.file-block__link_free`
+    - Wait Time Text: `span` inside `a.file-block__link_free` (index [12])
+    - Cloudflare: `div.cf-turnstile` (likely, need to verify selector)
+
+## Next Steps
+- Click "In free mode" or wait to see if it changes.
+- Look for the 60s timer once the long wait is bypassed (if possible).

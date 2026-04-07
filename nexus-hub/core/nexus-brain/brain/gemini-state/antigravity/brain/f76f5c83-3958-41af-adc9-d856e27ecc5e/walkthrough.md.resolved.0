@@ -1,0 +1,23 @@
+# Walkthrough - Fixed Invalid Constant Value Error
+
+I have fixed the "Invalid constant value" error in [app_theme.dart](file:///c:/projects/Antigravity/shmarthouse/shmarthouse_app/lib/core/theme/app_theme.dart). This error was caused by the use of `const` constructors for theme data that referenced dynamic values from `GoogleFonts`.
+
+## Changes Made
+
+### Theme Configuration
+Modified [app_theme.dart](file:///c:/projects/Antigravity/shmarthouse/shmarthouse_app/lib/core/theme/app_theme.dart) to remove `const` from several theme components:
+
+- **TextTheme**: Removed `const` because it uses [AppTextStyles](file:///c:/projects/Antigravity/shmarthouse/shmarthouse_app/lib/core/theme/app_text_styles.dart#7-58) (which uses `GoogleFonts` getters).
+- **AppBarTheme**: Removed `const` because it uses `AppTextStyles.title`.
+- **NavigationRailThemeData**: Removed `const` because it uses custom [TextStyle](file:///c:/projects/Antigravity/shmarthouse/shmarthouse_app/lib/core/theme/app_text_styles.dart#7-58) definitions which are not compile-time constants.
+
+## Verification Results
+
+### Manual Verification
+- Verified that [AppTextStyles](file:///c:/projects/Antigravity/shmarthouse/shmarthouse_app/lib/core/theme/app_text_styles.dart#7-58) uses `GoogleFonts.outfit` and `GoogleFonts.jetBrainsMono`, which are methods that return a [TextStyle](file:///c:/projects/Antigravity/shmarthouse/shmarthouse_app/lib/core/theme/app_text_styles.dart#7-58) at runtime and cannot be used in a `const` constructor.
+- Removed the `const` keyword from the following locations in [app_theme.dart](file:///c:/projects/Antigravity/shmarthouse/shmarthouse_app/lib/core/theme/app_theme.dart):
+    - `textTheme: const TextTheme(...)` -> `textTheme: TextTheme(...)`
+    - `appBarTheme: const AppBarTheme(...)` -> `appBarTheme: AppBarTheme(...)`
+    - `navigationRailTheme: const NavigationRailThemeData(...)` -> `navigationRailTheme: NavigationRailThemeData(...)`
+
+These changes resolve the static analysis error where the compiler expects constants but receives runtime values.

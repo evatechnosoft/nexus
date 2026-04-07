@@ -1,0 +1,35 @@
+# Walkthrough: Evario Odyssey (Girl Character Update)
+
+I have successfully updated the player character to a girl child character and integrated it into the Mario-style game mechanics.
+
+## Character Updates
+- **New Sprite**: Replaced the placeholder rectangle with a cute 2D pixel art girl character.
+- **Directional Orientation**: The sprite now automatically flips to face the direction of movement (Left/Right).
+- **Animation Support**: The character maintains the smooth jumping and movement physics.
+
+## Visual Verification
+
+````carousel
+![Moving Right](/C:/Users/Deacjx/.gemini/antigravity/brain/c4b7c076-1178-4caf-ab9a-405e42335d4b/character_moving_right_1773594212618.png)
+<!-- slide -->
+![Moving Left](/C:/Users/Deacjx/.gemini/antigravity/brain/c4b7c076-1178-4caf-ab9a-405e42335d4b/character_moving_left_1773594219429.png)
+<!-- slide -->
+![Jumping](/C:/Users/Deacjx/.gemini/antigravity/brain/c4b7c076-1178-4caf-ab9a-405e42335d4b/character_jumping_1773594227700.png)
+<!-- slide -->
+![Collecting Node](/C:/Users/Deacjx/.gemini/antigravity/brain/c4b7c076-1178-4caf-ab9a-405e42335d4b/character_collecting_right_1773594235661.png)
+````
+
+### Gameplay Recording
+![Character Animation Demo](/C:/Users/Deacjx/.gemini/antigravity/brain/c4b7c076-1178-4caf-ab9a-405e42335d4b/verify_girl_character_1773594185079.webp)
+*This recording demonstrates the character's movement, jumping, and interaction with the environment.*
+
+## How to Play
+1. The game is live at `http://localhost:5173/`.
+2. **Controls**:
+   - `Arrow Keys` or `WASD`: Move and Jump.
+   - `Space`: Jump.
+
+## Technical Details
+- **Engine**: Canvas API.
+- **Physics**: Custom implemented in [src/main.js](file:///c:/projects/Antigravity/EvaGames/evario/src/main.js).
+- **Styling**: [src/style.css](file:///c:/projects/Antigravity/EvaGames/evario/src/style.css) provides the glassmorphism and neon effects.

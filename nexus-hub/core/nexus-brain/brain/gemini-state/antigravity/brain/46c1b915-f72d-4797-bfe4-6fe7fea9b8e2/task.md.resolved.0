@@ -1,0 +1,9 @@
+# Tasks
+
+- [ ] Diagnose [GoogleSignIn](file:///c:/projects/EvAnotes/mobile/lib/features/auth/login_screen.dart#56-64) constructor error <!-- id: 0 -->
+    - [x] Research `google_sign_in` version changes <!-- id: 1 -->
+    - [ ] Identify available constructors for [GoogleSignIn](file:///c:/projects/EvAnotes/mobile/lib/features/auth/login_screen.dart#56-64) <!-- id: 2 -->
+- [ ] Fix [google_auth.dart](file:///c:/projects/EvAnotes/mobile/lib/config/google_auth.dart) <!-- id: 3 -->
+    - [ ] Update `googleSignInProvider` to use correct constructor <!-- id: 4 -->
+- [ ] Verify fix <!-- id: 5 -->
+    - [ ] Run `flutter analyze` or check for errors <!-- id: 6 -->

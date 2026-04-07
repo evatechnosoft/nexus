@@ -1,0 +1,37 @@
+# Node
+node_modules/
+npm-debug.log*
+
+# Coverage
+coverage/
+*.lcov
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Build
+dist/
+build/
+
+# Flutter
+mobile/.dart_tool/
+mobile/.flutter-plugins
+mobile/.flutter-plugins-dependencies
+mobile/build/
+mobile/.packages
+mobile/pubspec.lock
+
+# SQLite
+*.db
+*.sqlite
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp

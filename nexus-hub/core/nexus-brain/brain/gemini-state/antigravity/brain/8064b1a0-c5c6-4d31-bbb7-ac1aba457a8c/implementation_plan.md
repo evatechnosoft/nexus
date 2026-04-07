@@ -1,0 +1,37 @@
+# Concentric Hybrid Gauge Implementation (Phase 12)
+
+Redesign the Hybrid Analog gauges to support a true "nested" architecture, where the center and outer regions act as two independent, customizable gauges.
+
+## Proposed Changes
+
+### [Component Name]
+#### [MODIFY] [gauge_config.dart](file:///c:/projects/claude+antigravity/projects/car_dash/lib/domain/models/gauge_config.dart)
+- Add `innerStyle` (GaugeStyle) and `innerVariant` (GaugeVariant).
+- Update serialization and `copyWith`.
+
+### [Component Name]
+#### [MODIFY] [speedometer_painter.dart](file:///c:/projects/claude+antigravity/projects/car_dash/lib/presentation/painters/speedometer_painter.dart)
+- Make the central needle hub and value text optional/hollow to clear space for the nested gauge.
+
+### [Component Name]
+#### [MODIFY] [futuristic_gauge.dart](file:///c:/projects/claude+antigravity/projects/car_dash/lib/presentation/widgets/futuristic_gauge.dart)
+- Add a `Widget? innerGauge` property.
+- Layout the inner gauge in the center of the `Stack` using `Positioned` with a smaller scale factor.
+
+### [Component Name]
+#### [MODIFY] [generic_gauge.dart](file:///c:/projects/claude+antigravity/projects/car_dash/lib/presentation/widgets/generic_gauge.dart)
+- Recursively build an "Inner Gauge" widget if `innerMetric` is present in the config.
+- Pass the nested widget down to `FuturisticGauge`.
+
+### [Component Name]
+#### [MODIFY] [gauge_mini_settings.dart](file:///c:/projects/claude+antigravity/projects/car_dash/lib/presentation/widgets/gauge_mini_settings.dart)
+- Add sub-menus to configure the "Inner Model" (Style/Variant/Color? - keep it simple first with Style/Variant).
+
+## Verification Plan
+
+### Manual Verification
+- Deploy to `localhost`.
+- Select an Analog Speedometer.
+- Add an Inner Display (e.g., Battery) and set its style to "Digital".
+- Verify that a smaller digital box appears exactly in the center of the analog ring.
+- Change the inner style to "Analog" and verify a small concentric ring appears.

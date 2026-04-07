@@ -1,0 +1,134 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Home Assistant
+Ana Ekran
+Harita
+Enerji
+Günlük
+Geçmiş
+HACS
+Medya
+Yapılacaklar listeleri
+Geliştirici araçları
+Ayarlar
+Bildirimler
+D
+Dean
+Entegrasyonlar
+Cihazlar
+Varlıklar
+Yardımcılar
+Cihaz
+Alan
+Entegrasyon
+Üretici
+Model
+Pil
+[0] (569,573)<lit-virtualizer class='mdc-data-table__content scroller ha-scrollbar' scrollable='true' />
+	43" Monitor
+	MyRoom
+	Samsung Smart TV, DLNA Digital Media Renderer
+	Samsung
+	LS43BM700UPXUF
+	—
+	Back light
+	MyRoom
+	Tuya
+	Tuya
+	Fonri - Smart Plug
+	—
+	Backup
+	—
+	Backup
+	Home Assistant
+	Home Assistant Backup
+	—
+	BY-011e61b68cd0 2D10
+	—
+	iBeacon Tracker
+	<bilinmeyen>
+	<bilinmeyen>
+	—
+	BY-011e61b68cd0 3EAA
+	—
+	iBeacon Tracker
+	<bilinmeyen>
+	<bilinmeyen>
+	—
+	BY-011e61b68cd0 7ADC
+	—
+	iBeacon Tracker
+	<bilinmeyen>
+	<bilinmeyen>
+	—
+	BY-011e61b68cd0 959B
+	—
+	iBeacon Tracker
+	<bilinmeyen>
+	<bilinmeyen>
+	—
+	Computer
+	MyRoom
+	Tuya
+	Tuya
+	Fonri - Smart Plug
+	—
+	ev charger
+	MyRoom
+	Tuya
+	Tuya
+	Fonri - Smart Plug
+	—
+	Forecast
+	—
+	Meteorologisk institutt (Met.no)
+	Met.no
+	Forecast
+	—
+	Galaxy Watch6 Classic (2WCT)
+	—
+	Mobil uygulama
+	samsung
+	SM-R960
+	100%
+	HACS
+	—
+	HACS
+	hacs.xyz
+	<bilinmeyen>
+	—
+	Modem-Huntercjx
+	MyRoom
+	UPnP/IGD
+	TEKNOTEL
+	CBW-383Z4
+	—
+	MyBoX
+	MyRoom
+	Google Cast
+	Xiaomi
+	MIBOX4
+	—
+	MyBoX
+	MyRoom
+	Android TV Remote
+	Xiaomi
+	MIBOX4
+	—
+	MyTV
+	MyRoom
+	LG webOS TV
+	LG
+	65A6500USWF
+	—
+Filtreler
+Gruplandır:
+Sırala:  Cihaz
+Cihaz ekle
+[1] (500,147)<label class='mdc-text-field  mdc-text-field--no-label mdc-text-field--filled mdc-text-field--with-leading-icon mdc-text-field--with-trailing-icon ' />
+	[2] (505,147)<input class='mdc-text-field__input' placeholder='Varlıkları ara' />
+	[3] (603,147)<span class='mdc-text-field__icon mdc-text-field__icon--trailing' />
+
+</current_dom>

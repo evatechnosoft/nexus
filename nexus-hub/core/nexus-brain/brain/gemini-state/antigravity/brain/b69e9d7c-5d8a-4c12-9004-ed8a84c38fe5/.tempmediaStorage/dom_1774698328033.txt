@@ -1,0 +1,66 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (356,32)<a class='UnderlineNav-item js-responsive-underlinenav-item js-selected-navigation-item' href='/hboon'>Overview />
+[1] (444,32)<a class='UnderlineNav-item js-responsive-underlinenav-item js-selected-navigation-item selected' href='/hboon?tab=repositories'>Repositories />
+	[2] (479,32)<span >237 />
+[3] (529,32)<a class='UnderlineNav-item js-responsive-underlinenav-item js-selected-navigation-item' href='/hboon?tab=projects'>Projects />
+[4] (594,32)<a class='UnderlineNav-item js-responsive-underlinenav-item js-selected-navigation-item' href='/hboon?tab=packages'>Packages />
+[5] (665,32)<a class='UnderlineNav-item js-responsive-underlinenav-item js-selected-navigation-item' href='/hboon?tab=stars'>Stars />
+	[6] (685,32)<span >1.1k />
+[7] (750,32)<a class='UnderlineNav-item js-responsive-underlinenav-item js-selected-navigation-item' href='/hboon?tab=sponsoring' />
+	[8] (749,32)<span >Sponsoring />
+	[9] (783,32)<span >1 />
+hboon
+[10] (186,33)<a class='btn mini-follow-button' href='/login?return_to=https%3A%2F%2Fgithub.com%2Fhboon%3Ftab%3Drepositories'>Follow />
+Singapore
+https://hboon.com/about
+[11] (142,82)<a class='Link--primary wb-break-all' href='https://twitter.com/hboon'>@hboon />
+[12] (178,121)<a class='Link--primary wb-break-all' href='https://mastodon.social/@hboon'>@hboon@mastodon.social />
+[13] (151,159)<a class='Link--primary wb-break-all' href='https://bsky.app/profile/hboon.com'>@hboon.com />
+Sponsoring
+[14] (120,281)<a class='d-inline-block' href='/colinhacks' />
+	[15] (120,281)<img  />
+[16] (142,368)<a class='Link--primary mb-2' href='/hboon?tab=achievements'>Achievements />
+[17] (129,441)<a class='position-relative' href='/hboon?achievement=public-sponsor&tab=achievements' />
+	[18] (129,437)<img  />
+[19] (171,441)<a class='position-relative' href='/hboon?achievement=quickdraw&tab=achievements' />
+	[20] (171,437)<img  />
+[21] (212,441)<a class='position-relative' href='/hboon?achievement=yolo&tab=achievements' />
+	[22] (212,437)<img  />
+[23] (253,441)<a class='position-relative' href='/hboon?achievement=pull-shark&tab=achievements' />
+	[24] (253,437)<img  />
+	[25] (264,468)<span >x4 />
+[26] (129,532)<a class='position-relative' href='/hboon?achievement=arctic-code-vault-contributor&tab=achievements' />
+	[27] (129,528)<img  />
+[28] (171,532)<a class='position-relative' href='/hboon?achievement=starstruck&tab=achievements' />
+	[29] (171,528)<img  />
+	[30] (182,559)<span >x2 />
+Highlights
+Pro
+Organizations
+[31] (119,797)<a aria-label='rvm' class='avatar-group-item' href='/rvm' />
+	[32] (119,797)<img  />
+[33] (142,797)<a aria-label='AlphaWallet' class='avatar-group-item' href='/AlphaWallet' />
+	[34] (142,797)<img  />
+[35] (165,797)<a aria-label='SmartTokenLabs' class='avatar-group-item' href='/SmartTokenLabs' />
+	[36] (165,797)<img  />
+[37] (141,838)<button class='Button--link Button--medium Button color-fg-muted' id='dialog-show-dialog-374c4662-27a3-4144-b5b6-bf0b18641636' />
+	[38] (141,838)<span  />
+		[39] (141,838)<span >Block or Report />
+Footer
+[40] (238,931)<a aria-label='GitHub Homepage' class='footer-octicon mr-2' href='https://github.com' />
+© 2026 GitHub, Inc.
+Footer navigation
+[41] (338,931)<a class='Link--secondary Link' href='https://docs.github.com/site-policy/github-terms/github-terms-of-service'>Terms />
+[42] (370,931)<a class='Link--secondary Link' href='https://docs.github.com/site-policy/privacy-policies/github-privacy-statement'>Privacy />
+[43] (406,931)<a class='Link--secondary Link' href='https://github.com/security'>Security />
+[44] (440,931)<a class='Link--secondary Link' href='https://www.githubstatus.com/'>Status />
+[45] (481,931)<a class='Link--secondary Link' href='https://github.community/'>Community />
+[46] (519,931)<a class='Link--secondary Link' href='https://docs.github.com/'>Docs />
+[47] (551,931)<a class='Link--secondary Link' href='https://support.github.com?tags=dotcom-footer'>Contact />
+[48] (602,931)<button class='Link--secondary underline-on-hover border-0 p-0 color-bg-transparent'>Manage cookies />
+[49] (705,931)<button class='Link--secondary underline-on-hover border-0 p-0 color-bg-transparent text-left'>Do not share my personal information />
+
+</current_dom>

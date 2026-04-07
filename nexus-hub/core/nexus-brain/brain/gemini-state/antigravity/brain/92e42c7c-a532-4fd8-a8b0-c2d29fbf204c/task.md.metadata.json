@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_TASK",
+  "summary": "This is a task for investigating and fixing the ZimaOS cloud backup error \"failed to create subtask 0: create task failed: unknown error\". Task items include analyzing the error, connecting to the ZimaOS server, checking logs, and verifying cloud storage.",
+  "updatedAt": "2026-03-27T08:12:02.531441400Z"
+}

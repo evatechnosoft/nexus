@@ -1,0 +1,10 @@
+# Progress Tracking
+- [ ] Locate the local Flutter web app URL.
+- [ ] Open the app in the browser.
+- [ ] Verify dragging gauges.
+- [ ] Verify settings functionality.
+- [ ] Verify adding an RPM gauge.
+- [ ] Return summary of findings.
+
+# Findings
+- No browser pages open initially.

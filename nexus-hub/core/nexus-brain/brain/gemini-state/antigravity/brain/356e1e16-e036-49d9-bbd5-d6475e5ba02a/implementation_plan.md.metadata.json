@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary": "Plan to fix syntax errors in `providers_test.dart` by converting arrow functions to block functions.",
+  "updatedAt": "2026-03-17T17:56:09.675025Z"
+}

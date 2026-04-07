@@ -1,0 +1,77 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Download English Code 4 Phonics Book Audio (AmE)
+[0] (187,46)<a class='auto-download-link' href='/download-page?redirect_to=aHR0cHM6Ly9wYzA1LnR3aXJweC5uZXQvMzUwMy8zNTAzNzg1X0FCNkUwMjc3L2VuZ2xpc2hfY29kZV81X2dyYW1tYXJfYm9vay5wZGY%3D'>Download English Code 5 Grammar Book.pdf />
+You can purchase the full version to access all the resources listed below.
+English Code Starter. Student’s Book (AmE).pdf
+English Code Starter. Student’s Book Audio (AmE).rar
+English Code Starter. Workbook (AmE).pdf
+English Code Starter. Workbook Audio (AmE).rar
+English Code Starter. Teacher’s Edition.pdf
+English Code Starter. Flashcards.pdf
+—
+English Code 1 Phonics Book Audio (BrE).rar
+English Code 1 Assessment Book (BrE).pdf
+English Code 1 Assessment Book. Audio (BrE).rar
+English Code 1. Flashcards (BrE).pdf
+English Code 1. Grammar Book (BrE).pdf
+English Code 1. Phonics Book (BrE).pdf
+English Code 1. Phonics Book Video (BrE).zip
+English Code 1. Student’s Book (AmE).pdf
+English Code 1. Student’s Book Audio (AmE).rar
+English Code 1. Workbook (AmE).pdf
+English Code 1. Workbook Audio (AmE).rar
+English Code 1 Phonics Book Audio (AmE).rar
+English Code 1. Phonics Book Video (AmE).zip
+English Code 1. Teacher’s Edition (AmE).pdf
+—
+English Code 2. Activity Book (BrE).pdf
+English Code 2. Activity Book Audio (BrE).rar
+English Code 2. Phonics Book (BrE).pdf
+Categories
+[1] (822,137)<a href='https://tienganhedu.com/adult-and-young-adult/'>Adult & Young Adult />
+[2] (914,137)<button aria-label='Toggle' class='toggle' />
+	[3] (914,138)<i  />
+[4] (791,188)<a href='https://tienganhedu.com/business-english-esp/'>Business English & ESP />
+[5] (822,238)<a href='https://tienganhedu.com/exam-preparation/'>Exam Preparation />
+[6] (914,238)<button aria-label='Toggle' class='toggle' />
+	[7] (914,240)<i  />
+[8] (822,289)<a href='https://tienganhedu.com/grammar-vocabulary-pronunciation/'>Language Component />
+[9] (914,289)<button aria-label='Toggle' class='toggle' />
+	[10] (914,290)<i  />
+[11] (822,340)<a href='https://tienganhedu.com/skills/'>Skills />
+[12] (914,340)<button aria-label='Toggle' class='toggle' />
+	[13] (914,341)<i  />
+[14] (762,390)<a href='https://tienganhedu.com/teenagers/'>Teenagers />
+[15] (786,441)<a href='https://tienganhedu.com/very-young-learners/'>Very Young Learners />
+[16] (774,492)<a href='https://tienganhedu.com/young-learners/'>Young Learners />
+[17] (822,542)<a href='https://tienganhedu.com/ebook/'>YY-Unknown />
+[18] (914,542)<button aria-label='Toggle' class='toggle' />
+	[19] (914,544)<i  />
+Popular
+Oxford
+[20] (842,716)<a href='https://tienganhedu.com/english-file-fifth-edition/'>English File, fifth edition [Download High Quality PDF + Resources] />
+Adult & Young Adult | 2025 | 31,687 👀
+pearson
+[21] (844,871)<a href='https://tienganhedu.com/wider-world/'>Wider World (British English) [Download PDF + Resources] />
+Teenagers | 2017 | 19,403 👀
+cengage
+Outcomes, Third Edition [Download Original PDF + Resources]
+Yan Zhao
+just purchased
+[22] (294,930)<a href='https://tienganhedu.com/product/american-english-file-third-edition-level-1-pdf-resources-2/' />
+	[23] (294,930)<strong >American English File (Third Edition) 1 [High Quality PDF + Resources] />
+(7 hours ago)
+0
+[24] (28,120)<button id='custom-show-cart-popup' />
+	[25] (28,120)<img  />
+[26] (965,927)<div  />
+	[27] (965,927)<div  />
+		[28] (965,927)<div  />
+			[29] (965,944)<p >Contact us />
+[30] (985,811)<div  />
+Have a questions?
+
+</current_dom>

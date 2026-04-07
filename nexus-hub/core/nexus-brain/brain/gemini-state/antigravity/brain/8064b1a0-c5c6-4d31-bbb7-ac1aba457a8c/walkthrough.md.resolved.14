@@ -1,0 +1,44 @@
+# Walkthrough - Cloning Superpowers
+
+I have successfully cloned the `superpowers` repository from GitHub into the workspace.
+
+## Changes Made
+
+### Repository Cloned
+- Cloned `https://github.com/obra/superpowers` into `c:\projects\claude+antigravity`.
+- Cloned `https://github.com/ComposioHQ/awesome-claude-skills` into `c:\projects\claude+antigravity\awesome-claude-skills`.
+
+### Key Skills & Features Identified
+- **superpowers**: A toolkit for TDD, brainstorming, and systematic debugging.
+- **awesome-claude-skills**: A curated list of 30+ practical skills for document processing, dev tools, marketing, and more.
+- **frontend-design**: A skill for creating production-grade, distinctive frontend interfaces avoiding "AI slop" aesthetics.
+- **connect-apps**: A plugin to connect Claude to 500+ apps via Composio.
+
+### OpenCode CLI Installed
+- Installed `opencode-ai` via npm (version 1.2.27).
+- Configured Superpowers plugin by linking `superpowers.js` into `%USERPROFILE%\.config\opencode\plugins`.
+- Linked the skills directory into `%USERPROFILE%\.config\opencode\skills\superpowers` using a junction.
+
+### Dedicated car_dash Repository
+- Repurposed `projects/car_dash` as a standalone Git repository.
+- Created `evatechnosoft/car_dash` on GitHub.
+- Set up `master` and `dev` branches.
+
+### Futuristic Gauge & Background Integration
+- **Interactive Dashboard**: Successfully implemented Speedometer and Battery gauges.
+- **Dynamic Background**: Added a speed-reactive particle system ("Warp Drive" effect).
+### Automated Dashboard & New Gauges
+- **Mock Data Simulation**: Implemented `DashboardController` to simulate real-time speed, SOC, range, and thermal data.
+- **Range & Motor Temp**: Added fütüristik vertical bar gauges to track energy and heat.
+- **Power Flow Monitor**: Created a dynamic energy flow visualizer (Battery <-> Motor) that reacts to çekiş/regen.
+- **UI Autonomy**: Removed the manual slider; the dashboard now breathes and moves on its own like a real vehicle.
+
+### Phase 5+: Advanced Customization & Metrics
+- **Expanded Telemetry**: Integrated **Voltage (V)**, **Power (kW)**, and **Controller Temperature** into the simulation engine.
+- **On-Dashboard Mini-Settings**:
+  - When a gauge is long-pressed (Edit Mode), a small "Edit" icon appears.
+  - Clicking this icon opens an overlay to adjust the **Scale** and **Accent Color** in real-time, or to **Delete** the gauge without leaving the dashboard.
+- **Restoration (Unset) List**: The Settings screen now intelligently tracks "Available" gauges that aren't on the dashboard, allowing you to add them back with one click.
+
+![Advanced Customization Demo](customizable_dashboard_demo_1773672924663.webp)
+*(Note: Recording shows the base customization; advanced features are now live in your build.)*

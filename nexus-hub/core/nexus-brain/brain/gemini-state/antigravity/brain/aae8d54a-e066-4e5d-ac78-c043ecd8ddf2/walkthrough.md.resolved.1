@@ -1,0 +1,31 @@
+# IT Altyapı Modernizasyonu & Coolify Reset
+
+Sunucundaki (DeanOS) eski ve karışık Coolify yapısını tamamen temizledik ve yerine modern, stabil bir Coolify V4 mimarisi kurduk.
+
+## 🛠️ Neler Yapıldı?
+
+### 1. Büyük Temizlik (Purge)
+- Eski ve hatalı çalışan `sentinel`, `big-bear` ve `coolify` konteynerleri tamamen durdurulup silindi.
+- `/DATA/AppData/` altındaki çöp klasörler (root seviyesindeki backups, databases, logs vb.) süpürüldü.
+- Sunucuda ciddi yer açıldı ve Docker karmaşası giderildi.
+
+### 2. Coolify V4 Kurulumu
+- **Port:** `9800` (Eski portlarla çakışmaması için).
+- **Servisler:** Coolify Core, Postgres 15 (İzole DB) ve Redis (İşlem Kuyrukları) içeren stabil bir stack kuruldu.
+- **İzinler:** Veritabanı ve SSH klasörleri için gereken Linux izinleri (UID 1000 ve UID 70) özel olarak ayarlandı, "HTTP 500" hataları giderildi.
+
+### 3. SSH & Erişim
+- Tüm sistem erişimi `deanos` anahtarı üzerinden tekilleştirildi.
+- `authorized_keys` yapılandırması ile Coolify'ın sunucuyu yönetmesi için gereken yol açıldı.
+
+## 🚀 Mevcut Durum & Erişim
+
+> [!TIP]
+> **Adres:** http://192.168.1.186:9800
+
+- **Kullanıcı:** İlk girişte kayıt olman gerekiyor.
+- **Sunucu Ekleme:** "Servers" -> "This Machine" veya "Remote Server" diyerek sunucunu (IP: 192.168.1.186, User: dean) ekleyebilirsin.
+- **Anahtar:** Sana verdiğim `deanos` Private Key'i kullanarak bağlantıyı saniyeler içinde tamamlayabilirsin.
+
+---
+**Tebrikler!** Artık profesyonel, temiz ve her adımını kontrol edebildiğimiz bir IT altyapısına sahibiz. 🦾🦾🚀

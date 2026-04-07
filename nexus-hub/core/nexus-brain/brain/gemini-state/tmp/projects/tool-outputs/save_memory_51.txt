@@ -1,0 +1,1 @@
+{"success":true,"message":"Okay, I've remembered that: \"AgentOps-Nexus (eski it-inventory) uygulaması yerel geliştirme ve test ortamlarında varsayılan olarak 4550 portunu kullanır. Üretim (prod) ortamında PostgreSQL kullanılır.\""}

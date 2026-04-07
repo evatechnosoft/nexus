@@ -1,0 +1,26 @@
+# Ev@iTec: Android Build Fix & Deployment Plan V2 🚀📲🤖
+
+Samsung Galaxy S24 Ultra üzerinde karşılaştığımız **Kotlin derleme hatasını** (Registrar mismatch), `speech_to_text` paketini modernize ederek pürüzsüzce çözüyoruz.
+
+## 🛠️ Yapılacak Değişiklikler
+
+### [Bağımlılık Modernizasyonu]
+
+#### [MODIFY] [pubspec.yaml](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/pubspec.yaml)
+- `speech_to_text` sürümünü `^6.6.2`'den **`^7.3.0`**'a yükselterek modern Kotlin (2.2.x) uyumunu sağlıyoruz.
+
+### [Temizlik & Dağıtım]
+- `flutter pub upgrade` ile paketleri en güncel uyumlu sürümlere çekiyoruz.
+- `flutter clean` yaparak tüm eski derleme önbelleklerini temizliyoruz.
+- `flutter run -d [Samsung_ID]` ile uygulamayı telefonunuza yüklüyoruz.
+
+## 🧪 Doğrulama Planı
+### Manuel Doğrulama
+- Uygulamanın Samsung S24 Ultra cihazında pürüzsüzce açıldığını ve **Ev@iTec**'in sizi selamladığını göreceğiz.
+- Ses tanıma (speech_to_text) modülünün hatasız derlendiğini teyit edeceğiz.
+
+## ❓ Açık Sorular
+- Paket yükseltmesi sonrasında kod içerisinde `speech_to_text` kullanımında küçük bir API değişikliği (breaking change) olursa onu da otonom olarak fixleyeceğim. Onay veriyor musunuz?
+
+> [!IMPORTANT]
+> Bu değişiklik, projenin modern Flutter ve Android standartlarıyla tam uyumlu hale gelmesini sağlayacaktır.

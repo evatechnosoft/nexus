@@ -1,0 +1,39 @@
+# Coolify Fresh Reset & Infrastructure Clean-Sweep
+
+We are performing a "surgical reset" of the management layer. The goal is to remove all messy, failing components (like Sentinel and corrupted Big Bear folders) and install a clean, stable Coolify (V4) instance on a dedicated new port.
+
+## User Review Required
+
+> [!IMPORTANT]
+> **Data Preservation:** Your main `postgresql` (Port 5432) and `it-inventory` data are **NOT** affected.
+> **Configuration Reset:** After this, you will have a fresh, empty Coolify dashboard at `http://192.168.1.186:8010`. You will need to add your server (DeanOS) back using the SSH key once.
+
+## Proposed Changes
+
+### [DeanOS] Infrastructure Purge
+
+#### [DELETE] Legacy Containers
+- Stop and remove: `coolify`, `coolify-sentinel`, `big-bear-coolify-*`, `big-bear-dockhand`.
+
+#### [DELETE] Junk Folders (Root of /DATA/AppData/)
+- Clear legacy leftovers: `backups`, `databases`, `logs`, `services`, `ssh`, `webhooks-during-maintenance`.
+- Purge folder: `/DATA/AppData/big-bear-coolify/`
+- Purge folder: `/DATA/AppData/coolify/`
+
+### [DeanOS] Fresh Installation
+
+#### [NEW] [docker-compose.yml](file:///DATA/AppData/coolify-v4/docker-compose.yml)
+- Create a clean `docker-compose.yml` for the latest Coolify (V4).
+- **Control Port:** `8010`.
+- **User:** Root-less mapping where possible for security.
+- **Internal Database:** Dedicated PostgreSQL (V15) inside the compose to avoid messing with your main server.
+
+## Verification Plan
+
+### Automated Tests
+- `ssh dean "docker ps"` -> Confirm only new Coolify and your main apps are running.
+- `curl -I http://192.168.1.186:8010` -> Confirm dashboard accessibility.
+
+### Manual Verification
+- Log in to the new panel and confirm the "Messy" list is gone.
+- Re-add the server once using the `deanos` SSH key.

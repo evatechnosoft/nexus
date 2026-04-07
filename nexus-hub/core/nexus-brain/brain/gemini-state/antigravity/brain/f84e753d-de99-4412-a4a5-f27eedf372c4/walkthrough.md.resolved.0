@@ -1,0 +1,28 @@
+# Walkthrough - Nextcloud Trusted Domains Update
+
+I have successfully updated the `trusted_domains` configuration for your Nextcloud instance on ZimaOS.
+
+## Changes Made
+
+- Added `zimaos.local` to the trusted domains list.
+- Added `192.168.1.168` to the trusted domains list as requested.
+- Added `192.168.1.186` (the current server IP) to ensure consistent access.
+
+## Verification
+
+I executed the following commands via SSH:
+
+```bash
+sudo docker exec --user www-data nextcloud php occ config:system:set trusted_domains 2 --value="zimaos.local"
+sudo docker exec --user www-data nextcloud php occ config:system:set trusted_domains 3 --value="192.168.1.168"
+sudo docker exec --user www-data nextcloud php occ config:system:set trusted_domains 4 --value="192.168.1.186"
+```
+
+The final trusted domains list is:
+1. `http://192.168.1.186:10081`
+2. `http://192.168.0.1`
+3. `zimaos.local`
+4. `192.168.1.168`
+5. `192.168.1.186`
+
+You should now be able to access Nextcloud through any of these addresses without the "Untrusted Domain" error.

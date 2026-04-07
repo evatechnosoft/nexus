@@ -1,0 +1,47 @@
+# IDEs
+.vscode/
+.idea/
+*.iml
+
+# Node.js
+node_modules/
+**/node_modules/
+package-lock.json
+
+# Flutter / Dart
+build/
+**/build/
+.dart_tool/
+**/.dart_tool/
+.packages
+.pub-cache/
+.pub/
+**/.pub/
+
+# Android
+**/android/.gradle/
+**/android/app/debug/
+**/android/app/profile/
+**/android/app/release/
+*.jks
+*.keystore
+
+# Desktop platforms
+mobile/linux/
+mobile/macos/
+mobile/windows/
+
+# OS misc
+.DS_Store
+*.log
+*.swp
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Project specific
+outputs/
+**/outputs/
+test_output.txt

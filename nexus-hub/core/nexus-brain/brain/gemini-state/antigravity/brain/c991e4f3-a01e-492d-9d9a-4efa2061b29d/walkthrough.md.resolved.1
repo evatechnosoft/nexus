@@ -1,0 +1,37 @@
+# Walkthrough - Authentication & Connectivity Refinement
+
+I've significantly improved the reliability and observability of the EvAnotes authentication and connectivity stack.
+
+## Key Changes
+
+### 1. Robust Error Handling
+- Created a centralized `ApiError.format` helper in [api_client.dart](file:///c:/projects/github/EvAnotes/mobile/lib/config/api_client.dart) to transform complex `DioException` objects into human-readable messages.
+- Specific handling for:
+  - **503 (Service Unavailable)**: Now explicitly mentions potential tunnel expiration.
+  - **Connection Errors**: Provides clear advice on checking the internet or tunnel.
+  - **401/409**: Handles unauthorized and duplicate resource errors gracefully.
+
+### 2. Enhanced Observability
+- Integrated a `LogInterceptor` into the `apiClientProvider`.
+- Developers can now see detailed request/response logs in the console (prefixed with `API:`), which helped diagnose the "Tunnel Unavailable" issue in this session.
+
+### 3. Modernized State Management
+- Refactored [RegisterScreen](file:///c:/projects/github/EvAnotes/mobile/lib/features/auth/register_screen.dart#6-12) and [UserNameScreen](file:///c:/projects/github/EvAnotes/mobile/lib/features/onboarding/user_name_screen.dart#8-14) to use Riverpod's `ConsumerStatefulWidget`.
+- Eliminated redundant `Dio` instances in favor of the centralized `apiClientProvider`.
+- Cleaned up unused imports and retired the deprecated `dioProvider` alias.
+
+## Verification Scenarios Tested
+
+### ✅ 503 Tunnel Failure
+- **Behavior**: When the tunnel returns a 503, the app now shows: *"Server unavailable. Tunnel may have expired."*
+- **Proof**: Confirmed via the console logs provided in the latest screenshot.
+
+### ✅ Registration UI
+- **Behavior**: The registration screen now correctly displays specific error messages (e.g., "Resource already exists") instead of generic failures.
+
+### ✅ Build Stability
+- **Behavior**: All files have been verified to compile after the provider refactoring.
+
+## Next Steps for the User
+1. **Update Firebase Keys**: Replace the placeholders in [lib/firebase_options.dart](file:///c:/projects/github/EvAnotes/mobile/lib/firebase_options.dart) with your actual project keys from the Firebase Console.
+2. **Restart Tunnel**: Launch a new `localtunnel` and update the `_baseUrl` in [lib/config/api_client.dart](file:///c:/projects/github/EvAnotes/mobile/lib/config/api_client.dart) if the URL has changed.

@@ -1,0 +1,52 @@
+# App Enhancements: Localization, Theme, and Performance
+
+The goal is to address UI/UX issues, add localization (EN/TR), fix Turkish character rendering, and improve overall app performance and error handling.
+
+## User Review Required
+
+> [!IMPORTANT]
+> - I will be adding a simple localization system. If you prefer a specific package like `easy_localization`, please let me know. For now, I'll use a provider-based approach to keep it lightweight.
+> - The 401 error you are seeing is because the `SK-YOUR-KEY` placeholder is still in `app_provider.dart`. You will need to provide a real OpenAI API key for AI features to work.
+
+## Proposed Changes
+
+### [Core] Localization System
+
+#### [NEW] [app_strings.dart](file:///)
+- Define a class to manage language strings for both Turkish and English.
+
+### [Config] Theme and Typography
+
+#### [MODIFY] [theme.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/config/theme.dart)
+- Update `Poppins` configuration to ensure full support for Turkish characters.
+- Add subtle micro-animations using `flutter_animate` (already in pubspec).
+
+### [Provider] State Management
+
+#### [MODIFY] [app_provider.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/providers/app_provider.dart)
+- Add `languageCode` state (defaulting to 'tr').
+- Add `toggleLanguage()` method.
+- Improve API error parsing to show more user-friendly messages for common issues like 401.
+
+### [UI] Screen Updates
+
+#### [MODIFY] [profile_screen.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/screens/profile/profile_screen.dart)
+- Add a new action tile for "Language / Dil" selection.
+- Update labels to use the new localization system.
+
+#### [MODIFY] [home_screen.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/screens/home/home_screen.dart) or other screens
+- Ensure labels are localized.
+
+## Open Questions
+
+- Do you have a preferred OpenAI model (e.g., `gpt-3.5-turbo` or `gpt-4o-mini`) you'd like me to set as the default? Currently, it's using the second item in an array.
+
+## Verification Plan
+
+### Automated Verification
+- Run `flutter analyze` to ensure no linting errors.
+
+### Manual Verification
+- Test language switching (EN <-> TR) in the Profile screen.
+- Test theme switching (Dark <-> Light) in the Profile screen.
+- Verify Turkish characters (`ğ, ü, ş, i, ö, ç`) render correctly across the app.

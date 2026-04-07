@@ -1,0 +1,12 @@
+# Task: Fix Azure DevOps Pipeline Deployment
+
+- [ ] Analyze pipeline configuration and identify errors
+    - [x] Review [azure-pipelines-1.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-1.yml)
+    - [x] Review [azure-pipelines.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines.yml)
+    - [x] Check [package.json](file:///c:/projects/Layers/LayersupCom_v2/package.json) and app structure
+- [ ] Create implementation plan to fix deployment issues [/]
+- [ ] Update pipeline configuration
+    - [ ] Correct `azureSubscription` if necessary
+    - [ ] Update `runtimeStack` to canonical format
+    - [ ] Verify `package` path and structure
+- [ ] Provide walkthrough and verify with user

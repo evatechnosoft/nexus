@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary": "ADD: Dark Mode and English Language Support.\n- Dark Mode: Toggle button in Navbar, dark-themed CSS variables, and Tailwind `dark` mode integration.\n- EN Language: Simple JS-based translation system with TR/EN toggle.\n- Preservation of 3D aesthetics in both modes.",
+  "updatedAt": "2026-03-28T09:09:02.762759300Z"
+}

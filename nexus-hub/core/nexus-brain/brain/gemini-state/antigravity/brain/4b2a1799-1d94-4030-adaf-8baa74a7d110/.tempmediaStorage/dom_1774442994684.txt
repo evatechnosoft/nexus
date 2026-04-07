@@ -1,0 +1,73 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (51,37)<a class='navbar-brand fw-bold' href='/'>IT Envanter />
+	[1] (14,37)<i  />
+[2] (631,37)<a class='nav-link' href='/'>Dashboard />
+	[3] (604,37)<i  />
+[4] (696,37)<a class='nav-link' href='/requests/'>Talepler />
+	[5] (677,37)<i  />
+[6] (756,37)<a class='nav-link' href='/inventory/'>Envanter />
+	[7] (735,37)<i  />
+[8] (820,37)<a class='nav-link' href='/assignments/'>Atamalar />
+	[9] (798,37)<i  />
+[10] (895,37)<a class='nav-link' href='/departments/'>Departmanlar />
+	[11] (862,37)<i  />
+[12] (965,37)<a class='nav-link dropdown-toggle' href='#'>Excel />
+	[13] (948,37)<i  />
+Dashboard
+10
+Toplam Cihaz
+5
+Depoda
+4
+Dağıtıldı
+0
+Bekleyen Talep
+0
+Gönderildi
+2
+Toplam Atama
+[14] (63,429)<a class='btn btn-primary' href='/requests/'>Yeni Talep />
+	[15] (39,429)<i  />
+[16] (143,429)<a class='btn btn-outline-secondary' href='/inventory/'>Cihaz Ekle />
+	[17] (119,429)<i  />
+[18] (229,429)<a class='btn btn-outline-success' href='/excel/export'>Excel'e Aktar />
+	[19] (199,429)<i  />
+Son Talepler
+#
+Talep Eden
+Departman
+Cihaz
+Durum
+Tarih
+3
+Ali Veli
+support@findtalent.net
+Yazılımcı
+Laptop
+Onay Bekliyor
+25.03.2026
+[20] (926,646)<a class='btn btn-sm btn-outline-primary' href='/requests/3/detail' />
+	[21] (926,645)<i  />
+2
+Zeynep Kaya
+zeynep.kaya@company.com
+Yazılımcı
+Laptop
+Onaylandı
+24.03.2026
+[22] (926,731)<a class='btn btn-sm btn-outline-primary' href='/requests/2/detail' />
+	[23] (926,731)<i  />
+1
+Ahmet Yılmaz
+ahmet.yilmaz@company.com
+Yazılımcı
+Laptop
+Onaylandı
+24.03.2026
+[24] (926,817)<a class='btn btn-sm btn-outline-primary' href='/requests/1/detail' />
+	[25] (926,816)<i  />
+
+</current_dom>

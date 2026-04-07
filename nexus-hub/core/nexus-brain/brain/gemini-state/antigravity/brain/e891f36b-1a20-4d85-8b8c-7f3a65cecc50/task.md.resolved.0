@@ -1,0 +1,10 @@
+# Task: Generate Logo for Evaitec
+
+- [ ] Analyze documentation and assets [/]
+    - [x] Read [PROJECT_HANDOFF.md](file:///c:/projects/evaitec/PROJECT_HANDOFF.md)
+    - [ ] Find and read other [.md](file:///c:/projects/evaitec/PROJECT_HANDOFF.md) files
+    - [x] Analyze [assets/logos/last.png](file:///c:/projects/evaitec/assets/logos/last.png)
+- [ ] Research design trends for AI/Tech (glassmorphism, kinetic typography) [ ]
+- [ ] Create implementation plan for logo generation [ ]
+- [ ] Generate logo variations using `generate_image` [ ]
+- [ ] Refine and present to user [ ]

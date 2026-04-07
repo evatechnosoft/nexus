@@ -1,0 +1,144 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Control your privacy preferences
+This website utilizes technologies such as cookies to enable essential site functionality, as well as for performance cookies, personalization, and targeted advertising. To learn more, view the following link:
+[0] (146,952)<a class=' osano-cm-storage-policy osano-cm-content__link osano-cm-link ' href='https://support.scribd.com/hc/articles/210129366-Privacy-policy'>Privacy Policy />
+[1] (28,74)<a class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge IconButtonBase-module_wrapper_6zbMGy SoftButton-module_wrapper_G6z4vn SoftButton-module_default_EF-egQ ScribdTopBar-module_hamburger__C9NjV IconButtonBase-module_large_hJBmho' href='#sidebar' />
+	Open navigation menu
+[2] (83,74)<a class='ScribdTopBar-module_logo__AsKt6' href='/' />
+	[3] (83,74)<img  />
+[4] (285,74)<label >Search />
+	Search
+	[5] (285,74)<input class='SearchForm-module_searchInput__l73oF SearchForm-module_searchInputScribd__Up4Ft' id='header_search_input' placeholder='Search' role='combobox' />
+[6] (417,74)<button class='TextButton-module_wrapper__ZwW-w TextButton-module_default__ekglb SearchForm-module_searchButton__4f-rn no_spinner' />
+	[7] (413,74)<span  />
+		[8] (413,74)<span >Search />
+			[9] (413,74)<span  />
+			Search
+[10] (669,74)<button class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge SoftButton-module_wrapper_G6z4vn DropdownTrigger-module_wrapper_-Xf-At LanguageDropdown-module_menuHandle__PCSMM SoftButton-module_default_EF-egQ ButtonShared-module_small_h7nQ0w SoftButton-module_withIcon_OBSH-T' id='ldhandle' />
+	en
+	Change Language
+[11] (732,74)<a class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge SoftButton-module_wrapper_G6z4vn SoftButton-module_default_EF-egQ ButtonShared-module_small_h7nQ0w SoftButton-module_withIcon_OBSH-T' href='/upload-document' />
+	Upload
+[12] (798,74)<button class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge SoftButton-module_wrapper_G6z4vn DropdownTrigger-module_wrapper_-Xf-At SoftButton-module_default_EF-egQ ButtonShared-module_small_h7nQ0w SoftButton-module_withIcon_OBSH-T' id='udhandle' />
+	Sign in
+[13] (913,74)<button class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge AccentButton-module_wrapper_W6vQ8z ScribdTopBar-module_cta__AnzYq SubscribeCTAButton-module_wrapper__lDIgE SubscribeCTAButton-module_en-US__W29KM AccentButton-module_default_4Uc-A6 ButtonShared-module_large_DzeAnG' />
+	Download free for 30 days
+100%
+(1)
+100% found this document useful (1 vote)
+[14] (93,153)<span >3K views />
+[15] (144,153)<span >52 pages />
+English Code 1 Phonics Book
+[16] (67,331)<button class='ButtonCore-module_wrapper_MkTb9s TextButton-module_wrapper_ZwW-wM TextButton-module_default_ekglbr _232Cqn' />
+	[17] (67,331)<span  />
+		[18] (67,331)<span >Document Information />
+Uploaded by
+[19] (89,381)<a class='_3f7hkq' href='https://www.scribd.com/user/476820158/Uyen-Chau'>Uyen Chau />
+[20] (36,481)<button aria-label='Download' class='ButtonCore-module_wrapper_MkTb9s' />
+	[21] (36,481)<span  />
+		[22] (36,481)<span  />
+			[23] (36,481)<div  />
+				[24] (36,463)<span  />
+				[25] (36,502)<span >Download />
+[26] (82,481)<button class='ButtonCore-module_wrapper_MkTb9s' />
+	[27] (82,481)<span  />
+		[28] (82,481)<span  />
+			[29] (82,481)<div >Save English Code 1 Phonics Book For Later />
+				[30] (82,463)<span  />
+				[31] (82,502)<span >Save />
+				Save English Code 1 Phonics Book For Later
+[32] (128,481)<button class='ButtonCore-module_wrapper_MkTb9s' />
+	[33] (128,481)<span  />
+		[34] (128,481)<span  />
+			[35] (128,481)<div  />
+				[36] (128,463)<span  />
+				[37] (128,502)<span >Share />
+[38] (174,481)<button class='ButtonCore-module_wrapper_MkTb9s' />
+	[39] (174,481)<span  />
+		[40] (174,481)<span  />
+			[41] (174,481)<div >100% found this document useful, undefined />
+				[42] (174,463)<span  />
+				[43] (174,502)<span >100% />
+				100% found this document useful, undefined
+[44] (36,576)<button class='ButtonCore-module_wrapper_MkTb9s' />
+	[45] (36,576)<span  />
+		[46] (36,576)<span  />
+			[47] (36,576)<div >, undefined />
+				[48] (36,559)<span  />
+				[49] (36,597)<span >0% />
+				, undefined
+[50] (82,576)<button class='ButtonCore-module_wrapper_MkTb9s' />
+	[51] (82,576)<span  />
+		[52] (82,576)<span  />
+			[53] (82,576)<div  />
+				[54] (82,559)<span  />
+				[55] (82,597)<span >Print />
+[56] (128,576)<button class='ButtonCore-module_wrapper_MkTb9s' />
+	[57] (128,576)<span  />
+		[58] (128,576)<span  />
+			[59] (128,576)<div  />
+				[60] (128,559)<span  />
+				[61] (128,597)<span >Embed />
+[62] (174,576)<button aria-label='Ask AI' class='ButtonCore-module_wrapper_MkTb9s' />
+	[63] (174,576)<span  />
+		[64] (174,576)<span  />
+			[65] (174,576)<div  />
+				[66] (174,559)<span  />
+				[67] (174,597)<span >Ask AI />
+[68] (36,672)<button class='ButtonCore-module_wrapper_MkTb9s' />
+	[69] (36,672)<span  />
+		[70] (36,672)<span  />
+			[71] (36,672)<div  />
+				[72] (36,654)<span  />
+				[73] (36,693)<span >Report />
+[74] (286,166)<button class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge AccentButton-module_wrapper_W6vQ8z _3WitSH DropdownTrigger-module_wrapper_-Xf-At AccentButton-module_default_4Uc-A6 ButtonShared-module_large_DzeAnG' id='radix-5' />
+	Download
+[75] (353,166)<button class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge IconButtonBase-module_wrapper_6zbMGy SoftButton-module_wrapper_G6z4vn SoftButton-module_default_EF-egQ IconButtonBase-module_large_hJBmho' />
+	Save English Code 1 Phonics Book For Later
+[76] (384,166)<button class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge IconButtonBase-module_wrapper_6zbMGy SoftButton-module_wrapper_G6z4vn SoftButton-module_default_EF-egQ IconButtonBase-module_large_hJBmho' />
+[77] (414,166)<button class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge IconButtonBase-module_wrapper_6zbMGy SoftButton-module_wrapper_G6z4vn SoftButton-module_default_EF-egQ IconButtonBase-module_large_hJBmho' />
+[78] (674,166)<input aria-label='Find in document' class='TextFields-common-module_textfield__UmkWO TextEntry-module_textEntry__evM8l' id='document_search' placeholder='Find' />
+[79] (706,166)<button class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge IconButtonBase-module_wrapper_6zbMGy _2g9yci IconButtonBase-module_large_hJBmho' />
+	Search
+[80] (741,166)<button class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge IconButtonBase-module_wrapper_6zbMGy SoftButton-module_wrapper_G6z4vn SoftButton-module_default_EF-egQ IconButtonBase-module_large_hJBmho' />
+	Zoom out
+[81] (766,166)<button class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge IconButtonBase-module_wrapper_6zbMGy SoftButton-module_wrapper_G6z4vn SoftButton-module_default_EF-egQ IconButtonBase-module_large_hJBmho' />
+	Zoom in
+[82] (797,166)<button class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge IconButtonBase-module_wrapper_6zbMGy SoftButton-module_wrapper_G6z4vn SoftButton-module_default_EF-egQ IconButtonBase-module_large_hJBmho' />
+	Fullscreen
+[83] (249,257)<button class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge IconButtonBase-module_wrapper_6zbMGy RGekOz IconButtonBase-module_large_hJBmho' />
+[84] (249,315)<button class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge IconButtonBase-module_wrapper_6zbMGy RGekOz IconButtonBase-module_large_hJBmho' />
+[85] (249,402)<button class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge IconButtonBase-module_wrapper_6zbMGy RGekOz r94DpT IconButtonBase-module_large_hJBmho' />
+[86] (249,456)<input aria-label='Jump to Page' class='_1KN1Bc _22RkIJ' />
+You are on page 1
+52
+[87] (249,549)<button class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge IconButtonBase-module_wrapper_6zbMGy RGekOz IconButtonBase-module_large_hJBmho' />
+You might also like
+[88] (910,251)<a class='jKsa3q' href='https://www.scribd.com/document/766094006/Jolly-Phonics-Pupil-Book-1'>Jolly Phonics Pupil Book 1 />
+	Jolly Phonics Pupil Book 1
+89% (18)
+Jolly Phonics Pupil Book 1
+49 pages
+[89] (910,429)<a class='jKsa3q' href='https://www.scribd.com/document/713564455/Kid-s-Box-New-Generation-1-Pupil-s-Book-3'>Kid's Box New Generation 1 Pupil's Book />
+	Kid's Box New Generation 1 Pupil's Book
+83% (12)
+Kid's Box New Generation 1 Pupil's Book
+104 pages
+[90] (910,608)<a class='jKsa3q' href='https://www.scribd.com/document/562055827/Power-Up-3-Pupil-Book'>Power Up 3 Pupil Book />
+	Power Up 3 Pupil Book
+64% (22)
+Power Up 3 Pupil Book
+68 pages
+Smart English Grammar Worksheets
+100% (10)
+Smart English Grammar Worksheets
+44 pages
+My First Grammar 1 Student Book PDF
+92% (13)
+My First Grammar 1 Student Book PDF
+ad
+
+</current_dom>

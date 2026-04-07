@@ -1,0 +1,24 @@
+# Refining Interactive Vocabulary UI & Data
+
+Address user feedback regarding card visibility and spelling visualization.
+
+## Proposed Changes
+
+### Curriculum Data
+#### [MODIFY] [curriculum.json](file:///c:/Users/Deacjx/Documents/English code/_learning-plan/curriculum.json)
+- Populate `tr`, `ph`, and `sy` for all words in Week 1 and Week 2.
+
+### Frontend
+#### [MODIFY] [week.html](file:///c:/Users/Deacjx/Documents/English code/_learning-plan/web/week.html)
+- **Always Visible Details**: Remove the toggle logic; make `Okunuş` and `Heceleme` always visible on the card.
+- **Spelling Visualizer**: Implement a visual indicator (on-card or overlay) that shows which letter is currently being spoken during the long-press "Encoding" mode.
+- **UI Layout**: Adjust card height and grid to accommodate always-visible text.
+
+## Verification Plan
+
+### Automated Tests
+- Browser subagent to verify that cards are expanded on load.
+- Browser subagent to simulate long-press and check for the "Letter Visualizer".
+
+### Manual Verification
+- User to test the spelling mode and confirm letters are displayed as they are spoken.

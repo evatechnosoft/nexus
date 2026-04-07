@@ -1,0 +1,10 @@
+# Task: Verify Evaitec Infrastructure Dashboard
+
+## Plan
+- [ ] Navigate to http://192.168.1.186:8088/
+- [ ] Check if the "Evaitec Infrastructure Dashboard" is visible.
+- [ ] Verify that service statuses (it-inventory, evaiteclabs, nextcloud, homeassistant, uptime-kuma) are displayed.
+- [ ] Capture a screenshot for confirmation.
+
+## Findings
+- (Waiting for results...)

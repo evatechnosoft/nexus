@@ -1,0 +1,39 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Bu soru Microsoft Destek Topluluğu’ndan aktarıldı. Yararlı olup olmadığını belirtmek için oy verebilirsiniz ancak yorum veya yanıt ekleyemez ya da soruyu takip edemezsiniz.
+[0] (235,76)<span >0 yorum
+Açıklama yok />
+	0 yorum
+	Açıklama yok
+[1] (318,76)<button class='button button-clear text-decoration-none inner-focus button-sm button-primary qna-report-post-button  ' title='Endişenizi bildirin' />
+	[2] (281,76)<span  />
+		[3] (281,76)<span  />
+	[4] (324,76)<span >Endişenizi bildirin />
+[5] (713,76)<button class='not-authenticated link-button font-size-sm sign-in-modal' title='Aynı veya benzer bir sorunuz var'>Ben de aynı soruyu soruyorum />
+5
+{count} oy
+Soru yazarı tarafından kabul edilen yanıt
+Anonim
+9 Ağu 2024 09:58
+Bu yanıt otomatik olarak çevrildi. Bu nedenle dil bilgisi hataları veya tuhaf ifade biçimi görülebilir.
+Merhaba, Mesut Perk
+Cevabınız için teşekkür ederim ve sorununuzun çözüldüğünü bilmekten memnunum!
+Office'i ne zaman güncelleştirebileceğinizle ilgili olarak, Microsoft 365'in sonraki sürümlerini takip etmenizi öneririz. Senin gibi ben de yeni sürüme göz kulak oluyorum. Ancak bunun hangi versiyonda artık olmayacağına dair net bir bilgi yok.
+Geri bildiriminiz için teşekkür ederiz, destek deneyimini iyileştirmemize ve benzer endişeleri olan diğer kişilere yardımcı olmamıza yardımcı olmak için lütfen Evet veya Hayır'a tıklayın.
+Daha fazla yardıma ihtiyacınız olursa lütfen benimle iletişime geçin.
+Saygılarımızla,
+Mila.L-MSFT| Microsoft Topluluk Destek Uzmanı
+[6] (334,836)<a class='not-authenticated link-button font-size-sm margin-right-sm docs-sign-in' href='#'>Bu yanıtı derecelendirmek için lütfen oturum açın. />
+1 kişi bu yanıtı yararlı buldu.
+[7] (251,917)<span >0 yorum
+Açıklama yok />
+	0 yorum
+	Açıklama yok
+[8] (335,917)<button class='button button-clear text-decoration-none inner-focus button-sm button-primary qna-report-post-button  ' title='Endişenizi bildirin' />
+	[9] (297,917)<span  />
+		[10] (297,917)<span  />
+	[11] (340,917)<span >Endişenizi bildirin />
+
+</current_dom>

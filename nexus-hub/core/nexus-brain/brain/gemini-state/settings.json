@@ -1,0 +1,23 @@
+{
+  "general": {
+    "sessionRetention": {
+      "enabled": true,
+      "maxAge": "30d",
+      "warningAcknowledged": true
+    },
+    "defaultApprovalMode": "plan",
+    "enableAutoUpdate": false,
+    "enableNotifications": true,
+    "plan": {
+      "directory": ""
+    }
+  },
+  "ide": {
+    "hasSeenNudge": true
+  },
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    }
+  }
+}

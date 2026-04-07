@@ -1,0 +1,5 @@
+- `[ ]` Backend: `routers/requests.py` içerisinde `/delete/{req_id}` endpoint'ini ekle
+- `[ ]` UI: `style.css` içerisinde tablo ve kart renklerini zorla (`!important`)
+- `[ ]` UI: `requests.html` içerisindeki tablo satırlarını (`tr`) tıklanabilir yap
+- `[ ]` UI: `requests.html` içerisine mobil cihazlar için sağ/sol kaydırma (swipe) mantığını ekle
+- `[ ]` Doğrulama: Tarayıcı üzerinden renkleri ve tıklanabilirliği test et

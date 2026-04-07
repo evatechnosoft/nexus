@@ -1,0 +1,13 @@
+# Task: Test Flutter Web Dashboard
+
+## Checklist
+- [x] Find Flutter web port (found at http://localhost:8080)
+- [ ] Connect to Dashboard (currently on connection screen, need to click 'Mock Mod')
+- [ ] Observe Dashboard, Gauges, and Background
+- [ ] Test Slider and Gauge reaction
+- [ ] Report results
+
+## Findings
+- Port: http://localhost:8080
+- Initial State: Shows "E-CAR DASHBOARD", "ESP32 aranıyor...", and a "Mock Mod (Simülasyon)" button.
+- DOM is empty (Canvas/Canvaskit renderer), will use pixel clicks.

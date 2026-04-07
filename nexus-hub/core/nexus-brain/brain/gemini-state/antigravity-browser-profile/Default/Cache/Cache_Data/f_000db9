@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Talep Detayı #34</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="/static/style.css" rel="stylesheet" />
+</head>
+<body>
+
+<!-- Dynamic Background Layer -->
+<div class="bg-glow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;overflow:hidden;pointer-events:none;"></div>
+
+<nav class="navbar navbar-expand-lg navbar-dark border-bottom">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand" href="/">
+      <i class="bi bi-cpu-fill me-2 fs-4"></i>
+      IT INVENTORY <span class="ms-2 badge bg-primary" style="font-size: 0.6rem; letter-spacing: 1px;">PRO</span>
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="bi bi-list fs-2 text-white"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item"><a class="nav-link px-3" href="/"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="/requests/"><i class="bi bi-envelope-paper me-2"></i>Talepler</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="/inventory/"><i class="bi bi-box-seam me-2"></i>Envanter</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="/assignments/"><i class="bi bi-send-check me-2"></i>Atamalar</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle px-3" href="#" data-bs-toggle="dropdown"><i class="bi bi-file-earmark-spreadsheet me-1"></i>Excel</a>
+          <ul class="dropdown-menu dropdown-menu-end card border shadow-lg mt-2">
+            <li><a class="dropdown-item py-2" href="/excel/export"><i class="bi bi-download me-2 text-primary"></i>Dışa Aktar</a></li>
+            <li><a class="dropdown-item py-2" href="/excel/import-page"><i class="bi bi-upload me-2 text-info"></i>İçe Aktar</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid py-5 px-4">
+  
+<div class="mb-3">
+  <a href="/requests/" class="btn btn-outline-secondary btn-sm"><i class="bi bi-arrow-left me-1"></i>Geri</a>
+</div>
+
+<div class="row g-4">
+  <!-- Sol: Talep Bilgileri -->
+  <div class="col-md-5">
+    <div class="card border-0 shadow-sm mb-3">
+      <div class="card-header bg-white fw-semibold">
+        <i class="bi bi-person me-2 text-muted"></i>Talep Bilgileri
+      </div>
+      <div class="card-body">
+        
+        <div class="mb-3 p-2 bg-dark text-white rounded d-flex align-items-center justify-content-between">
+          <span class="small text-white-50">Kişi Kodu</span>
+          <span class="font-monospace fw-bold fs-5">KSI-0007</span>
+        </div>
+        
+        <table class="table table-borderless mb-0 small">
+          <tr><th class="text-muted w-40">Ad Soyad</th><td>Eralp Yıldız</td></tr>
+          <tr><th class="text-muted">E-posta</th><td>eralp.yildiz@findtalent.net</td></tr>
+          <tr><th class="text-muted">Telefon</th><td>5318748359</td></tr>
+          <tr><th class="text-muted">Adres</th><td>inden ulaşabilirsiniz.</td></tr>
+          <tr><th class="text-muted">Departman</th><td><span class="badge bg-secondary">Yazılımcı</span></td></tr>
+          <tr><th class="text-muted">İhtiyaç</th><td><strong>Laptop</strong></td></tr>
+          <tr><th class="text-muted">Durum</th><td>
+            <span class="badge bg-danger">Onay Bekliyor</span>
+          </td></tr>
+          <tr><th class="text-muted">Tarih</th><td>27.03.2026 07:37</td></tr>
+        </table>
+        
+        <div class="mt-2 p-2 bg-light rounded small"><i class="bi bi-chat-left-text me-1"></i>🤖 [Otomatik·İşe Başlama] Konu: Fw: İşe Giriş hk.</div>
+        
+      </div>
+    </div>
+
+    <!-- Kişi Geçmişi -->
+    
+    <div class="card border-0 shadow-sm mb-3">
+      <div class="card-header bg-white fw-semibold">
+        <i class="bi bi-clock-history me-2 text-muted"></i>Bu Kişinin Önceki Talepleri
+      </div>
+      <div class="card-body p-0">
+        
+        <div class="d-flex justify-content-between align-items-center px-3 py-2 border-bottom">
+          <div>
+            <span class="text-muted small">#33</span>
+            <span class="ms-2 small">Laptop</span>
+            <span class="badge bg-secondary ms-1">Yazılımcı</span>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <span class="badge bg-secondary">Onay Bekliyor</span>
+            <small class="text-muted">27.03.2026</small>
+            <a href="/requests/33/detail" class="btn btn-sm btn-outline-secondary py-0">
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="d-flex justify-content-between align-items-center px-3 py-2 border-bottom">
+          <div>
+            <span class="text-muted small">#31</span>
+            <span class="ms-2 small">Masaüstü</span>
+            <span class="badge bg-secondary ms-1">Recruiter</span>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <span class="badge bg-secondary">Onay Bekliyor</span>
+            <small class="text-muted">26.03.2026</small>
+            <a href="/requests/31/detail" class="btn btn-sm btn-outline-secondary py-0">
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="d-flex justify-content-between align-items-center px-3 py-2 border-bottom">
+          <div>
+            <span class="text-muted small">#30</span>
+            <span class="ms-2 small">Masaüstü</span>
+            <span class="badge bg-secondary ms-1">Recruiter</span>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <span class="badge bg-secondary">Onay Bekliyor</span>
+            <small class="text-muted">26.03.2026</small>
+            <a href="/requests/30/detail" class="btn btn-sm btn-outline-secondary py-0">
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+
+    <!-- Config Profile -->
+    <div class="card border-0 shadow-sm">
+      <div class="card-header bg-white fw-semibold">
+        <i class="bi bi-gear me-2 text-muted"></i>Yazılımcı — Config Profili
+      </div>
+      <div class="card-body p-0">
+        
+        
+        
+        <div class="px-3 pt-2 pb-1">
+          <div class="text-muted small fw-semibold text-uppercase mb-1">Yazılım</div>
+          
+          <div class="d-flex align-items-start mb-1">
+            <i class="bi bi-check2-circle text-success me-2 mt-1"></i>
+            <div>
+              <div class="fw-semibold small">VS Code</div>
+              <div class="text-muted" style="font-size:0.8rem">Son sürüm, eklentilerle</div>
+            </div>
+          </div>
+          
+          <div class="d-flex align-items-start mb-1">
+            <i class="bi bi-check2-circle text-success me-2 mt-1"></i>
+            <div>
+              <div class="fw-semibold small">Git</div>
+              <div class="text-muted" style="font-size:0.8rem">Git + GitHub Desktop</div>
+            </div>
+          </div>
+          
+          <div class="d-flex align-items-start mb-1">
+            <i class="bi bi-check2-circle text-success me-2 mt-1"></i>
+            <div>
+              <div class="fw-semibold small">Docker Desktop</div>
+              <div class="text-muted" style="font-size:0.8rem">Konteyner ortamı</div>
+            </div>
+          </div>
+          
+          <div class="d-flex align-items-start mb-1">
+            <i class="bi bi-check2-circle text-success me-2 mt-1"></i>
+            <div>
+              <div class="fw-semibold small">Windows Subsystem for Linux (WSL2)</div>
+              <div class="text-muted" style="font-size:0.8rem">Ubuntu 22.04</div>
+            </div>
+          </div>
+          
+          <div class="d-flex align-items-start mb-1">
+            <i class="bi bi-check2-circle text-success me-2 mt-1"></i>
+            <div>
+              <div class="fw-semibold small">Python 3.11+</div>
+              <div class="text-muted" style="font-size:0.8rem">pip &amp; virtualenv</div>
+            </div>
+          </div>
+          
+          <div class="d-flex align-items-start mb-1">
+            <i class="bi bi-check2-circle text-success me-2 mt-1"></i>
+            <div>
+              <div class="fw-semibold small">Node.js LTS</div>
+              <div class="text-muted" style="font-size:0.8rem">npm dahil</div>
+            </div>
+          </div>
+          
+        </div>
+        
+        <div class="px-3 pt-2 pb-1">
+          <div class="text-muted small fw-semibold text-uppercase mb-1">Ağ</div>
+          
+          <div class="d-flex align-items-start mb-1">
+            <i class="bi bi-check2-circle text-success me-2 mt-1"></i>
+            <div>
+              <div class="fw-semibold small">VPN İstemcisi</div>
+              <div class="text-muted" style="font-size:0.8rem">Şirket VPN bağlantısı</div>
+            </div>
+          </div>
+          
+        </div>
+        
+        <div class="px-3 pt-2 pb-1">
+          <div class="text-muted small fw-semibold text-uppercase mb-1">Donanım</div>
+          
+          <div class="d-flex align-items-start mb-1">
+            <i class="bi bi-check2-circle text-success me-2 mt-1"></i>
+            <div>
+              <div class="fw-semibold small">Min. 16 GB RAM Laptop</div>
+              <div class="text-muted" style="font-size:0.8rem">i7/Ryzen 7 ve üzeri</div>
+            </div>
+          </div>
+          
+          <div class="d-flex align-items-start mb-1">
+            <i class="bi bi-check2-circle text-success me-2 mt-1"></i>
+            <div>
+              <div class="fw-semibold small">Harici Monitör Kablosu</div>
+              <div class="text-muted" style="font-size:0.8rem">USB-C / HDMI</div>
+            </div>
+          </div>
+          
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Sağ: Cihaz Atama -->
+  <div class="col-md-7">
+    
+    <!-- Atama Formu -->
+    <div class="card border-0 shadow-sm">
+      <div class="card-header bg-white fw-semibold">
+        <i class="bi bi-box-seam me-2 text-primary"></i>Cihaz Ata ve Gönderiye Hazırla
+      </div>
+      <div class="card-body">
+        <form method="post" action="/assignments/create">
+          <input type="hidden" name="request_id" value="34" />
+
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Depodaki Uygun Cihazlar (Laptop)</label>
+            
+            <div class="form-check border rounded p-3 mb-2">
+              <input class="form-check-input" type="radio" name="device_id"
+                value="8" id="device_8"
+                checked required />
+              <label class="form-check-label w-100" for="device_8">
+                <div class="fw-semibold">HP Pavilion 15-eh3000</div>
+                <div class="text-muted small"><code>HPPAV15EH001</code></div>
+              </label>
+            </div>
+            
+            <div class="form-check border rounded p-3 mb-2">
+              <input class="form-check-input" type="radio" name="device_id"
+                value="9" id="device_9"
+                 required />
+              <label class="form-check-label w-100" for="device_9">
+                <div class="fw-semibold">ASUS VivoBook 16</div>
+                <div class="text-muted small"><code>ASUSVB16001</code></div>
+              </label>
+            </div>
+            
+          </div>
+
+          <!-- Config Checklist -->
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Yapılacak Konfigürasyonlar</label>
+            <div class="border rounded p-3 bg-light" id="configList">
+              
+              <div class="form-check mb-1">
+                <input class="form-check-input config-check" type="checkbox"
+                  value="1" id="cfg_1" />
+                <label class="form-check-label small" for="cfg_1">
+                  <span class="badge bg-light text-dark border me-1">Yazılım</span>
+                  VS Code
+                </label>
+              </div>
+              
+              <div class="form-check mb-1">
+                <input class="form-check-input config-check" type="checkbox"
+                  value="2" id="cfg_2" />
+                <label class="form-check-label small" for="cfg_2">
+                  <span class="badge bg-light text-dark border me-1">Yazılım</span>
+                  Git
+                </label>
+              </div>
+              
+              <div class="form-check mb-1">
+                <input class="form-check-input config-check" type="checkbox"
+                  value="3" id="cfg_3" />
+                <label class="form-check-label small" for="cfg_3">
+                  <span class="badge bg-light text-dark border me-1">Yazılım</span>
+                  Docker Desktop
+                </label>
+              </div>
+              
+              <div class="form-check mb-1">
+                <input class="form-check-input config-check" type="checkbox"
+                  value="4" id="cfg_4" />
+                <label class="form-check-label small" for="cfg_4">
+                  <span class="badge bg-light text-dark border me-1">Yazılım</span>
+                  Windows Subsystem for Linux (WSL2)
+                </label>
+              </div>
+              
+              <div class="form-check mb-1">
+                <input class="form-check-input config-check" type="checkbox"
+                  value="5" id="cfg_5" />
+                <label class="form-check-label small" for="cfg_5">
+                  <span class="badge bg-light text-dark border me-1">Yazılım</span>
+                  Python 3.11+
+                </label>
+              </div>
+              
+              <div class="form-check mb-1">
+                <input class="form-check-input config-check" type="checkbox"
+                  value="6" id="cfg_6" />
+                <label class="form-check-label small" for="cfg_6">
+                  <span class="badge bg-light text-dark border me-1">Yazılım</span>
+                  Node.js LTS
+                </label>
+              </div>
+              
+              <div class="form-check mb-1">
+                <input class="form-check-input config-check" type="checkbox"
+                  value="7" id="cfg_7" />
+                <label class="form-check-label small" for="cfg_7">
+                  <span class="badge bg-light text-dark border me-1">Ağ</span>
+                  VPN İstemcisi
+                </label>
+              </div>
+              
+              <div class="form-check mb-1">
+                <input class="form-check-input config-check" type="checkbox"
+                  value="8" id="cfg_8" />
+                <label class="form-check-label small" for="cfg_8">
+                  <span class="badge bg-light text-dark border me-1">Donanım</span>
+                  Min. 16 GB RAM Laptop
+                </label>
+              </div>
+              
+              <div class="form-check mb-1">
+                <input class="form-check-input config-check" type="checkbox"
+                  value="9" id="cfg_9" />
+                <label class="form-check-label small" for="cfg_9">
+                  <span class="badge bg-light text-dark border me-1">Donanım</span>
+                  Harici Monitör Kablosu
+                </label>
+              </div>
+              
+            </div>
+            <input type="hidden" name="checklist" id="checklistInput" value="[]" />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Notlar</label>
+            <textarea name="notes" class="form-control" rows="2"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-success w-100">
+            <i class="bi bi-check-circle me-1"></i>Cihazı Ata ve Sevkiyat Hazırla
+          </button>
+        </form>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+// Checklist'i JSON'a çevir
+document.querySelector('form')?.addEventListener('submit', function() {
+  const checked = [...document.querySelectorAll('.config-check:checked')].map(c => parseInt(c.value));
+  document.getElementById('checklistInput').value = JSON.stringify(checked);
+});
+</script>
+
+</body>
+</html>

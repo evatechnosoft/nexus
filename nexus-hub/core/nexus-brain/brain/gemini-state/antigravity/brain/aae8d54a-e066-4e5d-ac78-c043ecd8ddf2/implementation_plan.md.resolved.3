@@ -1,0 +1,46 @@
+# Email Watcher Fix & UI Modernization Plan
+
+The user reports that email-to-request capture has been failing since Oct 23rd. Additionally, there's a Python `NameError` in the Email Queue log and UI layout issues (excessive whitespace and bright backgrounds).
+
+## Proposed Changes
+
+### 📡 Mail Watcher (Backend Logic)
+The current watcher filters by `is_read=False` AND a `since` timestamp (usually 5-6 minutes). If the server is down or the watcher stops, it misses all mails outside that tiny window.
+
+#### [MODIFY] [email_watcher.py](file:///c:/projects/it-inventory/email_watcher.py)
+-   Remove the `datetime_received__gte=since` filter in `_check_exchange_emails` so it picks up **all** unread mails.
+-   Add more robust logging to see why it might be skipping mails.
+-   Check if `parsing_input` was a typo from a previous (now missing) version that got stuck in the DB logs.
+
+#### [MODIFY] [graph_watcher.py](file:///c:/projects/it-inventory/graph_watcher.py)
+-   Increase the `limit` for `get_messages` from 25 to 50 to handle small bursts.
+
+---
+
+### 🎨 UI/UX Refinement (Premium Dark Theme)
+The user mentioned "white structure" (beyaz yapı) being distracting and "upper spacing" (üst boşluk) being too large.
+
+#### [MODIFY] [style.css](file:///c:/projects/it-inventory/static/style.css)
+-   Change table row background from white (`rgba(255,255,255,0.02)`) to a deeper, more cohesive dark glass style.
+-   Ensure text contrast is high (Pure white for headers, light gray for body).
+-   Eliminate the "bright" appearance of table containers.
+
+#### [MODIFY] [dashboard.html](file:///c:/projects/it-inventory/templates/dashboard.html)
+-   Remove redundant top margins/paddings on the dashboard header section.
+-   Ensure the dashboard feels "tight" and professional.
+
+#### [MODIFY] [base.html](file:///c:/projects/it-inventory/templates/base.html)
+-   Further reduce global top padding to ensure the "Giriş sayfası" starts higher.
+
+---
+
+## Verification Plan
+
+### Automated Tests
+-   Run the watcher manually via a script to see if it picks up old unread emails.
+-   Check logs for connection errors.
+
+### Manual Verification
+-   Verify the UI in the browser: Check if the white background issue is resolved.
+-   Verify that the "Excel" dropdown and navbar still look premium.
+-   Confirm the top spacing on the dashboard is reduced.

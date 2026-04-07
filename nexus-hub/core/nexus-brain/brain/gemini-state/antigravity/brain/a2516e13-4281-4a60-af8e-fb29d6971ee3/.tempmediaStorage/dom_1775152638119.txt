@@ -1,0 +1,34 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (403,311)<a href='/'>« Back to My Home Assistant />
+Create a link
+[1] (500,409)<md-filled-field aria-label='Redirect to' class='field' id='field' role='combobox'>Devices />
+	Redirect to*
+	Devices
+Your URL
+A URL to share with others, for example, when chatting on
+                our
+[2] (599,499)<a href='https://www.home-assistant.io/join-chat'>Discord />
+chat server.
+[3] (500,559)<input  />
+[4] (376,598)<md-outlined-button >Copy URL />
+	[5] (376,598)<button class='button' id='button' />
+		[6] (376,598)<span  />
+Markdown
+A beautiful linked badge in Markdown, for example, when
+                posting on our
+[7] (383,703)<a href='https://community.home-assistant.io'>Community Forum />
+.
+[8] (393,757)<a href='https://my.home-assistant.io/redirect/devices/' />
+	[9] (393,744)<img  />
+[10] (500,802)<textarea  />
+[11] (387,854)<md-outlined-button >Copy Markdown />
+	[12] (387,854)<button class='button' id='button' />
+		[13] (387,854)<span  />
+HTML
+A beautiful badge in HTML format, which can be used on,
+                for example, your website or blog.
+
+</current_dom>

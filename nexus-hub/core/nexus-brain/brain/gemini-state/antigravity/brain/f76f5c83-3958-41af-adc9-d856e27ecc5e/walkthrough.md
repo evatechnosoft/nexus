@@ -1,0 +1,38 @@
+# Walkthrough - Fixed Invalid Constant Value Error
+
+I have fixed the "Invalid constant value" error in `app_theme.dart`. This error was caused by the use of `const` constructors for theme data that referenced dynamic values from `GoogleFonts`.
+
+## Changes Made
+
+### Theme Configuration
+Modified [app_theme.dart](file:///c:/projects/Antigravity/shmarthouse/shmarthouse_app/lib/core/theme/app_theme.dart) to remove `const` from several theme components:
+
+- **TextTheme**: Removed `const` because it uses `AppTextStyles` (which uses `GoogleFonts` getters).
+- **AppBarTheme**: Removed `const` because it uses `AppTextStyles.title`.
+- **NavigationRailThemeData**: Removed `const` because it uses custom `TextStyle` definitions which are not compile-time constants.
+
+## Verification Results
+
+### Initial Web App Launch
+Initially, the application launched but showed a `NetworkException` because the backend was down.
+
+![Shmarthouse Load Screen](/shmarthouse_load_error_1773567216492.png)
+
+### Final Dashboard with Mock Data
+After implementing the `EnergyMockDatasource` and restarting the application, the dashboard now correctly displays the energy statistics.
+
+![Verified Dashboard](/dashboard_mock_data_verified_1773568340982.png)
+
+### Observations
+- **Mock Data Verification**: The dashboard successfully renders values like **450.5 W** for average power, confirming that the mock layer is working.
+- **Theme Verification**: The screenshot confirms that the dark mode and cyan accent colors are applied correctly across the dashboard components.
+- **GitHub Sync**: The project has been pushed to the remote repository: [https://github.com/evatechnosoft/shmarthouse](https://github.com/evatechnosoft/shmarthouse).
+
+### Technical Verification
+- Verified that `AppTextStyles` uses `GoogleFonts.outfit` and `GoogleFonts.jetBrainsMono`, which are methods that return a `TextStyle` at runtime and cannot be used in a `const` constructor.
+- Removed the `const` keyword from the following locations in `app_theme.dart`:
+    - `textTheme: const TextTheme(...)` -> `textTheme: TextTheme(...)`
+    - `appBarTheme: const AppBarTheme(...)` -> `appBarTheme: AppBarTheme(...)`
+    - `navigationRailTheme: const NavigationRailThemeData(...)` -> `navigationRailTheme: NavigationRailThemeData(...)`
+
+The app is now building and running correctly without static analysis errors.

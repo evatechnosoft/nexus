@@ -1,0 +1,24 @@
+# Task: Hybrid Home Server Setup (CasaOS + Community Stores)
+
+## Research and Planning
+- [x] Research ZimaOS/Umbrel generic Linux compatibility (2024 restrictions identified)
+- [x] Formulate Hybrid Strategy: Stable CasaOS + BigBear Store
+- [x] Identify definitive community app store URLs
+
+## Implementation
+- [x] Perform Total Reset (Unregister old distros)
+- [x] Fresh Install Ubuntu 22.04 as host
+- [x] Install Stable CasaOS v0.4.15 (100% WSL2 compatibility)
+- [x] Register BigBear App Store (extensive 200+ app library)
+- [x] Register ZimaOS Community App Store (Zima-specific apps)
+
+## Verification
+- [x] Confirm conflict-free registration of all sources
+- [x] Fix WSL 2 Docker Socket permissions and default user (root)
+- [x] Resolve WSL 2 DNS resolution issue (Manually set nameserver 1.1.1.1)
+- [x] Fix Docker Credential Helper error ('Ultimate Fix' on Windows host)
+- [x] Build and Run Flask Docker container on port 5001 (Bypassed DNS issue)
+- [x] Add custom app to CasaOS dashboard using port 5001 (Verification successful)
+- [x] Troubleshoot PostgreSQL (Verified service status and credentials)
+- [x] Connect Adminer to PostgreSQL (Network bridge fixed)
+- [ ] Install pgAdmin 4 for PostgreSQL management [ ]

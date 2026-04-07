@@ -1,0 +1,47 @@
+# Live Dashboard & Customizable Interface
+
+Transform the SportApp dashboard into a high-fidelity, interactive, and personalized experience. This upgrade introduces a "Live" aesthetic and allows users to rearrange their primary tracking cards via drag-and-drop.
+
+## User Review Required
+
+> [!IMPORTANT]
+> **Layout Logic**: Moving from a fixed 2-column grid to a flexible 'Sortable' container. This may slightly change how cards stack on tablet-sized screens before they collapse to mobile view.
+> [!TIP]
+> **Persistence**: Your custom layout will be saved automatically to your local browser storage.
+
+## Proposed Changes
+
+### 🌐 Web Frontend (Dashboard & UX)
+
+#### [MODIFY] [index.html](file:///c:/projects/SportApp/public/index.html)
+- Import `SortableJS` from CDN.
+- Wrap the main dashboard cards in a `#dashboardContainer` for drag-and-drop.
+- Add a "Düzenle" (Edit) button to the dashboard header.
+
+#### [MODIFY] [style.css](file:///c:/projects/SportApp/public/style.css)
+- **Live Background**: Add a subtle, moving radial gradient to the body.
+- **Draggable Styling**: Add ghosting effects, drag handles, and "editing mode" visual cues (shaking or dashed borders).
+- **Glassmorphism 2.0**: Enhance the `style-glass` with a primary glow and smoother borders.
+
+#### [MODIFY] [app.js](file:///c:/projects/SportApp/public/app.js)
+- **Dashboard Manager**: A new module to handle card visibility and order.
+- **Sortable Initialization**: Hook into the dashboard container.
+- **State Persistence**: Update `S.settings` to include `dashboardOrder` and `hiddenCards`.
+
+---
+
+## Open Questions
+
+- **Card Granularity**: Should we keep the "Daily Summary" as one big card or split it into smaller draggable widgets (Protein, Calories, Water, Sleep)?
+- **Mobile Interaction**: On mobile, should we disable drag-and-drop to avoid accidental scrolling issues, or keep it active?
+
+## Verification Plan
+
+### Automated Tests
+- Browser test: Verify that `localStorage` correctly stores the new order after a drag event.
+- Console check: Ensure SortableJS loads without blocking main app initialization.
+
+### Manual Verification
+- Drag several cards on a desktop resolution and refresh the page to ensure the order persists.
+- Toggle "Edit Mode" and hide a card, then reveal it again.
+- Check the "Live" background performance on a mobile device.

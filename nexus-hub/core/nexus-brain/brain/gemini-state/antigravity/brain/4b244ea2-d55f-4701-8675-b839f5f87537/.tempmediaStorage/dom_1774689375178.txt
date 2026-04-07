@@ -1,0 +1,25 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+🍕
+YemekSipariş
+[0] (438,51)<a class='hover:text-vibrant-orange transition' href='#'>Anasayfa />
+[1] (505,51)<a class='hover:text-vibrant-orange transition' href='#'>Restoranlar />
+[2] (569,51)<a class='hover:text-vibrant-orange transition' href='#'>Fırsatlar />
+[3] (881,51)<button class='text-sm font-bold text-gray-700 hover:text-vibrant-orange transition'>Kayıt Ol />
+[4] (946,51)<button class='bg-black text-white px-6 py-2.5 rounded-full font-bold hover:bg-gray-800 transition shadow-lg'>Giriş Yap />
+🚀 Hızlı ve Güvenilir Teslimat
+Favori yemeğini
+hemen keşfet.
+Türkiye'nin en seçkin restoranlarından imza lezzetler, dakikalar içinde kapında. Hazır mısın?
+[5] (245,672)<input class='flex-grow bg-transparent px-2 py-4 outline-none text-gray-700 font-medium' placeholder='Restoran veya yemek ara...' />
+[6] (408,672)<button class='vibrant-orange text-white px-10 py-4 rounded-2xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all duration-200'>Keşfet />
+★ ★ ★ ★ ★
+4.9/5
+10,000+ Mutlu Müşteri
+🔥
+Sıcak Teslimat
+15-20 dk
+
+</current_dom>

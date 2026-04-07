@@ -1,0 +1,66 @@
+# OpenCode CLI: Antigravity Ajanları ve Skill Kullanım Kılavuzu
+
+Bu kılavuz, `OpenCode.exe` kullanarak `antigravity-skills` reposundaki ajan ekiplerini ve becerileri (skill) nasıl kullanacağınızı açıklar.
+
+## 1. Ajan Ekiplerini Çağırma (@teams)
+
+Claude Code veya OpenCode CLI içindeyken, hazır agent ekiplerini doğrudan `@` sembolü ile çağırabilirsiniz.
+
+| Ajan Ekibi | Komut | Açıklama |
+|---|---|---|
+| **Mobil Uygulama Ekibi** | `@teams/mobile_app_agents.md` | Flutter geliştirme için 6 uzman ajan (PM, UX, Dev, Test vb.) |
+| **Satış Pipeline Ekibi** | `@teams/agents.md` | Satış ve araştırma odaklı 4 ajan |
+| **Ekip Oluşturucu** | `@teams/team-creator/SKILL.md` | Kendi özel ajan ekibinizi oluşturmanızı sağlar |
+
+**Örnek kullanım:**
+> "Hey @teams/mobile_app_agents.md, yeni bir To-Do listesi uygulaması planlayalım."
+
+---
+
+## 2. Skill (Beceri) Kullanımı
+
+OpenCode, becerileri yönetmek için yerleşik bir `skill` aracına sahiptir. `antigravity-skills` altındaki beceriler sisteminize zaten bağlıdır.
+
+### Becerileri Listeleme
+Mevcut tüm becerileri görmek için OpenCode'a şu komutu verin:
+```
+use skill tool to list all skills
+```
+
+### Belirli Bir Beceri Yükleme
+Örneğin, "brainstorming" becerisini yüklemek için:
+```
+use skill tool to load superpowers/brainstorming
+```
+
+*Not: `superpowers/` ön eki, `antigravity-skills` içindeki submodule'lerden gelen becerileri ifade eder.*
+
+---
+
+## 3. Yeni Ajan/Beceri Oluşturma
+
+Kendi projenize özel beceriler eklemek için projenizdeki `.opencode/skills/` dizinini kullanabilirsiniz.
+
+1. Dizini oluşturun: `mkdir -p .opencode/skills/ozel-becerim`
+2. [SKILL.md](file:///c:/projects/claude+antigravity/skills/antigravity-awesome-skills/skills/hosted-agents/SKILL.md) dosyasını oluşturun ve içine YAML frontmatter ekleyin:
+```markdown
+---
+name: ozel-becerim
+description: Bu beceri [şunları] yapar.
+---
+# Özel Becerim
+[Talimatlar buraya]
+```
+
+## 4. Önemli Eşleştirmeler (Tool Mapping)
+
+OpenCode CLI kullanırken, Antigravity becerileri bazı araçları otomatik olarak OpenCode karşılıklarına dönüştürür:
+- `TodoWrite` → `todowrite`
+- `Task` (alt ajanlar) → `@mention` sistemi
+- `Skill` aracı → Yerleşik `skill` tool
+
+---
+
+**İpucu:** CLI'ın mevcut durumunu ve hangi becerilerin yüklü olduğunu test etmek için:
+> "Hangi süper güçlere (superpowers) sahipsin?"
+diye sorabilirsiniz.

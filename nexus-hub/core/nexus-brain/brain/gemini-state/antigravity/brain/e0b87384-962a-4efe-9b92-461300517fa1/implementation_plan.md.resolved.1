@@ -1,0 +1,38 @@
+# Multi-Environment Architecture Plan
+
+We will create a structured standard for modern web development using Docker on CasaOS/WSL.
+
+## Architecture Structure
+
+We will use a single `docker-compose.yml` to spin up 3 distinct environments: Development, Testing, and Production.
+
+1. **Development (`dev`)**: 
+   - Runs on port `5002`
+   - Maps your local project folder into the container (`volumes: ./src:/app`) so that any code change immediately restarts the server without rebuilding.
+   - Recommended URL: `dev.evaitec.com.tr`
+
+2. **Testing/Staging (`test`)**:
+   - Runs on port `5001`
+   - Uses a built image (static code) to verify exact production behavior before going live.
+   - Recommended URL: `test.evaitec.com.tr`
+
+3. **Production (`prod`)**:
+   - Runs on port `5000`
+   - Fully optimized built image for the live site.
+   - Recommended URL: `evaitec.com.tr` or `www.evaitec.com.tr`
+
+## Proposed Changes
+
+### [MODIFY] [flask-app/Dockerfile](file:///c:/projects/github/casaos-home-server/flask-app/Dockerfile)
+Update the [Dockerfile](file:///c:/projects/github/casaos-home-server/flask-app/Dockerfile) to support multi-stage builds or just cleanly serve the app depending on the environment variables passed from Compose.
+
+### [NEW] `flask-app/docker-compose.yml`
+Define the three services, establishing port mappings and volume links explicitly for the `dev` environment.
+
+### [MODIFY] [flask-app/app.py](file:///c:/projects/github/casaos-home-server/flask-app/app.py)
+Adjust the script to grab `DEBUG` mode dynamically or handle environment nuances if needed.
+
+## User Action Required
+Once I build and deploy this multi-environment stack, you will only need to add two more **Public Hostnames** in your Cloudflare Zero Trust Panel:
+- `dev` -> `localhost:5002`
+- `test` -> `localhost:5001`

@@ -1,0 +1,12 @@
+# Task: Complete 2FA Implementation
+
+- [x] Fix `Future.catchError` type mismatch bug <!-- id: 5 -->
+- [x] Complete 2FA verification flow <!-- id: 0 -->
+    - [x] Update [two_fa_screen.dart](file:///c:/projects/github/EvAnotes/mobile/lib/features/auth/two_fa_screen.dart) to save auth token on success <!-- id: 1 -->
+    - [x] Update [login_screen.dart](file:///c:/projects/github/EvAnotes/mobile/lib/features/auth/login_screen.dart) to handle 2FA redirect <!-- id: 2 -->
+    - [x] Refactor [login_screen.dart](file:///c:/projects/github/EvAnotes/mobile/lib/features/auth/login_screen.dart) to use `apiClientProvider` and `ConsumerStatefulWidget` <!-- id: 3 -->
+- [x] Ensure auth persistence and consistency <!-- id: 6 -->
+    - [x] Persist auth token to `SharedPreferences` in [login_screen.dart](file:///c:/projects/github/EvAnotes/mobile/lib/features/auth/login_screen.dart) and [two_fa_screen.dart](file:///c:/projects/github/EvAnotes/mobile/lib/features/auth/two_fa_screen.dart) <!-- id: 7 -->
+    - [x] Load auth token in [splash_screen.dart](file:///c:/projects/github/EvAnotes/mobile/lib/features/splash/splash_screen.dart) and initialize `authTokenProvider` <!-- id: 8 -->
+    - [x] Refactor [user_name_screen.dart](file:///c:/projects/github/EvAnotes/mobile/lib/features/onboarding/user_name_screen.dart) to use `apiClientProvider` and `ConsumerStatefulWidget` <!-- id: 9 -->
+- [x] Verify 2FA flow <!-- id: 4 -->

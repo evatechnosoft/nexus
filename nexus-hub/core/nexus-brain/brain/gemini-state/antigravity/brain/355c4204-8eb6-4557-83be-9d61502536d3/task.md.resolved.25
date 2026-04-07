@@ -1,0 +1,17 @@
+# Task: Final Cleanup & Synchronization
+
+- [x] Research & Fix
+    - [x] Identify [package-lock.json](file:///c:/projects/Layers/LayersupCom_v2/package-lock.json) registry issue (E401)
+    - [x] Verify local fix (Bypassing lockfile)
+- [x] Implementation
+    - [x] Create [azure-pipelines-final.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-final.yml)
+    - [x] Update documentation for the final workflow
+- [x] Repository Health
+    - [x] Compare `dev` and `only-web` branches
+    - [x] Synchronize `only-web` with `dev`
+    - [x] Delete old pipelines ([azure-pipelines-1.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-1.yml), etc.)
+    - [x] Remove large ZIP files (`latest.zip`, `deployment.zip`)
+    - [x] Remove Docker files ([Dockerfile](file:///c:/projects/Layers/LayersupCom_v2/Dockerfile), [dev.dockerfile](file:///c:/projects/Layers/LayersupCom_v2/dev.dockerfile))
+- [x] Final Handover
+    - [x] Inform user about clean repository state
+    - [x] Verify final live site usage

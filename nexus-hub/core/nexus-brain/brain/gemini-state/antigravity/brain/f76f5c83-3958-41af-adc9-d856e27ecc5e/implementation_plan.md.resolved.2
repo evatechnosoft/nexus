@@ -1,0 +1,22 @@
+# Plan - Implement Mock Data for Dashboard
+
+The user wants to see the application with mock data instead of waiting for the real backend. I will implement a mock datasource and swap it in the dependency injection layer.
+
+## Proposed Changes
+
+### Dashboard Component
+
+#### [NEW] [energy_mock_datasource.dart](file:///c:/projects/Antigravity/shmarthouse/shmarthouse_app/lib/features/dashboard/data/datasources/energy_mock_datasource.dart)
+- Create a mock implementation of [EnergyRemoteDatasource](file:///c:/projects/Antigravity/shmarthouse/shmarthouse_app/lib/features/dashboard/data/datasources/energy_remote_datasource.dart#12-27).
+- Return static dummy data for energy readings, statistics, and peak usage.
+
+#### [MODIFY] [dashboard_providers.dart](file:///c:/projects/Antigravity/shmarthouse/shmarthouse_app/lib/features/dashboard/presentation/providers/dashboard_providers.dart)
+- Update `energyRemoteDatasourceProvider` to use `EnergyMockDatasource` instead of [EnergyRemoteDatasourceImpl](file:///c:/projects/Antigravity/shmarthouse/shmarthouse_app/lib/features/dashboard/data/datasources/energy_remote_datasource.dart#28-99).
+
+## Verification Plan
+
+### Automated Tests
+- Run `flutter analyze` to ensure no errors.
+
+### Manual Verification
+- Refresh the web application and verify that the dashboard renders with the mock data instead of showing a `NetworkException`.

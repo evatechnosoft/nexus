@@ -1,0 +1,13 @@
+# Task: Add Sky and Clouds
+
+- [x] Design and implement a "girl child character" sprite <!-- id: 8 -->
+- [x] Fix character orientation (looking direction) <!-- id: 10 -->
+- [x] Implement walking animation (feet moving) <!-- id: 11 -->
+- [x] Remove white box and slow down animation <!-- id: 12 -->
+- [x] Add pulsing glow effect to character <!-- id: 14 -->
+- [x] Generate cloud sprite <!-- id: 15 -->
+- [x] Implement sky background gradient <!-- id: 16 -->
+- [x] Replace platform blocks with cloud sprites <!-- id: 17 -->
+- [x] Add background clouds decoration <!-- id: 18 -->
+- [x] Remove white background from sprites (Transparency) <!-- id: 20 -->
+- [x] Verify the new visuals (Transparency & Sky) <!-- id: 19 -->

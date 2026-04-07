@@ -1,0 +1,17 @@
+# Yerel Çalıştırma Başarılı
+
+Azuredeployment sorunlarından bağımsız olarak uygulamayı şu an kendi bilgisayarınızda (local) ayağa kaldırdım.
+
+## Tespit Edilen Kritik Sorun
+[package-lock.json](file:///c:/projects/Layers/LayersupCom_v2/package-lock.json) dosyanız içerisindeki paketler, özel bir Azure DevOps registry'sine (`pkgs.dev.azure.com`) kilitlenmiş durumda. Bu yüzden standart bir `npm install` komutu "401 Unauthorized" hatası veriyordu.
+
+## Yapılan İşlem
+1. [package-lock.json](file:///c:/projects/Layers/LayersupCom_v2/package-lock.json) dosyasını geçici olarak devre dışı bıraktım.
+2. Paketleri genel npm deposundan temiz bir şekilde çektim.
+3. Uygulamayı başlattım.
+
+## Nasıl Kontrol Edebilirsiniz?
+Şu an uygulama arka planda çalışıyor. Tarayıcınızdan şu adrese giderek kontrol edebilirsiniz:
+**[http://localhost:3000](http://localhost:3000)**
+
+Uygulama düzgün çalışıyorsa, Azure tarafındaki sorunun da bu lock dosyasını silerek veya güncelleyerek çözülebileceğini teyit etmiş olduk.

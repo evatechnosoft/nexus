@@ -1,0 +1,23 @@
+# Evaitec Dashboard - Frontend Arayüzü
+
+Tüm ortamlara (Dev, Test, API) premium bir yönetim paneli eklendi. Panel, API durumunu, veritabanı bağlantısını ve kullanıcı yönetimini tek bir arayüzden yapmanı sağlıyor.
+
+## Dashboard Ekran Görüntüsü (Dev Ortamı)
+
+![Evaitec Dashboard - Dev Ortamı](file:///C:/Users/Deacjx/.gemini/antigravity/brain/e0b87384-962a-4efe-9b92-461300517fa1/dev_dashboard_verify_1774257741489.png)
+
+## Erişim Adresleri (Yerel)
+| Ortam | Adres | Açıklama |
+|-------|-------|----------|
+| **Dev** | `http://localhost:5007` | Hot-reload destekli geliştirme |
+| **Test** | `http://localhost:5006` | Canlı öncesi kontrol |
+| **API (Prod)** | `http://localhost:5005` | Canlı API |
+| **DB (Adminer)** | `http://localhost:8080` | Veritabanı yönetimi |
+
+## Cloudflare'de Eklenecek Rotalar
+| Subdomain | Domain | Service |
+|-----------|--------|---------|
+| `api` | `evaitec.com.tr` | `HTTP` → `localhost:5005` |
+| `db` | `evaitec.com.tr` | `HTTP` → `localhost:8080` |
+| `dev` | `evaitec.com.tr` | `HTTP` → `localhost:5007` |
+| `test` | `evaitec.com.tr` | `HTTP` → `localhost:5006` |

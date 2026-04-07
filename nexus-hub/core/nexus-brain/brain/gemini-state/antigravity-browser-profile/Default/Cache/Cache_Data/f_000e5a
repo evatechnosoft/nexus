@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cihaz Envanteri</title>
+  
+  <!-- Fonts: Outfit (Modern & Premium) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Custom Style -->
+  <link rel="stylesheet" href="/static/style.css">
+  
+  <style>
+    :root {
+      --font-family: 'Outfit', sans-serif;
+    }
+    body {
+      font-family: var(--font-family);
+    }
+  </style>
+</head>
+<body class="bg-dark text-white">
+
+<!-- Glow Effects -->
+<div class="bg-glow"></div>
+<div class="bg-glow" style="top: 60%; left: 70%; width: 500px; height: 500px; opacity: 0.15; background: radial-gradient(circle, var(--secondary) 0%, transparent 70%);"></div>
+
+<nav class="navbar navbar-expand-lg border-bottom border-secondary border-opacity-25 sticky-top bg-glass py-3">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand fw-extrabold d-flex align-items-center gap-2" href="/" style="letter-spacing: -1px;">
+      <div class="bg-primary rounded-pill shadow-lg d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;">
+        <i class="bi bi-cpu text-white fs-6"></i>
+      </div>
+      <span>DEAN<span class="text-primary">OS</span> <span class="fw-light opacity-50">Inventory</span></span>
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="bi bi-list fs-2 text-white"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item"><a class="nav-link px-3" href="/"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="/requests/"><i class="bi bi-envelope-paper me-2"></i>Talepler</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="/requests/email-queue"><i class="bi bi-mailbox me-2"></i>E-posta Kuyruğu</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="/inventory/"><i class="bi bi-box-seam me-2"></i>Envanter</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="/assignments/"><i class="bi bi-send-check me-2"></i>Atamalar</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle px-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-file-earmark-spreadsheet me-1"></i>Excel
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end border shadow-lg mt-2 py-2" 
+              style="z-index: 2000; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(24px); border: 1px solid rgba(255, 255, 255, 0.1) !important; border-radius: 14px;">
+            <li><a class="dropdown-item py-2" href="/excel/export"><i class="bi bi-download me-2 text-primary"></i>Dışa Aktar</a></li>
+            <li><a class="dropdown-item py-2" href="/excel/import-page"><i class="bi bi-upload me-2 text-info"></i>İçe Aktar</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid py-4 px-4">
+  
+<div class="d-flex justify-content-between align-items-center mb-5 mt-2">
+  <div>
+    <h3 class="fw-extrabold mb-1 text-white" style="letter-spacing:-1.5px;">Cihaz Envanteri</h3>
+    <p class="text-muted small mb-0 opacity-75">Kurumsal donanım varlıklarını yönetin ve takip edin.</p>
+  </div>
+  <button class="btn btn-primary d-flex align-items-center gap-2 shadow-lg" data-bs-toggle="modal" data-bs-target="#addModal" style="z-index: 10;">
+    <i class="bi bi-plus-lg fs-5"></i>
+    <span class="fw-bold">Yeni Cihaz Ekle</span>
+  </button>
+</div>
+
+<div class="row g-4 mb-5">
+  <div class="col-6 col-lg-3">
+    <div class="card p-4 text-center">
+      <div class="display-5 fw-bold text-primary mb-1">10</div>
+      <div class="text-uppercase small fw-extrabold ls-1 opacity-75 text-shadow-sm">Serviste</div>
+    </div>
+  </div>
+  <div class="col-6 col-lg-3">
+    <div class="card p-4 text-center">
+      <div class="display-5 fw-bold text-success mb-1"></div>
+      <div class="text-uppercase small fw-extrabold ls-1 opacity-50">Depoda</div>
+    </div>
+  </div>
+  <div class="col-6 col-lg-3">
+    <div class="card p-4 text-center">
+      <div class="display-5 fw-bold text-info mb-1"></div>
+      <div class="text-uppercase small fw-extrabold ls-1 opacity-50">Kullanımda</div>
+    </div>
+  </div>
+  <div class="col-6 col-lg-3">
+    <div class="card p-4 text-center">
+      <div class="display-5 fw-bold text-warning mb-1"></div>
+      <div class="text-uppercase small fw-extrabold ls-1 opacity-50">Serviste</div>
+    </div>
+  </div>
+</div>
+
+<!-- Arama & Filtre -->
+<form method="get" action="/inventory/" class="card border-0 shadow-sm mb-4 p-4 bg-glass">
+  <div class="row g-3 align-items-end">
+    <div class="col-md-4">
+      <label class="form-label small text-muted mb-1">Cihaz Ara (Seri No, Marka, Model)</label>
+      <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-search"></i></span>
+        <input type="text" name="q" class="form-control bg-dark border-secondary text-white" placeholder="Örn: C123456..." value="" />
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label class="form-label small text-muted mb-1">Durum</label>
+      <select name="status" class="form-select bg-dark border-secondary text-white">
+        <option value="">Tümü</option>
+        
+        <option value="Depoda" >Depoda</option>
+        
+        <option value="Dağıtıldı" >Dağıtıldı</option>
+        
+        <option value="Serviste" >Serviste</option>
+        
+        <option value="Hurda" >Hurda</option>
+        
+      </select>
+    </div>
+    <div class="col-md-3">
+      <label class="form-label small text-muted mb-1">Tür</label>
+      <select name="type" class="form-select bg-dark border-secondary text-white">
+        <option value="">Tümü</option>
+        
+        <option value="Laptop" >Laptop</option>
+        
+        <option value="Telefon" >Telefon</option>
+        
+        <option value="Tablet" >Tablet</option>
+        
+        <option value="Masaüstü" >Masaüstü</option>
+        
+        <option value="Aksesuar" >Aksesuar</option>
+        
+      </select>
+    </div>
+    <div class="col-md-2 d-flex gap-2">
+      <button type="submit" class="btn btn-primary flex-fill">Filtrele</button>
+      <a href="/inventory/" class="btn btn-outline-secondary"><i class="bi bi-x"></i></a>
+    </div>
+  </div>
+</form>
+
+<!-- Tablo Konteyneri -->
+<div class="card border-0 shadow-2xl table-container bg-glass">
+  <div class="card-body p-4">
+    <div class="table-responsive">
+      <table class="table table-hover align-middle mb-0">
+        <thead class="bg-dark bg-opacity-50 text-white">
+          <tr class="text-white">
+            <th class="ps-4 text-white">Envanter Kodu</th>
+            <th class="text-white">Tür</th>
+            <th class="text-white">Marka / Model</th>
+            <th class="text-white">Seri No</th>
+            <th class="text-white">IMEI</th>
+            <th class="text-white">Durum</th>
+            <th class="text-white">Notlar</th>
+            <th class="text-end pe-4 text-white">İşlem</th>
+          </tr>
+        </thead>
+        <tbody class="border-top-0">
+          
+          <tr>
+            <td class="ps-4">
+              <span class="badge bg-glass text-primary font-monospace">ENV-0009</span>
+            </td>
+            <td>
+              <i class="bi bi-laptop me-1"></i>
+              
+              Laptop
+            </td>
+            <td>
+              <div class="fw-semibold">ASUS</div>
+              <small class="text-muted">VivoBook 16</small>
+            </td>
+            <td><code>ASUSVB16001</code></td>
+            <td>
+              <span class="text-muted">—</span>
+            </td>
+            <td>
+              <span class="badge bg-secondary bg-opacity-75">Depoda</span>
+            </td>
+            <td><small class="text-muted">Test cihazı - ASUS VivoBook 16</small></td>
+            <td class="text-end pe-4">
+              <div class="d-flex justify-content-end gap-2">
+                <button class="btn btn-sm btn-outline-info rounded-pill px-3"
+                  onclick="openStatusModal(9, 'Depoda')">
+                  <i class="bi bi-pencil-square me-1"></i>Güncelle
+                </button>
+                <form method="post" action="/inventory/delete/9"
+                  onsubmit="return confirm('Cihazı silmek istiyor musunuz?')">
+                  <button class="btn btn-sm btn-outline-danger rounded-circle"><i class="bi bi-trash"></i></button>
+                </form>
+              </div>
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="ps-4">
+              <span class="badge bg-glass text-primary font-monospace">ENV-0010</span>
+            </td>
+            <td>
+              <i class="bi bi-laptop me-1"></i>
+              
+              Laptop
+            </td>
+            <td>
+              <div class="fw-semibold">Apple</div>
+              <small class="text-muted">MacBook Air M2</small>
+            </td>
+            <td><code>MBAM2AIR001</code></td>
+            <td>
+              <span class="text-muted">—</span>
+            </td>
+            <td>
+              <span class="badge bg-warning bg-opacity-75 text-dark">Serviste</span>
+              
+            </td>
+            <td><small class="text-muted">Test cihazı - Apple MacBook Air M2</small></td>
+            <td class="text-end pe-4">
+              <div class="d-flex justify-content-end gap-2">
+                <button class="btn btn-sm btn-outline-info rounded-pill px-3"
+                  onclick="openStatusModal(10, 'Serviste')">
+                  <i class="bi bi-pencil-square me-1"></i>Güncelle
+                </button>
+                <form method="post" action="/inventory/delete/10"
+                  onsubmit="return confirm('Cihazı silmek istiyor musunuz?')">
+                  <button class="btn btn-sm btn-outline-danger rounded-circle"><i class="bi bi-trash"></i></button>
+                </form>
+              </div>
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="ps-4">
+              <span class="badge bg-glass text-primary font-monospace">ENV-0006</span>
+            </td>
+            <td>
+              <i class="bi bi-laptop me-1"></i>
+              
+              Laptop
+            </td>
+            <td>
+              <div class="fw-semibold">Dell</div>
+              <small class="text-muted">XPS 15 9530</small>
+            </td>
+            <td><code>DELLXPS9530001</code></td>
+            <td>
+              <span class="text-muted">—</span>
+            </td>
+            <td>
+              <span class="badge bg-secondary bg-opacity-75">Dağıtıldı</span>
+            </td>
+            <td><small class="text-muted">Test cihazı - Dell XPS 15 9530</small></td>
+            <td class="text-end pe-4">
+              <div class="d-flex justify-content-end gap-2">
+                <button class="btn btn-sm btn-outline-info rounded-pill px-3"
+                  onclick="openStatusModal(6, 'Dağıtıldı')">
+                  <i class="bi bi-pencil-square me-1"></i>Güncelle
+                </button>
+                <form method="post" action="/inventory/delete/6"
+                  onsubmit="return confirm('Cihazı silmek istiyor musunuz?')">
+                  <button class="btn btn-sm btn-outline-danger rounded-circle"><i class="bi bi-trash"></i></button>
+                </form>
+              </div>
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="ps-4">
+              <span class="badge bg-glass text-primary font-monospace">ENV-0007</span>
+            </td>
+            <td>
+              <i class="bi bi-laptop me-1"></i>
+              
+              Laptop
+            </td>
+            <td>
+              <div class="fw-semibold">Lenovo</div>
+              <small class="text-muted">ThinkPad X1 Carbon Gen 12</small>
+            </td>
+            <td><code>TPXC12GEN001</code></td>
+            <td>
+              <span class="text-muted">—</span>
+            </td>
+            <td>
+              <span class="badge bg-secondary bg-opacity-75">Depoda</span>
+            </td>
+            <td><small class="text-muted">Test cihazı - Lenovo ThinkPad X1 Carbon Gen 12</small></td>
+            <td class="text-end pe-4">
+              <div class="d-flex justify-content-end gap-2">
+                <button class="btn btn-sm btn-outline-info rounded-pill px-3"
+                  onclick="openStatusModal(7, 'Depoda')">
+                  <i class="bi bi-pencil-square me-1"></i>Güncelle
+                </button>
+                <form method="post" action="/inventory/delete/7"
+                  onsubmit="return confirm('Cihazı silmek istiyor musunuz?')">
+                  <button class="btn btn-sm btn-outline-danger rounded-circle"><i class="bi bi-trash"></i></button>
+                </form>
+              </div>
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="ps-4">
+              <span class="badge bg-glass text-primary font-monospace">ENV-0008</span>
+            </td>
+            <td>
+              <i class="bi bi-laptop me-1"></i>
+              
+              Laptop
+            </td>
+            <td>
+              <div class="fw-semibold">HP</div>
+              <small class="text-muted">Pavilion 15-eh3000</small>
+            </td>
+            <td><code>HPPAV15EH001</code></td>
+            <td>
+              <span class="text-muted">—</span>
+            </td>
+            <td>
+              <span class="badge bg-secondary bg-opacity-75">Depoda</span>
+            </td>
+            <td><small class="text-muted">Test cihazı - HP Pavilion 15-eh3000</small></td>
+            <td class="text-end pe-4">
+              <div class="d-flex justify-content-end gap-2">
+                <button class="btn btn-sm btn-outline-info rounded-pill px-3"
+                  onclick="openStatusModal(8, 'Depoda')">
+                  <i class="bi bi-pencil-square me-1"></i>Güncelle
+                </button>
+                <form method="post" action="/inventory/delete/8"
+                  onsubmit="return confirm('Cihazı silmek istiyor musunuz?')">
+                  <button class="btn btn-sm btn-outline-danger rounded-circle"><i class="bi bi-trash"></i></button>
+                </form>
+              </div>
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="ps-4">
+              <span class="badge bg-glass text-primary font-monospace">ENV-0003</span>
+            </td>
+            <td>
+              <i class="bi bi-tools me-1"></i>
+              Telefon
+            </td>
+            <td>
+              <div class="fw-semibold">Apple</div>
+              <small class="text-muted">iPhone 14 Pro</small>
+            </td>
+            <td><code>D13VK8C0FLX7</code></td>
+            <td>
+              <code class="text-info">355373116839201</code>
+              
+            </td>
+            <td>
+              <span class="badge bg-secondary bg-opacity-75">Dağıtıldı</span>
+            </td>
+            <td><small class="text-muted">Test cihazı - Apple iPhone 14 Pro</small></td>
+            <td class="text-end pe-4">
+              <div class="d-flex justify-content-end gap-2">
+                <button class="btn btn-sm btn-outline-info rounded-pill px-3"
+                  onclick="openStatusModal(3, 'Dağıtıldı')">
+                  <i class="bi bi-pencil-square me-1"></i>Güncelle
+                </button>
+                <form method="post" action="/inventory/delete/3"
+                  onsubmit="return confirm('Cihazı silmek istiyor musunuz?')">
+                  <button class="btn btn-sm btn-outline-danger rounded-circle"><i class="bi bi-trash"></i></button>
+                </form>
+              </div>
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="ps-4">
+              <span class="badge bg-glass text-primary font-monospace">ENV-0004</span>
+            </td>
+            <td>
+              <i class="bi bi-tools me-1"></i>
+              Telefon
+            </td>
+            <td>
+              <div class="fw-semibold">OnePlus</div>
+              <small class="text-muted">12 Pro</small>
+            </td>
+            <td><code>OP12PRO54321</code></td>
+            <td>
+              <code class="text-info">357395241874562</code>
+              
+            </td>
+            <td>
+              <span class="badge bg-secondary bg-opacity-75">Depoda</span>
+            </td>
+            <td><small class="text-muted">Test cihazı - OnePlus 12 Pro</small></td>
+            <td class="text-end pe-4">
+              <div class="d-flex justify-content-end gap-2">
+                <button class="btn btn-sm btn-outline-info rounded-pill px-3"
+                  onclick="openStatusModal(4, 'Depoda')">
+                  <i class="bi bi-pencil-square me-1"></i>Güncelle
+                </button>
+                <form method="post" action="/inventory/delete/4"
+                  onsubmit="return confirm('Cihazı silmek istiyor musunuz?')">
+                  <button class="btn btn-sm btn-outline-danger rounded-circle"><i class="bi bi-trash"></i></button>
+                </form>
+              </div>
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="ps-4">
+              <span class="badge bg-glass text-primary font-monospace">ENV-0005</span>
+            </td>
+            <td>
+              <i class="bi bi-laptop me-1"></i>
+              
+              Laptop
+            </td>
+            <td>
+              <div class="fw-semibold">Apple</div>
+              <small class="text-muted">MacBook Pro 16&#34; M3 Max</small>
+            </td>
+            <td><code>MBP16M3MAX001</code></td>
+            <td>
+              <span class="text-muted">—</span>
+            </td>
+            <td>
+              <span class="badge bg-secondary bg-opacity-75">Dağıtıldı</span>
+            </td>
+            <td><small class="text-muted">Test cihazı - Apple MacBook Pro 16&#34; M3 Max</small></td>
+            <td class="text-end pe-4">
+              <div class="d-flex justify-content-end gap-2">
+                <button class="btn btn-sm btn-outline-info rounded-pill px-3"
+                  onclick="openStatusModal(5, 'Dağıtıldı')">
+                  <i class="bi bi-pencil-square me-1"></i>Güncelle
+                </button>
+                <form method="post" action="/inventory/delete/5"
+                  onsubmit="return confirm('Cihazı silmek istiyor musunuz?')">
+                  <button class="btn btn-sm btn-outline-danger rounded-circle"><i class="bi bi-trash"></i></button>
+                </form>
+              </div>
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="ps-4">
+              <span class="badge bg-glass text-primary font-monospace">ENV-0002</span>
+            </td>
+            <td>
+              <i class="bi bi-tools me-1"></i>
+              Telefon
+            </td>
+            <td>
+              <div class="fw-semibold">Samsung</div>
+              <small class="text-muted">Galaxy S24 Ultra</small>
+            </td>
+            <td><code>R58R403JB5ZH</code></td>
+            <td>
+              <code class="text-info">357395198031247</code>
+              
+            </td>
+            <td>
+              <span class="badge bg-secondary bg-opacity-75">Depoda</span>
+            </td>
+            <td><small class="text-muted">Test cihazı - Samsung Galaxy S24 Ultra</small></td>
+            <td class="text-end pe-4">
+              <div class="d-flex justify-content-end gap-2">
+                <button class="btn btn-sm btn-outline-info rounded-pill px-3"
+                  onclick="openStatusModal(2, 'Depoda')">
+                  <i class="bi bi-pencil-square me-1"></i>Güncelle
+                </button>
+                <form method="post" action="/inventory/delete/2"
+                  onsubmit="return confirm('Cihazı silmek istiyor musunuz?')">
+                  <button class="btn btn-sm btn-outline-danger rounded-circle"><i class="bi bi-trash"></i></button>
+                </form>
+              </div>
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="ps-4">
+              <span class="badge bg-glass text-primary font-monospace">ENV-0001</span>
+            </td>
+            <td>
+              <i class="bi bi-tools me-1"></i>
+              Telefon
+            </td>
+            <td>
+              <div class="fw-semibold">Apple</div>
+              <small class="text-muted">iPhone 15 Pro</small>
+            </td>
+            <td><code>D53RJ5C5M0N1</code></td>
+            <td>
+              <code class="text-info">355373131948402</code>
+              
+            </td>
+            <td>
+              <span class="badge bg-secondary bg-opacity-75">Dağıtıldı</span>
+            </td>
+            <td><small class="text-muted">Test cihazı - Apple iPhone 15 Pro</small></td>
+            <td class="text-end pe-4">
+              <div class="d-flex justify-content-end gap-2">
+                <button class="btn btn-sm btn-outline-info rounded-pill px-3"
+                  onclick="openStatusModal(1, 'Dağıtıldı')">
+                  <i class="bi bi-pencil-square me-1"></i>Güncelle
+                </button>
+                <form method="post" action="/inventory/delete/1"
+                  onsubmit="return confirm('Cihazı silmek istiyor musunuz?')">
+                  <button class="btn btn-sm btn-outline-danger rounded-circle"><i class="bi bi-trash"></i></button>
+                </form>
+              </div>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- Environment Badge -->
+
+
+<!-- Modal Block for correctly stacking modals -->
+
+<!-- Add Modal -->
+<div class="modal fade shadow-lg" id="addModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content border-0 bg-dark text-white shadow-2xl">
+      <form id="addInventForm" method="post" action="/inventory/add">
+        <div class="modal-header border-bottom border-secondary border-opacity-25 p-4">
+          <h5 class="modal-title fw-bold"><i class="bi bi-plus-circle me-3 text-primary"></i>Yeni Cihaz Ekle</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4 p-md-5">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <label class="form-label small text-muted text-uppercase fw-bold ls-1 mb-2">Cihaz Türü</label>
+              <select name="device_type" class="form-select bg-dark border-secondary border-opacity-50 text-white p-2" required>
+                
+                <option value="Laptop">Laptop</option>
+                
+                <option value="Telefon">Telefon</option>
+                
+                <option value="Tablet">Tablet</option>
+                
+                <option value="Masaüstü">Masaüstü</option>
+                
+                <option value="Aksesuar">Aksesuar</option>
+                
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small text-muted text-uppercase fw-bold ls-1 mb-2">Marka</label>
+              <input type="text" name="brand" class="form-control bg-dark border-secondary border-opacity-50 text-white p-2" placeholder="Örn: Apple, Dell" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small text-muted text-uppercase fw-bold ls-1 mb-2">Model</label>
+              <input type="text" name="model" class="form-control bg-dark border-secondary border-opacity-50 text-white p-2" placeholder="Örn: MacBook Air M2" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small text-muted text-uppercase fw-bold ls-1 mb-2">Seri Numarası *</label>
+              <input type="text" name="serial_no" class="form-control bg-dark border-secondary border-opacity-50 text-white p-2" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small text-muted text-uppercase fw-bold ls-1 mb-2">IMEI (Opsiyonel)</label>
+              <input type="text" name="imei" class="form-control bg-dark border-secondary border-opacity-50 text-white p-2">
+            </div>
+            <div class="col-12">
+              <label class="form-label small text-muted text-uppercase fw-bold ls-1 mb-2">Notlar</label>
+              <textarea name="notes" class="form-control bg-dark border-secondary border-opacity-50 text-white p-2" rows="3"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer border-top border-secondary border-opacity-25 p-4">
+          <button type="button" class="btn btn-link text-white text-decoration-none" data-bs-dismiss="modal">İptal</button>
+          <button type="submit" class="btn btn-primary px-5 shadow-lg">Cihazı Kaydet</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Durum Modal -->
+<div class="modal fade shadow-lg" id="statusModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <form method="post" id="statusForm" class="modal-content border-0 bg-dark text-white">
+      <div class="modal-header border-bottom border-secondary border-opacity-25">
+        <h5 class="modal-title fw-bold">Durum Güncelle</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <select name="status" id="statusSelect" class="form-select bg-dark border-secondary text-white">
+          
+          <option value="Depoda">Depoda</option>
+          
+          <option value="Dağıtıldı">Dağıtıldı</option>
+          
+          <option value="Serviste">Serviste</option>
+          
+          <option value="Hurda">Hurda</option>
+          
+        </select>
+      </div>
+      <div class="modal-footer border-top border-secondary border-opacity-25">
+        <button type="button" class="btn btn-link text-white text-decoration-none" data-bs-dismiss="modal">İptal</button>
+        <button type="submit" class="btn btn-primary px-4">Kaydet</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+function openStatusModal(id, currentStatus) {
+  const form = document.getElementById('statusForm');
+  const select = document.getElementById('statusSelect');
+  form.action = '/inventory/update-status/' + id;
+  select.value = currentStatus;
+  const modal = new bootstrap.Modal(document.getElementById('statusModal'));
+  modal.show();
+}
+</script>
+
+</body>
+</html>

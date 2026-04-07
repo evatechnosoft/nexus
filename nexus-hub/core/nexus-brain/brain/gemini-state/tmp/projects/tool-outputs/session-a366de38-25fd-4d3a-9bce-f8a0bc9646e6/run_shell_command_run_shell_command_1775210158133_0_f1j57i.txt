@@ -1,0 +1,3 @@
+{
+  "output": "Output: \n\n    Directory: C:\\projects\n\n\nMode                 LastWriteTime         Length Name\n----                 -------------         ------ ----\nd-----          4/3/2026     12:56                agentops-nexus\nInitialized empty Git repository in C:/projects/agentops-nexus/.git/\nProcess Group PGID: 35276"
+}

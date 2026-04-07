@@ -1,0 +1,16 @@
+# Scribd Document Analysis: English Code 1 Phonics Book
+
+- **URL:** https://www.scribd.com/document/761207887/English-Code-1-Phonics-Book
+- **Full Title:** English Code 1 Phonics Book
+- **Author/Uploader:** Uyen Chau
+- **Download Button:** Present. Clicking it redirects to a signup page ("To download this document, please sign up").
+- **Print Button:** Present on the main page.
+- **Subscription/Free:** Requires a subscription or at least a free trial account to download. There is a "Download free for 30 days" button which indicates a free trial leads to a paid subscription.
+
+## Progress
+- [x] Visit URL
+- [x] Check for Download/Print button
+- [x] Check subscription requirement
+- [x] Note title and author
+- [ ] Confirm Print button behavior
+- [ ] Final summary

@@ -1,0 +1,81 @@
+# EvANotes Brand Guidelines
+
+EvANotes is a modern, premium To-Do application designed to help users manage their tasks with clarity, focus, and a touch of vibrancy.
+
+## Logo & Identity
+**Selection: The Modern Tech (Option B)**
+
+The EvANotes logo relies on a sleek, gradient-focused wordmark. It communicates a startup-like, modern technological feel without feeling overly corporate.
+
+![EvANotes Ultimate Fusion Logo](C:\Users\Deacjx\.gemini\antigravity\brain\e8c6c6b5-832f-4ebb-83fe-328ece716d62\evanotes_logo_ultimate_fusion_1773745293294.png)
+
+### Logo Rules
+*   **Font:** Outfit (Weight: 800 / ExtraBold)
+*   **Style:** Tight kerning (e.g., `letter-spacing: -2px`)
+*   **Coloring:** Linear gradient background clip using primary brand colors to create a modern glow.
+*   **Clear Space:** Ensure the logo always has breathing room equal to the height of the "E".
+
+### Favicon
+The favicon is a **"Soft Monogram"** fusion of **"EvA"**. 
+- **E:** Rounded pill-style bars for a soft tech feel.
+- **v:** Signature one-side-short tick (checkmark) with smooth curves.
+- **A:** Minimalist right-side stroke integrated into the 'v'.
+It uses the full brand gradient on a deep slate background.
+- **File:** [branding_assets/favicon.svg](file:///C:/projects/Evanotes/branding_assets/favicon.svg)
+
+---
+
+## Color Palette
+**Selection: Core Indigo (Theme A)**
+
+A professional, tech-forward palette that heavily utilizes the indigo-to-cyan spectrum, perfectly complementing the logo. It offers a deep slate dark mode for focus, and a clean ice-blue light mode for daytime use.
+
+### Core Colors (Dark Mode Default)
+*   **Background (Surface Master) `bg-slate-900`:** `#0b1120` 
+*   **Surface (Cards/Modals) `bg-slate-800`:** `#1e293b`
+*   **Primary Accent 1 `cyan-500`:** `#06b6d4`
+*   **Primary Accent 2 `indigo-600`:** `#4f46e5`
+*   **Text Primary `slate-50`:** `#f8fafc`
+*   **Text Secondary `slate-400`:** `#94a3b8`
+*   **Borders `slate-700`:** `#334155`
+
+### Core Colors (Light Mode)
+*   **Background:** `#f8fafc` 
+*   **Surface:** `#ffffff`
+*   **Primary Accent:** `#06b6d4` to `#4f46e5` (Gradient or solid depending on use)
+*   **Text Primary:** `#0f172a`
+*   **Text Secondary:** `#475569`
+*   **Borders:** `#cbd5e1`
+
+---
+
+## Typography
+**Selection: The Sharp Contrast (Option 3)**
+
+A strong pairing of geometric tech (Outfit) for headings with maximum readability (Inter) for the body copy.
+
+### Font Families
+*   **Primary Headings (`h1`-`h6`, Logo):** `Outfit, sans-serif`
+*   **Body Text (Paragraphs, ui-text, buttons):** `Inter, sans-serif`
+
+### Typographic Scale
+*   **Heading 1 (Page Titles):** `Outfit`, 3rem (48px), Weight: 800 (ExtraBold)
+*   **Heading 2 (Section Titles):** `Outfit`, 2rem (32px), Weight: 600 (SemiBold)
+*   **Heading 3 (Card Titles):** `Outfit`, 1.25rem (20px), Weight: 600 (SemiBold)
+*   **Body (Primary Reading):** `Inter`, 1rem (16px), Weight: 400 (Regular)
+*   **Small / Meta Text:** `Inter`, 0.875rem (14px), Weight: 400 (Regular)
+*   **Button text:** `Inter`, 0.9rem (14.5px), Weight: 600 (SemiBold)
+
+---
+
+## Voice and Tone (Sentry Skill Applied)
+
+EvANotes should speak to its users with clarity and functionality as its primary goal. The application helps users get things done, so the language should never stand in their way.
+
+*   **Default Tone (Plain Speech):** Use plain, direct speech for 90% of the application.
+    *   *Do:* "Create task" | *Don't:* "Add a new item to your list"
+    *   *Do:* "Delete project?" | *Don't:* "Are you sure you wish to delete this project?"
+*   **Onboarding & Empty States (Sentry Voice):** Add a touch of empathetic personality only when the user has time to appreciate it.
+    *   *Empty Inbox:* "Inbox zero. Take a deep breath, or create a task to ruin the peace."
+    *   *404 Error:* "This task slipped into the void. Let's get you back to your list."
+*   **Formatting:** Sentence case for buttons and labels. No exclamation marks in standard UI text.

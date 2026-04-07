@@ -1,0 +1,93 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+English Code 1. Student’s Book (AmE).pdf
+English Code 1. Student’s Book Audio (AmE).rar
+English Code 1. Workbook (AmE).pdf
+English Code 1. Workbook Audio (AmE).rar
+English Code 1 Phonics Book Audio (AmE).rar
+English Code 1. Phonics Book Video (AmE).zip
+English Code 1. Teacher’s Edition (AmE).pdf
+—
+English Code 2. Activity Book (BrE).pdf
+English Code 2. Activity Book Audio (BrE).rar
+English Code 2. Phonics Book (BrE).pdf
+English Code 2 Phonics Book Audio (BrE).rar
+English Code 2 Phonics Book Video (BrE).zip
+English Code 2. Assessment Book (BrE).pdf
+English Code 2. Assessment Audio (BrE).rar
+English Code 2. Flashcards (BrE).pdf
+English Code 2. Grammar Book (BrE).pdf
+English Code 2. Student’s Book (AmE).pdf
+English Code 2. Student’s Book Audio (AmE).rar
+English Code 2 Phonics Book Audio (AmE).rar
+English Code 2 Phonics Book Video (AmE).zip
+English Code 2. Teacher’s Edition (AmE).pdf
+—
+English Code 3. Activity Book (BrE).pdf
+English Code 3. Phonics Book (BrE).pdf
+English Code 3. Activity Book Audio (BrE).rar
+English Code 3 Phonics Book Audio (BrE).rar
+English Code 3 Phonics Book Video (BrE).zip
+English Code 3. Flashcards (BrE).pdf
+English Code 3. Grammar Book.pdf
+English Code 3. Assessment Book (BrE).pdf
+Categories
+[0] (822,137)<a href='https://tienganhedu.com/adult-and-young-adult/'>Adult & Young Adult />
+[1] (914,137)<button aria-label='Toggle' class='toggle' />
+	[2] (914,138)<i  />
+[3] (791,188)<a href='https://tienganhedu.com/business-english-esp/'>Business English & ESP />
+[4] (822,238)<a href='https://tienganhedu.com/exam-preparation/'>Exam Preparation />
+[5] (914,238)<button aria-label='Toggle' class='toggle' />
+	[6] (914,240)<i  />
+[7] (822,289)<a href='https://tienganhedu.com/grammar-vocabulary-pronunciation/'>Language Component />
+[8] (914,289)<button aria-label='Toggle' class='toggle' />
+	[9] (914,290)<i  />
+[10] (822,340)<a href='https://tienganhedu.com/skills/'>Skills />
+[11] (914,340)<button aria-label='Toggle' class='toggle' />
+	[12] (914,341)<i  />
+[13] (762,390)<a href='https://tienganhedu.com/teenagers/'>Teenagers />
+[14] (786,441)<a href='https://tienganhedu.com/very-young-learners/'>Very Young Learners />
+[15] (774,492)<a href='https://tienganhedu.com/young-learners/'>Young Learners />
+YY-Unknown
+Popular
+Oxford
+English File, fifth edition [Download High Quality PDF + Resources]
+Adult & Young Adult | 2025 | 31,688 👀
+pearson
+[16] (844,871)<a href='https://tienganhedu.com/wider-world/'>Wider World (British English) [Download PDF + Resources] />
+Teenagers | 2017 | 19,403 👀
+cengage
+Outcomes, Third Edition [Download Original PDF + Resources]
+0
+[17] (28,120)<button id='custom-show-cart-popup' />
+	[18] (28,120)<img  />
+[19] (891,463)<a class='messanger msg-item-facebook-messenger' href='https://m.me/TiengAnhEbook' id='msg-item-1' />
+	[20] (815,463)<span  />
+	[21] (857,463)<div  />
+		[22] (857,463)<div >Messenger />
+[23] (891,534)<a class='messanger msg-item-whatsapp' href='https://api.whatsapp.com/send?phone=84773430311&amp;text=some%20predefined%20message&amp;source=&amp;data=' id='msg-item-2' />
+	[24] (815,534)<span  />
+	[25] (855,534)<div  />
+		[26] (855,534)<div >Whatsapp />
+[27] (891,605)<a class='messanger msg-item-telegram-plane' href='https://t.me/tienganhedu' id='msg-item-4' />
+	[28] (815,605)<span  />
+	[29] (853,605)<div  />
+		[30] (853,605)<div >Telegram />
+[31] (891,676)<a class='messanger msg-item-instagram' href='https://www.instagram.com/tienganh_edu/' id='msg-item-10' />
+	[32] (815,676)<span  />
+	[33] (855,676)<div  />
+		[34] (855,676)<div >Instagram />
+[35] (891,747)<a class='messanger msg-item-skype' href='skype:boyndtt?chat' id='msg-item-5' />
+	[36] (815,747)<span  />
+	[37] (846,747)<div  />
+		[38] (846,747)<div >Skype />
+[39] (891,819)<a class='messanger msg-item-envelope' href='mailto:tienganhedu.com@gmail.com' id='msg-item-6' />
+	[40] (815,819)<span  />
+	[41] (851,819)<div  />
+		[42] (851,819)<div >Email us />
+[43] (965,927)<div  />
+	[44] (965,927)<div  />
+
+</current_dom>

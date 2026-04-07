@@ -1,0 +1,39 @@
+# Implementation Plan: OAuth2 (Modern Auth) Migration
+
+Migrate the IT Inventory system from Basic Authentication to Modern Authentication (OAuth2) to resolve connectivity issues with Microsoft 365.
+
+## User Action Required: Azure App Registration
+Please follow these steps in the [Azure Portal](https://portal.azure.com):
+1. **App Registration**: Create a new registration (e.g., "IT Inventory Watcher").
+2. **Authentication**: Set the platform to "Web" or "Public client/native" (Mobile and desktop) if using client secret.
+3. **API Permissions**: Add `Office 365 Exchange Online` permissions:
+   - `full_access_as_app` (if using Client Credentials provider) OR
+   - `IMAP.AccessAsUser.All` and `EWS.AccessAsUser.All` (if using delegated permissions).
+4. **Client Secret**: Generate a new secret and note it down.
+5. **IDs**: Note down the `Application (client) ID` and `Directory (tenant) ID`.
+
+> [!IMPORTANT]
+> Provide the `CLIENT_ID`, `TENANT_ID`, and `CLIENT_SECRET` once ready.
+
+## Proposed Changes
+
+### [Component] Backend Dependencies
+#### [MODIFY] [requirements.txt](file:///c:/projects/it-inventory/it-inventory/inventory_app/requirements.txt)
+Add `msal` and `requests-oauthlib`.
+
+### [Component] Authentication Module
+#### [NEW] [ms_oauth.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/ms_oauth.py)
+Create a utility function to handle token acquisition using the `msal` library.
+
+### [Component] Email Watcher
+#### [MODIFY] [email_watcher.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/email_watcher.py)
+Update [_get_account()](file:///c:/projects/it-inventory/it-inventory/inventory_app/email_watcher.py#258-296) and [_get_imap_connection()](file:///c:/projects/it-inventory/it-inventory/inventory_app/email_watcher.py#300-316) to use OAuth2 credentials instead of basic username/password.
+
+### [Component] Configuration
+#### [MODIFY] [.env.example](file:///c:/projects/it-inventory/it-inventory/.env.example) and [.env](file:///c:/projects/it-inventory/it-inventory/.env)
+Add variables for `AZURE_CLIENT_ID`, `AZURE_TENANT_ID`, and `AZURE_CLIENT_SECRET`.
+
+## Verification Plan
+1. Test token acquisition using a new debug script `debug_oauth.py`.
+2. Verify mailbox connection using the acquired token.
+3. Log the successful processing of a test email.

@@ -1,0 +1,95 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (292,128)<button class='back-btn' />
+	[1] (292,128)<font  />
+		[2] (292,128)<font >← Back />
+[3] (720,135)<button class='settings-btn' />
+	[4] (720,135)<font  />
+		[5] (720,137)<font >⚙️ />
+Week 1: Welcome!
+Day one — greetings, numbers, age
+📚 Book References
+Student Book:
+Pages 4-7
+🗝️ Keywords (Vocabulary)
+🎯
+Click:
+Listen to the pronunciation | 🖱️
+Press and hold:
+Listen to the letter-by-letter encoding
+[6] (340,746)<div  />
+	[7] (340,680)<div  />
+		[8] (340,680)<font  />
+			[9] (340,680)<font >hello />
+	[10] (340,732)<div  />
+		[11] (340,732)<font  />
+			[12] (340,732)<font >Hello />
+	[13] (340,799)<div  />
+		[14] (315,795)<b  />
+			[15] (315,795)<font  />
+				[16] (315,795)<font >🗣️ Pronunciation: />
+		[17] (367,795)<font  />
+			[18] (367,795)<font >[he-low] />
+		[19] (303,819)<b  />
+			[20] (303,819)<font  />
+				[21] (303,819)<font >🧩 Spelling: />
+		[22] (339,819)<font  />
+			[23] (339,819)<font >hel-lo />
+[24] (500,746)<div  />
+	[25] (500,680)<div  />
+		[26] (500,680)<font  />
+			[27] (500,680)<font >goodbye />
+	[28] (500,732)<div  />
+		[29] (500,732)<font  />
+			[30] (500,732)<font >Goodbye />
+	[31] (500,799)<div  />
+		[32] (475,795)<b  />
+			[33] (475,795)<font  />
+				[34] (475,795)<font >🗣️ Pronunciation: />
+		[35] (530,795)<font  />
+			[36] (530,795)<font >[gud-bay] />
+		[37] (463,819)<b  />
+			[38] (463,819)<font  />
+				[39] (463,819)<font >🧩 Spelling: />
+		[40] (506,819)<font  />
+			[41] (506,819)<font >good-bye />
+[42] (660,746)<div  />
+	[43] (660,680)<div  />
+		[44] (660,680)<font  />
+			[45] (660,680)<font >teacher />
+	[46] (660,732)<div  />
+		[47] (660,732)<font  />
+			[48] (660,732)<font >teacher />
+	[49] (660,799)<div  />
+		[50] (634,795)<b  />
+			[51] (634,795)<font  />
+				[52] (634,795)<font >🗣️ Pronunciation: />
+		[53] (683,795)<font  />
+			[54] (683,795)<font >[tii-çır] />
+		[55] (623,819)<b  />
+			[56] (623,819)<font  />
+				[57] (623,819)<font >🧩 Spelling: />
+		[58] (663,819)<font  />
+			[59] (663,819)<font >teach-er />
+[60] (340,994)<div  />
+	[61] (340,928)<div  />
+		[62] (340,928)<font  />
+			[63] (340,928)<font >girl />
+	[64] (340,980)<div  />
+		[65] (340,980)<font  />
+			[66] (340,980)<font >girl />
+[67] (500,928)<div  />
+	[68] (500,928)<font  />
+		[69] (500,928)<font >size />
+boy
+[70] (660,994)<div  />
+	[71] (660,928)<div  />
+		[72] (660,928)<font  />
+			[73] (660,928)<font >good />
+	[74] (660,980)<div  />
+		[75] (660,980)<font  />
+			[76] (660,980)<font >Good />
+
+</current_dom>

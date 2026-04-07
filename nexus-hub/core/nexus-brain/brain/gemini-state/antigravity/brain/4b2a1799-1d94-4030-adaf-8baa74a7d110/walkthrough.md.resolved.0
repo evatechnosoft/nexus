@@ -1,0 +1,27 @@
+# Walkthrough: Email Watcher Debugging
+
+I addressed the issue where the IT Inventory system was not processing email requests.
+
+## Changes Made
+
+### Configuration Updates
+- **Removed Sender Filter**: Cleared `WATCH_SENDER_FILTER` in [.env](file:///c:/projects/it-inventory/it-inventory/.env) to allow scanning emails from any sender to the `it@findtalent.net` mailbox.
+- **Set Direct Server**: Configured `EXCHANGE_SERVER=outlook.office365.com` to bypass autodiscover issues.
+- **Improved Scripting**: Created [debug_exchange.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/debug_exchange.py) for standalone testing and better logging.
+
+## Verification Results
+
+### Web Interface
+The dashboard is successfully running and accessible at [http://localhost:8001](http://localhost:8001).
+
+### Email Watcher Status
+> [!IMPORTANT]
+> The background service is currently failing to connect to Exchange due to **Invalid Credentials**.
+
+**Current Log Status:**
+`it-inventory | 2026-03-25 06:52:18,642 - ERROR - Exchange bağlantı hatası: Invalid credentials for https://outlook.office365.com/EWS/Exchange.asmx`
+
+### Next Steps for the User
+- **Verify Password**: Please double-check if `Eralp123!` is the current password for `it@findtalent.net`.
+- **App Password**: If 2-Factor Authentication is enabled on the account, you must generate an **App Password** from your Microsoft account settings and use it in the [.env](file:///c:/projects/it-inventory/it-inventory/.env) file.
+- **Restart**: After updating the password in [.env](file:///c:/projects/it-inventory/it-inventory/.env), run `docker compose up -d` to apply changes.

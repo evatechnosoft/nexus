@@ -1,0 +1,28 @@
+# Dashboard Expansion & Mock Data Simulation
+
+This phase focuses on adding more complex gauges and automating the dashboard movement using mock data simulation.
+
+## Proposed Changes
+
+### [Component] Core Logic & Simulation
+#### [NEW] [dashboard_controller.dart](file:///c:/projects/claude+antigravity/projects/car_dash/lib/presentation/controllers/dashboard_controller.dart)
+- Implement a controller to generate periodic mock data (Speed, SOC, Temps).
+- Use `Stream` or `ChangeNotifier` to push updates to the UI.
+
+### [Component] New Gauges
+#### [NEW] [vertical_bar_gauge_painter.dart](file:///c:/projects/claude+antigravity/projects/car_dash/lib/presentation/painters/vertical_bar_gauge_painter.dart)
+- A specialized painter for Motor Temp and Range (vertical bar style).
+#### [NEW] [power_flow_painter.dart](file:///c:/projects/claude+antigravity/projects/car_dash/lib/presentation/painters/power_flow_painter.dart)
+- A dynamic painter showing energy flow direction (Battery <-> Motor).
+
+### [Component] UI Integration
+#### [MODIFY] [main.dart](file:///c:/projects/claude+antigravity/projects/car_dash/lib/main.dart)
+- Integrate the new gauges into the layout.
+- Remove the test slider and connect UI to `DashboardController`.
+
+## Verification Plan
+### Automated Tests
+- Build and run on Windows/Web to verify animation smoothness.
+### Manual Verification
+- Observe the mock data simulation; ensure gauges move realistically.
+- Verify that Range decreases as Speed increases.

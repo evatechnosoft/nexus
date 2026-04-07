@@ -1,0 +1,15 @@
+- [ ] update environment files
+    - [/] `.env.prod` -> port 9700
+    - [ ] `.env.test` -> port 9600
+- [ ] update deployment scripts
+    - [ ] `deploy.ps1` -> swap ports and paths
+    - [ ] `inv.ps1` -> update help text
+    - [ ] `deploy_deanos.sh` -> Create new script
+- [ ] update configuration
+    - [ ] `docker-compose.yml` -> clean up and map `HOST_PORT`
+- [ ] update documentation
+    - [ ] `zimaos_deployment.md` -> update port standard
+- [ ] synchronize and deploy
+    - [ ] sync files to ZimaOS
+    - [ ] restart containers on ZimaOS
+    - [ ] verify health

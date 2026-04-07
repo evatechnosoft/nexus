@@ -1,0 +1,12 @@
+# Task: Local Verification
+
+- [x] Planning
+    - [x] Analyze local E401 error
+    - [x] Identify private registry links in [package-lock.json](file:///c:/projects/Layers/LayersupCom_v2/package-lock.json)
+- [x] Implementation
+    - [x] Move [package-lock.json](file:///c:/projects/Layers/LayersupCom_v2/package-lock.json) to backup
+    - [x] Run `npm install` (Public registry)
+    - [x] Start application locally
+- [/] Verification
+    - [x] Confirm server is listening on port 3000
+    - [ ] Wait for user to check `http://localhost:3000`

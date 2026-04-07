@@ -1,0 +1,16 @@
+# Task: Enhance Environment Visuals
+
+- [x] Design and implement a "girl child character" sprite <!-- id: 8 -->
+- [x] Fix character orientation (looking direction) <!-- id: 10 -->
+- [x] Implement walking animation (feet moving) <!-- id: 11 -->
+- [x] Remove white box and slow down animation <!-- id: 12 -->
+- [x] Add pulsing glow effect to character <!-- id: 14 -->
+- [x] Generate cloud sprite <!-- id: 15 -->
+- [x] Implement initial sky background gradient <!-- id: 16 -->
+- [x] Replace platform blocks with cloud sprites <!-- id: 17 -->
+- [x] Add background clouds decoration <!-- id: 18 -->
+- [x] Remove white background from sprites (Transparency) <!-- id: 20 -->
+- [/] Update sky to blue and generate grass/lava sprites <!-- id: 21 -->
+- [ ] Implement wave-like animation for lava/water <!-- id: 26 -->
+- [ ] Update Level 1 map with ground and lava <!-- id: 23 -->
+- [ ] Verify the enhanced visuals <!-- id: 24 -->

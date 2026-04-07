@@ -1,0 +1,74 @@
+Merhaba! 👋
+Bu haftanın dersini seç:
+[0] (193,266)<div class='week-card' />
+	[1] (193,163)<h3 >Hafta 01 />
+	[2] (193,206)<p  />
+		[3] (160,205)<strong >Welcome! />
+	[4] (193,252)<p >İlk gün — selamlaşma, sayılar, yaş />
+	[5] (193,310)<p >16 kelime | SB pp. 4-7 />
+[6] (344,266)<div class='week-card' />
+	[7] (344,163)<h3 >Hafta 02 />
+	[8] (344,221)<p  />
+		[9] (341,221)<strong >Unit 1: Birthday Fun! — Bölüm 1 />
+	[10] (344,297)<p >Doğum günü kartı yapımı — renkler ve doğum günü kelimeleri />
+	[11] (344,371)<p >14 kelime | SB pp. 8-13 />
+[12] (495,266)<div class='week-card' />
+	[13] (495,163)<h3 >Hafta 03 />
+	[14] (495,221)<p  />
+		[15] (492,221)<strong >Unit 1: Birthday Fun! — Bölüm 2 + Proje />
+	[16] (495,282)<p >Doğum günü sahnesi ve proje tamamlama />
+	[17] (495,340)<p >1 kelime | SB pp. 14-17 />
+[18] (646,266)<div class='week-card' />
+	[19] (646,163)<h3 >Hafta 04 />
+	[20] (646,221)<p  />
+		[21] (641,221)<strong >Unit 2: Mud Kitchen — Bölüm 1 />
+	[22] (646,282)<p >Öğle yemeği masası — mutfak eşyaları />
+	[23] (646,340)<p >9 kelime | SB pp. 18-23 />
+[24] (797,266)<div class='week-card' />
+	[25] (797,163)<h3 >Hafta 05 />
+	[26] (797,221)<p  />
+		[27] (796,221)<strong >Unit 2: Mud Kitchen — Bölüm 2 + Checkpoint 1 />
+	[28] (797,282)<p >Hikaye tamamlama ve ilk ölçme />
+	[29] (797,340)<p >1 kelime | SB pp. 24-29 />
+[30] (193,573)<div class='week-card' />
+	[31] (193,486)<h3 >Hafta 06 />
+	[32] (193,543)<p  />
+		[33] (187,543)<strong >Unit 3: Music Time! — Bölüm 1 />
+	[34] (193,604)<p >Müzik aletleri, dans, Let's cümlesi />
+	[35] (193,663)<p >8 kelime | SB pp. 30-37 />
+[36] (344,573)<div class='week-card' />
+	[37] (344,486)<h3 >Hafta 07 />
+	[38] (344,543)<p  />
+		[39] (343,543)<strong >Unit 3: Music Time! — Proje + Unit 4 Başlangıcı />
+	[40] (344,604)<p >Müzik projesi ve hayvan tanıtımı />
+	[41] (344,663)<p >1 kelime | SB pp. 38-41 />
+[42] (495,573)<div class='week-card' />
+	[43] (495,486)<h3 >Hafta 08 />
+	[44] (495,543)<p  />
+		[45] (493,543)<strong >Unit 4: At the Farm — Bölüm 2 + Checkpoint 2 />
+	[46] (495,604)<p >Çiftlik hayvanları ve Checkpoint 2 />
+	[47] (495,663)<p >1 kelime | SB pp. 42-47 />
+[48] (646,573)<div class='week-card' />
+	[49] (646,486)<h3 >Hafta 09 />
+	[50] (646,543)<p  />
+		[51] (641,543)<strong >Unit 5: My Dinosaur — Bölüm 1 />
+	[52] (646,604)<p >Dinozor tanıştırması ve bedeni öğrenme />
+	[53] (646,663)<p >9 kelime | SB pp. 48-53 />
+[54] (797,573)<div class='week-card' />
+	[55] (797,486)<h3 >Hafta 10 />
+	[56] (797,543)<p  />
+		[57] (797,543)<strong >Unit 5: My Dinosaur — Proje + Unit 6 Başlangıcı />
+	[58] (797,604)<p >Dinozor sunumu ve piknik tanıştırması />
+	[59] (797,663)<p >1 kelime | SB pp. 54-57 />
+[60] (193,865)<div class='week-card' />
+	[61] (193,777)<h3 >Hafta 11 />
+	[62] (193,835)<p  />
+		[63] (177,834)<strong >Unit 6: A Picnic — Bölüm 2 />
+	[64] (193,896)<p >Piknik yiyecekleri ve tamamlama />
+	[65] (193,954)<p >8 kelime | SB pp. 58-63 />
+[66] (344,865)<div class='week-card' />
+	[67] (344,777)<h3 >Hafta 12 />
+	[68] (344,835)<p  />
+		[69] (334,834)<strong >Checkpoint 3 + Final Hafta />
+	[70] (344,896)<p >Tüm dönem özeti ve kutlama />
+	[71] (344,954)<p >1 kelime | SB pp. 64-65 />

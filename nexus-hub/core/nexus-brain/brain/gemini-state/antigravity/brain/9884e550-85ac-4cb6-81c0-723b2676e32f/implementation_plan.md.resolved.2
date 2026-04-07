@@ -1,0 +1,36 @@
+# English Learning Hub: Gelişmiş Özellikler ve Güvenlik Planı
+
+Bu plan, kullanıcının "öğrenci sadece belirlenen haftayı görsün", "öğretmen ders ekleyebilsin" ve "herkes kendi hesabıyla takip etsin" isteklerini karşılamak üzere tasarlanmıştır.
+
+## Kullanıcı İncelemesi Gereken Noktalar
+> [!IMPORTANT]
+> Verilerin güvenliği için basit bir `users.json` kullanılacaktır. Gerçek dünya uygulaması için daha gelişmiş bir veritabanı önerilir ancak bu yerel çalışma için JSON yeterli olacaktır.
+
+## Önerilen Değişiklikler
+
+### 1. Kimlik Doğrulama ve Kullanıcı Yönetimi
+- **[YENİ] [users.json](file:///c:/Users/Deacjx/Documents/English code/_learning-plan/users.json)**:
+  - Kullanıcı adı, şifre ve rol (admin/teacher, student, parent) bilgilerini tutacak.
+- **[MODİFİYE] [server.py](file:///c:/Users/Deacjx/Documents/English code/_learning-plan/server.py)**:
+  - `/api/login` ve `/api/logout` endpoint'leri eklenecek.
+  - Basit bir şifre kontrol mekanizması kurulacak.
+  - API isteklerinde rol kontrolü (Middleware benzeri yapı) yapılacak.
+
+### 2. Müfredat ve Görünüm Kısıtlamaları
+- **[MODİFİYE] [curriculum.json](file:///c:/Users/Deacjx/Documents/English code/_learning-plan/curriculum.json)**:
+  - `active_week`: Öğrencinin görebileceği son haftayı belirten bir sayısal değer eklenecek.
+- **[MODİFİYE] [index.html](file:///c:/Users/Deacjx/Documents/English code/_learning-plan/web/index.html)**:
+  - Sayfa açılışında bir login overlay (giriş katmanı) gösterilecek.
+  - Rol değiştikçe görünen butonlar ve veriler değişecek.
+  - Öğretmen için "Yeni Hafta/Ders Ekle" formu eklenecek.
+
+### 3. İlerleme Takibi (Kişiye Özel)
+- **[MODİFİYE] [progress.json](file:///c:/Users/Deacjx/Documents/English code/_learning-plan/progress.json)**:
+  - İlerlemeler artık kullanıcı bazlı (user_id/username anahtarı altında) saklanacak.
+
+## Doğrulama Planı
+### Manuel Doğrulama
+1. Farklı rollerle (Öğrenci, Öğretmen, Veli) sisteme giriş yapılacak.
+2. Öğrencinin sadece `active_week` altındaki haftaları gördüğü teyit edilecek.
+3. Öğretmenin yeni bir ders ekleyip ardından öğrenci hesabıyla bu dersin göründüğü kontrol edilecek.
+4. Çerez/Session (basit JS tabanlı) üzerinden oturum kapatıldığında veriye erişilemediği test edilecek.

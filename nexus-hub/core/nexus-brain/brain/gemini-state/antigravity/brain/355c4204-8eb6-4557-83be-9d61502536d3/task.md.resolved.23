@@ -1,0 +1,11 @@
+# Task: Final Pipeline Implementation
+
+- [x] Research & Fix
+    - [x] Identify [package-lock.json](file:///c:/projects/Layers/LayersupCom_v2/package-lock.json) registry issue (E401)
+    - [x] Verify local fix (Bypassing lockfile)
+- [/] Implementation
+    - [ ] Create `azure-pipelines-final.yml`
+    - [ ] Update documentation for the final workflow
+- [ ] Final Handover
+    - [ ] Guide user on selecting the new pipeline in Azure
+    - [ ] Verify final live site

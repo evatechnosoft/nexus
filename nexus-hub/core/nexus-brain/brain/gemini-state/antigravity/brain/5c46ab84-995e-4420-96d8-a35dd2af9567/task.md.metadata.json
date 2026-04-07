@@ -1,0 +1,6 @@
+{
+  "artifactType": "ARTIFACT_TYPE_TASK",
+  "summary": "Task list for GitHub and DeanOS deployment. Includes initializing git, pushing to GitHub, and deploying to DeanOS via SSH.",
+  "updatedAt": "2026-03-27T14:32:34.481757700Z",
+  "version": "6"
+}

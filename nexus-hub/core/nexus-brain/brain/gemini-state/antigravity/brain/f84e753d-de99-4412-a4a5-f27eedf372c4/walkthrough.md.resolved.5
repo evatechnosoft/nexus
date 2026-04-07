@@ -1,0 +1,24 @@
+# Walkthrough - Final Redirection Diagnosis
+
+I have performed a thorough audit of the ZimaOS server and confirmed that the redirection to `.com.tr` is NOT coming from the Flask application.
+
+## 1. Server Audit (Verified Clean)
+- **Local Test:** I ran a `curl` command directly on the ZimaOS host hitting the `test` service (Port 5006).
+- **Result:** The server responded with a **200 OK** and the correct dashboard HTML. No redirect was sent.
+- **Source Code:** Searched the entire `/DATA/AppData/casatozima` directory for `.com.tr`. No redirection logic exists in the code anymore.
+
+## 2. Recommendation: Check External Factors
+Since the server is not redirecting, the redirect is happening at the **Cloudflare layer** or in your **Browser cache**.
+
+### Steps to Resolve:
+1.  **Cloudflare Page Rules:** Check your Cloudflare Dashboard for any "Page Rules" or "Redirect Rules" that might be forcing traffic from `.com` to `.com.tr`.
+2.  **Browser Cache:** If you previously had a `301 Moved Permanently` redirect, your browser has cached it. **Please try Incognito mode** or clear your browser cache specifically for `evaitec.com`.
+3.  **HSTS:** Ensure you don't have HSTS enabled on Cloudflare that might be creating persistent state.
+
+## 3. Configuration Summary
+All services are verified active on ZimaOS:
+- `test.evaitec.com` -> `localhost:5006` (200 OK)
+- `evaitec.com` -> `localhost:8001` (200 OK)
+- `db.evaitec.com` -> `localhost:8080` (200 OK)
+
+The server is now fully ready and properly configured for `.com`.

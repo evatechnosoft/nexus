@@ -1,0 +1,6 @@
+# Home Assistant Restoration Verification Checklist
+
+- [ ] Open Home Assistant at http://192.168.1.186:8123
+- [ ] Observe the page content (Login/Dashboard vs. Onboarding)
+- [ ] Determine if the restoration was successful
+- [ ] Update the user on the outcome

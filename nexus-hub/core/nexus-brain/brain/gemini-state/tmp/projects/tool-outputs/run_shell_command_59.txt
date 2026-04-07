@@ -1,0 +1,29 @@
+<tool_output_masked>
+Output too large. Showing first 8,000 and last 32,000 characters. For full output see: C:\Users\Deacjx\.gemini\tmp\projects\tool-outputs\session-a366de38-25fd-4d3a-9bce-f8a0bc9646e6\run_shell_command_1775210790476_0.txt
+Output: 2026-04-03 13:06:32,180 - INFO - Scanning C:/projects for projects...
+2026-04-03 13:06:32,252 - INFO - Scanning for global skills...
+2026-04-03 13:06:32,261 - INFO - New global skill found: README
+2026-04-03 13:06:32,261 - INFO - New global skill found: workflow- bundlesREADME
+2026-04-03 13:06:32,262 - INFO - New global skill found: workflow_bundles_readme
+2026-04-03 13:06:32,264 - INFO - New global skill found: 00-andruia-consultant/SKILL
+2026-04-03 13:06:32,265 - INFO - New global skill found: 007/SKILL
+2026-04-03 13:06:32,267 - INFO - New global skill found: 007/references/ai-agent-security
+2026-04-03 13:06:32,267 - INFO - New global skill found: 007/references/api-security-patterns
+2026-04-03 13:06:32,269 - INFO - New global skill found: 007/references/incident-playbooks
+
+... [435 lines omitted] ...
+
+2026-04-03 13:06:35,594 - INFO - New global skill found: youtube-summarizer/README
+2026-04-03 13:06:35,596 - INFO - New global skill found: youtube-summarizer/SKILL
+2026-04-03 13:06:35,599 - INFO - New global skill found: zapier-make-patterns/SKILL
+2026-04-03 13:06:35,600 - INFO - New global skill found: zendesk-automation/SKILL
+2026-04-03 13:06:35,601 - INFO - New global skill found: zeroize-audit/SKILL
+2026-04-03 13:06:35,602 - INFO - New global skill found: zod-validation-expert/SKILL
+2026-04-03 13:06:35,603 - INFO - New global skill found: zoho-crm-automation/SKILL
+2026-04-03 13:06:35,604 - INFO - New global skill found: zoom-automation/SKILL
+2026-04-03 13:06:35,604 - INFO - New global skill found: zustand-store-ts/SKILL
+2026-04-03 13:06:35,785 - INFO - Discovery complete.
+Process Group PGID: 25932
+
+Output too large. Full output available at: C:\Users\Deacjx\.gemini\tmp\projects\tool-outputs\session-a366de38-25fd-4d3a-9bce-f8a0bc9646e6\run_shell_command_run_shell_command_1775210790476_0_kn0sd6.txt
+</tool_output_masked>

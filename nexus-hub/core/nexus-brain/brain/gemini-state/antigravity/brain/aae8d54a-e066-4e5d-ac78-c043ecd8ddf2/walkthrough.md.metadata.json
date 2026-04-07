@@ -1,0 +1,6 @@
+{
+  "artifactType": "ARTIFACT_TYPE_WALKTHROUGH",
+  "summary": "Final report of the successfully bypassed IT-Inventory deployment on Coolify V4. All files were synced locally and deployed via Docker Compose to avoid ZimaOS-specific SSH/Git permission lockdowns.",
+  "updatedAt": "2026-03-31T17:33:42.345528700Z",
+  "version": "3"
+}

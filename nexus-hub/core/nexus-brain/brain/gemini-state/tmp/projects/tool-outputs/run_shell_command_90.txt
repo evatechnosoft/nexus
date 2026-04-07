@@ -1,0 +1,28 @@
+<tool_output_masked>
+Output: Directory: C:\projects\it-inventory
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         3/29/2026     08:55                .agents
+d-----         3/31/2026     15:05                .gemini
+d-----          4/1/2026     20:26                data
+d-----         3/24/2026     15:41                dist
+d-----         3/31/2026     10:33                it-inventory
+
+... [41 lines omitted] ...
+
+-a----         3/31/2026     12:33           5314 README.md
+-a----         3/30/2026     11:32            585 requirements.txt
+-a----         3/30/2026     11:32            565 run.ps1
+-a----         3/30/2026     11:32          10411 seed.py
+-a----         3/30/2026     11:32           3867 simulate_test.py
+-a----         3/31/2026     13:23           1951 test_graph_connection.py
+-a----         3/30/2026     11:32            609 test_output.txt
+-a----         3/30/2026     11:32           1610 test_parsing.py
+-a----         3/30/2026     11:32           5103 test_requests.xlsx
+-a----         3/30/2026     11:32            826 test_smtp.py
+Process Group PGID: 36012
+
+Output too large. Full output available at: C:\Users\Deacjx\.gemini\tmp\projects\tool-outputs\session-a366de38-25fd-4d3a-9bce-f8a0bc9646e6\run_shell_command_run_shell_command_1775209165278_1_e0fd4r.txt
+</tool_output_masked>

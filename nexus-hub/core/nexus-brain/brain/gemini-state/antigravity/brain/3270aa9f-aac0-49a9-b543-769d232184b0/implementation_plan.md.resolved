@@ -1,0 +1,25 @@
+# Run Local Flask Application
+
+The goal is to start the Flask application locally using Docker Compose since the user encountered issues with GitHub. We will focus on the `flask-dev` service which includes hot-reloading and debug mode.
+
+## Proposed Changes
+
+We will update the [docker-compose.yml](file:///c:/projects/github/casatozima/docker-compose.yml) to include a local PostgreSQL service and update the Flask services to depend on it. This ensures a fully functional local environment.
+
+### [MODIFY] [docker-compose.yml](file:///c:/projects/github/casaos-home-server/flask-app/docker-compose.yml)
+- Add a `db` service using the `postgres:16.2` image.
+- Update `DATABASE_URL` in Flask services to point to the new `db` container.
+- Add `depends_on` to ensure the database starts before the Flask app.
+
+### Docker Compose
+- Run `docker compose up -d` to start both the database and the development container.
+
+## Verification Plan
+
+### Automated Tests
+- Check container status: `docker ps --filter name=flask-`
+- Check logs: `docker logs flask-dev` and `docker logs flask-db`
+
+### Manual Verification
+- Access the application at `http://localhost:5007` in the browser.
+- Verify the index page loads and shows "API çalışıyor" status.

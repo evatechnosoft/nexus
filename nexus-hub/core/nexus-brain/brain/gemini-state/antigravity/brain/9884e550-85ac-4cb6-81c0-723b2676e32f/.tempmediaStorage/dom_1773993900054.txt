@@ -1,0 +1,53 @@
+← Geri Dön
+⚙️
+Hafta 01: Welcome!
+İlk gün — selamlaşma, sayılar, yaş
+📚 Kitap Referansları
+Student Book:
+Sayfa 4-7
+🗝️ Anahtar Kelimeler (Vocabulary)
+🎯
+Tıkla:
+Okunuşunu dinle | 🖱️
+Basılı Tut:
+Harf harf kodlamasını dinle
+hello
+merhaba
+🗣️ Okunuş:
+[he-low]
+🧩 Heceleme:
+hel-lo
+goodbye
+hoşça kal
+🗣️ Okunuş:
+[gud-bay]
+🧩 Heceleme:
+good-bye
+teacher
+öğretmen
+🗣️ Okunuş:
+[tii-çır]
+🧩 Heceleme:
+teach-er
+girl
+kız
+boy
+erkek çocuk
+good
+iyi
+[0] (500,500)<div class='drawer-overlay open' id='overlay' />
+⚙️ Ses Ayarları
+[1] (896,128)<label class='setting-label'>Okuma Hızı (Speed) />
+[2] (876,171)<input id='rate-slider' />
+0.8x
+[3] (896,234)<label class='setting-label'>Cinsiyet (Gender) />
+[4] (852,312)<div class='tone-btn' id='gen-female'>Kadın / Kız />
+	[5] (852,295)<span >👩 />
+[6] (940,312)<div class='tone-btn active' id='gen-male'>Erkek />
+	[7] (940,295)<span >👨 />
+[8] (896,410)<label class='setting-label'>Ses Tonu (Tone) />
+[9] (852,488)<div class='tone-btn' id='tone-child'>Çocuksu />
+	[10] (852,471)<span >👶 />
+[11] (940,488)<div class='tone-btn active' id='tone-adult'>Yetişkin />
+	[12] (940,471)<span >👩‍🏫 />
+* Ayarlarınız otomatik olarak kaydedilir. Spelling (Kodlama) modu düşük hızda daha iyi çalışır.

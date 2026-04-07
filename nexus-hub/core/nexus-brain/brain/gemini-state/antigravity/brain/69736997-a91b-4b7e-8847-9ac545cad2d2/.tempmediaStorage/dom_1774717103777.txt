@@ -1,0 +1,132 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (62,32)<a class='active d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none' href='/dashboard' />
+	[1] (24,32)<object  />
+	[2] (82,32)<span >Uptime Kuma />
+[3] (741,32)<a class='btn btn-info me-3' href='https://github.com/louislam/uptime-kuma/releases'>New Update />
+[4] (829,32)<a class='nav-link' href='/manage-status-page'>Status Pages />
+[5] (908,32)<a class='active nav-link' href='/dashboard'>Dashboard />
+[6] (967,32)<div  />
+	[7] (961,32)<div >D />
+[8] (68,96)<a class='btn btn-primary mb-3' href='/add'>Add New Monitor />
+[9] (44,155)<button class='btn btn-outline-normal ms-2'>Select />
+[10] (202,155)<a class='search-icon' />
+[11] (268,155)<input aria-label='Search monitored sites' class='form-control search-input' placeholder='Search…' />
+[12] (75,196)<button class='filter-dropdown-status' />
+	[13] (70,196)<div  />
+		[14] (70,196)<span >Status />
+	[15] (89,196)<span  />
+[16] (127,196)<button class='filter-dropdown-status' />
+	[17] (123,196)<div  />
+		[18] (123,196)<span >Active />
+	[19] (141,196)<span  />
+[20] (176,196)<button class='filter-dropdown-status' />
+	[21] (172,196)<div  />
+		[22] (172,196)<span >Tags />
+	[23] (187,196)<span  />
+[24] (173,255)<a class='item' href='/dashboard/1' />
+	[25] (173,257)<div  />
+		[26] (123,257)<div  />
+			[27] (123,252)<div >evaitec />
+				[28] (43,254)<span >100% />
+		[29] (273,257)<div  />
+			[30] (273,257)<div  />
+				[31] (273,257)<div  />
+					[32] (233,254)<div  />
+					[33] (238,254)<div  />
+					[34] (244,254)<div  />
+					[35] (249,254)<div  />
+					[36] (254,254)<div  />
+					[37] (259,254)<div  />
+					[38] (265,254)<div  />
+					[39] (270,254)<div  />
+					[40] (275,254)<div  />
+					[41] (280,254)<div  />
+					[42] (286,254)<div  />
+					[43] (291,254)<div  />
+					[44] (296,254)<div  />
+					[45] (301,254)<div  />
+					[46] (306,254)<div  />
+					[47] (312,254)<div  />
+[48] (173,306)<a class='item' href='/dashboard/2' />
+	[49] (173,308)<div  />
+		[50] (123,308)<div  />
+			[51] (123,303)<div >IT />
+				[52] (43,305)<span >100% />
+		[53] (273,308)<div  />
+			[54] (273,308)<div  />
+				[55] (273,308)<div  />
+					[56] (233,305)<div  />
+					[57] (238,305)<div  />
+					[58] (244,305)<div  />
+					[59] (249,305)<div  />
+					[60] (254,305)<div  />
+					[61] (259,305)<div  />
+					[62] (265,305)<div  />
+					[63] (270,305)<div  />
+					[64] (275,305)<div  />
+					[65] (280,305)<div  />
+					[66] (286,305)<div  />
+					[67] (291,305)<div  />
+					[68] (296,305)<div  />
+					[69] (301,305)<div  />
+					[70] (306,305)<div  />
+					[71] (312,305)<div  />
+[72] (173,357)<a class='active router-link-exact-active item' href='/dashboard/3' />
+	[73] (173,359)<div  />
+		[74] (123,359)<div  />
+			[75] (123,354)<div >Nextcloud />
+				[76] (43,356)<span >0% />
+		[77] (273,359)<div  />
+			[78] (273,359)<div  />
+				[79] (273,359)<div  />
+					[80] (233,356)<div  />
+					[81] (238,356)<div  />
+					[82] (244,356)<div  />
+					[83] (249,356)<div  />
+					[84] (254,356)<div  />
+					[85] (259,356)<div  />
+					[86] (265,356)<div  />
+					[87] (270,356)<div  />
+					[88] (275,356)<div  />
+					[89] (280,356)<div  />
+					[90] (286,356)<div  />
+					[91] (291,356)<div  />
+					[92] (296,356)<div  />
+					[93] (301,356)<div  />
+					[94] (306,356)<div  />
+					[95] (312,356)<div  />
+Nextcloud
+[96] (408,131)<a href='https://https://next.evaitec.com'>https://https//next.evaitec.com />
+[97] (371,177)<button class='btn btn-normal'>Pause />
+[98] (423,177)<a class='btn btn-normal' href='/edit/3'>Edit />
+[99] (475,177)<a class='btn btn-normal' href='/clone/3'>Clone />
+[100] (531,177)<button class='btn btn-danger'>Delete />
+Check every 60 seconds
+Down
+Response
+(Current)
+[101] (422,441)<a href='#' />
+	[102] (422,441)<span >N/A />
+Avg. Response
+(24-hour)
+N/A
+Uptime
+(24-hour)
+0%
+Uptime
+(30-day)
+0%
+[103] (939,533)<button class='btn btn-light dropdown-toggle btn-period-toggle'>Recent />
+[104] (936,819)<button class='btn btn-sm btn-outline-danger dropdown-toggle'>Clear Data />
+Status
+DateTime
+Message
+Down
+2026-03-28 19:58:22
+getaddrinfo ENOTFOUND https
+Added Successfully.
+
+</current_dom>

@@ -1,0 +1,13 @@
+- [ ] **Restoration & Line-Endings**
+    - [ ] Restore `deploy_deanos.sh` with LF
+    - [ ] Force LF on `entrypoint.sh` and `install.sh`
+- [ ] **Environment Configuration**
+    - [ ] Update `main.py` to listen on Port 8000 (Internal)
+    - [ ] Update `docker-compose.yml` to use `HOST_PORT` mapping
+    - [ ] Synchronize `.env.dev`, `.env.test`, `.env.prod` with `APP_PORT=8000`
+- [ ] **UI: Environment Badges**
+    - [ ] Finalize `base.html` badge styles (Yellow/Red/Green)
+- [ ] **Automation & Deployment**
+    - [ ] Update `deploy.ps1` with safety prompts
+    - [ ] Deploy to `test` branch -> Verify Port 9700 (Red Badge)
+    - [ ] Deploy to `main` branch -> Verify Port 9600 (Green Badge)

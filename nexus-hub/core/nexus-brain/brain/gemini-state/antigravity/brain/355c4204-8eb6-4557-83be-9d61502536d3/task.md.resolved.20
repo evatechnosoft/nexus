@@ -1,0 +1,13 @@
+# Task: NPM Deployment Revert & Release Fix
+
+- [x] Planning
+    - [x] Analyze local Docker failure
+    - [x] Analyze Release logs (Confirmed `VSTS` deployer with `type: Deployment` and `repoProvider: Git`)
+    - [x] Create [implementation_plan.md](file:///C:/Users/Deacjx/.gemini/antigravity/brain/355c4204-8eb6-4557-83be-9d61502536d3/implementation_plan.md) for NPM revert & artifact fix
+- [x] Implementation
+    - [x] Revert [azure-pipelines-1.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-1.yml) to NPM-based configuration
+    - [x] Push revert commit to `dev` and `Dev` branches
+- [/] Verification
+    - [ ] Coordinate UI-based Artifact fix (Switch `Git` source to `Build` source)
+    - [ ] Verify successful Build and Release in Azure DevOps
+    - [ ] Confirm Web App is updated

@@ -1,0 +1,262 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (15,24)<ha-svg-icon  />
+Home Assistant
+[1] (69,73)<ha-md-list-item  />
+	[2] (15,73)<ha-svg-icon  />
+	[3] (80,73)<span >Ana Ekran />
+[4] (69,115)<ha-md-list-item class='  ' />
+	[5] (15,115)<ha-svg-icon  />
+	[6] (80,115)<span >Harita />
+[7] (69,157)<ha-md-list-item class='  ' />
+	[8] (15,157)<ha-svg-icon  />
+	[9] (80,157)<span >Enerji />
+[10] (69,198)<ha-md-list-item class='  ' />
+	[11] (15,198)<ha-svg-icon  />
+	[12] (80,198)<span >Günlük />
+[13] (69,240)<ha-md-list-item class='  ' />
+	[14] (15,240)<ha-svg-icon  />
+	[15] (80,240)<span >Geçmiş />
+[16] (69,282)<ha-md-list-item class='  ' />
+	[17] (15,282)<ha-icon  />
+		[18] (15,282)<ha-svg-icon  />
+	[19] (80,282)<span >HACS />
+[20] (69,323)<ha-md-list-item class='  ' />
+	[21] (15,323)<ha-svg-icon  />
+	[22] (80,323)<span >Medya />
+[23] (69,365)<ha-md-list-item class='  ' />
+	[24] (15,365)<ha-svg-icon  />
+	[25] (80,365)<span >Yapılacaklar listeleri />
+[26] (69,819)<ha-md-list-item class='  ' />
+	[27] (15,819)<ha-svg-icon  />
+	[28] (80,819)<span >Geliştirici araçları />
+[29] (69,861)<ha-md-list-item class='configuration selected' href='/config' />
+	[30] (15,861)<ha-svg-icon  />
+	[31] (80,861)<span >Ayarlar />
+[32] (69,927)<ha-md-list-item class='notifications' />
+	[33] (15,927)<ha-svg-icon  />
+	[34] (80,927)<span >Bildirimler />
+[35] (69,969)<ha-md-list-item class='user ' href='/profile' />
+	[36] (15,969)<ha-user-badge  />
+		[37] (15,969)<div >D />
+	[38] (80,969)<span >Dean />
+[39] (157,24)<a href='/config' />
+	[40] (157,24)<ha-icon-button-arrow-prev  />
+		[41] (157,24)<ha-icon-button  />
+			[42] (157,24)<mwc-icon-button  />
+				[43] (157,24)<ha-svg-icon  />
+[44] (471,24)<a href='/config/integrations' />
+	[45] (471,24)<ha-tab  />
+		[46] (471,24)<div aria-label='Entegrasyonlar' role='tab' />
+			[47] (471,23)<span >Entegrasyonlar />
+[48] (544,24)<a href='/config/devices' />
+	[49] (544,24)<ha-tab  />
+		[50] (544,24)<div aria-label='Cihazlar' role='tab' />
+			[51] (544,24)<span >Cihazlar />
+[52] (606,24)<a href='/config/entities' />
+	[53] (606,24)<ha-tab  />
+		[54] (606,24)<div aria-label='Varlıklar' role='tab' />
+			[55] (606,24)<span >Varlıklar />
+[56] (673,24)<a href='/config/helpers' />
+	[57] (673,24)<ha-tab  />
+		[58] (673,24)<div aria-label='Yardımcılar' role='tab' />
+			[59] (673,24)<span >Yardımcılar />
+[60] (981,24)<ha-svg-icon  />
+[61] (550,73)<ha-outlined-field  />
+	[62] (560,73)<div  />
+		[63] (556,73)<input class='input' placeholder='Ara' />
+[64] (157,73)<ha-svg-icon class='prefix' />
+[65] (978,73)<ha-svg-icon  />
+[66] (229,141)<a class='ripple-anchor' href='/config/integrations/integration/shopping_list' />
+	[67] (229,136)<ha-integration-header  />
+		[68] (229,136)<div  />
+			[69] (166,136)<img  />
+			[70] (240,136)<div  />
+				[71] (240,136)<div class='primary ' role='heading'>Alışveriş listesi />
+			[72] (301,136)<ha-icon-next  />
+[73] (176,198)<a href='/config/entities?historyBack=1&domain=shopping_list' />
+	[74] (176,198)<ha-button >1 varlık />
+[75] (399,141)<a class='ripple-anchor' href='/config/integrations/integration/androidtv_remote' />
+	[76] (399,137)<ha-integration-header  />
+		[77] (399,137)<div  />
+			[78] (336,137)<img  />
+			[79] (410,137)<div  />
+				[80] (410,129)<div class='primary has-secondary' role='heading'>Android TV Remote />
+				[81] (410,147)<div  />
+					[82] (361,147)<ha-svg-icon  />
+					[83] (416,147)<span >Kurulum başarısız oldu, yeniden denenecek />
+			[84] (471,137)<ha-icon-next  />
+[85] (344,198)<a href='/config/devices/device/2769412fe837a0c27728a89ef73ff53c' />
+	[86] (344,198)<ha-button >1 cihaz />
+[87] (569,141)<a class='ripple-anchor' href='/config/integrations/integration/backup' />
+	[88] (569,136)<ha-integration-header  />
+		[89] (569,136)<div  />
+			[90] (506,136)<img  />
+			[91] (580,136)<div  />
+				[92] (580,136)<div class='primary ' role='heading'>Backup />
+			[93] (641,136)<ha-icon-next  />
+[94] (517,198)<a href='/config/devices/device/02f4219ca7a4f7ca0118197b13d2d3f0' />
+	[95] (517,198)<ha-button >1 hizmet />
+[96] (739,141)<a class='ripple-anchor' href='/config/integrations/integration/bluetooth' />
+	[97] (739,137)<ha-integration-header  />
+		[98] (739,137)<div  />
+			[99] (676,137)<img  />
+			[100] (750,137)<div  />
+				[101] (750,129)<div class='primary has-secondary' role='heading'>Bluetooth />
+				[102] (750,147)<div  />
+					[103] (701,147)<ha-svg-icon  />
+					[104] (756,147)<span >Kurulum başarısız oldu, yeniden denenecek />
+			[105] (810,137)<ha-icon-next  />
+[106] (686,198)<a href='/config/integrations/integration/bluetooth' />
+	[107] (686,198)<ha-button >1 varlık />
+[108] (909,141)<a class='ripple-anchor' href='/config/integrations/integration/dlna_dmr' />
+	[109] (909,141)<ha-integration-header  />
+		[110] (909,141)<div  />
+			[111] (846,141)<img  />
+			[112] (919,141)<div  />
+				[113] (919,141)<div class='primary ' role='heading'>DLNA Digital Media Renderer />
+			[114] (980,141)<ha-icon-next  />
+[115] (854,198)<a href='/config/devices/device/c3414450c9da1b48d352756b72b5ca56' />
+	[116] (854,198)<ha-button >1 cihaz />
+[117] (229,263)<a class='ripple-anchor' href='/config/integrations/integration/esphome' />
+	[118] (229,258)<ha-integration-header  />
+		[119] (229,258)<div  />
+			[120] (166,258)<img  />
+			[121] (240,258)<div  />
+				[122] (240,258)<div class='primary ' role='heading'>ESPHome />
+			[123] (301,258)<ha-icon-next  />
+[124] (176,319)<a href='/config/integrations/integration/esphome' />
+	[125] (176,319)<ha-button >1 varlık />
+[126] (399,263)<a class='ripple-anchor' href='/config/integrations/integration/cast' />
+	[127] (399,258)<ha-integration-header  />
+		[128] (399,258)<div  />
+			[129] (336,258)<img  />
+			[130] (410,258)<div  />
+				[131] (410,258)<div class='primary ' role='heading'>Google Cast />
+			[132] (471,258)<ha-icon-next  />
+[133] (344,319)<a href='/config/devices/device/46e1efec6efb0bf037a1f038c5ff59a5' />
+	[134] (344,319)<ha-button >1 cihaz />
+[135] (569,263)<a class='ripple-anchor' href='/config/integrations/integration/google_translate' />
+	[136] (569,263)<ha-integration-header  />
+		[137] (569,263)<div  />
+			[138] (506,263)<img  />
+			[139] (580,263)<div  />
+				[140] (580,263)<div class='primary ' role='heading'>Google Translate text-to-speech />
+			[141] (641,263)<ha-icon-next  />
+[142] (523,319)<a href='/config/entities?historyBack=1&domain=google_translate' />
+	[143] (523,319)<ha-button >2 varlıklar />
+[144] (739,263)<a class='ripple-anchor' href='/config/integrations/integration/sun' />
+	[145] (739,258)<ha-integration-header  />
+		[146] (739,258)<div  />
+			[147] (676,258)<img  />
+			[148] (750,258)<div  />
+				[149] (750,258)<div class='primary ' role='heading'>Güneş />
+			[150] (810,258)<ha-icon-next  />
+[151] (687,319)<a href='/config/devices/device/0a68562d1dc2bdf148c26ecc44d2076d' />
+	[152] (687,319)<ha-button >1 hizmet />
+[153] (909,263)<a class='ripple-anchor' href='/config/integrations/integration/hacs' />
+	[154] (909,258)<ha-integration-header  />
+		[155] (909,258)<div  />
+			[156] (846,258)<img  />
+			[157] (919,258)<div  />
+				[158] (919,258)<div class='primary ' role='heading'>HACS />
+			[159] (980,258)<ha-icon-next  />
+[160] (856,319)<a href='/config/devices/device/889fdefe4b70de0da84e37d5833f478c' />
+	[161] (856,319)<ha-button >1 hizmet />
+[162] (229,384)<a class='ripple-anchor' href='/config/integrations/integration/ibeacon' />
+	[163] (229,379)<ha-integration-header  />
+		[164] (229,379)<div  />
+			[165] (166,379)<img  />
+			[166] (240,379)<div  />
+				[167] (240,379)<div class='primary ' role='heading'>iBeacon Tracker />
+			[168] (301,379)<ha-icon-next  />
+[169] (181,441)<a href='/config/devices/dashboard?historyBack=1&domain=ibeacon' />
+	[170] (181,441)<ha-button >6 cihazlar />
+[171] (399,384)<a class='ripple-anchor' href='/config/integrations/integration/webostv' />
+	[172] (399,379)<ha-integration-header  />
+		[173] (399,379)<div  />
+			[174] (336,379)<img  />
+			[175] (410,379)<div  />
+				[176] (410,379)<div class='primary ' role='heading'>LG webOS TV />
+			[177] (471,379)<ha-icon-next  />
+[178] (344,441)<a href='/config/devices/device/55e3d16c4051291abfdcd69253e22d0e' />
+	[179] (344,441)<ha-button >1 cihaz />
+[180] (569,384)<a class='ripple-anchor' href='/config/integrations/integration/met' />
+	[181] (569,384)<ha-integration-header  />
+		[182] (569,384)<div  />
+			[183] (506,384)<img  />
+			[184] (580,384)<div  />
+				[185] (580,384)<div class='primary ' role='heading'>Meteorologisk institutt (Met.no) />
+			[186] (641,384)<ha-icon-next  />
+[187] (517,441)<a href='/config/devices/device/f7e46f8889f20add9e0042cec70ad155' />
+	[188] (517,441)<ha-button >1 hizmet />
+[189] (739,384)<a class='ripple-anchor' href='/config/integrations/integration/mobile_app' />
+	[190] (739,379)<ha-integration-header  />
+		[191] (739,379)<div  />
+			[192] (676,379)<img  />
+			[193] (750,379)<div  />
+				[194] (750,379)<div class='primary ' role='heading'>Mobil uygulama />
+			[195] (810,379)<ha-icon-next  />
+[196] (691,441)<a href='/config/devices/dashboard?historyBack=1&domain=mobile_app' />
+	[197] (691,441)<ha-button >2 cihazlar />
+[198] (909,384)<a class='ripple-anchor' href='/config/integrations/integration/owntracks' />
+	[199] (909,379)<ha-integration-header  />
+		[200] (909,379)<div  />
+			[201] (846,379)<img  />
+			[202] (919,379)<div  />
+				[203] (919,379)<div class='primary ' role='heading'>OwnTracks />
+			[204] (980,379)<ha-icon-next  />
+[205] (855,441)<a href='/config/integrations/integration/owntracks' />
+	[206] (855,441)<ha-button >1 varlık />
+[207] (229,501)<a class='ripple-anchor' href='/config/integrations/integration/radio_browser' />
+	[208] (229,501)<ha-integration-header  />
+		[209] (229,501)<div  />
+			[210] (166,501)<img  />
+			[211] (240,501)<div  />
+				[212] (240,501)<div class='primary ' role='heading'>Radio Browser />
+			[213] (301,501)<ha-icon-next  />
+[214] (176,553)<a href='/config/integrations/integration/radio_browser' />
+	[215] (176,553)<ha-button >1 varlık />
+[216] (399,501)<a class='ripple-anchor' href='/config/integrations/integration/samsungtv' />
+	[217] (399,501)<ha-integration-header  />
+		[218] (399,501)<div  />
+			[219] (336,501)<img  />
+			[220] (410,501)<div  />
+				[221] (410,501)<div class='primary ' role='heading'>Samsung Smart TV />
+			[222] (471,501)<ha-icon-next  />
+[223] (344,553)<a href='/config/devices/device/c3414450c9da1b48d352756b72b5ca56' />
+	[224] (344,553)<ha-button >1 cihaz />
+[225] (569,501)<a class='ripple-anchor' href='/config/integrations/integration/traccar' />
+	[226] (569,501)<ha-integration-header  />
+		[227] (569,501)<div  />
+			[228] (506,501)<img  />
+			[229] (580,501)<div  />
+				[230] (580,501)<div class='primary ' role='heading'>Traccar Client />
+			[231] (641,501)<ha-icon-next  />
+[232] (516,553)<a href='/config/integrations/integration/traccar' />
+	[233] (516,553)<ha-button >1 varlık />
+[234] (739,501)<a class='ripple-anchor' href='/config/integrations/integration/tuya' />
+	[235] (739,501)<ha-integration-header  />
+		[236] (739,501)<div  />
+			[237] (676,501)<img  />
+			[238] (750,501)<div  />
+				[239] (750,501)<div class='primary ' role='heading'>Tuya />
+			[240] (810,501)<ha-icon-next  />
+[241] (691,553)<a href='/config/devices/dashboard?historyBack=1&domain=tuya' />
+	[242] (691,553)<ha-button >8 cihazlar />
+[243] (909,501)<a class='ripple-anchor' href='/config/integrations/integration/upnp' />
+	[244] (909,501)<ha-integration-header  />
+		[245] (909,501)<div  />
+			[246] (846,501)<img  />
+			[247] (919,501)<div  />
+				[248] (919,501)<div class='primary ' role='heading'>UPnP/IGD />
+			[249] (980,501)<ha-icon-next  />
+[250] (854,553)<a href='/config/devices/device/877b800e27653574bc18c7b7df8b51de' />
+	[251] (854,553)<ha-button >1 cihaz />
+[252] (937,965)<button aria-label='Entegrasyon ekle' class='mdc-fab  mdc-fab--extended ' />
+	[253] (944,965)<span >Entegrasyon ekle />
+[254] (895,965)<ha-svg-icon  />
+
+</current_dom>

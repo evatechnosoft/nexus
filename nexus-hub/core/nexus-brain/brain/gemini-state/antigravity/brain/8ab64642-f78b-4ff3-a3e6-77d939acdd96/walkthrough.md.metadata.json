@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_WALKTHROUGH",
+  "summary": "Walkthrough of the latest changes to the Evaitec project: Formspree integration, legacy cleanup, and Docker verification. Also documents a identified port conflict and external connectivity issue.",
+  "updatedAt": "2026-03-26T07:16:17.875677600Z"
+}

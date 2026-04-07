@@ -1,0 +1,44 @@
+# [Home Assistant] Docker Altyapı ve Xiaomi Entegrasyon Planı
+
+Konteyner tabanlı Home Assistant (HA) kurulumunuzda Add-on mağazasının eksikliğini gidermek ve Xiaomi BT (Mi Temp V2) sensörlerinizi bağlamak için kapsamlı bir iyileştirme planıdır.
+
+## Kullanıcı İncelemesi Gerekli
+
+- **Bluetooth Erişimi**: ZimaOS donanımınızın Bluetooth adaptörünü Docker konteynerine aktarmamız gerekecek. Bu, mevcut HA konteynerinin yapılandırmasında değişiklik (host network ve dbus map) gerektirir.
+- **HACS Kurulumu**: Özel entegrasyonlar (Xiaomi Miot Auto vb.) için HACS kurmamız gerekecek.
+- **Add-on Alternatifleri**: Add-on'lar aslında birer Docker konteyneridir. İstediğiniz "Add-on"ları (MQTT, Zigbee2MQTT vb.) ZimaOS üzerinde ayrı birer uygulama olarak kurup HA ile bağlayacağız.
+
+## Önerilen Çözümler
+
+### 1. HACS (Community Store) Kurulumu
+En iyi Xiaomi entegrasyonları (Xiaomi Miot Auto) ve özel kartlar için HACS'ı terminal üzerinden kuracağız.
+
+### 2. Bluetooth Passthrough & Xiaomi Sensör Fix
+Xiaomi Mi Temp V2 sensörlerin sorunsuz çalışması için:
+- **NetHost Yapılandırması**: HA konteynerini `network: host` moduna alıp `/var/run/dbus` dizinini konteynere bağlayacağız.
+- **Xiaomi Miot Auto / BLE**: Resmi Xiaomi entegrasyonu yerine daha stabil olan `Xiaomi Miot Auto` veya doğrudan `Xiaomi BLE` entegrasyonuna geçeceğiz.
+
+### 3. "Add-on" Stratejisi
+Add-on mağazası yerine ihtiyaç duyduğunuz servisleri şu şekilde kuracağız:
+- **MQTT**: Ayrı bir `mosquitto` konteyneri.
+- **Zigbee**: `Zigbee2MQTT` konteyneri.
+- Bu servisleri Portainer veya CasaOS üzerinden kurup HA'da `Integrations` kısmından IP ile bağlayacağız.
+
+## Uygulama Planı
+
+1. **HA Altyapı Güncelleme**: Bluetooth erişimi için HA Docker yapılandırmasını güncelleyeceğiz.
+2. **HACS Kurulumu**: SSH üzerinden HACS script'ini çalıştıracağız.
+3. **Xiaomi Entegrasyonu**: HA arayüzünden Bluetooth adaptörünü tanıtıp sensörleri (gerekiyorsa Encryption Key/Bind Key ile) ekleyeceğiz.
+4. **YAML Yönetimi**: Portainer üzerinden veya SSH ile `configuration.yaml` dosyasını daha rahat yönetebilmeniz için SSH üzerinden düzenleme rehberini kullanacağız.
+
+## Açık Sorular
+
+- **[ÖNEMLİ]**: Mevcut Home Assistant kurulumunuzu CasaOS App Store'dan mı yaptınız yoksa Portainer/Custom Compose ile mi kurdunuz? (Konteyner ayarlarını nerede güncelleyeceğimiz için önemli).
+- **[ÖNEMLİ]**: Mi Temp V2 sensörleriniz için "Bind Key" (şifreleme anahtarı) biliyor musunuz? (Bilmiyorsanız, otomatik çeken yöntemleri deneyeceğiz).
+
+## Doğrulama Planı
+
+### Manuel Doğrulama
+- HA "Devices & Services" kısmında Bluetooth adaptörünün görüldüğünün teyidi.
+- Xiaomi Mi Temp V2 verilerinin (Sıcaklık/Nem) anlık olarak HA paneline düşmesi.
+- HACS menüsünün HA kenar çubuğunda belirmesi.

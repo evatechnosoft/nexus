@@ -1,0 +1,13 @@
+# Task: Verify character movement and animation
+
+## Plan
+- [ ] Open http://localhost:5173/ (already open)
+- [ ] Observe initial character position
+- [ ] Test moving RIGHT (ArrowRight)
+    - [ ] Character faces right
+    - [ ] Walking animation plays
+- [ ] Test moving LEFT (ArrowLeft)
+    - [ ] Character faces left
+    - [ ] Walking animation plays
+- [ ] Verify direction flipping is correct (not reversed)
+- [ ] Record the interactions (automatic)

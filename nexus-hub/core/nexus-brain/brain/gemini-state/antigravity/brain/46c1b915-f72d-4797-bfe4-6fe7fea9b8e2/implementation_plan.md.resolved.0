@@ -1,0 +1,19 @@
+# Fix GoogleSignIn Constructor Error
+
+The `google_sign_in` package version 7.2.0 appears to have removed or renamed the unnamed constructor, causing a compilation error in [google_auth.dart](file:///c:/projects/EvAnotes/mobile/lib/config/google_auth.dart).
+
+## Proposed Changes
+
+### Configuration
+
+#### [MODIFY] [google_auth.dart](file:///c:/projects/EvAnotes/mobile/lib/config/google_auth.dart)
+- Update the `googleSignInProvider` to use the correct constructor (likely `GoogleSignIn.standard` or `GoogleSignIn.instance`).
+
+## Verification Plan
+
+### Automated Tests
+- Run `flutter analyze` to ensure the compilation error is resolved.
+- Run existing tests if applicable.
+
+### Manual Verification
+- Verify that Google Sign-In still works in the app (if an emulator is available).

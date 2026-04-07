@@ -1,0 +1,46 @@
+# Xiaomi Integration Plan (Home Assistant & ESPHome)
+
+The goal is to connect your Xiaomi devices to Home Assistant using your account password (via Xiaomi Miot Auto) and also display the local Xiaomi Temp v2 sensor data on your Smart Station's screen.
+
+## User Review Required
+
+> [!IMPORTANT]
+> To connect "via password", we recommend using the **Xiaomi Miot Auto** integration. This requires **HACS** to be installed in your Home Assistant. If HACS is not installed, we should install it first.
+
+> [!TIP]
+> Since we already have the **Bind Key** for your `LYWSD03MMC` sensor, we will also add it directly to your ESPHome configuration. This ensures the data is available on the display even without an internet connection.
+
+## Proposed Changes
+
+### 1. Home Assistant Setup (Manual Intervention)
+You will need to perform these steps in your Home Assistant UI:
+1. Open Home Assistant (usually at `ha.evaitec.com`).
+2. Go to **HACS** -> **Integrations**.
+3. Search for **Xiaomi Miot Auto** and install it.
+4. Restart Home Assistant.
+5. Go to **Settings** -> **Devices & Services** -> **Add Integration**.
+6. Search for **Xiaomi Miot Auto** and select **Log in with Mi Account**.
+7. Enter your Xiaomi credentials. All your devices (including the Temp v2) will be discovered automatically.
+
+---
+
+### 2. ESPHome Configuration (`smart-station.yaml`)
+
+We will update the ESPHome configuration to:
+- Define the Xiaomi Temp v2 sensor locally using the MAC and Bind Key.
+- Update the display logic to show the Xiaomi data.
+
+#### [MODIFY] [smart-station.yaml](file:///d:/OS/Zimaos/smart-station.yaml)
+- Add `xiaomi_lywsd03mmc` sensor platform.
+- Update `display` lambda to include Xiaomi sensor data.
+
+## Open Questions
+
+- Do you have **HACS** installed and working in your Home Assistant?
+- What names would you like for the Xiaomi sensor entities (e.g., "Balkon", "Yatak Odası")?
+
+## Verification Plan
+
+### Manual Verification
+1. **HA Side**: Verify that Xiaomi devices appear in Home Assistant after logging in.
+2. **ESPHome Side**: Flash the updated `smart-station.yaml` and verify that the display shows the Xiaomi temperature and humidity.

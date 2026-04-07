@@ -1,0 +1,20 @@
+# Plan - Fix Invalid Constant Value Error
+
+The [app_theme.dart](file:///c:/projects/Antigravity/shmarthouse/shmarthouse_app/lib/core/theme/app_theme.dart) file uses `const` constructors for `TextTheme`, `AppBarTheme`, and `NavigationRailThemeData`. However, these constructors are passed values from [AppTextStyles](file:///c:/projects/Antigravity/shmarthouse/shmarthouse_app/lib/core/theme/app_text_styles.dart#7-58) (like `AppTextStyles.display`), which are implemented using `GoogleFonts` getters. Since `GoogleFonts` methods are runtime function calls, they cannot be evaluated as compile-time constants, leading to the "Invalid constant value" error.
+
+## Proposed Changes
+
+### Theme Component
+
+#### [MODIFY] [app_theme.dart](file:///c:/projects/Antigravity/shmarthouse/shmarthouse_app/lib/core/theme/app_theme.dart)
+- Remove `const` from `TextTheme` initialization.
+- Remove `const` from `AppBarTheme` initialization.
+- Remove `const` from `NavigationRailThemeData` initialization.
+
+## Verification Plan
+
+### Automated Tests
+- Run `flutter analyze` to ensure there are no more static analysis errors.
+
+### Manual Verification
+- Verify that the app builds successfully.

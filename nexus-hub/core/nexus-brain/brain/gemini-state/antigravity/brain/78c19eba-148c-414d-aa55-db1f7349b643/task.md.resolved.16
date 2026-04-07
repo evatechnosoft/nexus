@@ -1,0 +1,18 @@
+# Task: Hybrid Home Server Setup (CasaOS + Community Stores)
+
+## Research and Planning
+- [x] Research ZimaOS/Umbrel generic Linux compatibility (2024 restrictions identified)
+- [x] Formulate Hybrid Strategy: Stable CasaOS + BigBear Store
+- [x] Identify definitive community app store URLs
+
+## Implementation
+- [x] Perform Total Reset (Unregister old distros)
+- [x] Fresh Install Ubuntu 22.04 as host
+- [x] Install Stable CasaOS v0.4.15 (100% WSL2 compatibility)
+- [x] Register BigBear App Store (extensive 200+ app library)
+- [x] Register ZimaOS Community App Store (Zima-specific apps)
+
+## Verification
+- [x] Verify Dashboard access on http://172.28.133.127
+- [x] Verify App Store visibility and content
+- [x] Confirm conflict-free registration of all sources

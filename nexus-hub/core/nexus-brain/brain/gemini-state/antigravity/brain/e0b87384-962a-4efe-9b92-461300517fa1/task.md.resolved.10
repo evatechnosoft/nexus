@@ -1,0 +1,9 @@
+# Migration to ZimaOS (casatozima)
+
+- [ ] Create the new project directory `casatozima`
+- [ ] Copy essential files from `flask-app` (Dockerfile, compose, src, requirements)
+- [ ] Create a clean `.gitignore` file
+- [ ] Initialize a new Git repository in `casatozima`
+- [ ] Add a migration guide/README to the new repository
+- [ ] (Optional) Create the repository on GitHub using MCP if requested
+- [ ] Finalize the "clean" state for ZimaOS deployment

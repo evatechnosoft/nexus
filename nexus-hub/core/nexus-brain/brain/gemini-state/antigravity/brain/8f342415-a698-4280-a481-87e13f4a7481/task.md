@@ -1,0 +1,18 @@
+# Settings Reorganization and Gauge Alignment
+
+- [x] Project Research and Planning
+    - [x] Explore project structure
+    - [x] Check dependencies
+    - [x] Create implementation plan
+- [x] Copy project to new directory
+- [x] Refactor Settings Screen
+    - [x] Group Gauges & Specifics (Style, Scale, Align)
+    - [x] Group Layout & Slots (Panel, Inner, Zones)
+    - [x] Group Aesthetics (BG, Color, Theme)
+    - [x] Group General (Units, Numbers)
+    - [x] Improve UI Component feedback
+- [x] Verify Gauge Shifting Logic
+    - [x] Test vertical alignment sliders
+    - [x] Verify immediate feedback in preview
+- [x] Final Verification and Walkthrough [x]
+    - [x] Create walkthrough artifact

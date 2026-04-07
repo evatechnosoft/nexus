@@ -1,0 +1,16 @@
+[
+  {
+    "sessionId": "25b50c04-b20f-4168-ad7d-45642d9c2b3f",
+    "messageId": 0,
+    "type": "user",
+    "message": "hafıza yolu yaptım sen ve claude için onu versem gerekli şeyleri öğrenebilirmisin C:\\Users\\Deacjx\\.ai",
+    "timestamp": "2026-04-03T09:22:40.755Z"
+  },
+  {
+    "sessionId": "25b50c04-b20f-4168-ad7d-45642d9c2b3f",
+    "messageId": 1,
+    "type": "user",
+    "message": "tamam skiller guideler diğer şeylere ulaşımında var değil mi",
+    "timestamp": "2026-04-03T09:27:26.889Z"
+  }
+]

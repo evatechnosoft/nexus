@@ -1,0 +1,146 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (71,35)<a class='navbar-brand' href='/'>IT INVENTORY />
+	[1] (20,35)<i  />
+	[2] (117,35)<span >PRO />
+[3] (662,35)<a class='nav-link px-3' href='/'>Dashboard />
+	[4] (637,34)<i  />
+[5] (738,35)<a class='nav-link px-3' href='/requests/'>Talepler />
+	[6] (719,34)<i  />
+[7] (809,35)<a class='nav-link px-3' href='/inventory/'>Envanter />
+	[8] (788,34)<i  />
+[9] (882,35)<a class='nav-link px-3' href='/assignments/'>Atamalar />
+	[10] (861,34)<i  />
+[11] (951,35)<a class='nav-link dropdown-toggle px-3' href='#'>Excel />
+	[12] (935,34)<i  />
+[13] (955,85)<a class='dropdown-item py-2' href='/excel/export'>Dışa Aktar />
+	[14] (932,85)<i  />
+[15] (955,121)<a class='dropdown-item py-2' href='/excel/import-page'>İçe Aktar />
+	[16] (932,121)<i  />
+Cihaz Talepleri
+Yeni Talep
+[17] (82,199)<label class='form-label small text-muted mb-1'>Ara (isim, email, telefon, KSI kodu) />
+[18] (191,229)<input class='form-control' placeholder='Örn: KSI-0001 veya ali@...' />
+[19] (353,199)<label class='form-label small text-muted mb-1'>Durum />
+[20] (458,229)<select class='form-select' />
+[21] (600,199)<label class='form-label small text-muted mb-1'>Departman />
+[22] (697,229)<select class='form-select' />
+[23] (882,229)<button class='btn btn-dark flex-fill'>Filtrele />
+[24] (962,229)<a class='btn btn-outline-secondary' href='/requests/' />
+	[25] (962,229)<i  />
+#
+Kişi Kodu
+Talep Eden
+İletişim
+Departman
+Cihaz
+Durum
+Tarih
+İşlem
+34
+KSI-0007
+Eralp Yıldız
+inden ulaşabilirsiniz.
+eralp.yildiz@findtalent.net
+5318748359
+Yazılımcı
+Laptop
+Onay Bekliyor
+27.03.2026
+[26] (915,360)<a class='btn btn-sm btn-primary' href='/requests/34/detail'>İşlem />
+	[27] (904,360)<i  />
+33
+KSI-0007
+Eralp Yıldız
+inden ulaşabilirsiniz.
+eralp.yildiz@findtalent.net
+5318748359
+Yazılımcı
+Laptop
+Onay Bekliyor
+27.03.2026
+[28] (915,439)<a class='btn btn-sm btn-primary' href='/requests/33/detail'>İşlem />
+	[29] (904,439)<i  />
+32
+KSI-0012
+Elçin Ergül
+inden ulaşabilirsiniz.
+elcin.ergul@findtalent.net
+5318748359
+Yazılımcı
+Laptop
+Onay Bekliyor
+27.03.2026
+[30] (915,519)<a class='btn btn-sm btn-primary' href='/requests/32/detail'>İşlem />
+	[31] (904,518)<i  />
+31
+KSI-0007
+Eralp Yıldız
+inden ulaşabilirsiniz.
+eralp.yildiz@findtalent.net
+Recruiter
+Masaüstü
+Onay Bekliyor
+26.03.2026
+[32] (915,598)<a class='btn btn-sm btn-primary' href='/requests/31/detail'>İşlem />
+	[33] (904,598)<i  />
+30
+KSI-0007
+Eralp Yıldız
+inden ulaşabilirsiniz.
+eralp.yildiz@findtalent.net
+Recruiter
+Masaüstü
+Onay Bekliyor
+26.03.2026
+[34] (915,677)<a class='btn btn-sm btn-primary' href='/requests/30/detail'>İşlem />
+	[35] (904,677)<i  />
+29
+KSI-0012
+Elçin Ergül
+inden ulaşabilirsiniz.
+elcin.ergul@findtalent.net
+Recruiter
+Masaüstü
+Onay Bekliyor
+26.03.2026
+[36] (915,756)<a class='btn btn-sm btn-primary' href='/requests/29/detail'>İşlem />
+	[37] (904,756)<i  />
+28
+KSI-0011
+Selin Yıldız
+selin.yildiz@findtalent.net
++90 555 123 45 67
+Yazılımcı
+Laptop
+Onay Bekliyor
+25.03.2026
+[38] (915,835)<a class='btn btn-sm btn-primary' href='/requests/28/detail'>İşlem />
+	[39] (904,835)<i  />
+27
+KSI-0011
+Selin Yıldız
+inden ulaşabilirsiniz.
+selin.yildiz@findtalent.net
++90 555 123 45 67
+Yazılımcı
+Laptop
+Onay Bekliyor
+25.03.2026
+[40] (915,914)<a class='btn btn-sm btn-primary' href='/requests/27/detail'>İşlem />
+	[41] (904,914)<i  />
+26
+KSI-0010
+support
+support@findtalent.net
++905551234567
+Yazılımcı
+Laptop
+Onay Bekliyor
+25.03.2026
+[42] (915,993)<a class='btn btn-sm btn-primary' href='/requests/26/detail'>İşlem />
+	[43] (904,993)<i  />
+
+</current_dom>

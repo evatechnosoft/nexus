@@ -1,0 +1,8 @@
+# Task: Implementing OAuth2 (Modern Auth)
+
+- [x] Guide user through Azure App Registration (provided CLI commands)
+- [ ] Add `msal` dependency
+- [ ] Create `ms_oauth.py` utility
+- [ ] Update [email_watcher.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/email_watcher.py) to use OAuth2
+- [ ] Update [.env](file:///c:/projects/it-inventory/it-inventory/.env) with Azure credentials
+- [ ] Verify connection and processing

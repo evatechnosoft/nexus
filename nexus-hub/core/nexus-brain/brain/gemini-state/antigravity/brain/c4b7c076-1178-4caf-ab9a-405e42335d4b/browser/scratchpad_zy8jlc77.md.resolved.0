@@ -1,0 +1,10 @@
+# Final Sweep Checklist
+
+- [ ] Open http://localhost:5173/
+- [ ] Verify Ground: Solid brown mass from surface to bottom (no gaps/tiling)
+- [ ] Verify Water: Deep blue mass from surface to bottom (no gaps/tiling)
+- [ ] Verify Stars: Glowing white/blue stars
+- [ ] Verify Character: 2-frame walking animation
+- [ ] Verify Character: Stops when blocked
+- [ ] Check for thin gaps or cyan bar at bottom
+- [ ] Capture final proof screenshot

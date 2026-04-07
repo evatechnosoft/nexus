@@ -1,0 +1,41 @@
+# Çoklu Ortam (Test, Prod, Dev) Stabilizasyon Planı
+
+Şu anki durumda DeanOS üzerinde sadece bir adet `it-inventory` konteynırı çalışabilmektedir (çünkü isimleri çakışmaktadır). Bu plan, her iki ortamın (Test ve Prod) sunucuda aynı anda çalışmasını ve yerel geliştirme (Dev) ortamının başlatılmasını hedefler.
+
+## Kullanıcı İncelemesi Gerekli
+
+> [!IMPORTANT]
+> - **Yerel Docker Sorunu**: Bilgisayarınızda Docker Desktop şu an çalışıyor görünmüyor ("system cannot find the file specified"). Yerel DEV ortamı için lütfen Docker'ı başlatın.
+> - **Konteynır İsimleri**: TEST ve PROD'un aynı anda çalışabilmesi için konteynır isimlerini dinamik hale getireceğiz (`it-inventory-test`, `it-inventory-prod`).
+
+## Önerilen Değişiklikler
+
+### 1. Docker Yapılandırması
+
+#### [MODIFY] [docker-compose.yml](file:///c:/projects/it-inventory/docker-compose.yml)
+- `container_name: it-inventory` -> `container_name: it-inventory-${APP_ENV:-dev}` olarak güncellenecektir.
+- Bu sayede `it-inventory-test` ve `it-inventory-prod` yan yana çalışabilir.
+
+### 2. Dağıtım ve Başlatma
+
+#### [PROD Dağıtımı]
+- Test ortamı (9600) şu an ayakta. PROD (9700) ortamını da ayağa kaldırmak için `main` branch'ine geçip `deploy.ps1` tetiklenecek.
+
+#### [Yerel DEV Başlatma]
+- `dev` branch'inde yerel olarak `docker compose up` denenecek (Docker Desktop başlatıldıktan sonra).
+
+## Açık Sorular
+
+- **Veritabanı Ayrımı**: Test ve Prod veritabanlarının (`data/` klasörü içinde) ayrı dosyalara baktığından eminiz, ancak aynı klasöre mount edildikleri için dosya isimlerini `.env` içinden doğru yönetmeliyiz.
+
+## Doğrulama Planı
+
+### Otomatik Testler
+- `ssh deanos "sudo docker ps"` komutu ile hem 9600 hem 9700 portlarının dolu olduğu doğrulanacak.
+- Yerel makinede `docker ps` ile dev ortamı kontrol edilecek.
+
+### Manuel Doğrulama
+- 9600 (Test) -> Kırmızı Badge
+- 9700 (Prod) -> Yeşil Badge
+- Local (9600) -> Sarı Badge
+olup olmadığı tarayıcıdan bakılacak.

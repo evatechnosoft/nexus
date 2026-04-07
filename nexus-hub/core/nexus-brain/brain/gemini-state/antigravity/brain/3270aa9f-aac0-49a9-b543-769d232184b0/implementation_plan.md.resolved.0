@@ -1,0 +1,21 @@
+# Run Local Flask Application
+
+The goal is to start the Flask application locally using Docker Compose since the user encountered issues with GitHub. We will focus on the `flask-dev` service which includes hot-reloading and debug mode.
+
+## Proposed Changes
+
+No code changes are required. We will execute the following commands to start the local environment.
+
+### Docker Compose
+- Run `docker compose up -d flask-dev` to start the development container.
+- This will map host port 5007 to container port 5000.
+
+## Verification Plan
+
+### Automated Tests
+- Check container status: `docker ps --filter name=flask-dev`
+- Check logs: `docker logs flask-dev`
+
+### Manual Verification
+- Access the application at `http://localhost:5007` in the browser.
+- Verify the index page loads correctly.

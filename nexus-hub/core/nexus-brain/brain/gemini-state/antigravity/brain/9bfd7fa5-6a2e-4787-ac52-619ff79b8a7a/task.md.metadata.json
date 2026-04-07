@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_TASK",
+  "summary": "A detailed checklist for diagnosing and fixing the build errors found in the debug console logs. It includes steps for checking model files, configuration, and running the build runner.",
+  "updatedAt": "2026-03-21T15:58:01.722442100Z"
+}

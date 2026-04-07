@@ -1,0 +1,125 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Erişilebilirlik Bağlantıları
+Ana içeriğe geç
+Erişilebilirlik yardımı
+Erişilebilirlikle ilgili geri bildirim
+[0] (77,70)<a aria-label='Google Anasayfası'na Git' href='https://www.google.com/webhp?hl=tr&sa=X&ved=0ahUKEwjdzsqshqyTAxXDR_EDHd78OLoQPAgI' id='logo' title='Google Anasayfası'na Git' />
+[1] (346,69)<textarea aria-label='Ara' class='gLFyf' id='APjFqb' role='combobox' />
+[2] (561,69)<div  />
+	[3] (560,69)<div aria-label='Temizle' class='M2vV3 vOY7J' role='button' />
+		[4] (560,69)<span  />
+	[5] (576,69)<span  />
+[6] (591,69)<div aria-label='Harf çevirme aracı' class='Umvnrc' role='button' />
+	[7] (591,69)<span  />
+[8] (617,69)<div aria-label='Sesle arama yapın' class='XDyW0e' role='button' />
+[9] (642,69)<div aria-label='Görselle arama' class='nDcEnd' role='button' />
+[10] (672,69)<button aria-label='Ara' class='HZVG1b Tg7LZd' />
+	[11] (668,69)<div  />
+		[12] (668,69)<span  />
+[13] (878,69)<div aria-label='Ayarlar' class='fLciMb' id='og-te' role='button' />
+	[14] (878,72)<div  />
+		[15] (878,69)<span  />
+[16] (907,69)<a aria-label='Google uygulamaları' class='gb_B' href='https://www.google.com.tr/intl/tr/about/products?tab=wh' role='button' />
+[17] (955,69)<a aria-label='Oturum açın' class='gb_A' href='https://accounts.google.com/ServiceLogin?hl=tr&passive=true&continue=https://www.google.com/search%3Fq%3D%2522English%2BCode%2B1%2BClass%2BAudio.zip%2522%2BOR%2B%2522English%2BCode%2B1%2BClass%2BAudio%2B(American).rar%2522&ec=futura_srp_og_si_72236_p'>Oturum açın />
+	Oturum açın
+Filtreler ve Konular
+[18] (164,145)<a class='XVMlrc C6AK7c' href='/search?q=%22English+Code+1+Class+Audio.zip%22+OR+%22English+Code+1+Class+Audio+(American).rar%22&sca_esv=f818ef0c6d37c692&udm=50&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXarNgseJfkljimozBzUrIDqoGxdEYPKEDExKJDx55gh7Avc50rSQRRCiLzw09QhQjzEkhxClk1rRiBfhBmWJjDxTAhBudmbA_P-rUhNl4n9QIyTXtJj3ztJ3KNtZi_41fVGc7VAG-ZmzN0Ocdiq7K3BYwCT7FyH0wIYsXii9MFXcpKOaA6aH1-myhStrpmOYQCQPcvbvLcCvhavHvnfo5-khIvbhNVP0kfhsZa_SnNos86d5B&aep=1&ntc=1&sa=X&ved=2ahUKEwjdzsqshqyTAxXDR_EDHd78OLoQ2J8OegQIEBAE' />
+	[19] (164,145)<div  />
+		[20] (164,156)<div  />
+			[21] (164,149)<span >AI Modu />
+[22] (208,145)<a class='C6AK7c' role='link' />
+	Tümü
+[23] (251,145)<a class='C6AK7c' href='/search?sca_esv=f818ef0c6d37c692&udm=7&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXarNgseJfkljimozBzUrIDqoGxdEYPKEDExKJDx55gh7Avc50rSQRRCiLzw09QhQjzEkhxClk1rRiBfhBmWJjDxTAhBudmbA_P-rUhNl4n9QIyTXtJj3ztJ3KNtZi_41fVGc7VAG-ZmzN0Ocdiq7K3BYwCT7FyH0wIYsXii9MFXcpKOaA6aH1-myhStrpmOYQCQPcvbvLcCvhavHvnfo5-khIvbhNVP0kfhsZa_SnNos86d5B&q=%22English+Code+1+Class+Audio.zip%22+OR+%22English+Code+1+Class+Audio+(American).rar%22&sa=X&ved=2ahUKEwjdzsqshqyTAxXDR_EDHd78OLoQtKgLegQIFhAB' />
+	[24] (251,145)<div  />
+		[25] (251,156)<span >Videolar />
+[26] (301,145)<a class='C6AK7c' href='/search?sca_esv=f818ef0c6d37c692&udm=2&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXarNgseJfkljimozBzUrIDqoGxdEYPKEDExKJDx55gh7Avc50rSQRRCiLzw09QhQjzEkhxClk1rRiBfhBmWJjDxTAhBudmbA_P-rUhNl4n9QIyTXtJj3ztJ3KNtZi_41fVGc7VAG-ZmzN0Ocdiq7K3BYwCT7FyH0wIYsXii9MFXcpKOaA6aH1-myhStrpmOYQCQPcvbvLcCvhavHvnfo5-khIvbhNVP0kfhsZa_SnNos86d5B&q=%22English+Code+1+Class+Audio.zip%22+OR+%22English+Code+1+Class+Audio+(American).rar%22&sa=X&ved=2ahUKEwjdzsqshqyTAxXDR_EDHd78OLoQtKgLegQIEhAB' />
+	[27] (301,145)<div  />
+		[28] (301,156)<span >Görseller />
+[29] (352,145)<a class='C6AK7c' href='/search?sca_esv=f818ef0c6d37c692&udm=28&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXarNgseJfkljimozBzUrIDqoGxdEYPKEDExKJDx55gh7Avc50rSQRRCiLzw09QhQjzEkhxClk1rRiBfhBmWJjDxTAhBudmbA_P-rUhNl4n9QIyTXtJj3ztJ3KNtZi_41fVGc7VAG-ZmzN0Ocdiq7K3BYwCT7FyH0wIYsXii9MFXcpKOaA6aH1-myhStrpmOYQCQPcvbvLcCvhavHvnfo5-khIvbhNVP0kfhsZa_SnNos86d5B&q=%22English+Code+1+Class+Audio.zip%22+OR+%22English+Code+1+Class+Audio+(American).rar%22&ved=1t:220175&ictx=111' />
+	[30] (352,145)<div  />
+		[31] (352,156)<span >Alışveriş />
+[32] (410,145)<a class='C6AK7c' href='/search?sca_esv=f818ef0c6d37c692&udm=39&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXarNgseJfkljimozBzUrIDqoGxdEYPKEDExKJDx55gh7Avc50rSQRRCiLzw09QhQjzEkhxClk1rRiBfhBmWJjDxTAhBudmbA_P-rUhNl4n9QIyTXtJj3ztJ3KNtZi_41fVGc7VAG-ZmzN0Ocdiq7K3BYwCT7FyH0wIYsXii9MFXcpKOaA6aH1-myhStrpmOYQCQPcvbvLcCvhavHvnfo5-khIvbhNVP0kfhsZa_SnNos86d5B&q=%22English+Code+1+Class+Audio.zip%22+OR+%22English+Code+1+Class+Audio+(American).rar%22&sa=X&ved=2ahUKEwjdzsqshqyTAxXDR_EDHd78OLoQs6gLegQIFRAB' />
+	[33] (410,145)<div  />
+		[34] (410,156)<span >Kısa videolar />
+[35] (466,145)<a class='C6AK7c' href='/search?sca_esv=f818ef0c6d37c692&q=%22English+Code+1+Class+Audio.zip%22+OR+%22English+Code+1+Class+Audio+(American).rar%22&udm=36&source=lnms&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXarNgseJfkljimozBzUrIDqoGxdEYPKEDExKJDx55gh7Avc50rSQRRCiLzw09QhQjzEkhxClk1rRiBfhBmWJjDxTAhBudmbA_P-rUhNl4n9QIyTXtJj3ztJ3KNtZi_41fVGc7VAG-ZmzN0Ocdiq7K3BYwCT7FyH0wIYsXii9MFXcpKOaA6aH1-myhStrpmOYQCQPcvbvLcCvhavHvnfo5-khIvbhNVP0kfhsZa_SnNos86d5B&sa=X&ved=2ahUKEwjdzsqshqyTAxXDR_EDHd78OLoQ0pQJegQIExAB' />
+	[36] (466,145)<div  />
+		[37] (466,156)<span >Kitaplar />
+[38] (524,145)<div class='mTpL7c' role='button' />
+	[39] (524,145)<div  />
+		[40] (524,156)<div  />
+			[41] (519,149)<span >Daha fazla />
+			[42] (546,149)<span  />
+[43] (587,145)<div class='mOKdDc' id='hdtb-tls' role='button' />
+	[44] (587,145)<div  />
+		[45] (587,156)<div  />
+			[46] (581,149)<span >Araçlar />
+			[47] (601,149)<span  />
+Looking for results in English?
+[48] (967,266)<a href='#' />
+	[49] (967,264)<span  />
+[50] (853,297)<a href='/setprefs?sig=0_AFLdylOmlmYTb9A6MfmhoVa_RsI%3D&source=en_ignored_notification&prev=https://www.google.com/search?q%3D%2522English%2BCode%2B1%2BClass%2BAudio.zip%2522%2BOR%2B%2522English%2BCode%2B1%2BClass%2BAudio%2B(American).rar%2522&hl=en&sa=X&ved=2ahUKEwjdzsqshqyTAxXDR_EDHd78OLoQhoQCKAF6BAgKEAQ'>Change to English />
+[51] (876,328)<a href='#'>kullanmaya devam et />
+	[52] (832,327)<span >Türkçe />
+[53] (840,371)<a class='fl' href='/preferences?lang=1&hl=tr&sa=X&ved=2ahUKEwjdzsqshqyTAxXDR_EDHd78OLoQiIQCKAN6BAgKEAY#languages'>Dil ayarları />
+Arama Sonuçları
+[54] (316,262)<a class='zReHs' href='https://eltebook.com/english-code/' />
+	[55] (316,287)<h3 >Download Pearson English Code Pdf Resources (Pre A1 ... />
+	[56] (221,241)<div  />
+		[57] (221,241)<div  />
+			[58] (156,241)<span  />
+				[59] (156,241)<div  />
+					[60] (156,241)<img  />
+			[61] (233,241)<div  />
+				[62] (233,229)<div  />
+					[63] (233,229)<span >ELT Ebook />
+				[64] (233,255)<div  />
+					[65] (233,255)<cite class='qLRx3b tjvcx GvPZzd dTxz9 cHaqb' role='text'>https://eltebook.com />
+						[66] (256,254)<span class='ylgVCe ob9lvb' role='text'>› engl... />
+·
+[67] (322,255)<a class='dEEN8c' href='https://eltebook.com/english-code/' />
+	[68] (322,254)<span >Bu sayfanın çevirisini yap />
+[69] (380,253)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[70] (380,253)<span  />
+		[71] (380,255)<span  />
+English Code 1 Class Audio.zip
+. English Code 1 Flashcards.pdf. English Code 1 Grammar Book.pdf – Sample: Click English Code 1 Phonics Book Audio.zip. English ...
+Diğer sorular
+[72] (245,427)<div aria-label='Bu sonuç hakkında' class='iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[73] (245,427)<span  />
+		[74] (245,429)<span  />
+[75] (356,492)<div class='dnXCYb' role='button' />
+	What is A1, A2, B1, B2, C1, C2 in English?
+	[76] (356,492)<div  />
+[77] (356,562)<div class='dnXCYb' role='button' />
+	What is the Oxford English file?
+	[78] (356,562)<div  />
+[79] (545,607)<div class='mWcf0e nKHyTc BJ1Ird' role='button' />
+	[80] (545,607)<div  />
+		[81] (545,607)<span >Geri bildirim />
+Filtrelenmiş Sonuçlarla İlgili Bildirimler
+Size en alakalı sonuçların gösterilmesi için yukarıda görüntülenen 1 sonuca benzer bazı girişler çıkarıldı.
+İsterseniz,
+[82] (320,737)<a href='/search?q=%22English+Code+1+Class+Audio.zip%22+OR+%22English+Code+1+Class+Audio+(American).rar%22&sca_esv=f818ef0c6d37c692&filter=0'>aramayı çıkarılan sonuçlarla birlikte tekrarlayabilirsiniz />
+.
+Alt Bilgi Bağlantıları
+Türkiye
+[83] (309,904)<a href='#' role='button' />
+	[84] (255,904)<div  />
+		[85] (201,904)<span  />
+		[86] (260,904)<span >Anadolu Yakası, İstanbul />
+	[87] (366,904)<div  />
+		[88] (317,904)<span >- />
+		[89] (370,904)<span  />
+			[90] (370,904)<span >Geçmiş etkinliğinize göre />
+-
+[91] (463,904)<update-location >Konumu güncelle />
+	Konumu güncelle
+[92] (170,959)<a class='Fx4vi wHYlTd ZYHQ7e' href='https://support.google.com/websearch/?p=ws_results_help&hl=tr&fg=1'>Yardım />
+[93] (241,959)<a class='Fx4vi wHYlTd' href='#'>Geri bildirim gönder />
+[94] (310,959)<a class='Fx4vi wHYlTd ZYHQ7e' href='https://policies.google.com/privacy?hl=tr&fg=1'>Gizlilik />
+[95] (354,959)<a class='Fx4vi wHYlTd ZYHQ7e' href='https://policies.google.com/terms?hl=tr&fg=1'>Şartlar />
+
+</current_dom>

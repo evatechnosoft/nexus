@@ -1,0 +1,71 @@
+Student Book:
+Sayfa 4-7
+🗝️ Anahtar Kelimeler (Vocabulary)
+🎯
+Tıkla:
+Okunuşunu dinle | 🖱️
+Basılı Tut:
+Harf harf kodlamasını dinle
+[0] (340,348)<div  />
+	[1] (340,282)<div >hello />
+	[2] (340,334)<div >merhaba />
+	[3] (340,401)<div >[he-low]
+hel-lo />
+		[4] (303,397)<b >🗣️ Okunuş: />
+		[5] (307,421)<b >🧩 Heceleme: />
+[6] (500,348)<div  />
+	[7] (500,282)<div >goodbye />
+	[8] (500,334)<div >hoşça kal />
+	[9] (500,401)<div >[gud-bay]
+good-bye />
+		[10] (462,397)<b >🗣️ Okunuş: />
+		[11] (466,421)<b >🧩 Heceleme: />
+[12] (660,348)<div  />
+	[13] (660,282)<div >teacher />
+	[14] (660,334)<div >öğretmen />
+	[15] (660,401)<div >[tii-çır]
+teach-er />
+		[16] (622,397)<b >🗣️ Okunuş: />
+		[17] (626,421)<b >🧩 Heceleme: />
+[18] (340,596)<div  />
+	[19] (340,530)<div >girl />
+	[20] (340,582)<div >kız />
+	[21] (340,650)<div >[görl]
+girl />
+		[22] (303,645)<b >🗣️ Okunuş: />
+		[23] (307,669)<b >🧩 Heceleme: />
+[24] (500,596)<div  />
+	[25] (500,530)<div >boy />
+	[26] (500,582)<div >erkek çocuk />
+	[27] (500,650)<div >[boy]
+boy />
+		[28] (462,645)<b >🗣️ Okunuş: />
+		[29] (466,669)<b >🧩 Heceleme: />
+[30] (660,596)<div  />
+	[31] (660,530)<div >good />
+	[32] (660,582)<div >iyi />
+	[33] (660,650)<div >[gud]
+good />
+		[34] (622,645)<b >🗣️ Okunuş: />
+		[35] (626,669)<b >🧩 Heceleme: />
+[36] (340,845)<div  />
+	[37] (340,779)<div >one />
+	[38] (340,831)<div >bir />
+	[39] (340,898)<div >[van]
+one />
+		[40] (303,894)<b >🗣️ Okunuş: />
+		[41] (307,917)<b >🧩 Heceleme: />
+[42] (500,845)<div  />
+	[43] (500,779)<div >two />
+	[44] (500,831)<div >iki />
+	[45] (500,898)<div >[tu]
+two />
+		[46] (462,894)<b >🗣️ Okunuş: />
+		[47] (466,917)<b >🧩 Heceleme: />
+[48] (660,845)<div  />
+	[49] (660,779)<div >three />
+	[50] (660,831)<div >üç />
+	[51] (660,898)<div >[tri]
+three />
+		[52] (622,894)<b >🗣️ Okunuş: />
+		[53] (626,917)<b >🧩 Heceleme: />

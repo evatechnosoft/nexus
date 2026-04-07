@@ -1,0 +1,14 @@
+# Task: Complete 2FA Implementation
+
+- [x] Fix `Future.catchError` type mismatch bug <!-- id: 5 -->
+- [x] Complete 2FA verification flow <!-- id: 0 -->
+    - [x] Update [two_fa_screen.dart](file:///c:/projects/github/EvAnotes/mobile/lib/features/auth/two_fa_screen.dart) to save auth token on success <!-- id: 1 -->
+    - [x] Update [login_screen.dart](file:///c:/projects/github/EvAnotes/mobile/lib/features/auth/login_screen.dart) to handle 2FA redirect <!-- id: 2 -->
+    - [x] Refactor [login_screen.dart](file:///c:/projects/github/EvAnotes/mobile/lib/features/auth/login_screen.dart) to use `apiClientProvider` and `ConsumerStatefulWidget` <!-- id: 3 -->
+- [x] Ensure auth persistence and consistency <!-- id: 6 -->
+- [/] Improve connectivity and error resilience <!-- id: 10 -->
+    - [x] Restore correct backend URL in [api_client.dart](file:///c:/projects/github/EvAnotes/mobile/lib/config/api_client.dart) <!-- id: 11 -->
+    - [x] Handle 401 and 503 errors with user-friendly messages in [LoginScreen](file:///c:/projects/github/EvAnotes/mobile/lib/features/auth/login_screen.dart#8-14) <!-- id: 12 -->
+    - [x] Handle connection errors in [TwoFaScreen](file:///c:/projects/github/EvAnotes/mobile/lib/features/auth/two_fa_screen.dart#8-16) <!-- id: 13 -->
+    - [x] Refactor [RegisterScreen](file:///c:/projects/github/EvAnotes/mobile/lib/features/auth/register_screen.dart#4-10) to use `apiClientProvider` and improve its error handling <!-- id: 14 -->
+- [x] Verify 2FA flow <!-- id: 4 -->

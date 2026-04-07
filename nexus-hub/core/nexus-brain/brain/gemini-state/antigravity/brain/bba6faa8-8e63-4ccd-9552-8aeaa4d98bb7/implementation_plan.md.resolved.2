@@ -1,0 +1,32 @@
+# [ZimaOS] Sistem Güncelleme Planı
+
+Yedekleme başarıyla tamamlandığı için şimdi ZimaOS (DeanOS) sistemini en güncel sürüme yükselteceğiz.
+
+## Kullanıcı İncelemesi Gerekli
+
+- **Sistem Kesintisi**: Güncelleme sırasında ZimaOS (CasaOS, Docker konteynerleri vb.) geçici olarak kapalı kalacaktır.
+- **Yeniden Başlatma**: Güncelleme sonrası sistem otomatik olarak yeniden başlatılacak veya biz manuel olarak başlatacağız. Bu süreçte SSH bağlantınız kopacaktır.
+- **Risk Hatırlatması**: Her ne kadar yedeğimiz olsa da, sistem güncellemeleri donanım veya ağ kaynaklı kesintilerde risk taşıyabilir.
+
+## Önerilen Değişiklikler
+
+ZimaOS'un resmi OTA (Over-The-Air) güncelleme betiğini kullanarak güvenli bir geçiş sağlayacağız.
+
+### [İşlem] Sistem Güncelleme
+
+1. **Versiyon Kontrolü**: Mevcut sistem sürümünü ve disk durumunu kontrol edeceğiz.
+2. **Yedek Doğrulama**: Az önce aldığımız yedeğin varlığını son kez teyit edeceğiz.
+3. **Güncelleme Betiği**: `curl -fsSL 'https://ota.zimaos.com/' | sudo sh` komutu ile güncellemeyi tetikleyeceğiz.
+4. **İzleme**: Güncelleme loglarını takip ederek işlemin tamamlanmasını bekleyeceğiz.
+5. **Reboot**: Sistem yeniden başlatıldığında SSH ile tekrar bağlanıp yeni sürümü doğrulayacağız.
+
+## Açık Sorular
+
+- **[ÖNEMLİ]**: Güncelleme tamamlandığında sistemin **otomatik yeniden başlamasına** onay veriyor musunuz? (SSH bağlantınız kısa bir süreliğine kopacaktır).
+
+## Doğrulama Planı
+
+### Manuel Doğrulama
+- SSH ile bağlantı testi.
+- `cat /etc/zimaos-release` veya benzeri bir komutla yeni sürümün kontrolü.
+- CasaOS web arayüzünün (Port 80/443) erişilebilirliğinin kontrolü.

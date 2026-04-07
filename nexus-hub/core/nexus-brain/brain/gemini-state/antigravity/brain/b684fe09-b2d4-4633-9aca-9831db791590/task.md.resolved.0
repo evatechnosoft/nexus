@@ -1,0 +1,7 @@
+# Tasks
+
+- [ ] Install VS Code <!-- id: 0 -->
+- [ ] Address Coolify installation <!-- id: 1 -->
+  - [ ] Check if VS Code and Docker are already configured <!-- id: 2 -->
+  - [ ] Install VS Code via winget <!-- id: 3 -->
+  - [ ] Provide instructions for Coolify in WSL <!-- id: 4 -->

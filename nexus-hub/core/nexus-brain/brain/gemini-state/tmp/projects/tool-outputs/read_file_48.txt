@@ -1,0 +1,9 @@
+<tool_output_masked>
+{
+  "output": "# AgentOps-Nexus Implementation Plan\n\n## Objective\nRefactor the existing `it-inventory` project into a clean, dual-dashboard system named `agentops-nexus`. \nThis system will manage both physical hardware (IT Inventory) and digital 
+... [TRUNCATED] ...
+itory.\n3. Push clean code.\n\n## Verification & Testing\n- Run uvicorn and verify both dashboards load.\n- Simulate an ops-health POST request to verify digital asset tracking.\n- Test Microsoft Graph API connectivity for email-to-request flow.\n"
+}
+
+Output too large. Full output available at: C:\Users\Deacjx\.gemini\tmp\projects\tool-outputs\session-a366de38-25fd-4d3a-9bce-f8a0bc9646e6\read_file_read_file_1775211094601_0_pz922h.txt
+</tool_output_masked>

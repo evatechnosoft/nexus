@@ -1,0 +1,110 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (127,42)<a class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge IconButtonBase-module_wrapper_6zbMGy SoftButton-module_wrapper_G6z4vn SoftButton-module_default_EF-egQ ScribdTopBar-module_hamburger__C9NjV IconButtonBase-module_large_hJBmho' href='#sidebar' />
+	Open navigation menu
+[1] (180,42)<a class='ScribdTopBar-module_logo__AsKt6' href='/' />
+	[2] (180,42)<img  />
+[3] (366,41)<label >Search />
+	Search
+	[4] (366,42)<input class='SearchForm-module_searchInput__l73oF SearchForm-module_searchInputScribd__Up4Ft' id='header_search_input' placeholder='Search' role='combobox' />
+[5] (451,42)<button class='TextButton-module_wrapper__ZwW-w TextButton-module_default__ekglb SearchForm-module_clearButton__ggRgX SearchForm-module_clearButtonScribd__XJbMU' />
+	[6] (451,42)<span  />
+		[7] (451,42)<span >Clear search />
+			[8] (451,42)<span  />
+			Clear search
+[9] (481,42)<button class='TextButton-module_wrapper__ZwW-w TextButton-module_default__ekglb SearchForm-module_searchButton__4f-rn no_spinner' />
+	[10] (476,42)<span  />
+		[11] (476,42)<span >Search />
+			[12] (476,42)<span  />
+			Search
+[13] (569,42)<button class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge SoftButton-module_wrapper_G6z4vn DropdownTrigger-module_wrapper_-Xf-At LanguageDropdown-module_menuHandle__PCSMM SoftButton-module_default_EF-egQ ButtonShared-module_small_h7nQ0w SoftButton-module_withIcon_OBSH-T' id='ldhandle' />
+	en
+	Change Language
+[14] (632,42)<a class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge SoftButton-module_wrapper_G6z4vn SoftButton-module_default_EF-egQ ButtonShared-module_small_h7nQ0w SoftButton-module_withIcon_OBSH-T' href='/upload-document' />
+	Upload
+[15] (698,42)<button class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge SoftButton-module_wrapper_G6z4vn DropdownTrigger-module_wrapper_-Xf-At SoftButton-module_default_EF-egQ ButtonShared-module_small_h7nQ0w SoftButton-module_withIcon_OBSH-T' id='udhandle' />
+	Sign in
+[16] (813,42)<button class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge AccentButton-module_wrapper_W6vQ8z ScribdTopBar-module_cta__AnzYq SubscribeCTAButton-module_wrapper__lDIgE SubscribeCTAButton-module_en-US__W29KM AccentButton-module_default_4Uc-A6 ButtonShared-module_large_DzeAnG' />
+	Download free for 30 days
+Footer menu
+Back to top
+About
+[17] (151,617)<a aria-label='About Scribd, Inc.' class='TextButton-module_wrapper__ZwW-w FooterLink-module_wrapper__V1y4b' href='https://www.scribdinc.com/about' />
+	[18] (151,617)<span  />
+		[19] (151,617)<span >About Scribd, Inc. />
+[20] (136,660)<a aria-label='Slideshare' class='TextButton-module_wrapper__ZwW-w FooterLink-module_wrapper__V1y4b' href='https://www.slideshare.net/' />
+	[21] (136,660)<span  />
+		[22] (136,660)<span >Slideshare />
+[23] (143,702)<a aria-label='Join our team!' class='TextButton-module_wrapper__ZwW-w FooterLink-module_wrapper__V1y4b' href='https://www.scribdinc.com/careers' />
+	[24] (143,702)<span  />
+		[25] (143,702)<span >Join our team! />
+[26] (137,745)<a aria-label='Contact us' class='TextButton-module_wrapper__ZwW-w FooterLink-module_wrapper__V1y4b' href='https://www.scribdinc.com/contact' />
+	[27] (137,745)<span  />
+		[28] (137,745)<span >Contact us />
+Support
+[29] (268,617)<a aria-label='Help / FAQ' class='TextButton-module_wrapper__ZwW-w FooterLink-module_wrapper__V1y4b' href='http://support.scribd.com/hc/en-us' />
+	[30] (268,617)<span  />
+		[31] (268,617)<span >Help / FAQ />
+[32] (271,660)<a aria-label='Accessibility' class='TextButton-module_wrapper__ZwW-w FooterLink-module_wrapper__V1y4b' href='https://support.scribd.com/hc/en-us/articles/210129586-Accessibility-Notice' />
+	[33] (271,660)<span  />
+		[34] (271,660)<span >Accessibility />
+[35] (274,702)<a aria-label='Purchase help' class='TextButton-module_wrapper__ZwW-w FooterLink-module_wrapper__V1y4b' href='https://support.scribd.com/hc/en-us/sections/202246306' />
+	[36] (274,702)<span  />
+		[37] (274,702)<span >Purchase help />
+[38] (268,745)<a aria-label='AdChoices' class='TextButton-module_wrapper__ZwW-w FooterLink-module_wrapper__V1y4b' href='https://support.scribd.com/hc/en-us/articles/210129366' />
+	[39] (268,745)<span  />
+		[40] (268,745)<span >AdChoices />
+Legal
+[41] (389,617)<a aria-label='Terms' class='TextButton-module_wrapper__ZwW-w FooterLink-module_wrapper__V1y4b' href='https://support.scribd.com/hc/en-us/articles/210129326-General-Terms-of-Use' />
+	[42] (389,617)<span  />
+		[43] (389,617)<span >Terms />
+[44] (391,660)<a aria-label='Privacy' class='TextButton-module_wrapper__ZwW-w FooterLink-module_wrapper__V1y4b' href='https://support.scribd.com/hc/en-us/articles/210129366-Privacy-policy' />
+	[45] (391,660)<span  />
+		[46] (391,660)<span >Privacy />
+[47] (397,702)<a aria-label='Copyright' class='TextButton-module_wrapper__ZwW-w FooterLink-module_wrapper__V1y4b' href='https://support.scribd.com/hc/en-us/sections/202246086' />
+	[48] (397,702)<span  />
+		[49] (397,702)<span >Copyright />
+[50] (428,743)<button aria-label='Your Privacy Choices' class='TextButton-module_wrapper__ZwW-w FooterLink-module_wrapper__V1y4b' />
+	[51] (428,743)<span  />
+		[52] (385,743)<span  />
+		[53] (439,743)<span >Your Privacy Choices />
+Social
+[54] (536,613)<a aria-label='Scribd on Instagram' class='TextButton-module_wrapper__ZwW-w SocialLink-module_wrapper__7Rvvt' href='https://www.instagram.com/scribd/' />
+	[55] (536,613)<span  />
+		[56] (536,613)<span >Instagram />
+			[57] (513,613)<span >Instagram />
+				Instagram
+[58] (536,656)<a aria-label='Scribd on Facebook' class='TextButton-module_wrapper__ZwW-w SocialLink-module_wrapper__7Rvvt' href='https://www.facebook.com/Scribd/' />
+	[59] (536,656)<span  />
+		[60] (536,656)<span >Facebook />
+			[61] (513,656)<span >Facebook />
+				Facebook
+[62] (534,700)<a aria-label='Scribd on Pinterest' class='TextButton-module_wrapper__ZwW-w SocialLink-module_wrapper__7Rvvt' href='https://www.pinterest.com/scribd/' />
+	[63] (534,700)<span  />
+		[64] (534,700)<span >Pinterest />
+			[65] (513,700)<span >Pinterest />
+				Pinterest
+Get our free apps
+[66] (815,628)<a aria-label='Scribd - Download on the App Store' class='app_link ios_btn' href='https://apps.apple.com/us/app/6448807714' />
+	[67] (815,628)<div  />
+[68] (815,702)<a aria-label='Scribd - Get it on Google Play' class='app_link google_play_btn' href='https://play.google.com/store/apps/details?id=com.scribd.app.reader0.docs' />
+	[69] (815,702)<div  />
+[70] (135,846)<a aria-label='Documents' class='TextButton-module_wrapper__ZwW-w ContentTypeColumn-module_contentTypeLink__K3M9d' href='/docs' />
+	[71] (135,846)<span  />
+		[72] (135,846)<span >Documents />
+Language
+:
+[73] (760,846)<button class='ButtonCore-module_wrapper_MkTb9s TextButton-module_wrapper_ZwW-wM TextButton-module_default_ekglbr DropdownTrigger-module_wrapper_-Xf-At ScribdFooterLanguageMenu-module_currentLanguage__-ZykZ' id='footer_lang_btn_xl' />
+	[74] (760,846)<span  />
+		[75] (760,846)<span >English />
+			[76] (772,846)<span  />
+Copyright © 2026 Scribd Inc.
+We take content rights seriously.
+[77] (239,901)<a href='https://support.scribd.com/hc/en-us/articles/210129026-Frequently-Asked-Questions-about-Copyrights-and-the-DMCA'>Learn more />
+in our FAQs or
+[78] (344,901)<a href='https://support.scribd.com/hc/en-us/articles/210129146-REPORT-COPYRIGHT-INFRINGEMENTS-AND-ABUSE-HERE'>report infringement here />
+.
+
+</current_dom>

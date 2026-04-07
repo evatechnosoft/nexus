@@ -1,0 +1,37 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Welcome!
+Are you ready to awaken your home, reclaim your privacy and join a worldwide community of tinkerers?
+Create my smart home
+Or restore
+[0] (500,364)<ha-md-list-item  />
+	[1] (483,356)<div >Upload backup />
+	[2] (483,373)<div >Upload and restore a Home Assistant backup to this system />
+	[3] (621,364)<ha-icon-button-next  />
+		[4] (621,364)<ha-icon-button  />
+			[5] (621,364)<mwc-icon-button  />
+				[6] (621,364)<ha-svg-icon  />
+[7] (500,427)<ha-md-list-item  />
+	[8] (483,419)<div >Home Assistant Cloud />
+	[9] (483,436)<div >Restore from your Home Assistant Cloud backup. />
+	[10] (621,427)<ha-icon-button-next  />
+		[11] (621,427)<ha-icon-button  />
+			[12] (621,427)<mwc-icon-button  />
+				[13] (621,427)<ha-svg-icon  />
+[14] (396,547)<a href='https://www.home-assistant.io/blog/2016/01/19/perfect-home-automation/' />
+	[15] (396,547)<onboarding-welcome-link  />
+		[16] (396,547)<ha-card >Read our vision />
+			[17] (396,533)<ha-svg-icon  />
+[18] (500,547)<onboarding-welcome-link  />
+	[19] (500,547)<ha-card >Join our community />
+		[20] (500,533)<ha-svg-icon  />
+[21] (604,547)<onboarding-welcome-link  />
+	[22] (604,547)<ha-card >Download our app />
+		[23] (604,533)<ha-svg-icon  />
+[24] (403,632)<div class='mdc-select__anchor' role='combobox' />
+	English
+[25] (635,632)<a href='https://www.home-assistant.io/getting-started/onboarding/'>Help />
+
+</current_dom>

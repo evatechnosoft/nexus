@@ -1,0 +1,56 @@
+# Fix Readability and Contrast Issues
+
+The "Premium Next-Gen" dark theme implemented in `style.css` is currently conflicting with hardcoded Bootstrap utility classes inside the HTML templates. This results in bright white blocks with faint or invisible text (readability problems).
+
+## User Review Required
+
+> [!IMPORTANT]
+> I am moving away from standard Bootstrap utility classes like `bg-light`, `bg-white`, and `text-dark` within the card contents to ensure the design remains consistent with the premium dark theme. 
+
+## Proposed Changes
+
+### UI & UX Standardisation
+
+The following changes will be applied across all templates to ensure a cohesive and readable dark theme experience:
+
+---
+
+### [Component] Templates Refinement
+
+#### [MODIFY] [request_detail.html](file:///c:/projects/it-inventory/it-inventory/inventory_app/templates/request_detail.html)
+- Remove `bg-white` and `bg-light` from card headers and section containers.
+- Replace `bg-light` in `#configList` with `var(--glass)`.
+- Ensure labels in tables have proper contrast without relying on `bg-white`.
+- Fix badge colors for "İşlem" status to use the theme's `--primary` or `--secondary` glows.
+
+#### [MODIFY] [requests.html](file:///c:/projects/it-inventory/it-inventory/inventory_app/templates/requests.html)
+- Remove `bg-light` from the email parsing tool section.
+- standardize table headers to match the theme (removing `table-dark` which might have a different gray).
+
+#### [MODIFY] [inventory.html](file:///c:/projects/it-inventory/it-inventory/inventory_app/templates/inventory.html)
+- Audit for `bg-white` or `bg-light` containers and replace with theme-compatible styles.
+
+#### [MODIFY] [style.css](file:///c:/projects/it-inventory/it-inventory/inventory_app/static/style.css)
+- Add utility classes for `.bg-glass` and `.text-glow` if needed.
+- Ensure `text-muted` has enough contrast against `--card-bg`.
+
+---
+
+### [Component] Email Parser Optimization
+
+#### [MODIFY] [email_parser.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/email_parser.py)
+- **Fix Name/Sender Mismatch**: Update regex to explicitly ignore "Gönderen:", "From:", and "Kimden:" labels when searching for the requester's name.
+- **Tabular/Row Support**: Implement logic to detect horizontal headers (e.g., "Ad Soyad | E-posta | Telefon") and correctly split the corresponding data row.
+- **Multi-line Handling**: Improve handling of multi-line addresses and notes.
+
+#### [MODIFY] [email_watcher.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/email_watcher.py)
+- Ensure the `_strip_html` function preserves table structures in a way that the parser can easily consume (using delimiters like `|` or clear colons).
+
+## Verification Plan
+
+### Automated Tests
+- I'll use the browser subagent to capture screenshots of the modified pages (`/requests/`, `/requests/{id}/detail`) to verify that the contrast and readability are improved.
+- I will create a test script `test_parsing.py` with the specific email formats described by the user (horizontal rows with headers) to verify the parser correctly extracts the employee name instead of the sender.
+
+### Manual Verification
+- Ask the user to verify the "Talep Detay" page on their side to ensure it's easily readable in their specific environment.

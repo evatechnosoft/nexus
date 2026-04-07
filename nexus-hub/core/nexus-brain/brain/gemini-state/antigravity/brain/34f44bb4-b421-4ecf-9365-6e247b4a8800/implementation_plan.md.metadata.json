@@ -1,0 +1,7 @@
+{
+  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary": "IT Envanter uygulamasında okunurluk ve e-posta ayrıştırma sorunlarını gidermek için uygulama planı. UI'daki beyaz blokların kaldırılması ve e-posta tabanlı talep oluşturma mantığının iyileştirilmesini içerir.",
+  "updatedAt": "2026-03-28T13:53:48.674967400Z",
+  "version": "2",
+  "requestFeedback": true
+}

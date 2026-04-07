@@ -1,0 +1,86 @@
+## 🚀 ZimaOS Deployment (SSH Komutları)
+
+ZimaOS sistem dosyaları korumalı olduğu için kurulumu yazılabilir bir dizinde yapmalıyız. SSH'a bağlandıktan sonra şu komutu sırayla çalıştır:
+
+```bash
+# Yazılabilir dizine git
+cd /DATA/AppData
+
+# Projeyi GitHub'dan çek
+git clone https://github.com/evatechnosoft/casatozima.git
+cd casatozima
+docker compose up -d
+```
+
+
+## Erişim Adresleri (Yerel)
+
+| Ortam | Adres | Açıklama |
+|-------|-------|----------|
+| **Prod (Canlı)** | `http://localhost:5010` | Son kullanıcı canlı ortamı (Port 6000 kısıtlı olduğu için 5010'a alındı) |
+| **API** | `http://localhost:5005` | Backend API servisi |
+| **Test** | `http://localhost:5006` | Canlı öncesi kontrol |
+| **Dev** | `http://localhost:5007` | Hot-reload geliştirme |
+| **DB (Adminer)** | `http://localhost:8080` | Veritabanı yönetimi |
+
+## Cloudflare'de Eklenecek Rotalar
+
+| Subdomain | Domain | Service |
+|-----------|--------|---------|
+| (ana domain) | `evaitec.com.tr` | `HTTP` → `localhost:5010` |
+| `api` | `evaitec.com.tr` | `HTTP` → `localhost:5005` |
+| `db` | `evaitec.com.tr` | `HTTP` → `localhost:8080` |
+| `dev` | `evaitec.com.tr` | `HTTP` → `localhost:5007` |
+| `test` | `evaitec.com.tr` | `HTTP` → `localhost:5006` |
+## 🏗️ ZimaOS Göç Hazırlığı (casatozima)
+
+ZimaOS'a geçiş için tertemiz, sadece gerekli dosyaları içeren yeni bir depo (repository) hazırladık.
+
+*   **Yerel Dizin:** `C:\projects\github\casatozima`
+*   **İçerik:** Docker yapılandırması, Flask API (Dev/Test/API/Prod katmanları) ve Dashboard arayüzü.
+*   **Git Durumu:** `git init` yapıldı ve `.gitignore` dosyası eklendi.
+
+### GitHub'a Yükleme Adımları:
+GitHub'da `casatozima` adında yeni (private) bir depo oluşturduktan sonra şu komutları terminalde (yeni klasörün içindeyken) çalıştırarak yükleyebilirsin:
+```bash
+git remote add origin https://github.com/KULLANICI_ADIN/casatozima.git
+git add .
+git commit -m "Initial clean migration setup for ZimaOS"
+git branch -M main
+git push -u origin main
+```
+
+## 📱 Zima Client ile Uzaktan Erişim (Remote ID)
+
+ZimaOS'a dünyanın her yerinden güvenli bir şekilde bağlanmak için Zima Client'ı kullanabilirsin:
+
+1.  **İndir:** [zimaspace.com](https://zimaspace.com) adresinden Zima Client'ın Windows sürümünü indir ve kur.
+2.  **ID'yi Al:** ZimaOS Web Dashboard'u içinden **Settings (Ayarlar) -> Network (Ağ)** sekmesine git. Burada **"Network ID"** (veya Remote ID) yazan 16 haneli kodu kopyala.
+3.  **Bağlan:** Kendi bilgisayarındaki Zima Client uygulamasını aç, bu kodu yapıştır ve ZimaOS kullanıcı adın/şifren ile giriş yap.
+
+Bu işlemden sonra, SSH veya Dashboard erişimi için sanki evdeymişsin gibi aynı IP adreslerini kullanmaya devam edebilirsin.
+
+## 🌐 Cloudflare & Tünel Re-Sync (ZimaOS'ta)
+
+Tüneli canlandırmak için SSH terminaline şu komutu yapıştır:
+
+```bash
+# Cloudflared indir ve servisi kur (Token ile)
+curl -L --output cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
+sudo dpkg -i cloudflared.deb
+sudo cloudflared service install eyJhIjoiMGFiMjM5M2Y3NjFlZDgzYTIyY2QzYTgwYjVkZGM1NjAiLCJ0IjoiOTE2MmQ2YWUtMDZkYi00M2FmLWEwZWItMTgzMTgwOTRiZTY5IiwicyI6IlptTmxNREE1TkRFdE5qTmhaQzAwT0RZMkxUZzNNMkV0WldNek1XUTNPR00zWXpObCJ9
+```
+
+Bu komutu çalıştırdığın an, `evaitec.com.tr` ve tüm alt domainlerin yeni bilgisayarına bağlanacaktır.
+
+---
+
+## 🚀 Projeyi Başlatmak
+
+SSH terminalinde şu komutu çalıştırarak her şeyi ayağa kaldır:
+
+```bash
+git clone https://github.com/evatechnosoft/casatozima.git
+cd casatozima
+docker compose up -d
+```

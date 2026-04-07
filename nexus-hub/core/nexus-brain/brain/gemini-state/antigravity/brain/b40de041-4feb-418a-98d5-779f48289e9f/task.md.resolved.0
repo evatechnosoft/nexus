@@ -1,0 +1,8 @@
+# Backend Problems Fix Implementation Plan
+
+- [/] Find backend problems in the `@problems` tab
+    - [ ] Check `src` directory for obvious errors
+    - [ ] Examine models and controllers
+    - [ ] Look for syntax errors or missing imports
+- [ ] Fix identified issues
+- [ ] Verify fix by running `npm run migrate` or `npm test`

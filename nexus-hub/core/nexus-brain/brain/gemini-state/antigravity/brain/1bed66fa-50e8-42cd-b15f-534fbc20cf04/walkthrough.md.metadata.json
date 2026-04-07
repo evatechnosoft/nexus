@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_WALKTHROUGH",
+  "summary": "Completed the Portainer fix and dashboard integration.\n- Portainer is now integrated into the Evaitec status dashboard at port.evaitec.com.\n- Dashboard script monitor.sh was updated and fixed.\n- Access lists and infrastructure docs were updated.\n- Portainer service was restarted and verified.",
+  "updatedAt": "2026-03-29T13:08:49.728543800Z"
+}

@@ -1,0 +1,20 @@
+- [x] Fix 'Undefined class Health' by running `flutter pub get`
+- [x] Migrate `health_service.dart` to `health` v11.0.0+
+- [x] Add extended health metrics (Calories, Distance, Weight, Water)
+- [x] **Phase 1: Foundation & Services**
+  - [x] Create `lib/services/photo_service.dart` (multipart upload)
+  - [x] Add chat logic to `lib/services/gemini_service.dart`
+  - [x] Add `/api/sync/meal` to backend `sync.js`
+- [x] **Phase 2: Navigation Overhaul**
+  - [x] Update `MainNavigation` in `lib/main.dart` (4 tabs)
+- [x] **Phase 3: AI Coach (Chat Interface)**
+  - [x] Create `lib/screens/coach_screen.dart` (Hikmet Chat)
+  - [x] Integrate Weekly Report (Backend `/ai/weekly-summary`)
+- [x] **Phase 4: AI Scan persistence**
+  - [x] Update `lib/screens/chat_screen.dart` to save meals & upload photos
+- [x] **Phase 5: Dashboard & UI Polish**
+  - [x] Add AI Coach banner to Dashboard
+  - [x] Enhance premium UI (Gradients, glassmorphism)
+- [x] **Phase 6: Final Build & Verification**
+  - [x] Run `flutter clean && flutter run`
+  - [x] Verification on S24 Ultra

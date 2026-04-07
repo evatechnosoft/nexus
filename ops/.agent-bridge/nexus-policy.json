@@ -1,0 +1,23 @@
+{
+  "version": "1.0",
+  "principles": [
+    "non-interference",
+    "read-mostly",
+    "validate-before-apply"
+  ],
+  "readOnlyRoots": [
+    "C:/Users/Deacjx/.claude",
+    "C:/Users/Deacjx/.gemini"
+  ],
+  "workspaceRoots": [
+    "C:/projects/deanos",
+    "C:/projects/deanos/.gpt"
+  ],
+  "requiredFiles": [
+    "C:/projects/deanos/.agent-bridge/nexus-skill-map.json",
+    "C:/projects/deanos/scripts/resolve-nexus-context.ps1",
+    "C:/projects/deanos/scripts/update-nexus-knowledge.ps1",
+    "C:/projects/deanos/.agent-bridge/mcp-bridge.json",
+    "C:/projects/deanos/.gpt/GPT.md"
+  ]
+}

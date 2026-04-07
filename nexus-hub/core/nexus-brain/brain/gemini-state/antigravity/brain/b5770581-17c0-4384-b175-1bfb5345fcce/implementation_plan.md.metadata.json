@@ -1,0 +1,6 @@
+{
+  "artifactType":  "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary":  "Ollama ve Open WebUI'ı ZimaOS üzerinde birbirine bağlamak için Ollama'yı tüm arayüzlerde dinleyecek şekilde yapılandırma ve Open WebUI konteyner ayarlarını güncelleme planı.",
+  "updatedAt":  "2026-04-03T10:56:34.253133100Z",
+  "requestFeedback":  true
+}

@@ -1,0 +1,16 @@
+- [ ] **Infrastructure: Environment Files**
+    - [ ] Create `.env.dev` (Local, Yellow)
+    - [ ] Create `.env.test` (DeanOS @ 9700, Red)
+    - [ ] Create `.env.prod` (DeanOS @ 9600, Green)
+- [ ] **Backend: Environment Handling**
+    - [ ] Update `main.py` to read `APP_ENV` and `APP_PORT`
+    - [ ] Add `APP_PORT` handling in `docker-compose.yml`
+- [ ] **Frontend: Environment Badges**
+    - [ ] Update `templates/base.html` with color-coded badges (Yellow/Red/Green)
+- [ ] **Automation: Deployment Scripts**
+    - [ ] Update `deploy.ps1` (Local) with branch-aware PR logic
+    - [ ] Create `deploy_deanos.sh` (Server) for automated branch switching
+- [ ] **Verification**
+    - [ ] Test `DEV` locally (9600/Yellow)
+    - [ ] Push to `test` branch and verify (9700/Red)
+    - [ ] Push to `main` branch and verify (9600/Green)

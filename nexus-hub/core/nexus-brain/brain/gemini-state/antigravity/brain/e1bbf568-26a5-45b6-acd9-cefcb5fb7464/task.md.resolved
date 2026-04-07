@@ -1,0 +1,12 @@
+# Scribd Download Task
+
+- [x] Initialize project workspace `[/]`
+- [x] Clone `scribd-dl` repository `[x]`
+- [x] Install dependencies `[x]`
+- [x] Configure Puppeteer and Chromium `[x]`
+- [x] Run the download tool for the provided Scribd URL (English-Code-1) `[x]`
+- [x] Run the download tool for the new Scribd URL (English-Code-BrE-L2) `[x]`
+- [x] Run the download tool for the third Scribd URL (English-Code-4) `[x]`
+- [/] Develop Hitfile downloader script (OkDebrid automation) `[/]`
+- [/] Test Hitfile download for the provided link `[/]`
+- [x] Verify the downloaded content `[x]`

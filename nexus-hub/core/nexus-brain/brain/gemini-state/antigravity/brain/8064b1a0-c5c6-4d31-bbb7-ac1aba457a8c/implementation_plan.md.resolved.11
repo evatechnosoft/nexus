@@ -1,0 +1,32 @@
+# Radial Color Palette Upgrade
+
+Replace the legacy linear hue slider and fixed color presets with a professional radial color wheel for more intuitive customization.
+
+## Proposed Changes
+
+### [Component Name]
+#### [MODIFY] [gauge_mini_settings.dart](file:///c:/projects/claude+antigravity/projects/car_dash/lib/presentation/widgets/gauge_mini_settings.dart)
+- Remove `_predefinedColors` and [_presetColor](file:///c:/projects/claude+antigravity/projects/car_dash/lib/presentation/widgets/gauge_mini_settings.dart#198-215) logic.
+- Remove the "HUE" slider from [_AdvancedColorPanel](file:///c:/projects/claude+antigravity/projects/car_dash/lib/presentation/widgets/gauge_mini_settings.dart#253-331).
+- Implement `_HueWheelPainter` to render a conic gradient circle.
+- Implement `_RadialHuePicker` widget to handle touch gestures on the wheel.
+- Integrate `_RadialHuePicker` into the color configuration section.
+- Maintain Glow and Opacity sliders below the radial wheel.
+
+### [Component Name]
+#### [MODIFY] [main.dart](file:///c:/projects/claude+antigravity/projects/car_dash/lib/main.dart)
+- Wrap the background `Stack` in a `GestureDetector`.
+- Implement tap-to-deselect logic to close settings when clicking on empty space.
+- Ensure tap events on gauges still work and don't trigger background deselect.
+
+## Verification Plan
+
+### Automated Tests
+- None (Visual UI change).
+
+### Manual Verification
+- Open gauge settings.
+- Verify the 6 legacy color buttons are gone.
+- Use the radial wheel to change colors.
+- Verify color updates in real-time on the gauge.
+- Verify glow and opacity still work correctly with the new palette.

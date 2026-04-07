@@ -1,0 +1,43 @@
+# Dashboard Veri Entegrasyonu ve Polishing Planı
+
+Bu plan, dashboard kartlarının backend verileriyle canlı olarak beslenmesini ve kullanıcı etkileşimlerinin (su ekleme vb.) sunucuya anında yansıtılmasını hedefler.
+
+## User Review Required
+
+> [!IMPORTANT]
+> - Backend üzerinde `/sync/meal` ve `/sync/water` endpoint'leri mevcuttur.
+> - Dashboard'daki 'Hızlı Su Ekleme' butonu artık sadece yerel state'i değil, backend'i de güncelleyecektir.
+
+## Proposed Changes
+
+### [Component] Backend Integration
+
+#### [MODIFY] [HealthService](file:///c:/projects/SportApp/mobile_app/lib/services/health_service.dart)
+- `fetchTodayNutrition`: Bugün yenilen yemeklerin toplam kalorisini backend'den çeken metot ekle.
+- `logWater`: Dashboard'dan girilen su miktarını backend'e gönderen metot ekle.
+
+### [Component] Dashboard Enhancements
+
+#### [MODIFY] [DashboardScreen](file:///c:/projects/SportApp/mobile_app/lib/screens/dashboard_screen.dart)
+- `_refreshData` içinde hem `fetchTodayStats` (sensör verileri) hem de `fetchTodayNutrition` (backend verileri) çağrılacak.
+- Su ekleme butonu (`onAdd`) `logWater` metodunu tetikleyecek.
+- `Meals` kartı gerçek kalori toplamını gösterecek.
+
+### [Component] UI Polish
+
+#### [MODIFY] [DashboardScreen](file:///c:/projects/SportApp/mobile_app/lib/screens/dashboard_screen.dart)
+- **Uyku Kartı:** Biometrik verilerdeki uyku (deep/rem) sürelerini gösteren bir kart eklenecek.
+- **Grafik:** Kilo grafiği backend'den gelen son 7 günlük veriyi gösterecek şekilde güncellenecek.
+
+## Open Questions
+
+- Kilo grafiği için son 7 gün yeterli mi yoksa 30 gün mü istersiniz?
+
+## Verification Plan
+
+### Automated Tests
+- Backend'e gönderilen su ve kalori verilerinin doğru kaydedilip kaydedilmediği loglardan kontrol edilecek.
+
+### Manual Verification
+- Bir öğün eklendiğinde dashboard'daki kalori sayacının arttığı doğrulanacak.
+- Su ekle butonuna basınca backend'deki su miktarının güncellendiği görülecek.

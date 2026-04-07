@@ -1,0 +1,24 @@
+# Walkthrough: OAuth2 (Modern Auth) Migration
+
+Successfully migrated the IT Inventory email watcher from Basic Authentication to **Modern Authentication (OAuth2)** via the **Microsoft Graph API**.
+
+## Key Improvements
+1. **Security**: Removed static app passwords. Now uses `msal` and `O365` for secure, token-based authentication.
+2. **Reliability**: Pivot to Microsoft Graph API ensures long-term compatibility with Microsoft 365.
+3. **Traceability**: Enhanced logging for the email monitoring process.
+
+## Changes Made
+- Created [ms_oauth.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/ms_oauth.py) for token management.
+- Created [graph_watcher.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/graph_watcher.py) for mailbox monitoring via Graph API.
+- Updated [.env](file:///c:/projects/it-inventory/it-inventory/.env) with Azure Application credentials.
+- Updated application dependencies in [requirements.txt](file:///c:/projects/it-inventory/it-inventory/inventory_app/requirements.txt).
+- Integrated the new watcher into [main.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/main.py).
+
+## Validation Results
+- **Authentication**: MSAL successfully generates Bearer tokens using Client Credentials.
+- **Connection**: `O365` library connects to `support@findtalent.net` and scans the Inbox.
+- **Processing**: Logs confirm unread emails are identified and processed into the IT Inventory database.
+  - *Example log*: `2026-03-25 12:36:30 - INFO - Running job "check_new_emails_graph" ... executed successfully`
+
+## Current Environment Status
+The system is now fully automated and compliant with Microsoft Modern Auth requirements.

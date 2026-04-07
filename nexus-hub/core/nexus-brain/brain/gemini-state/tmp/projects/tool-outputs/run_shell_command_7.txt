@@ -1,0 +1,35 @@
+Output: M       .env.template
+M       database.py
+M       models.py
+Switched to branch 'dev'
+[dev db44b61] feat: Add production Docker v2 and PostgreSQL orchestration
+ 2 files changed, 80 insertions(+)
+ create mode 100644 prod-docker-compose.yml
+ create mode 100644 prod.Dockerfile
+M       .env.template
+M       database.py
+M       models.py
+Switched to branch 'test'
+Updating 2b6fae3..db44b61
+Fast-forward
+ prod-docker-compose.yml | 44 ++++++++++++++++++++++++++++++++++++++++++++
+ prod.Dockerfile         | 36 ++++++++++++++++++++++++++++++++++++
+ 2 files changed, 80 insertions(+)
+ create mode 100644 prod-docker-compose.yml
+ create mode 100644 prod.Dockerfile
+M       .env.template
+M       database.py
+M       models.py
+Switched to branch 'main'
+Updating 4e2f8be..db44b61
+Fast-forward
+ email_watcher.py        | 35 ++++++++++++++-----
+ main.py                 | 32 ++++--------------
+ prod-docker-compose.yml | 44 ++++++++++++++++++++++++
+ prod.Dockerfile         | 36 ++++++++++++++++++++
+ scripts/discovery.py    | 90 +++++++++++++++++++++++++++++++++++++++++++++++++
+ 5 files changed, 203 insertions(+), 34 deletions(-)
+ create mode 100644 prod-docker-compose.yml
+ create mode 100644 prod.Dockerfile
+ create mode 100644 scripts/discovery.py
+Process Group PGID: 14016

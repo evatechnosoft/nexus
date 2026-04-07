@@ -1,0 +1,12 @@
+# Task: Domain-Based Routing and Multi-Language Support for Evaitec
+
+- [ ] Planning & Research <!-- id: 0 -->
+    - [/] Create implementation plan <!-- id: 1 -->
+    - [ ] Verify geo-location detection strategy (Cloudflare vs. Library) <!-- id: 2 -->
+- [ ] Implementation <!-- id: 3 -->
+    - [ ] Set up basic localization structure (TR/EN) <!-- id: 4 -->
+    - [ ] Implement domain-based redirection logic in [app.py](file:///c:/projects/github/casatozima/src/app.py) <!-- id: 5 -->
+    - [ ] Update [index.html](file:///c:/projects/github/casatozima/src/templates/index.html) to support multiple languages <!-- id: 6 -->
+- [ ] Verification <!-- id: 7 -->
+    - [ ] Test redirection based on host header <!-- id: 8 -->
+    - [ ] Test language switching <!-- id: 9 -->

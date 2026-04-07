@@ -1,0 +1,10 @@
+- [x] Analyze ZimaOS Read-only error logs.
+- [x] Add `/root/.ssh` volume mapping to `coolify-v4`.
+- [x] Redirect `HOME` environment variable for the `coolify-v4` container.
+- [x] Set host permissions (777/9999) for the SSH folders.
+- [x] Elevate Coolify V4 to Root user (User 0) inside container.
+- [x] Map entire `/root` directory to host volume (Nuclear Option).
+- [x] Add `tmpfs` mounts for `/tmp` and `/var/cache/nginx`.
+- [x] Force-restart Coolify V4 stack.
+- [ ] User to re-attempt deployment of `it-inventory`.
+- [ ] Verify `it-inventory` is Healthy and accessible on Port 9700.

@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_WALKTHROUGH",
+  "summary": "Walkthrough of the User Authentication implementation for the `casatozima` project. Includes backend JWT setup, frontend UI updates, and verification results from the local test environment.",
+  "updatedAt": "2026-03-24T02:12:43.826026100Z"
+}

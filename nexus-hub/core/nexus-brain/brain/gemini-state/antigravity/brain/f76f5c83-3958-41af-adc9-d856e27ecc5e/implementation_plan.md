@@ -1,0 +1,23 @@
+# Plan - Fix Layout Overlap Issue
+
+The user reported that components are overlapping (specifically the dashboard cards are covering the sidebar). I will improve the layout structure to ensure the sidebar and main content remain properly separated and responsive.
+
+## Proposed Changes
+
+### Dashboard Component
+
+#### [MODIFY] [dashboard_screen.dart](file:///c:/projects/Antigravity/shmarthouse/shmarthouse_app/lib/features/dashboard/presentation/views/dashboard_screen.dart)
+- Wrap the main `Row` in a `SingleChildScrollView` (horizontal) or ensure `Expanded` children are properly constrained.
+- Add a `LayoutBuilder` to detect screen width.
+- On smaller screens, potentially hide the sidebar or use a `Drawer`.
+- Ensure the `Sidebar` has a fixed width and the main content respects it.
+- Adjust padding in the main content to prevent items from being pushed into the sidebar area.
+
+## Verification Plan
+
+### Automated Tests
+- Run `flutter analyze` to ensure no regression.
+
+### Manual Verification
+- Use the browser subagent to check the layout at different widths (1200px, 800px, 600px).
+- Verify that the "AVG POWER" card no longer covers the "SYSTEM" logo or sidebar navigation items.

@@ -1,0 +1,169 @@
+Erişilebilirlik Bağlantıları
+Ana içeriğe geç
+Erişilebilirlik yardımı
+Erişilebilirlikle ilgili geri bildirim
+[0] (77,70)<a aria-label='Google Anasayfası'na Git' href='https://www.google.com/webhp?hl=tr&sa=X&ved=0ahUKEwjnmcCChqyTAxUrSvEDHcCAJNkQPAgI' id='logo' title='Google Anasayfası'na Git' />
+[1] (346,69)<textarea aria-label='Ara' class='gLFyf' id='APjFqb' role='combobox' />
+[2] (561,69)<div  />
+	[3] (560,69)<div aria-label='Temizle' class='M2vV3 vOY7J' role='button' />
+		[4] (560,69)<span  />
+	[5] (576,69)<span  />
+[6] (591,69)<div aria-label='Harf çevirme aracı' class='Umvnrc' role='button' />
+	[7] (591,69)<span  />
+[8] (617,69)<div aria-label='Sesle arama yapın' class='XDyW0e' role='button' />
+[9] (642,69)<div aria-label='Görselle arama' class='nDcEnd' role='button' />
+[10] (672,69)<button aria-label='Ara' class='HZVG1b Tg7LZd' />
+	[11] (668,69)<div  />
+		[12] (668,69)<span  />
+[13] (878,69)<div aria-label='Ayarlar' class='fLciMb' id='og-te' role='button' />
+	[14] (878,72)<div  />
+		[15] (878,69)<span  />
+[16] (907,69)<a aria-label='Google uygulamaları' class='gb_B' href='https://www.google.com.tr/intl/tr/about/products?tab=wh' role='button' />
+[17] (955,69)<a aria-label='Oturum açın' class='gb_A' href='https://accounts.google.com/ServiceLogin?hl=tr&passive=true&continue=https://www.google.com/search%3Fq%3Dsite:ebook-tienganh.com%2B%2522English%2BCode%2522%2B1%2B%2522Class%2BAudio%2522&ec=futura_srp_og_si_72236_p'>Oturum açın />
+	Oturum açın
+Filtreler ve Konular
+[18] (164,145)<a class='XVMlrc C6AK7c' href='/search?q=site:ebook-tienganh.com+%22English+Code%22+1+%22Class+Audio%22&sca_esv=f818ef0c6d37c692&udm=50&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLQJoVswXu7Xoldd5UH6fMIpVmXy93SCOvvhdXj3lBBc6ULDr0rdqW0XXkPsl2-Jih8QGIzijJgAykyPEGb_ulp8zj6jNU6bW0KbkI3ALL9OGSRk14v2__5YCXCbyhZRmPVmi8KlLOOPXAbPDDLcp2pXy76GR6ROLKGbSlTK7kVOEtNDR4cygfEgpI2S3lLh1wyjAtU0NM-OIRTVRKPKsl4_3Ri60&aep=1&ntc=1&sa=X&ved=2ahUKEwjnmcCChqyTAxUrSvEDHcCAJNkQ2J8OegQICRAE' />
+	[19] (164,145)<div  />
+		[20] (164,156)<div  />
+			[21] (164,149)<span >AI Modu />
+[22] (208,145)<a class='C6AK7c' role='link' />
+	Tümü
+[23] (253,145)<a class='C6AK7c' href='/search?sca_esv=f818ef0c6d37c692&udm=2&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLQJoVswXu7Xoldd5UH6fMIpVmXy93SCOvvhdXj3lBBc6ULDr0rdqW0XXkPsl2-Jih8QGIzijJgAykyPEGb_ulp8zj6jNU6bW0KbkI3ALL9OGSRk14v2__5YCXCbyhZRmPVmi8KlLOOPXAbPDDLcp2pXy76GR6ROLKGbSlTK7kVOEtNDR4cygfEgpI2S3lLh1wyjAtU0NM-OIRTVRKPKsl4_3Ri60&q=site:ebook-tienganh.com+%22English+Code%22+1+%22Class+Audio%22&sa=X&ved=2ahUKEwjnmcCChqyTAxUrSvEDHcCAJNkQtKgLegQIEhAB' />
+	[24] (253,145)<div  />
+		[25] (253,156)<span >Görseller />
+[26] (303,145)<a class='C6AK7c' href='/search?sca_esv=f818ef0c6d37c692&udm=7&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLQJoVswXu7Xoldd5UH6fMIpVmXy93SCOvvhdXj3lBBc6ULDr0rdqW0XXkPsl2-Jih8QGIzijJgAykyPEGb_ulp8zj6jNU6bW0KbkI3ALL9OGSRk14v2__5YCXCbyhZRmPVmi8KlLOOPXAbPDDLcp2pXy76GR6ROLKGbSlTK7kVOEtNDR4cygfEgpI2S3lLh1wyjAtU0NM-OIRTVRKPKsl4_3Ri60&q=site:ebook-tienganh.com+%22English+Code%22+1+%22Class+Audio%22&sa=X&ved=2ahUKEwjnmcCChqyTAxUrSvEDHcCAJNkQtKgLegQIFBAB' />
+	[27] (303,145)<div  />
+		[28] (303,156)<span >Videolar />
+[29] (352,145)<a class='C6AK7c' href='/search?sca_esv=f818ef0c6d37c692&udm=28&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLQJoVswXu7Xoldd5UH6fMIpVmXy93SCOvvhdXj3lBBc6ULDr0rdqW0XXkPsl2-Jih8QGIzijJgAykyPEGb_ulp8zj6jNU6bW0KbkI3ALL9OGSRk14v2__5YCXCbyhZRmPVmi8KlLOOPXAbPDDLcp2pXy76GR6ROLKGbSlTK7kVOEtNDR4cygfEgpI2S3lLh1wyjAtU0NM-OIRTVRKPKsl4_3Ri60&q=site:ebook-tienganh.com+%22English+Code%22+1+%22Class+Audio%22&ved=1t:220175&ictx=111' />
+	[30] (352,145)<div  />
+		[31] (352,156)<span >Alışveriş />
+[32] (410,145)<a class='C6AK7c' href='/search?sca_esv=f818ef0c6d37c692&udm=39&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLQJoVswXu7Xoldd5UH6fMIpVmXy93SCOvvhdXj3lBBc6ULDr0rdqW0XXkPsl2-Jih8QGIzijJgAykyPEGb_ulp8zj6jNU6bW0KbkI3ALL9OGSRk14v2__5YCXCbyhZRmPVmi8KlLOOPXAbPDDLcp2pXy76GR6ROLKGbSlTK7kVOEtNDR4cygfEgpI2S3lLh1wyjAtU0NM-OIRTVRKPKsl4_3Ri60&q=site:ebook-tienganh.com+%22English+Code%22+1+%22Class+Audio%22&sa=X&ved=2ahUKEwjnmcCChqyTAxUrSvEDHcCAJNkQs6gLegQIDhAB' />
+	[33] (410,145)<div  />
+		[34] (410,156)<span >Kısa videolar />
+[35] (468,145)<a class='C6AK7c' href='/search?sca_esv=f818ef0c6d37c692&q=site:ebook-tienganh.com+%22English+Code%22+1+%22Class+Audio%22&tbm=nws&source=lnms&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLQJoVswXu7Xoldd5UH6fMIpVmXy93SCOvvhdXj3lBBc6ULDr0rdqW0XXkPsl2-Jih8QGIzijJgAykyPEGb_ulp8zj6jNU6bW0KbkI3ALL9OGSRk14v2__5YCXCbyhZRmPVmi8KlLOOPXAbPDDLcp2pXy76GR6ROLKGbSlTK7kVOEtNDR4cygfEgpI2S3lLh1wyjAtU0NM-OIRTVRKPKsl4_3Ri60&sa=X&ved=2ahUKEwjnmcCChqyTAxUrSvEDHcCAJNkQ0pQJegQIDxAB' />
+	[36] (468,145)<div  />
+		[37] (468,156)<span >Haberler />
+[38] (528,145)<div class='mTpL7c' role='button' />
+	[39] (528,145)<div  />
+		[40] (528,156)<div  />
+			[41] (523,149)<span >Daha fazla />
+			[42] (550,149)<span  />
+[43] (591,145)<div class='mOKdDc' id='hdtb-tls' role='button' />
+	[44] (591,145)<div  />
+		[45] (591,156)<div  />
+			[46] (585,149)<span >Araçlar />
+			[47] (605,149)<span  />
+Looking for results in English?
+[48] (967,266)<a href='#' />
+	[49] (967,264)<span  />
+[50] (853,297)<a href='/setprefs?sig=0_AFLdylOmlmYTb9A6MfmhoVa_RsI%3D&source=en_ignored_notification&prev=https://www.google.com/search?q%3Dsite:ebook-tienganh.com%2B%2522English%2BCode%2522%2B1%2B%2522Class%2BAudio%2522&hl=en&sa=X&ved=2ahUKEwjnmcCChqyTAxUrSvEDHcCAJNkQhoQCKAF6BAgYEAQ'>Change to English />
+[51] (876,328)<a href='#'>kullanmaya devam et />
+	[52] (832,327)<span >Türkçe />
+[53] (840,371)<a class='fl' href='/preferences?lang=1&hl=tr&sa=X&ved=2ahUKEwjnmcCChqyTAxUrSvEDHcCAJNkQiIQCKAN6BAgYEAY#languages'>Dil ayarları />
+Arama Sonuçları
+[54] (316,262)<a class='zReHs' href='https://ebook-tienganh.com/english-code/' />
+	[55] (316,288)<h3 >Download Pearson English Code Pdf Resources (Pre A1 ... />
+	[56] (225,241)<div  />
+		[57] (225,241)<div  />
+			[58] (156,241)<span  />
+				[59] (156,241)<div  />
+					[60] (156,241)<img  />
+			[61] (238,241)<div  />
+				[62] (238,229)<div  />
+					[63] (238,229)<span >ebook-tienganh.com />
+				[64] (238,255)<div  />
+					[65] (238,255)<cite class='qLRx3b tjvcx GvPZzd dTxz9 cHaqb' role='text'>https://ebook-tienganh.com />
+						[66] (272,254)<span class='ylgVCe ob9lvb' role='text'>› ... />
+·
+[67] (332,255)<a class='dEEN8c' href='https://ebook-tienganh.com/english-code/' />
+	[68] (332,254)<span >Bu sayfanın çevirisini yap />
+[69] (389,253)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[70] (389,253)<span  />
+		[71] (389,255)<span  />
+Download Ebook Pearson
+English Code
+2021 (7 Levels) Pdf Audio Video: Student's Book, Teacher's Edition,
+Class Audio
+, Workbook.
+[72] (307,457)<a class='zReHs' href='https://ebook-tienganh.com/english-time/' />
+	[73] (307,483)<h3 >Download English Time 2nd Edition Pdf Audio (6 Levels) />
+	[74] (225,436)<div  />
+		[75] (225,436)<div  />
+			[76] (156,436)<span  />
+				[77] (156,436)<div  />
+					[78] (156,436)<img  />
+			[79] (238,436)<div  />
+				[80] (238,424)<div  />
+					[81] (238,424)<span >ebook-tienganh.com />
+				[82] (238,449)<div  />
+					[83] (238,449)<cite class='qLRx3b tjvcx GvPZzd dTxz9 cHaqb' role='text'>https://ebook-tienganh.com />
+						[84] (272,449)<span class='ylgVCe ob9lvb' role='text'>› ... />
+·
+[85] (332,449)<a class='dEEN8c' href='https://ebook-tienganh.com/english-time/' />
+	[86] (332,449)<span >Bu sayfanın çevirisini yap />
+[87] (389,448)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[88] (389,448)<span  />
+		[89] (389,449)<span  />
+English Time
+1st
+Edition (PDFs, Resources). Level
+1
+. English Time
+1 Class Audio
+CD.zip ... ๏
+English Code
+๏ English Collocations in Use ๏ English File 4ed
+[90] (308,652)<a class='zReHs' href='https://ebook-tienganh.com/collaborate/' />
+	[91] (308,678)<h3 >Cambridge Collaborate Pdf Presentation Plus (A1 / B1+) />
+	[92] (225,631)<div  />
+		[93] (225,631)<div  />
+			[94] (156,631)<span  />
+				[95] (156,631)<div  />
+					[96] (156,631)<img  />
+			[97] (238,631)<div  />
+				[98] (238,619)<div  />
+					[99] (238,619)<span >ebook-tienganh.com />
+				[100] (238,644)<div  />
+					[101] (238,644)<cite class='qLRx3b tjvcx GvPZzd dTxz9 cHaqb' role='text'>https://ebook-tienganh.com />
+						[102] (272,643)<span class='ylgVCe ob9lvb' role='text'>› ... />
+·
+[103] (332,644)<a class='dEEN8c' href='https://ebook-tienganh.com/collaborate/' />
+	[104] (332,643)<span >Bu sayfanın çevirisini yap />
+[105] (389,643)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[106] (389,643)<span  />
+		[107] (389,644)<span  />
+23 Ağu 2023
+—
+Collaborate
+1 Class Audio
+.zip. Collaborate
+1
+Project Book.pdf ... ๏
+English Code
+๏ English Collocations in Use ๏ English File 4ed
+[108] (311,847)<a class='zReHs' href='https://ebook-tienganh.com/interactive/' />
+	[109] (311,872)<h3 >Download Cambridge Interactive Pdf Resources (A2 / B2) />
+	[110] (225,825)<div  />
+		[111] (225,825)<div  />
+			[112] (156,825)<span  />
+				[113] (156,825)<div  />
+					[114] (156,825)<img  />
+			[115] (238,825)<div  />
+				[116] (238,814)<div  />
+					[117] (238,814)<span >ebook-tienganh.com />
+				[118] (238,839)<div  />
+					[119] (238,839)<cite class='qLRx3b tjvcx GvPZzd dTxz9 cHaqb' role='text'>https://ebook-tienganh.com />
+						[120] (272,838)<span class='ylgVCe ob9lvb' role='text'>› ... />
+·
+[121] (332,839)<a class='dEEN8c' href='https://ebook-tienganh.com/interactive/' />
+	[122] (332,838)<span >Bu sayfanın çevirisini yap />
+[123] (389,837)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[124] (389,837)<span  />
+		[125] (389,839)<span  />
+Interactive
+1 Class Audio
+.zip. Interactive
+1
+Student's Book.pdf – Sample ... ๏
+English Code
+๏ English Collocations in Use ๏ English File 4ed ๏ English ...

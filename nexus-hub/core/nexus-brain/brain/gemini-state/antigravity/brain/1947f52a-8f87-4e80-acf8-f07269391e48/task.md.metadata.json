@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_TASK",
+  "summary": "Task list for fixing the freezed generation issues. It includes environment cleanup, configuration verification, code regeneration, and final verification.",
+  "updatedAt": "2026-03-21T11:26:40.094284600Z"
+}

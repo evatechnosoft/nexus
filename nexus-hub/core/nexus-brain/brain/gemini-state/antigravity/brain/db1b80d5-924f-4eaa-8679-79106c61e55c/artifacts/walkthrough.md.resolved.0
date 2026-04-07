@@ -1,0 +1,33 @@
+# Remote Database Setup and Integration Walkthrough
+
+The SportApp is now successfully connected to a new PostgreSQL database on your remote `dean` server.
+
+## Changes Made
+
+### 1. Remote Database Configuration
+- **Created Database**: A new database named `deanfit` was created inside the `postgresql` Docker container on the `192.168.1.186` (dean) server.
+- **Created User**: A new database user `dean` was created with the provided credentials.
+- **Granted Permissions**: Full privileges on the `deanfit` database and its schema were granted to the `dean` user.
+- **Initialized Schema**: The local `schema.sql` was applied to the remote database, creating all necessary tables and indexes.
+
+### 2. Local Environment Update
+- **Port Change**: Moved the application to port `3002` to avoid conflicts with the existing landing page on `3001`.
+- **Database Connection**: Updated `.env` with the new remote connection string:
+  `DATABASE_URL=postgresql://dean:Eralp123!@192.168.1.186:5432/deanfit?sslmode=disable`
+
+## Verification Results
+
+### Health Check Success
+The `/api/health` endpoint was tested and confirmed working with the following response:
+```json
+{
+  "ok": true,
+  "time": "2026-04-01T11:17:47.110Z"
+}
+```
+
+### Browser Verification
+![Health Check Success](file:///C:/Users/Deacjx/.gemini/antigravity/brain/db1b80d5-924f-4eaa-8679-79106c61e55c/check_health_final_success_3002_1775042256826.webp)
+
+> [!NOTE]
+> The server is currently running in the background on port `3002`. You can access it at `http://localhost:3002`.

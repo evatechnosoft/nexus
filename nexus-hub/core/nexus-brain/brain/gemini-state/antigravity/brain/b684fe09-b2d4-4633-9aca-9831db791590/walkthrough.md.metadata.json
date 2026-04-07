@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_WALKTHROUGH",
+  "summary": "Summary of VS Code and Coolify installation.\n- VS Code installed in `C:\\dev\\Microsoft VS Code`.\n- Coolify v4 installed in WSL Ubuntu and accessible at `http://localhost:8000`.\n- Verification confirmed both services are operational.",
+  "updatedAt": "2026-03-20T15:16:13.624927200Z"
+}

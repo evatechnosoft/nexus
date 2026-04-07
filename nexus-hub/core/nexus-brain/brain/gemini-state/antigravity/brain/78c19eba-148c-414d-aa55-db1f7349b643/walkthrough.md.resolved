@@ -1,0 +1,27 @@
+# Home Server Setup Walkthrough
+
+We have successfully deployed a stable, hybrid home server environment using CasaOS on WSL 2, with custom BigBear and Zima community app stores.
+
+## Key Fixes Applied
+
+### 1. Networking and DNS
+- **Issue:** Docker and CasaOS couldn't pull images due to DNS resolution failures.
+- **Fix:** Manually configured `/etc/resolv.conf` with `nameserver 1.1.1.1` and applied global DNS to the Docker daemon via [daemon.json](file:///c:/projects/github/casaos-home-server/daemon.json).
+
+### 2. Docker Credentials
+- **Issue:** Permission denied error while pulling images (`docker-credential-desktop.exe`).
+- **Fix:** Performed an "Ultimate Fix" by cleaning the Windows-side `.docker/config.json`. This removed the conflict and allowed for successful image pulls.
+
+### 3. PostgreSQL and Adminer Connectivity
+- **Issue:** Adminer couldn't reach PostgreSQL due to network bridge isolation.
+- **Fix:** Connected the `adminer` container to the `postgresql_default` network.
+- **Credentials:**
+  - **Host:** `postgresql`
+  - **User/Pass/DB:** [casaos](file:///c:/projects/github/casaos-home-server/setup.sh#168-405) / [casaos](file:///c:/projects/github/casaos-home-server/setup.sh#168-405) / [casaos](file:///c:/projects/github/casaos-home-server/setup.sh#168-405)
+
+### 4. Custom App Deployment
+- **Flask App:** Successfully built and running on `http://localhost:5001`.
+- **Database URL:** `postgresql://casaos:casaos@localhost:5432/casaos?sslmode=disable`
+
+## Final State
+All core services (CasaOS, Nextcloud, PostgreSQL, Adminer, Portainer) are operational and correctly configured for local development and home server use.

@@ -1,0 +1,6 @@
+{
+  "artifactType": "ARTIFACT_TYPE_TASK",
+  "summary": "Final task list for all fixes. All items are completed. I've resolved the Riverpod errors, improved the UI with pull-to-refresh, and fixed the Gradle \"Duplicate root element android\" collision.",
+  "updatedAt": "2026-03-18T10:28:45.223005100Z",
+  "version": "6"
+}

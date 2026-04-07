@@ -1,0 +1,26 @@
+# Implementation Plan - Complete 2FA Implementation
+
+This plan aims to finish the 2FA verification flow by ensuring the auth token is stored upon successful verification and that the login screen correctly redirects to the 2FA screen when required.
+
+## Proposed Changes
+
+### Auth Feature
+
+#### [MODIFY] [two_fa_screen.dart](file:///c:/projects/github/EvAnotes/mobile/lib/features/auth/two_fa_screen.dart)
+- Update [_handleVerify](file:///c:/projects/github/EvAnotes/mobile/lib/features/auth/two_fa_screen.dart#32-58) to save the `token` from the response into `authTokenProvider`.
+- Use `ref.read(authTokenProvider.notifier).state = token`.
+
+#### [MODIFY] [login_screen.dart](file:///c:/projects/github/EvAnotes/mobile/lib/features/auth/login_screen.dart)
+- Refactor to `ConsumerStatefulWidget` to access `apiClientProvider`.
+- Replace local `_dio` with `ref.read(apiClientProvider)`.
+- Update [_handleLogin](file:///c:/projects/github/EvAnotes/mobile/lib/features/auth/login_screen.dart#33-70) to check if the response indicates 2FA is required and navigate to `/2fa?method=...` if so.
+- Save auth token if no 2FA is required.
+
+## Verification Plan
+
+### Manual Verification
+- Test login with a user that requires 2FA:
+    - Should redirect to [TwoFaScreen](file:///c:/projects/github/EvAnotes/mobile/lib/features/auth/two_fa_screen.dart#6-14).
+    - Entering the correct code should save the token and navigate to `/todos`.
+- Test login with a user that does NOT require 2FA:
+    - Should directly navigate to `/todos` and save the token.

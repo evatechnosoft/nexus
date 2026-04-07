@@ -1,0 +1,10 @@
+# Cloudflare Tunnel Integration
+
+- [x] Install `cloudflared` in the WSL environment (Already running as a systemd service)
+- [x] Authenticate `cloudflared` with the user's Cloudflare account (Using Zero Trust Token)
+- [x] Create a new tunnel for the home server (Tunnel 'evasoft' active)
+- [ ] Configure routing in the Cloudflare Zero Trust Dashboard: 
+    - [ ] Root domain -> CasaOS (`http://localhost:80`)
+    - [ ] `api.domain` -> Flask App (`http://localhost:5000`)
+- [x] Set up the tunnel as a systemd service for persistence (Completed)
+- [ ] Verify external access via the new domain [ ]

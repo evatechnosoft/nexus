@@ -1,0 +1,130 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (82,41)<a aria-label='Google Anasayfası'na Git' href='https://www.google.com/webhp?hl=tr&sa=X&ved=0ahUKEwiJhpznkayTAxUkgP0HHeedJ3sQPAgI' id='logo' title='Google Anasayfası'na Git' />
+[1] (346,34)<textarea aria-label='Ara' class='gLFyf' id='APjFqb' role='combobox' />
+[2] (561,34)<div  />
+	[3] (559,34)<div aria-label='Temizle' class='M2vV3 vOY7J' role='button' />
+		[4] (559,34)<span  />
+	[5] (573,34)<span  />
+[6] (589,34)<div aria-label='Harf çevirme aracı' class='Umvnrc' role='button' />
+	[7] (589,34)<span  />
+[8] (614,34)<div aria-label='Sesle arama yapın' class='XDyW0e' role='button' />
+[9] (640,34)<div aria-label='Görselle arama' class='nDcEnd' role='button' />
+[10] (669,34)<button aria-label='Ara' class='HZVG1b Tg7LZd' />
+	[11] (665,34)<div  />
+		[12] (666,36)<span  />
+[13] (878,37)<div aria-label='Ayarlar' class='fLciMb' id='og-te' role='button' />
+	[14] (878,39)<div  />
+		[15] (878,37)<span  />
+[16] (907,37)<a aria-label='Google uygulamaları' class='gb_B' href='https://www.google.com.tr/intl/tr/about/products?tab=wh' role='button' />
+[17] (955,37)<a aria-label='Oturum açın' class='gb_A' href='https://accounts.google.com/ServiceLogin?hl=tr&passive=true&continue=https://www.google.com/search%3Fq%3Dsite%253Apdfcoffee.com%2B%2522English%2BCode%2522%2BPearson&ec=futura_srp_og_si_72236_p'>Oturum açın />
+	Oturum açın
+English Code 2 Workbook
+English Code
+2 Workbook.
+English Code
+2 Workbook. Author / Uploaded; Renata Salema. Views 2,338 Downloads 474 File size 11MB. Report DMCA / Copyright.
+[18] (223,173)<a class='zReHs' href='https://pdfcoffee.com/english-code-2-flashcards-pdf-free.html' />
+	[19] (223,199)<h3 >English Code 2 Flashcards />
+	[20] (218,152)<div  />
+		[21] (218,152)<div  />
+			[22] (156,152)<span  />
+				[23] (156,152)<div  />
+					[24] (156,152)<img  />
+			[25] (231,152)<div  />
+				[26] (231,140)<div  />
+					[27] (231,140)<span >pdfcoffee.com />
+				[28] (231,165)<div  />
+					[29] (231,165)<cite class='qLRx3b tjvcx GvPZzd dTxz9 cHaqb' role='text'>https://pdfcoffee.com />
+						[30] (254,165)<span class='ylgVCe ob9lvb' role='text'>› en... />
+·
+[31] (318,165)<a class='dEEN8c' href='https://pdfcoffee.com/english-code-2-flashcards-pdf-free.html' />
+	[32] (318,165)<span >Bu sayfanın çevirisini yap />
+[33] (375,164)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[34] (375,164)<span  />
+		[35] (375,165)<span  />
+English Code
+Level 2 Unit 1 STEAM vocabulary. M03
+English Code
+BrE Level 2 Flashcards 23633 STEAM Vocabulary.indd 1 ©
+Pearson
+Education Limited 2021 12/14/20 ...
+[36] (218,366)<a class='zReHs' href='https://pdfcoffee.com/english-code-6-sb-pdf-pdf-free.html' />
+	[37] (215,391)<h3 >English-Code 6 SB PDF />
+	[38] (218,345)<div  />
+		[39] (218,345)<div  />
+			[40] (156,345)<span  />
+				[41] (156,345)<div  />
+					[42] (156,345)<img  />
+			[43] (231,345)<div  />
+				[44] (231,333)<div  />
+					[45] (231,333)<span >pdfcoffee.com />
+				[46] (231,358)<div  />
+					[47] (231,358)<cite class='qLRx3b tjvcx GvPZzd dTxz9 cHaqb' role='text'>https://pdfcoffee.com />
+						[48] (254,357)<span class='ylgVCe ob9lvb' role='text'>› en... />
+·
+[49] (318,358)<a class='dEEN8c' href='https://pdfcoffee.com/english-code-6-sb-pdf-pdf-free.html' />
+	[50] (318,357)<span >Bu sayfanın çevirisini yap />
+[51] (375,357)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[52] (375,357)<span  />
+		[53] (375,358)<span  />
+English-Code
+6 SB PDF.
+English-Code
+6 SB PDF.
+English-Code
+6 SB PDF. Author / Uploaded; Susana Borrelli. Our World Intro: Here we stand: children of every age ...
+[54] (243,558)<a class='zReHs' href='https://pdfcoffee.com/english-code-6-assessment-book-pdf-free.html' />
+	[55] (243,584)<h3 >English Code 6 Assessment Book />
+	[56] (218,538)<div  />
+		[57] (218,538)<div  />
+			[58] (156,538)<span  />
+				[59] (156,538)<div  />
+					[60] (156,538)<img  />
+			[61] (231,538)<div  />
+				[62] (231,526)<div  />
+					[63] (231,526)<span >pdfcoffee.com />
+				[64] (231,551)<div  />
+					[65] (231,551)<cite class='qLRx3b tjvcx GvPZzd dTxz9 cHaqb' role='text'>https://pdfcoffee.com />
+						[66] (254,550)<span class='ylgVCe ob9lvb' role='text'>› en... />
+·
+[67] (318,551)<a class='dEEN8c' href='https://pdfcoffee.com/english-code-6-assessment-book-pdf-free.html' />
+	[68] (318,550)<span >Bu sayfanın çevirisini yap />
+[69] (375,549)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[70] (375,549)<span  />
+		[71] (375,551)<span  />
+English Code
+is built on GSE learning objectives, which help to monitor and measure progress throughout the course. CEFR GSE Benchmark Cambridge English Starter.
+Eksik:
+Pearson
+‎| Şu terimi ara:
+[72] (286,680)<a href='/search?sca_esv=f818ef0c6d37c692&q=site:pdfcoffee.com+%22English+Code%22+%22Pearson%22&sa=X&ved=2ahUKEwiJhpznkayTAxUkgP0HHeedJ3sQ5t4CegQINRAB' />
+	[73] (286,680)<span >Pearson />
+[74] (297,780)<a class='zReHs' href='https://pdfcoffee.com/pearson-big-english-6-student-s-book-2nd-edition-pdf-free.html' />
+	[75] (297,805)<h3 >Pearson - Big English 6 Student - S Book 2nd Edition />
+	[76] (220,759)<div  />
+		[77] (220,759)<div  />
+			[78] (156,759)<span  />
+				[79] (156,759)<div  />
+					[80] (156,759)<img  />
+			[81] (233,759)<div  />
+				[82] (233,747)<div  />
+					[83] (233,747)<span >pdfcoffee.com />
+				[84] (233,772)<div  />
+					[85] (233,772)<cite class='qLRx3b tjvcx GvPZzd dTxz9 cHaqb' role='text'>https://pdfcoffee.com />
+						[86] (256,771)<span class='ylgVCe ob9lvb' role='text'>› pea... />
+·
+[87] (322,772)<a class='dEEN8c' href='https://pdfcoffee.com/pearson-big-english-6-student-s-book-2nd-edition-pdf-free.html' />
+	[88] (322,771)<span >Bu sayfanın çevirisini yap />
+[89] (379,771)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[90] (379,771)<span  />
+		[91] (379,772)<span  />
+Pearson
+-
+English Code
+4 Student - S Book. Our World Intro: Here we stand: children of every age, This is our world ...
+Görseller
+
+</current_dom>

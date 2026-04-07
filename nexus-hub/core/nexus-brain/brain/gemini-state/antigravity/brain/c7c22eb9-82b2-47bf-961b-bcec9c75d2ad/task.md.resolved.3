@@ -1,0 +1,6 @@
+- `[x]` .gitignore dosyasını oluştur
+- `[x]` Git deposunu başlat (git init)
+- `[x]` Mevcut hali commit et (main branch)
+- `[x]` fix/startup-issues dalını oluştur ve ona geç
+- `[x]` Hataları düzeltmeye başla
+- `[x]` Tüm dosyaları doğrula ve commit et (fix/startup-issues)

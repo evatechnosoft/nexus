@@ -1,0 +1,26 @@
+# Google Gemini Integration Plan
+
+The user is using a Gemini API key from Google AI Studio. The current implementation is hardcoded for OpenAI format. This plan will add support for Gemini's specific request/response format.
+
+## Proposed Changes
+
+### [Service] AI Connectivity
+
+#### [MODIFY] [api_service.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/services/api_service.dart)
+- Update `sendMessage` to detect the provider (`Google` vs `OpenAI`).
+- Implement Gemini's `contents` request body structure.
+- Append the API key as a query parameter for Gemini requests (standard for AI Studio).
+- Parse the response using Gemini's path: `json['candidates'][0]['content']['parts'][0]['text']`.
+
+### [Provider] State Management
+
+#### [MODIFY] [app_provider.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/providers/app_provider.dart)
+- Change the hardcoded model index from `1` (OpenAI) to `3` (Gemini 2.0 Flash).
+- Ensure the `ApiConfig` passed to the service identifies as `Google`.
+
+## Verification Plan
+
+### Manual Verification
+- Enter the Gemini API key in the Profile screen.
+- Go to Chat and send a message.
+- Verify the AI responds using the Gemini model.

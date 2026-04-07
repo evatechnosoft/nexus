@@ -1,0 +1,55 @@
+# Proje ve GitHub Organizasyon Planı
+
+Kullanıcı arayüzünde ve yerel dizinlerdeki karmaşayı (`C:\projects`) gidermek, daha profesyonel bir çalışma ortamı oluşturmak için aşağıdaki yapıyı öneriyorum.
+
+## User Review Required
+
+> [!IMPORTANT]
+> - Yerel dosyalarınızı (`C:\projects`) yeni klasörlere taşıyacağım. Bu işlem sırasında açık olan projeleriniz varsa lütfen kapatın.
+> - `C:\projects\github` klasörünü ana yapıya dahil edip bu özel klasörü kaldırmayı öneriyorum; çünkü tüm projeleriniz zaten GitHub ile senkronize.
+
+## Önerilen Yeni Dizin Yapısı
+
+Tüm projeleri kullanım amacına göre 3 ana grupta toplayacağız:
+
+### 1. 🚀 `C:\projects\Active` (Aktif Geliştirme)
+Şu an üzerine çalıştığınız veya canlı servisleri yönettiğiniz projeler:
+- `it-inventory`
+- `claude` (Ana dizin ve alt projeleri: `cardash-ui`, `smart-dashboard-agent`, vb.)
+- `evaiteclabs`
+- `apiflow-monitor-mvp`
+- `Zimaos` (D sürücüsündeki altyapı klasörü ile senkronize)
+
+### 2. 📦 `C:\projects\Archive` (Arşiv & Denemeler)
+Bitmiş veya sadece öğrenme amaçlı yapılmış "noise" (gürültü) yaratan projeler:
+- `Quiz`
+- `food-delivery-mock`
+- `fitmewith`
+- `Gas-water-reading-app`
+- `logo` / `logoconsept`
+- `motor-ctrl`
+
+### 3. 🏗️ `C:\projects\Templates` (Boilerplates)
+Yeni projelere başlarken kullandığınız iskelet yapılar:
+- `saas-starter-kit`
+- `llm-boilerplate`
+- `project-boilerplate`
+- `myllm`
+
+---
+
+## GitHub Organizasyonu
+
+GitHub hesabınızdaki (`evatechnosoft`) karmaşayı azaltmak için şu adımları öneriyorum:
+- **Archive:** `Quiz`, `food-delivery-mock`, `bulk_video_report_generator` gibi repoları GitHub üzerinden "Archived" durumuna getirelim (Repo listesinde en alta gider ve pasifleşir).
+- **Consolidate:** Küçük denemeleri tek bir `experiments` reposu altında toplayabiliriz.
+
+## Açık Sorular
+
+> [!NOTE]
+> - `C:\projects\claude` klasörünü "Active" altına mı taşımalıyım, yoksa mevcut yerinde mi kalmalı? (Kısayollarınız buraya bağlı).
+> - GitHub tarafındaki arşivleme işlemini benim (MCP üzerinden) yapmamı ister misiniz?
+
+## Doğrulama Planı
+- Taşıma sonrası `git status` ile repoların bozulmadığını kontrol edeceğim.
+- Yeni klasör yapısının ekran görüntüsünü (veya listesini) sunacağım.

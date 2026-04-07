@@ -1,0 +1,14 @@
+# Food Delivery Website Mock Design & Model
+
+- [/] Research and Planning <!-- id: 0 -->
+    - [ ] Explore workspace for "skills" and agent usage rules <!-- id: 1 -->
+    - [ ] Analyze [subagent-architect.agent.md](file:///c:/Users/Deacjx/Documents/SubAgents/subagent-architect.agent.md) for model structure <!-- id: 2 -->
+    - [ ] Analyze [subagent-frontend.agent.md](file:///c:/Users/Deacjx/Documents/SubAgents/subagent-frontend.agent.md) for UI/UX guidelines <!-- id: 3 -->
+- [ ] Model Definition (Architecture) <!-- id: 4 -->
+    - [ ] Define core entities (User, Restaurant, Menu, Order, Delivery) <!-- id: 5 -->
+    - [ ] Design API patterns and database schema <!-- id: 6 -->
+- [ ] Mock Design Generation <!-- id: 7 -->
+    - [ ] Prompt `generate_image` for modern food delivery UI <!-- id: 8 -->
+    - [ ] Document design choices (color palette, typography) <!-- id: 9 -->
+- [ ] Final Presentation <!-- id: 10 -->
+    - [ ] Summarize the model and design in a walkthrough <!-- id: 11 -->

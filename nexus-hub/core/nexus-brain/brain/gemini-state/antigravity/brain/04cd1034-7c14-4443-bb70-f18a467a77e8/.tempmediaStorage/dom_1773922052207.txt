@@ -1,0 +1,58 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (227,11)<a href='https://dy.d-ld.net/7845314a77' title='free download'>English Code 1 Phonics Book />
+-  ISBN: 9781292322513
+[1] (262,41)<a href='https://dy.d-ld.net/060f559f66' title='free download'>English Code British 1 Phonics Book Audio />
+[2] (262,71)<a href='https://dy.d-ld.net/13bd8e379c' title='free download'>English Code British 1 Phonics Book Video />
+[3] (250,101)<a href='https://dy.d-ld.net/c9a8fc7f61' title='free download'>English Code British 1 Grammar Book />
+-  ISBN: 9781292354514
+[4] (254,130)<a href='https://dy.d-ld.net/648b87447c' title='free download'>English Code British 1 Teachers Edition />
+-  ISBN: 9781292354446
+[5] (238,160)<a href='https://dy.d-ld.net/7cf263abc2' title='free download'>English Code British 1 Flashcards />
+-  ISBN: 9781292323626
+[6] (286,190)<a href='https://dy.d-ld.net/855a1a6a20' title='free download'>English Code British 1 Assessment Book with Audio />
+-  ISBN: 9781292352411
+[7] (241,244)<a href='https://dy.d-ld.net/cfab0f1392' title='free download'>English Code British 2 Pupils Book />
+-  ISBN: 9781292352312
+[8] (252,274)<a href='https://dy.d-ld.net/f05ff398b9' title='free download'>English Code British 2 Class Audio Cds />
+[9] (245,304)<a href='https://dy.d-ld.net/b3a0cb2049' title='free download'>English Code British 2 Activity Book />
+-  ISBN: 9781292353937
+[10] (261,333)<a href='https://dy.d-ld.net/981a056692' title='free download'>English Code British 2 Activity Book Audio />
+[11] (227,363)<a href='https://dy.d-ld.net/eb868a4076' title='free download'>English Code 2 Phonics Book />
+-  ISBN: 9781292322544
+[12] (262,393)<a href='https://dy.d-ld.net/488ee21192' title='free download'>English Code British 2 Phonics Book Audio />
+[13] (262,422)<a href='https://dy.d-ld.net/7aadc425a1' title='free download'>English Code British 2 Phonics Book Video />
+[14] (250,452)<a href='https://dy.d-ld.net/690fe77453' title='free download'>English Code British 2 Grammar Book />
+-  ISBN: 9781292354521
+English Code British 2 Grammar Video
+[15] (254,512)<a href='https://dy.d-ld.net/a01f692313' title='free download'>English Code British 2 Teachers Edition />
+-  ISBN: 9781292354453
+[16] (238,541)<a href='https://dy.d-ld.net/d6b86d6d00' title='free download'>English Code British 2 Flashcards />
+-  ISBN: 9781292323633
+[17] (286,571)<a href='https://dy.d-ld.net/9b23592d46' title='free download'>English Code British 2 Assessment Book with Audio />
+-  ISBN: 9781292352428
+English Code British 3 Pupils Book -  ISBN: 9781292352329
+[18] (252,655)<a href='https://dy.d-ld.net/cb9306adf8' title='free download'>English Code British 3 Class Audio Cds />
+[19] (245,685)<a href='https://dy.d-ld.net/0fe675f281' title='free download'>English Code British 3 Activity Book />
+-  ISBN: 9781292322773
+[20] (261,715)<a href='https://dy.d-ld.net/54fe97b70b' title='free download'>English Code British 3 Activity Book Audio />
+[21] (246,744)<a href='https://dy.d-ld.net/0f70748d32' title='free download'>English Code British 3 Phonics Book />
+-  ISBN: 9781292322575
+[22] (262,774)<a href='https://dy.d-ld.net/115c51dbb5' title='free download'>English Code British 3 Phonics Book Audio />
+[23] (262,804)<a href='https://dy.d-ld.net/3cb1ba8ac' title='free download'>English Code British 3 Phonics Book Video />
+[24] (250,834)<a href='https://dy.d-ld.net/6cc5c09cd0' title='free download'>English Code British 3 Grammar Book />
+-  ISBN: 9781292354538
+[25] (254,863)<a href='https://dy.d-ld.net/7faad41db8' title='free download'>English Code British 3 Teachers Edition />
+-  ISBN: 9781292354460
+English Code British 3 Flashcards
+-  ISBN: 9781292323640
+English Code British 3 Posters
+English Code British 3 Assessment Book with Audio
+-  ISBN: 9781292352435
+English Code British 4 Pupils Book -  ISBN: 9781292352336
+[26] (975,854)<div  />
+Reklam
+
+</current_dom>

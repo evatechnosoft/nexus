@@ -1,0 +1,24 @@
+# DeanOS & Coolify Yönetim Güncellemesi
+
+Bu güncelleme ile DeanOS sunucunuzun yönetimini kolaylaştırmak ve Coolify üzerindeki izin sorunlarını çözmek için gerekli araçlar eklendi.
+
+## Yapılan Değişiklikler
+
+### 1. ZimaOS Kontrol Paneli Güncellemesi (`zima.ps1`)
+`d:\OS\Zimaos\zima.ps1` dosyasına yeni bir menü seçeneği eklendi.
+- **Seçenek 10: 🧊 Coolify Sağlık Kontrolü & Tamir**:
+  - Coolify ve ilgili servislerin (Redis, Postgres) durumunu anlık kontrol eder.
+  - `Permission Denied` hatasına sebep olan `/DATA/AppData/logs` ve `/DATA/AppData/ssh` klasör izinlerini otomatik düzeltir.
+  - Gerektiğinde Coolify konteynerini yeniden başlatmanıza olanak tanır.
+
+### 2. Coolify SSH Key Hazırlığı
+- `deanos` private key içeriği hazırlandı ve Coolify'ın sunucuyu yönetebilmesi için gereken altyapı kontrol edildi.
+- Sunucu tarafında `authorized_keys` dosyası doğrulandı.
+
+## Test ve Doğrulama
+1. PowerShell ile `d:\OS\Zimaos\zima.ps1` dosyasını çalıştırın.
+2. `10` tuşuna basarak Coolify'ın sağlık durumunu kontrol edin.
+3. İzinlerin otomatik olarak düzeldiğini ve log yazılabildiğini doğrulayın.
+
+> [!TIP]
+> Coolify panelinde **"Keys"** bölümüne `c:\Users\Deacjx\.ssh\deanos` dosyasının içeriğini bir kez yapıştırdığınızda, sunucu bağlantısı tam olarak aktifleşecektir.

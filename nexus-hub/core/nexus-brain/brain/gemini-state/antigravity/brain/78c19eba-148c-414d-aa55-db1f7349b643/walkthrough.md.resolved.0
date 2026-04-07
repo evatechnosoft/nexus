@@ -1,0 +1,34 @@
+# ZimaOS Home Server Setup Walkthrough
+
+I have adapted the [setup.sh](file:///c:/projects/github/casaos-home-server/setup.sh) script to support ZimaOS-style deployments. While ZimaOS is a full operating system, these changes allow you to have a ZimaOS-like experience on any generic Linux distribution.
+
+## Key Changes
+
+### 1. Updated Branding
+The script now features a dual-branded header for CasaOS and ZimaOS.
+
+### 2. New Menu Option
+A third option has been added to the selection menu to explicitly support "ZimaOS Experience".
+
+### 3. Zima-Specific App Stores
+When the ZimaOS option is selected, the script will automatically register the official ZimaOS App Stores in addition to the standard ones.
+
+## How to Use
+
+To use the updated script, simply run it in your terminal:
+
+```bash
+sudo ./setup.sh
+```
+
+You will see the following choice:
+
+1. **Install CasaOS** - Classic home server solution
+2. **Install ZimaOS Experience** - The next-gen personal cloud
+3. **Install Umbrel** - A personal server OS for self-hosting
+
+Select **2** for the ZimaOS experience.
+
+## Verification
+- Syntax check passed: `bash -n setup.sh` returned no errors.
+- Logic verified: All conditional paths for CasaOS and ZimaOS flavors are correctly handled.

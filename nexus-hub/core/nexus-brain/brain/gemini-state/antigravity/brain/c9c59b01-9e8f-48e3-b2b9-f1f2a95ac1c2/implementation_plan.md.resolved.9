@@ -1,0 +1,41 @@
+# DeanOS Sunucusu Canlıya Geçiş (Deployment) Planı
+
+Bu plan, SportApp projesinin yerel ortamdan bağımsız, her zaman açık ve güvenli bir şekilde DeanOS sunucusu üzerinde çalışmasını sağlamak için Docker-Compose mimarisine geçişi kapsar.
+
+## User Review Required
+
+> [!IMPORTANT]
+> - **Veritabanı Taşıma:** Şu anki verileriniz (eğer varsa) `192.168.1.186` adresindeki PostgreSQL'den yeni kurulacak olan Docker konteynerine taşınacaktır.
+> - **Dış Erişim:** Uygulama DeanOS üzerinde `3002` portundan yayında olacaktır. Güvenlik duvarınızda bu porta izin verildiğinden emin olmalısınız.
+> - **Google Auth:** `GOOGLE_CALLBACK_URL` adresinin, sunucunuzun IP adresi/domaini ile güncellenmesi gerekecektir.
+
+## Proposed Changes
+
+### [Component] Dockerization
+
+#### [NEW] [Dockerfile](file:///c:/projects/SportApp/Dockerfile)
+- Node.js 18 tabanlı hafif (alpine) bir imaj oluşturulacak.
+- Flutter Web build'ini (`public/`) otomatik olarak içerecek.
+
+#### [NEW] [docker-compose.yml](file:///c:/projects/SportApp/docker-compose.yml)
+- **db:** PostgreSQL 15 imajı kullanılacak (Verilerin kalıcı olması için volume eklenecek).
+- **app:** Node.js backend servisi (db servisine bağımlı olarak) ayağa kaldırılacak.
+
+### [Component] Environment Sync
+
+#### [MODIFY] [.env.production](file:///c:/projects/SportApp/.env.production)
+- `DATABASE_URL` adresi Docker içindeki servis ismi (`db`) ile güncellenecek.
+
+## Open Questions
+
+- DeanOS sunucusuna SSH ile bağlanmak için hangi kullanıcı ve IP adresini kullanmalıyım? (Örn: `root@192.168.1.186`)
+- Sunucuda Docker ve Docker-Compose yüklü mü? Değilse kurulum adımlarını ekleyebilirim.
+
+## Verification Plan
+
+### Automated Tests
+- `docker-compose build` komutu ile imajların hatasız oluştuğu görülecek.
+
+### Manual Verification
+- Sunucu IP'si üzerinden `http://IP:3002` adresine tarayıcıdan girilerek Dashboard'un yüklenip yüklenmediği test edilecek.
+- Veritabanı bağlantısı `api/health` üzerinden kontrol edilecek.

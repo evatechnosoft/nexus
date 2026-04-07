@@ -1,0 +1,7 @@
+{
+  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary": "Fixing DeanOS Deployment & Exchange Email Parsers.\n\n- Port Fix: Change service port from 9292 back to 8001 (user preference).\n- Remote Git Fix: Provide a script to convert the non-git \"it-inventory\" folder on DeanOS into a proper Git clone.\n- Email Fix: Verify Exchange connection settings and ensure APP_BASE_URL matches the server IP.\n- CI/CD: Update deploy.ps1 to reflect Port 8001.",
+  "updatedAt": "2026-03-29T09:00:44.928067Z",
+  "version": "4",
+  "requestFeedback": true
+}

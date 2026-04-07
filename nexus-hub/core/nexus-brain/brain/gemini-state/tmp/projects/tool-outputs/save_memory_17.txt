@@ -1,0 +1,1 @@
+{"success":true,"message":"Okay, I've remembered that: \"Mimari Yaklaşım: Uygulamalar 'Nexus' (Merkezi Bağlantı) vizyonuna uygun olarak 'Fiziksel Envanter' ve 'Dijital Varlık/Agent Ops' olarak iki ayrı dashboard ile kurgulanır. Veri tabanı olarak yerelde SQLite, üretimde PostgreSQL 15 kullanılır.\""}

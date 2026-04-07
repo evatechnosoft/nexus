@@ -1,0 +1,4 @@
+- [ ] Create `test/` directory in `c:\projects\EvAnotes\mobile`
+- [ ] Add a simple Dart test file `test/variable_test.dart` that verifies a variable's value
+- [ ] Run `flutter test` in the `mobile` directory and ensure it passes
+- [ ] Document the test results

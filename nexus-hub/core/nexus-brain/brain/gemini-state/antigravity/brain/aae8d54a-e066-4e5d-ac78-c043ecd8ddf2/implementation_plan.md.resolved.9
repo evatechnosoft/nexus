@@ -1,0 +1,37 @@
+# Emergency Multi-Env Fix & Container Recovery Plan
+
+The current deployment is broken because:
+1. **CRLF Line Endings:** `entrypoint.sh` is causing the container to crash with status `255` because Linux cannot parse Windows character endings.
+2. **Port Mismatch:** The app is trying to listen on the Host's port (9600) inside the container, but Docker expects it on Port 8000.
+3. **Missing Files:** The `deploy_deanos.sh` script was accidentally deleted in a previous merge error.
+
+## User Review Required
+
+> [!IMPORTANT]
+> **Environment Fixed:** I will restore the `PROD` (9600) and `TEST` (9700) environments to their correct states. After this, `PROD` will correctly show the **Green Badge**.
+
+## Proposed Changes
+
+### [FIX] Restoration & Line-Endings
+- **[NEW] [deploy_deanos.sh](file:///c:/projects/it-inventory/deploy_deanos.sh)**: Re-create the script with proper LF line-endings.
+- **[MODIFY] [entrypoint.sh](file:///c:/projects/it-inventory/entrypoint.sh)**: Enforce LF line-endings to fix the `Restarting (255)` crash.
+
+### [FIX] Port & Environment Sync
+- **[MODIFY] [main.py](file:///c:/projects/it-inventory/main.py)**: Force the app to listen on **Port 8000** inside the container, regardless of the `APP_PORT` setting (which will now refer to the Host port mapping).
+- **[MODIFY] [.env.prod](file:///c:/projects/it-inventory/.env.prod)** / **[.env.test](file:///c:/projects/it-inventory/.env.test)**: 
+  - Ensure `APP_ENV` is correctly set (`PROD`/`TEST`).
+  - Set `APP_PORT=8000` (Internal).
+  - Set `HOST_PORT=9600/9700` (External).
+
+### [MODIFY] [deploy.ps1](file:///c:/projects/it-inventory/deploy.ps1)
+- Standardize the merge flow to ensure all files (including `.sh` scripts) are correctly pushed.
+
+## Verification Plan
+
+### Automated Tests
+- `docker logs it-inventory`: Confirm it says `Uvicorn running on http://0.0.0.0:8000`.
+- `docker ps`: Confirm status is `Up`.
+
+### Manual Verification
+- Check `http://192.168.1.186:9600` for the **Green PROD Badge**.
+- Check `http://192.168.1.186:9700` for the **Red TEST Badge**.

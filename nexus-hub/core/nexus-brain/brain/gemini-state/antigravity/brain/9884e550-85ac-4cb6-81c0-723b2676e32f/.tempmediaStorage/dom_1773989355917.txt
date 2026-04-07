@@ -1,0 +1,31 @@
+[0] (804,102)<button class='logout-btn'>Çıkış Yap 🚪 />
+📚 English Learning Hub
+Müfredat Takip ve Değerlendirme
+[1] (422,307)<button class='nav-btn'>👦 Öğrenci />
+[2] (504,307)<button class='nav-btn active'>👨‍🏫 Öğretmen />
+[3] (577,307)<button class='nav-btn'>👨‍👩‍👧 Veli />
+Aktif Hafta:
+[4] (265,462)<select id='active-week-select' />
+[5] (341,462)<button class='btn btn-primary btn-sm'>➕ Yeni Ders />
+Öğrenci:
+student
+Tüm Haftalar ve Değerlendirme
+[6] (268,773)<div class='card' />
+	[7] (333,660)<span >continue />
+	[8] (199,662)<span >Hafta 01 />
+	[9] (268,707)<h3 >Welcome! />
+	[10] (268,749)<p >İlk gün — selamlaşma, sayılar, yaş />
+	[11] (268,815)<div  />
+		[12] (268,822)<button class='btn btn-primary btn-sm'>📝 Değerlendir />
+[13] (495,773)<div class='card' />
+	[14] (426,662)<span >Hafta 02 />
+	[15] (495,724)<h3 >Unit 1: Birthday Fun! — Bölüm 1 />
+	[16] (495,796)<p >Doğum günü kartı yapımı — renkler ve doğum günü kelimeleri />
+	[17] (495,877)<div  />
+		[18] (495,883)<button class='btn btn-primary btn-sm'>📝 Değerlendir />
+[19] (722,773)<div class='card' />
+	[20] (653,662)<span >Hafta 03 />
+	[21] (722,724)<h3 >Unit 1: Birthday Fun! — Bölüm 2 + Proje />
+	[22] (722,796)<p >Doğum günü sahnesi ve proje tamamlama />
+	[23] (722,877)<div  />
+		[24] (722,883)<button class='btn btn-primary btn-sm'>📝 Değerlendir />

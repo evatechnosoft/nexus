@@ -1,0 +1,26 @@
+# [ZimaOS] Yedekleme Tamamlandı
+
+ZimaOS (DeanOS) sisteminizde güncelleme öncesi kritik ayar ve dosya yedekleme işlemi başarıyla gerçekleştirilmiştir.
+
+## Yapılan İşlemler
+
+- **Yedekleme Kapsamı Genişletildi**: `daily_backup.sh` script'i güncellenerek aşağıdaki dizinler dahil edildi:
+    - `/etc/casaos` ve `/var/lib/casaos` (Port ayarları ve uygulama yapılandırmaları)
+    - `/etc/docker` (Container ayarları)
+    - `/DATA/projects` (Tüm projeleriniz)
+    - `/DATA/AppData` (Uygulama verileri, veritabanları vb.)
+- **Büyük Veri**: Kullanıcı uyarısı doğrultusunda `Stable-Diffusion-WebUI` hariç tutuldu.
+- **Güvenli Transfer**: Yedek dosyası ZimaOS sunucusunda `/DATA/Backup` dizininde oluşturuldu ve Windows makinenize indirildi.
+
+## Yedek Bilgileri
+
+- **Dosya Adı**: `deanos_daily_backup_20260402_0826.tar.gz`
+- **Yerel Konum**: [backups/](file:///d:/OS/Zimaos/backups/deanos_daily_backup_20260402_0826.tar.gz)
+- **Dosya Boyutu**: ~2.6 GB
+
+> [!IMPORTANT]
+> Tüm port ayarlarınız ve verileriniz bu arşivin içindedir. Güncelleme sırasında oluşabilecek herhangi bir aksilikte bu dosyayı kullanarak sistemi geri yükleyebiliriz.
+
+## Sıradaki Adım
+
+Yedekleme güvenli bir şekilde tamamlandı. ZimaOS güncellemesini başlatmaya hazır mısınız?

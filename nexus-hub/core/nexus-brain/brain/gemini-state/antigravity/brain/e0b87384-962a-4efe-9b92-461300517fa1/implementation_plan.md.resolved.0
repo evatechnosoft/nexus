@@ -1,0 +1,42 @@
+# Cloudflare Tunnel Integration Plan
+
+Expose CasaOS and the Flask app to the internet using a Cloudflare Tunnel and a custom domain.
+
+## User Review Required
+
+> [!IMPORTANT]
+> You will need to perform the following manual steps:
+> 1. Run `cloudflared tunnel login` in your terminal and follow the link to authorize your domain.
+> 2. Once authorized, I will need the **Domain Name** you want to use.
+> 3. I will also need to know if you want to use subdomains (e.g., `casa.domain.com` and `api.domain.com`) or paths.
+
+## Proposed Changes
+
+### [NEW] Cloudflare Configuration
+
+I will create a configuration file for `cloudflared` to route traffic.
+
+#### [NEW] `cloudflared-config.yml` (file:///c:/projects/github/casaos-home-server/cloudflared-config.yml)
+This file will define the tunnel behavior and service routing.
+
+```yaml
+tunnel: <tunnel-id>
+credentials-file: /home/<user>/.cloudflared/<tunnel-id>.json
+
+ingress:
+  - hostname: <domain>
+    service: http://localhost:80
+  - hostname: api.<domain>
+    service: http://localhost:5000
+  - service: http_status:404
+```
+
+## Verification Plan
+
+### Automated Tests
+1. Run `cloudflared tunnel info` to check tunnel connectivity.
+2. Run `cloudflared tunnel ingress validate` to verify the configuration file.
+
+### Manual Verification
+1. Access `https://<domain>` in a browser to see the CasaOS dashboard.
+2. Access `https://api.<domain>` to see the Flask app's "Merhaba CasaOS!" message.

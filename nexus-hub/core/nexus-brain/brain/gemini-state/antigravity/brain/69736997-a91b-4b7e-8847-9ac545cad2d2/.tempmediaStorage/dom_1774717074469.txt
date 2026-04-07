@@ -1,0 +1,126 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (62,32)<a class='active d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none' href='/dashboard' />
+	[1] (24,32)<object  />
+	[2] (82,32)<span >Uptime Kuma />
+[3] (741,32)<a class='btn btn-info me-3' href='https://github.com/louislam/uptime-kuma/releases'>New Update />
+[4] (829,32)<a class='nav-link' href='/manage-status-page'>Status Pages />
+[5] (908,32)<a class='active nav-link' href='/dashboard'>Dashboard />
+[6] (967,32)<div  />
+	[7] (961,32)<div >D />
+[8] (68,96)<a class='active router-link-exact-active btn btn-primary mb-3' href='/add'>Add New Monitor />
+[9] (44,155)<button class='btn btn-outline-normal ms-2'>Select />
+[10] (202,155)<a class='search-icon' />
+[11] (268,155)<input aria-label='Search monitored sites' class='form-control search-input' placeholder='Search…' />
+[12] (75,196)<button class='filter-dropdown-status' />
+	[13] (70,196)<div  />
+		[14] (70,196)<span >Status />
+	[15] (89,196)<span  />
+[16] (127,196)<button class='filter-dropdown-status' />
+	[17] (123,196)<div  />
+		[18] (123,196)<span >Active />
+	[19] (141,196)<span  />
+[20] (176,196)<button class='filter-dropdown-status' />
+	[21] (172,196)<div  />
+		[22] (172,196)<span >Tags />
+	[23] (187,196)<span  />
+[24] (173,255)<a class='item' href='/dashboard/1' />
+	[25] (173,257)<div  />
+		[26] (123,257)<div  />
+			[27] (123,252)<div >evaitec />
+				[28] (43,254)<span >100% />
+		[29] (273,257)<div  />
+			[30] (273,257)<div  />
+				[31] (273,257)<div  />
+					[32] (233,254)<div  />
+					[33] (238,254)<div  />
+					[34] (244,254)<div  />
+					[35] (249,254)<div  />
+					[36] (254,254)<div  />
+					[37] (259,254)<div  />
+					[38] (265,254)<div  />
+					[39] (270,254)<div  />
+					[40] (275,254)<div  />
+					[41] (280,254)<div  />
+					[42] (286,254)<div  />
+					[43] (291,254)<div  />
+					[44] (296,254)<div  />
+					[45] (301,254)<div  />
+					[46] (306,254)<div  />
+					[47] (312,254)<div  />
+[48] (173,306)<a class='item' href='/dashboard/2' />
+	[49] (173,308)<div  />
+		[50] (123,308)<div  />
+			[51] (123,303)<div >IT />
+				[52] (43,305)<span >100% />
+		[53] (273,308)<div  />
+			[54] (273,308)<div  />
+				[55] (273,308)<div  />
+					[56] (233,305)<div  />
+					[57] (238,305)<div  />
+					[58] (244,305)<div  />
+					[59] (249,305)<div  />
+					[60] (254,305)<div  />
+					[61] (259,305)<div  />
+					[62] (265,305)<div  />
+					[63] (270,305)<div  />
+					[64] (275,305)<div  />
+					[65] (280,305)<div  />
+					[66] (286,305)<div  />
+					[67] (291,305)<div  />
+					[68] (296,305)<div  />
+					[69] (301,305)<div  />
+					[70] (306,305)<div  />
+					[71] (312,305)<div  />
+Add New Monitor
+General
+[72] (380,198)<label class='form-label'>Monitor Type />
+[73] (506,232)<select class='form-select' id='type' />
+[74] (382,274)<label class='form-label'>Friendly Name />
+[75] (506,308)<input class='form-control' id='name' />
+[76] (362,350)<label class='form-label'>URL />
+[77] (506,384)<input class='form-control' id='url' />
+[78] (439,426)<label class='form-label'>Heartbeat Interval (Check every 60 seconds) />
+[79] (506,460)<input class='form-control' id='interval' />
+[80] (367,502)<label class='form-label'>Retries />
+[81] (506,536)<input class='form-control' id='maxRetries' />
+Maximum retries before the service is marked as down and a notification is sent
+[82] (448,600)<label class='form-label'>Heartbeat Retry Interval
+(Retry every 60 seconds) />
+	(Retry every 60 seconds)
+[83] (506,634)<input class='form-control' id='retry-interval' />
+[84] (439,676)<label class='form-label'>Request Timeout (Timeout after 48 seconds) />
+[85] (506,710)<input class='form-control' id='timeout' />
+[86] (486,752)<label class='form-label'>Resend Notification if Down X times consecutively
+(Resend disabled) />
+	(Resend disabled)
+[87] (506,786)<input class='form-control' id='resend-interval' />
+Advanced
+[88] (359,898)<input class='form-check-input' id='expiry-notification' />
+[89] (423,898)<label class='form-check-label'>Certificate Expiry Notification />
+[90] (359,934)<input class='form-check-input' id='ignore-tls' />
+Ignore TLS/SSL error for HTTPS websites
+Upside Down Mode
+Flip the status upside down. If the service is reachable, it is DOWN.
+Notifications
+Not available, please setup.
+[91] (716,232)<button class='btn btn-primary me-2'>Setup Notification />
+Proxy
+Not available, please setup.
+[92] (704,378)<button class='btn btn-primary me-2'>Setup Proxy />
+HTTP Options
+[93] (685,490)<label class='form-label'>Method />
+[94] (821,525)<select class='form-select' id='method' />
+[95] (699,566)<label class='form-label'>Body Encoding />
+[96] (821,601)<select class='form-select' id='httpBodyEncoding' />
+[97] (680,642)<label class='form-label'>Body />
+[98] (821,749)<textarea class='form-control' id='body' placeholder='Example: 
+{
+    "key": "value"
+}' />
+[99] (686,863)<label class='form-label'>Headers />
+[100] (372,969)<button class='btn btn-primary' id='monitor-submit-btn'>Save />
+
+</current_dom>

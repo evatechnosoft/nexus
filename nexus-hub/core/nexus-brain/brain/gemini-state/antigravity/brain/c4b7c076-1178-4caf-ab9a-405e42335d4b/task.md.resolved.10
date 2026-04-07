@@ -1,0 +1,15 @@
+# Task: Add Game Development Skills
+
+- [x] Identify relevant game development skills <!-- id: 0 -->
+- [x] Show the list to the user <!-- id: 1 -->
+- [x] Add game development skills to the project directory <!-- id: 2 -->
+- [x] Initialize Vite + Vanilla JS project <!-- id: 5 -->
+- [x] Implement Mario-style physics and controls <!-- id: 4 -->
+- [x] Create Tilemap system and Level 1 <!-- id: 6 -->
+- [x] Apply premium visual polish <!-- id: 7 -->
+- [x] Design and implement a "girl child character" sprite <!-- id: 8 -->
+- [x] Fix character orientation (looking direction) <!-- id: 10 -->
+- [x] Implement walking animation (feet moving) <!-- id: 11 -->
+- [x] Remove white box and slow down animation <!-- id: 12 -->
+- [x] Add pulsing glow effect to character <!-- id: 14 -->
+- [x] Verify character polish and animation <!-- id: 3 -->

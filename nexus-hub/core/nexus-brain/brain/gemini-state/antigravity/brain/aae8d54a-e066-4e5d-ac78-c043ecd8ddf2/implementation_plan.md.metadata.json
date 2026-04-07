@@ -1,0 +1,7 @@
+{
+  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary": "Deploying it-inventory via a local files and Docker Compose within Coolify V4 to bypass Git/SSH restriction issues on ZimaOS.",
+  "updatedAt": "2026-03-31T17:27:42.527914400Z",
+  "version": "19",
+  "requestFeedback": true
+}

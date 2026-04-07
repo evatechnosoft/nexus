@@ -1,0 +1,36 @@
+# IT Inventory Modernization Handoff (Memory)
+
+This document summarizes the significant changes made to the IT Inventory system to support Modern Authentication (OAuth2) and PostgreSQL.
+
+## 1. Authentication & Email Monitoring
+- **Microsoft Graph API**: Successfully migrated from Basic Auth (blocked) to Modern Auth using the **Microsoft Graph API**.
+- **Libraries**: Integrated `O365==2.0.34` and `msal==1.25.0`.
+- **Permissions**: Uses **Application Permissions** (`Mail.ReadWrite`). Configuration is in Azure App Registration "IT-Inventory-Watcher".
+- **Watcher logic**: New [graph_watcher.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/graph_watcher.py) handles the monitoring, replacing the legacy `exchangelib` dependency for M365.
+
+## 2. Database Migration
+- **PostgreSQL**: Switched from SQLite to a dedicated PostgreSQL instance.
+- **Connection**: `postgresql://dean:Eralp123!@192.168.1.186:5432/inventory` (configured in [.env](file:///c:/projects/it-inventory/it-inventory/.env)).
+- **Initialization**: [main.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/main.py) automatically runs `Base.metadata.create_all` to initialize the schema on the new host.
+
+## 3. Email Parsing & Turkish Support
+- **Robust Regex**: [email_parser.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/email_parser.py) now specifically supports Turkish characters (`İ, ç, ı, ö, ş, ü`) and word boundaries to avoid false positives (like picking up "ır" from other words).
+- **HTML Table Support**: 
+  - [email_watcher.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/email_watcher.py) now uses a "colon trick" for HTML tables: it replaces `</td><td>` with `: ` and block tags with `\n`.
+  - This turns Outlook tables into `Label: Value` pairs on separate lines, which the parser extracts reliably.
+- **Custom Format**: Successfully handles the user's horizontal and vertical table layouts.
+
+## 4. Key Files
+- [graph_watcher.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/graph_watcher.py): Graph API monitoring logic.
+- [ms_oauth.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/ms_oauth.py): MSAL token management.
+- [email_parser.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/email_parser.py): Robust Turkish & table-aware data extractor.
+- [email_watcher.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/email_watcher.py): General email processing and HTML stripping.
+
+## 5. Deployment
+- **Docker**: The app runs as a Docker container mapped to port `8001`.
+- **Environment**: All credentials (AZURE_CLIENT_ID, etc.) are in the root [.env](file:///c:/projects/it-inventory/it-inventory/.env) file.
+
+## 6. Next Steps
+- **Monitoring**: The service currently runs every 5 minutes.
+- **Testing**: Use the provided Turkish names test cases (`Deniz Çelik`, `İpek Aydın`) to verify any future parsing changes.
+- **Cleanup**: Temporary test scripts ([send_test_request.py](file:///c:/projects/it-inventory/it-inventory/send_test_request.py), [cleanup_db.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/cleanup_db.py), [send_random_tests.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/send_random_tests.py)) should be removed before committing to production version control.

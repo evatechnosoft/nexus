@@ -1,0 +1,32 @@
+# Flutter/Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+*.g.dart
+*.freezed.dart
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Android
+android/
+ios/
+linux/
+macos/
+windows/
+web/
+
+# Secrets
+.env
+*.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Playwright logs
+.playwright-mcp/

@@ -1,0 +1,6 @@
+{
+  "artifactType":  "ARTIFACT_TYPE_TASK",
+  "summary":  "Task list for InfluxDB v2, Grafana, and Premium Home Assistant Dashboard installation.",
+  "updatedAt":  "2026-04-03T09:03:15.566127900Z",
+  "version":  "3"
+}

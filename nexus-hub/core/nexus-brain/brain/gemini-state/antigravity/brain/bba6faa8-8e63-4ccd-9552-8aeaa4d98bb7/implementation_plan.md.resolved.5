@@ -1,0 +1,60 @@
+# [ZimaOS] Akıllı Ev Altyapısı Güçlendirme Planı (Top 25)
+
+ZimaOS üzerindeki Home Assistant kurulumunuzu profesyonel bir ekosisteme dönüştürecek, "Add-on" mağazası eksikliğini unutturacak kapsamlı bir stratejidir.
+
+## Kullanıcı İncelemesi Gerekli
+
+- **Donanım Gereksinimi**: "Zigbee2MQTT" kullanımı için bir USB Zigbee Dongle (örn. Sonoff ZBDongle-E) gereklidir.
+- **Kaynak Kullanımı**: 25 uygulamanın tamamı kurulduğunda RAM kullanımı artacaktır. Kademeli kurulum önerilir.
+- **Port Yönetimi**: Yeni konteynerler için belirlediğimiz port standartlarına (9XXX Prod, 8XXX Test) sadık kalınacaktır.
+
+---
+
+## 🏆 Top 25 Ekosistem Bileşeni (Kategorize Edilmiş)
+
+| Kategori | Bileşen | Görevi |
+| :--- | :--- | :--- |
+| **Haberleşme** | 1. **Mosquitto MQTT** | Tüm cihazların ortak dili (Olmazsa olmaz). |
+| | 2. **Zigbee2MQTT** | Zigbee cihazlarını HA'ya bağlayan köprü. |
+| | 3. **ESPHome** | Kendi sensörlerinizi (ESP32/8266) yapmanızı sağlar. |
+| **Otomasyon** | 4. **Node-RED** | Karmaşık otomasyonları görsel (bloklarla) tasarlama. |
+| | 5. **AppDaemon** | İleri seviye Python tabanlı otomasyonlar. |
+| | 6. **n8n** | Web servisleri arası (IFTTT gibi) akıllı akışlar. |
+| **Veri & Analiz** | 7. **PostgreSQL** | HA'nın kayıtlarını (Recorder) hızlandırır. |
+| | 8. **InfluxDB** | Yıllık sıcaklık/nem gibi verileri saklar. |
+| | 9. **Grafana** | Profesyonel veri görselleştirme ve grafikler. |
+| **Güvenlik** | 10. **AdGuard Home** | Ağ genelinde reklam engelleme ve DNS yönetimi. |
+| | 11. **Frigate** | CCTV kameralar için yapay zeka (İnsan/Araç tanıma). |
+| | 12. **Vaultwarden** | Kişisel şifre yöneticisi sunucusu. |
+| | 13. **CrowdSec** | Sunucunuza yönelik saldırıları engelleyen IDPS. |
+| **Erişim & Ağ** | 14. **Nginx Proxy Manager** | SSL sertifikalı dış erişim yönetimi. |
+| | 15. **Cloudflared** | (Kurulu) Port açmadan güvenli dış erişim. |
+| | 16. **WireGuard** | Kendi VPN sunucunuz (Evinizdeymiş gibi güvenli internet). |
+| **Multimedya** | 17. **Jellyfin / Plex** | Kişisel film/dizi kütüphaneniz. |
+| | 18. **Tautulli** | Medya sunucunuzun izleme istatistikleri. |
+| | 19. **Audiobookshelf** | Sesli kitap sunucusu. |
+| **Araçlar** | 20. **Watchtower** | Konteynerleri otomatik güncel tutar. |
+| | 21. **Uptime Kuma** | (Kurulu) Servislerin açık kalma takibi. |
+| | 22. **Dozzle** | (Kurulu) Tüm logları anlık izleme. |
+| | 23. **Glances** | Sistem kaynaklarını (CPU/RAM) detaylı izleme. |
+| | 24. **Firefly III** | Kişisel finans ve bütçe takibi. |
+| | 25. **Navidrome** | Kişisel müzik akış sunucusu. |
+
+---
+
+## İlk Adım: Altyapı Temeli (Pazartesi Planı)
+
+Öncelikle en kritik olan **"The Big Three"** ile başlıyoruz:
+1. **MQTT (Mosquitto)** kurulumu ve HA'ya tanıtılması.
+2. **Zigbee2MQTT** altyapısının hazırlanması.
+3. **Node-RED** kurulumu ve HA entegrasyonu.
+
+## Açık Sorular
+
+- **[ÖNEMLİ]**: Zigbee cihazlarınız için şu an bir USB Gateway'iniz var mı?
+- **[ÖNEMLİ]**: Veri analizi (Grafik/Geçmiş) sizin için öncelikli mi, yoksa önce medya ve güvenlik mi?
+
+## Doğrulama Planı
+
+- Her konteynerin ZimaOS standartlarına göre `/DATA/AppData` binding kontrolü.
+- HA'nın MQTT üzerinden dış servislerle konuştuğunun testi.

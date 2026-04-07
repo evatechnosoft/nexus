@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary": "Plan to fix the GoogleSignIn constructor error in google_auth.dart.",
+  "updatedAt": "2026-03-18T14:04:39.255315500Z"
+}

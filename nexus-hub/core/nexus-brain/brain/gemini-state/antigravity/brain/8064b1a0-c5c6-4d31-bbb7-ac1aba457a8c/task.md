@@ -1,0 +1,46 @@
+# Tasks
+# Task: car_dash Premium EV Dashboard
+
+## Phase 1: Git & Repository Setup
+- [x] Repurpose `car_dash` as standalone repo
+- [x] Create `master` and `dev` branches
+- [x] Setup `.gitignore` (ignore skills and docs)
+- [/] Initial Commit on `dev`
+## Phase 2: Workspace Restructure
+- [x] Create `skills` directory
+- [x] Move existing skills to `skills/`
+- [x] Commit & Push restructured workspace
+
+## Phase 3: car_dash Project Development
+- [x] Create `projects` directory
+- [x] Initialize Flutter project `car_dash`
+- [x] Brainstorming & Requirements (using `brainstorming`)
+- [x] Architecture Design (SOLID & Clean Architecture)
+- [x] Implementation: New Gauges (Range, Temp, Power Flow)
+- [x] Implementation: Mock Data Simulation
+- [x] Phase 5: Customizable Dashboard & Settings
+  - [x] Implementation: Generic Gauge Wrapper & Configuration
+  - [x] Implementation: Gesture-based Rearrangement (Drag/DoubleTap)
+  - [x] Implementation: In-Situ Settings Menu (Scale & Color)
+  - [x] Implementation: Persistent Selection & Selection Persistence
+  - [x] Implementation: Premium Side-Drawer Settings UI
+  - [x] Implementation: Gauge Style Switching (Analog, Digital, Bar)
+  - [x] Implementation: Professional HSV Color Picker & Oppacity
+  - [x] Implementation: Settings Screen & Restoration List
+  - [x] Implementation: New Gauge Types (RPM, Current, Voltage, Power, Temp)
+  - [ ] Implementation: Layout Persistence
+
+- [x] Live Layout Persistence: Integrated shared_preferences for persistent custom layouts
+
+## Phase 10: Gauge Variants & Customization
+- [x] Analog: Classic & Neon styles
+- [x] Digital: Modern, Minimal, & Matrix fonts
+- [x] Bar: Gradient & Block segmented models
+- [x] UI: Integrated Visual Model selector in MiniSettings
+
+## Phase 12: Concentric "Gauge-in-Gauge" Architecture
+- [x] GaugeConfig: innerStyle & innerVariant support
+- [x] FuturisticGauge: Center slot for nested widgets
+- [x] SpeedometerPainter: Optional central hub/text
+- [x] GenericGauge: Recursive inner gauge builder
+- [x] UI: Detailed Inner Model configuration in MiniSettings

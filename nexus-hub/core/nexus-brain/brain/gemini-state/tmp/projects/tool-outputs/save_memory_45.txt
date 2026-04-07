@@ -1,0 +1,1 @@
+{"success":true,"message":"Okay, I've remembered that: \"Planlama ve geliştirme süreçlerinde ilerlemeyi net takip edebilmek için mutlaka kontrol kutucukları (checkbox: - [x] / - [ ]) kullanılmalı, tamamlanan adımlar işaretlenerek raporlanmalıdır.\""}

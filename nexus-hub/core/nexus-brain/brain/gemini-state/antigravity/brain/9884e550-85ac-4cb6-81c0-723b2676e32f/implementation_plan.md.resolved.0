@@ -1,0 +1,29 @@
+# Organizing English Code Materials
+
+The goal is to move the downloaded English Code PDFs into their corresponding level folders and rename them to a standardized, cleaner format.
+
+## Proposed Changes
+
+### Root Directory (Move and Rename)
+
+The following files in `c:\Users\Deacjx\Documents\English code` will be moved to their respective level folders and renamed:
+
+| Original File | New Path & Name |
+| :--- | :--- |
+| `pdfcoffee.com_english-code-2-grammar-book-pdf-pdf-free.pdf` | `English code 2/Level 2 - Grammar Book.pdf` |
+| `pdfcoffee.com_english-code-2-sb-2-pdf-free.pdf` | `English code 2/Level 2 - Student's Book.pdf` |
+| `pdfcoffee.com_english-code-2-sb-2-pdf-free1.pdf` | `English code 2/Level 2 - Student's Book 1.pdf` |
+| `pdfcoffee.com_english-code-2-workbook-2-pdf-free.pdf` | `English code 2/Level 2 - Workbook.pdf` |
+| `pdfcoffee.com_english-code-3-students-book-pdf-free.pdf` | `English code 3/Level 3 - Student's Book.pdf` |
+| `pdfcoffee.com_english-code-5-9781292352343-pb-unit-1-pdf-free.pdf` | `English code 5/Level 5 - Unit 1.pdf` |
+| `pdfcoffee.com_english-code-5-workbook-pdf-free.pdf` | `English code 5/Level 5 - Workbook.pdf` |
+| `pdfcoffee.com_english-code-6-assessment-book-pdf-free.pdf` | `English code 6/Level 6 - Assessment Book.pdf` |
+| `pdfcoffee.com_english-code-6-sb-pdf-pdf-free.pdf` | `English code 6/Level 6 - Student's Book.pdf` |
+| `pdfcoffee.com_english-code-starter-teachers-edition-pdf-free.pdf` | `English code starter/Starter - Teacher's Edition.pdf` |
+
+## Verification Plan
+
+### Manual Verification
+- Verify that the original files no longer exist in the root directory.
+- Verify that each file has been correctly renamed and moved to its corresponding folder.
+- Confirm with the user if the organization meets their expectations.

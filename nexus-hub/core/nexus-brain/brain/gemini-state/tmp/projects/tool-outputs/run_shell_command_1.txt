@@ -1,0 +1,40 @@
+Output: ✓ Created repository evatechnosoft/agentops-nexus on github.com
+  https://github.com/evatechnosoft/agentops-nexus
+✓ Added remote https://github.com/evatechnosoft/agentops-nexus.git
+Enumerating objects: 46, done.
+Counting objects: 100% (46/46), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (43/43), done.
+Writing objects: 100% (46/46), 46.84 KiB | 2.93 MiB/s, done.
+Total 46 (delta 10), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (10/10), done.
+To https://github.com/evatechnosoft/agentops-nexus.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+M       .env.template
+M       database.py
+M       models.py
+M       routers/ops.py
+Switched to branch 'test'
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'test' on GitHub by visiting:
+remote:      https://github.com/evatechnosoft/agentops-nexus/pull/new/test
+remote:
+To https://github.com/evatechnosoft/agentops-nexus.git
+ * [new branch]      test -> test
+branch 'test' set up to track 'origin/test'.
+M       .env.template
+M       database.py
+M       models.py
+M       routers/ops.py
+Switched to branch 'dev'
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'dev' on GitHub by visiting:
+remote:      https://github.com/evatechnosoft/agentops-nexus/pull/new/dev
+remote:
+To https://github.com/evatechnosoft/agentops-nexus.git
+ * [new branch]      dev -> dev
+branch 'dev' set up to track 'origin/dev'.
+Process Group PGID: 33692

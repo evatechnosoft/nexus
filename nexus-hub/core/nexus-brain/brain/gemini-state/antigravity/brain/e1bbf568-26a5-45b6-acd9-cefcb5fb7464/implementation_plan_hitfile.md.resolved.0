@@ -1,0 +1,24 @@
+# Hitfile Semi-Automated Downloader Plan
+
+Downloading from Hitfile as a free user involves several steps that are difficult to fully automate (especially CAPTCHAs). I propose a semi-automated solution using Puppeteer.
+
+## Proposed Solution
+A script that:
+1. Launches a visible browser.
+2. Navigates to the Hitfile link.
+3. Automatically clicks the "Free Download" button.
+4. Waits for the mandatory countdown (usually 60 seconds).
+5. Prompts the user to solve the CAPTCHA in the open browser window.
+6. Once the CAPTCHA is solved and the download button appears, the user clicks it or the script attempts to click it.
+
+## Proposed Changes
+
+### [NEW] [hitfile_downloader.js](file:///C:/Users/Deacjx/.gemini/antigravity/scratch/scribd-dl/hitfile_downloader.js)
+A Puppeteer script to handle the Hitfile flow.
+
+### [NEW] [download_hitfile.ps1](file:///C:/Users/Deacjx/.gemini/antigravity/scratch/scribd-dl/download_hitfile.ps1)
+A PowerShell wrapper similar to the Scribd one.
+
+## Verification Plan
+1. Test with a sample Hitfile link.
+2. Verify that the script correctly identifies the "Free Download" button and waits for the timer.

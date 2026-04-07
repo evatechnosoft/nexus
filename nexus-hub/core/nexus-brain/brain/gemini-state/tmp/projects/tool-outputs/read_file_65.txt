@@ -1,0 +1,9 @@
+<tool_output_masked>
+{
+  "output": "import os\nfrom sqlalchemy import create_engine\nfrom sqlalchemy.orm import declarative_base, sessionmaker\n\n# SQLite (varsayılan) veya PostgreSQL — tek satır değişiklik:\n#   DATABASE_URL=postgresql://user:pass@host:5432/dbname\nDATA
+... [TRUNCATED] ...
+çılacak ek bağlantı kapasitesi\n)\n\nSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)\nBase = declarative_base()\n\n\ndef get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()\n"
+}
+
+Output too large. Full output available at: C:\Users\Deacjx\.gemini\tmp\projects\tool-outputs\session-a366de38-25fd-4d3a-9bce-f8a0bc9646e6\read_file_read_file_1775210675493_0_4r4q66.txt
+</tool_output_masked>

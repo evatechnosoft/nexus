@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "agent-knowledge-filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:/Users/Deacjx/.ai/memory",
+        "C:/Users/Deacjx/.claude/rules",
+        "C:/Users/Deacjx/.gemini"
+      ]
+    }
+  }
+}

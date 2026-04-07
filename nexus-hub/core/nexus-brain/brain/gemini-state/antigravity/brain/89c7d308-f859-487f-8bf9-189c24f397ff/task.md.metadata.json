@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_TASK",
+  "summary": "Task list for fixing database authentication and getting the backend running. Includes steps for planning, switching to SQLite, and verification.",
+  "updatedAt": "2026-03-22T16:04:53.213017800Z"
+}

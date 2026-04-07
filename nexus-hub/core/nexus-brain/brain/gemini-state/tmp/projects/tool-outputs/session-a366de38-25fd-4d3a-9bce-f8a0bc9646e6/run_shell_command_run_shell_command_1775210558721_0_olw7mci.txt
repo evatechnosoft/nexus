@@ -1,0 +1,3 @@
+{
+  "output": "Output: Traceback (most recent call last):\n  File \"C:\\projects\\agentops-nexus\\scripts\\discovery.py\", line 5, in <module>\n    from database import SessionLocal\nModuleNotFoundError: No module named 'database'\nExit Code: 1\nProcess Group PGID: 22288"
+}

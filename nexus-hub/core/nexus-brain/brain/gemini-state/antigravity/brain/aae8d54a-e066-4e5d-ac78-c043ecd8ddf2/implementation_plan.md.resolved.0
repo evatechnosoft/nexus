@@ -1,0 +1,47 @@
+# DeanOS & GitHub Organization Plan
+
+The goal is to provide a comprehensive status report for the DeanOS server, establish a "one-click" SSH command for Coolify health/activation, and reorganize the messy GitHub/local project structure.
+
+## User Review Required
+
+> [!IMPORTANT]
+> - I will be adding a `Coolify: Status & Fix` command to your `zima.ps1` script. This will automatically fix the "Permission Denied" errors I detected in Coolify's logs.
+> - For the GitHub/Local project mess, I propose moving "one-off" experiments to an `Archive` folder to simplify your view in `c:\projects`.
+> - Do you want me to also help you Archive/Consolidate your GitHub repositories online?
+
+## Proposed Changes
+
+### DeanOS & Coolify Control
+
+#### [MODIFY] [zima.ps1](file:///d:/OS/Zimaos/zima.ps1)
+- Add a new menu option: `10. 🧊 Coolify Sağlık Kotrolü & Tamir`
+- This command will:
+  - Check if Coolify and its dependencies (Redis, Postgres, Soketi) are running.
+  - Run a `chmod` fix for the storage/logs folder on the server to resolve the "Permission Denied" errors.
+  - Restart the Coolify container if it's unhealthy.
+
+### GitHub & Project Organization
+
+#### [NEW] [Organization Strategy]
+- Move "Boilerplate" and "MVP" projects in `c:\projects` to structured subfolders:
+  - `c:\projects\Development` (Active items like `it-inventory`, `evaiteclabs`)
+  - `c:\projects\Archive` (One-off experiments like `Quiz`, `food-delivery-mock`)
+  - `c:\projects\Boilerplates` (Templates like `saas-starter-kit`, `myllm`)
+- This will make your daily workflow much cleaner.
+
+## Open Questions
+
+> [!NOTE]
+> - Should I proceed with moving the folders in `c:\projects` now? 
+> - For the "GitHub mess", would you like me to identify repositories that are stale and should be archived in your GitHub account?
+> - Is there a specific "Coolify" behavior that you feel is "inactive" currently, or just the dashboard accessibility?
+
+## Verification Plan
+
+### Automated Tests
+- Run the new `zima.ps1` option to verify it can fix Coolify's status.
+- Check Coolify logs again to ensure "Permission Denied" is gone.
+
+### Manual Verification
+- Ask the user to verify if they can access the Coolify dashboard at `192.168.1.186:8005`.
+- User to review the new folder structure in `c:\projects`.

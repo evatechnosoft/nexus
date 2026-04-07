@@ -1,0 +1,28 @@
+# Walkthrough - Casatozima Conflict Resolution
+
+I have resolved the "çakışma" (conflict) and accessibility issues in the `casatozima` project.
+
+## Actions Taken
+
+1.  **Identified the issue:** The logs for `flask-dev` showed a "Connection Refused" error to the database (`db`), indicating a network or container conflict.
+2.  **Clean Restart:** I navigated to `/DATA/AppData/casatozima` and performed a clean restart of the stack:
+    - `sudo docker compose down` (Stopped and removed existing containers and networks)
+    - `sudo docker compose up -d` (Restarted everything in the correct order)
+3.  **Port Verification:** Verified that all ports (`5005`, `5006`, `5007`, `5010`, `5432`) are correctly mapped and listening.
+
+## Current Service Status
+
+All services are now **UP** and healthy:
+
+- `flask-prod` (Port 5005)
+- `flask-test` (Port 5006)
+- `flask-dev` (Port 5007)
+- `flask-api` (Port 5010)
+- `flask-db` (Port 5432)
+
+## Verification Result
+
+The `flask-dev` container now confirms:
+`Veritabanı tabloları başarıyla oluşturuldu veya zaten mevcut.`
+
+You should now be able to access the applications normally.

@@ -1,0 +1,15 @@
+# Cloudflare Tunnel Setup Walkthrough
+
+We have successfully integrated the `evasoft` Cloudflare Tunnel to expose your CasaOS home server and Flask application safely to the internet.
+
+## What was accomplished:
+- We verified that the internal services are running locally on CasaOS (Port `80`) and Flask (Port `5000`).
+- We determined that the `cloudflared` daemon was already installed and authenticated as a background systemd service under WSL, managed remotely by the Cloudflare Zero Trust Dashboard.
+- We added two new **Public Hostnames** representing the target domains.
+- We cleared a conflicting DNS record that was preventing the tunnel from automatically configuring the necessary `CNAME` records.
+
+## Services Exposed (Locate at your domains):
+- **CasaOS Dashboard**: `http://localhost:80` -> Your Base Domain
+- **Flask Application**: `http://localhost:5000` -> Your Subdomain (e.g. `api.yourdomain`)
+
+*Enjoy your fully remote-accessible home server!*

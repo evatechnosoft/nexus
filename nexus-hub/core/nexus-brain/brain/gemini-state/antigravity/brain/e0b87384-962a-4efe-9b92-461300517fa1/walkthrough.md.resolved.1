@@ -1,0 +1,28 @@
+# Geliştirme Ortamları (Dev, Test, Prod) Kurulum Özeti
+
+Harika! Senin için tek bir tuşla ayağa kalkan 3 farklı web geliştirme ortamı hazırladık. Bu ortamlar birbirlerinden bağımsız çalışıyor ve ileride yapacağın projeler için mükemmel bir temel oluşturuyor.
+
+## 🏗️ Mimari Yapı
+
+Projelerin `c:\projects\github\casaos-home-server\flask-app` klasörü içerisinde yer alıyor.
+Kodların ise artık bu klasörün içindeki `src/` klasöründe barınıyor.
+
+Her ortam farklı bir port üzerinden yayına çıkıyor:
+*   **PROD (Canlı Ortam) - Port `5005`**: Optimize edilmiş, son kullanıcının göreceği sürüm.
+*   **TEST (Sahne/Test Ortamı) - Port `5006`**: Canlıya almadan önce her şeyin düzgün çalıştığından emin olmak için kullanacağın paketlenmiş sürüm.
+*   **DEV (Geliştirme Ortamı) - Port `5007`**: Hot-reload (otomatik yenileme) destekli sürüm!
+
+## ⚡ Geliştirici (Dev) Ortamının Gücü
+`src/app.py` dosyasında (veya ileride ekleyeceğin HTML/CSS dosyalarında) bir değişiklik yapıp kaydettiğinde, **Docker container'ını yeniden başlatmana gerek yok!** Değişiklikler anında `dev.evaitec.com.tr` (veya `localhost:5007`) adresine yansıyacak. 
+
+## 🌐 Yapman Gereken Son Adım (Cloudflare)
+Projelerini internete açmak için **Cloudflare Zero Trust** paneline gidip aşağıdaki yeni tünel rotalarını (Public Hostname) eklemelisin:
+1.  **Dev İçin:** `dev.evaitec.com.tr` -> `http://localhost:5007`
+2.  **Test İçin:** `test.evaitec.com.tr` -> `http://localhost:5006`
+3.  **Prod İçin:** `api.evaitec.com.tr` (veya direkt `evaitec.com.tr`) -> `http://localhost:5005` (Bunu 5005 olarak değiştirmeyi unutma, daha önce 5000'di)
+
+## 🐳 Docker Yönetimi
+Tüm ortamları durdurmak veya yeniden başlatmak istersen WSL terminalinde `c:\projects\github\casaos-home-server\flask-app` dizinine gidip şu komutları kullanabilirsin:
+*   Kapatmak için: `docker compose down`
+*   Yeniden (Arka Planda) Açmak İçin: `docker compose up -d` 
+*   Test ve Prod ortamlarına kod değişikliğini yansıtmak (imajı yeniden inşa etmek) için: `docker compose up -d --build`

@@ -1,0 +1,6 @@
+{
+  "artifactType": "ARTIFACT_TYPE_WALKTHROUGH",
+  "summary": "Updated walkthrough of the fixes for BuildContext async gaps in both `SplashScreen` and `TwoFaScreen`.",
+  "updatedAt": "2026-03-22T08:41:36.190478500Z",
+  "version": "1"
+}

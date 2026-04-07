@@ -1,0 +1,42 @@
+# Coolify & Internal Networking Recovery
+
+We are addressing the "Server is unreachable" and "PrivateKey 0" errors shown in your screenshots. The core issue is that Coolify is trying to reach the host via HTTPS (443) on the external IP, which is blocked/closed, and it has lost its database link to the SSH private key.
+
+## User Review Required
+
+> [!IMPORTANT]
+> **Manual UI Step Required:** After I update the configuration, you will need to manually copy-paste the SSH key into the Coolify UI to restore its management link. I will provide the key in a secure format.
+
+> [!WARNING]
+> **Internal Connectivity:** We are switching the internal address from `192.168.1.186` to `host.docker.internal`. This is more stable as it doesn't change if your local network IP changes.
+
+## Proposed Changes
+
+### [DeanOS] Coolify Infrastructure
+
+#### [MODIFY] [docker-compose.yml](file:///var/lib/casaos/apps/big-bear-coolify/docker-compose.yml)
+- Add `extra_hosts: ["host.docker.internal:host-gateway"]` to the `big-bear-coolify` service.
+- This allows the container to talk to the DeanOS host using a standard internal name.
+
+### [UI] Coolify Dashboard Fixes
+
+#### [ACTION] Restore Private Key
+- Go to **Keys** -> **Add New Key**.
+- Name it `DeanOS-Local`.
+- Paste the private key provided in the next turn.
+
+#### [ACTION] Update Server Settings
+- Go to **Servers** -> **Local**.
+- Change IP Address to: `host.docker.internal`.
+- Set SSH Port to: `22`.
+- Link the `DeanOS-Local` key.
+- Click **Validate Server**.
+
+## Verification Plan
+
+### Automated Tests
+- `ssh dean "sudo docker compose -f /var/lib/casaos/apps/big-bear-coolify/docker-compose.yml up -d"`
+- `curl http://192.168.1.186:8005` -> Verify dashboard accessibility.
+
+### Manual Verification
+- Confirm the "Server is reachable" check turns Green in the Coolify UI.

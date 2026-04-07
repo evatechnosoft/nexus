@@ -1,0 +1,22 @@
+# Git Başlatma ve Hataları Düzeltme Planı
+
+Uygulamanın mevcut halini korumak ve güvenli bir şekilde düzeltme yapmak için Git reposunu başlatıp yeni bir dal (branch) oluşturacağım.
+
+## Proposed Changes
+
+### Altyapı Hazırlığı
+
+#### [NEW] [.gitignore](file:///c:/projects/SportApp/.gitignore)
+- `node_modules`, `.env`, ve diğer geçici dosyaların versiyon kontrolüne girmesini engelleyeceğim.
+
+### Git İşlemleri
+
+1. **Git Başlatma**: `git init` komutu ile yerel depoyu oluşturacağım.
+2. **İlk Commit**: `git add .` ve `git commit -m "ilk commit: mevcut hatalı durum"` komutları ile mevcut hali (hatalarıyla birlikte) kaydedeceğim.
+3. **Branch Oluşturma**: `git checkout -b fix/startup-issues` komutu ile düzeltmeleri yapacağımız yeni dalı açacağım.
+
+## Verification Plan
+
+### Manual Verification
+- `git status` ile dosyaların eklendiğini kontrol edeceğim.
+- `git branch` ile doğru dalda olduğumuzu doğrulayacağım.

@@ -1,0 +1,20 @@
+# Local App Testing Plan
+
+## Current Tasks
+- [ ] Open `http://localhost:5007` and verify login/register section.
+- [ ] Register a new user:
+    - [ ] Click 'Kayıt Ol' tab.
+    - [ ] Fill: `testuser`, `test@test.com`, `password123`.
+    - [ ] Submit and verify success.
+- [ ] Login with the registered user:
+    - [ ] Click 'Giriş Yap' tab.
+    - [ ] Login: `testuser`, `password123`.
+    - [ ] Verify success (Status Cards, User List visible).
+- [ ] Verify `currentUserName` in header shows `testuser`.
+- [ ] Add a new user via dashboard:
+    - [ ] Fill: `newbuddy`, `buddy@test.com`, `buddy123`.
+    - [ ] Verify `newbuddy` in user table.
+- [ ] Click 'Çıkış Yap' and verify logout.
+
+## Notes
+- URL: http://localhost:5007

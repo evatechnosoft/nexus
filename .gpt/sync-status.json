@@ -1,0 +1,14 @@
+{
+  "syncedAt": "2026-04-03T17:33:13.6139960+03:00",
+  "sources": {
+    "claude": "C:/Users/Deacjx/.claude",
+    "gemini": "C:/Users/Deacjx/.gemini",
+    "gpt": "C:/Users/Deacjx/.gpt"
+  },
+  "status": {
+    "claude": true,
+    "gemini": true,
+    "gpt": true,
+    "mcp": true
+  }
+}

@@ -1,0 +1,5 @@
+- [ ] Modular ESPHome YAML tasarımı oluştur (`smart-station.yaml`)
+- [ ] SPI (Ekran), I2C (Sensör) ve UART (Enerji Metre) pin tanımlarını ekle
+- [ ] Ekran (ILI9341) için temel dashboard (Display Lambda) kodunu yaz
+- [ ] Hareket (PIR) ve Enerji (PZEM) için Home Assistant entegrasyonlarını tanımla
+- [ ] Tüm konfigürasyonu kullanıcıya flashlaması için sun

@@ -1,0 +1,80 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Student Book:
+Sayfa 4-7
+🗝️ Anahtar Kelimeler (Vocabulary)
+🎯
+Tıkla:
+Okunuşunu dinle | 🖱️
+Basılı Tut:
+Harf harf kodlamasını dinle
+[0] (340,373)<div  />
+	[1] (340,281)<div >hello />
+	[2] (340,333)<div >merhaba />
+	[3] (340,410)<div >[he-low]
+hel-lo />
+		[4] (310,401)<b >🗣️ Okunuş: />
+		[5] (315,434)<b >🧩 Heceleme: />
+[6] (500,374)<div  />
+	[7] (500,282)<div >goodbye />
+	[8] (500,334)<div >hoşça kal />
+	[9] (500,428)<div >[gud-bay]
+good-bye />
+		[10] (469,402)<b >🗣️ Okunuş: />
+		[11] (475,435)<b >🧩 Heceleme: />
+[12] (660,374)<div  />
+	[13] (660,282)<div >teacher />
+	[14] (660,334)<div >öğretmen />
+	[15] (660,411)<div >[tii-çır]
+teach-er />
+		[16] (629,402)<b >🗣️ Okunuş: />
+		[17] (635,435)<b >🧩 Heceleme: />
+[18] (340,659)<div  />
+	[19] (340,583)<div >girl />
+	[20] (340,635)<div >kız />
+	[21] (340,712)<div >[görl]
+girl />
+		[22] (310,703)<b >🗣️ Okunuş: />
+		[23] (315,736)<b >🧩 Heceleme: />
+[24] (500,659)<div  />
+	[25] (500,583)<div >boy />
+	[26] (500,635)<div >erkek çocuk />
+	[27] (500,712)<div >[boy]
+boy />
+		[28] (469,703)<b >🗣️ Okunuş: />
+		[29] (475,736)<b >🧩 Heceleme: />
+[30] (660,659)<div  />
+	[31] (660,583)<div >good />
+	[32] (660,635)<div >iyi />
+	[33] (660,712)<div >[gud]
+good />
+		[34] (629,703)<b >🗣️ Okunuş: />
+		[35] (635,736)<b >🧩 Heceleme: />
+[36] (340,926)<div  />
+	[37] (340,851)<div >one />
+	[38] (340,903)<div >bir />
+	[39] (340,980)<div >[van]
+🧩 Heceleme:
+one />
+		[40] (310,971)<b >🗣️ Okunuş: />
+		🧩 Heceleme:
+[41] (500,926)<div >[tu]
+two />
+	[42] (500,851)<div >two />
+	[43] (500,903)<div >iki />
+	🗣️ Okunuş:
+	[tu]
+	🧩 Heceleme:
+	two
+[44] (660,926)<div  />
+	[45] (660,851)<div >three />
+	[46] (660,903)<div >üç />
+	[47] (660,980)<div >[tri]
+🧩 Heceleme:
+three />
+		[48] (629,971)<b >🗣️ Okunuş: />
+		🧩 Heceleme:
+
+</current_dom>

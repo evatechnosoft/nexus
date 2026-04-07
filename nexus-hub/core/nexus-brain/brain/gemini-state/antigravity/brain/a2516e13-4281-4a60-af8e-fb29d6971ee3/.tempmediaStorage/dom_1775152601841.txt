@@ -1,0 +1,114 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (15,24)<ha-svg-icon  />
+Home Assistant
+[1] (69,73)<ha-md-list-item  />
+	[2] (15,73)<ha-svg-icon  />
+	[3] (80,73)<span >Ana Ekran />
+[4] (69,115)<ha-md-list-item class='  ' />
+	[5] (15,115)<ha-svg-icon  />
+	[6] (80,115)<span >Harita />
+[7] (69,157)<ha-md-list-item class='  ' />
+	[8] (15,157)<ha-svg-icon  />
+	[9] (80,157)<span >Enerji />
+[10] (69,198)<ha-md-list-item class='  ' />
+	[11] (15,198)<ha-svg-icon  />
+	[12] (80,198)<span >Günlük />
+[13] (69,240)<ha-md-list-item class='  ' />
+	[14] (15,240)<ha-svg-icon  />
+	[15] (80,240)<span >Geçmiş />
+[16] (69,282)<ha-md-list-item class='  ' />
+	[17] (15,282)<ha-icon  />
+		[18] (15,282)<ha-svg-icon  />
+	[19] (80,282)<span >HACS />
+[20] (69,323)<ha-md-list-item class='  ' />
+	[21] (15,323)<ha-svg-icon  />
+	[22] (80,323)<span >Medya />
+[23] (69,365)<ha-md-list-item class='  ' />
+	[24] (15,365)<ha-svg-icon  />
+	[25] (80,365)<span >Yapılacaklar listeleri />
+[26] (69,819)<ha-md-list-item class='  ' />
+	[27] (15,819)<ha-svg-icon  />
+	[28] (80,819)<span >Geliştirici araçları />
+[29] (69,861)<ha-md-list-item class='configuration selected' href='/config' />
+	[30] (15,861)<ha-svg-icon  />
+	[31] (80,861)<span >Ayarlar />
+[32] (69,927)<ha-md-list-item class='notifications' />
+	[33] (15,927)<ha-svg-icon  />
+	[34] (80,927)<span >Bildirimler />
+[35] (69,969)<ha-md-list-item class='user ' href='/profile' />
+	[36] (15,969)<ha-user-badge  />
+		[37] (15,969)<div >D />
+	[38] (80,969)<span >Dean />
+[39] (157,24)<a href='/config' />
+	[40] (157,24)<ha-icon-button-arrow-prev  />
+		[41] (157,24)<ha-icon-button  />
+			[42] (157,24)<mwc-icon-button  />
+				[43] (157,24)<ha-svg-icon  />
+[44] (471,24)<a href='/config/integrations' />
+	[45] (471,24)<ha-tab  />
+		[46] (471,24)<div aria-label='Entegrasyonlar' role='tab' />
+			[47] (471,24)<span >Entegrasyonlar />
+[48] (544,24)<a href='/config/devices' />
+	[49] (544,24)<ha-tab  />
+		[50] (544,24)<div aria-label='Cihazlar' role='tab' />
+			[51] (544,23)<span >Cihazlar />
+[52] (606,24)<a href='/config/entities' />
+	[53] (606,24)<ha-tab  />
+		[54] (606,24)<div aria-label='Varlıklar' role='tab' />
+			[55] (606,24)<span >Varlıklar />
+[56] (673,24)<a href='/config/helpers' />
+	[57] (673,24)<ha-tab  />
+		[58] (673,24)<div aria-label='Yardımcılar' role='tab' />
+			[59] (673,24)<span >Yardımcılar />
+[60] (296,122)<div class='mdc-data-table__header-cell  sortable ' role='columnheader' title='Cihaz' />
+	[61] (185,121)<ha-svg-icon  />
+	[62] (202,122)<span >Cihaz />
+[63] (485,122)<div class='mdc-data-table__header-cell  sortable not-sorted ' role='columnheader' title='Alan' />
+	[64] (434,122)<span >Alan />
+[65] (616,122)<div class='mdc-data-table__header-cell  sortable not-sorted ' role='columnheader' title='Entegrasyon' />
+	[66] (577,122)<span >Entegrasyon />
+[67] (748,122)<div class='mdc-data-table__header-cell  sortable not-sorted ' role='columnheader' title='Üretici' />
+	[68] (700,122)<span >Üretici />
+[69] (880,122)<div class='mdc-data-table__header-cell  sortable not-sorted ' role='columnheader' title='Model' />
+	[70] (832,122)<span >Model />
+[71] (973,122)<div class='mdc-data-table__header-cell  mdc-data-table__header-cell--numeric sortable not-sorted ' role='columnheader' title='Pil' />
+	[72] (988,122)<span >Pil />
+Veri yok
+[73] (171,73)<ha-assist-chip  />
+	[74] (171,73)<div  />
+		[75] (171,73)<button class='primary action' id='button'>Filtreler />
+			Filtreler
+			[76] (171,73)<span  />
+[77] (213,73)<ha-assist-chip  />
+	[78] (213,73)<div  />
+		[79] (213,73)<button class='primary action' id='button' />
+			[80] (213,73)<span  />
+[81] (528,73)<ha-outlined-field  />
+	[82] (539,73)<div  />
+		[83] (535,73)<input class='input' placeholder='22  devices  arayın' />
+[84] (242,73)<ha-svg-icon class='prefix' />
+[85] (863,73)<ha-assist-chip  />
+	[86] (863,73)<div  />
+		[87] (863,73)<button class='primary action' id='button'>Gruplandır: />
+			Gruplandır:
+			[88] (863,73)<span  />
+	[89] (884,73)<ha-svg-icon  />
+[90] (933,73)<ha-assist-chip  />
+	[91] (933,73)<div  />
+		[92] (933,73)<button class='primary action' id='button'>Sırala:  Cihaz />
+			Sırala:  Cihaz
+			[93] (933,73)<span  />
+	[94] (955,73)<ha-svg-icon  />
+[95] (982,73)<ha-assist-chip  />
+	[96] (982,73)<div  />
+		[97] (982,73)<button class='primary action' id='button' />
+			[98] (982,73)<span  />
+[99] (981,24)<ha-svg-icon  />
+[100] (952,965)<button aria-label='Cihaz ekle' class='mdc-fab  mdc-fab--extended ' />
+	[101] (960,965)<span >Cihaz ekle />
+[102] (926,965)<ha-svg-icon  />
+
+</current_dom>

@@ -1,0 +1,10 @@
+# Task: Verify Game Visuals
+
+## Goals
+- [ ] Verify PINK DOTS (magenta circles) are GONE.
+- [ ] Verify STARS are white/blue glowing stars.
+- [ ] Verify WATER/LAVA section is visible (no brown dirt covering it).
+- [ ] Verify Ground (grass/dirt) is seamless (no vertical black lines).
+
+## Progress
+- [ ] Initial check of localhost:5173

@@ -1,0 +1,15 @@
+# Project Fixes & Architectural Unification
+
+- [x] Transition to Unified [Notifier](file:///c:/projects/github/EvAnotes/mobile/lib/state/notes_notifier.dart#29-206) Pattern
+  - [x] Plan and approve architecture
+  - [x] Update Configuration ([api_client.dart](file:///c:/projects/github/EvAnotes/mobile/lib/config/api_client.dart))
+  - [x] Update Top-level Providers ([providers.dart](file:///c:/projects/github/EvAnotes/mobile/lib/config/providers.dart))
+  - [x] Refactor [TasksNotifier](file:///c:/projects/github/EvAnotes/mobile/lib/state/tasks_notifier.dart#32-219)
+  - [x] Refactor [NotesNotifier](file:///c:/projects/github/EvAnotes/mobile/lib/state/notes_notifier.dart#29-206)
+- [x] Fix Compilation Errors
+  - [x] Resolve `dioProvider` mismatches
+  - [x] Fix `authTokenProvider` usage
+  - [x] Ensure all service providers are correctly defined
+- [x] Verify & Test
+  - [x] Run `flutter analyze`
+  - [x] Run `build_runner` for model generation

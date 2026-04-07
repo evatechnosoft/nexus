@@ -1,0 +1,18 @@
+[0] (812,100)<button class='logout-btn'>Çıkış Yap 🚪 />
+📚 English Learning Hub
+English Code Starter — American English
+[1] (470,312)<button class='nav-btn active'>👧 Öğrenci />
+[2] (539,312)<button class='nav-btn'>👨‍👩‍👧 Veli />
+Merhaba
+Öğrenci
+! 👋
+[3] (273,632)<div class='card' />
+	[4] (205,536)<span >Hafta 01 />
+	[5] (273,581)<h3 >Welcome! />
+	[6] (273,628)<p >İlk gün — selamlaşma, sayılar, yaş />
+	[7] (273,673)<div >📅 16 yeni kelime />
+[8] (500,632)<div class='card' />
+	[9] (432,536)<span >Hafta 02 />
+	[10] (500,598)<h3 >Unit 1: Birthday Fun! — Bölüm 1 />
+	[11] (500,675)<p >Doğum günü kartı yapımı — renkler ve doğum günü kelimeleri />
+	[12] (500,735)<div >📅 14 yeni kelime />

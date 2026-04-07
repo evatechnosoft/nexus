@@ -1,0 +1,53 @@
+
+IMPORTANT: The file content has been truncated.
+Status: Showing lines 120-167 of 167 total lines.
+Action: To read more of the file, you can use the 'start_line' and 'end_line' parameters in a subsequent 'read_file' call. For example, to read the next section of the file, use start_line: 168.
+
+--- FILE CONTENT (truncated) ---
+
+@app.get("/health")
+def health_check():
+    """Uptime Kuma ve izleme araçları için sağlık kontrolü."""
+    from datetime import datetime
+    return {"status": "ok", "timestamp": datetime.utcnow().isoformat()}
+
+
+@app.get("/api/stats")
+def api_stats(db: Session = Depends(get_db)):
+    """Dış dashboardlar için özet istatistikler."""
+    import email_watcher
+    import graph_watcher
+    
+    last_scan = email_watcher.get_last_scan_time() or graph_watcher.get_last_scan_time()
+    
+    devices = db.query(models.Device).all()
+    reqs = db.query(models.Request).all()
+    queue = db.query(models.EmailQueue).all()
+    return {
+        "sistem": {
+            "durum": "online",
+            "son_tarama": last_scan.isoformat() if last_scan else None,
+        },
+        "envanter": {
+            "toplam": len(devices),
+            "stokta": sum(1 for d in devices if d.status == models.DeviceStatus.in_stock),
+            "atanmis": sum(1 for d in devices if d.status == models.DeviceStatus.assigned),
+        },
+        "talepler": {
+            "toplam": len(reqs),
+            "bekleyen": sum(1 for r in reqs if r.status in [models.RequestStatus.pending, models.RequestStatus.pending_approval]),
+        },
+        "kuyruk": {
+            "bekleyen": sum(1 for i in queue if i.status == "pending"),
+            "hatali": sum(1 for i in queue if i.status == "failed"),
+        }
+    }
+
+
+if __name__ == "__main__":
+    import uvicorn
+    # APP_PORT inside container should usually be 8000 to match Dockerfile/Compose
+    env = os.getenv("APP_ENV", "DEV")
+    # For local dev without docker, it uses 9600. Inside docker, it defaults to 8000.
+    port = int(os.getenv("APP_PORT", 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=(env == "DEV"))

@@ -1,0 +1,18 @@
+# Task: Organize ZimaOS Setup Files
+
+- [x] Analyze current state and GitHub repository
+- [x] Create implementation plan
+- [x] Fetch files from GitHub
+- [x] Organize and place files in `d:\OS\Zimaos`
+- [x] Implement robust connectivity (DNS) fix
+- [x] Fix Read-Only Filesystem & Group Mismatch
+- [x] Fix Docker EOF & Direct Network Exit
+- [x] Optimize Network Performance
+- [x] Fix Web UI Accessibility
+    - [ ] Check [casaos](file:///d:/OS/Zimaos/setup.sh#196-436) service
+    - [ ] Verify port 80/81 listening
+- [x] Create PostgreSQL databases (nextcloud, inventory, db-dev, db-test)
+- [x] Resolve PostgreSQL authentication issues
+- [x] Configure MySQL database for extension connection
+- [x] Provide connection details for all databases
+- [x] Create Interactive Setup Script (setup_interactive.sh)

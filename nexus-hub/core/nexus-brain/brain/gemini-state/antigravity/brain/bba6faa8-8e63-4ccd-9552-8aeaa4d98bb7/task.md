@@ -1,0 +1,4 @@
+- `[ ]` Sistemdeki gerçek portları (HA, ESPHome, AdGuard, Grafana) saptanması
+- `[ ]` ZimaOS PostgreSQL veri tabanındaki uygulama tablolarının tespiti
+- `[ ]` Hatalı linklerin SQL ile güncellenmesi
+- `[ ]` Dashboard servislerinin yeniden başlatılması ve doğrulama

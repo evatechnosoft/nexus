@@ -1,0 +1,11 @@
+# Docer.pl Search Task
+
+- [ ] Visit `https://docer.pl/show/?q=english+code`
+- [ ] Check if the page loads and if there are search results
+- [ ] If page doesn't load directly, try searching on the homepage
+- [ ] List first few file names and formats
+- [ ] Check if they are downloadable
+- [ ] Report findings (blocked, inaccessible, or found)
+
+## Findings
+- 

@@ -1,0 +1,14 @@
+# Docer.pl Search Task
+
+- [x] Visit `https://docer.pl/show/?q=english+code`
+- [x] Check if the page loads and if there are search results (Direct link failed with 404/blank)
+- [/] If page doesn't load directly, try searching on the homepage (Homepage works, searching for "english code" on homepage also led to a 404/blank search result page)
+- [ ] List first few file names and formats
+- [ ] Check if they are downloadable
+- [ ] Report findings (blocked, inaccessible, or found)
+
+## Findings
+- Direct search link `https://docer.pl/show/?q=english+code` resulted in a blank page.
+- Homepage `https://docer.pl/` is accessible.
+- Searching for "english code" in the homepage search bar redirected to `https://docer.pl/show/?q=english+code` which returned a 404 according to network logs.
+- Attempting to search for a broader term "english" to see if search functionality is broken.

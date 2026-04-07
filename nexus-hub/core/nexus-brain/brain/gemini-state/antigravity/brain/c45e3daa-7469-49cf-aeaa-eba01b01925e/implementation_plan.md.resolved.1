@@ -1,0 +1,36 @@
+# Kabuk Betiği (SH) Satır Sonu Sorununun Giderilmesi
+
+Kullanıcı "açılmıyor" geri bildirimi üzerine yapılan incelemede, DeanOS (Linux) sunucusundaki `deploy_deanos.sh` dosyasının çalıştırılamadığı ("required file not found") görülmüştür. Bu hata, genellikle Windows'tan (CRLF) Linux'a (LF) aktarılan script dosyalarındaki karakter uyumsuzluğundan kaynaklanır.
+
+## Kullanıcı İncelemesi Gerekli
+
+> [!IMPORTANT]
+> Script dosyalarının (`.sh`) Linux üzerinde çalışabilmesi için satır sonlarının LF olması şarttır. Bu işlem sırasında tüm `.sh` dosyaları güncellenecektir.
+
+## Önerilen Değişiklikler
+
+### Satır Sonu Standardizasyonu
+
+#### [NEW] [.gitattributes](file:///c:/projects/it-inventory/.gitattributes)
+- Git'in `.sh` dosyalarını otomatik olarak LF formatında tutmasını sağlayacak kural eklenecek.
+```text
+*.sh text eol=lf
+```
+
+#### [MODIFY] [deploy_deanos.sh](file:///c:/projects/it-inventory/deploy_deanos.sh)
+- CRLF -> LF dönüşümü yapılacak.
+
+#### [MODIFY] [entrypoint.sh](file:///c:/projects/it-inventory/entrypoint.sh)
+- CRLF -> LF dönüşümü yapılacak.
+
+#### [MODIFY] [install.sh](file:///c:/projects/it-inventory/install.sh)
+- CRLF -> LF dönüşümü yapılacak.
+
+## Doğrulama Planı
+
+### Otomatik Doğrulama
+- Yerel olarak tüm `.sh` dosyalarının LF formatında olduğu PowerShell ile kontrol edilecek.
+
+### Manuel Doğrulama
+- `.\deploy.ps1` yeniden çalıştırılarak DeanOS üzerindeki `deploy_deanos.sh` dosyasının başarıyla tetiklendiği SSH çıktılarından kontrol edilecek.
+- `docker ps` ile konteynırın "Up" durumunda olduğu teyit edilecek.

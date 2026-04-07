@@ -1,0 +1,9 @@
+<tool_output_masked>
+{
+  "output": "# graph_watcher.py\nimport os\nimport logging\nfrom O365 import Account\nfrom database import SessionLocal\nimport models\nimport email_watcher\n\nlog = logging.getLogger(__name__)\n\ndef get_graph_account():\n    client_id = os.getenv
+... [TRUNCATED] ...
+"Graph API tarama hatası: %s\", e)\n\n_last_scan_time = None\n\ndef get_last_scan_time():\n    return _last_scan_time\n\ndef update_scan_time():\n    global _last_scan_time\n    from datetime import datetime\n    _last_scan_time = datetime.now()\n"
+}
+
+Output too large. Full output available at: C:\Users\Deacjx\.gemini\tmp\projects\tool-outputs\session-a366de38-25fd-4d3a-9bce-f8a0bc9646e6\read_file_read_file_1775212155715_0_k9wwji.txt
+</tool_output_masked>

@@ -1,0 +1,8 @@
+# Task: Check Service Connectivity
+
+- [ ] Research current status of services [/]
+    - [ ] Check `casatozima` app configuration
+    - [ ] Check running processes/containers
+    - [ ] Verify local connectivity
+    - [ ] Check external connectivity via Cloudflare (if possible)
+- [ ] Report findings to user

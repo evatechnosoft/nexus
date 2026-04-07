@@ -1,0 +1,24 @@
+# Tasks
+# Task: car_dash Premium EV Dashboard
+
+## Phase 1: Git & Repository Setup
+- [x] Repurpose `car_dash` as standalone repo
+- [x] Create `master` and `dev` branches
+- [x] Setup [.gitignore](file:///c:/projects/claude+antigravity/.gitignore) (ignore skills and docs)
+- [/] Initial Commit on `dev`
+## Phase 2: Workspace Restructure
+- [x] Create `skills` directory
+- [x] Move existing skills to `skills/`
+- [x] Commit & Push restructured workspace
+
+## Phase 3: car_dash Project Development
+- [x] Create `projects` directory
+- [x] Initialize Flutter project `car_dash`
+- [x] Brainstorming & Requirements (using `brainstorming`)
+- [x] Architecture Design (SOLID & Clean Architecture)
+- [x] Implementation: Futuristic Gauges
+- [x] Implementation: Dynamic Background
+
+## Phase 4: Environment Troubleshooting
+- [x] Fix Flutter/Dart PATH issues
+- [x] Verify Flutter installation

@@ -1,0 +1,39 @@
+# ZimaOS/DeanOS Stability & Backup Plan
+
+Automate the backup, recovery, and periodic maintenance of the ZimaOS ecosystem to ensure it "never breaks" and is easily restorable.
+
+## User Review Required
+
+> [!IMPORTANT]
+> **Backup Destination:** By default, backups will be stored in `/DATA/Backup`. If you have an external drive, please specify the path so we can point the backup script there for better redundancy.
+
+## Proposed Changes
+
+### [New] [backup_system.sh](file:///home/dean/backup_system.sh)
+A script that creates a compressed archive of:
+- `/var/lib/casaos`: Application settings and Docker Compose configs.
+- `/DATA/AppData`: All persistent application data (Postgres, MySQL, Nextcloud files).
+- `/home/dean/`: Custom scripts (`setup_interactive.sh`, etc.).
+
+### [New] [restore_system.sh](file:///home/dean/restore_system.sh)
+A script that:
+- Stops all Docker containers.
+- Replaces configuration directories from a chosen backup file.
+- Redoes the network fixes (DNS, NTP).
+- Restarts containers.
+
+### [MODIFY] [Maintenance Cron Job]
+A periodic task (every hour) that runs `setup_interactive.sh` in "non-interactive mode" (or a headless version of it) to ensure:
+- DNS matches `1.1.1.1`.
+- Time stays synced.
+- Critical services are running.
+
+## Verification Plan
+
+### Automated Tests
+- Run `backup_system.sh` and verify the `.tar.gz` existence and size.
+- Test `restore_system.sh` on a non-critical test directory to ensure permissions remain correct (`www-data` for Nextcloud, `dean` for scripts).
+
+### Manual Verification
+- Point the user to the backup file in `/DATA/Backup`.
+- Show the timestamp of the last successful maintenance run in a log file.

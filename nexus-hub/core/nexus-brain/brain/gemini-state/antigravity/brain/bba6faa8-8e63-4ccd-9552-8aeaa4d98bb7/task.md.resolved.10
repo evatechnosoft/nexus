@@ -1,0 +1,5 @@
+- [x] `/DATA/AppData/` altında gerekli dizinleri oluştur (mosquitto, nodered, zigbee2mqtt)
+- [x] Mosquitto MQTT Broker konteynerini kur ve yapılandır (Mevcut olan optimize edildi)
+- [x] Node-RED konteynerini kur ve Home Assistant paleti ekle (Mevcut olan doğrulandı)
+- [x] Zigbee2MQTT altyapısını dizin ve yapılandırma olarak hazırla (Placeholder config oluşturuldu)
+- [x] Home Assistant üzerinde MQTT entegrasyonu bağlantısını doğrula

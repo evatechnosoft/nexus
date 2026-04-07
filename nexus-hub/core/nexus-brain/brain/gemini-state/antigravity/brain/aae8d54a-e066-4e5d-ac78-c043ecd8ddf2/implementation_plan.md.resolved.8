@@ -1,0 +1,35 @@
+# UI Polishing & PR Workflow Protection Plan
+
+The current Docker container is crashing on startup with an `exec ./entrypoint.sh: no such file or directory` error due to Windows CRLF line-endings. Additionally, the user reported "broken images" (likely icon or glassmorphism clipping) and requested a PR approval system for production.
+
+## User Review Required
+
+> [!IMPORTANT]
+> **GitHub Branch Protection:** I recommend enabling "Require pull request reviews before merging" on GitHub for the `main` branch. This enforces that code MUST be reviewed and tested on the `test` branch before hitting Production.
+
+> [!WARNING]
+> **Docke Line-Endings:** I will convert all `.sh` scripts to Unix (LF) to prevent Docker from crashing. This will fix the `Restarting (255)` status on your server.
+
+## Proposed Changes
+
+### [FIX] Docker & Connection
+- **[MODIFY] [entrypoint.sh](file:///c:/projects/it-inventory/entrypoint.sh)**: Convert to LF line-endings to avoid "no such file" errors in Linux containers.
+- **[MODIFY] [main.py](file:///c:/projects/it-inventory/main.py)**: Standardize internal container port to **8000** (inherited from Dockerfile EXPOSE) to resolve the mismatch where the app was trying to listen on the Host's 9600 port.
+
+### [FIX] UI Imagery & Icons
+- **[MODIFY] [style.css](file:///c:/projects/it-inventory/static/style.css)**: Fix icon clipping and ensure Bootstrap Icons (BI) are rendering correctly over the glassmorphism backgrounds.
+- **[MODIFY] [dashboard.html](file:///c:/projects/it-inventory/templates/dashboard.html)**: Add fallback icons for any sections where imagery is missing or broken (verified: none actually exist in `/static`, so icons are the priority).
+
+### [MODIFY] [deploy.ps1](file:///c:/projects/it-inventory/deploy.ps1)
+- Add a safety check: Prevent pushing to `main` if the current branch's `test` deployment hasn't been confirmed (local prompt).
+
+## Verification Plan
+
+### Automated Tests
+- `docker logs it-inventory`: Ensure no more "no such file" errors.
+- `docker ps`: Ensure the status is "Up" (not Restarting).
+- Port check: Verify `http://localhost:9600` responds.
+
+### Manual Verification
+- View the **Environment Badge** on `9700` (TEST) and `9600` (PROD).
+- Verify icons (bi-cpu, bi-box, etc.) are visible and not "broken" by glassmorphism opacity.

@@ -1,0 +1,22 @@
+# Fix Model Serialization
+
+The [Note](file:///c:/projects/github/EvAnotes/mobile/lib/models/note.dart#6-22) and [Task](file:///c:/projects/github/EvAnotes/mobile/lib/models/task.dart#6-27) models currently use camelCase for their fields, but the [LocalDatabase](file:///c:/projects/github/EvAnotes/mobile/lib/services/local_db.dart#4-159) schema uses snake_case (e.g., `user_id`, `created_at`). This causes `fromJSON` and `toJSON` to fail when interacting with the database.
+
+## Proposed Changes
+
+### [Component Name] models
+
+#### [MODIFY] [note.dart](file:///c:/projects/github/EvAnotes/mobile/lib/models/note.dart)
+Add `@JsonSerializable(fieldRename: FieldRename.snake)` to the [Note](file:///c:/projects/github/EvAnotes/mobile/lib/models/note.dart#6-22) class.
+
+#### [MODIFY] [task.dart](file:///c:/projects/github/EvAnotes/mobile/lib/models/task.dart)
+Add `@JsonSerializable(fieldRename: FieldRename.snake)` to the [Task](file:///c:/projects/github/EvAnotes/mobile/lib/models/task.dart#6-27) class.
+
+## Verification Plan
+
+### Automated Tests
+- Run `dart run build_runner build --delete-conflicting-outputs` in the `mobile` directory to regenerate the files.
+- Verify the generated [note.g.dart](file:///c:/projects/github/EvAnotes/mobile/lib/models/note.g.dart) and [task.g.dart](file:///c:/projects/github/EvAnotes/mobile/lib/models/task.g.dart) files use snake_case for JSON keys.
+
+### Manual Verification
+- Ask the user to verify if the app now correctly loads data from the database.

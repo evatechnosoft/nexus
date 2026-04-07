@@ -1,0 +1,38 @@
+Successfully created and wrote to new file: C:\projects\agentops-nexus\repositories\ops_repo.py. Here is the updated code:
+from sqlalchemy.orm import Session
+import models
+import json
+
+class OpsRepository:
+    """Agent & Project operasyonlarını yöneten depo sınıfı (SOLID)."""
+    
+    def __init__(self, db: Session):
+        self.db = db
+
+    def get_all_projects(self):
+        return self.db.query(models.Project).all()
+
+    def create_project(self, name: str, root_path: str, description: str = None, git_url: str = None):
+        project = models.Project(name=name, root_path=root_path, description=description, git_url=git_url)
+        self.db.add(project)
+        self.db.commit()
+        self.db.refresh(project)
+        return project
+
+    def update_project_health(self, project_id: int, payload: dict):
+        status = "ok" if all(e.get("ok", False) for e in payload.get("endpoints", [])) else "error"
+        backup_status = "fresh" if payload.get("backup", {}).get("fresh", False) else "stale"
+        
+        health = models.ProjectHealth(
+            project_id=project_id,
+            status=status,
+            latency_ms=0,
+            backup_status=backup_status,
+            raw_data=json.dumps(payload)
+        )
+        self.db.add(health)
+        self.db.commit()
+        return health
+
+    def get_all_skills(self):
+        return self.db.query(models.GlobalSkill).all()

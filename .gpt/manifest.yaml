@@ -1,0 +1,28 @@
+version: "1.0"
+mode: standalone
+
+sources:
+  claude:
+    path: "C:/Users/Deacjx/.claude/CLAUDE.md"
+  gemini:
+    path: "C:/Users/Deacjx/.gemini/GEMINI.md"
+  bridge:
+    path: "C:/projects/deanos/.agent-bridge/source-map.json"
+
+targets:
+  gpt:
+    enabled: true
+    output:
+      global_path: "C:/Users/Deacjx/.gpt/GPT.md"
+      memory_dir: "C:/Users/Deacjx/.gpt/memory"
+      guides_dir: "C:/Users/Deacjx/.gpt/guides"
+      skills_dir: "C:/Users/Deacjx/.gpt/skills"
+      mcp_path: "C:/Users/Deacjx/.gpt/mcp.json"
+
+distribution:
+  - source: "claude"
+    targets: [gpt]
+  - source: "gemini"
+    targets: [gpt]
+  - source: "bridge"
+    targets: [gpt]

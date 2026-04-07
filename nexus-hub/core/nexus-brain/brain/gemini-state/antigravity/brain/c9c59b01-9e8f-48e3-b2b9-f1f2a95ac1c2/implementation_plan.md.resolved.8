@@ -1,0 +1,43 @@
+# Ağ Bağlantı Hatası Giderme ve Konfigürasyon Planı
+
+Kullanıcı tarafından paylaşılan görseldeki `DioException [connection timeout]` hatası, uygulamanın statik bir yerel IP'ye (`192.168.1.187`) erişmeye çalışmasından kaynaklanmaktadır. Bu sorun, özellikle Android Emülatör (genellikle `10.0.2.2` kullanır) üzerinden test yaparken veya ağ değişimlerinde ortaya çıkar.
+
+## User Review Required
+
+> [!IMPORTANT]
+> - **Otomatik Emülatör Tespiti:** Uygulama artık Android Emülatör üzerinde çalıştığını algılayacak ve otomatik olarak backend adresini `10.0.2.2:3002` olarak güncelleyecektir.
+> - **Merkezi URL Yönetimi:** Tüm servislerdeki (Sağlık, Fotoğraf, AI) backend adresleri tek bir noktadan yönetilecek, böylece gelecekte IP değişimi gerektiğinde tek bir dosyayı güncellemek yeterli olacaktır.
+
+## Proposed Changes
+
+### [Component] Base Configuration
+
+#### [NEW] [config.dart](file:///c:/projects/SportApp/mobile_app/lib/utils/config.dart)
+- `AppConfig` sınıfı oluşturulacak.
+- `kIsWeb` ve `defaultTargetPlatform` kullanılarak akıllı `baseUrl` seçimi yapılacak.
+
+### [Component] Services Migration
+
+#### [MODIFY] [health_service.dart](file:///c:/projects/SportApp/mobile_app/lib/services/health_service.dart)
+- Hardcoded IP çıkarılıp `AppConfig.baseUrl` kullanılacak.
+
+#### [MODIFY] [photo_service.dart](file:///c:/projects/SportApp/mobile_app/lib/services/photo_service.dart)
+- Hardcoded IP çıkarılıp `AppConfig.baseUrl` kullanılacak.
+
+#### [MODIFY] [gemini_service.dart](file:///c:/projects/SportApp/mobile_app/lib/services/gemini_service.dart)
+- Hardcoded IP çıkarılıp `AppConfig.baseUrl` kullanılacak.
+
+#### [MODIFY] [chat_screen.dart](file:///c:/projects/SportApp/mobile_app/lib/screens/chat_screen.dart)
+- Doğrudan `Dio` çağrılarındaki IP adresleri `AppConfig.baseUrl` ile değiştirilecek.
+
+## Open Questions
+
+- Backend sunucunuzun (Node.js) her zaman `3002` portunda çalıştığından emin miyiz? (Görselde bu port görünüyor).
+
+## Verification Plan
+
+### Automated Tests
+- `flutter build` testi ile herhangi bir sözdizimi hatası olmadığı doğrulanacak.
+
+### Manual Verification
+- Emülatör üzerinde uygulamanın tekrar başlatılması ve Dashboard üzerindeki "Haftalık Analiz" kartının veriyi başarıyla getirdiği gözlemlenecek.

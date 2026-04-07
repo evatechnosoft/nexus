@@ -1,0 +1,4 @@
+English Hub Giriş
+[0] (500,458)<input id='login-user' placeholder='Kullanıcı Adı' />
+[1] (500,542)<input id='login-pass' placeholder='Şifre' />
+[2] (500,626)<button class='btn btn-primary'>Giriş Yap />

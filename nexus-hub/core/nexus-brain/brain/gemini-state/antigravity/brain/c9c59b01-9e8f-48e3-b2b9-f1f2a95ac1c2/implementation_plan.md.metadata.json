@@ -1,0 +1,7 @@
+{
+  "artifactType":  "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary":  "SportApp için dinamik tema rengi (Primary Color) seçimi altyapısını kuruyoruz. Kullanıcı Ayarlar ekranından 5 farklı canlı renkten birini seçebilecek ve bu seçim tüm uygulamaya (butonlar, ikonlar, grafikler) anında yansıyacak. Seçilen renk cihaz hafızasında güvenle saklanacak. 🛠️🦾🌈✅",
+  "updatedAt":  "2026-04-02T14:08:09.160058600Z",
+  "version":  "10",
+  "requestFeedback":  true
+}

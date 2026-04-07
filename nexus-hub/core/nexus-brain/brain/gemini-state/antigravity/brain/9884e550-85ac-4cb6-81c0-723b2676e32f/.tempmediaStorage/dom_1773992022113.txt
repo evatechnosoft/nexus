@@ -1,0 +1,30 @@
+[0] (300,128)<button class='back-btn'>← Geri Dön />
+Hafta 02: Unit 1: Birthday Fun! — Bölüm 1
+Doğum günü kartı yapımı — renkler ve doğum günü kelimeleri
+📚 Kitap Referansları
+Student Book:
+Sayfa 8-13
+🗝️ Anahtar Kelimeler (Vocabulary)
+🎯
+Tıkla:
+Okunuşunu dinle | 🖱️
+Basılı Tut:
+Harf harf kodlamasını dinle
+[1] (340,669)<div  />
+	[2] (340,666)<div >balloon />
+[3] (500,669)<div  />
+	[4] (500,666)<div >cake />
+[5] (660,669)<div  />
+	[6] (660,666)<div >card />
+[7] (340,792)<div  />
+	[8] (340,789)<div >present />
+[9] (500,792)<div  />
+	[10] (500,789)<div >birthday party />
+[11] (660,792)<div  />
+	[12] (660,789)<div >candle />
+[13] (340,916)<div  />
+	[14] (340,912)<div >red />
+[15] (500,916)<div  />
+	[16] (500,912)<div >blue />
+[17] (660,916)<div  />
+	[18] (660,912)<div >green />

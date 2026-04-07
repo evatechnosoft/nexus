@@ -1,0 +1,8 @@
+# EvANotes Visual Audit Checklist
+
+- [ ] Navigate to http://localhost:5173
+- [ ] Confirm Logo icon (32px, sharp)
+- [ ] Verify "Yeni Görev" button (icon small, aligned)
+- [ ] Confirm Stats cards (spacing between label and number)
+- [ ] Verify task items (circles/checkmarks sized correctly)
+- [ ] Capture final "Perfect" screenshot

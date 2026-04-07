@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_TASK",
+  "summary": "Initial task list for installing VS Code and Coolify.\n- Install VS Code\n- Address Coolify installation\n- Check if VS Code and Docker are already configured\n- Install VS Code via winget\n- Provide instructions for Coolify in WSL",
+  "updatedAt": "2026-03-20T15:05:33.481814700Z"
+}

@@ -1,0 +1,14 @@
+# Task: Verify Dev Environment UI
+
+## Plan
+- [/] Open `http://localhost:5007` in the browser.
+- [ ] Wait for the page to load fully.
+- [ ] Take a screenshot of the dashboard.
+- [ ] Confirm existence of:
+    - [ ] Status cards (Dashboard)
+    - [ ] User form
+    - [ ] Users table
+- [ ] Report findings.
+
+## Findings
+- 

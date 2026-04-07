@@ -1,0 +1,32 @@
+# TEST ve PROD Ortamlarının Aynı Anda Çalıştırılması Planı
+
+Şu anki durumda DeanOS üzerinde TEST (9600) ve PROD (9700) aynı dizinde oldukları için birbirlerinin konteynırlarını kapatmaktadır. Bu sorunu gidermek için "Docker Project Name" özelliğini kullanacağız.
+
+## Kullanıcı İncelemesi Gerekli
+
+> [!IMPORTANT]
+> - **Multi-Project Fix**: `docker compose` komutuna `-p it-inventory-test` ve `-p it-inventory-prod` parametreleri eklenecektir. Bu sayede iki bağımsız ortam olarak çalışabilecekler.
+> - **Yerel Ortam**: Yerel makinede Docker Desktop'ın kapalı olduğunu saptadım. Lütfen yerel DEV ortamı için Docker'ı başlatın.
+
+## Önerilen Değişiklikler
+
+### 1. Dağıtım Scripti (Deploy Deanos)
+
+#### [MODIFY] [deploy_deanos.sh](file:///c:/projects/it-inventory/deploy_deanos.sh)
+- `docker compose` komutlarına `-p it-inventory-${ENV}` parametresi eklenecek.
+- Bu sayede her ortam kendi konteynırını ve ağını (network) yönetir, diğerine dokunmaz.
+
+### 2. Yerel Ortam (Local Dev)
+
+#### [MODIFY] [deploy.ps1](file:///c:/projects/it-inventory/deploy.ps1)
+- Yerel tarafta Docker Desktop'ın aktif olup olmadığı ön kontrol olarak eklenebilir veya kullanıcıya bilgi verilecek.
+
+## Doğrulama Planı
+
+### Otomatik Testler
+1. `.\deploy.ps1` (test branch) -> Port 9600'ı kaldırır/kurar.
+2. `.\deploy.ps1` (main branch) -> Port 9700'ı kaldırır/kurar.
+3. `ssh deanos "sudo docker ps"` -> Her iki konteynırın (`it-inventory-test` ve `it-inventory-prod`) ayakta olduğu doğrulanacak.
+
+### Manuel Doğrulama
+- 9600 (Kırmızı Badge) ve 9700 (Yeşil Badge) adreslerine tarayıcıdan aynı anda erişim denenecek.

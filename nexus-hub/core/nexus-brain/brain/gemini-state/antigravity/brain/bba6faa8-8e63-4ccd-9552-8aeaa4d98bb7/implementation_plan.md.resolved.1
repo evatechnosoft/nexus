@@ -1,0 +1,34 @@
+# [ZimaOS] Güncelleme Öncesi Yedekleme Planı
+
+ZimaOS (DeanOS) güncellenmeden önce ayarların, yapılandırmaların ve kullanıcı verilerinin kapsamlı bir yedeğini oluşturma planıdır.
+
+## Kullanıcı İncelemesi Gerekli
+
+- **Depolama Alanı**: Yedek `/DATA/AppData`, `/DATA/projects` ve `/var/lib/casaos` (uygulama ayarları ve portlar) dizinlerini içerecektir. Hem ZimaOS sunucusunda hem de Windows makinenizde (`d:\OS\Zimaos\backups`) yeterli alan olduğundan emin olun.
+- **Portlar ve Ayarlar**: Docker (`/etc/docker`) ve CasaOS (`/etc/casaos`, `/var/lib/casaos`) yapılandırmaları tam olarak yedeklenecektir.
+
+## Önerilen Değişiklikler
+
+Mevcut `daily_backup.sh` dosyasını, kritik CasaOS ayarlarını (önceden eksikti) kapsayacak şekilde geliştireceğiz.
+
+### [Component] Yedekleme Sistemi
+
+#### [MODIFY] [daily_backup.sh](file:///d:/OS/Zimaos/daily_backup.sh)
+- `/etc/casaos`, `/var/lib/casaos` (port bilgileri burada) ve `/etc/docker` dizinlerini yedeğe ekleyeceğiz.
+- `/DATA/projects` ve `/DATA/AppData` dizinlerini tam kapsamlı yedekleyeceğiz.
+- Arşivde dosya izinlerinin (`www-data` vb.) korunduğundan emin olacağız.
+
+## Açık Sorular
+
+- **[TAMAM]**: Stable Diffusion yedeğe dahil edilmeyecek (zaten yok olduğu belirtildi).
+- **[ÖNEMLİ]**: Yedekleme sonrası sistemi güncellemeye hazır mısınız?
+
+## Doğrulama Planı
+
+### Otomatik Testler
+- Sunucuda `bash daily_backup.sh` çalıştırılarak arşiv oluşumu kontrol edilecek.
+- Arşiv boyutu ve içeriği (`ls -l`) doğrulanacak.
+
+### Manuel Doğrulama
+- Yedek dosyasının Windows'taki (`d:\OS\Zimaos\backups`) dizine indirildiği doğrulanacak.
+- Arşiv içeriğinde `/etc/casaos` ve `/DATA/AppData` kontrol edilecek.

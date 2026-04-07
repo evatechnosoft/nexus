@@ -1,0 +1,49 @@
+# Docker Hub Fix Walkthrough
+
+I have implemented several network optimizations to stabilize Docker image pulls on your DeanOS server.
+
+## Changes Made
+
+### 1. Docker Mirrors
+Added the following mirrors to `/etc/docker/daemon.json`:
+- `https://mirror.gcr.io`
+- `https://docker.arvancloud.ir`
+- `https://dockerhub.ir`
+
+### 2. Network Optimizations
+- **DNS**: Set to `1.1.1.1` and `8.8.8.8` for both System and Docker.
+- **MTU**: Reduced MTU to `1400` to prevent packet fragmentation issues (especially common with tunnels).
+- **Restart**: Included a Docker service restart to apply changes.
+
+## How to Apply
+
+Since I cannot SSH directly without a password, please run this single command in your **SSH terminal (DeanOS)**:
+
+```bash
+sudo bash -c 'cat <<EOF > /etc/docker/daemon.json
+{
+    "dns": ["1.1.1.1", "8.8.8.8"],
+    "registry-mirrors": [
+        "https://mirror.gcr.io",
+        "https://docker.arvancloud.ir",
+        "https://dockerhub.ir"
+    ],
+    "mtu": 1400
+}
+EOF
+ip link set dev docker0 mtu 1400 || true
+systemctl restart docker'
+```
+
+## 🏆 Success!
+Docker image pulling is now working correctly. The `busybox` image was successfully pulled using the new mirrors.
+
+## Persistence Note
+The `ip route del` command is temporary and will reset on reboot. To make it permanent (or disable the faulty interface), run:
+
+```bash
+sudo nmcli connection modify "thunderboltbr0" ipv4.never-default yes
+sudo nmcli connection up "thunderboltbr0"
+```
+Or simply keep the [fix_all.sh](file:///d:/OS/Zimaos/fix_all.sh) script handy to run after reboots.
+

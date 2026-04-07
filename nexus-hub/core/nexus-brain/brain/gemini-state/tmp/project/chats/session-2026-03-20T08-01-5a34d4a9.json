@@ -1,0 +1,73 @@
+{
+  "sessionId": "5a34d4a9-51b0-440c-a316-4a965c53d1ae",
+  "projectHash": "28f709d79730058e2a461518e34126da18ceda07729e792c92f7ca1251e730bf",
+  "startTime": "2026-03-20T08:02:50.757Z",
+  "lastUpdated": "2026-03-20T08:09:17.353Z",
+  "messages": [
+    {
+      "id": "1fbba27f-7e36-439a-893e-61c3510bfc2f",
+      "timestamp": "2026-03-20T08:02:50.757Z",
+      "type": "user",
+      "content": [
+        {
+          "text": "Please fetch and summarize this Reddit post including ALL comments. Give me the full content of the post and the most upvoted comments: https://www.reddit.com/r/ClaudeAI/comments/1lpv7h9/found_a_magic_way_to_work_with_claude/"
+        }
+      ]
+    },
+    {
+      "id": "ed6b6875-6791-43b1-ab12-a3ad11138bb2",
+      "timestamp": "2026-03-20T08:03:34.778Z",
+      "type": "gemini",
+      "content": "",
+      "thoughts": [
+        {
+          "subject": "Fetching the Reddit Content",
+          "description": "I am proceeding to retrieve the contents of the Reddit post. After extraction, I intend to summarize the full post content and include the highest-rated comments for the user's review.",
+          "timestamp": "2026-03-20T08:03:34.678Z"
+        }
+      ],
+      "tokens": {
+        "input": 9172,
+        "output": 65,
+        "cached": 0,
+        "thoughts": 127,
+        "tool": 0,
+        "total": 9364
+      },
+      "model": "gemini-3.1-pro-preview",
+      "toolCalls": [
+        {
+          "id": "web_fetch_1773993814746_0",
+          "name": "web_fetch",
+          "args": {
+            "prompt": "Extract the full content of the post and the most upvoted comments from this URL: https://www.reddit.com/r/ClaudeAI/comments/1lpv7h9/found_a_magic_way_to_work_with_claude/"
+          },
+          "result": [
+            {
+              "functionResponse": {
+                "id": "web_fetch_1773993814746_0",
+                "name": "web_fetch",
+                "response": {
+                  "output": "Based on the content provided, here is the extraction of the Reddit post. Please note that the provided text **does not contain any user comments**, so only the main post content is available.\n\n### **Post Title:** FOUND A MAGIC WAY TO WORK WITH CLAUDE\n**Subreddit:** r/ClaudeAI  \n**Author:** Public-Self2909\n\n---\n\n#### **Post Content:**\nI never thought something as simple as having 3 divided agents with their respective commands would change the results so dramatically.\n\nMy first agent is the **INVESTIGATOR**, to whom I explain my entire problem and who is in charge of investigating the documentation and codebase. Then, it generates a `PROBLEM.md` file with phases and the necessary documentation to solve the problem (provide context). I realized that Claude is much faster at reading documentation with memory than reading codebase, so the investigator spends 80% of its context investigating the problem and what documentation is necessary to solve it. Then, in `PROBLEM.md`, it proceeds to give the context, analysis, and indicated steps and delegates to **EXECUTER**.\n\n**EXECUTER** is in charge of reading the documentation, following the exact steps in `PROBLEM.md`, and proceeding with the solution.\n\nThen, I have a **TESTER** which proceeds to generate scripts, validate the codebase changed by executer, and provide feedback on whether the problem was 100% solved.\n\nThis workflow has been a game-changer for complex development tasks. The separation of concerns allows each agent to focus on what it does best, and the structured handoff via `PROBLEM.md` ensures nothing gets lost in translation.\n\nHas anyone else experimented with multi-agent workflows like this? I'd love to hear about other approaches that have worked well for you!\n\n**UPDATE:** As a lot of people asked for the prompts and commands, I created a Drive folder. The commands are quiet bit different because made some updates (INVESTIGATOR named PLANNER). Also includes DOCUMENTER, VERIFIER agents which I also use a lot, and the README file. Link of the Drive folder. Be aware that is adapted to my project which is in Typescript, React. You should adapt it to yours.\n\n---\n\n### **Comments:**\n*The provided text does not include the comments section of the post.*"
+                }
+              }
+            }
+          ],
+          "status": "success",
+          "timestamp": "2026-03-20T08:05:02.729Z",
+          "resultDisplay": "Content for https://www.reddit.com/r/ClaudeAI/comments/1lpv7h9/found_a_magic_way_to_work_with_claude/ processed using fallback fetch.",
+          "displayName": "WebFetch",
+          "description": "Processes content from URL(s), including local and private network addresses (e.g., localhost), embedded in a prompt. Include up to 20 URLs and instructions (e.g., summarize, extract specific data) directly in the 'prompt' parameter.",
+          "renderOutputAsMarkdown": true
+        }
+      ]
+    },
+    {
+      "id": "5afe0e7d-89b7-453f-94eb-8e08e355bf30",
+      "timestamp": "2026-03-20T08:09:17.353Z",
+      "type": "info",
+      "content": "Request cancelled."
+    }
+  ],
+  "kind": "main"
+}

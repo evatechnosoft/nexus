@@ -1,0 +1,10 @@
+- [x] **Aşama 1: Fonksiyonel İyileştirmeler (Parser/Watcher)**
+    - [x] `email_parser.py`: Çoklu satır (tablo) ve Departman extraction desteği eklendi
+    - [x] `email_watcher.py`: Parser'dan dönen tüm kişileri ayrı talep olarak işleme özelliği eklendi
+- [x] **Aşama 2: Sunucu Senkronizasyonu (Deployment)**
+    - [x] Yerel dosyalar DeanOS `/DATA/dean/...` dizinine aktarıldı
+    - [x] Portainer çakışması (port 8000) nedeniyle sistem **8001** portuna taşındı
+    - [x] Sunucuda `docker compose up -d --build` komutu başarıyla çalıştırıldı (DOCKER_CONFIG fix ile)
+- [x] **Aşama 3: Doğrulama ve Test**
+    - [x] `docker logs it-inventory` ile uygulama başlangıcı kontrol edildi (Health: OK)
+    - [x] `192.168.1.186:8001` üzerinden yeni tasarımın ve verilerin çalıştığı doğrulandı

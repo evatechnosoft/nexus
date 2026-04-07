@@ -1,0 +1,45 @@
+# Walkthrough: IT Inventory V2 Deployment on ZimaOS
+
+We have successfully migrated and deployed the **IT Inventory V2** application to your ZimaOS server. This version includes the automated email watcher for request processing and has been optimized for your infrastructure.
+
+## Key Changes & Fixes
+
+### 1. Connectivity (Cloudflare 522 Fix)
+- **Problem:** The Cloudflare tunnel was failing to reach the local service (522 error).
+- **Solution:** Identified that your tunnel was attempting to reach port **8001**. We re-mapped the IT Inventory service from 8000 to **8001** in [docker-compose.yml](file:///c:/projects/it-inventory/it-inventory/docker-compose.yml).
+- **Status:** Service is now reachable internally on port 8001.
+
+### 2. Email Synchronization (Exchange Support)
+- **Problem:** Initial Gmail configuration failed with authentication errors.
+- **Solution:** Switched the `EMAIL_PROVIDER` to **Exchange** as per your requirement. We verified the credentials for `it@findtalent.net` are working.
+- **Monitoring:** The [email_watcher](file:///c:/projects/it-inventory/it-inventory/inventory_app/main.py#66-71) is now running correctly in the background every **1 minute**.
+- **Issue Found:** The logs specifically report `Exchange bağlantı hatası: Invalid credentials` for `it@findtalent.net`.
+
+### 4. How to Fix Email Connection
+1. Ensure `it@findtalent.net` has a valid password.
+2. If 2FA is enabled, you **must** use an **App Password**.
+3. Update the `EXCHANGE_PASSWORD` in [.env](file:///c:/projects/it-inventory/it-inventory/.env) and restart:
+   ```bash
+   docker compose up -d
+   ```
+
+### 3. Deployment Configuration
+- **Location:** `/DATA/AppData/it-inventory/`
+- **Networking:** The container is running in bridge mode but mapped directly to port 8001 on the host.
+- **Source Sync:** We have volume-mounted the source code to allow for easier configuration updates without full image rebuilds.
+
+## Current Service Status
+- **It-Inventory (V2):** Active and Healthy (Port 8001)
+- **Database:** SQLite (/app/data/inventory.db)
+- **External Access:** Accessible via your domain (pointing to port 8001).
+
+## Next Steps for You
+1. **Send Test Email:** Send an email to `it@findtalent.net` with "işe başlama" in the subject.
+2. **Check Dashboard:** Refresh the IT Inventory dashboard to see the automatically created request.
+3. **Log Check:** If you want to see the logs yourself, you can run:
+   ```bash
+   docker logs -f it-inventory
+   ```
+
+> [!NOTE]
+> The sync interval is currently 1 minute for testing. You can change `WATCH_INTERVAL_MIN` in [.env](file:///c:/projects/it-inventory/it-inventory/.env) if you prefer the standard 5-minute interval.

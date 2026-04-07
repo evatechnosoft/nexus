@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_WALKTHROUGH",
+  "summary": "Walkthrough for the enhanced device selection system. Explains how the email now contains a detailed list of suitable devices with specs and serial numbers, allowing the admin to approve a specific device with one click.",
+  "updatedAt": "2026-03-29T05:46:50.210242200Z"
+}

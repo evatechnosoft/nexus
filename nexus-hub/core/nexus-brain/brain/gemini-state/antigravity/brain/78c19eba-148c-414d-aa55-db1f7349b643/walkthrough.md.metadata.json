@@ -1,0 +1,6 @@
+{
+  "artifactType": "ARTIFACT_TYPE_WALKTHROUGH",
+  "summary": "Comprehensive walkthrough of the successfully deployed hybrid home server, including DNS and credential fixes, Flask application deployment, and PostgreSQL connectivity via Adminer.",
+  "updatedAt": "2026-03-22T15:48:21.129579600Z",
+  "version": "3"
+}

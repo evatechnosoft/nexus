@@ -1,0 +1,6 @@
+{
+  "artifactType":  "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary":  "Flutter projesindeki 33 adet analiz hatasını ve çalışma engelini gidermek için bir plan. \n- Yolların (URI) düzeltilmesi\n- Tema hatalarının giderilmesi\n- İsimlendirme standartlarının (CamelCase) uygulanması\n- Test dosyasındaki eksikliklerin giderilmesi",
+  "updatedAt":  "2026-04-01T10:46:08.835937300Z",
+  "requestFeedback":  true
+}

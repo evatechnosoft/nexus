@@ -1,0 +1,7 @@
+{
+  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary": "E-posta parser'ının (email_parser.py) çoklu kişi ve yatay tablo desteği ile iyileştirilmesi, watcher'ın (email_watcher.py) tüm kişileri işlemesi ve sunucuya deployment süreçlerini içeren kapsamlı çözüm planı.",
+  "updatedAt": "2026-03-28T15:27:02.270960500Z",
+  "version": "1",
+  "requestFeedback": true
+}

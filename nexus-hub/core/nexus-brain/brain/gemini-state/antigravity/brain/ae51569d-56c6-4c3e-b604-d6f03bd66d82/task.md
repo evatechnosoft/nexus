@@ -1,0 +1,12 @@
+# Task: Domain-Based Routing and Multi-Language Support for Evaitec
+
+- [x] Planning & Research <!-- id: 0 -->
+    - [x] Create implementation plan <!-- id: 1 -->
+    - [x] Verify geo-location detection strategy (Cloudflare vs. Library) <!-- id: 2 -->
+- [x] Implementation <!-- id: 3 -->
+    - [x] Set up basic localization structure (TR/EN) <!-- id: 4 -->
+    - [x] Implement domain-based redirection logic in `app.py` <!-- id: 5 -->
+    - [x] Update `index.html` to support multiple languages <!-- id: 6 -->
+- [x] Verification <!-- id: 7 -->
+    - [x] Test redirection based on host header <!-- id: 8 -->
+    - [x] Test language switching <!-- id: 9 -->

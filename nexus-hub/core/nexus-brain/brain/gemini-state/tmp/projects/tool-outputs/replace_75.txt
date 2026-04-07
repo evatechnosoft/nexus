@@ -1,0 +1,9 @@
+<tool_output_masked>
+{
+  "output": "Successfully modified file: C:\\projects\\agentops-nexus\\main.py (1 replacements). Here is the updated code:\nimport os\nimport logging\n\nimport os\nimport logging\n\nfrom fastapi import FastAPI, Request, Depends\nfrom fastapi.respon
+... [TRUNCATED] ...
+tenv(\"APP_ENV\", \"DEV\")\n    # For local dev without docker, it uses 9600. Inside docker, it defaults to 8000.\n    port = int(os.getenv(\"APP_PORT\", 8000))\n    uvicorn.run(\"main:app\", host=\"0.0.0.0\", port=port, reload=(env == \"DEV\"))\n"
+}
+
+Output too large. Full output available at: C:\Users\Deacjx\.gemini\tmp\projects\tool-outputs\session-a366de38-25fd-4d3a-9bce-f8a0bc9646e6\replace_replace_1775210354584_0_nmz72s.txt
+</tool_output_masked>

@@ -1,0 +1,7 @@
+- [x] Create and Push `zimaSetup` Repo
+    - [x] Create `D:\OS` directory
+    - [x] Copy `zimasetup.md`, `cloudflare_token.txt`, `setup.sh`, `daemon.json` to `D:\OS`
+    - [x] Initialize Git repository in `D:\OS`
+    - [x] Create `zimaSetup` repository on GitHub
+    - [x] Push local files to GitHub
+- [x] Notify user of completion

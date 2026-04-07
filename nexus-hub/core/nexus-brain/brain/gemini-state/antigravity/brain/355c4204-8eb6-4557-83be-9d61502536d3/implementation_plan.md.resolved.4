@@ -1,0 +1,32 @@
+# Revert to NPM Deployment & Fix Release Artifacts
+
+The attempt to use Docker failed due to environment limitations. We are reverting to the NPM/Zip method and fixing the artifact linkage in the Classic Release Pipeline.
+
+## User Review Required
+
+> [!IMPORTANT]
+> Loglarınızdaki `type: TFGit` ibaresi, Classic Release'in (Pipelines > Releases) yanlışlıkla doğrudan **Git deposundan** beslendiğini gösteriyor. Git deposunda zip dosyası bulunmadığı için deployment hata veriyor.
+
+### Çözüm: Artifact Kaynağını Değiştirin (UI Üzerinden)
+
+1. Azure DevOps'ta **Pipelines > Releases** sekmesine gidin.
+2. İlgili Release planını seçip **Edit** butonuna basın.
+3. Sol taraftaki **Artifacts** kutusunda mevcut olan Git kaynağını silin.
+4. **Add an artifact** diyerek yeni bir tane ekleyin:
+   - **Source type**: Build
+   - **Source (build pipeline)**: [azure-pipelines-1.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-1.yml) dosyasını çalıştıran build pipeline'ını seçin.
+5. Değişikliği kaydedin ve yeni bir Release oluşturun.
+
+## Proposed Changes
+
+### [Component] Pipeline Configuration
+
+#### [MODIFY] [azure-pipelines-1.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-1.yml)
+- Docker stage'leri kaldırıldı ve NPM build/archive stage'leri geri getirildi.
+- Zip paketi `drop` ismiyle publish ediliyor.
+
+## Verification Plan
+
+### Manual Verification
+1. **Trigger Build**: Azure DevOps'ta build'in tamamlandığını ve "drop" isimli bir artifact ürettiğini teyit edin.
+2. **Trigger Release**: Yeni bağladığınız Build artifact'i ile bir Release başlatın.

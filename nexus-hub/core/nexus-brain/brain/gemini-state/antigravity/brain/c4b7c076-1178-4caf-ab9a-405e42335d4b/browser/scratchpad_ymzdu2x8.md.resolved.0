@@ -1,0 +1,8 @@
+# Progress Tracking
+- [ ] Open http://localhost:5173/
+- [ ] Verify sky background gradient (Blue to Red to Yellow)
+- [ ] Verify cloud platforms
+- [ ] Verify floating decorative clouds
+- [ ] Verify character sprite transparency (Idle)
+- [ ] Verify character sprite transparency (Walking)
+- [ ] Confirm recording is captured

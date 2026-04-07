@@ -1,0 +1,151 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Email:
+[0] (231,21)<a href='mailto:info@pdfcoffee.com'>info@pdfcoffee.com />
+[1] (672,21)<a href='https://pdfcoffee.com/login'>Login />
+	[2] (659,21)<i  />
+[3] (729,21)<a href='https://pdfcoffee.com/register'>Register />
+	[4] (711,21)<i  />
+[5] (821,21)<span >English />
+[6] (66,82)<a class='navbar-brand mx-0' href='https://pdfcoffee.com/' />
+	[7] (66,82)<img  />
+[8] (351,82)<a class='nav-link text-white' href='https://pdfcoffee.com/'>Home />
+	[9] (336,81)<i  />
+[10] (431,82)<a class='nav-link text-white dropdown-toggle' href='#Categories' id='dropdowncategories'>Top Categories />
+	[11] (394,81)<i  />
+[12] (521,82)<a class='nav-link text-white' href='https://pdfcoffee.com/top-stories'>Top stories />
+	[13] (497,81)<i  />
+[14] (600,82)<a class='nav-link text-white' href='https://pdfcoffee.com/best-stories'>Best stories />
+	[15] (574,81)<i  />
+[16] (676,82)<a class='nav-link text-white' href='https://pdfcoffee.com/publish'>Add Story />
+	[17] (653,81)<i  />
+[18] (748,82)<a class='nav-link text-white' href='https://pdfcoffee.com/documents'>My Stories />
+	[19] (725,81)<i  />
+[20] (32,302)<a href='https://pdfcoffee.com/' />
+	[21] (32,303)<small >Home />
+English Code 2 Workbook
+English Code 2 Workbook
+Author / Uploaded
+[22] (54,960)<a href='#Renata+Salema'>Renata Salema />
+Views 2,382
+Downloads 482
+File size 11MB
+[23] (233,475)<a class='text-danger' href='#' />
+	[24] (233,475)<em >Report DMCA / Copyright />
+		[25] (180,475)<i  />
+[26] (375,534)<a class='btn btn-success btn-block' href='https://pdfcoffee.com/download/english-code-2-workbook-2-pdf-free.html'>DOWNLOAD FILE />
+	[27] (328,534)<i  />
+[28] (188,600)<button class='toolbarButton' id='sidebarToggle' title='Toggle Sidebar'>Toggle Sidebar />
+	Toggle Sidebar
+[29] (229,600)<button class='toolbarButton group hiddenSmallView' id='viewFind' title='Find in Document'>Find />
+	Find
+Previous
+Next
+[30] (295,599)<label class='toolbarLabel' id='pageNumberLabel'>Page: />
+[31] (327,599)<input class='toolbarField pageNumber' id='pageNumber' />
+of 1
+[32] (533,600)<a class='toolbarButton bookmark hiddenSmallView' href='#page=1&zoom=page-fit,-642,1726' id='viewBookmark' title='Current view (copy or open in new window)'>Current View />
+	Current View
+[33] (559,600)<button class='toolbarButton' id='secondaryToolbarToggle' title='Tools'>Tools />
+	Tools
+Zoom Out
+[34] (401,600)<button class='toolbarButton zoomIn' id='zoomIn' title='Zoom In'>Zoom In />
+	Zoom In
+[35] (459,598)<select id='scaleSelect' title='Zoom' />
+[36] (333,843)<div >P />
+[37] (346,840)<div >L />
+[38] (360,835)<div >E />
+[39] (373,832)<div >A />
+[40] (388,827)<div >S />
+[41] (400,824)<div >E />
+[42] (317,896)<div >D />
+[43] (330,892)<div >O />
+[44] (348,887)<div >W />
+[45] (366,882)<div >N />
+[46] (379,878)<div >L />
+[47] (395,874)<div >O />
+[48] (409,869)<div >A />
+[49] (424,865)<div >D />
+[50] (363,769)<div >S />
+[51] (368,769)<div >O />
+[52] (374,769)<div >R />
+[53] (379,769)<div >R />
+[54] (384,769)<div >Y />
+[55] (313,1035)<div >O />
+[56] (318,1035)<div >u />
+[57] (322,1035)<div >r />
+[58] (329,1035)<div >D />
+[59] (334,1035)<div >o />
+[60] (338,1035)<div >c />
+[61] (342,1035)<div >u />
+[62] (347,1035)<div >m />
+[63] (353,1035)<div >e />
+[64] (357,1035)<div >n />
+[65] (361,1035)<div >t />
+[66] (368,1035)<div >V />
+[67] (372,1035)<div >i />
+[68] (375,1035)<div >e />
+[69] (380,1035)<div >w />
+[70] (386,1035)<div >e />
+[71] (389,1035)<div >r />
+[72] (396,1035)<div >c />
+[73] (400,1035)<div >a />
+[74] (404,1035)<div >n />
+[75] (409,1035)<div >n />
+[76] (413,1035)<div >o />
+[77] (417,1035)<div >t />
+[78] (422,1035)<div >l />
+[79] (426,1035)<div >o />
+[80] (430,1035)<div >a />
+[81] (435,1035)<div >d />
+[82] (349,1052)<div >t />
+[83] (353,1052)<div >h />
+[84] (357,1052)<div >i />
+[85] (360,1052)<div >s />
+[86] (366,1052)<div >d />
+[87] (371,1052)<div >o />
+[88] (375,1052)<div >c />
+[89] (379,1052)<div >u />
+[90] (384,1052)<div >m />
+[91] (390,1052)<div >e />
+[92] (394,1052)<div >n />
+[93] (398,1052)<div >t />
+Recommend Stories
+[94] (791,630)<a class='d-block shadow p-3' href='https://pdfcoffee.com/english-code-5-workbook-pdf-free.html' />
+	[95] (791,630)<div  />
+		[96] (643,630)<div  />
+			[97] (643,625)<div  />
+				[98] (643,625)<img  />
+		[99] (841,630)<div  />
+			[100] (841,494)<h6 >English Code 5 Workbook />
+			[101] (710,540)<span  />
+				[102] (710,539)<em >0 />
+					[103] (706,539)<i  />
+			[104] (730,540)<span  />
+				[105] (730,539)<em >0 />
+					[106] (727,539)<i  />
+			[107] (759,540)<span  />
+				[108] (759,539)<em >14MB />
+					[109] (747,539)<i  />
+			[110] (944,552)<span >Read more />
+[111] (791,979)<a class='d-block shadow p-3' href='https://pdfcoffee.com/nelson-english-workbook-2-pdf-free.html' />
+	[112] (791,979)<div  />
+		[113] (643,979)<div  />
+			[114] (643,975)<div  />
+				[115] (643,975)<img  />
+		[116] (841,979)<div  />
+			[117] (841,843)<h6 >Nelson English Workbook 2 />
+			[118] (710,889)<span  />
+				[119] (710,889)<em >4 />
+					[120] (706,888)<i  />
+			[121] (729,889)<span  />
+				[122] (729,889)<em >1 />
+					[123] (727,888)<i  />
+			[124] (755,889)<span  />
+				[125] (755,889)<em >7MB />
+					[126] (744,888)<i  />
+			[127] (944,902)<span >Read more />
+
+</current_dom>

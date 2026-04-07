@@ -1,0 +1,28 @@
+# Infrastructure Pivot: Direct Docker-Compose Deployment for IT-Inventory
+
+Due to persistent 'Read-only' and permission issues specific to Coolify V4 on ZimaOS, we are pivoting to a direct deployment strategy to ensure immediate operational status for the IT-Inventory system.
+
+## User Review Required
+
+> [!IMPORTANT]
+> We will bypass Coolify and use a standard `docker-compose.yml` directly on the server. This is the most stable and reliable path for ZimaOS. We will map the application to Port 9700.
+
+## Proposed Changes
+
+### [Component] IT-Inventory Application (DeanOS)
+
+#### [NEW] [docker-compose.yml](file:///DATA/AppData/it-inventory/docker-compose.yml)
+- **Image:** Build from the repository files directly or use a pre-built image.
+- **Port:** Map host `9700` to container `8000`.
+- **Volumes:** Persist the SQLite database at `/app/data/inventory.db`.
+- **Network:** Isolated bridge network.
+
+#### [EXECUTE] [Server Commands]
+1. **Directory Setup:** `mkdir -p /DATA/AppData/it-inventory/data`.
+2. **Clone/Sync:** Ensure the repository is at `/DATA/AppData/it-inventory`.
+3. **Fire Up:** `sudo docker compose up -d --build`.
+
+## Open Questions
+
+> [!NOTE]
+> - Hocam, envanterin son halini GitHub'dan mı çekelim yoksa sunucudaki mevcut dosyaları mı kullanalım? (Benim önerim GitHub: `evatechnosoft/it-inventory`). 🚀

@@ -1,0 +1,29 @@
+<tool_output_masked>
+Output: 2026-04-03 13:04:31,048 - INFO - Scanning C:/projects for projects...
+Traceback (most recent call last):
+  File "C:\Users\Deacjx\.platformio\penv\Lib\site-packages\sqlalchemy\engine\base.py", line 146, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Deacjx\.platformio\penv\Lib\site-packages\sqlalchemy\engine\base.py", line 3304, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Deacjx\.platformio\penv\Lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+
+... [103 lines omitted] ...
+
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Deacjx\.platformio\penv\Lib\site-packages\sqlalchemy\engine\create.py", line 643, in connect     
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Deacjx\.platformio\penv\Lib\site-packages\sqlalchemy\engine\default.py", line 617, in connect    
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Exit Code: 1
+Process Group PGID: 37108
+
+Output too large. Full output available at: C:\Users\Deacjx\.gemini\tmp\projects\tool-outputs\session-a366de38-25fd-4d3a-9bce-f8a0bc9646e6\run_shell_command_run_shell_command_1775210669133_0_76bth.txt
+</tool_output_masked>

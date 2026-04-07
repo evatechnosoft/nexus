@@ -1,0 +1,158 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Erişilebilirlik Bağlantıları
+Ana içeriğe geç
+Erişilebilirlik yardımı
+Erişilebilirlikle ilgili geri bildirim
+[0] (77,70)<a aria-label='Google Anasayfası'na Git' href='https://www.google.com/webhp?hl=tr&sa=X&ved=0ahUKEwjNttjS8quTAxWGUMMIHYGdGDsQPAgI' id='logo' title='Google Anasayfası'na Git' />
+[1] (346,69)<textarea aria-label='Ara' class='gLFyf' id='APjFqb' role='combobox' />
+[2] (561,69)<div  />
+	[3] (560,69)<div aria-label='Temizle' class='M2vV3 vOY7J' role='button' />
+		[4] (560,69)<span  />
+	[5] (576,69)<span  />
+[6] (591,69)<div aria-label='Harf çevirme aracı' class='Umvnrc' role='button' />
+	[7] (591,69)<span  />
+[8] (617,69)<div aria-label='Sesle arama yapın' class='XDyW0e' role='button' />
+[9] (642,69)<div aria-label='Görselle arama' class='nDcEnd' role='button' />
+[10] (672,69)<button aria-label='Ara' class='HZVG1b Tg7LZd' />
+	[11] (668,69)<div  />
+		[12] (668,69)<span  />
+[13] (878,69)<div aria-label='Ayarlar' class='fLciMb' id='og-te' role='button' />
+	[14] (878,72)<div  />
+		[15] (878,69)<span  />
+[16] (907,69)<a aria-label='Google uygulamaları' class='gb_B' href='https://www.google.com.tr/intl/tr/about/products?tab=wh' role='button' />
+[17] (955,69)<a aria-label='Oturum açın' class='gb_A' href='https://accounts.google.com/ServiceLogin?hl=tr&passive=true&continue=https://www.google.com/search%3Fq%3D%2522English%2BCode%2B1%2BPhonics%2BBook%2522%2Bfiletype%253Apdf&ec=futura_srp_og_si_72236_p'>Oturum açın />
+	Oturum açın
+Filtreler ve Konular
+[18] (164,145)<a class='XVMlrc C6AK7c' href='/search?q=%22English+Code+1+Phonics+Book%22+filetype:pdf&sca_esv=6b914df0baae36ea&udm=50&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXfwbLjiNybQex6G113dTgz9R0ZZIpAVcVDo8ZgaobmMaBIm3fsg0h2yKR-u5-oiyGvrP11ilDNh_ZZAlF-dxkbRsUvZvhAaVi2xB_geq7tfZ8ge-SpuGpTkVsXBeIgSIb2Llfd5eOoZKZJ94LEzf40DUKYBAVT2YXGNqeKIpG6R87lrf2D0URzNdXN-curQeU5Lq4MX4zIMzAnA5dslKRrDLDb03h71LGx5XWMpFVmVS9B5yd&aep=1&ntc=1&sa=X&ved=2ahUKEwjNttjS8quTAxWGUMMIHYGdGDsQ2J8OegQIEhAE' />
+	[19] (164,145)<div  />
+		[20] (164,156)<div  />
+			[21] (164,149)<span >AI Modu />
+[22] (208,145)<a class='C6AK7c' role='link' />
+	Tümü
+[23] (252,145)<a class='C6AK7c' href='/search?sca_esv=6b914df0baae36ea&udm=28&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXfwbLjiNybQex6G113dTgz9R0ZZIpAVcVDo8ZgaobmMaBIm3fsg0h2yKR-u5-oiyGvrP11ilDNh_ZZAlF-dxkbRsUvZvhAaVi2xB_geq7tfZ8ge-SpuGpTkVsXBeIgSIb2Llfd5eOoZKZJ94LEzf40DUKYBAVT2YXGNqeKIpG6R87lrf2D0URzNdXN-curQeU5Lq4MX4zIMzAnA5dslKRrDLDb03h71LGx5XWMpFVmVS9B5yd&q=%22English+Code+1+Phonics+Book%22+filetype:pdf&ved=1t:220175&ictx=111' />
+	[24] (252,145)<div  />
+		[25] (252,156)<span >Alışveriş />
+[26] (302,145)<a class='C6AK7c' href='/search?sca_esv=6b914df0baae36ea&udm=2&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXfwbLjiNybQex6G113dTgz9R0ZZIpAVcVDo8ZgaobmMaBIm3fsg0h2yKR-u5-oiyGvrP11ilDNh_ZZAlF-dxkbRsUvZvhAaVi2xB_geq7tfZ8ge-SpuGpTkVsXBeIgSIb2Llfd5eOoZKZJ94LEzf40DUKYBAVT2YXGNqeKIpG6R87lrf2D0URzNdXN-curQeU5Lq4MX4zIMzAnA5dslKRrDLDb03h71LGx5XWMpFVmVS9B5yd&q=%22English+Code+1+Phonics+Book%22+filetype:pdf&sa=X&ved=2ahUKEwjNttjS8quTAxWGUMMIHYGdGDsQtKgLegQIFxAB' />
+	[27] (302,145)<div  />
+		[28] (302,156)<span >Görseller />
+[29] (362,145)<a class='C6AK7c' href='/search?sca_esv=6b914df0baae36ea&udm=39&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXfwbLjiNybQex6G113dTgz9R0ZZIpAVcVDo8ZgaobmMaBIm3fsg0h2yKR-u5-oiyGvrP11ilDNh_ZZAlF-dxkbRsUvZvhAaVi2xB_geq7tfZ8ge-SpuGpTkVsXBeIgSIb2Llfd5eOoZKZJ94LEzf40DUKYBAVT2YXGNqeKIpG6R87lrf2D0URzNdXN-curQeU5Lq4MX4zIMzAnA5dslKRrDLDb03h71LGx5XWMpFVmVS9B5yd&q=%22English+Code+1+Phonics+Book%22+filetype:pdf&sa=X&ved=2ahUKEwjNttjS8quTAxWGUMMIHYGdGDsQs6gLegQIFhAB' />
+	[30] (362,145)<div  />
+		[31] (362,156)<span >Kısa videolar />
+[32] (419,145)<a class='C6AK7c' href='/search?sca_esv=6b914df0baae36ea&udm=7&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXfwbLjiNybQex6G113dTgz9R0ZZIpAVcVDo8ZgaobmMaBIm3fsg0h2yKR-u5-oiyGvrP11ilDNh_ZZAlF-dxkbRsUvZvhAaVi2xB_geq7tfZ8ge-SpuGpTkVsXBeIgSIb2Llfd5eOoZKZJ94LEzf40DUKYBAVT2YXGNqeKIpG6R87lrf2D0URzNdXN-curQeU5Lq4MX4zIMzAnA5dslKRrDLDb03h71LGx5XWMpFVmVS9B5yd&q=%22English+Code+1+Phonics+Book%22+filetype:pdf&sa=X&ved=2ahUKEwjNttjS8quTAxWGUMMIHYGdGDsQtKgLegQIExAB' />
+	[33] (419,145)<div  />
+		[34] (419,156)<span >Videolar />
+[35] (466,145)<a class='C6AK7c' href='/search?sca_esv=6b914df0baae36ea&q=%22English+Code+1+Phonics+Book%22+filetype:pdf&udm=36&source=lnms&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXfwbLjiNybQex6G113dTgz9R0ZZIpAVcVDo8ZgaobmMaBIm3fsg0h2yKR-u5-oiyGvrP11ilDNh_ZZAlF-dxkbRsUvZvhAaVi2xB_geq7tfZ8ge-SpuGpTkVsXBeIgSIb2Llfd5eOoZKZJ94LEzf40DUKYBAVT2YXGNqeKIpG6R87lrf2D0URzNdXN-curQeU5Lq4MX4zIMzAnA5dslKRrDLDb03h71LGx5XWMpFVmVS9B5yd&sa=X&ved=2ahUKEwjNttjS8quTAxWGUMMIHYGdGDsQ0pQJegQIFRAB' />
+	[36] (466,145)<div  />
+		[37] (466,156)<span >Kitaplar />
+[38] (524,145)<div class='mTpL7c' role='button' />
+	[39] (524,145)<div  />
+		[40] (524,156)<div  />
+			[41] (519,149)<span >Daha fazla />
+			[42] (546,149)<span  />
+[43] (587,145)<div class='mOKdDc' id='hdtb-tls' role='button' />
+	[44] (587,145)<div  />
+		[45] (587,156)<div  />
+			[46] (581,149)<span >Araçlar />
+			[47] (601,149)<span  />
+Looking for results in English?
+[48] (967,266)<a href='#' />
+	[49] (967,264)<span  />
+[50] (853,297)<a href='/setprefs?sig=0_AFLdylOmlmYTb9A6MfmhoVa_RsI%3D&source=en_ignored_notification&prev=https://www.google.com/search?q%3D%2522English%2BCode%2B1%2BPhonics%2BBook%2522%2Bfiletype:pdf&hl=en&sa=X&ved=2ahUKEwjNttjS8quTAxWGUMMIHYGdGDsQhoQCKAF6BAgJEAQ'>Change to English />
+[51] (876,328)<a href='#'>kullanmaya devam et />
+	[52] (832,327)<span >Türkçe />
+[53] (840,371)<a class='fl' href='/preferences?lang=1&hl=tr&sa=X&ved=2ahUKEwjNttjS8quTAxWGUMMIHYGdGDsQiIQCKAN6BAgJEAY#languages'>Dil ayarları />
+Arama Sonuçları
+[54] (254,262)<a class='zReHs' href='https://eduksiazka.pl/media/wysiwyg/cenniki/Cennik_Pearson.pdf' />
+	[55] (171,288)<h3 >Pearson />
+	[56] (254,241)<div  />
+		[57] (254,241)<div  />
+			[58] (156,241)<span  />
+				[59] (156,241)<div  />
+					[60] (156,241)<img  />
+			[61] (267,241)<div  />
+				[62] (267,229)<div  />
+					[63] (267,229)<span >Eduksiążka />
+				[64] (267,255)<div  />
+					[65] (267,255)<cite class='qLRx3b tjvcx GvPZzd dTxz9 cHaqb' role='text'>https://eduksiazka.pl />
+						[66] (290,254)<span class='ylgVCe ob9lvb' role='text'>› cenniki › Cennik_Pearson />
+PDF
+[67] (380,253)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[68] (380,253)<span  />
+		[69] (380,255)<span  />
+7 Şub 2025
+—
+English Code 1. Phonics Book
+with Audio & Video QR Code. 44,29. 5%. 46,50. 9781292352305. English Code 1. Pupil's Book with Online Access Code.
+26 sayfa
+[70] (314,486)<a class='zReHs' href='https://albionbooks.sk/engine/wp-content/uploads/2024/04/Cennik_Pearson_ELT_Readers_2024_EUR-skolske-ceny.pdf?srsltid=AfmBOoobzYLEGJS-y0OUYeUOlAdTY3h6g25nl5i6qCIwTy9uYVYQQqMK' />
+	[71] (314,512)<h3 >Cenník titulov Pearson ELT a Pearson Readers 2024/2025 />
+	[72] (255,465)<div  />
+		[73] (255,465)<div  />
+			[74] (156,465)<span  />
+				[75] (156,465)<div  />
+					[76] (156,465)<img  />
+			[77] (268,465)<div  />
+				[78] (268,453)<div  />
+					[79] (268,453)<span >albionbooks.sk />
+				[80] (268,479)<div  />
+					[81] (268,479)<cite class='qLRx3b tjvcx GvPZzd dTxz9 cHaqb' role='text'>https://albionbooks.sk />
+						[82] (293,478)<span class='ylgVCe ob9lvb' role='text'>› uploads › 2024/04 › Ce... />
+PDF
+[83] (381,477)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[84] (381,477)<span  />
+		[85] (381,479)<span  />
+8 Nis 2024
+—
+9781292322513
+English Code 1 Phonics Book
+with Audio & Video QR Code. 10,29 €. 8,75 €. 9781292352305 English Code 1 Pupil´ s Book with Online ...
+71 sayfa
+[86] (256,710)<a class='zReHs' href='https://eduksiazka.pl/media/wysiwyg/cenniki/cennik_pearson_01.03.pdf' />
+	[87] (171,736)<h3 >Pearson />
+	[88] (256,689)<div  />
+		[89] (256,689)<div  />
+			[90] (156,689)<span  />
+				[91] (156,689)<div  />
+					[92] (156,689)<img  />
+			[93] (269,689)<div  />
+				[94] (269,677)<div  />
+					[95] (269,677)<span >Eduksiążka />
+				[96] (269,702)<div  />
+					[97] (269,702)<cite class='qLRx3b tjvcx GvPZzd dTxz9 cHaqb' role='text'>https://eduksiazka.pl />
+						[98] (291,702)<span class='ylgVCe ob9lvb' role='text'>› cennik_pearson_01.03.pdf />
+PDF
+[99] (383,701)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[100] (383,701)<span  />
+		[101] (383,702)<span  />
+1 Mar 2024
+—
+English Code 1. Phonics Book
+with Audio & Video QR Code. 41,81. 5%. 43,90. 9781292352305. English Code 1. Pupil's Book with Online Access Code.
+25 sayfa
+[102] (287,934)<a class='zReHs' href='https://albionbooks.sk/engine/wp-content/uploads/2022/04/Cenik_Pearson_ELT_2022_EUR-1.pdf?srsltid=AfmBOoqp8ukhVrOkfqbNh2XklOYkPkGGxGQKi3fG8XABtde8ChgFo0BD' />
+	[103] (287,960)<h3 >Cenník titulov Pearson 2022/2023 - Albion Books />
+	[104] (255,913)<div  />
+		[105] (255,913)<div  />
+			[106] (156,913)<span  />
+				[107] (156,913)<div  />
+					[108] (156,913)<img  />
+			[109] (268,913)<div  />
+				[110] (268,901)<div  />
+					[111] (268,901)<span >albionbooks.sk />
+				[112] (268,926)<div  />
+					[113] (268,926)<cite class='qLRx3b tjvcx GvPZzd dTxz9 cHaqb' role='text'>https://albionbooks.sk />
+						[114] (293,925)<span class='ylgVCe ob9lvb' role='text'>› uploads › 2022/04 › Ce... />
+PDF
+[115] (381,925)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[116] (381,925)<span  />
+		[117] (381,926)<span  />
+1 Nis 2022
+—
+9781292322513
+English Code 1. Phonics Book
+with Audio & Video QR Code. 13,06 €. 10. 9781292354521 English Code 2. Grammar Book with Video ...
+
+</current_dom>

@@ -1,0 +1,189 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Erişilebilirlik Bağlantıları
+Ana içeriğe geç
+Erişilebilirlik yardımı
+Erişilebilirlikle ilgili geri bildirim
+[0] (77,70)<a aria-label='Google Anasayfası'na Git' href='https://www.google.com/webhp?hl=tr&sa=X&ved=0ahUKEwjfw7KNhqyTAxUxSvEDHfVkKYQQPAgI' id='logo' title='Google Anasayfası'na Git' />
+[1] (346,69)<textarea aria-label='Ara' class='gLFyf' id='APjFqb' role='combobox' />
+[2] (561,69)<div  />
+	[3] (560,69)<div aria-label='Temizle' class='M2vV3 vOY7J' role='button' />
+		[4] (560,69)<span  />
+	[5] (576,69)<span  />
+[6] (591,69)<div aria-label='Harf çevirme aracı' class='Umvnrc' role='button' />
+	[7] (591,69)<span  />
+[8] (617,69)<div aria-label='Sesle arama yapın' class='XDyW0e' role='button' />
+[9] (642,69)<div aria-label='Görselle arama' class='nDcEnd' role='button' />
+[10] (672,69)<button aria-label='Ara' class='HZVG1b Tg7LZd' />
+	[11] (668,69)<div  />
+		[12] (668,69)<span  />
+[13] (878,69)<div aria-label='Ayarlar' class='fLciMb' id='og-te' role='button' />
+	[14] (878,72)<div  />
+		[15] (878,69)<span  />
+[16] (907,69)<a aria-label='Google uygulamaları' class='gb_B' href='https://www.google.com.tr/intl/tr/about/products?tab=wh' role='button' />
+[17] (955,69)<a aria-label='Oturum açın' class='gb_A' href='https://accounts.google.com/ServiceLogin?hl=tr&passive=true&continue=https://www.google.com/search%3Fq%3D%2522English%2BCode%2B1%2522%2B%2522Class%2BAudio%2522%2Bzip%2BOR%2Brar%2Bdownload%2B-hitfile%2B-frenglish&ec=futura_srp_og_si_72236_p'>Oturum açın />
+	Oturum açın
+Filtreler ve Konular
+[18] (165,145)<a class='XVMlrc C6AK7c' href='/search?q=%22English+Code+1%22+%22Class+Audio%22+zip+OR+rar+download+-hitfile+-frenglish&sca_esv=f818ef0c6d37c692&udm=50&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXarNgseJfkljimozBzUrIDqoGxdEYPKEDExKJDx55gh7Avc50rSQRRCiLzw09QhQjzEkhxClk1rRiBfhBmWJjDxTAhBudmbA_P-rUhNl4n9QIyTXtJj3ztJ3KNtZi_41fVGc7VAG-ZmzN0Ocdiq7K3BYwCT7FyH0wIYsXii9MFXcpKOaA6aH1-myhStrpmOYQCQPcvbvLcCvhavHvnfo5-khIvbhNVP0kfhsZa_SnNos86d5B&aep=1&ntc=1&sa=X&ved=2ahUKEwjfw7KNhqyTAxUxSvEDHfVkKYQQ2J8OegQIDhAE' />
+	[19] (165,145)<div  />
+		[20] (165,156)<div  />
+			[21] (165,149)<span >AI Modu />
+[22] (209,145)<a class='C6AK7c' role='link' />
+	Tümü
+[23] (254,145)<a class='C6AK7c' href='/search?sca_esv=f818ef0c6d37c692&udm=7&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXarNgseJfkljimozBzUrIDqoGxdEYPKEDExKJDx55gh7Avc50rSQRRCiLzw09QhQjzEkhxClk1rRiBfhBmWJjDxTAhBudmbA_P-rUhNl4n9QIyTXtJj3ztJ3KNtZi_41fVGc7VAG-ZmzN0Ocdiq7K3BYwCT7FyH0wIYsXii9MFXcpKOaA6aH1-myhStrpmOYQCQPcvbvLcCvhavHvnfo5-khIvbhNVP0kfhsZa_SnNos86d5B&q=%22English+Code+1%22+%22Class+Audio%22+zip+OR+rar+download+-hitfile+-frenglish&sa=X&ved=2ahUKEwjfw7KNhqyTAxUxSvEDHfVkKYQQtKgLegQIFBAB' />
+	[24] (254,145)<div  />
+		[25] (254,156)<span >Videolar />
+[26] (306,145)<a class='C6AK7c' href='/search?sca_esv=f818ef0c6d37c692&udm=2&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXarNgseJfkljimozBzUrIDqoGxdEYPKEDExKJDx55gh7Avc50rSQRRCiLzw09QhQjzEkhxClk1rRiBfhBmWJjDxTAhBudmbA_P-rUhNl4n9QIyTXtJj3ztJ3KNtZi_41fVGc7VAG-ZmzN0Ocdiq7K3BYwCT7FyH0wIYsXii9MFXcpKOaA6aH1-myhStrpmOYQCQPcvbvLcCvhavHvnfo5-khIvbhNVP0kfhsZa_SnNos86d5B&q=%22English+Code+1%22+%22Class+Audio%22+zip+OR+rar+download+-hitfile+-frenglish&sa=X&ved=2ahUKEwjfw7KNhqyTAxUxSvEDHfVkKYQQtKgLegQIExAB' />
+	[27] (306,145)<div  />
+		[28] (306,156)<span >Görseller />
+[29] (358,145)<a class='C6AK7c' href='/search?sca_esv=f818ef0c6d37c692&udm=28&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXarNgseJfkljimozBzUrIDqoGxdEYPKEDExKJDx55gh7Avc50rSQRRCiLzw09QhQjzEkhxClk1rRiBfhBmWJjDxTAhBudmbA_P-rUhNl4n9QIyTXtJj3ztJ3KNtZi_41fVGc7VAG-ZmzN0Ocdiq7K3BYwCT7FyH0wIYsXii9MFXcpKOaA6aH1-myhStrpmOYQCQPcvbvLcCvhavHvnfo5-khIvbhNVP0kfhsZa_SnNos86d5B&q=%22English+Code+1%22+%22Class+Audio%22+zip+OR+rar+download+-hitfile+-frenglish&ved=1t:220175&ictx=111' />
+	[30] (358,145)<div  />
+		[31] (358,156)<span >Alışveriş />
+[32] (418,145)<a class='C6AK7c' href='/search?sca_esv=f818ef0c6d37c692&udm=39&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXarNgseJfkljimozBzUrIDqoGxdEYPKEDExKJDx55gh7Avc50rSQRRCiLzw09QhQjzEkhxClk1rRiBfhBmWJjDxTAhBudmbA_P-rUhNl4n9QIyTXtJj3ztJ3KNtZi_41fVGc7VAG-ZmzN0Ocdiq7K3BYwCT7FyH0wIYsXii9MFXcpKOaA6aH1-myhStrpmOYQCQPcvbvLcCvhavHvnfo5-khIvbhNVP0kfhsZa_SnNos86d5B&q=%22English+Code+1%22+%22Class+Audio%22+zip+OR+rar+download+-hitfile+-frenglish&sa=X&ved=2ahUKEwjfw7KNhqyTAxUxSvEDHfVkKYQQs6gLegQIERAB' />
+	[33] (418,145)<div  />
+		[34] (418,156)<span >Kısa videolar />
+[35] (477,145)<a class='C6AK7c' href='/search?sca_esv=f818ef0c6d37c692&q=%22English+Code+1%22+%22Class+Audio%22+zip+OR+rar+download+-hitfile+-frenglish&udm=36&source=lnms&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXarNgseJfkljimozBzUrIDqoGxdEYPKEDExKJDx55gh7Avc50rSQRRCiLzw09QhQjzEkhxClk1rRiBfhBmWJjDxTAhBudmbA_P-rUhNl4n9QIyTXtJj3ztJ3KNtZi_41fVGc7VAG-ZmzN0Ocdiq7K3BYwCT7FyH0wIYsXii9MFXcpKOaA6aH1-myhStrpmOYQCQPcvbvLcCvhavHvnfo5-khIvbhNVP0kfhsZa_SnNos86d5B&sa=X&ved=2ahUKEwjfw7KNhqyTAxUxSvEDHfVkKYQQ0pQJegQIEBAB' />
+	[36] (477,145)<div  />
+		[37] (477,156)<span >Kitaplar />
+[38] (537,145)<div class='mTpL7c' role='button' />
+	[39] (537,145)<div  />
+		[40] (537,156)<div  />
+			[41] (531,149)<span >Daha fazla />
+			[42] (560,149)<span  />
+[43] (602,145)<div class='mOKdDc' id='hdtb-tls' role='button' />
+	[44] (602,145)<div  />
+		[45] (602,156)<div  />
+			[46] (596,149)<span >Araçlar />
+			[47] (617,149)<span  />
+Looking for results in English?
+[48] (967,266)<a href='#' />
+	[49] (967,264)<span  />
+[50] (853,297)<a href='/setprefs?sig=0_AFLdylOmlmYTb9A6MfmhoVa_RsI%3D&source=en_ignored_notification&prev=https://www.google.com/search?q%3D%2522English%2BCode%2B1%2522%2B%2522Class%2BAudio%2522%2Bzip%2BOR%2Brar%2Bdownload%2B-hitfile%2B-frenglish&hl=en&sa=X&ved=2ahUKEwjfw7KNhqyTAxUxSvEDHfVkKYQQhoQCKAF6BAgNEAQ'>Change to English />
+[51] (876,328)<a href='#'>kullanmaya devam et />
+	[52] (832,327)<span >Türkçe />
+[53] (840,371)<a class='fl' href='/preferences?lang=1&hl=tr&sa=X&ved=2ahUKEwjfw7KNhqyTAxUxSvEDHfVkKYQQiIQCKAN6BAgNEAY#languages'>Dil ayarları />
+Arama Sonuçları
+[54] (310,262)<a class='zReHs' href='https://eltebook.com/english-code/' />
+	[55] (310,287)<h3 >Download Pearson English Code Pdf Resources (Pre A1 ... />
+	[56] (221,241)<div  />
+		[57] (221,241)<div  />
+			[58] (156,241)<span  />
+				[59] (156,241)<div  />
+					[60] (156,241)<img  />
+			[61] (233,241)<div  />
+				[62] (233,229)<div  />
+					[63] (233,229)<span >ELT Ebook />
+				[64] (233,255)<div  />
+					[65] (233,255)<cite class='qLRx3b tjvcx GvPZzd dTxz9 cHaqb' role='text'>https://eltebook.com />
+						[66] (256,254)<span class='ylgVCe ob9lvb' role='text'>› engl... />
+·
+[67] (323,255)<a class='dEEN8c' href='https://eltebook.com/english-code/' />
+	[68] (323,254)<span >Bu sayfanın çevirisini yap />
+[69] (380,253)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[70] (380,253)<span  />
+		[71] (380,255)<span  />
+English Code 1
+Assessment Book Audio.
+zip
+.
+English Code 1
+Assessment Book.pdf – Sample: Click
+English Code 1 Class Audio
+.
+zip
+.
+English Code 1
+Flashcards.pdf
+[72] (293,453)<a class='zReHs' href='https://tienganhedu.com/english-code-ame-bre-7-levels/' />
+	[73] (293,481)<h3 >English Code | AmE, BrE - 7 Levels (PDF Resources) />
+	[74] (222,435)<div  />
+		[75] (222,435)<div  />
+			[76] (156,435)<span  />
+				[77] (156,435)<div  />
+					[78] (156,435)<img  />
+			[79] (235,435)<div  />
+				[80] (235,423)<div  />
+					[81] (235,423)<span >TienganhEDU />
+				[82] (235,448)<div  />
+					[83] (235,448)<cite class='qLRx3b tjvcx GvPZzd dTxz9 cHaqb' role='text'>https://tienganhedu.com />
+						[84] (264,447)<span class='ylgVCe ob9lvb' role='text'>› e... />
+·
+[85] (327,448)<a class='dEEN8c' href='https://tienganhedu.com/english-code-ame-bre-7-levels/' />
+	[86] (327,447)<span >Bu sayfanın çevirisini yap />
+[87] (384,447)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[88] (384,447)<span  />
+		[89] (384,448)<span  />
+19 Şub 2024
+—
+Download English Code 1
+Phonics Book Audio (AmE) ·
+Download English
+... English Code 6
+Class Audio
+(BRE).
+rar
+. English Code 6. Phonics Book ...
+[90] (256,650)<a class='zReHs' href='https://www.zhihu.com/question/23766552' />
+	[91] (256,674)<h3 >为什么大家都推荐看英文原版教材呢？ />
+	[92] (219,629)<div  />
+		[93] (219,629)<div  />
+			[94] (156,629)<span  />
+				[95] (156,629)<div  />
+					[96] (156,629)<img  />
+			[97] (232,629)<div  />
+				[98] (232,617)<div  />
+					[99] (232,617)<span >知乎 />
+				[100] (232,642)<div  />
+					[101] (232,642)<cite class='qLRx3b tjvcx GvPZzd dTxz9 cHaqb' role='text'>https://www.zhihu.com />
+						[102] (258,641)<span class='ylgVCe ob9lvb' role='text'>› q... />
+·
+[103] (320,642)<a class='dEEN8c' href='https://www.zhihu.com/question/23766552' />
+	[104] (320,641)<span >Bu sayfanın çevirisini yap />
+[105] (377,641)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[106] (377,641)<span  />
+		[107] (377,642)<span  />
+13 May 2014
+—
+Class audio
+. 8241 Academy Stars 1. Pupil's Book 2017 -144p. 8242 ... 10269
+English code 1
+grammar book. 10270 English code 2 phonics book.
+[108] (161,772)<a class='Zv9Ied' href='https://www.zhihu.com/question/23766552/answer/2557504987'>3 yanıt />
+·
+En iyi yanıt:
+今天给大家分享的是美国国家地理少儿原版英语教材All Together，这是一套引 ...
+[109] (255,873)<a class='zReHs' href='https://eltebook.com/product/english-code-starter-pdfs-resources/' />
+	[110] (255,897)<h3 >English Code Starter PDFs, Resources />
+	[111] (221,851)<div  />
+		[112] (221,851)<div  />
+			[113] (156,851)<span  />
+				[114] (156,851)<div  />
+					[115] (156,851)<img  />
+			[116] (233,851)<div  />
+				[117] (233,840)<div  />
+					[118] (233,840)<span >ELT Ebook />
+				[119] (233,865)<div  />
+					[120] (233,865)<cite class='qLRx3b tjvcx GvPZzd dTxz9 cHaqb' role='text'>https://eltebook.com />
+						[121] (256,864)<span class='ylgVCe ob9lvb' role='text'>› engl... />
+·
+[122] (323,865)<a class='dEEN8c' href='https://eltebook.com/product/english-code-starter-pdfs-resources/' />
+	[123] (323,864)<span >Bu sayfanın çevirisini yap />
+[124] (380,863)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[125] (380,863)<span  />
+		[126] (380,865)<span  />
+What's included in English Code Starter PDFs, Resources? Your
+download
+includes: English Code Starter
+Class Audio
+.
+zip
+...
+English Code 1
+PDFs, Resources, $6.
+$6,00
+·
+Stokta var
+
+</current_dom>

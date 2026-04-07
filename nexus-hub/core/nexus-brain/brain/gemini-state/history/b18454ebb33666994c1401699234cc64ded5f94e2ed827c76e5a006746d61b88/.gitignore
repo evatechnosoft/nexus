@@ -1,0 +1,35 @@
+# ESP32 / PlatformIO
+esp32-agent/.pio/
+esp32-display/.pio/
+# config.h artik sir icermiyor (WiFi NVS'te), git'e eklenebilir
+# esp32-display icin de ayni durum
+esp32-display/include/config.h
+
+# Flutter
+flutter-app/.dart_tool/
+flutter-app/build/
+flutter-app/.flutter-plugins
+flutter-app/.flutter-plugins-dependencies
+flutter-app/pubspec.lock
+
+# Python Backend
+backend/__pycache__/
+backend/*.pyc
+backend/.venv/
+backend/venv/
+backend/.env
+
+# Database files
+db/*.db
+db/*.sqlite
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+flutter-app/windows/flutter/ephemeral/
+build/

@@ -1,0 +1,17 @@
+# Task Checklist
+
+- [x] Open http://localhost:5000
+- [x] Login as 'student' with password '123'
+- [x] Navigate to http://localhost:5000/week/1
+- [ ] Verify "hello" card has "merhaba" -> **FAILED: "merhaba" not found, only "hello" visible.**
+- [ ] Click "hello" and verify details (phonetic and syllables: [he-low]) -> **FAILED: Shows "[...]" and "..." instead of "[he-low]" and syllables.**
+- [ ] Take screenshot of expanded card -> **DONE (but results incorrect)**
+- [ ] Navigate to http://localhost:5000/week/2
+- [ ] Verify "red" card has "kırmızı"
+- [ ] Long-press "red" and verify 'speaking' CSS class
+- [ ] Check console for errors -> **FOUND: 401 for /api/me and 404 for /login (unexpected as I logged in).**
+
+## Findings
+- Card "hello" does not show "merhaba".
+- Expanded details show "[...]" and "..." instead of real data.
+- API `/api/week/1` returns only word strings, no translations or phonetics.

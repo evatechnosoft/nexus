@@ -1,0 +1,12 @@
+# Task: Revert to NPM Deployment
+
+- [x] Planning
+    - [x] Analyze local Docker failure (Docker not installed)
+    - [x] Decide to revert to NPM-based pipeline
+- [x] Implementation
+    - [x] Revert [azure-pipelines-1.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-1.yml) to previous NPM version
+    - [x] Correct `package` path in the reverted YAML
+    - [x] Push changes to `dev` and `Dev` branches
+- [ ] Verification
+    - [ ] Wait for user to confirm if the build succeeds in Azure DevOps
+    - [ ] Finalize walkthrough if it works

@@ -1,0 +1,6 @@
+{
+  "artifactType": "ARTIFACT_TYPE_WALKTHROUGH",
+  "summary": "Updated walkthrough with environment clarification, passwordless sudo, and SSH configuration for DeanOS.",
+  "updatedAt": "2026-03-23T14:23:23.902561300Z",
+  "version": "3"
+}

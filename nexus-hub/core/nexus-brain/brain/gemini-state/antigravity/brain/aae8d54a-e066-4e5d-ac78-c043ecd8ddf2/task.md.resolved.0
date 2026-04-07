@@ -1,0 +1,8 @@
+- [x] Analyze current DeanOS/Coolify status and common errors
+- [x] Update `zima.ps1` with "Coolify Sağlık Kontrolü & Tamir" option (Option 10)
+- [/] Integrate SSH Key into Coolify (Phase 2)
+    - [x] Identify correct SSH key (`deanos`)
+    - [x] Confirm Coolify database structure
+    - [ ] Insert private key into Coolify database via `php artisan tinker`
+    - [ ] Create server entry in Coolify database and link to the key
+- [ ] Investigate and suggest GitHub/Local folder cleanup strategy

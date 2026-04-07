@@ -1,0 +1,8 @@
+## Registration Test Checklist
+- [ ] Open http://localhost:3002/
+- [ ] Clear localStorage and reload (to ensures auth overlay is visible)
+- [ ] Click "Hesabın yok mu? Kayıt Ol"
+- [ ] Fill registration details (TestUser, test@example.com, password123)
+- [ ] Hit Enter in the password field
+- [ ] Verify if dashboard loads
+- [ ] Check console logs for errors

@@ -1,0 +1,28 @@
+<tool_output_masked>
+Output: FullName
+--------
+C:\projects\Antigravity\e-car-dashboard\CLAUDE.md
+C:\projects\Antigravity\e-car-dashboard\HANDOFF.md
+C:\projects\Antigravity\e-car-dashboard\PROJECT.md
+C:\projects\Antigravity\shmarthouse\README.md
+C:\projects\Antigravity\skills\README.md
+C:\projects\Antigravity\skills\workflow- bundlesREADME.md  
+C:\projects\Antigravity\skills\workflow_bundles_readme.md  
+C:\projects\Antigravity\smart-home-agent\CLAUDE.md
+
+... [32 lines omitted] ...
+
+C:\projects\github\casaos-home-server\README.md
+C:\projects\github\casaos-home-server\SECURITY.md
+C:\projects\github\casatozima\handoff.md
+C:\projects\github\casatozima\README.md
+C:\projects\github\EvAnotes\ANALYTICS.md
+C:\projects\github\EvAnotes\BRANCHING-STRATEGY.md
+C:\projects\github\EvAnotes\brand-guidelines.md
+C:\projects\github\EvAnotes\DEPLOYMENT.md
+C:\projects\github\EvAnotes\dev.md
+C:\projects\github\EvAnotes\GITHUB_SECRETS_SETUP.md
+Process Group PGID: 22352
+
+Output too large. Full output available at: C:\Users\Deacjx\.gemini\tmp\projects\tool-outputs\session-a366de38-25fd-4d3a-9bce-f8a0bc9646e6\run_shell_command_run_shell_command_1775208885723_0_hybuv.txt
+</tool_output_masked>

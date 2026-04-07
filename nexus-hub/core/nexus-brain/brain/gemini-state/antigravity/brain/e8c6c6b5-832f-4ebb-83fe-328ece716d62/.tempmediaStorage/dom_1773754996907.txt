@@ -1,0 +1,13 @@
+EvA
+Notes
+Merhaba,
+Gelecek
+Bugün yapılacak harika şeyler var.
+Tamamlanan
+12
+Devam Eden
+4
+Yıldızlı
+2
+Bugünün Görevleri
+[0] (255,472)<button class='flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-indigo-600 text-white font-semibold text-sm hover:shadow-lg hover:shadow-indigo-500/20 transition-all'>Yeni Görev />

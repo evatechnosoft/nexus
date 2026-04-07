@@ -1,0 +1,26 @@
+# Dockerization and Deployment to DeanOS
+
+This plan outlines the steps to dockerize the `evaiteclabs` project and deploy it to the `DeanOS` server, exposing it on port 3001.
+
+## Proposed Changes
+
+### [Component Name] backend
+
+#### [MODIFY] [server.js](file:///c:/projects/evaiteclabs/server.js)
+- Change default `PORT` from 3000 to 3001.
+
+#### [NEW] [Dockerfile](file:///c:/projects/evaiteclabs/Dockerfile)
+- Create a lightweight Node.js Dockerfile to serve the static content using [server.js](file:///c:/projects/evaiteclabs/server.js).
+
+#### [NEW] [docker-compose.yml](file:///c:/projects/evaiteclabs/docker-compose.yml)
+- Define the service, build context, and port mapping (3001:3001).
+
+## Verification Plan
+
+### Automated Tests
+- Run `docker compose up -d` locally to verify the build and container startup.
+- Check accessibility via `curl http://localhost:3001`.
+
+### Manual Verification
+- SSH into `DeanOS` and verify the deployment.
+- Verify the website is accessible on the network at `http://deanos.local:3001`.

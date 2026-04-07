@@ -1,0 +1,9 @@
+# Email Queue Implementation Tasks
+
+- [ ] Add `EmailQueue` model to `models.py`
+- [ ] Update `email_watcher.py` with Fetching and Processing logic
+- [ ] Update `graph_watcher.py` to support Email Queue
+- [ ] Create `/email-queue` UI (Router + Template)
+- [ ] Update background scheduler in `main.py`
+- [ ] Implement failure notifications in `notifier.py` or `email_watcher`
+- [ ] Final Verification

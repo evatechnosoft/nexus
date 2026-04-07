@@ -1,0 +1,25 @@
+# SportApp Pro - Web Platformuna Geçiş Walkthrough
+
+Bu güncelleme ile uygulama, sadece bir mobil uygulama olmaktan çıkıp, tüm tarayıcılardan erişilebilen tam kapsamlı bir web platformuna (SaaS) dönüşmüştür.
+
+## 🚀 Web platformuna Geçişin Avantajları
+
+### 💎 Birleşik Arayüz (Single Source of Truth)
+Artık mobilde gördüğünüz her özellik (Hikmet'in tavsiyeleri, Uyku Analizi, Kilo Grafikleri) aynı görsel kalite ve "Glassmorphism" tasarımıyla webde de mevcut.
+
+### 🖥️ Desktop Optimizasyonu
+- **Sınırlandırılmış Genişlik:** İçerik 800px'de sabitlenerek büyük ekranlarda okunabilirlik korundu.
+- **Backend Sync:** Health Connect olmayan tarayıcılarda veriler doğrudan backend API'lerinden çekilecek şekilde programlandı.
+
+### 📸 Web AI Nutri-Scan
+Tarayıcı üzerinden kameraya erişim sağlanarak yemek fotoğraflarını bilgisayarınızdan veya tabletinizden de tarayabilmeniz aktif edildi.
+
+## 🛠️ Teknik Geçiş Adımları
+
+1. **Build:** `flutter build web --release` komutu ile tarayıcılar için optimize edilmiş JavaScript çıktıları üretildi.
+2. **Migration:** Eski `public/` dizini `public_old/` olarak arşivlendi.
+3. **Serving:** Node.js Express sunucusu (`server.js`), Flutter Web çıktılarını `/` route'u altında sunacak şekilde yapılandırılmıştı, içeriklerin taşınmasıyla sistem aktif oldu.
+
+---
+> [!IMPORTANT]
+> Uygulamanın web sürümüne herhangi bir tarayıcıdan sunucu IP'niz veya `localhost:3001` üzerinden erişebilirsiniz.

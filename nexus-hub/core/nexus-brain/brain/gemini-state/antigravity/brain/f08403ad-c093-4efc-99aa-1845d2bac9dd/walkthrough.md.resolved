@@ -1,0 +1,751 @@
+# Walkthrough - BuildContext async gaps fix
+
+I fixed the "Don't use 'BuildContext's across async gaps" lint warning in [SplashScreen](file:///c:/projects/github/EvATasks/mobile/lib/features/splash/splash_screen.dart#6-12).
+
+## Changes Made
+
+### Component: Splash Screen
+
+#### [MODIFY] [splash_screen.dart](file:///c:/projects/github/EvATasks/mobile/lib/features/splash/splash_screen.dart)
+
+Added a `mounted` check immediately after `await SharedPreferences.getInstance()` to ensure the `context` is still valid before being used for navigation.
+
+```diff:splash_screen.dart
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen>
+    with TickerProviderStateMixin {
+  late AnimationController _logoController;
+  late AnimationController _textController;
+  late AnimationController _slideController;
+  late Animation<double> _logoScale;
+  late Animation<double> _logoOpacity;
+  late Animation<double> _textOpacity;
+  late Animation<Offset> _slideAnimation;
+
+  @override
+  void initState() {
+    super.initState();
+
+    // Logo animation (scale + fade in)
+    _logoController = AnimationController(
+      duration: const Duration(milliseconds: 1200),
+      vsync: this,
+    );
+
+    _logoScale = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(parent: _logoController, curve: Curves.elasticOut),
+    );
+
+    _logoOpacity = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(parent: _logoController, curve: Curves.easeIn),
+    );
+
+    // Text animation (fade in after logo)
+    _textController = AnimationController(
+      duration: const Duration(milliseconds: 800),
+      vsync: this,
+    );
+
+    _textOpacity = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(parent: _textController, curve: Curves.easeIn),
+    );
+
+    // Slide animation (subtle slide up)
+    _slideController = AnimationController(
+      duration: const Duration(milliseconds: 1000),
+      vsync: this,
+    );
+
+    _slideAnimation = Tween<Offset>(
+      begin: const Offset(0, 0.3),
+      end: Offset.zero,
+    ).animate(
+      CurvedAnimation(parent: _slideController, curve: Curves.easeOut),
+    );
+
+    _startAnimation();
+  }
+
+  void _startAnimation() async {
+    // Slide in
+    _slideController.forward();
+
+    // Logo scale and fade
+    _logoController.forward();
+
+    // Text fade after logo completes
+    await Future.delayed(const Duration(milliseconds: 800));
+    _textController.forward();
+
+    // Check user and navigate after all animations
+    await Future.delayed(const Duration(milliseconds: 2500));
+    if (mounted) {
+      final prefs = await SharedPreferences.getInstance();
+      final userId = prefs.getString('user_id');
+
+      if (userId != null) {
+        context.go('/todos');
+      } else {
+        context.go('/user-name');
+      }
+    }
+  }
+
+  @override
+  void dispose() {
+    _logoController.dispose();
+    _textController.dispose();
+    _slideController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        color: const Color(0xFF6200EE),
+        child: SlideTransition(
+          position: _slideAnimation,
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                // Logo with animations
+                ScaleTransition(
+                  scale: _logoScale,
+                  child: FadeTransition(
+                    opacity: _logoOpacity,
+                    child: Container(
+                      width: 140,
+                      height: 140,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withValues(alpha: 0.3),
+                            blurRadius: 20,
+                            offset: const Offset(0, 10),
+                          ),
+                        ],
+                      ),
+                      child: SvgPicture.string(
+                        '''<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="100" fill="#6200EE"/>
+  <circle cx="100" cy="100" r="85" fill="#7C3FFF"/>
+  <path d="M 50 60 Q 45 60 45 65 L 45 140 Q 45 145 50 145 L 80 145 Q 85 145 85 140 L 85 65 Q 85 60 80 60 Z" fill="white" opacity="0.95"/>
+  <line x1="55" y1="75" x2="75" y2="75" stroke="#E0E0E0" stroke-width="2" stroke-linecap="round"/>
+  <line x1="55" y1="85" x2="75" y2="85" stroke="#E0E0E0" stroke-width="2" stroke-linecap="round"/>
+  <line x1="55" y1="95" x2="75" y2="95" stroke="#E0E0E0" stroke-width="2" stroke-linecap="round"/>
+  <line x1="55" y1="105" x2="70" y2="105" stroke="#E0E0E0" stroke-width="2" stroke-linecap="round"/>
+  <g transform="translate(92, 85)">
+    <rect width="50" height="50" rx="6" fill="#FF6B6B" opacity="0.9"/>
+    <path d="M 12 25 L 20 33 L 36 17" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(92, 130)">
+    <rect width="50" height="28" rx="4" fill="#4CAF50" opacity="0.9" stroke="white" stroke-width="1"/>
+    <rect width="50" height="8" fill="#4CAF50" opacity="0.9"/>
+    <circle cx="15" cy="18" r="2" fill="white"/>
+    <circle cx="35" cy="18" r="2" fill="white"/>
+  </g>
+</svg>''',
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ),
+                ),
+
+                const SizedBox(height: 40),
+
+                // App title with fade animation
+                FadeTransition(
+                  opacity: _textOpacity,
+                  child: Column(
+                    children: [
+                      Text(
+                        'EvAnotes',
+                        style:
+                            Theme.of(context).textTheme.headlineLarge?.copyWith(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 48,
+                                  letterSpacing: 1.5,
+                                ),
+                      ),
+                      const SizedBox(height: 12),
+                      Text(
+                        'Family Task & Notes Management',
+                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                              color: Colors.white70,
+                              fontSize: 16,
+                              letterSpacing: 0.5,
+                            ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+===
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen>
+    with TickerProviderStateMixin {
+  late AnimationController _logoController;
+  late AnimationController _textController;
+  late AnimationController _slideController;
+  late Animation<double> _logoScale;
+  late Animation<double> _logoOpacity;
+  late Animation<double> _textOpacity;
+  late Animation<Offset> _slideAnimation;
+
+  @override
+  void initState() {
+    super.initState();
+
+    // Logo animation (scale + fade in)
+    _logoController = AnimationController(
+      duration: const Duration(milliseconds: 1200),
+      vsync: this,
+    );
+
+    _logoScale = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(parent: _logoController, curve: Curves.elasticOut),
+    );
+
+    _logoOpacity = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(parent: _logoController, curve: Curves.easeIn),
+    );
+
+    // Text animation (fade in after logo)
+    _textController = AnimationController(
+      duration: const Duration(milliseconds: 800),
+      vsync: this,
+    );
+
+    _textOpacity = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(parent: _textController, curve: Curves.easeIn),
+    );
+
+    // Slide animation (subtle slide up)
+    _slideController = AnimationController(
+      duration: const Duration(milliseconds: 1000),
+      vsync: this,
+    );
+
+    _slideAnimation = Tween<Offset>(
+      begin: const Offset(0, 0.3),
+      end: Offset.zero,
+    ).animate(
+      CurvedAnimation(parent: _slideController, curve: Curves.easeOut),
+    );
+
+    _startAnimation();
+  }
+
+  void _startAnimation() async {
+    // Slide in
+    _slideController.forward();
+
+    // Logo scale and fade
+    _logoController.forward();
+
+    // Text fade after logo completes
+    await Future.delayed(const Duration(milliseconds: 800));
+    _textController.forward();
+
+    // Check user and navigate after all animations
+    await Future.delayed(const Duration(milliseconds: 2500));
+    if (mounted) {
+      final prefs = await SharedPreferences.getInstance();
+      if (!mounted) return;
+      final userId = prefs.getString('user_id');
+
+      if (userId != null) {
+        context.go('/todos');
+      } else {
+        context.go('/user-name');
+      }
+    }
+  }
+
+  @override
+  void dispose() {
+    _logoController.dispose();
+    _textController.dispose();
+    _slideController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        color: const Color(0xFF6200EE),
+        child: SlideTransition(
+          position: _slideAnimation,
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                // Logo with animations
+                ScaleTransition(
+                  scale: _logoScale,
+                  child: FadeTransition(
+                    opacity: _logoOpacity,
+                    child: Container(
+                      width: 140,
+                      height: 140,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withValues(alpha: 0.3),
+                            blurRadius: 20,
+                            offset: const Offset(0, 10),
+                          ),
+                        ],
+                      ),
+                      child: SvgPicture.string(
+                        '''<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="100" fill="#6200EE"/>
+  <circle cx="100" cy="100" r="85" fill="#7C3FFF"/>
+  <path d="M 50 60 Q 45 60 45 65 L 45 140 Q 45 145 50 145 L 80 145 Q 85 145 85 140 L 85 65 Q 85 60 80 60 Z" fill="white" opacity="0.95"/>
+  <line x1="55" y1="75" x2="75" y2="75" stroke="#E0E0E0" stroke-width="2" stroke-linecap="round"/>
+  <line x1="55" y1="85" x2="75" y2="85" stroke="#E0E0E0" stroke-width="2" stroke-linecap="round"/>
+  <line x1="55" y1="95" x2="75" y2="95" stroke="#E0E0E0" stroke-width="2" stroke-linecap="round"/>
+  <line x1="55" y1="105" x2="70" y2="105" stroke="#E0E0E0" stroke-width="2" stroke-linecap="round"/>
+  <g transform="translate(92, 85)">
+    <rect width="50" height="50" rx="6" fill="#FF6B6B" opacity="0.9"/>
+    <path d="M 12 25 L 20 33 L 36 17" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(92, 130)">
+    <rect width="50" height="28" rx="4" fill="#4CAF50" opacity="0.9" stroke="white" stroke-width="1"/>
+    <rect width="50" height="8" fill="#4CAF50" opacity="0.9"/>
+    <circle cx="15" cy="18" r="2" fill="white"/>
+    <circle cx="35" cy="18" r="2" fill="white"/>
+  </g>
+</svg>''',
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ),
+                ),
+
+                const SizedBox(height: 40),
+
+                // App title with fade animation
+                FadeTransition(
+                  opacity: _textOpacity,
+                  child: Column(
+                    children: [
+                      Text(
+                        'EvAnotes',
+                        style:
+                            Theme.of(context).textTheme.headlineLarge?.copyWith(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 48,
+                                  letterSpacing: 1.5,
+                                ),
+                      ),
+                      const SizedBox(height: 12),
+                      Text(
+                        'Family Task & Notes Management',
+                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                              color: Colors.white70,
+                              fontSize: 16,
+                              letterSpacing: 0.5,
+                            ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+```
+
+### Component: Two Factor Authentication Screen
+
+#### [MODIFY] [two_fa_screen.dart](file:///c:/projects/github/EvATasks/mobile/lib/features/auth/two_fa_screen.dart)
+
+Added a `mounted` check in the `catch` block of [_handleVerify](file:///c:/projects/github/EvATasks/mobile/lib/features/auth/two_fa_screen.dart#32-59) to ensure `setState` is only called if the widget is still in the tree.
+
+```diff:two_fa_screen.dart
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+import 'package:evanotes/config/api_client.dart';
+
+class TwoFaScreen extends ConsumerStatefulWidget {
+  final String method; // 'sms' or 'email'
+
+  const TwoFaScreen({super.key, required this.method});
+
+  @override
+  ConsumerState<TwoFaScreen> createState() => _TwoFaScreenState();
+}
+
+class _TwoFaScreenState extends ConsumerState<TwoFaScreen> {
+  late TextEditingController _codeController;
+  bool _isLoading = false;
+  String? _error;
+
+  @override
+  void initState() {
+    super.initState();
+    _codeController = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    _codeController.dispose();
+    super.dispose();
+  }
+
+  void _handleVerify() async {
+    final code = _codeController.text;
+
+    if (code.isEmpty || code.length != 6) {
+      setState(() => _error = '6-digit code required');
+      return;
+    }
+
+    setState(() => _isLoading = true);
+
+    try {
+      final dio = ref.read(dioProvider);
+      final response = await dio.post('/2fa/verify', data: {
+        'otp': code,
+      });
+
+      if (mounted) {
+        context.go('/todos');
+      }
+    } catch (e) {
+      setState(() {
+        _isLoading = false;
+        _error = 'Invalid code. Try again.';
+      });
+    }
+  }
+
+  void _resendCode() async {
+    try {
+      final dio = ref.read(dioProvider);
+      await dio.post('/2fa/request', data: {
+        'method': widget.method,
+      });
+
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('${widget.method == 'sms' ? 'SMS' : 'Email'} sent'),
+            backgroundColor: Colors.green,
+          ),
+        );
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Failed to resend')),
+        );
+      }
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Verify Your Identity'),
+        elevation: 0,
+      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(24.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              const SizedBox(height: 32),
+              Center(
+                child: Icon(
+                  widget.method == 'sms' ? Icons.sms : Icons.email,
+                  size: 64,
+                  color: Theme.of(context).colorScheme.primary,
+                ),
+              ),
+              const SizedBox(height: 32),
+              Text(
+                'Enter Verification Code',
+                style: Theme.of(context).textTheme.headlineSmall,
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 16),
+              Text(
+                'We sent a code to your ${widget.method == 'sms' ? 'phone' : 'email'}',
+                style: Theme.of(context).textTheme.bodyMedium,
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 48),
+              TextField(
+                controller: _codeController,
+                keyboardType: TextInputType.number,
+                maxLength: 6,
+                textAlign: TextAlign.center,
+                decoration: InputDecoration(
+                  hintText: '000000',
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  errorText: _error,
+                  enabled: !_isLoading,
+                ),
+                style: const TextStyle(
+                  fontSize: 24,
+                  letterSpacing: 8,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 32),
+              ElevatedButton(
+                onPressed: _isLoading ? null : _handleVerify,
+                style: ElevatedButton.styleFrom(
+                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                ),
+                child: _isLoading
+                    ? const SizedBox(
+                        height: 20,
+                        width: 20,
+                        child: CircularProgressIndicator(
+                          strokeWidth: 2,
+                        ),
+                      )
+                    : const Text('Verify'),
+              ),
+              const SizedBox(height: 16),
+              TextButton(
+                onPressed: _isLoading ? null : _resendCode,
+                child: const Text('Didn\'t receive code? Resend'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+===
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+import 'package:evanotes/config/api_client.dart';
+
+class TwoFaScreen extends ConsumerStatefulWidget {
+  final String method; // 'sms' or 'email'
+
+  const TwoFaScreen({super.key, required this.method});
+
+  @override
+  ConsumerState<TwoFaScreen> createState() => _TwoFaScreenState();
+}
+
+class _TwoFaScreenState extends ConsumerState<TwoFaScreen> {
+  late TextEditingController _codeController;
+  bool _isLoading = false;
+  String? _error;
+
+  @override
+  void initState() {
+    super.initState();
+    _codeController = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    _codeController.dispose();
+    super.dispose();
+  }
+
+  void _handleVerify() async {
+    final code = _codeController.text;
+
+    if (code.isEmpty || code.length != 6) {
+      setState(() => _error = '6-digit code required');
+      return;
+    }
+
+    setState(() => _isLoading = true);
+
+    try {
+      final dio = ref.read(dioProvider);
+      final response = await dio.post('/2fa/verify', data: {
+        'otp': code,
+      });
+
+      if (mounted) {
+        context.go('/todos');
+      }
+    } catch (e) {
+      if (!mounted) return;
+      setState(() {
+        _isLoading = false;
+        _error = 'Invalid code. Try again.';
+      });
+    }
+  }
+
+  void _resendCode() async {
+    try {
+      final dio = ref.read(dioProvider);
+      await dio.post('/2fa/request', data: {
+        'method': widget.method,
+      });
+
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('${widget.method == 'sms' ? 'SMS' : 'Email'} sent'),
+            backgroundColor: Colors.green,
+          ),
+        );
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Failed to resend')),
+        );
+      }
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Verify Your Identity'),
+        elevation: 0,
+      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(24.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              const SizedBox(height: 32),
+              Center(
+                child: Icon(
+                  widget.method == 'sms' ? Icons.sms : Icons.email,
+                  size: 64,
+                  color: Theme.of(context).colorScheme.primary,
+                ),
+              ),
+              const SizedBox(height: 32),
+              Text(
+                'Enter Verification Code',
+                style: Theme.of(context).textTheme.headlineSmall,
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 16),
+              Text(
+                'We sent a code to your ${widget.method == 'sms' ? 'phone' : 'email'}',
+                style: Theme.of(context).textTheme.bodyMedium,
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 48),
+              TextField(
+                controller: _codeController,
+                keyboardType: TextInputType.number,
+                maxLength: 6,
+                textAlign: TextAlign.center,
+                decoration: InputDecoration(
+                  hintText: '000000',
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  errorText: _error,
+                  enabled: !_isLoading,
+                ),
+                style: const TextStyle(
+                  fontSize: 24,
+                  letterSpacing: 8,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 32),
+              ElevatedButton(
+                onPressed: _isLoading ? null : _handleVerify,
+                style: ElevatedButton.styleFrom(
+                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                ),
+                child: _isLoading
+                    ? const SizedBox(
+                        height: 20,
+                        width: 20,
+                        child: CircularProgressIndicator(
+                          strokeWidth: 2,
+                        ),
+                      )
+                    : const Text('Verify'),
+              ),
+              const SizedBox(height: 16),
+              TextButton(
+                onPressed: _isLoading ? null : _resendCode,
+                child: const Text('Didn\'t receive code? Resend'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+```
+
+## Verification Results
+
+### Automated Tests
+- The lint warning is resolved.
+
+### Manual Verification
+- Navigating from the splash screen should work correctly as long as the widget is still mounted after the asynchronous initialization of `SharedPreferences`.

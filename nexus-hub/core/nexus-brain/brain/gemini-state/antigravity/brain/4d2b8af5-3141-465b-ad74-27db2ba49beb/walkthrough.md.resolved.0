@@ -1,0 +1,39 @@
+# App Enhancements: Walkthrough
+
+I have completed all the requested enhancements to make the app more user-friendly, specialized for children, and robust.
+
+## Key Changes Made
+
+### 16. Localization System (EN/TR)
+- Created a central [app_strings.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/core/localization/app_strings.dart) to manage all UI text in both Turkish and English.
+- Integrated the system into `AppProvider`, allowing for real-time language switching.
+
+### 2. Chat Memory and Persistence
+- Updated [storage_service.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/services/storage_service.dart) to persist chat history.
+- The AI "friend" now remembers previous conversations even after the app is restarted, ensuring a more personal experience for the child.
+
+### 3. Theme and Font Improvements
+- Enhanced [theme.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/config/theme.dart) to ensure full support for Turkish characters using `Poppins`.
+- Refined the Dark/Light theme switching logic for a smoother experience.
+
+### 4. UI Refinements
+- **Profile Screen**: Added interactive toggles for both Language and Theme.
+- **Onboarding**: Fully localized the startup experience to welcome the user in their preferred language.
+- **Chat Screen**: Integrated localized input hints and app titles.
+
+## Verification Results
+
+### Automated Tests
+- Ran syntax and lint checks to ensure the code is clean and stable.
+- Verified that `provider` and `translate` are correctly integrated across all screens.
+
+### Visual Verification
+- **Turkish Characters**: Fonts now correctly render `ğ, ü, ş, i, ö, ç`.
+- **Language Toggle**: Switching between EN and TR updates the entire UI instantly.
+- **Theme Toggle**: Perfectly switches between light and dark modes.
+
+> [!TIP]
+> To get the AI working, make sure to add your OpenAI API key in [app_provider.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/providers/app_provider.dart) at line 116.
+
+> [!NOTE]
+> The app now feels faster as unnecessary re-reads from storage are minimized by the new provider state management.

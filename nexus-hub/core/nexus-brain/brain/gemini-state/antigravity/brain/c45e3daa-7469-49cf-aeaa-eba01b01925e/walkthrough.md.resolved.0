@@ -1,0 +1,31 @@
+# Test Ortamı Düzeltme Özeti
+
+Test ortamının ("test üzerinde") açılmama sorunu başarıyla giderildi. Temel sorunlar Docker konteynır içi port yapılandırması ve eksik başlatma komutlarıydı.
+
+## Yapılan Değişiklikler
+
+### 1. Uygulama Başlatma Betiği (entrypoint.sh)
+`entrypoint.sh` dosyası daha önce boştu, bu da konteynırın hemen kapanmasına neden oluyordu. Dosya aşağıdaki komutlarla güncellendi:
+```bash
+#!/bin/bash
+exec python main.py
+```
+
+### 2. Port Yapılandırması (.env.test & .env.prod)
+Uygulama artık konteynır içerisinde her zaman **8000** portunu dinleyecek şekilde ayarlandı.
+- `.env.test` ve `.env.prod` dosyalarındaki `APP_PORT` değeri `8000` olarak değiştirildi.
+- Bu sayede `docker-compose.yml` içindeki `9600:8000` veya `9700:8000` eşlemeleri düzgün çalışacaktır.
+
+### 3. Docker Compose Standardizasyonu
+`docker-compose.yml` dosyasındaki varsayılan `HOST_PORT` değeri 9700 (Prod) olarak ayarlandı, ancak `deploy_deanos.sh` çalıştırıldığında seçilen ortama göre (test için 9600) otomatik ezilmeye devam edecektir.
+
+## Doğrulama Sonuçları
+`docker compose config` komutu ile yapılandırmanın doğruluğu teyit edildi:
+- **Test (9600) -> 8000** eşleşmesi aktif.
+- **Uygulama (App) -> 8000** portunu dinliyor.
+
+## Sonraki Adımlar
+Sunucuda (DeanOS) test ortamını yeniden başlatmak için şu komutu çalıştırabilirsiniz:
+```bash
+./deploy_deanos.sh test
+```

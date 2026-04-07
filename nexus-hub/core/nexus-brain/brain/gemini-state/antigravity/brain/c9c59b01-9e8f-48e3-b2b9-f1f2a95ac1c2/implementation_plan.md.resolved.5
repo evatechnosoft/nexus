@@ -1,0 +1,42 @@
+# Uyku ve Aktivite Analizi Entegrasyon Planı
+
+Bu plan, kullanıcının uyku verilerini (Derin/REM) görselleştirmeyi ve AI Antrenör kartındaki antrenman önerilerini daha dinamik hale getirmeyi hedefler.
+
+## User Review Required
+
+> [!IMPORTANT]
+> - Uyku verileri `HealthService` üzerinden Google Fit/Health Connect'ten çekilecektir.
+> - "Aktivite" kartı artık sadece statik yazı değil, gerçek kalp hızı ve tamamlanan egzersiz verilerini de içerecektir.
+
+## Proposed Changes
+
+### [Component] Data Service
+
+#### [MODIFY] [HealthService](file:///c:/projects/SportApp/mobile_app/lib/services/health_service.dart)
+- `fetchTodayStats` metodunu `sleep_deep`, `sleep_rem` ve `sleep_total` bilgilerini dönecek şekilde güncelle.
+
+### [Component] Dashboard UI
+
+#### [MODIFY] [DashboardScreen](file:///c:/projects/SportApp/mobile_app/lib/screens/dashboard_screen.dart)
+- **[NEW] `_buildSleepCard`**: Derin ve REM uykusunu gösteren, gece moduna uygun (koyu mor/lacivert tonlarda) bir kart ekle.
+- **[MODIFY] `_buildDynamicWidget`**: 'sleep' ID'sini destekle.
+- **[MODIFY] `_buildActivityCard`**: Egzersiz listesini ve kalp hızı verilerini `_stats` üzerinden canlı hale getir.
+
+### [Component] AppState
+
+#### [MODIFY] [AppState](file:///c:/projects/SportApp/mobile_app/lib/main.dart)
+- `dashboardOrder` listesine varsayılan olarak 'sleep' ekle.
+
+## Open Questions
+
+- Uyku kartını Dashboard'un neresinde görmek istersiniz? (Öneri: Kilo grafiğinin hemen üstü).
+- Antrenman önerileri için şu anlık basit bir "Push/Pull/Leg" döngüsü kurmamı ister misiniz?
+
+## Verification Plan
+
+### Automated Tests
+- `fetchTodayStats`'in uyku verilerini null döndürmediği (`0` olsa bile) doğrulanacak.
+
+### Manual Verification
+- Dashboard'da yeni "Uyku Analizi" kartının göründüğü ve verilerin (dakika cinsinden) doğru yansıdığı test edilecek.
+- Aktivite kartındaki BPM verisinin kalp hızıyla senkronize olduğu görülecek.

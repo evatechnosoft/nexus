@@ -1,0 +1,7 @@
+# Task Verification Checklist
+
+- [ ] Open http://localhost:5000/week/1
+- [ ] Verify dash '-' in phonetic brackets is amber/orange
+- [ ] Verify brackets '[' and ']' are pink
+- [ ] Capture screenshot of 'hello' card
+- [ ] Confirm results to user

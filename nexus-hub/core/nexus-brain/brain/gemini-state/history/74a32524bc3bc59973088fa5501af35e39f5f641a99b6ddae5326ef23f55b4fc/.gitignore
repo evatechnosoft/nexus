@@ -1,0 +1,8 @@
+node_modules/
+SESSION-LOG.md
+hero-variant-*.html
+.claude/
+.DS_Store
+*.log
+/tmp/
+img/photos/originals/

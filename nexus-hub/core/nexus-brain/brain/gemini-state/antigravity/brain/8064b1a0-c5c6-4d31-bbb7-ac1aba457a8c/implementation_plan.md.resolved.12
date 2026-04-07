@@ -1,0 +1,30 @@
+# Hybrid Premium Gauge Implementation
+
+Enhance the Analog gauges to match the high-end reference image provided by the user, featuring layered structures, glowing rings, and customizable inner digital displays.
+
+## Proposed Changes
+
+### [Component Name]
+#### [MODIFY] [speedometer_painter.dart](file:///c:/projects/claude+antigravity/projects/car_dash/lib/presentation/painters/speedometer_painter.dart)
+- Implement **Layered Backgrounds**: Outer neon ring, middle tick track with subtle depth, and central "hole".
+- Implement **Premium Needle**: Tapered design with a subtle gradient and a glowing hub.
+- Improve **Classic Variant**: Add high-density ticks and precise labeling.
+
+### [Component Name]
+#### [MODIFY] [futuristic_gauge.dart](file:///c:/projects/claude+antigravity/projects/car_dash/lib/presentation/widgets/futuristic_gauge.dart)
+- Support **Center Slot**: Allow conditional rendering of different digital metrics in the gauge center.
+- Add `centerMetric` property (e.g., speed, SOC, range).
+
+### [Component Name]
+#### [MODIFY] [gauge_mini_settings.dart](file:///c:/projects/claude+antigravity/projects/car_dash/lib/presentation/widgets/gauge_mini_settings.dart)
+- Add **Inner Display** selection: A sub-menu to choose what appears in the center of Analog gauges.
+
+## Verification Plan
+
+### Automated Tests
+- None (Visual UI focus).
+
+### Manual Verification
+- Deploy and verify the "Premium" look of the new Speedometer.
+- Toggle between Futuristic, Classic, and Neon variants to see the layered improvements.
+- Switch the central content (Inner Display) and verify it updates correctly.

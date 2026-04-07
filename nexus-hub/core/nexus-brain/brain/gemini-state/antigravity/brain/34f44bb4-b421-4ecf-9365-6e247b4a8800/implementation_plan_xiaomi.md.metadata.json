@@ -1,0 +1,6 @@
+{
+  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary": "Home Assistant için Xiaomi Home entegrasyonunun DeanOS sunucusuna yükleme planı. Repo klonlama, yükleme scriptinin çalıştırılması ve HA restart adımlarını içerir.",
+  "updatedAt": "2026-03-28T14:25:36.701274300Z",
+  "requestFeedback": true
+}

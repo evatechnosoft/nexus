@@ -1,0 +1,56 @@
+# Implementation Plan: Deploying IT Inventory to DeanOS
+
+This plan outlines the steps to replace the current IT Inventory installation on the DeanOS server (`192.168.1.186`) with the updated "premium" version from the local workspace.
+
+## User Review Required
+
+> [!IMPORTANT]
+> The deployment will involve restarting the `it-inventory` Docker container on the server. This will result in a brief downtime (approx. 30-60 seconds).
+>
+> [!WARNING]
+> We will be syncing the `/DATA/dean/projects/My-Personal-Repository/` directory on the server. A full backup will be created before any changes are applied.
+
+## Proposed Changes
+
+### Phase 1: Server Cleanup (Destructive)
+
+#### [TASK] Stop & Remove Container
+- SSH into DeanOS.
+## Deployment Plan
+
+1.  **Cleanup & Sync (Local):** Verify local files are clean and in sync with `main`.
+2.  **Server Preparation (DeanOS):**
+    *   Clean up existing project directory and container on `192.168.1.186`.
+    *   Clone the repository to `/DATA/dean/projects/My-Personal-Repository/`.
+3.  **Deployment (DeanOS):**
+    *   Navigate to `/DATA/dean/projects/My-Personal-Repository/`.
+    *   Set correct permissions: `sudo chown -R dean:samba .`.
+    *   Run build: `sudo docker compose up -d --build it-inventory`.
+4.  **Verification:**
+    *   Confirm container is running: `sudo docker ps`.
+    *   Test "Add New Device" and "Add Request" buttons.
+
+## UI Responsiveness Investigation
+
+> [!IMPORTANT]
+> The user reports that the "Add New Device" and "Add Request" buttons are unresponsive.
+
+1.  **Check for JS Errors:** Inspect the browser console for script loading failures or runtime errors.
+2.  **Verify Script Inclusion:** Ensure Bootstrap and local scripts are correctly loaded in `base.html`.
+3.  **Analyze Z-Index/Overlays:** Check if the premium glassmorphism effects (e.g., `.bg-glow`, high navbar z-index) are unintentionally blocking clicks.
+4.  **Test in Container Environment:** Verify if the issue is specific to the production environment (deployment issues) or present in the local codebase.
+
+## Open Questions
+
+- Are there any specific database migrations we need to be aware of? (Currently, the app uses SQLite/SQLAlchemy with `Base.metadata.create_all`, which should handle additions automatically).
+- Do you want me to keep the existing `data/` folder (database, etc.) or reset it? (Plan assumes keeping it).
+
+## Verification Plan
+
+### Automated Verification
+- Check container logs on the server: `sudo docker logs it-inventory`
+- Verify the container status: `sudo docker ps | grep it-inventory`
+
+### Manual Verification
+- Access the `it-inventory` UI via the browser (internal IP or Cloudflare tunnel).
+- **CRITICAL**: Test the "Add New Device" and "Add Request" buttons to ensure the glassmorphism UI is fully functional and responsive (verified fix for the previous "unresponsive buttons" issue).

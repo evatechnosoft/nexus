@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_OTHER",
+  "summary": "ZimaOS/DeanOS üzerinde Docker dağıtımı, port çakışmaları ve e-posta ayrıştırma (parsing) süreçlerinde karşılaşılan hatalar ve bunların kalıcı çözüm yöntemleri. Bu döküman, benzer bir ortamda tekrarlanan hataları önlemek için bir 'Knowledge Item' (KI) niteliğindedir.",
+  "updatedAt": "2026-03-28T17:23:52.306884600Z"
+}

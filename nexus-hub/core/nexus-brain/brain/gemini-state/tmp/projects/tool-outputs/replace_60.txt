@@ -1,0 +1,9 @@
+<tool_output_masked>
+{
+  "output": "Successfully modified file: C:\\projects\\agentops-nexus\\scripts\\discovery.py (1 replacements). Here is the updated code:\nimport os\nimport sys\nimport logging\n\n# Proje kok dizinini Python yoluna ekle\nsys.path.append(os.path.dirn
+... [TRUNCATED] ...
+ase import engine\n    models.Base.metadata.create_all(bind=engine)\n    \n    db = SessionLocal()\n    try:\n        discover_projects(db)\n        discover_skills(db)\n        log.info(\"Discovery complete.\")\n    finally:\n        db.close()\n"
+}
+
+Output too large. Full output available at: C:\Users\Deacjx\.gemini\tmp\projects\tool-outputs\session-a366de38-25fd-4d3a-9bce-f8a0bc9646e6\replace_replace_1775210786709_0_9wq5fi.txt
+</tool_output_masked>

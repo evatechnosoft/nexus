@@ -1,0 +1,28 @@
+# Plan: Add Game Development Skills
+
+The goal is to provide the user with relevant game development skills from the central skills repository and integrate them into the project workspace `c:/projects/Antigravity/EvaGames/evario`.
+
+## Proposed Changes
+
+### Project Structure
+- [NEW] `.agents/skills` directory to store project-specific skills.
+
+### Skills to be Added
+I have identified the following relevant skills. I will ask the user to choose which one(s) to add:
+
+- **game-development**: General principles, routing to specific sub-skills, game loop, and performance strategies.
+- **unity-developer**: Deep expertise in Unity engine, C# scripting, and ECS.
+- **unreal-engine-cpp-pro**: Advanced C++ patterns for Unreal Engine development.
+- **godot-gdscript-patterns**: Best practices for Godot and GDScript.
+- **bevy-ecs-expert**: For those interested in the Rust-based Bevy engine and ECS architecture.
+- **threejs-fundamentals**: Web-based 3D development with Three.js.
+
+## Implementation Steps
+1. Create `.agents/skills` directory in `c:/projects/Antigravity/EvaGames/evario`.
+2. Copy the content of the selected skill(s) from `c:/projects/Antigravity/skills/` to the new directory.
+3. Verify that the files are correctly copied.
+
+## Verification Plan
+### Manual Verification
+- Verify the existence of the `.agents/skills` directory and its contents in the project folder.
+- List the files in the new directory to ensure everything was copied correctly.

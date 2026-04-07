@@ -1,0 +1,25 @@
+# Scribd Download Walkthrough
+
+I have successfully downloaded the requested Scribd document using the `scribd-dl` tool.
+
+## Steps Taken
+1. **Repository Setup**: Cloned `https://github.com/rkwyu/scribd-dl` and installed dependencies.
+2. **Environment Configuration**: Configured Puppeteer to use the local Chrome installation at `C:\Program Files\Google\Chrome\Application\chrome.exe`.
+3. **Execution**: Ran the download tool with the URL `https://www.scribd.com/document/761207887/English-Code-1-Phonics-Book`.
+4. **Result**: The document was processed and saved as a PDF.
+
+## Produced Artifacts
+- **PDF 1**: [English-Code-1-Phonics-Book.pdf](file:///C:/Users/Deacjx/.gemini/antigravity/scratch/scribd-dl/output/English-Code-1-Phonics-Book.pdf)
+- **PDF 2**: [English-Code-BrE-L2-Picture-Card-Animation.pdf](file:///C:/Users/Deacjx/.gemini/antigravity/scratch/scribd-dl/output/English-Code-BrE-L2-Picture-Card-Animation.pdf)
+- **PDF 3**: [English-Code-4-Programacion-Aula.pdf](file:///C:/Users/Deacjx/.gemini/antigravity/scratch/scribd-dl/output/English-Code-4-Programacion-Aula.pdf)
+
+## Easier Downloading
+I have created a PowerShell script `download.ps1` to make downloading documents easier.
+
+### How to use:
+1. Open PowerShell and navigate to the `scribd-dl` directory.
+2. Run the script:
+   - **Method 1 (Argument):** `.\download.ps1 -Url "https://www.scribd.com/..."`
+   - **Method 2 (Interactive):** `.\download.ps1` (it will ask you to paste the URL).
+
+The script automatically sets the necessary environment variables for you.

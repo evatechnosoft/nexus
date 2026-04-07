@@ -1,0 +1,22 @@
+# Enhanced Turkish & Table Support Plan
+
+Improve the email parsing reliability for Turkish HTML tables and provide a random test data generator to verify high-volume processing.
+
+## 1. Parser Refinements ([email_parser.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/email_parser.py))
+- **Turkish Characters**: Ensure all regexes use `[A-ZÇĞİÖŞÜa-zçğıöşü]` for name detection.
+- **Table Label Matching**: Added `Çalışan Adı`, `Aday Adı`, `Kişi` as alternatives for name labels.
+- **Restrictive Captures**: Improve the `name` regex to stop at 1-3 words (handling "Tuğret" or "Ahmet Yılmaz") and NOT bleed into keywords like "Departman".
+- **Horizontal Table Support**: Preliminary support for finding values on the next line if the label line is empty.
+
+## 2. HTML Stripping ([email_watcher.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/email_watcher.py))
+- **Cell Separation**: Refine [_strip_html](file:///c:/projects/it-inventory/it-inventory/inventory_app/email_watcher.py#130-143) to replace `</td><td>` with `: ` to turn table rows into `Label: Value` strings.
+- **Line Preservation**: Maintain `\n` for `</tr>`, `<p>`, `<div>` to ensure line-based parsing remains accurate.
+
+## 3. Random Test Generator (`send_random_tests.py`)
+- **Faker-like Logic**: Create a script to generate random Turkish names, emails, and phone numbers.
+- **HTML Table Generation**: Send these requests as HTML tables to the `EXCHANGE_EMAIL`.
+- **Batch Processing**: Send 3-5 requests at once to verify system stability.
+
+## 4. Database Cleanup
+- **Boss Data Removal**: Delete any accidental records containing the user's boss name ("Eray Karakullukçu").
+- **State Reset**: Clear `processed_emails` to re-test the latest formats.

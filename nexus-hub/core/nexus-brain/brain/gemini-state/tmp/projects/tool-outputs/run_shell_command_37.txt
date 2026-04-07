@@ -1,0 +1,10 @@
+Output: Traceback (most recent call last):
+  File "C:\projects\agentops-nexus\main.py", line 15, in <module>
+    from routers import inventory, requests, assignments, departments, ops
+  File "C:\projects\agentops-nexus\routers\requests.py", line 10, in <module>
+    import email_watcher
+  File "C:\projects\agentops-nexus\email_watcher.py", line 26, in <module>
+    from inventory_score import rank_devices
+ModuleNotFoundError: No module named 'inventory_score'
+Exit Code: 1
+Process Group PGID: 41488

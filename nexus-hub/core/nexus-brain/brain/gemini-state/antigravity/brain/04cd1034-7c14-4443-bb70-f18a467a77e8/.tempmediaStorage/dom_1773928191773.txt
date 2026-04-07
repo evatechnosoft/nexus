@@ -1,0 +1,129 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (127,42)<a class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge IconButtonBase-module_wrapper_6zbMGy SoftButton-module_wrapper_G6z4vn SoftButton-module_default_EF-egQ ScribdTopBar-module_hamburger__C9NjV IconButtonBase-module_large_hJBmho' href='#sidebar' />
+	Open navigation menu
+[1] (181,42)<a class='ScribdTopBar-module_logo__AsKt6' href='/' />
+	[2] (181,42)<img  />
+[3] (366,41)<label >Search />
+	Search
+	[4] (366,42)<input class='SearchForm-module_searchInput__l73oF SearchForm-module_searchInputScribd__Up4Ft' id='header_search_input' placeholder='Search' role='combobox' />
+[5] (451,42)<button class='TextButton-module_wrapper__ZwW-w TextButton-module_default__ekglb SearchForm-module_clearButton__ggRgX SearchForm-module_clearButtonScribd__XJbMU' />
+	[6] (451,42)<span  />
+		[7] (451,42)<span >Clear search />
+			[8] (451,42)<span  />
+			Clear search
+[9] (481,42)<button class='TextButton-module_wrapper__ZwW-w TextButton-module_default__ekglb SearchForm-module_searchButton__4f-rn no_spinner' />
+	[10] (477,42)<span  />
+		[11] (477,42)<span >Search />
+			[12] (477,42)<span  />
+			Search
+[13] (569,42)<button class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge SoftButton-module_wrapper_G6z4vn DropdownTrigger-module_wrapper_-Xf-At LanguageDropdown-module_menuHandle__PCSMM SoftButton-module_default_EF-egQ ButtonShared-module_small_h7nQ0w SoftButton-module_withIcon_OBSH-T' id='ldhandle' />
+	en
+	Change Language
+[14] (632,42)<a class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge SoftButton-module_wrapper_G6z4vn SoftButton-module_default_EF-egQ ButtonShared-module_small_h7nQ0w SoftButton-module_withIcon_OBSH-T' href='/upload-document' />
+	Upload
+[15] (698,42)<button class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge SoftButton-module_wrapper_G6z4vn DropdownTrigger-module_wrapper_-Xf-At SoftButton-module_default_EF-egQ ButtonShared-module_small_h7nQ0w SoftButton-module_withIcon_OBSH-T' id='udhandle' />
+	Sign in
+[16] (813,42)<button class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge AccentButton-module_wrapper_W6vQ8z ScribdTopBar-module_cta__AnzYq SubscribeCTAButton-module_wrapper__lDIgE SubscribeCTAButton-module_en-US__W29KM AccentButton-module_default_4Uc-A6 ButtonShared-module_large_DzeAnG' />
+	Download free for 30 days
+Skip carousel
+Filter Options
+Filter by Category: current selection
+[17] (152,142)<button class='_1b_4BL DropdownTrigger-module_wrapper_-Xf-At _3mbAWk' id='radix-6'>Category />
+Filter by Length: current selection
+[18] (230,142)<button class='_1b_4BL DropdownTrigger-module_wrapper_-Xf-At _3mbAWk' id='radix-7'>Length />
+Filter by File type: current selection
+[19] (306,142)<button class='_1b_4BL DropdownTrigger-module_wrapper_-Xf-At _3mbAWk' id='radix-8'>File type />
+Filter by Date uploaded: current selection
+[20] (399,142)<button class='_1b_4BL DropdownTrigger-module_wrapper_-Xf-At _3mbAWk' id='radix-9'>Date uploaded />
+Filter by Language: current selection
+[21] (495,142)<button class='_1b_4BL DropdownTrigger-module_wrapper_-Xf-At _3mbAWk' id='radix-10'>Language />
+Clear all
+82,119 results for “Pearson English Code Pupil's Book”
+[22] (853,231)<div  />
+	[23] (838,231)<button class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge IconButtonBase-module_wrapper_6zbMGy _1OUc_Z _1E4wx2 _2dhXTW IconButtonBase-module_large_hJBmho' />
+	[24] (868,231)<button class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge IconButtonBase-module_wrapper_6zbMGy _1OUc_Z _1E4wx2 _10YUxf IconButtonBase-module_large_hJBmho' />
+[25] (500,422)<li  />
+	[26] (500,422)<article  />
+		[27] (500,422)<a class='ListItem-module_linkOverlay__H60l3' href='https://www.scribd.com/document/516816855/Roadmap-B2-Student-s-Book-Answer-Keys-2020'>Roadmap B2. Student's Book Answer Keys - 2020 />
+			Roadmap B2. Student's Book Answer Keys - 2020
+		80%
+		(
+		70
+		)
+		214K views
+		47 pages
+		[28] (524,382)<a class='ButtonCore-module_wrapper_MkTb9s TextButton-module_wrapper_ZwW-wM TextButton-module_default_ekglbr Title-module_wrapper__JyBs6 Document-module_title__PFDfb' href='https://www.scribd.com/document/516816855/Roadmap-B2-Student-s-Book-Answer-Keys-2020' />
+			[29] (364,382)<span  />
+				[30] (364,382)<span  />
+					[31] (364,382)<h3 >Roadmap B2. Student's Book Answer Keys - 2020 />
+		Description
+		Roadmap: British English | 8 Levels | A1 - C1 Roadmaps rich content and flexible organisation allows teachers to personalise their lessons to give learners the specific language training they need to progress. The right route for every learner Roadmap is a new, eight-level general English course for adults that recognises every class is different, every learner is unique.
+		[32] (524,503)<div  />
+			[33] (301,503)<div  />
+				[34] (301,503)<div >Uploaded by />
+					Uploaded by
+					[35] (295,502)<a class='SingleAuthorByline-module_singleAuthorLink__pUULL SingleAuthorByline-module_documentAuthorLink__dXwMI' href='/users/518758372'>Sir Charles />
+					on July 22, 2021
+			[36] (519,503)<div  />
+				[37] (453,503)<a class='wrapper__text_button ContentTag-module_wrapper__mQN8o CategoryContentTags-module_contentTagItem__u220T ContentSection-module_categoryTags__ZYyJC ContentSection-module_categoryTagsScribd__DogZ- ContentTag-module_outline__Mtf4y' href='https://www.scribd.com/docs/Study-Aids-Test-Prep'>Study Aids & Test Prep />
+				[38] (578,503)<a class='wrapper__text_button ContentTag-module_wrapper__mQN8o CategoryContentTags-module_contentTagItem__u220T ContentSection-module_categoryTags__ZYyJC ContentSection-module_categoryTagsScribd__DogZ- ContentTag-module_outline__Mtf4y' href='https://www.scribd.com/docs/Study-Aids-Test-Prep/Study-Test-Taking-Skills'>Study & Test-Taking Skills />
+		[39] (848,344)<div  />
+			[40] (835,344)<div  />
+				[41] (835,344)<button class='TextButton-module_wrapper__ZwW-w TextButton-module_default__ekglb DownloadButton-module_downloadButton__yR8-x' />
+					[42] (835,344)<span  />
+						[43] (835,344)<span  />
+							[44] (835,344)<span  />
+			[45] (856,344)<div  />
+				[46] (856,344)<button class='PrimaryFunctionButton-module_wrapper__c70e3 PrimaryFunctionButton-module_default__fux4y PrimaryFunctionButton-module_l__QlRLS' role='button'>Save Roadmap B2. Student's Book Answer Keys - 2020 for later />
+					[47] (856,344)<span  />
+					Save Roadmap B2. Student's Book Answer Keys - 2020 for later
+[48] (500,718)<li  />
+	[49] (500,718)<article  />
+		[50] (500,718)<a class='ListItem-module_linkOverlay__H60l3' href='https://www.scribd.com/document/839574132/Pearson-English-Code-ESP'>English Code: Aprendizaje Divertido de Inglés />
+			English Code: Aprendizaje Divertido de Inglés
+		0 ratings
+		0 views
+		11 pages
+		[51] (524,678)<a class='ButtonCore-module_wrapper_MkTb9s TextButton-module_wrapper_ZwW-wM TextButton-module_default_ekglbr Title-module_wrapper__JyBs6 Document-module_title__PFDfb' href='https://www.scribd.com/document/839574132/Pearson-English-Code-ESP' />
+			[52] (352,678)<span  />
+				[53] (352,678)<span  />
+					[54] (352,678)<h3 >English Code: Aprendizaje Divertido de Inglés />
+		Description
+		Pearson Education, en colaboración con el BRITÁNICO, busca hacer el aprendizaje de un segundo idioma, como el inglés, divertido y efectivo para los niños a través de su programa English Code. Este programa se centra en desarrollar habilidades lingüísticas y habilidades del futuro, como la creatividad, la comunicación, el pensamiento crítico y la colaboración. Además, se promueve el aprendizaje digital mediante la plataforma Pearson English Portal, facilitando el acceso a materiales educativos en línea.
+		[55] (313,794)<div  />
+			[56] (313,794)<div >Uploaded by />
+				Uploaded by
+				[57] (302,793)<a class='SingleAuthorByline-module_singleAuthorLink__pUULL SingleAuthorByline-module_documentAuthorLink__dXwMI' href='/users/846988713'>oremoisescruz />
+				on March 15, 2025
+		[58] (848,640)<div  />
+			[59] (835,640)<div  />
+				[60] (835,640)<button class='TextButton-module_wrapper__ZwW-w TextButton-module_default__ekglb DownloadButton-module_downloadButton__yR8-x' />
+					[61] (835,640)<span  />
+						[62] (835,640)<span  />
+							[63] (835,640)<span  />
+			[64] (856,640)<div  />
+				[65] (856,640)<button class='PrimaryFunctionButton-module_wrapper__c70e3 PrimaryFunctionButton-module_default__fux4y PrimaryFunctionButton-module_l__QlRLS' role='button'>Save English Code: Aprendizaje Divertido de Inglés for later />
+					[66] (856,640)<span  />
+					Save English Code: Aprendizaje Divertido de Inglés for later
+Pupil's Book: School and Activities Guide
+0 ratings
+0 views
+20 pages
+[67] (339,974)<span  />
+	[68] (339,974)<span  />
+		[69] (339,974)<h3 >Pupil's Book: School and Activities Guide />
+[70] (848,935)<div  />
+	[71] (835,935)<div  />
+		[72] (835,935)<button class='TextButton-module_wrapper__ZwW-w TextButton-module_default__ekglb DownloadButton-module_downloadButton__yR8-x' />
+			[73] (835,935)<span  />
+				[74] (835,935)<span  />
+					[75] (835,935)<span  />
+	[76] (856,935)<div  />
+		[77] (856,935)<button class='PrimaryFunctionButton-module_wrapper__c70e3 PrimaryFunctionButton-module_default__fux4y PrimaryFunctionButton-module_l__QlRLS' role='button'>Save Pupil's Book: School and Activities Guide for later />
+			[78] (856,935)<span  />
+			Save Pupil's Book: School and Activities Guide for later
+
+</current_dom>

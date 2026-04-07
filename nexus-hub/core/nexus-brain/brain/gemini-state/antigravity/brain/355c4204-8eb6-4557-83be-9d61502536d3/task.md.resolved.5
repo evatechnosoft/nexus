@@ -1,0 +1,17 @@
+# Task: Fix Azure DevOps Pipeline Deployment
+
+- [x] Analyze pipeline configuration and identify errors
+    - [x] Review [azure-pipelines-1.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-1.yml)
+    - [x] Review [azure-pipelines.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines.yml)
+    - [x] Check [package.json](file:///c:/projects/Layers/LayersupCom_v2/package.json) and app structure
+    - [x] Identify "No package found" error source (Classic Release vs YAML)
+- [x] Create implementation plan to fix deployment issues
+- [x] Update pipeline configuration
+    - [x] Correct `package` path to `$(Pipeline.Workspace)/**/*.zip` in YAML
+    - [x] Update `runtimeStack` to canonical format
+    - [x] Advise user on matching changes for Classic Release if used
+- [x] Push changes to `dev` branch
+    - [x] Create/checkout `dev` branch
+    - [x] Commit changes
+    - [x] Push to origin
+- [x] Provide walkthrough and verify with user

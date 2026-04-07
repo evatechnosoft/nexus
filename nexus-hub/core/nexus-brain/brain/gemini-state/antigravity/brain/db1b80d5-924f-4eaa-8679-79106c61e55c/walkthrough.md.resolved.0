@@ -1,0 +1,42 @@
+# Walkthrough: AI Nutri-Chat & Meal Scanner 🥗
+
+Uygulamaya, yemek fotoğraflarını interaktif bir şekilde analiz eden ve günlük beslenme hedeflerine yansıtan **"AI Nutri-Chat"** özelliğini ekledim.
+
+## 🚀 Yeni Özellikler
+
+### 📸 AI Nutri-Scan Butonu
+"BESLENME" sekmesine eklenen yeni buton ile fotoğraf yükleyerek analiz başlatabilirsiniz.
+
+### 🤖 İnteraktif Chat Arayüzü
+Fotoğraf yüklediğinizde devreye giren modern bir sohbet penceresi:
+- **Typing Indicator**: AI'nın "düşündüğünü" simüle eden animasyon.
+- **Analiz Kartları**: Kalori, Protein, Karbonhidrat ve Yağ değerlerini şık bir kart formatında sunar.
+- **Gerçek Zamanlı Güncelleme**: Onaylanan yemekler anında "Özet (Summary)" paneline yansır.
+
+### 📊 Akıllı Hesaplama
+Artık günlük protein ve kalori çubuklarınız sadece sabit plandan değil, AI asistanı ile eklediğiniz özel öğünlerden de besleniyor.
+
+## 🛠️ Teknik Değişiklikler
+
+### [index.html](file:///c:/projects/SportApp/public/index.html)
+- `tab-meals` bölümüne "AI Nutri-Scan" butonu eklendi.
+- `chat-overlay` yapısı oluşturuldu.
+
+### [style.css](file:///c:/projects/SportApp/public/style.css)
+- **Glassmorphism**: Arka planı bulanıklaştıran lüks chat penceresi tasarımı.
+- **Animations**: Mesaj balonları ve yükleme göstergesi için yumuşak geçişler.
+
+### [app.js](file:///c:/projects/SportApp/public/app.js)
+- `S.loggedMeals`: Kullanıcının taradığı yemekleri saklayan yeni veri yapısı.
+- `updateSummary()`: Hibrit hesaplama mantığı (Plan + AI Kayıtları).
+- `handleMealPhoto()`: Dosya okuma ve chat simülasyonu mantığı.
+
+## 🧪 Nasıl Denenir?
+1. Uygulamayı tarayıcıda açın (Port 3002).
+2. **BESLENME** sekmesine tıklayın.
+3. **📸 AI Nutri-Scan** butonuna basın ve bir yemek fotoğrafı seçin.
+4. Chat ekranındaki analizi bekleyin ve **"Onayla ve Kaydet"** butonuna basın.
+5. Ana sayfadaki **Özet** panelinde değerlerin yükseldiğini görün!
+
+> [!TIP]
+> Şimdilik mock veri (Tavuk & Pilav verisi) kullanılmıştır. Gelecekte gerçek bir Vision API ile tam entegrasyon sağlanabilir.

@@ -1,0 +1,73 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Email:
+[0] (231,21)<a href='mailto:info@pdfcoffee.com'>info@pdfcoffee.com />
+[1] (672,21)<a href='https://pdfcoffee.com/login'>Login />
+	[2] (659,21)<i  />
+[3] (729,21)<a href='https://pdfcoffee.com/register'>Register />
+	[4] (711,21)<i  />
+[5] (821,21)<span >English />
+[6] (66,82)<a class='navbar-brand mx-0' href='https://pdfcoffee.com/' />
+	[7] (66,82)<img  />
+[8] (351,82)<a class='nav-link text-white' href='https://pdfcoffee.com/'>Home />
+	[9] (336,81)<i  />
+[10] (431,82)<a class='nav-link text-white dropdown-toggle' href='#Categories' id='dropdowncategories'>Top Categories />
+	[11] (394,81)<i  />
+[12] (521,82)<a class='nav-link text-white' href='https://pdfcoffee.com/top-stories'>Top stories />
+	[13] (497,81)<i  />
+[14] (600,82)<a class='nav-link text-white' href='https://pdfcoffee.com/best-stories'>Best stories />
+	[15] (574,81)<i  />
+[16] (676,82)<a class='nav-link text-white' href='https://pdfcoffee.com/publish'>Add Story />
+	[17] (653,81)<i  />
+[18] (748,82)<a class='nav-link text-white' href='https://pdfcoffee.com/documents'>My Stories />
+	[19] (725,81)<i  />
+We are processing your document
+English-Code 6 SB PDF
+.
+Please wait until the download start.
+[20] (500,533)<a class='btn btn-lg btn-success' href='https://toaz.info/docgeneratev2/?fileurl=https%3A%2F%2Fdl3.pdfcoffee.com%2Fdlapi%2Fenglish-code-6-sb-pdf-pdf-free.html&title=English-Code+6+SB+PDF&utm_source=pdfcoffee&utm_medium=queue&utm_campaign=english-code-6-sb-pdf&p=zE6YvZoD%2BXlHmn30KdxlAQ%3D%3D'>DOWNLOAD PDF BY VIEWER />
+	[21] (403,533)<i  />
+29
+seconds download finish.
+[22] (500,691)<a class='btn btn-lg btn-facebook' href='https://compress-pdf.emapnet.com/?fileurl=https%3A%2F%2Fdl10.pdfcoffee.com%2Fdlapi%2Fenglish-code-6-sb-pdf-pdf-free.html&title=English-Code+6+SB+PDF&utm_source=pdfcoffeeCompress&utm_medium=queue&utm_campaign=english-code-6-sb-pdf&p=zE6YvZoD%2BXlHmn30KdxlAQ%3D%3D'>DOWNLOAD PDF (Mirror Link) />
+	[23] (401,691)<i  />
+[24] (318,987)<a class='d-block shadow p-3' href='https://pdfcoffee.com/sb-pdf-3-pdf-free.html' />
+	[25] (318,987)<div  />
+		[26] (189,987)<div  />
+			[27] (189,983)<div  />
+				[28] (189,983)<img  />
+		[29] (361,987)<div  />
+			[30] (361,851)<h6 >SB PDF />
+			[31] (248,898)<span  />
+				[32] (248,897)<em >1 />
+					[33] (246,897)<i  />
+			[34] (268,898)<span  />
+				[35] (268,897)<em >0 />
+					[36] (264,897)<i  />
+			[37] (296,898)<span  />
+				[38] (296,897)<em >37MB />
+					[39] (284,897)<i  />
+			[40] (444,910)<span >Read more />
+[41] (682,987)<a class='d-block shadow p-3' href='https://pdfcoffee.com/sb-6-vatech-pdf-free.html' />
+	[42] (682,987)<div  />
+		[43] (553,987)<div  />
+			[44] (553,983)<div  />
+				[45] (553,983)<img  />
+		[46] (725,987)<div  />
+			[47] (725,851)<h6 >Sb 6 VATECH />
+			[48] (725,922)<p >SB6 Circuit-Breaker Design
+
+Technical information – 3d edition - 19 jan 00
+
+TC/INT- Battaglia Terme Unit + PM
+
+1
+
+ 1.1 D />
+			139
+			41
+			685KB
+
+</current_dom>

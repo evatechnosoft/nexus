@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary": "Implementation plan to fix backend problems related to database compatibility, migration scripts, and model consistency.",
+  "updatedAt": "2026-03-22T07:23:42.728344900Z"
+}

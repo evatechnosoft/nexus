@@ -1,0 +1,9 @@
+# Verification Plan - Evario Odyssey Enhancements
+
+- [ ] Open http://localhost:5173/
+- [ ] Verify ground is grass/soil (green/brown)
+- [ ] Verify pits are lava/mud
+- [ ] Verify floating platforms are clouds
+- [ ] Verify transparency of assets
+- [ ] Verify falling into lava resets position
+- [ ] Capture findings and recording (automatic)

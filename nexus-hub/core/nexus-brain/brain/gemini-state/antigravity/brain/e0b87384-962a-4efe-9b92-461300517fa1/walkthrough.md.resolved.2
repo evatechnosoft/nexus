@@ -1,0 +1,30 @@
+# API ve Veritabanı (DB) Alt Alan Adı Rehberi
+
+API ve Veritabanı yönetimini senin için güvenli ve modern bir yapıya oturttuk.
+
+## 1. Veritabanı Yönetimi (`db.evaitec.com.tr`)
+Güvenlik nedeniyle 5432 (PostgreSQL) portunu tüm internete açmak yerine, CasaOS'daki **Adminer** veritabanı yönetim panelini kullanacağız.
+
+**Cloudflare Kurulum Adımı (Public Hostname):**
+- **Subdomain:** `db` 
+- **Domain:** `evaitec.com.tr`
+- **Service:** `HTTP` -> `localhost:8080`
+
+Bu ayarı yaptıktan sonra `db.evaitec.com.tr` adresine girerek Adminer arayüzü üzerinden PostgreSQL veritabanını görsel bir şekilde yönetebilirsin. Giriş yaparken sunucu olarak `localhost` veya `postgresql` IP numarasını kullanabilirsin.
+
+## 2. API Ortamı (`api.evaitec.com.tr`)
+[flask-app/src/app.py](file:///c:/projects/github/casaos-home-server/flask-app/src/app.py) içerisine PostgreSQL bağlantılı, **SQLAlchemy** kullanan modern bir REST API taslağı yazdım.
+
+**Cloudflare Kurulum Adımı (Public Hostname):**
+- **Subdomain:** `api`
+- **Domain:** `evaitec.com.tr`
+- **Service:** `HTTP` -> `localhost:5005` (Prod Ortamı)
+
+**Hazır Gelen Örnek Endpoint'ler:**
+*   `GET /api/status` : API'nin ve veritabanının ayakta olup olmadığını kontrol eder.
+*   `GET /api/users` : Veritabanındaki "users" (kullanıcılar) tablosundaki tüm verileri JSON olarak çeker.
+*   `POST /api/users` : Gövdesinde `{"username": "test", "email": "test@test.com"}` JSON verisi yollayarak veritabanına yeni kullanıcı eklemeni sağlar.
+
+## API'yi Geliştirmeye Devam Etmek 
+*   `flask-app` klasöründe iken `docker compose up -d` API'yi çalıştırır.
+*   Sen yeni kütüphaneler eklemek istersen [requirements.txt](file:///c:/projects/github/casaos-home-server/flask-app/requirements.txt) dosyasını güncelleyip ardından `docker compose up -d --build` demen yeterlidir.

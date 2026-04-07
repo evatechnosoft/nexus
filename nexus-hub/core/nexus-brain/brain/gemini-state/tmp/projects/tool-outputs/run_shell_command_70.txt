@@ -1,0 +1,28 @@
+<tool_output_masked>
+Output: [feature/ops-discovery (root-commit) 4e2f8be] Initial Clean Commit - AgentOps Nexus Base
+ 27 files changed, 3681 insertions(+)
+ create mode 100644 .env.template
+ create mode 100644 .gitignore
+ create mode 100644 database.py
+ create mode 100644 email_watcher.py
+ create mode 100644 graph_watcher.py
+ create mode 100644 main.py
+ create mode 100644 models.py
+ create mode 100644 requirements.txt
+
+... [11 lines omitted] ...
+
+ create mode 100644 templates/dashboard_ops.html
+ create mode 100644 templates/departments.html
+ create mode 100644 templates/email_queue.html
+ create mode 100644 templates/excel_import.html
+ create mode 100644 templates/inventory.html
+ create mode 100644 templates/request_detail.html
+ create mode 100644 templates/requests.html
+ create mode 100644 templates/shipment.html
+Switched to branch 'dev'
+Switched to a new branch 'feature/ops-discovery'
+Process Group PGID: 24524
+
+Output too large. Full output available at: C:\Users\Deacjx\.gemini\tmp\projects\tool-outputs\session-a366de38-25fd-4d3a-9bce-f8a0bc9646e6\run_shell_command_run_shell_command_1775210539362_0_qq8us.txt
+</tool_output_masked>

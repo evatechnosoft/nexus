@@ -1,0 +1,9 @@
+# Task: Extract English Speech Synthesis Voices
+
+## Plan
+1. [ ] Open `http://localhost:5000/week/1`
+2. [ ] Execute `speechSynthesis.getVoices()` in the console
+3. [ ] If list is empty, wait and retry
+4. [ ] Extract English (en-US, en-GB) voices
+5. [ ] Identify gender (Male/Female) based on keywords
+6. [ ] Return the list of available English voices

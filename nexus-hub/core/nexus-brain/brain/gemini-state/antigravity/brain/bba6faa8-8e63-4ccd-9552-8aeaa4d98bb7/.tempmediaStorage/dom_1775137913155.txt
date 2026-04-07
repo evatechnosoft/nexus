@@ -1,0 +1,27 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Welcome to AdGuard Home!
+AdGuard Home is a network-wide ad-and-tracker blocking DNS server. Its purpose is to let you control your entire network and all your devices, and it does not require using a client-side program.
+[0] (500,315)<button class='btn btn-success btn-lg setup__button'>Get Started />
+Step
+1
+/
+5
+[1] (201,912)<a class='footer__link' href='https://github.com/AdguardTeam/AdGuardHome'>Homepage />
+[2] (253,912)<a class='footer__link' href='https://link.adtidy.org/forward.html?action=privacy&from=ui&app=home'>Privacy Policy />
+[3] (314,912)<a class='footer__link btn btn-outline-primary btn-sm footer__link--report' href='https://github.com/AdguardTeam/AdGuardHome/issues/new/choose'>Report an issue />
+[4] (651,912)<button class='btn btn-sm btn-secondary footer__theme-button' title='Auto (based on the color scheme of your device)' />
+[5] (673,912)<button class='btn btn-sm btn-secondary footer__theme-button' title='Dark theme' />
+[6] (695,912)<button class='btn btn-sm btn-secondary footer__theme-button' title='Light theme' />
+[7] (767,912)<select class='form-control select select--language' />
+Copyright
+©
+2026
+[8] (260,973)<a href='https://link.adtidy.org/forward.html?action=home&from=ui&app=home'>AdGuard />
+Version
+:
+v0.107.73
+
+</current_dom>

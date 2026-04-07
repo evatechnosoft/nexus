@@ -1,0 +1,49 @@
+# Local Development & SSH Walkthrough
+
+## 1. Local Development (Windows - Flask)
+- **API (Backend)**: `localhost:5010` (CORS and queries enabled)
+- **Prod (Frontend)**: `localhost:5005`
+- **Dev (Hot Reload)**: `localhost:5007`
+- **Database**: Local Postgres container (`flask-db`) - Connects to `evanotes` database.
+- **Verification**: All containers started successfully.
+
+## 2. Remote Access (DeanOS)
+
+###| Servis | Port | Önerilen Subdomain |
+| :--- | :--- | :--- |
+| **Dashboard** | 80 | `home.evaitec.com.tr` |
+| **Sonarr** | 35419 | `sonarr.evaitec.com.tr` |
+| **Radarr** | 40199 | `radarr.evaitec.com.tr` |
+| **Prowlarr** | 32885 | `prowlarr.evaitec.com.tr` |
+| **Jackett** | 9117 | `jackett.evaitec.com.tr` |
+| **qBittorrent** | 8088 | `qb.evaitec.com.tr` |
+| **Deluge** | 8112 | `deluge.evaitec.com.tr` |
+| **Plex** | 32400 | `plex.evaitec.com.tr` |
+| **Flask API** | 5005 | `api.evaitec.com.tr` |
+| **Flask Prod** | 5010 | `app.evaitec.com.tr` |
+| **Flask Dev** | 5007 | `dev.evaitec.com.tr` |
+
+### Connection String
+```text
+postgresql://casaos:casaos@192.168.1.163:5432/evanotes
+```
+
+### SSH Configuration (Windows)
+File: `C:\Users\Deacjx\.ssh\config`
+```text
+Host DeanOS
+    HostName 192.168.1.163
+    User dean
+    IdentityFile ~/.ssh/zimaos_key
+```
+
+### Manual Key Installation (DeanOS)
+If you get permission errors, use `sudo` and ensure you are in the correct home directory:
+```bash
+sudo mkdir -p ~/.ssh
+sudo touch ~/.ssh/authorized_keys
+echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHTfMWfVHu0gHrY7dB3OdNVbum//AofdGCh9ur/bgSru7 deancjx@Workstation" | sudo tee -a ~/.ssh/authorized_keys
+sudo chmod 700 ~/.ssh
+sudo chmod 600 ~/.ssh/authorized_keys
+sudo chown -R $USER:$USER ~/.ssh
+```

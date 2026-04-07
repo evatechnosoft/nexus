@@ -1,0 +1,16 @@
+- [ ] **index.html Güncellemesi**
+    - [ ] `mealPhotoInput` için `capture="environment"` ekle.
+    - [ ] Chat penceresine sesle yazma (mic) ve metin girişi (input) ekle.
+    - [ ] `mealChatHistory` (Geçmiş Tile'lar) yapısını ekle.
+- [ ] **style.css Güncellemesi**
+    - [ ] `mic-btn` (mikrofon) ve ses dalgası animasyonları.
+    - [ ] `history-tile` (yatay kaydırılabilir yemek kartları) tasarımı.
+    - [ ] Chat kontrol paneli (input + buttons) stil düzenlemeleri.
+- [ ] **app.js Güncellemesi**
+    - [ ] `startVoiceTyping()` (Spech API) entegrasyonu.
+    - [ ] `renderMealChat()` fonksiyonuna geçmiş Tile'larını dahil et.
+    - [ ] `saveAnalyzedMeal` içine resim verisini (Base64) saklama mantığı ekle (Geçmişte görmek için).
+- [ ] **Doğrulama ve Final**
+    - [ ] Mobilde kamera testi.
+    - [ ] Masaüstü/Mobilde Sesle Yazma testi.
+    - [ ] Geçmiş Tile'larının yatay kaydırma kontrolü.

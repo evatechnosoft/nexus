@@ -1,0 +1,47 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (300,128)<button class='back-btn'>← Geri Dön />
+Hafta 02: Unit 1: Birthday Fun! — Bölüm 1
+Doğum günü kartı yapımı — renkler ve doğum günü kelimeleri
+📚 Kitap Referansları
+Student Book:
+Sayfa 8-13
+🗝️ Anahtar Kelimeler (Vocabulary)
+🎯
+Tıkla:
+Okunuşunu dinle | 🖱️
+Basılı Tut:
+Harf harf kodlamasını dinle
+[1] (340,732)<div  />
+	[2] (340,666)<div >balloon />
+	[3] (340,718)<div >balon />
+	[4] (340,785)<div >[bə-luun]
+bal-loon />
+		[5] (303,781)<b >🗣️ Okunuş: />
+		[6] (307,805)<b >🧩 Heceleme: />
+[7] (500,732)<div  />
+	[8] (500,666)<div >cake />
+	[9] (500,718)<div >pasta />
+	[10] (500,785)<div >[keyk]
+cake />
+		[11] (462,781)<b >🗣️ Okunuş: />
+		[12] (466,805)<b >🧩 Heceleme: />
+[13] (660,732)<div  />
+	[14] (660,666)<div >card />
+	[15] (660,718)<div >kart />
+	[16] (660,785)<div >[kaard]
+card />
+		[17] (622,781)<b >🗣️ Okunuş: />
+		[18] (626,805)<b >🧩 Heceleme: />
+[19] (340,980)<div  />
+	[20] (340,914)<div >present />
+	[21] (340,966)<div >hediye />
+[22] (500,914)<div >birthday party />
+doğum günü partisi
+[23] (660,980)<div  />
+	[24] (660,914)<div >candle />
+	[25] (660,966)<div >mum />
+
+</current_dom>

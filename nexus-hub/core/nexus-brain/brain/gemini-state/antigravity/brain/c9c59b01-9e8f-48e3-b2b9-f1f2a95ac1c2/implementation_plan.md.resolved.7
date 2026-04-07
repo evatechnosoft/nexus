@@ -1,0 +1,44 @@
+# Flutter Web Geçiş Planı (Autopilot)
+
+Bu plan, SportApp Pro mobil uygulamasını Web platformuna taşımayı ve mevcut `public/` dizinindeki eski arayüzü yeni Flutter Web sürümüyle değiştirmeyi hedefler.
+
+## User Review Required
+
+> [!IMPORTANT]
+> - **Health Entegrasyonu:** `health` paketi tarayıcıda çalışmaz. Web sürümünde Google Fit/Samsung Health senkronizasyonu devre dışı bırakılacak; veriler doğrudan backend'den (manuel girişler ve senkronize olanlar) çekilecektir.
+> - **Kamera:** Web üzerinden AI Tarama (Nutri-Scan) için tarayıcı kamera izinleri gerekecektir.
+> - **Responsive Tasarım:** Dashboard, masaüstü tarayıcılarda çok geniş görünmemesi için merkezlenmiş ve sınırlandırılmış bir genişlikte (maks. 900px) sunulacaktır.
+
+## Proposed Changes
+
+### [Component] Flutter App Optimization
+
+#### [MODIFY] [main.dart](file:///c:/projects/SportApp/mobile_app/lib/main.dart)
+- `kIsWeb` kontrolü eklenerek platforma özgü başlangıç ayarları yapılacak.
+
+#### [MODIFY] [health_service.dart](file:///c:/projects/SportApp/mobile_app/lib/services/health_service.dart)
+- Web platformunda `health` paketi çağrıları atlanacak ve sadece backend API'leri kullanılacak.
+
+#### [MODIFY] [dashboard_screen.dart](file:///c:/projects/SportApp/mobile_app/lib/screens/dashboard_screen.dart)
+- Tüm sayfa `Center` ve `ConstrainedBox` içine alınarak desktop görünümü iyileştirilecek.
+
+### [Component] Backend & Build
+
+#### [COMMAND] Flutter Build
+- `flutter build web --release --base-href "/"` komutu çalıştırılacak.
+
+#### [ACTION] Public Folder Update
+- Mevcut `public/` içeriği `public_old/` olarak yedeklenecek.
+- `build/web/` içeriği `public/` dizinine taşınacak.
+
+## Open Questions
+
+- Web sürümünde eski HTML arayüzündeki hangi spesifik özellikleri (Örn: Alışveriş Listesi tabı) öncelikli olarak Flutter projesine eklememi istersiniz? Şu anki Flutter sürümünde temel Dashboard, Koç ve AI Tarama mevcut.
+
+## Verification Plan
+
+### Automated Tests
+- `flutter build web` hata vermeden tamamlanmalı.
+
+### Manual Verification
+- Tarayıcıda `localhost:3002` (veya sunucu IP'si) üzerinden yeni "SportApp Pro" arayüzünün sorunsuz yüklendiği ve login olduğu doğrulanacak.

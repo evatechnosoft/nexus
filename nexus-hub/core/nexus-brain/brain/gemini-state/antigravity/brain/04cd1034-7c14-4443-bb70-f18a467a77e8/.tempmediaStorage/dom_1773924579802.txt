@@ -1,0 +1,119 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (127,42)<a class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge IconButtonBase-module_wrapper_6zbMGy SoftButton-module_wrapper_G6z4vn SoftButton-module_default_EF-egQ ScribdTopBar-module_hamburger__C9NjV IconButtonBase-module_large_hJBmho' href='#sidebar' />
+	Open navigation menu
+[1] (180,42)<a class='ScribdTopBar-module_logo__AsKt6' href='/' />
+	[2] (180,42)<img  />
+[3] (366,41)<label >Search />
+	Search
+	[4] (366,42)<input class='SearchForm-module_searchInput__l73oF SearchForm-module_searchInputScribd__Up4Ft' id='header_search_input' placeholder='Search' role='combobox' />
+[5] (451,42)<button class='TextButton-module_wrapper__ZwW-w TextButton-module_default__ekglb SearchForm-module_clearButton__ggRgX SearchForm-module_clearButtonScribd__XJbMU' />
+	[6] (451,42)<span  />
+		[7] (451,42)<span >Clear search />
+			[8] (451,42)<span  />
+			Clear search
+[9] (481,42)<button class='TextButton-module_wrapper__ZwW-w TextButton-module_default__ekglb SearchForm-module_searchButton__4f-rn no_spinner' />
+	[10] (476,42)<span  />
+		[11] (476,42)<span >Search />
+			[12] (476,42)<span  />
+			Search
+[13] (569,42)<button class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge SoftButton-module_wrapper_G6z4vn DropdownTrigger-module_wrapper_-Xf-At LanguageDropdown-module_menuHandle__PCSMM SoftButton-module_default_EF-egQ ButtonShared-module_small_h7nQ0w SoftButton-module_withIcon_OBSH-T' id='ldhandle' />
+	en
+	Change Language
+[14] (632,42)<a class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge SoftButton-module_wrapper_G6z4vn SoftButton-module_default_EF-egQ ButtonShared-module_small_h7nQ0w SoftButton-module_withIcon_OBSH-T' href='/upload-document' />
+	Upload
+[15] (698,42)<button class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge SoftButton-module_wrapper_G6z4vn DropdownTrigger-module_wrapper_-Xf-At SoftButton-module_default_EF-egQ ButtonShared-module_small_h7nQ0w SoftButton-module_withIcon_OBSH-T' id='udhandle' />
+	Sign in
+[16] (813,42)<button class='ButtonCore-module_wrapper_MkTb9s ButtonShared-module_common_k3DYge AccentButton-module_wrapper_W6vQ8z ScribdTopBar-module_cta__AnzYq SubscribeCTAButton-module_wrapper__lDIgE SubscribeCTAButton-module_en-US__W29KM AccentButton-module_default_4Uc-A6 ButtonShared-module_large_DzeAnG' />
+	Download free for 30 days
+[17] (500,283)<li  />
+	[18] (500,283)<article  />
+		[19] (500,283)<a class='ListItem-module_linkOverlay__H60l3' href='https://www.scribd.com/document/692298821/English-Code-BrE-L3-Picture-Card-Experimental-Lab'>STEAM Vocabulary for Level 3 />
+			STEAM Vocabulary for Level 3
+		0 ratings
+		14 views
+		78 pages
+		[20] (524,243)<a class='ButtonCore-module_wrapper_MkTb9s TextButton-module_wrapper_ZwW-wM TextButton-module_default_ekglbr Title-module_wrapper__JyBs6 Document-module_title__PFDfb' href='https://www.scribd.com/document/692298821/English-Code-BrE-L3-Picture-Card-Experimental-Lab' />
+			[21] (307,243)<span  />
+				[22] (307,243)<span  />
+					[23] (307,243)<h3 >STEAM Vocabulary for Level 3 />
+		Description
+		This document contains vocabulary terms related to STEAM subjects like the human body, paleontology, space, climate change, design, waste management, and audio engineering. The terms are grouped into units and include words like bones, muscles, ammonite, spacecraft, brand, compost, and recording studio. In total, there are 39 terms presented over 8 units of instruction.
+		[24] (335,359)<div  />
+			[25] (335,359)<div >Uploaded by />
+				Uploaded by
+				[26] (315,359)<a class='SingleAuthorByline-module_singleAuthorLink__pUULL SingleAuthorByline-module_documentAuthorLink__dXwMI' href='/users/455261347'>Uranbileg Galbadrakh />
+				on December 14, 2023
+		[27] (848,205)<div  />
+			[28] (835,205)<div  />
+				[29] (835,205)<button class='TextButton-module_wrapper__ZwW-w TextButton-module_default__ekglb DownloadButton-module_downloadButton__yR8-x' />
+					[30] (835,205)<span  />
+						[31] (835,205)<span  />
+							[32] (835,205)<span  />
+			[33] (856,205)<div  />
+				[34] (856,205)<button class='PrimaryFunctionButton-module_wrapper__c70e3 PrimaryFunctionButton-module_default__fux4y PrimaryFunctionButton-module_l__QlRLS' role='button'>Save STEAM Vocabulary for Level 3 for later />
+					[35] (856,205)<span  />
+					Save STEAM Vocabulary for Level 3 for later
+[36] (500,580)<li  />
+	[37] (500,580)<article  />
+		[38] (500,580)<a class='ListItem-module_linkOverlay__H60l3' href='https://www.scribd.com/document/637162703/Untitled'>English Code Level 2 Welcome Core Vocabulary: © Pearson Education Limited 2021 />
+			English Code Level 2 Welcome Core Vocabulary: © Pearson Education Limited 2021
+		[39] (545,535)<div  />
+			[40] (524,535)<div  />
+				0 ratings
+				29 views
+				200 pages
+				[41] (524,540)<a class='ButtonCore-module_wrapper_MkTb9s TextButton-module_wrapper_ZwW-wM TextButton-module_default_ekglbr Title-module_wrapper__JyBs6 Document-module_title__PFDfb' href='https://www.scribd.com/document/637162703/Untitled' />
+					[42] (460,540)<span  />
+						[43] (460,540)<span  />
+							[44] (460,540)<h3 >English Code Level 2 Welcome Core Vocabulary: © Pearson Education Limited 2021 />
+				[45] (309,582)<div  />
+					[46] (309,582)<div >Uploaded by />
+						Uploaded by
+						[47] (301,581)<a class='SingleAuthorByline-module_singleAuthorLink__pUULL SingleAuthorByline-module_documentAuthorLink__dXwMI' href='/users/634807222'>Giovana Rufini />
+						on April 10, 2023
+			[48] (848,501)<div  />
+				[49] (835,501)<div  />
+					[50] (835,501)<button class='TextButton-module_wrapper__ZwW-w TextButton-module_default__ekglb DownloadButton-module_downloadButton__yR8-x' />
+						[51] (835,501)<span  />
+							[52] (835,501)<span  />
+								[53] (835,501)<span  />
+				[54] (856,501)<div  />
+					[55] (856,501)<button class='PrimaryFunctionButton-module_wrapper__c70e3 PrimaryFunctionButton-module_default__fux4y PrimaryFunctionButton-module_l__QlRLS' role='button'>Save English Code Level 2 Welcome Core Vocabulary: © Pearson Education Limited 2021 for later />
+						[56] (856,501)<span  />
+						Save English Code Level 2 Welcome Core Vocabulary: © Pearson Education Limited 2021 for later
+[57] (500,876)<li  />
+	[58] (500,876)<article  />
+		[59] (500,876)<a class='ListItem-module_linkOverlay__H60l3' href='https://www.scribd.com/document/626188430/English-Code-Phonics-Book-2'>English Code Phonics Book 2 />
+			English Code Phonics Book 2
+		[60] (545,832)<div  />
+			[61] (524,832)<div  />
+				100%
+				(
+				3
+				)
+				5K views
+				51 pages
+				[62] (524,836)<a class='ButtonCore-module_wrapper_MkTb9s TextButton-module_wrapper_ZwW-wM TextButton-module_default_ekglbr Title-module_wrapper__JyBs6 Document-module_title__PFDfb' href='https://www.scribd.com/document/626188430/English-Code-Phonics-Book-2' />
+					[63] (304,836)<span  />
+						[64] (304,836)<span  />
+							[65] (304,836)<h3 >English Code Phonics Book 2 />
+				[66] (321,878)<div  />
+					[67] (321,878)<div >Uploaded by />
+						Uploaded by
+						[68] (305,877)<a class='SingleAuthorByline-module_singleAuthorLink__pUULL SingleAuthorByline-module_documentAuthorLink__dXwMI' href='/users/518865366'>Jezabel Escobar />
+						on February 16, 2023
+			[69] (848,798)<div  />
+				[70] (835,798)<div  />
+					[71] (835,798)<button class='TextButton-module_wrapper__ZwW-w TextButton-module_default__ekglb DownloadButton-module_downloadButton__yR8-x' />
+						[72] (835,798)<span  />
+							[73] (835,798)<span  />
+								[74] (835,798)<span  />
+				[75] (856,798)<div  />
+					[76] (856,798)<button class='PrimaryFunctionButton-module_wrapper__c70e3 PrimaryFunctionButton-module_default__fux4y PrimaryFunctionButton-module_l__QlRLS' role='button'>Save English Code Phonics Book 2 for later />
+						[77] (856,798)<span  />
+						Save English Code Phonics Book 2 for later
+
+</current_dom>

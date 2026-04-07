@@ -1,0 +1,6 @@
+{
+  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary": "Plan for the CasaOS to ZimaOS migration by creating a clean 'casatozima' repository. Selected core files (Docker, Flask SRC) and initialized Git.",
+  "updatedAt": "2026-03-23T09:45:00.674943600Z",
+  "version": "3"
+}

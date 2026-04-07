@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_WALKTHROUGH",
+  "summary": "Walkthrough of the fix for `Note` and `Task` model serialization. Includes the creation of `build.yaml` for snake_case configuration, restoration of model imports, and verification of the generated JSON keys.",
+  "updatedAt": "2026-03-21T09:30:25.235923300Z"
+}

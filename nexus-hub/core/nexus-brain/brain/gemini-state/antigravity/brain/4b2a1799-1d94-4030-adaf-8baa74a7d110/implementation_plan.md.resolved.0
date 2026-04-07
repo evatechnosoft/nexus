@@ -1,0 +1,23 @@
+# Debugging Email Watcher
+
+The user reports that the system is not processing requests from emails. I need to verify the connection to Exchange and the filtering logic.
+
+## Proposed Changes
+
+### [Component] Email Watcher Debugging
+
+#### [NEW] [debug_exchange.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/debug_exchange.py)
+Create a standalone script to test the Exchange connection and list recent emails without creating database entries, providing verbose output.
+
+#### [MODIFY] [email_watcher.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/email_watcher.py)
+Improve logging to show exactly why an email was skipped (e.g., if it didn't match keywords or sender filter).
+
+## Verification Plan
+
+### Automated Tests
+1. Run `python debug_exchange.py` to see if it can connect to the configured Exchange account.
+2. Check the output for any "Skipped" messages and the reasons.
+
+### Manual Verification
+1. Ask the user to send a test email from the whitelisted sender and check the logs.
+2. If Docker is preferred, I will help the user start Docker Desktop or troubleshoot the Docker connection.

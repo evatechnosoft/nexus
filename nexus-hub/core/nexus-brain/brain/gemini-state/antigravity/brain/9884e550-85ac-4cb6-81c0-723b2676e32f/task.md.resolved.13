@@ -1,0 +1,15 @@
+# English Learning Hub: Gelişmiş Özellikler İş Listesi
+
+- [/] Mimari ve Güvenlik Planlaması [/]
+    - [x] `users.json` yapısını tasarla
+    - [x] [server.py](file:///c:/Users/Deacjx/Documents/English%20code/_learning-plan/server.py) auth (giriş/çıkış) mekanizmasını planla
+- [ ] Müfredat Kontrolü (Öğretmen)
+    - [ ] `active_week` (aktif hafta) alanı ekle
+    - [ ] Öğretmenin yeni ders ekleyebilmesi için API ekle
+- [ ] Frontend Güncellemeleri
+    - [ ] Login ekranı (Kullanıcı adı/Şifre)
+    - [ ] Rol bazlı görünüm kısıtlaması (Öğrenci sadece aktif haftayı görür)
+    - [ ] Öğretmen için "Hafta Ekle" formu
+- [ ] Kullanıcı Bazlı İlerleme Takibi
+    - [ ] `progress.json` dosyasını kullanıcı bazlı hale getir
+    - [ ] Ebeveyn görünümünde çocuk ilerlemesini göster

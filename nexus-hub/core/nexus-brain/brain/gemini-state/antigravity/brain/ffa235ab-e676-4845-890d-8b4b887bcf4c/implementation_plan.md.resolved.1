@@ -1,0 +1,40 @@
+# Updated Xiaomi Integration Plan
+
+We now have the specific details for your Xiaomi devices (tokens, keys, and IPs). I've also confirmed that **HACS** is already installed in `/DATA/AppData/homeassistant/config/custom_components`.
+
+## User Review Required
+
+> [!IMPORTANT]
+> Since we already have the **TOKEN** for "Bella" (Vacuum) and **BLE KEY** for "Mi Temp" (Temp sensor), we can add them to Home Assistant directly.
+
+> [!TIP]
+> We will ensure **Xiaomi Miot Auto** is installed (or use the existing `xiaomi_home`). The account/password login will then automatically link everything, but having these tokens is a perfect backup and allows for local-only control.
+
+## Proposed Changes
+
+### 1. Home Assistant Integration (Automated Installation)
+- We will install/verify **Xiaomi Miot Auto** using the HACS download script if needed, or guide you through the UI.
+- Since `xiaomi_home` and `hacs` are already there, we will proceed to add the integrations.
+
+### 2. Device Configuration
+- **Bella (Dreame Vacuum)**:
+  - MAC: `70:C9:32:3C:BC:51`
+  - TOKEN: `457a59536976797343786e4c5a373779`
+  - IP: `192.168.1.181`
+- **Mi Temp (Sensor)**:
+  - MAC: `A4:C1:38:17:90:BD`
+  - BLE KEY: `1f8912aeb5bc8f53bf27576033fb8949`
+
+### 3. ESPHome Smart Station (Optional - Skip for now as per your request)
+- We will NOT update the display (`ili9341`) now. We'll add those sensors later.
+
+## Open Questions
+
+- Should I proceed with installing **Xiaomi Miot Auto** (`xiaomi_miot`) or would you like to use the existing `xiaomi_home` component for both devices? (Miot Auto is generally recommended for Dreame vacuums).
+
+## Verification Plan
+
+### Manual Verification
+1. Access **Home Assistant** at `ha.evaitec.com`.
+2. Add the **Xiaomi Miot Auto** (or Miio) integration.
+3. Verify that **Bella** (Vacuum) and **Mi Temp** (Sensor) are discovered and showing data.

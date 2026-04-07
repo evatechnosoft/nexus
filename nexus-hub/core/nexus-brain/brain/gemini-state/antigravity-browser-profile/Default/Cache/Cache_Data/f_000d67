@@ -1,0 +1,538 @@
+/* ═══════════════════════════════════════════════
+   EVAITEC — main.js
+   1) Loader: Eva clip-path reveal + circuit canvas
+   2) Main site: GSAP scroll reveals + metric counters
+   3) Mobile menu, modals, i18n init
+   ═══════════════════════════════════════════════ */
+
+const TRANSITIONS_FALLBACK = 'curtain-rise 0.92s cubic-bezier(0.76,0,0.24,1) forwards';
+
+/* ──────────────────────────────────────────────
+   CIRCUIT CANVAS (loader background)
+   ────────────────────────────────────────────── */
+function initCircuitCanvas() {
+  const canvas = document.getElementById('circuit-canvas');
+  if (!canvas) return;
+  const ctx    = canvas.getContext('2d');
+
+  function resize() {
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  const nodes = [];
+  const COUNT = 40;
+
+  for (let i = 0; i < COUNT; i++) {
+    nodes.push({
+      x:   Math.random() * canvas.width,
+      y:   Math.random() * canvas.height,
+      vx:  (Math.random() - 0.5) * 0.3,
+      vy:  (Math.random() - 0.5) * 0.3,
+      r:   Math.random() * 2 + 1,
+    });
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Move nodes
+    nodes.forEach(n => {
+      n.x += n.vx;
+      n.y += n.vy;
+      if (n.x < 0 || n.x > canvas.width)  n.vx *= -1;
+      if (n.y < 0 || n.y > canvas.height) n.vy *= -1;
+    });
+
+    // Draw circuit lines between close nodes
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const dx   = nodes[i].x - nodes[j].x;
+        const dy   = nodes[i].y - nodes[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < 120) {
+          const alpha = (1 - dist / 120) * 0.6;
+          ctx.beginPath();
+          ctx.moveTo(nodes[i].x, nodes[i].y);
+          // Ortogonal circuit tarzı
+          ctx.lineTo(nodes[i].x, nodes[j].y);
+          ctx.lineTo(nodes[j].x, nodes[j].y);
+          ctx.strokeStyle = `rgba(0,180,216,${alpha * 0.5})`;
+          ctx.lineWidth   = 0.7;
+          ctx.stroke();
+        }
+      }
+    }
+
+    // Draw nodes
+    nodes.forEach(n => {
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(61,176,74,0.7)';
+      ctx.fill();
+    });
+
+    requestAnimationFrame(draw);
+  }
+
+  draw();
+}
+
+/* ──────────────────────────────────────────────
+   LOADER ANIMATION
+   ────────────────────────────────────────────── */
+function runLoader() {
+  const progressFill  = document.getElementById('progress-fill');
+  const progressNum   = document.getElementById('progress-num');
+  const loaderTagline = document.getElementById('loader-tagline');
+  const loaderVideo   = document.getElementById('loader-video');
+  const loaderEvaBg   = document.getElementById('loader-eva-bg');
+  const loader        = document.getElementById('loader');
+  const mainSite      = document.getElementById('main-site');
+  const header        = document.getElementById('header');
+
+  // Faz 1: eva.png tam ekran, progress 0→60%
+  // Faz 2: Eva bg solar, video belirir, progress 60→100%
+  const P1    = window.__builderP1 || 1200;
+  const P2    = window.__builderP2 || 1000;
+  const TOTAL = P1 + P2;
+  const START = performance.now();
+  let videoStarted = false;
+
+  function tick(now) {
+    const elapsed = now - START;
+    let pct;
+
+    if (elapsed <= P1) {
+      const t = elapsed / P1;
+      pct = t * t * 60; // ease-in 0→60
+    } else {
+      const t2 = Math.min((elapsed - P1) / P2, 1);
+      pct = 60 + t2 * 40;
+
+      if (!videoStarted) {
+        videoStarted = true;
+        loaderEvaBg.classList.add('fade-out');
+        loaderVideo.play().catch(() => {});
+        setTimeout(() => loaderVideo.classList.add('active'), 300);
+      }
+    }
+
+    pct = Math.min(pct, 100);
+    progressFill.style.width = pct + '%';
+    progressNum.textContent  = Math.floor(pct);
+
+    if (pct >= 85 && !loaderTagline.dataset.typed) {
+      loaderTagline.dataset.typed = '1';
+      loaderTagline.classList.add('visible');
+      typewriteEl(loaderTagline);
+    }
+
+    if (elapsed < TOTAL) {
+      requestAnimationFrame(tick);
+    } else {
+      setTimeout(finishLoader, 500);
+    }
+  }
+
+  requestAnimationFrame(tick);
+
+  function finishLoader() {
+    mainSite.classList.remove('hidden');
+    setTimeout(() => header.classList.add('visible'), 100);
+    initScrollReveal();
+    initScrollAnimations();
+    initHeroCanvas();
+    initTextAnimations();
+    setTimeout(() => {
+      const tr    = window.__builderTransition || 'curtain';
+      const trMap = window.TRANSITIONS || {};
+      if (tr === 'curtain') {
+        loader.classList.add('curtain-out');
+      } else {
+        loader.style.animation = trMap[tr] || TRANSITIONS_FALLBACK;
+      }
+      setTimeout(() => { loader.style.display = 'none'; }, 1000);
+    }, 300);
+  }
+}
+
+
+/* ──────────────────────────────────────────────
+   HERO CANVAS (arka plan particle)
+   ────────────────────────────────────────────── */
+function initHeroCanvas() {
+  const canvas = document.getElementById('hero-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  function resize() {
+    canvas.width  = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  const pts = Array.from({ length: 60 }, () => ({
+    x:  Math.random() * canvas.width,
+    y:  Math.random() * canvas.height,
+    vx: (Math.random() - 0.5) * 0.2,
+    vy: (Math.random() - 0.5) * 0.2,
+  }));
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    pts.forEach(p => {
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > canvas.width)  p.vx *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, 1.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(0,180,216,0.5)';
+      ctx.fill();
+    });
+
+    for (let i = 0; i < pts.length; i++) {
+      for (let j = i + 1; j < pts.length; j++) {
+        const d = Math.hypot(pts[i].x - pts[j].x, pts[i].y - pts[j].y);
+        if (d < 100) {
+          ctx.beginPath();
+          ctx.moveTo(pts[i].x, pts[i].y);
+          ctx.lineTo(pts[j].x, pts[j].y);
+          ctx.strokeStyle = `rgba(0,180,216,${(1 - d / 100) * 0.25})`;
+          ctx.lineWidth   = 0.5;
+          ctx.stroke();
+        }
+      }
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+}
+
+/* ──────────────────────────────────────────────
+   GSAP SCROLL REVEAL
+   ────────────────────────────────────────────── */
+function initScrollReveal() {
+  // Fallback: GSAP yoksa tüm elemanları görünür yap
+  if (typeof IntersectionObserver === 'undefined') {
+    document.querySelectorAll('.reveal-left,.reveal-right,.reveal-up,.svc-card,.proj-card,.ref-card,.stat-box,.section-eyebrow,.about-text').forEach(el => {
+      el.classList.add('anim-item', 'in-view');
+    });
+    return;
+  }
+
+  function observe(el, opts = {}) {
+    el.classList.add('anim-item');
+    if (opts.dir === 'left')  el.classList.add('from-left');
+    if (opts.dir === 'right') el.classList.add('from-right');
+
+    const delay = opts.delay || 0;
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        setTimeout(() => el.classList.add('in-view'), delay);
+        io.unobserve(el);
+      });
+    }, { threshold: 0.12 });
+    io.observe(el);
+  }
+
+  // Section eyebrow'lar
+  document.querySelectorAll('.section-eyebrow').forEach(el => observe(el));
+
+  // reveal-left / right / up
+  document.querySelectorAll('.reveal-left').forEach(el  => observe(el, { dir: 'left' }));
+  document.querySelectorAll('.reveal-right').forEach(el => observe(el, { dir: 'right' }));
+  document.querySelectorAll('.reveal-up').forEach(el    => observe(el));
+
+  // svc-card stagger — section içinde sırayla (3'lü gruplar)
+  document.querySelectorAll('.svc-card').forEach((card, i) =>
+    observe(card, { delay: (i % 3) * 130 })
+  );
+
+  // proj-card stagger — soldan sağa sırayla
+  document.querySelectorAll('.proj-card').forEach((card, i) =>
+    observe(card, { delay: (i % 4) * 150 })
+  );
+
+  // ref-card stagger — sağ-sol alternatif
+  document.querySelectorAll('.ref-card').forEach((card, i) =>
+    observe(card, { dir: i % 2 === 0 ? 'left' : 'right', delay: (i % 4) * 120 })
+  );
+
+  // stat-box stagger
+  document.querySelectorAll('.stat-box').forEach((box, i) =>
+    observe(box, { delay: i * 140 })
+  );
+
+  // about-text
+  const aboutText = document.querySelector('.about-text');
+  if (aboutText) observe(aboutText, { dir: 'left' });
+}
+
+/* ──────────────────────────────────────────────
+   SCROLL ANIMATIONS (metric counters + header)
+   ────────────────────────────────────────────── */
+function initScrollAnimations() {
+  // EV Metric rings & counters
+  const metricObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      metricObserver.unobserve(e.target);
+
+      const valEl  = e.target.querySelector('.metric-val');
+      const target = parseInt(valEl.dataset.target);
+      const ringEl = e.target.querySelector('.ring-fill');
+      const circumference = 150.8;
+
+      let start = null;
+      const DUR = 1800;
+
+      function animateMetric(ts) {
+        if (!start) start = ts;
+        const t   = Math.min((ts - start) / DUR, 1);
+        const val = Math.floor(t * target);
+        valEl.textContent = val;
+
+        if (ringEl) {
+          const maxes = { 847: 1000, 72: 100, 98: 100 };
+          const max   = maxes[target] || target;
+          const ratio = (val / max);
+          ringEl.style.strokeDashoffset = circumference * (1 - ratio);
+        }
+
+        if (t < 1) requestAnimationFrame(animateMetric);
+      }
+      requestAnimationFrame(animateMetric);
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('.ev-metric').forEach(el => metricObserver.observe(el));
+
+  // Header scroll hide/show
+  let lastScroll = 0;
+  const headerEl = document.getElementById('header');
+
+  // Header scroll hide/show
+  window.addEventListener('scroll', () => {
+    const cur = window.scrollY;
+    if (cur > lastScroll && cur > 100) {
+      headerEl.style.transform = 'translateY(-100%)';
+    } else {
+      headerEl.style.transform = 'translateY(0)';
+    }
+    lastScroll = cur;
+  }, { passive: true });
+}
+
+/* ──────────────────────────────────────────────
+   MOBILE MENU
+   ────────────────────────────────────────────── */
+function initMobileMenu() {
+  const btn = document.getElementById('mobile-menu-btn');
+  const nav = document.querySelector('.nav');
+  if (!btn || !nav) return;
+  btn.addEventListener('click', () => {
+    nav.classList.toggle('open');
+  });
+  // Dışarı tıklayınca kapat
+  document.addEventListener('click', e => {
+    if (!btn.contains(e.target) && !nav.contains(e.target)) {
+      nav.classList.remove('open');
+    }
+  });
+  // Nav link tıklanınca kapat
+  nav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => nav.classList.remove('open'));
+  });
+}
+
+/* ──────────────────────────────────────────────
+   MODALS
+   ────────────────────────────────────────────── */
+function initModals() {
+  const overlay = document.getElementById('modal-overlay');
+  const content = document.getElementById('modal-content');
+  const closeBtn = document.getElementById('modal-close');
+  if (!overlay) return;
+
+  function openModal(templateId) {
+    const tpl = document.getElementById(templateId);
+    if (!tpl) return;
+    content.innerHTML = '';
+    content.appendChild(tpl.content.cloneNode(true));
+    overlay.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    overlay.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  // Proje kartları
+  document.querySelectorAll('[data-modal]').forEach(el => {
+    el.addEventListener('click', () => openModal(el.dataset.modal));
+  });
+
+  // İletişim butonları
+  document.querySelectorAll('a[href="#contact"], a.btn-cta').forEach(el => {
+    el.addEventListener('click', e => {
+      e.preventDefault();
+      openModal('modal-contact');
+    });
+  });
+
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  // Formspree submit
+  document.addEventListener('submit', async e => {
+    if (!e.target || e.target.id !== 'contact-form') return;
+    e.preventDefault();
+    const form = e.target;
+    const submitBtn = form.querySelector('[type="submit"]');
+    const successMsg = form.querySelector('#form-success');
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Gönderiliyor...'; }
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+      if (res.ok) {
+        form.reset();
+        if (successMsg) successMsg.classList.remove('hidden');
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Gönder'; }
+      }
+    } catch {
+      if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Gönder'; }
+    }
+  });
+}
+
+/* ──────────────────────────────────────────────
+   TYPEWRITER HELPER
+   ────────────────────────────────────────────── */
+function typewriteEl(el) {
+  const text = el.textContent.trim();
+  el.textContent = '';
+
+  const textNode = document.createTextNode('');
+  const cursor   = document.createElement('span');
+  cursor.className = 'tw-cursor';
+  cursor.textContent = '|';
+  el.appendChild(textNode);
+  el.appendChild(cursor);
+
+  let i = 0;
+  const iv = setInterval(() => {
+    textNode.textContent = text.slice(0, ++i);
+    if (i >= text.length) {
+      clearInterval(iv);
+      setTimeout(() => cursor.remove(), 900);
+    }
+  }, 42);
+}
+
+/* ──────────────────────────────────────────────
+   TEXT ANIMATIONS — accordion · sarmaşık · daktilo
+   ────────────────────────────────────────────── */
+function initTextAnimations() {
+
+  /* 1. H2 SATIR ACCORDION — kapak açılır gibi */
+  document.querySelectorAll('.section-text h2, .about-text h2').forEach(h2 => {
+    const parts = h2.innerHTML.split(/<br\s*\/?>/gi);
+    if (parts.length < 2) return;
+
+    h2.innerHTML = parts.map(line =>
+      `<span class="line-wrap"><span class="line-inner">${line}</span></span>`
+    ).join('');
+
+    const container = h2.closest('.section-text, .about-text');
+    if (!container) return;
+
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        io.unobserve(container);
+        h2.querySelectorAll('.line-inner').forEach((el, i) =>
+          setTimeout(() => el.classList.add('revealed'), 160 + i * 160)
+        );
+      });
+    }, { threshold: 0.12 });
+    io.observe(container);
+  });
+
+  /* 2. KELIME SARMAŞIK REVEAL — üstten alta */
+  document.querySelectorAll('.section-text p, .about-text p').forEach(p => {
+    if (/<[a-z]/i.test(p.innerHTML)) return; // HTML tag içeriyorsa atla
+    const words = p.textContent.split(' ').filter(Boolean);
+    p.innerHTML = words.map(w =>
+      `<span class="word-wrap"><span class="word-inner">${w}</span></span>`
+    ).join(' ');
+
+    const container = p.closest('.section-text, .about-text');
+    if (!container) return;
+
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        io.unobserve(container);
+        p.querySelectorAll('.word-inner').forEach((el, i) =>
+          setTimeout(() => el.classList.add('revealed'), 380 + i * 28)
+        );
+      });
+    }, { threshold: 0.12 });
+    io.observe(container);
+  });
+
+  /* 3. AI CORE H2 — daktilo efekti */
+  const coreH2 = document.querySelector('.core-text h2');
+  if (coreH2) {
+    const savedText = coreH2.textContent.trim();
+    coreH2.textContent = '';
+    coreH2.style.minHeight = '1.1em';
+
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        io.unobserve(coreH2);
+        setTimeout(() => {
+          const textNode = document.createTextNode('');
+          const cursor   = document.createElement('span');
+          cursor.className = 'tw-cursor';
+          cursor.textContent = '|';
+          coreH2.appendChild(textNode);
+          coreH2.appendChild(cursor);
+          let i = 0;
+          const iv = setInterval(() => {
+            textNode.textContent = savedText.slice(0, ++i);
+            if (i >= savedText.length) {
+              clearInterval(iv);
+              setTimeout(() => cursor.remove(), 1000);
+            }
+          }, 70);
+        }, 400);
+      });
+    }, { threshold: 0.35 });
+    io.observe(coreH2);
+  }
+}
+
+/* ──────────────────────────────────────────────
+   BOOT
+   ────────────────────────────────────────────── */
+document.addEventListener('DOMContentLoaded', () => {
+  initCircuitCanvas();
+  runLoader();
+  initMobileMenu();
+  initModals();
+  initI18n();
+});

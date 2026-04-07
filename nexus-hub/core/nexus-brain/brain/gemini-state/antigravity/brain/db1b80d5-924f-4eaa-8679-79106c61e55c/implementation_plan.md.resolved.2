@@ -1,0 +1,46 @@
+# SportApp Mobile (Flutter Pro) Planı 📱✨
+
+Web'deki başarımızı ve "Premium" tasarımımızı mobil dünyaya, **Flutter & Dart** gücüyle taşıyoruz. 
+
+## Kullanıcı İncelemesi Gerekli
+
+> [!IMPORTANT]
+> **Tasarım Konsepti:** Ekteki "UX/UI Master" tasarımındaki Glassmorphism ve Neon detaylarını Flutter'ın `CustomPainter` ve `BackdropFilter` yetenekleriyle birebir uygulayacağız.
+> **AI Entegrasyonu:** Mobil uygulama, webdeki aynı Gemini API anahtarını kullanacak ancak mobil kameraya doğrudan (Direct Viewfinder) erişim sağlayarak çok daha hızlı analiz yapacak.
+
+## Görsel Tasarım Taslağı
+![SportApp Pro Mobile UI](file:///C:/Users/Deacjx/.gemini/antigravity/brain/db1b80d5-924f-4eaa-8679-79106c61e55c/sportapp_mobile_premium_ui_1775047837322.png)
+
+## Önerilen Değişiklikler
+
+### 1. Flutter Proje Kurulumu
+#### [NEW] [Project Root](file:///c:/projects/SportApp_Mobile)
+- `npx flutter create sport_app_mobile` ile temiz bir başlangıç.
+- **Dependencies:**
+    - `dio`: API istekleri için.
+    - `google_fonts`: Outfit, Syne, Inter fontları için.
+    - `camera`: Doğrudan yemek tarama için.
+    - `speech_to_text`: Eller serbest mod için.
+    - `shared_preferences`: Gemini Key ve ayarları saklamak için.
+    - `fl_chart`: Premium grafikler için.
+
+### 2. Mimari ve State Yönetimi
+- **Pattern:** Provider veya Simple State Management (Kullanıcı tercihine göre).
+- **ThemeData:** `Material 3` tabanlı, kullanıcı tarafından seçilebilen (Neo/Glass/Dark/Light) dinamik tema motoru.
+
+### 3. Ana Ekranlar (Screens)
+- **Dashboard:** Günlük özet ve progress ringler.
+- **Nutri-Chat (AI):** Tam ekran kamera arayüzü üzerine bindirilmiş AI chat balonları.
+- **Workout:** Hızlı set/tekrar girişi için optimize edilmiş kartlar.
+- **Settings:** Web ile senkronize çalışan Pro ayarlar.
+
+## Doğrulama Planı
+
+### Teknik Doğrulama
+1. **API Senkronizasyonu:** Mobilin mevcut Node.js backend ile (Auth ve Sync) kusursuz çalışıp çalışmadığı kontrol edilecek.
+2. **Kamera Performansı:** Gemini AI'ın mobil kamera karesinden (Frame) anlık veri alıp alamadığı test edilecek.
+
+## Açık Sorular
+
+- **Monorepo mu?** Mobil kodunu mevcut `SportApp` klasörünün içine mi (Subfolder) yoksa tamamen ayrı bir repo olarak `c:\projects\SportApp_Mobile` konumuna mı kuralım?
+- **Backend:** Mobil için özel bir API endpoint'ine ihtiyacımız var mı, yoksa mevcut `routes/*.js` yapıları yeterli mi?

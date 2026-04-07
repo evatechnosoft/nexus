@@ -1,0 +1,22 @@
+Output: M       email_watcher.py
+M       main.py
+M       models.py
+Switched to branch 'dev'
+Switched to a new branch 'fix/graph-email-parsing'
+[fix/graph-email-parsing 3683a3f] fix: Correct HTML table parsing for Graph API emails
+ 1 file changed, 27 insertions(+), 8 deletions(-)
+M       main.py
+M       models.py
+Switched to branch 'dev'
+Updating 294d9c4..3683a3f
+Fast-forward
+ email_watcher.py | 35 +++++++++++++++++++++++++++--------
+ 1 file changed, 27 insertions(+), 8 deletions(-)
+M       main.py
+M       models.py
+Switched to branch 'test'
+Updating 294d9c4..3683a3f
+Fast-forward
+ email_watcher.py | 35 +++++++++++++++++++++++++++--------
+ 1 file changed, 27 insertions(+), 8 deletions(-)
+Process Group PGID: 31496

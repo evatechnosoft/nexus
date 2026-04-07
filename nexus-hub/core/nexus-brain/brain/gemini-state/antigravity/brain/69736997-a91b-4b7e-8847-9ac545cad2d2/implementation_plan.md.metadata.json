@@ -1,0 +1,6 @@
+{
+  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary": "The plan aims to restore subdomain connectivity and create a single documentation file (access_list) for all server services. It addresses why some containers seem not to be working (DNS/Tunnel issues).",
+  "updatedAt": "2026-03-28T13:58:14.752535900Z",
+  "requestFeedback": true
+}

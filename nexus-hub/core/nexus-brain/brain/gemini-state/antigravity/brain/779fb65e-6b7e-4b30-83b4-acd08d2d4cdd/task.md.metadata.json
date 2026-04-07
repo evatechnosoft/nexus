@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_TASK",
+  "summary": "Initial task list for 2FA implementation. This task covers updating the login logic in the backend to check for 2FA, creating a pre-auth token system, and updating the frontend UI to handle the 2FA flow correctly.",
+  "updatedAt": "2026-03-22T08:31:45.113409500Z"
+}

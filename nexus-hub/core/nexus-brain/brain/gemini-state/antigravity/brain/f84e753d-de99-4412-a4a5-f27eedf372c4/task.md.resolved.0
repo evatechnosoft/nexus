@@ -1,0 +1,6 @@
+# Task: Configure Nextcloud Trusted Domains
+
+- [/] Execute configuration commands in terminal <!-- id: 0 -->
+    - [ ] Add `zimaos.local` to trusted domains <!-- id: 1 -->
+    - [ ] Add `192.168.1.168` to trusted domains <!-- id: 2 -->
+- [ ] Verify configuration <!-- id: 3 -->

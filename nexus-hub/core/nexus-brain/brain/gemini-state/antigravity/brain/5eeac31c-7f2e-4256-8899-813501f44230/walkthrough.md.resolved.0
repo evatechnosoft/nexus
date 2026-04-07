@@ -1,0 +1,46 @@
+# Docker Hub Fix Walkthrough
+
+I have implemented several network optimizations to stabilize Docker image pulls on your DeanOS server.
+
+## Changes Made
+
+### 1. Docker Mirrors
+Added the following mirrors to `/etc/docker/daemon.json`:
+- `https://mirror.gcr.io`
+- `https://docker.arvancloud.ir`
+- `https://dockerhub.ir`
+
+### 2. Network Optimizations
+- **DNS**: Set to `1.1.1.1` and `8.8.8.8` for both System and Docker.
+- **MTU**: Reduced MTU to `1400` to prevent packet fragmentation issues (especially common with tunnels).
+- **Restart**: Included a Docker service restart to apply changes.
+
+## How to Apply
+
+Since I cannot SSH directly without a password, please run this single command in your **SSH terminal (DeanOS)**:
+
+```bash
+sudo bash -c 'cat <<EOF > /etc/docker/daemon.json
+{
+    "dns": ["1.1.1.1", "8.8.8.8"],
+    "registry-mirrors": [
+        "https://mirror.gcr.io",
+        "https://docker.arvancloud.ir",
+        "https://dockerhub.ir"
+    ],
+    "mtu": 1400
+}
+EOF
+ip link set dev docker0 mtu 1400 || true
+systemctl restart docker'
+```
+
+## Verification
+
+After running the command, verify the fix by pulling a test image:
+
+```bash
+sudo docker pull busybox:latest
+```
+
+It should download instantly now.

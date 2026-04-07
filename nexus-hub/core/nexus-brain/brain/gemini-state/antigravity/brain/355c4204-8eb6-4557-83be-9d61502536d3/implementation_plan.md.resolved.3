@@ -1,0 +1,35 @@
+# Switch Deployment to Docker Containers
+
+The user wants to transition from zip-based deployment to Docker, likely due to file size issues and to improve reliability.
+
+## User Review Required
+
+> [!IMPORTANT]
+> Docker ile dağıtım yapabilmek için bir **Azure Container Registry (ACR)** veya benzeri bir kayıt defterine ihtiyacımız var.
+> 1. Daha önceden oluşturulmuş bir ACR isminiz var mı?
+> 2. Web App'i "Docker Container" moduna geçirmeniz gerekecektir.
+
+## Proposed Changes
+
+### [Component] Docker Configuration
+
+#### [NEW] [Dockerfile](file:///c:/projects/Layers/LayersupCom_v2/Dockerfile)
+Create a lightweight Dockerfile for the Node.js application.
+
+#### [NEW] [.dockerignore](file:///c:/projects/Layers/LayersupCom_v2/.dockerignore)
+Exclude `.git`, `node_modules`, and large local zips from the build context.
+
+### [Component] Pipeline Configuration
+
+#### [MODIFY] [azure-pipelines-1.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-1.yml)
+- Build ve Push adımlarını ekleyin.
+- Deploy adımını `AzureWebAppContainer@1` görevini kullanacak şekilde güncelleyin.
+
+## Verification Plan
+
+### Automated Tests
+- Azure DevOps Build loglarını kontrol edin.
+- Docker Hub veya ACR üzerinden imajın yüklendiğini teyit edin.
+
+### Manual Verification
+- `https://layersupv2.azurewebsites.net` adresinin yayında olduğunu kontrol edin.

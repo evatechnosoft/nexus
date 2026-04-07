@@ -1,0 +1,32 @@
+# E-posta Kuyruk Sistemi (Email Queue) Tamamlandı
+
+E-postaların daha güvenli ve izlenebilir bir şekilde işlenmesi için tasarlanan Kuyruk Sistemi devreye alındı. Artık sistem, e-postaları doğrudan talebe dönüştürmek yerine önce bir "Kuyruk" tablosuna kaydediyor, ardından sırayla işliyor.
+
+## Yapılan Değişiklikler
+
+### 1. Yeni Veri Modeli: `EmailQueue`
+Gelen her e-posta (Exchange, Graph API veya IMAP) artık `email_queue` tablosuna kaydediliyor.
+- **Durum Takibi**: Her mail `pending`, `processed`, `failed` veya `ignored` durumlarından birini alır.
+- **Hata Kayıtları**: Eğer bir mail parse edilemezse, hatanın sebebi veritabanına kaydedilir.
+
+### 2. Ayrılmış İşleme Mantığı
+- **Fetcher (Getirici)**: Sadece mailleri okur ve kuyruğa yazar.
+- **Processor (İşleyici)**: Kuyruktaki bekleyen mailleri alır, analiz eder ve `Request` (Talep) nesnelerini oluşturur. Başarısız olursa 3 kez otomatik tekrar dener.
+
+### 3. Kullanıcı Arayüzü: E-posta Kuyruğu
+Yeni bir sayfa eklendi: `/requests/email-queue`.
+- Bu sayfadan gelen tüm mailleri görebilir, durumlarını takip edebilirsiniz.
+- Hatalı mailleri manuel olarak "Tekrar İşle" butonuyla tetikleyebilir veya silebilirsiniz.
+- Navigasyon barına "E-posta Kuyruğu" bağlantısı eklendi.
+
+### 4. Hata Bildirimleri
+Bir e-posta işlenirken hata oluştuğunda (örneğin format bozukluğu), sistem yöneticiye otomatik olarak bir **Hata Bilgilendirme E-postası** gönderir.
+
+## Nasıl Kontrol Edilir?
+1.  Üst menüdeki **E-posta Kuyruğu** sekmesine tıklayın.
+2.  Yeni gelen maillerin burada "Bekliyor" veya "İşlendi" olarak göründüğünü doğrulayın.
+3.  Eğer "Hata" durumunda bir mail varsa, yanındaki "Yenile" simgesiyle tekrar denatabilirsiniz.
+
+---
+> [!TIP]
+> Sistem artık mailleri 3 kez otomatik tekrar deneyecek şekilde konfigüre edildi. İlk denemede başarısız olanlar için size bilgilendirme maili gelecektir.

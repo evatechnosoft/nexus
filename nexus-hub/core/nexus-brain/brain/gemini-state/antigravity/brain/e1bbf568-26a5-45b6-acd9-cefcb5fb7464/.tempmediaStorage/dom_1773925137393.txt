@@ -1,0 +1,36 @@
+[0] (260,75)<a class='page-header__logo' href='/' />
+	[1] (260,75)<div  />
+		[2] (260,75)<img  />
+[3] (541,75)<a class='page-header__link page-header__link_primary page-header__link_first' href='/premium?gaid=head'>Premium Access />
+[4] (624,75)<a class='page-header__link page-header__link_login' href='/login' />
+	[5] (624,75)<div >Login />
+[6] (705,75)<a class='v-btn v-btn--elevated v-theme--light bg-primary v-btn--density-default elevation-0 rounded-pill v-btn--size-x-large v-btn--variant-elevated page-header__btn' href='/reg' />
+	[7] (705,75)<span >Registration />
+[8] (787,75)<div  />
+	[9] (779,75)<div  />
+Why wait? Buy
+premium access
+now and download without limits!
+(links will open in a new window)
+Select a tariff and make a payment
+[10] (334,303)<a class='text-link text-underlined' href='/payments/premium'>Enter the received code here />
+[11] (373,368)<a class='radio-card payment-links__card' href='#' />
+	[12] (270,368)<div  />
+	[13] (306,368)<div >45 days />
+	[14] (434,368)<div >TRY 880.99 />
+[15] (373,434)<a class='radio-card payment-links__card' href='#' />
+	[16] (270,434)<div  />
+	[17] (306,434)<div >90 days />
+	[18] (431,434)<div >TRY 1,543.39 />
+[19] (373,499)<a class='radio-card payment-links__card' href='#' />
+	[20] (270,499)<div  />
+	[21] (308,499)<div >180 days />
+	[22] (431,499)<div >TRY 2,647.38 />
+[23] (373,565)<a class='radio-card payment-links__card' href='#' />
+	[24] (270,565)<div  />
+	[25] (309,565)<div >380 days />
+	[26] (431,565)<div >TRY 4,413.78 />
+[27] (373,640)<a class='v-btn v-btn--elevated v-theme--light bg-primary v-btn--density-default elevation-0 rounded-pill v-btn--size-x-large v-btn--variant-elevated payment-links__btn' href='/premium?gaid=free_other_payments' />
+	[28] (373,640)<span >Other tariffs and payment methods />
+[29] (627,509)<button class='v-btn v-btn--elevated v-theme--light bg-success v-btn--density-default elevation-0 rounded-pill v-btn--size-x-large v-btn--variant-elevated free-page__submit-btn' />
+	[30] (627,509)<span >Download />

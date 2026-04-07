@@ -1,0 +1,10 @@
+Output: 
+
+    Directory: C:\projects
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----          4/3/2026     12:56                agentops-nexus
+Initialized empty Git repository in C:/projects/agentops-nexus/.git/
+Process Group PGID: 35276

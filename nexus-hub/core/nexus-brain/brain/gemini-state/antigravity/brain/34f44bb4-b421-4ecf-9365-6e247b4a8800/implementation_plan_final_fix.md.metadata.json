@@ -1,0 +1,6 @@
+{
+  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary": "Uygulamadaki tüm \"renk uyumsuzluğu\" ve \"görsel hata\" bildirimlerini kökten çözecek kapsamlı bir temizlik planı. Tüm template dosyalarındaki manuel Bootstrap renk sınıfları temizlenecek ve yerel karanlık mod ile tam uyum sağlanacaktır.",
+  "updatedAt": "2026-03-28T14:51:11.833824800Z",
+  "requestFeedback": true
+}

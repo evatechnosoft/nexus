@@ -1,0 +1,3 @@
+{
+  "output": "Output: \n\n    Directory: C:\\projects\\agentops-nexus\n\n\nMode                 LastWriteTime         Length Name\n----                 -------------         ------ ----\nd-----          4/3/2026     13:05                data\nProcess Group PGID: 11692"
+}

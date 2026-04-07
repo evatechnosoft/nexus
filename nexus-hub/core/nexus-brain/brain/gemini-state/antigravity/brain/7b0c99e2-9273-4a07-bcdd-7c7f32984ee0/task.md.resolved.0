@@ -1,0 +1,6 @@
+# Fix StateProvider undefined error
+
+- [/] Research Riverpod 3.x changes regarding `StateProvider` [/]
+- [ ] Check `lib/config/providers.dart` for patterns [ ]
+- [ ] Update [lib/config/api_client.dart](file:///c:/projects/EvAnotes/mobile/lib/config/api_client.dart) with the correct provider type or fix import [ ]
+- [ ] Verify the fix [ ]

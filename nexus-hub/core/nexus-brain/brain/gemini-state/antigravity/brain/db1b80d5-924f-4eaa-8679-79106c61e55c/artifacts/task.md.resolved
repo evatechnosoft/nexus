@@ -1,0 +1,5 @@
+- [x] Create `deanfit` database on remote server
+- [x] Initialize schema using `schema.sql`
+- [x] Update `.env` with new `DATABASE_URL`
+- [x] Restart server and verify health check
+- [x] Create walkthrough

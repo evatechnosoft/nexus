@@ -1,0 +1,13 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Welcome back to
+DeanOS
+[0] (371,619)<input class='w-full m-0 text-sm p-1.5 leading-5 rounded-2.5 text-surface-900 dark:text-surface-100 placeholder:text-surface-400 dark:placeholder:text-surface-600 bg-surface-0 dark:bg-surface-950 border border-surface-200 dark:border-surface-700 invalid:focus:ring-red-200 invalid:hover:border-red-500 hover:border-surface-400 dark:hover:border-surface-500 focus:outline-none focus:outline-offset-0 focus:border-primary-500 dark:focus:border-primary-400 focus:z-10 hover:z-10 appearance-none transition-colors duration-200' placeholder='Username' />
+[1] (371,662)<input class='m-0 text-sm p-1.5 leading-5 rounded-2.5 text-surface-900 dark:text-surface-100 placeholder:text-surface-400 dark:placeholder:text-surface-600 bg-surface-0 dark:bg-surface-950 border border-surface-200 dark:border-surface-700 invalid:focus:ring-red-200 invalid:hover:border-red-500 hover:border-surface-400 dark:hover:border-surface-500 focus:outline-none focus:outline-offset-0 focus:border-primary-500 dark:focus:border-primary-400 focus:z-10 hover:z-10 appearance-none transition-colors duration-200' placeholder='Password' />
+Enter a password
+[2] (679,653)<button class='self-end relative items-center inline-flex text-center align-bottom justify-center flex-row text-lg p-3 gap-2 rounded-full border-1 border-[#333333]/5 hover:border-[#333333]/9 outline-none focus-visible:ring-2 text-white bg-primary-500 hover:bg-primary-600 active:bg-primary-700 dark:hover:bg-primary-400 dark:active:bg-primary-300 focus-visible:ring-primary-500/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[3] (679,653)<span  />
+
+</current_dom>

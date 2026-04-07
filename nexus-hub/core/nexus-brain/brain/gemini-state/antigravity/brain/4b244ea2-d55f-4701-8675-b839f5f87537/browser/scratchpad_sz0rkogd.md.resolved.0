@@ -1,0 +1,12 @@
+# Tasks
+- [ ] Open `file:///C:/projects/food-delivery-mock/index.html`
+- [ ] Verify Light Mode (default)
+- [ ] Hover over "Pizza Milano" restaurant card
+- [ ] Verify 'Sipariş Ver' button turns vibrant orange and text remains white/visible
+- [ ] Take screenshot of hover in Light Mode
+- [ ] Hover over nav links (e.g., 'Anasayfa') and verify they turn orange
+- [ ] Toggle Dark Mode
+- [ ] Hover over "Order Now" / "Sipariş Ver" button in Dark Mode
+- [ ] Verify background turns vibrant orange and text remains white/visible
+- [ ] Take screenshot of hover in Dark Mode
+- [ ] Summarize findings

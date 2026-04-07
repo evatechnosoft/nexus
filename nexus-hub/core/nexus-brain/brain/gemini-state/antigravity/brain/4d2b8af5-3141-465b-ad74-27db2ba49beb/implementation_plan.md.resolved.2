@@ -1,0 +1,64 @@
+# Expansion Plan: XP, Notes, and Map Features
+
+This plan outlines the activation of core interactive features: a gamified XP system, a persistent Notes (Diary) module, and an interactive Map for location-based safety and exploration.
+
+## User Review Required
+
+> [!IMPORTANT]
+> **Map Provider**: I will use OpenStreetMap via `flutter_map` which is **FREE** and does not require a billing setup or API key like Google Maps.
+> **XP Logic**: I propose 10 XP per message and 50 XP per completed task. Do you want to adjust these rates?
+
+## Proposed Changes
+
+### 1. XP System (Gamification)
+
+#### [MODIFY] [user_profile.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/models/user_profile.dart)
+- Add `int xp` and `int level` fields to the profile model.
+- Implement level-up logic: `level = (xp / 100).floor() + 1`.
+
+#### [MODIFY] [app_provider.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/providers/app_provider.dart)
+- Add `addXp(int amount)` method.
+- Update `sendMessage` to award XP for interactions.
+
+#### [MODIFY] [achievements_screen.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/screens/achievements/achievements_screen.dart)
+- Replace placeholder with a progress bar and level display.
+
+---
+
+### 2. Notes (Diary/Thought) System
+
+#### [NEW] [note.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/models/note.dart)
+- Define `Note` model: `id`, `title`, `content`, `createdAt`.
+
+#### [MODIFY] [storage_service.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/services/storage_service.dart)
+- Add methods to save/load lists of notes.
+
+#### [MODIFY] [notes_screen.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/screens/notes/notes_screen.dart)
+- Implement a List-Detail UI for managing notes.
+- Use a "Paper/Diary" aesthetic with glassmorphism.
+
+---
+
+### 3. Map (Location & Exploration)
+
+#### [MODIFY] [map_screen.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/screens/map/map_screen.dart)
+- Integrate `flutter_map` widget.
+- Show current location marker using `geolocator`.
+
+#### [MODIFY] [location_service.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/services/location_service.dart)
+- Ensure location permissions are handled gracefully.
+
+## Open Questions
+
+- **Map Pinning**: Should the AI be able to "pin" locations for the child (e.g., "Park here!")?
+- **XP Rewards**: Should we add sound effects when the child levels up?
+
+## Verification Plan
+
+### Automated Tests
+- Verify XP calculation logic via unit tests.
+- Check persistence of notes across app restarts.
+
+### Manual Verification
+- Test map loading and location tracking on the emulator/device.
+- Verify that sending messages increases the XP bar in the UI.

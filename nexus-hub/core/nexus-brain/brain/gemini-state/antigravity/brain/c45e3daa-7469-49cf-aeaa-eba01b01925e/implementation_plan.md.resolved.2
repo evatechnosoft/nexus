@@ -1,0 +1,53 @@
+# Kapsamlı İyileştirme ve Dağıtım Planı
+
+Uygulamanın hem test ortamında stabil çalışması hem de raporlanan UI/Mantık hatalarının giderilmesi için aşağıdaki adımlar uygulanacaktır.
+
+## Kullanıcı İncelemesi Gerekli
+
+> [!IMPORTANT]
+> - Dağıtım (Deploy) scriptleri Linux uyumluluğu için LF formatına sabitlenecektir.
+> - UI butonlarının tıklanmama sorunu, muhtemelen 'glassmorphism' katmanlarının üst üste binmesinden (z-index) kaynaklanmaktadır.
+
+## Önerilen Değişiklikler
+
+### 1. Dağıtım ve Altyapı (Infrastructure)
+
+#### [NEW] [.gitattributes](file:///c:/projects/it-inventory/.gitattributes)
+- `.sh` dosyalarının Windows'ta CRLF'ye dönüşmesini engelleyerek Linux uyumluluğunu korur.
+
+#### [MODIFY] [deploy_deanos.sh](file:///c:/projects/it-inventory/deploy_deanos.sh)
+- ZimaOS üzerindeki "read-only root" hatasını aşmak için `DOCKER_CONFIG` çalışma dizini eklenecek.
+- `sudo` komutları standartlaştırılacak.
+
+#### [MODIFY] [.sh Dosyaları]
+- `entrypoint.sh`, `deploy_deanos.sh` ve `install.sh` dosyaları LF formatına dönüştürülecek.
+
+### 2. UI ve Görsel İyileştirmeler
+
+#### [MODIFY] [base.html](file:///c:/projects/it-inventory/templates/base.html)
+- Bootstrap JS kütüphanesinin doğru yüklendiği ve modal tetikleyicilerinin çakışmadığı kontrol edilecek.
+- 'Glass-card' ve modal katmanları arasındaki `z-index` hiyerarşisi düzenlenecek.
+
+#### [MODIFY] [inventory.html](file:///c:/projects/it-inventory/templates/inventory.html)
+- "Yeni Cihaz Ekle" butonu ve modal yapısı kontrol edilerek erişilebilirlik artırılacak.
+
+### 3. E-Posta Ayrıştırıcı (Email Parser)
+
+#### [MODIFY] [email_parser.py](file:///c:/projects/it-inventory/email_parser.py)
+- Yatay tablolardaki "başlık kayması" (header shifting) sorunu için tablo işleme mantığı güçlendirilecek.
+- Tek e-postadan birden fazla kişi/istek çıkarma özelliği denetlenecek.
+
+## Açık Sorular
+
+- **Subagent Kullanımı**: UI testleri için tarayıcı subagent'ı kullanmamı ve eş zamanlı olarak kod iyileştirmelerini yapmamı ister misiniz?
+- **ZimaOS Şifresi**: `sudo` komutları interaktif şifre isterse buna müdahale edebilecek misiniz?
+
+## Doğrulama Planı
+
+### Otomatik Testler
+- `.\deploy.ps1` ile uçtan uca dağıtım testi.
+- `docker logs -f it-inventory` ile uygulama sağlığı takibi.
+
+### Manuel Doğrulama
+- Tarayıcı üzerinden butonların (Add Device/Request) çalışabilirliği.
+- Örnek bir karmaşık tablo içeren e-postanın parse edilmesi.

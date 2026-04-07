@@ -1,0 +1,7 @@
+# Deployment of it-inventory to DeanOS
+
+- [ ] Verify local changes and push to GitHub <!-- id: 0 -->
+- [ ] Connect to DeanOS via SSH <!-- id: 1 -->
+- [ ] Pull latest changes on DeanOS <!-- id: 2 -->
+- [ ] Restart Docker containers on DeanOS <!-- id: 3 -->
+- [ ] Verify application is live at https://inventory.findtalent.net <!-- id: 4 -->

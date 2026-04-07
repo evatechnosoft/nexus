@@ -1,0 +1,30 @@
+<tool_output_masked>
+Output too large. Showing first 8,000 and last 32,000 characters. For full output see: C:\Users\Deacjx\.gemini\tmp\projects\tool-outputs\session-a366de38-25fd-4d3a-9bce-f8a0bc9646e6\run_shell_command_1775210768180_0.txt
+Output: 2026-04-03 13:06:10,723 - INFO - Scanning C:/projects for projects...
+2026-04-03 13:06:10,916 - INFO - New project found: Agentic-cooding-setup
+2026-04-03 13:06:10,925 - INFO - New project found: apiflow-monitor-mvp
+2026-04-03 13:06:10,963 - INFO - New project found: claude
+2026-04-03 13:06:10,967 - INFO - New project found: evaiteclabs
+2026-04-03 13:06:10,979 - INFO - New project found: fitmewith
+2026-04-03 13:06:10,987 - INFO - New project found: Gas-water-reading-app
+2026-04-03 13:06:10,993 - INFO - New project found: it-inventory
+2026-04-03 13:06:10,999 - INFO - New project found: llm-boilerplate
+2026-04-03 13:06:11,033 - INFO - New project found: motor-ctrl
+
+... [582 lines omitted] ...
+
+  File "C:\Users\Deacjx\.platformio\penv\Lib\site-packages\sqlalchemy\engine\base.py", line 2357, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\Deacjx\.platformio\penv\Lib\site-packages\sqlalchemy\engine\base.py", line 2120, in _exec_insertmany_context
+    dialect.do_execute(
+  File "C:\Users\Deacjx\.platformio\penv\Lib\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute 
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: global_skills.name
+[SQL: INSERT INTO global_skills (name, version, description, file_path, category, created_at) VALUES (?, ?, ?, ?, ?, ?) RETURNING id]
+[parameters: ('SKILL', None, None, 'C:/projects\\Antigravity\\skills\\007\\SKILL.md', 'Global', '2026-04-03 10:06:19.988308')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Exit Code: 1
+Process Group PGID: 35728
+
+Output too large. Full output available at: C:\Users\Deacjx\.gemini\tmp\projects\tool-outputs\session-a366de38-25fd-4d3a-9bce-f8a0bc9646e6\run_shell_command_run_shell_command_1775210768180_0_9wyolr.txt
+</tool_output_masked>

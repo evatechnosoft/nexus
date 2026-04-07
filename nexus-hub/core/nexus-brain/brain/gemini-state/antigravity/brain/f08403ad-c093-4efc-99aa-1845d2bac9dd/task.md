@@ -1,0 +1,15 @@
+# Tasks
+
+- [x] Fix BuildContext across async gaps in `SplashScreen` <!-- id: 0 -->
+    - [x] Explain the problem to the user <!-- id: 1 -->
+    - [x] Update `splash_screen.dart` with `mounted` checks <!-- id: 2 -->
+    - [x] Verify the fix <!-- id: 3 -->
+- [x] Fix BuildContext/mounted issues in `TwoFaScreen` <!-- id: 4 -->
+    - [x] Identify issues in `two_fa_screen.dart` <!-- id: 5 -->
+    - [x] Update `two_fa_screen.dart` with `mounted` checks <!-- id: 6 -->
+    - [x] Verify the fix <!-- id: 7 -->
+- [/] Deploy and Test <!-- id: 8 -->
+    - [x] Commit and push changes <!-- id: 9 -->
+    - [x] Create and switch to `dev` branch <!-- id: 10 -->
+    - [x] Push to `dev` branch <!-- id: 11 -->
+    - [/] Run tests <!-- id: 12 -->

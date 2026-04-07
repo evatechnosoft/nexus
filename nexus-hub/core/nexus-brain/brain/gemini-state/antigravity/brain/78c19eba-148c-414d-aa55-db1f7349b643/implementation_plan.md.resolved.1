@@ -1,0 +1,23 @@
+# Goal Description
+Adapt the existing [setup.sh](file:///c:/projects/github/casaos-home-server/setup.sh) home server script to support ZimaOS-style deployments. This involves adding branding, menu options, and specific configurations for ZimaOS (which is the evolved version of CasaOS).
+
+## Proposed Changes
+
+### [Component Name] Setup Script
+
+#### [MODIFY] [setup.sh](file:///c:/projects/github/casaos-home-server/setup.sh)
+- Update `HEADER_ART` to include ZimaOS branding.
+- Add a choice for "ZimaOS-Style Setup" in the main menu.
+- Update [install_casaos](file:///c:/projects/github/casaos-home-server/setup.sh#168-405) to use the `v0.5.0-beta` installer for ZimaOS flavor.
+- Implement Ubuntu 24.04 (Noble) compatibility fixes (e.g., forcing `OS_RELEASE=jammy` if necessary).
+- Provide manual instructions for adding the ZimaOS App Store JSON if automatic registration fails.
+
+## Verification Plan
+
+### Automated Tests
+- Run `bash -n setup.sh` to check for syntax errors.
+- Simulate the script using `--dry-run` to ensure all paths and logic for ZimaOS selection work as intended.
+
+### Manual Verification
+- Ask the user to run the script and select the new ZimaOS option.
+- Verify that the app stores are correctly registered and the branding is displayed.

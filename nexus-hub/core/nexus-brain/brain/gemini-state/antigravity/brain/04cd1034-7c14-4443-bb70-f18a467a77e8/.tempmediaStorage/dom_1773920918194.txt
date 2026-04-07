@@ -1,0 +1,53 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Skip to content
+Elt ebook - English Language Teaching Ebook
+[0] (288,23)<a aria-label='Follow on Facebook' class='icon button circle is-outline facebook tooltip' href='https://www.facebook.com/profile.php?id=61584590267917' title='Follow on Facebook' />
+	[1] (288,21)<i  />
+[2] (306,23)<a aria-label='Send us an email' class='icon button circle is-outline email tooltip' href='mailto:eltebook.com@gmail.com' title='Send us an email' />
+	[3] (306,21)<i  />
+[4] (324,23)<a aria-label='Follow on YouTube' class='icon button circle is-outline youtube tooltip' href='https://www.youtube.com/@EbookELT' title='Follow on YouTube' />
+	[5] (324,21)<i  />
+[6] (581,23)<a class='nav-top-link' href='https://eltebook.com/my-account/'>Login />
+[7] (620,23)<a class='nav-top-link' href='https://eltebook.com/contact-us/'>Contact Us />
+[8] (665,23)<a class='nav-top-link' href='https://eltebook.com/about-us/'>About Us />
+[9] (701,23)<a class='nav-top-link' href='https://eltebook.com/faqs/'>FAQs />
+[10] (754,23)<a class='nav-top-link' href='https://eltebook.com/terms-and-conditions/'>Terms & Conditions />
+[11] (820,23)<a class='nav-top-link' href='https://eltebook.com/privacy-policy/'>Privacy Policy />
+[12] (882,23)<a class='nav-top-link' href='https://eltebook.com/manual-payment/'>Manual Payment />
+[13] (495,115)<a href='https://eltebook.com/' title='ELT Ebook - English Language Teaching Ebook' />
+	[14] (495,115)<img  />
+[15] (796,115)<a class='header-cart-link icon primary button round is-small' href='https://eltebook.com/basket/' title='Basket' />
+	[16] (789,115)<span >Basket   / />
+		[17] (805,115)<span  />
+			[18] (805,115)<span  />
+				[19] (805,115)<bdi >0 />
+					[20] (802,115)<span >$ />
+	[21] (818,115)<i  />
+[22] (873,115)<a class='nav-top-link nav-top-not-logged-in icon primary button circle is-small icon primary button circle is-small' href='https://eltebook.com/my-account/' title='Login' />
+	[23] (873,115)<span >Login / Register />
+[24] (107,212)<a class='mega-menu-link' href='https://eltebook.com/'>Home />
+[25] (179,212)<a class='mega-menu-link' href='https://eltebook.com/download/'>Download />
+[26] (265,212)<a class='mega-menu-link' href='https://eltebook.com/#'>Publisher />
+	[27] (287,212)<span  />
+[28] (363,212)<a class='mega-menu-link' href='https://eltebook.com/presentation/'>Presentation />
+	[29] (392,212)<span  />
+[30] (450,212)<a class='mega-menu-link' href='https://eltebook.com/'>Year />
+	[31] (462,212)<span  />
+[32] (540,212)<a class='mega-menu-link' href='https://eltebook.com/#'>Classification />
+	[33] (571,212)<span  />
+Search for:
+[34] (739,212)<input class='search-field mb-0' id='woocommerce-product-search-field-1' placeholder='Search on Eltebook.com' />
+[35] (899,212)<button aria-label='Submit' class='ux-search-submit submit-button secondary button  icon mb-0' />
+	[36] (899,211)<i  />
+New ELT Ebooks
+[37] (213,515)<img  />
+[38] (213,689)<a class='plain' href='https://eltebook.com/instaenglish-2nd-edition/'>Download Macmillan InstaEnglish 2nd Edition PDF Resources (A1 / B2) />
+[39] (495,515)<img  />
+[40] (495,689)<a class='plain' href='https://eltebook.com/teen-campers/'>Download Macmillan Teen Campers PDF Resources 2024 />
+[41] (777,515)<img  />
+[42] (777,676)<a class='plain' href='https://eltebook.com/brighter-ideas/'>Download Oxford Brighter Ideas PDF Resources 2024 />
+
+</current_dom>

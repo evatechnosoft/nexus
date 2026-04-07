@@ -1,0 +1,8 @@
+# Verification Plan for Evario Odyssey
+
+- [ ] Open http://localhost:5173/
+- [ ] Capture screenshot of the bottom section
+- [ ] Verify ground is one solid continuous piece to the bottom
+- [ ] Verify soil is solid brown (no repeating grass inside)
+- [ ] Verify water is one solid deep blue with waves on top
+- [ ] Verify no thin lines or gaps between tiles

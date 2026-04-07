@@ -1,0 +1,111 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (56,334)<a class='navbar-brand fw-extrabold d-flex align-items-center gap-2' href='/' />
+	[1] (24,334)<div  />
+		[2] (24,334)<i  />
+	[3] (63,334)<span >DEAN />
+		[4] (58,333)<span >OS />
+		[5] (79,333)<span >Inventory />
+[6] (737,334)<a class='nav-link px-3' href='/'>Dashboard />
+	[7] (722,333)<i  />
+[8] (780,334)<a class='nav-link px-3' href='/requests/'>Talepler />
+	[9] (769,333)<i  />
+[10] (829,334)<a class='nav-link px-3' href='/requests/email-queue'>E-posta Kuyruğu />
+	[11] (809,333)<i  />
+[12] (880,334)<a class='nav-link px-3' href='/inventory/'>Envanter />
+	[13] (868,333)<i  />
+[14] (923,334)<a class='nav-link px-3' href='/assignments/'>Atamalar />
+	[15] (910,333)<i  />
+[16] (963,334)<a class='nav-link dropdown-toggle px-3' href='#' role='button'>Excel />
+	[17] (953,333)<i  />
+Cihaz Envanteri
+Kurumsal donanım varlıklarını yönetin ve takip edin.
+[18] (961,392)<button class='btn btn-primary d-flex align-items-center gap-2 shadow-lg' />
+	[19] (941,392)<i  />
+	[20] (965,392)<span >Yeni Cihaz Ekle />
+10
+Serviste
+Depoda
+Kullanımda
+Serviste
+[21] (50,577)<label class='form-label small text-muted mb-1'>Cihaz Ara (Seri No, Marka, Model) />
+[22] (182,603)<input class='form-control bg-dark border-secondary text-white' placeholder='Örn: C123456...' />
+[23] (347,577)<label class='form-label small text-muted mb-1'>Durum />
+[24] (459,603)<select class='form-select bg-dark border-secondary text-white' />
+[25] (587,577)<label class='form-label small text-muted mb-1'>Tür />
+[26] (703,603)<select class='form-select bg-dark border-secondary text-white' />
+[27] (898,605)<button class='btn btn-primary flex-fill'>Filtrele />
+[28] (977,605)<a class='btn btn-outline-secondary' href='/inventory/' />
+	[29] (977,601)<i  />
+Envanter Kodu
+Tür
+Marka / Model
+Seri No
+IMEI
+Durum
+Notlar
+İşlem
+ENV-0009
+Laptop
+ASUS
+VivoBook 16
+ASUSVB16001
+—
+Depoda
+Test cihazı - ASUS VivoBook 16
+[30] (946,743)<button class='btn btn-sm btn-outline-info rounded-pill px-3'>Güncelle />
+	[31] (937,742)<i  />
+[32] (971,743)<button class='btn btn-sm btn-outline-danger rounded-circle' />
+	[33] (971,742)<i  />
+ENV-0010
+Laptop
+Apple
+MacBook Air M2
+MBAM2AIR001
+—
+Serviste
+Test cihazı - Apple MacBook Air M2
+[34] (946,798)<button class='btn btn-sm btn-outline-info rounded-pill px-3'>Güncelle />
+	[35] (937,798)<i  />
+[36] (971,798)<button class='btn btn-sm btn-outline-danger rounded-circle' />
+	[37] (971,798)<i  />
+ENV-0006
+Laptop
+Dell
+XPS 15 9530
+DELLXPS9530001
+—
+Dağıtıldı
+Test cihazı - Dell XPS 15 9530
+[38] (946,853)<button class='btn btn-sm btn-outline-info rounded-pill px-3'>Güncelle />
+	[39] (937,853)<i  />
+[40] (971,853)<button class='btn btn-sm btn-outline-danger rounded-circle' />
+	[41] (971,853)<i  />
+ENV-0007
+Laptop
+Lenovo
+ThinkPad X1 Carbon Gen 12
+TPXC12GEN001
+—
+Depoda
+Test cihazı - Lenovo ThinkPad X1 Carbon Gen 12
+[42] (946,908)<button class='btn btn-sm btn-outline-info rounded-pill px-3'>Güncelle />
+	[43] (937,908)<i  />
+[44] (971,908)<button class='btn btn-sm btn-outline-danger rounded-circle' />
+	[45] (971,908)<i  />
+ENV-0008
+Laptop
+HP
+Pavilion 15-eh3000
+HPPAV15EH001
+—
+Depoda
+Test cihazı - HP Pavilion 15-eh3000
+[46] (946,963)<button class='btn btn-sm btn-outline-info rounded-pill px-3'>Güncelle />
+	[47] (937,963)<i  />
+[48] (971,963)<button class='btn btn-sm btn-outline-danger rounded-circle' />
+	[49] (971,963)<i  />
+
+</current_dom>

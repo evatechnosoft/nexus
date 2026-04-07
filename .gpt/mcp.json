@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "gpt-knowledge-filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:/Users/Deacjx/.gpt",
+        "C:/Users/Deacjx/.claude",
+        "C:/Users/Deacjx/.gemini"
+      ]
+    }
+  }
+}

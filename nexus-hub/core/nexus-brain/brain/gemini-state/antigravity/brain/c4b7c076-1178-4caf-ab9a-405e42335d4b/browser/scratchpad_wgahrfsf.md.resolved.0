@@ -1,0 +1,7 @@
+# Task Checklist
+- [ ] Open http://localhost:5173/ and check initial game state
+- [ ] Move character right (ArrowRight / D) and verify sprite orientation
+- [ ] Move character left (ArrowLeft / A) and verify sprite flips
+- [ ] Test jumping (ArrowUp / Space)
+- [ ] Test collecting items
+- [ ] Capture evidence and finalize

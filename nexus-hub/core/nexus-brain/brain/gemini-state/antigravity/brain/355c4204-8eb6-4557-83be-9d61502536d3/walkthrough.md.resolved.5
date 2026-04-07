@@ -1,0 +1,39 @@
+# Docker Geçişi Tamamlandı
+
+Zip dosyası boyutu ve Azure Build hatalarını aşmak için projeyi tamamen Docker altyapısına geçirdim.
+
+## Yapılan Değişiklikler
+
+### 1. CI/CD Pipeline (Build)
+- [azure-pipelines-1.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-1.yml) dosyası **NPM/Zip** sistemine geri döndürüldü.
+- Bu dosya bir Build aldığında, projenizi zipleuip `drop` isimli bir **artifact** üretir.
+
+## KESİN ÇÖZÜM: Artifact Bağlantısını Düzeltme
+
+Paylaştığınız loglardaki `"repoProvider": "Git"` ifadesi, sorunun kaynağını %100 doğruluyor: **Release planınız zip dosyasını değil, doğrudan Git kodlarını çekiyor.** Git kodlarının içinde zip olmadığı için deployment hata veriyor.
+
+### Azure DevOps Arayüzünde Yapılacaklar:
+
+1. **Pipelines > Releases** kısmına girin.
+2. **Release-1** (veya kullandığınız plan) üzerine tıklayıp sağ üstten **Edit** diyin.
+3. Sol taraftaki **Artifacts** kutusuna tıklayın.
+4. **Mevcut Git (LayersupCom_v2) kaynağını SİLİN.**
+5. **Add** butonuna basın ve şunları seçin:
+   - **Source type**: Build
+   - **Project**: Kendi projeniz (LayersProjects)
+   - **Source (build pipeline)**: [azure-pipelines-1.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-1.yml) dosyasını çalıştıran pipeline'ı seçin.
+6. **Save** diyerek kaydedin.
+7. **Create Release** diyerek yeni bir dağıtım başlatın.
+
+Bu işlemden sonra Release artık Git'ten değil, bizim oluşturduğumuz zip paketinden beslenecek ve **"No package found"** hatası kaybolacaktır.
+## Önemli Not: Tamamlamanız Gereken Adımlar
+
+Pipeline'da bazı yerleri placeholder (`YOUR_...`) olarak bıraktım çünkü Azure Container Registry (ACR) bilgilerinize erişimim yok.
+
+**Lütfen Azure DevOps'ta şunları güncelleyin:**
+1. **Service Connection**: Azure DevOps'ta "Project Settings > Service Connections" kısmından bir "Docker Registry" bağlantısı oluşturun (ACR'nizi seçin).
+2. **YAML Değişkenleri**: [azure-pipelines-1.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-1.yml) içindeki şu değişkenleri kendi ACR bilgilerinizle değiştirin:
+   - `dockerRegistryServiceConnection`: Oluşturduğunuz Service Connection'ın ismi.
+   - `containerRegistry`: ACR adresiniz (örnek: `layersacr.azurecr.io`).
+
+Bu ayarları yaptıktan sonra pipeline sorunsuz çalışacak ve uygulama Docker üzerinden çok daha hızlı ve güvenli bir şekilde ayağa kalkacaktır.

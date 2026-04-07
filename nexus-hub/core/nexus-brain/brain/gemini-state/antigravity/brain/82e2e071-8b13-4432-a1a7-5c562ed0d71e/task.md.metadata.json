@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_TASK",
+  "summary": "Execution task list for the IT Inventory clean deployment. Tracks cleanup, sync, and fresh install steps.",
+  "updatedAt": "2026-03-30T09:55:00.975323500Z"
+}

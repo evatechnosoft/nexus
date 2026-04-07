@@ -1,0 +1,24 @@
+# Alayering Models with Database Nullability
+
+The `Note` and `Task` models currently mark several fields as `required` (non-nullable), but the `LocalDatabase` schema allows them to be `NULL`. This causes `fromJson` to fail when it encounters null values in the database.
+
+## Proposed Changes
+
+### [Models]
+
+#### [MODIFY] [note.dart](file:///c:/projects/github/EvAnotes/mobile/lib/models/note.dart)
+- Make `userId`, `createdAt`, and `updatedAt` nullable (`String?` and `DateTime?`).
+- This allows the model to handle cases where the database hasn't yet populated these fields (e.g., local notes not yet synced).
+
+#### [MODIFY] [task.dart](file:///c:/projects/github/EvAnotes/mobile/lib/models/task.dart)
+- Make `status`, `userId`, `createdAt`, and `updatedAt` nullable.
+- Note: `status` has a default in SQL, but for safety in the model it should handle nulls or have a default.
+
+## Verification Plan
+
+### Automated Tests
+- Run `dart run build_runner build --delete-conflicting-outputs` to regenerate models.
+- Verify generated `fromJson` logic handles nulls for the updated fields.
+
+### Manual Verification
+- Confirm with the user if any other fields should be non-nullable (like `status`).

@@ -1,0 +1,95 @@
+[0] (62,32)<a class='active router-link-exact-active d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none' href='/dashboard' />
+	[1] (24,32)<object  />
+	[2] (82,32)<span >Uptime Kuma />
+[3] (741,32)<a class='btn btn-info me-3' href='https://github.com/louislam/uptime-kuma/releases'>New Update />
+[4] (829,32)<a class='nav-link' href='/manage-status-page'>Status Pages />
+[5] (908,32)<a class='active router-link-exact-active nav-link' href='/dashboard'>Dashboard />
+[6] (967,32)<div  />
+	[7] (961,32)<div >D />
+[8] (68,96)<a class='btn btn-primary mb-3' href='/add'>Add New Monitor />
+[9] (44,155)<button class='btn btn-outline-normal ms-2'>Select />
+[10] (202,155)<a class='search-icon' />
+[11] (268,155)<input aria-label='Search monitored sites' class='form-control search-input' placeholder='Search…' />
+[12] (75,196)<button class='filter-dropdown-status' />
+	[13] (70,196)<div  />
+		[14] (70,196)<span >Status />
+	[15] (89,196)<span  />
+[16] (127,196)<button class='filter-dropdown-status' />
+	[17] (123,196)<div  />
+		[18] (123,196)<span >Active />
+	[19] (141,196)<span  />
+[20] (176,196)<button class='filter-dropdown-status' />
+	[21] (172,196)<div  />
+		[22] (172,196)<span >Tags />
+	[23] (187,196)<span  />
+[24] (173,255)<a class='item' href='/dashboard/1' />
+	[25] (173,257)<div  />
+		[26] (123,257)<div  />
+			[27] (123,252)<div >evaitec />
+				[28] (43,254)<span >100% />
+		[29] (273,257)<div  />
+			[30] (273,257)<div  />
+				[31] (273,257)<div  />
+					[32] (233,254)<div  />
+					[33] (238,254)<div  />
+					[34] (244,254)<div  />
+					[35] (249,254)<div  />
+					[36] (254,254)<div  />
+					[37] (259,254)<div  />
+					[38] (265,254)<div  />
+					[39] (270,254)<div  />
+					[40] (275,254)<div  />
+					[41] (280,254)<div  />
+					[42] (286,254)<div  />
+					[43] (291,254)<div  />
+					[44] (296,254)<div  />
+					[45] (301,254)<div  />
+					[46] (306,254)<div  />
+					[47] (312,254)<div  />
+[48] (173,306)<a class='item' href='/dashboard/2' />
+	[49] (173,308)<div  />
+		[50] (123,308)<div  />
+			[51] (123,303)<div >IT />
+				[52] (43,305)<span >100% />
+		[53] (273,308)<div  />
+			[54] (273,308)<div  />
+				[55] (273,308)<div  />
+					[56] (233,305)<div  />
+					[57] (238,305)<div  />
+					[58] (244,305)<div  />
+					[59] (249,305)<div  />
+					[60] (254,305)<div  />
+					[61] (259,305)<div  />
+					[62] (265,305)<div  />
+					[63] (270,305)<div  />
+					[64] (275,305)<div  />
+					[65] (280,305)<div  />
+					[66] (286,305)<div  />
+					[67] (291,305)<div  />
+					[68] (296,305)<div  />
+					[69] (301,305)<div  />
+					[70] (306,305)<div  />
+					[71] (312,305)<div  />
+Quick Stats
+Up
+2
+Down
+0
+Maintenance
+0
+Unknown
+0
+Pause
+0
+Name
+Status
+DateTime
+Message
+[72] (362,328)<a href='/dashboard/2'>IT />
+Up
+2026-03-28 19:57:12
+200 - OK
+[73] (370,360)<a href='/dashboard/1'>evaitec />
+Up
+2026-03-28 19:56:07
+200 - OK

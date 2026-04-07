@@ -1,0 +1,5 @@
+# Task: Verify Dashboard Mock Data
+- [ ] Navigate to http://localhost:8080
+- [ ] Verify mock data (e.g., 450.5W) is displayed
+- [ ] Take a screenshot of the dashboard
+- [ ] Report back to the user

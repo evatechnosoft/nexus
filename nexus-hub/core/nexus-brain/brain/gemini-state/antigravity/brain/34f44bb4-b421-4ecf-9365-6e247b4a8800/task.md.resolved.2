@@ -1,0 +1,7 @@
+- `[x]` UI: `style.css` içerisinde `.bg-glass` ve `.text-glow` sınıflarını ekle
+- `[x]` UI: `request_detail.html` içerisinden `bg-white`, `bg-light` ve `text-dark` sınıflarını temizle
+- `[x]` UI: `requests.html` içerisindeki filtreleme ve email parse kutularını modernize et
+- `[x]` E-posta: `email_parser.py` içerisinde gönderen (sender) bilgisini hariç tut ve yatay satır formatını destekle
+- `[x]` E-posta: `email_watcher.py` içerisinde tablo yapılarını koruyarak parse etmeyi sağla
+- `[x]` Doğrulama: Yeni parser'ı örnek bir yatay tablo e-postası ile test et
+- `[/]` Doğrulama: Tarayıcı üzerinden UI değişikliklerini görüntüle

@@ -1,0 +1,69 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+English Code 2 Phonics Book Video (AmE).zip
+English Code 2. Teacher’s Edition (AmE).pdf
+—
+English Code 3. Activity Book (BrE).pdf
+English Code 3. Phonics Book (BrE).pdf
+English Code 3. Activity Book Audio (BrE).rar
+English Code 3 Phonics Book Audio (BrE).rar
+English Code 3 Phonics Book Video (BrE).zip
+English Code 3. Flashcards (BrE).pdf
+English Code 3. Grammar Book.pdf
+English Code 3. Assessment Book (BrE).pdf
+English Code 3. Assessment Audio (BrE).rar
+English Code 3. Student’s Book (AmE).pdf
+English Code 3. Student’s Book Audio (AmE).rar
+English Code 3 Phonics Book Audio (AmE).rar
+English Code 3 Phonics Book Video (AmE).zip
+English Code 3. Teacher’s Edition (AmE).pdf
+—
+English Code 4. Activity Book (BrE).pdf
+English Code 4. Activity Book Audio (BrE).rar
+English Code 4. Phonics Book (BrE).pdf
+English Code 4 Phonics Book Audio (BrE).rar
+English Code 4 Phonics Book Video (BrE).zip
+English Code 4. Assessment Book (BrE).pdf
+English Code 4. Assessment Audio (BrE).rar
+English Code 4. Flashcards (BrE).pdf
+English Code 4. Grammar Book (BrE).pdf
+English Code 4. Student’s Book (AmE).pdf
+English Code 4 Student’s Book Audio (AmE).rar
+English Code 4 Phonics Book Audio (AmE).rar
+Very Young Learners
+[0] (774,48)<a href='https://tienganhedu.com/young-learners/'>Young Learners />
+[1] (822,99)<a href='https://tienganhedu.com/ebook/'>YY-Unknown />
+[2] (914,99)<button aria-label='Toggle' class='toggle' />
+	[3] (914,100)<i  />
+Popular
+Oxford
+[4] (842,272)<a href='https://tienganhedu.com/english-file-fifth-edition/'>English File, fifth edition [Download High Quality PDF + Resources] />
+Adult & Young Adult | 2025 | 31,687 👀
+pearson
+[5] (844,427)<a href='https://tienganhedu.com/wider-world/'>Wider World (British English) [Download PDF + Resources] />
+Teenagers | 2017 | 19,403 👀
+cengage
+[6] (844,557)<a href='https://tienganhedu.com/outcomes-third-edition/'>Outcomes, Third Edition [Download Original PDF + Resources] />
+Adult & Young Adult | 2024 | 11,079 👀
+cengage
+[7] (845,712)<a href='https://tienganhedu.com/life-third-edition-british-english/'>Life, Third Edition (British English) [Download Original PDF + Resources] />
+Adult & Young Adult | 2025 | 10,383 👀
+macmillan
+[8] (849,866)<a href='https://tienganhedu.com/speak-your-mind-6-levels/'>Speak Your Mind (6 Levels) - Original PDF, Resources />
+Adult & Young Adult | 9,006 👀
+cambridge
+[9] (840,996)<a href='https://tienganhedu.com/unlock-third-edition/'>Unlock (Third Edition) [Download High Quality PDF + Resources] />
+0
+[10] (28,120)<button id='custom-show-cart-popup' />
+	[11] (28,120)<img  />
+[12] (965,927)<div  />
+	[13] (965,927)<div  />
+		[14] (965,927)<div  />
+			[15] (965,944)<p >Contact us />
+[16] (985,787)<div  />
+Please use this button
+to contact us!
+
+</current_dom>

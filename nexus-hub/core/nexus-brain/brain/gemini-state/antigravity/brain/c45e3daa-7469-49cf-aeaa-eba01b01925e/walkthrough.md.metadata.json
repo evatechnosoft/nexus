@@ -1,0 +1,6 @@
+{
+  "artifactType":  "ARTIFACT_TYPE_WALKTHROUGH",
+  "summary":  "IT Inventory ortam izolasyonu ve dağıtım iyileştirmelerinin özetidir.\nDört ana başlıkta yapılan çalışmalar:\n1. TEST (9600) ve PROD (9700) ortamları DeanOS üzerinde tamamen izole edildi.\n2. E-posta ayrıştırıcı (Email Parser) çoklu satır ve sütun kayması sorunları giderildi.\n3. Yerel geliştirme (Local Dev) ortamı Docker üzerinde ayağa kaldırıldı.\n4. Dağıtım scriptleri (PowerShell ve Bash) ZimaOS uyumlu hale getirildi.",
+  "updatedAt":  "2026-04-01T17:28:52.449469100Z",
+  "version":  "2"
+}

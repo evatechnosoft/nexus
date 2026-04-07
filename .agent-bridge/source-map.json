@@ -1,0 +1,24 @@
+{
+  "sources": [
+    {
+      "id": "ai-memory",
+      "path": "C:/Users/Deacjx/.ai/memory",
+      "purpose": "kullanici profili, tercihler, kararlar, oturum ozetleri"
+    },
+    {
+      "id": "claude-rules",
+      "path": "C:/Users/Deacjx/.claude/rules",
+      "purpose": "global kurallar, operasyonel playbook, best-practices"
+    },
+    {
+      "id": "gemini-memory",
+      "path": "C:/Users/Deacjx/.gemini",
+      "purpose": "gemini konfig, gecmis, proje bazli durum"
+    }
+  ],
+  "priority": [
+    "claude-rules",
+    "ai-memory",
+    "gemini-memory"
+  ]
+}

@@ -1,0 +1,8 @@
+Output: Traceback (most recent call last):
+  File "C:\projects\agentops-nexus\main.py", line 15, in <module>
+    from routers import inventory, requests, assignments, departments, ops
+  File "C:\projects\agentops-nexus\routers\requests.py", line 8, in <module>
+    from email_parser import parse_email
+ModuleNotFoundError: No module named 'email_parser'
+Exit Code: 1
+Process Group PGID: 38536

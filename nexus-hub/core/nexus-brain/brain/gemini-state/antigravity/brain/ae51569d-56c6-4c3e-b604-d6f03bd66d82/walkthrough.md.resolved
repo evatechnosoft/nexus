@@ -1,0 +1,37 @@
+# Implementation Walkthrough: Domain Routing & i18n
+
+We have successfully implemented domain-based routing and multi-language support for the Evaitec Dashboard.
+
+## Changes Made
+
+### 1. Localization Files
+Created [tr.json](file:///c:/projects/github/casatozima/src/translations/tr.json) and [en.json](file:///c:/projects/github/casatozima/src/translations/en.json) in `src/translations/` to manage all UI text centrally.
+
+### 2. Backend Routing (`app.py`)
+- Added `before_request` hook to detect domain and geo-location.
+- **Redirection Logic**:
+    - `evaitec.com.tr` -> Always Turkish.
+    - `evaitec.com` (from TR) -> Redirects to `evaitec.com.tr`.
+    - `evaitec.com` (International) -> English (via `/en/` path).
+- Supports `/en` and `/en/` routes for explicit English access.
+
+### 3. Frontend Localization (`index.html`)
+- Replaced hardcoded Turkish text with template variables.
+- Added a **Language Switcher** in the header.
+- Localized dynamic JavaScript feedback (toasts, loading states).
+
+### 4. SSH & Infrastructure
+- Fixed SSH access to ZimaOS using a passphrase-free key.
+- Resolved ZimaOS DNS issues (`ota.zimaos.com`) by configuring `resolv.conf`.
+
+## Verification Plan
+
+### Domain Redirection
+1. Access `evaitec.com` from a Turkish IP -> Should redirect to `evaitec.com.tr`.
+2. Access `evaitec.com` from an international IP -> Should show the English dashboard.
+
+### Language Toggle
+- Click **TR** or **EN** in the header to switch languages manually.
+
+### ZimaOS Update
+- Confirm ZimaOS 1.5.4 update completed successfully.

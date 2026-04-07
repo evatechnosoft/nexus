@@ -1,0 +1,19 @@
+# Plan - Install OpenCode and Superpowers Plugin
+
+Installing the OpenCode CLI and configuring it with the Superpowers plugin.
+
+## Proposed Changes
+
+### [INSTALL] OpenCode CLI
+- Run `npm install -g opencode-ai`.
+
+### [CONFIGURE] Superpowers Plugin for OpenCode
+- Create directories `%USERPROFILE%\.config\opencode\plugins` and `%USERPROFILE%\.config\opencode\skills`.
+- Create a symlink for the plugin: `mklink "%USERPROFILE%\.config\opencode\plugins\superpowers.js" "c:\projects\claude+antigravity\Superpowers\.opencode\plugins\superpowers.js"`.
+- Create a junction for skills: `mklink /J "%USERPROFILE%\.config\opencode\skills\superpowers" "c:\projects\claude+antigravity\Superpowers\skills"`.
+
+## Verification Plan
+
+### Automated Tests
+- Run `opencode --version` to verify installation.
+- Check symlinks/junctions via `dir /AL`.

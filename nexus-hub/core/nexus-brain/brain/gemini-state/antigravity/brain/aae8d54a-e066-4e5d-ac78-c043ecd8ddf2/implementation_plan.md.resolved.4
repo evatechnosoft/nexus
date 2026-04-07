@@ -1,0 +1,41 @@
+# Microsoft Graph / FindTalent Email Restorasyonu
+
+Kullanıcının belirttiği `support@findtalent.net` mail adresi ve Microsoft Graph API (Azure AD) entegrasyonunun geri getirilmesi.
+
+## User Review Required
+
+> [!IMPORTANT]
+> Azure (Microsoft Graph) için gerekli olan `AZURE_CLIENT_ID`, `AZURE_TENANT_ID` ve `AZURE_CLIENT_SECRET` anahtarları mevcut `.env` dosyasından silinmiş görünüyor. Bu anahtarlar olmadan Graph API watcher çalışmayacaktır.
+
+## Proposed Changes
+
+### Environment Configuration
+
+#### [MODIFY] [.env](file:///c:/projects/it-inventory/.env)
+- `EXCHANGE_EMAIL` değerini `support@findtalent.net` olarak güncelle.
+- `EXCHANGE_PASSWORD` değerini `test_smtp.py` içindeki app password (`xnjxsqskkvfdgwzc`) ile güncelle.
+- Azure Graph API için gerekli değişkenleri (placeholder olarak) geri ekle:
+  - `AZURE_CLIENT_ID`
+  - `AZURE_TENANT_ID`
+  - `AZURE_CLIENT_SECRET`
+
+### Watcher Logic Verification
+
+#### [CHECK] [graph_watcher.py](file:///c:/projects/it-inventory/graph_watcher.py)
+- Kodun environment üzerinden bu değerleri aldığından ve default olarak `support@findtalent.net` kullandığından emin ol.
+- Azure anahtarları eksik olduğunda sistemin loglarda uyarı verip standart Basic Auth'a (App Password) dönmesini sağla.
+
+## Open Questions
+
+1. **Azure Credentials:** Azure portalı üzerindeki Client ID, Tenant ID ve Client Secret değerleri `.env` dosyasından gitmiş. Eğer bu değerleri hatırlıyorsanız/elinizde varsa buraya yapıştırabilir misiniz?
+2. **Sender Filter:** `WATCH_SENDER_FILTER` alanını `findtalent.net` adreslerini de kapsayacak şekilde boş mu bırakalım yoksa belirli bir liste mi olsun?
+
+## Verification Plan
+
+### Automated Tests
+- `python test_smtp.py` çalıştırılarak SMTP üzerinden mail gönderme testi yapılacak.
+- `main.py` başlatılarak loglarda "Microsoft Graph API izleyici seçildi." mesajı doğrulanacak (eğer anahtarlar girilirse).
+
+### Manual Verification
+- Dashboard'daki "İzleyici Aktif" badge'i kontrol edilecek.
+- `support@findtalent.net` adresine bir test maili atılarak kuyruğa düşüp düşmediği izlenecek.

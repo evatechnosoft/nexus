@@ -1,0 +1,9 @@
+- [x] Fix 'Undefined class Health' by running `flutter pub get`
+- [x] Migrate `health_service.dart` to `health` v11.0.0+ (Health class, configure(), permissions)
+- [x] Update `AndroidManifest.xml` with core Health Connect permissions and queries
+- [x] Increase `minSdkVersion` to 26 in `build.gradle.kts`
+- [/] **Add new metrics**:
+  - [ ] Add `ACTIVE_ENERGY_BURNED`, `DISTANCE_DELTA`, `WEIGHT`, `WATER` to `HealthService`
+  - [ ] Update `AndroidManifest.xml` with 4 new read permissions
+- [/] Deploy to S24 Ultra (SM S928B) via `flutter run`
+- [ ] Verify health synchronization functionality on the device

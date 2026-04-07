@@ -1,0 +1,34 @@
+# Implementation Plan: Microsoft Graph API Migration
+
+Transition from EWS (Exchange Online) to **Microsoft Graph API**. Graph is the modern standard for Microsoft 365 and is more reliable for OAuth2 "app-only" connections.
+
+## User Action Required: Azure App Registration (Graph)
+Please follow these steps in the [Azure Portal](https://portal.azure.com):
+1. **App Registration**: Use the existing "IT-Inventory-Watcher" app.
+2. **API Permissions**:
+   - Remove the old Exchange Online permissions (they were failing).
+   - Click **Add a permission** -> **Microsoft Graph**.
+   - Select **Application permissions**.
+   - Search and select: **Mail.ReadWrite** (allows reading and moving emails).
+   - Click **Add permissions**.
+3. **Grant Admin Consent**: Click the "Grant admin consent for..." button. It should turn green.
+4. **IDs & Secret**: Use the same `CLIENT_ID`, `TENANT_ID`, and `CLIENT_SECRET` as before.
+
+## Proposed Changes
+
+### [Component] Backend Dependencies
+#### [MODIFY] [requirements.txt](file:///c:/projects/it-inventory/it-inventory/inventory_app/requirements.txt)
+Remove `exchangelib`. Add `O365` (a robust wrapper for Graph API).
+
+### [Component] Email Watcher
+#### [NEW] [graph_watcher.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/graph_watcher.py)
+Implement the email monitoring logic using the Graph API (O365 library). This will replace the EWS-based [_check_exchange_emails](file:///c:/projects/it-inventory/it-inventory/inventory_app/email_watcher.py#395-430).
+
+### [Component] Integration
+#### [MODIFY] [main.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/main.py)
+Update the scheduler to call the new `graph_watcher`.
+
+## Verification Plan
+1. Test Graph API connection using `debug_graph.py`.
+2. Verify it can list unread emails from `support@findtalent.net`.
+3. Process a test email and verify request creation in the database.

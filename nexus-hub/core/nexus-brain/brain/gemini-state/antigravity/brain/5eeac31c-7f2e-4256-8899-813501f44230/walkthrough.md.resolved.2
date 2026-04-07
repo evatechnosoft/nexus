@@ -1,0 +1,40 @@
+# DeanOS Infrastructure Restoration Completed
+
+We have successfully resolved all connectivity and configuration issues on the DeanOS server, establishing a stable and autonomous environment.
+
+## Changes Implemented
+
+### 1. Networking & Static IP
+- **Static IP:** `192.168.1.186` is now permanently assigned to the `Deancjx-2.4ghz` Wi-Fi connection.
+- **DNS:** Set to `1.1.1.1` and `8.8.8.8` for all system services.
+- **Routing:** Removed conflicting default routes that were sabotaging the internet connection.
+
+### 2. Docker Hub Stability
+- **Mirrors:** Configured reliable registry mirrors (`mirror.gcr.io`, `arvancloud`, `dockerhub.ir`) in [daemon.json](file:///d:/OS/Zimaos/daemon.json).
+- **MTU Fix:** Optimized the `docker0` bridge MTU to `1400` to prevent hanging image pulls.
+
+### 3. Persistent Passwordless Access
+- **SSH:** Generated a new, unencrypted Ed25519 key for seamless login.
+- **Sudo:** Enabled `NOPASSWD` for the `dean` user.
+- **Persistence:** Moved [authorized_keys](file:///C:/Users/Deacjx/.ssh/authorized_keys) to the writable `/DATA` partition to ensure it survives system updates/reboots.
+
+### 4. Nextcloud Authorization
+- Updated `config.php` to trust `192.168.1.186` and relevant domains, resolving the "untrusted domain" error.
+
+## Autonomous Management
+
+### Restoration Script
+If any of these settings are lost due to a system reset, simply run:
+```bash
+ssh deanos "sudo /DATA/fix_deanos.sh"
+```
+
+### Connection Documentation
+A detailed `deanos_config.md` has been placed in the root directory for future reference by both you and my AI persona.
+
+## Verification
+- [x] Passwordless SSH login (`ssh deanos`)
+- [x] Docker Hub image pulls (`docker pull busybox`)
+- [x] Nextcloud access (Verified via config check)
+
+Everything is now fully optimized and ready for deployment. 🚀

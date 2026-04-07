@@ -1,0 +1,41 @@
+# "Sorunları Gider ve Çalıştır" — Deployment ve Parser Fix Planı
+
+Bu plan, yereldeki görsel iyileştirmelerin sunucuya aktarılmasını ve e-posta ayrıştırıcısının (parser) hatalı eşleşmelerinin düzeltilmesini kapsar.
+
+## Kullanıcı İncelemesi Gerektiren Konular
+
+> [!IMPORTANT]
+> Sunucuya dosya aktarımı sırasında uygulama kısa bir süre (1-2 dakika) çevrimdışı kalacaktır. Docker container'ları yeni kodla yeniden inşa edilecektir.
+
+## Önerilen Değişiklikler
+
+### 1. Parser İyileştirmesi (Functional Fix)
+
+#### [DEĞİŞTİR] [email_parser.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/email_parser.py)
+- Kullanıcının belirttiği "header kayması" ve "yatay tablo" formatı için regex desenleri optimize edilecektir.
+- Tablo halindeki e-postalarda Ad, Soyad, Departman sütunlarının doğru eşleşmesi sağlanacaktır.
+
+### 2. Sunucu Senkronizasyonu (Deployment)
+
+#### Operasyonel Adımlar:
+- **Dosya Transferi:** Yereldeki `inventory_app` klasörü `scp` ile DeanOS `/DATA/AppData/it-inventory` dizinine senkronize edilecektir.
+- **Docker Yeniden Başlatma:** 
+  ```bash
+  cd /DATA/AppData/it-inventory && sudo docker-compose up -d --build
+  ```
+
+### 3. Çalıştırma ve Takip (Runtime)
+
+- `docker logs it-inventory` komutuyla Graph API (O365) bağlantısı ve e-posta izleyici (watcher) hataları denetlenecektir.
+- `it.evaitec.com` üzerinden yeni tasarımın yansıdığı teyit edilecektir.
+
+## Açık Sorular
+
+> [!CAUTION]
+> E-postalardan gelen verilerde "Ad Soyad" yerine sadece "Çalışan İsmi" mi yazıyor? "Header" kayması tam olarak hangi sütunlarda yaşanıyor? (Gerekirse örnek bir e-posta metni parser testi için yararlı olur).
+
+## Doğrulama Planı
+
+### Otomatik Testler
+- `test_parsing.py` yeni formata göre güncellenip çalıştırılacaktır.
+- Docker container'ın `Up (healthy)` durumunda olduğu sunucuda görülecektir.

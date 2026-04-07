@@ -1,0 +1,33 @@
+# IT Inventory & Coolify Recovery [EXECUTION MODE]
+
+The system is being transitioned to a stable multi-environment state. Per user instructions, we are proceeding directly to execution to resolve the 'broken' Coolify and Cloudflare Tunnel states on DeanOS.
+
+## User Review Required
+
+> [!IMPORTANT]
+> **Cloudflare Tunnel (Remote Management):** The tunnel is token-managed. I will provide the EXACT steps for the dashboard update to Port 9600.
+
+## Proposed Changes
+
+### [DeanOS] Infrastructure Fixes
+
+#### [FIX] Coolify Sentinel
+- Re-create the `coolify-sentinel` container with redirected volume: `/DATA/AppData/coolify/sentinel:/app/sentinel`.
+- Enforce `HOME=$PWD` to bypass ZimaOS root restrictions.
+
+#### [UPDATE] Cloudflare Tunnel Mappings
+- **it.evaitec.com** -> `http://localhost:9600` (PROD)
+- **test.it.evaitec.com** -> `http://localhost:9700` (TEST)
+- **coolify.evaitec.com** (or similar) -> `http://localhost:8005` (Manager)
+
+### [Local] IT Inventory Dev Sync
+
+#### [MODIFY] [main.py](file:///c:/projects/it-inventory/main.py)
+#### [MODIFY] [.env.dev](file:///c:/projects/it-inventory/.env.dev)
+
+## Verification Plan
+
+### Manual Verification
+- `curl http://192.168.1.186:9600` -> Expect 🟢 PROD Badge.
+- `docker ps` on DeanOS -> Expect `coolify-sentinel` to be `Up`.
+- Check local `dev` branch for 🟡 DEV Badge.

@@ -1,0 +1,28 @@
+# Gemini AI Modernizasyon Özeti
+
+SportApp genelinde Gemini AI entegrasyonu, en güncel model isimlendirmeleri (gemini-2.5, gemini-3.1) ve kullanıcı taraflı kota takip sistemi ile güncellendi.
+
+## Yapılan Değişiklikler
+
+### 1. Backend (@routes/ai.js)
+- **Dinamik Model:** Kullanıcı ayarlarından `geminiModel` tercihi okunacak şekilde güncellendi.
+- **Veri Toplama:** Biometrik verilerin (adım, KAH) AI raporlarına dahil edilmesini engelleyen destructuring hatası giderildi.
+- **Varsayılan:** Standart model `gemini-2.5-flash` olarak belirlendi.
+
+### 2. Mobil Uygulama (@lib/services/gemini_service.dart & settings_screen.dart)
+- **Model Seçimi:** Ayarlar ekranına model seçimi için "dropdown" eklendi.
+- **Kota Takibi:** Ücretsiz API anahtarları için 15 RPM (dakikalık istek) limiti yerel olarak (flutter_secure_storage) takip edilmeye başlandı.
+- **UI Geri Bildirim:** Ayarlar ekranına anlık kota kullanımını gösteren bir progress bar eklendi.
+
+### 3. Web Uygulaması (@public/app.js & index.html)
+- **Model Seçimi:** Web ayarlar sekmesine model listesi eklendi.
+- **Quota Logic:** `app.js` üzerinde 15 RPM limiti uygulanarak, limit aşıldığında kullanıcıya uyarı verilmesi sağlandı.
+- **Görselleştirme:** Kota durumu, yeşilden turuncuya dönen bir ilerleme çubuğu ile görselleştirildi.
+
+## Teknik Detaylar
+- **RPM Limiti:** Tüm platformlarda 15 istek/dakika olarak senkronize edildi.
+- **Modeller:** Nisan 2026 dökümantasyonuna uygun olarak en yeni Flash ve Pro modeller listeye eklendi.
+
+---
+> [!IMPORTANT]
+> Kullanıcıların yeni modelleri (özellikle 2.5 Flash) kullanabilmesi için ayarlar ekranından model seçip kaydetmeleri önerilir.

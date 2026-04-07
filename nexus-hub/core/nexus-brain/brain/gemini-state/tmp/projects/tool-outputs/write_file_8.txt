@@ -1,0 +1,45 @@
+Successfully created and wrote to new file: C:\projects\agentops-nexus\prod-docker-compose.yml. Here is the updated code:
+# prod-docker-compose.yml
+# AgentOps-Nexus Production Environment
+# Mimari: PostgreSQL 15 + FastAPI (Uvicorn)
+
+services:
+  nexus-db:
+    image: postgres:15-alpine
+    container_name: agentops-nexus-db
+    restart: unless-stopped
+    # Prod ortamında DB portu dışarıya (host) açık olmak zorunda değil,
+    # Sadece container network'ünde nexus-web ile konuşur (Azure Private Endpoint simülasyonu).
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-nexus_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-secure_pass}
+      POSTGRES_DB: ${POSTGRES_DB:-agentops_nexus}
+    volumes:
+      - nexus_pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-nexus_user}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  nexus-web:
+    build: 
+      context: .
+      dockerfile: prod.Dockerfile
+    container_name: agentops-nexus-web
+    restart: unless-stopped
+    # 4500-4600 aralığı bize rezerve. Host:Container.
+    ports:
+      - "${APP_PORT:-4500}:${APP_PORT:-4500}"
+    depends_on:
+      nexus-db:
+        condition: service_healthy
+    # Tüm sırları (secrets) dışarıdan (prod.env) alıyoruz. Zero-Hardcode kuralı.
+    env_file:
+      - prod.env
+    volumes:
+      - ./data:/app/data
+
+volumes:
+  nexus_pg_data:
+    name: agentops-nexus-pg-data

@@ -1,0 +1,9 @@
+<tool_output_masked>
+{
+  "output": "\"\"\"\nEmail metni → kişisel bilgi çıkarıcı.\n\nDesteklenen formatlar:\n  1. Etiketli (Anahtar: Değer):\n     İsim: Ali Veli\n     E-posta: ali@firma.com\n  2. Tablo / Satır (Başlık -> Veri):\n     Ad Soyad | E-posta | Telefon\n     A
+... [TRUNCATED] ...
+-]\", \"\", m_ph.group(0))\n\n        # Cihaz Türü Tespiti\n        for dtype, hint_re in _DEVICE_HINTS.items():\n            if hint_re.search(raw_text):\n                res[\"device_type\"] = dtype\n                break\n\n    return results\n"
+}
+
+Output too large. Full output available at: C:\Users\Deacjx\.gemini\tmp\projects\tool-outputs\session-a366de38-25fd-4d3a-9bce-f8a0bc9646e6\read_file_read_file_1775212147560_0_k0lqq.txt
+</tool_output_masked>

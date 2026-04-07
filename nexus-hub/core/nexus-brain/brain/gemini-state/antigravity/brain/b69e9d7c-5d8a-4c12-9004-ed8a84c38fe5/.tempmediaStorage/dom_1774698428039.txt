@@ -1,0 +1,75 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (356,32)<a class='UnderlineNav-item js-responsive-underlinenav-item js-selected-navigation-item' href='/hboon'>Overview />
+[1] (444,32)<a class='UnderlineNav-item js-responsive-underlinenav-item js-selected-navigation-item selected' href='/hboon?tab=repositories'>Repositories />
+	[2] (479,32)<span >237 />
+[3] (529,32)<a class='UnderlineNav-item js-responsive-underlinenav-item js-selected-navigation-item' href='/hboon?tab=projects'>Projects />
+[4] (594,32)<a class='UnderlineNav-item js-responsive-underlinenav-item js-selected-navigation-item' href='/hboon?tab=packages'>Packages />
+[5] (665,32)<a class='UnderlineNav-item js-responsive-underlinenav-item js-selected-navigation-item' href='/hboon?tab=stars'>Stars />
+	[6] (685,32)<span >1.1k />
+[7] (750,32)<a class='UnderlineNav-item js-responsive-underlinenav-item js-selected-navigation-item' href='/hboon?tab=sponsoring' />
+	[8] (749,32)<span >Sponsoring />
+	[9] (783,32)<span >1 />
+✨
+Hwee-Boon Yar
+hboon
+[10] (204,278)<a class='btn btn-block' href='/login?return_to=https%3A%2F%2Fgithub.com%2Fhboon%3Ftab%3Drepositories'>Follow />
+Indie developer
+[11] (143,386)<a class='Link--secondary no-underline no-wrap' href='https://github.com/hboon?tab=followers'>followers />
+	[12] (129,386)<span >154 />
+·
+[13] (205,386)<a class='Link--secondary no-underline no-wrap' href='https://github.com/hboon?tab=following'>following />
+	[14] (186,386)<span >38 />
+Indie developer
+Singapore
+[15] (175,517)<a class='Link--primary wb-break-all' href='https://hboon.com/about'>https://hboon.com/about />
+[16] (142,555)<a class='Link--primary wb-break-all' href='https://twitter.com/hboon'>@hboon />
+[17] (178,594)<a class='Link--primary wb-break-all' href='https://mastodon.social/@hboon'>@hboon@mastodon.social />
+[18] (151,632)<a class='Link--primary wb-break-all' href='https://bsky.app/profile/hboon.com'>@hboon.com />
+Sponsoring
+[19] (120,754)<a class='d-inline-block' href='/colinhacks' />
+	[20] (120,754)<img  />
+[21] (142,841)<a class='Link--primary mb-2' href='/hboon?tab=achievements'>Achievements />
+[22] (129,914)<a class='position-relative' href='/hboon?achievement=public-sponsor&tab=achievements' />
+	[23] (129,910)<img  />
+[24] (171,914)<a class='position-relative' href='/hboon?achievement=quickdraw&tab=achievements' />
+	[25] (171,910)<img  />
+[26] (212,914)<a class='position-relative' href='/hboon?achievement=yolo&tab=achievements' />
+	[27] (212,910)<img  />
+[28] (253,914)<a class='position-relative' href='/hboon?achievement=pull-shark&tab=achievements' />
+	[29] (253,910)<img  />
+	[30] (264,941)<span >x4 />
+marketingskills
+Public
+Forked from
+coreyhaines31/marketingskills
+Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.
+MIT License
+Updated
+[31] (364,243)<a href='/hboon/auto-commenter'>auto-commenter />
+Public
+Forked from
+[32] (400,278)<a class='Link--muted Link--inTextBlock' href='/rokpiy/auto-commenter'>rokpiy/auto-commenter />
+A Claude skill that automatically posts personalized, authentic comments in your target communities.
+MIT License
+Updated
+[33] (350,480)<a href='/hboon/CLIProxyAPI'>CLIProxyAPI />
+Public
+Forked from
+[34] (404,515)<a class='Link--muted Link--inTextBlock' href='/router-for-me/CLIProxyAPI'>router-for-me/CLIProxyAPI />
+Wrap Gemini CLI, Antigravity, ChatGPT Codex, Claude Code, Qwen Code, iFlow as an OpenAI/Gemini/Claude/Codex compatible API service, allowing you to enjoy the free Gemini 2.5 Pro, GPT 5, Claude, Qwe…
+Go
+MIT License
+Updated
+[35] (369,745)<a href='/hboon/continuous-claude'>continuous-claude />
+Public
+Forked from
+[36] (422,780)<a class='Link--muted Link--inTextBlock' href='/AnandChowdhary/continuous-claude'>AnandChowdhary/continuous-claude />
+🔂 Run Claude Code in a continuous loop, autonomously creating PRs, waiting for checks, and merging
+Shell
+MIT License
+Updated
+
+</current_dom>

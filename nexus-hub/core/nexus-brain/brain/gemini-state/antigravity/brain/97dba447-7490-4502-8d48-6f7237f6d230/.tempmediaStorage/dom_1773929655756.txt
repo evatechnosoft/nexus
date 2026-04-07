@@ -1,0 +1,117 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (166,22)<a class='category-link' href='/files/'>Файлы />
+[1] (195,22)<a class='category-link' href='/tags/'>Теги />
+[2] (221,22)<a class='category-link' href='/requests/'>Ищу />
+[3] (259,22)<a class='category-link' href='/topics/'>Обсуждения />
+[4] (304,22)<a class='category-link' href='/about/'>О сайте />
+[5] (334,22)<a href='/top/'>Топ />
+[6] (393,22)<a href='/about/faq/'>Вопросы и ответы (FAQ) />
+[7] (481,21)<a href='/'>Заказать работу />
+[8] (455,60)<fieldset  />
+	[9] (455,60)<input id='SearchQuery' placeholder='поиск по сайту' />
+[10] (818,60)<fieldset  />
+	[11] (818,60)<select id='SearchScope' />
+[12] (887,60)<fieldset  />
+	[13] (884,60)<button  />
+[14] (220,126)<fieldset  />
+	[15] (163,123)<label >Email />
+	[16] (231,123)<input id='AuthEmail' />
+[17] (365,126)<fieldset  />
+	[18] (308,123)<label >Пароль />
+	[19] (379,123)<input id='AuthPassword' />
+[20] (461,126)<fieldset  />
+	[21] (461,123)<button >Войти />
+[22] (522,127)<fieldset  />
+	[23] (522,123)<a href='/private/signup/'>Зарегистрироваться />
+[24] (604,127)<fieldset  />
+	[25] (604,123)<a href='/private/forgot/'>Восстановить пароль />
+[26] (673,127)<fieldset  />
+	[27] (673,123)<a href='/about/faq/signing_in/'>FAQ по входу />
+Войти через:
+[28] (217,175)<a class='button vkontakte' href='/auth/oauth-vkontakte/?purpose=login' />
+	[29] (217,175)<div  />
+[30] (244,175)<a class='button odnoklassniki' href='/auth/oauth-odnoklassniki/?purpose=login' />
+	[31] (244,175)<div  />
+[32] (270,175)<a class='button google' href='/auth/oauth-google/?purpose=login' />
+	[33] (270,175)<div  />
+[34] (297,175)<a class='button mailru' href='/auth/oauth-mailru/?purpose=login' />
+	[35] (297,175)<div  />
+[36] (324,175)<a class='button yandex' href='/auth/oauth-yandex/?purpose=login' />
+	[37] (324,175)<div  />
+Подробнее
+Foufouti Nicola, Erocack Linnette. English Code 3. Grammar Book
+djvu
+Pearson Education, 2020. — 51 p. In English Code language learning takes place through hands-on creative tasks, investigation, projects, and experiments. Children develop a coding mindset, problem solving, and collaborative skills. These all feature in a syllabus that includes built-in STEAM (Science, Technology, Engineering, Art, Math), driving learners’ natural curiosity...
+№34
+1,80 МБ
+добавлен
+19.05.21 15:42
+описание отредактировано
+19.05.21 15:46
+Подробнее
+Foufouti Nicola, Erocack Linnette. English Code 3. Grammar Book
+pdf
+Pearson Education, 2020. — 51 p. In English Code language learning takes place through hands-on creative tasks, investigation, projects, and experiments. Children develop a coding mindset, problem solving, and collaborative skills. These all feature in a syllabus that includes built-in STEAM (Science, Technology, Engineering, Art, Math), driving learners’ natural curiosity...
+№35
+9,13 МБ
+добавлен
+19.05.21 15:40
+описание отредактировано
+19.05.21 15:45
+[38] (718,391)<a class='button blue' href='/file/3465961/'>Подробнее />
+[39] (356,397)<a class='object-link' href='/file/3465961/'>Foufouti Nicola, Erocack Linnette. English Code 3. Phonics Book />
+pdf
+Pearson Education, 2020. — 51 p. In English Code language learning takes place through hands-on creative tasks, investigation, projects, and experiments. Children develop a coding mindset, problem solving, and collaborative skills. These all feature in a syllabus that includes built-in STEAM (Science, Technology, Engineering, Art, Math), driving learners’ natural curiosity...
+№36
+9,82 МБ
+добавлен
+19.05.21 15:41
+описание отредактировано
+19.05.21 15:45
+[40] (718,580)<a class='button blue' href='/file/3465963/'>Подробнее />
+[41] (356,585)<a class='object-link' href='/file/3465963/'>Foufouti Nicola, Erocack Linnette. English Code 3. Phonics Book />
+djvu
+Pearson Education, 2020. — 51 p. In English Code language learning takes place through hands-on creative tasks, investigation, projects, and experiments. Children develop a coding mindset, problem solving, and collaborative skills. These all feature in a syllabus that includes built-in STEAM (Science, Technology, Engineering, Art, Math), driving learners’ natural curiosity...
+№37
+2,59 МБ
+добавлен
+19.05.21 15:41
+описание отредактировано
+19.05.21 15:46
+[42] (718,768)<a class='button blue' href='/file/3444939/'>Подробнее />
+[43] (318,774)<a class='object-link' href='/file/3444939/'>Foufouti Nicola. English Code 1. Assessment Book />
+pdf
+Pearson Education, 2021. — 155 p. In English Code language learning takes place through hands-on creative tasks, investigation, projects, and experiments. Children develop a coding mindset, problem solving, and collaborative skills. These all feature in a syllabus that includes built-in STEAM (Science, Technology, Engineering, Art, Math), driving learners’ natural curiosity...
+№38
+16,95 МБ
+добавлен
+22.04.21 20:48
+описание отредактировано
+23.04.21 11:25
+[44] (718,957)<a class='button blue' href='/file/3444943/'>Подробнее />
+[45] (318,962)<a class='object-link' href='/file/3444943/'>Foufouti Nicola. English Code 1. Assessment Book />
+djvu
+Pearson Education, 2021. — 155 p. In English Code language learning takes place through hands-on creative tasks, investigation, projects, and experiments. Children develop a coding mindset, problem solving, and collaborative skills. These all feature in a syllabus that includes built-in STEAM (Science, Technology, Engineering, Art, Math), driving learners’ natural curiosity...
+[46] (119,46)<a href='/' />
+[47] (119,960)<a href='javascript: void(0);' />
+Сколько стоит написать твою работу?
+Оценка
+бесплатно
+, просто заполни форму:
+[48] (830,416)<textarea class='text' id='input_theme' placeholder='Тема' />
+[49] (830,463)<select class='select' id='input_type' />
+[50] (830,499)<input class='text' id='input_science' placeholder='Предмет' />
+[51] (830,535)<input class='text flatpickr-input' id='input_date' placeholder='Когда нужна работа?' />
+[52] (830,604)<textarea class='text' id='input_details' placeholder='Требования к работе' />
+[53] (830,677)<input class='text' id='input_phone' placeholder='Телефон (ответ придет СМС)' />
+[54] (830,713)<input class='text' id='input_email' placeholder='Ваш e-mail' />
+[55] (786,748)<input class='checkbox' id='input_personal_data' />
+[56] (838,761)<label >Даю согласие на />
+	[57] (835,769)<a href='https://assist.multiwork.org/personal-data.pdf'>обработку персональных данных />
+[58] (829,793)<div  />
+	[59] (829,815)<input class='button' id='button_submit' />
+
+</current_dom>

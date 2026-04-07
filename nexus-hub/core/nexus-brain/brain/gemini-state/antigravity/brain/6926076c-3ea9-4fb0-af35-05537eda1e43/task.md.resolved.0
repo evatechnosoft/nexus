@@ -1,0 +1,6 @@
+# Task: Fix Docker Connection and Deploy IT Inventory
+
+- [/] Investigate Docker context and daemon status
+- [ ] Fix Docker connection issue
+- [ ] Build and deploy the application
+- [ ] Verify the application is running on port 8000

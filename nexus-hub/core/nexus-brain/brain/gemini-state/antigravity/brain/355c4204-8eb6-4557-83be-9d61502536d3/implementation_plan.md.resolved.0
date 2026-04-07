@@ -1,0 +1,30 @@
+# Fix Azure DevOps Deployment to Azure Web Service
+
+The user is unable to deploy to Azure Web Service from the DevOps repo. The investigation of [azure-pipelines-1.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-1.yml) and [azure-pipelines.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines.yml) revealed differing `azureSubscription` service connection IDs and potential configuration mismatches.
+
+## User Review Required
+
+> [!IMPORTANT]
+> Please confirm which **Service Connection Name** (or ID) is correct for your Azure environment.
+> - [azure-pipelines-1.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-1.yml) uses: `0005790e-a97a-47a5-85ae-192931864472`
+> - [azure-pipelines.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines.yml) uses: `1de3256e-b2a8-4eb8-8b60-69f413263b02`
+>
+> If you have a human-readable name for your service connection (e.g., "Azure-Layers-Connection"), it is usually better to use that name instead of the UUID.
+
+## Proposed Changes
+
+### CI/CD Pipeline Configuration
+
+#### [MODIFY] [azure-pipelines-1.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-1.yml)
+
+- Standardize `runtimeStack` to `NODE|20-lts` for better compatibility.
+- Ensure the `package` path is correctly pointed to the artifact drop.
+- Add a comment to prompt for the correct `azureSubscription`.
+
+## Verification Plan
+
+### Manual Verification
+1. **Trigger Pipeline**: Run the pipeline manually in Azure DevOps on the `only-web` branch.
+2. **Check Logs**: Monitor the `Deploy` stage logs in Azure DevOps.
+3. **Verify Site**: If the deployment succeeds, verify that `https://layersupv2.azurewebsites.net` is live.
+4. **Confirm App Settings**: If it still fails, check the "Configuration" -> "General settings" in the Azure Portal for the Web App to ensure the "Stack settings" match Node 20.

@@ -1,0 +1,15 @@
+# Plan - Clone Awesome Claude Skills
+
+Cloning the second repository into its own subdirectory to avoid mixing it with the first one.
+
+## Proposed Changes
+
+### [NEW] awesome-claude-skills
+- Create directory `c:\projects\claude+antigravity\awesome-claude-skills`.
+- Clone `https://github.com/ComposioHQ/awesome-claude-skills` into it.
+
+## Verification Plan
+
+### Manual Verification
+- Verify the directory exists and contains cloned files via `list_dir`.
+- Check for a README or equivalent in the new repository.

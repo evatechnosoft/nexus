@@ -1,0 +1,4 @@
+- [x] Check if https://dash.evaitec.com/ is accessible: **Accessible** (shows ZimaOS/DeanOS login page).
+- [x] Check if http://it.evaitec.com/ is still NXDOMAIN: **Not NXDOMAIN** (shows IT Inventory Pro dashboard).
+- [x] Record any errors for dash.evaitec.com: Observed 401 errors in console, which are normal for a login page session check.
+- [x] Observe it.evaitec.com content: Dashboard is visible with links to Talepler, Envanter, Atamalar, etc.

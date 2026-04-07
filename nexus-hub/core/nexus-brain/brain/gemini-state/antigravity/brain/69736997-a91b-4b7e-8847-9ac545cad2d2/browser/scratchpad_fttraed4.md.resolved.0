@@ -1,0 +1,9 @@
+# Task Plan: Check Reachability of Specific URLs
+
+1. [ ] Check `http://it.evaitec.com/` for reachability and specific errors (e.g., DNS_PROBE_FINISHED_NXDOMAIN).
+2. [ ] Check `http://192.168.1.186:8001/` for reachability.
+3. [ ] Report the findings to the user.
+
+## Findings:
+- `http://it.evaitec.com/`: TBD
+- `http://192.168.1.186:8001/`: TBD

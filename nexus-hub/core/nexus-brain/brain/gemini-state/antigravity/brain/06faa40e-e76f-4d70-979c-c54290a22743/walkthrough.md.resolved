@@ -1,0 +1,36 @@
+# Walkthrough - Resolving Model Serialization and Pushing to noteseva
+
+I have resolved the constructor parameter mismatches and JSON serialization issues for the [Note](file:///c:/projects/github/EvAnotes/mobile/lib/models/note.dart#6-22) and [Task](file:///c:/projects/github/EvAnotes/mobile/lib/models/task.dart#6-26) models. The project is now in a clean, stable state, and the final version has been pushed to a new repository.
+
+## Changes Made
+
+### 1. Model Cleanup and Optimization
+
+#### [note.dart](file:///c:/projects/github/EvAnotes/mobile/lib/models/note.dart)
+- Made the [Note](file:///c:/projects/github/EvAnotes/mobile/lib/models/note.dart#6-22) class `abstract` to correctly inherit from the `freezed` mixin.
+- Removed manual `@override` getters and the [toJson()](file:///c:/projects/github/EvAnotes/mobile/lib/models/create_task_request.dart#16-23) method, allowing `freezed` to generate more robust implementations.
+- Properly integrated `Note.fromJson` with the generated `_$NoteFromJson`.
+
+#### [task.dart](file:///c:/projects/github/EvAnotes/mobile/lib/models/task.dart)
+- Made the [Task](file:///c:/projects/github/EvAnotes/mobile/lib/models/task.dart#6-26) class `abstract` to align with the `freezed` framework.
+- Removed manual overrides for core fields and [toJson()](file:///c:/projects/github/EvAnotes/mobile/lib/models/create_task_request.dart#16-23).
+- Preserved the custom `isCompleted` getter as a clean extension.
+- Correctly integrated `Task.fromJson` with `_$TaskFromJson`.
+
+### 2. Global JSON Field Naming (snake_case)
+
+#### [build.yaml](file:///c:/projects/github/EvAnotes/mobile/build.yaml) [NEW]
+- Created a package-specific [build.yaml](file:///c:/projects/github/EvAnotes/mobile/build.yaml) to enforce `field_rename: snake` across all generated `json_serializable` models. This ensures compatibility with the existing database schema and backend expectations.
+
+## Verification Results
+
+### Automated Tests
+- I performed a clean build by deleting `.dart_tool`, running `flutter pub get`, and executing `build_runner`.
+- **Unit Tests Passed**: All 45 tests in [models_test.dart](file:///c:/projects/github/EvAnotes/mobile/test/unit/models_test.dart) and [task_model_test.dart](file:///c:/projects/github/EvAnotes/mobile/test/unit/task_model_test.dart) passed successfully, confirming correct instance creation and JSON serialization (both from and to snake_case).
+
+### New Repository
+- Created a new private GitHub repository: [noteseva](https://github.com/evatechnosoft/noteseva.git).
+- Pushed the finalized, verified state of the project to this new remote.
+
+## How to Proceed
+You can now work directly with the new `noteseva` repository. The models are fully functional and consistent with your database structure.

@@ -1,0 +1,7 @@
+# Task Checklist
+- [ ] Open http://localhost:5173/
+- [ ] Verify character visibility (girl sprite)
+- [ ] Verify ground structure (solid brown, no stripes)
+- [ ] Verify stars (white/blue shining, no pink/yellow)
+- [ ] Verify lava/water gap visibility
+- [ ] Capture screenshot for confirmation

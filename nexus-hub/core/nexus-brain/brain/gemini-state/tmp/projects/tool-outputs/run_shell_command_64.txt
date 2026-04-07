@@ -1,0 +1,9 @@
+Output: 
+
+    Directory: C:\projects\agentops-nexus
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----          4/3/2026     13:05                data
+Process Group PGID: 11692

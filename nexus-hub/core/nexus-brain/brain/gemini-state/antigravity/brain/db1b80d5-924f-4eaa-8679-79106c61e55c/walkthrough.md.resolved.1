@@ -1,0 +1,39 @@
+# Walkthrough: AI Nutri-Chat Pro 🚀
+
+"AI Nutri-Chat Pro" güncellemesiyle beslenme takibi deneyimini bir üst seviyeye taşıdık. Artık çok daha hızlı, mobil uyumlu ve interaktif!
+
+## 🌟 Öne Çıkan Özellikler
+
+### 📸 Doğrudan Kamera Erişimi
+Mobil cihazlarda "AI Nutri-Scan" butonuna bastığınızda, tarayıcı sizi doğrudan kameraya yönlendirir. Galeride arama yapma zahmetinden kurtulun!
+
+### 🎤 Sesle Yazma (Voice Typing)
+Chat ekranının altındaki mikrofon butonuna basarak yediklerinizi söyleyebilirsiniz. `webkitSpeechRecognition` teknolojisi ile sesiniz anında metne dönüşür ve analiz edilir.
+
+### 🍱 Yemek Geçmişi (Tile Sistemi)
+Chat ekranının en üstünde, o gün yediğiniz yemeklerin küçük görsellerinden (Tile) oluşan yatay bir bant bulunur. 
+- Kaç öğün yediğinizi görsel olarak takip edebilirsiniz.
+- Her tile altında o yemeğin kalori değeri yazar.
+
+### 💬 Metin Tabanlı AI Analizi
+Eğer fotoğrafınız yoksa, yemeğinizi sadece yazarak (veya söyleyerek) de analiz ettirebilir ve günlüğünüze ekleyebilirsiniz.
+
+## 🛠️ Teknik Ekosistem
+
+### 🏢 UI Geliştirmeleri
+- **Microphone Animation:** Ses kaydı sırasında mikrofon butonu "pulse" efektiyle canlanır.
+- **Horizontal Scroll:** Yemek geçmişi bandı, ekranı kaplamadan yana doğru kaydırılabilir.
+
+### 🧠 Akıllı Mantık
+- `app.js` içine `SpeechRecognition` entegrasyonu yapıldı.
+- `renderMealChat` fonksiyonu, geçmiş verilerini dinamik olarak Tile'lara dönüştürür.
+- Resim verileri, geçmişte görüntülenebilmesi için `localStorage` üzerinde optimize edilerek saklanır.
+
+## 🧪 Nasıl Denenir?
+1. **Mobilden:** [192.168.1.187:3002](http://192.168.1.187:3002) adresine girin.
+2. **Kamera:** Scan butonuna basın ve tabağınızı çekin.
+3. **Ses:** Chat ekranındaki 🎤 butonuna basın ve "Bir kase mercimek çorbası" deyin.
+4. **Geçmiş:** Birkaç yemek ekledikten sonra chat ekranının üstündeki kartları kontrol edin.
+
+> [!NOTE]
+> Sesli yazma özelliği için tarayıcınızdan mikrofon izni vermeyi unutmayın!

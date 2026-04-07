@@ -1,0 +1,42 @@
+# Implementation Plan - Finalizing Evaitec Landing Page
+
+Finalizing the development and deployment of the Evaitec landing page by addressing remaining items from the handoff document and ensuring the Docker environment is stable.
+
+## Proposed Changes
+
+### Configuration
+#### [MODIFY] [index.html](file:///c:/projects/evaiteclabs/index.html)
+- Locate the Formspree contact form and update the action URL with `https://formspree.io/f/xaqlypov`.
+
+### Cleanup
+#### [DELETE] [evaiteclab](file:///c:/projects/evaiteclab)
+- Delete the legacy folder `C:\projects\evaiteclab` as requested in the handoff.
+
+### Docker & Deployment
+#### [MODIFY] [docker-compose.yml](file:///c:/projects/evaiteclabs/docker-compose.yml)
+- Ensure the port mapping is correct (3001:3001) and consistent with `server.js`.
+
+---
+
+## Deployment to DeanOS
+
+The project will be deployed to the ZimaOS server (`deanos`) using a Git-based workflow to ensure consistency:
+
+1. **Local Sync:** `git add .`, `git commit -m "Update Formspree ID and cleanup"`, `git push origin master`.
+2. **Server Setup:** SSH into `deanos` and replace the existing non-git `/DATA/evaiteclabs` with a fresh clone:
+   - `mv /DATA/evaiteclabs /DATA/evaiteclabs_old_backup`
+   - `git clone https://github.com/evatechnosoft/evaiteclabs.git /DATA/evaiteclabs`
+3. **Docker Launch:** `cd /DATA/evaiteclabs && docker-compose up --build -d`.
+4. **Verification:** Check logs and external connectivity via `evaitec.com`.
+
+---
+
+## Verification Plan
+
+### Automated Tests
+- Run `docker-compose up --build -d` to verify the container starts correctly.
+- Test the local endpoint `http://localhost:3001` using `curl` or browser tools.
+
+### Manual Verification
+- Verify the contact form triggers the correct Formspree endpoint (once ID is provided).
+- Check mobile responsiveness on the local dev server.

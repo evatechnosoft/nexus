@@ -1,0 +1,6 @@
+# Microsoft 365 Installation Support
+
+- [ ] Identify Microsoft 365 license type (Home/Personal vs Business)
+- [ ] Provide official Microsoft CDN links for Offline Installer (IMG/EXE)
+- [ ] Provide instructions for mounting .img files or running the installer
+- [ ] Suggest Office Deployment Tool (ODT) as a backup method

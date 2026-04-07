@@ -1,0 +1,13 @@
+# Task: Verify Ground and Water Visuals
+
+## Checklist
+- [ ] Open http://localhost:5173/
+- [ ] Verify ground is solid brown with grass only on top
+- [ ] Verify water is solid blue with waves only on surface
+- [ ] Confirm no black/cyan gaps between tiles
+- [ ] Capture screenshot of water and ground
+
+## Findings
+- Ground:
+- Water:
+- Gaps:

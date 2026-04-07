@@ -1,0 +1,117 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Ana içeriğe geç
+Erişilebilirlik yardımı
+Erişilebilirlikle ilgili geri bildirim
+[0] (75,70)<a aria-label='Google Anasayfası'na Git' href='https://www.google.com/webhp?hl=tr&sa=X&ved=0ahUKEwjggtGjpMKTAxXVS_EDHaaFJbEQPAgI' id='logo' title='Google Anasayfası'na Git' />
+[1] (345,68)<textarea aria-label='Ara' class='gLFyf' id='APjFqb' role='combobox' />
+[2] (562,68)<div  />
+	[3] (560,68)<div aria-label='Temizle' class='vOY7J M2vV3' role='button' />
+		[4] (560,68)<span  />
+	[5] (576,68)<span  />
+[6] (592,68)<div aria-label='Harf çevirme aracı' class='Umvnrc' role='button' />
+	[7] (592,68)<span  />
+[8] (617,68)<div aria-label='Sesle arama yapın' class='XDyW0e' role='button' />
+[9] (643,68)<div aria-label='Görselle arama' class='nDcEnd' role='button' />
+[10] (673,68)<button aria-label='Ara' class='HZVG1b Tg7LZd' />
+	[11] (669,68)<div  />
+		[12] (669,68)<span  />
+[13] (877,69)<div aria-label='Ayarlar' class='fLciMb' id='og-te' role='button' />
+	[14] (877,71)<div  />
+		[15] (877,69)<span  />
+[16] (907,69)<a aria-label='Google uygulamaları' class='gb_B' href='https://www.google.com.tr/intl/tr/about/products?tab=wh' role='button' />
+[17] (955,69)<a aria-label='Oturum açın' class='gb_A' href='https://accounts.google.com/ServiceLogin?hl=tr&passive=true&continue=https://www.google.com/search%3Fq%3Dunified%2Bne%2Bdemek%26oq%3Dunified%26gs_lcrp%3DEgZjaHJvbWUqBwgBEAAYgAQyBggAEEUYOTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDINCAkQLhivARjHARiABNIBCDM2ODBqMGo3qAIAsAIA%26sourceid%3Dchrome%26ie%3DUTF-8&ec=futura_srp_og_si_72236_p'>Oturum açın />
+	Oturum açın
+[18] (157,144)<a class='C6AK7c' role='link' />
+	Tümü
+[19] (202,144)<a class='C6AK7c' href='/search?sca_esv=314db17b76bb14ae&udm=2&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLQJoVswXu7Xoldd5UH6fMIpVmXy93SCOvvhdXj3lBBc6HNfbQDKHnUBum5H8UIMBbbgnIYkW_hD7yuFkoP7BprIWEiatghcwTq_lkc-17a89hDtNKSMGhh8RFFzEMNz0A6eNlrHW0x2DqZ4xzODhDVgTmoZYUzY_F5NsjvCT8EbeP4A3t06BFYvDiVanexA2pa3EgYgI20BrpQJHXV9YaZ4vbMDz&q=unified+ne+demek&sa=X&ved=2ahUKEwjggtGjpMKTAxXVS_EDHaaFJbEQtKgLegQIFBAB' />
+	[20] (202,144)<div  />
+		[21] (202,155)<span >Görseller />
+[22] (253,144)<a class='C6AK7c' href='/search?sca_esv=314db17b76bb14ae&udm=7&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLQJoVswXu7Xoldd5UH6fMIpVmXy93SCOvvhdXj3lBBc6HNfbQDKHnUBum5H8UIMBbbgnIYkW_hD7yuFkoP7BprIWEiatghcwTq_lkc-17a89hDtNKSMGhh8RFFzEMNz0A6eNlrHW0x2DqZ4xzODhDVgTmoZYUzY_F5NsjvCT8EbeP4A3t06BFYvDiVanexA2pa3EgYgI20BrpQJHXV9YaZ4vbMDz&q=unified+ne+demek&sa=X&ved=2ahUKEwjggtGjpMKTAxXVS_EDHaaFJbEQtKgLegQIFhAB' />
+	[23] (253,144)<div  />
+		[24] (253,155)<span >Videolar />
+[25] (302,144)<a class='C6AK7c' href='/search?sca_esv=314db17b76bb14ae&udm=28&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLQJoVswXu7Xoldd5UH6fMIpVmXy93SCOvvhdXj3lBBc6HNfbQDKHnUBum5H8UIMBbbgnIYkW_hD7yuFkoP7BprIWEiatghcwTq_lkc-17a89hDtNKSMGhh8RFFzEMNz0A6eNlrHW0x2DqZ4xzODhDVgTmoZYUzY_F5NsjvCT8EbeP4A3t06BFYvDiVanexA2pa3EgYgI20BrpQJHXV9YaZ4vbMDz&q=unified+ne+demek&ved=1t:220175&ictx=111' />
+	[26] (302,144)<div  />
+		[27] (302,155)<span >Alışveriş />
+[28] (352,144)<a class='C6AK7c' href='/search?sca_esv=314db17b76bb14ae&q=unified+ne+demek&tbm=nws&source=lnms&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLQJoVswXu7Xoldd5UH6fMIpVmXy93SCOvvhdXj3lBBc6HNfbQDKHnUBum5H8UIMBbbgnIYkW_hD7yuFkoP7BprIWEiatghcwTq_lkc-17a89hDtNKSMGhh8RFFzEMNz0A6eNlrHW0x2DqZ4xzODhDVgTmoZYUzY_F5NsjvCT8EbeP4A3t06BFYvDiVanexA2pa3EgYgI20BrpQJHXV9YaZ4vbMDz&sa=X&ved=2ahUKEwjggtGjpMKTAxXVS_EDHaaFJbEQ0pQJegQIExAB' />
+	[29] (352,144)<div  />
+		[30] (352,155)<span >Haberler />
+[31] (394,144)<a class='C6AK7c' href='/search?sca_esv=314db17b76bb14ae&udm=web&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLQJoVswXu7Xoldd5UH6fMIpVmXy93SCOvvhdXj3lBBc6HNfbQDKHnUBum5H8UIMBbbgnIYkW_hD7yuFkoP7BprIWEiatghcwTq_lkc-17a89hDtNKSMGhh8RFFzEMNz0A6eNlrHW0x2DqZ4xzODhDVgTmoZYUzY_F5NsjvCT8EbeP4A3t06BFYvDiVanexA2pa3EgYgI20BrpQJHXV9YaZ4vbMDz&q=unified+ne+demek&sa=X&ved=2ahUKEwjggtGjpMKTAxXVS_EDHaaFJbEQs6gLegQIEhAB' />
+	[32] (394,144)<div  />
+		[33] (394,155)<span >Web />
+[34] (446,144)<div class='mTpL7c' role='button' />
+	[35] (446,144)<div  />
+		[36] (446,155)<div  />
+			[37] (440,149)<span >Daha fazla />
+			[38] (467,149)<span  />
+[39] (509,144)<div class='mOKdDc' id='hdtb-tls' role='button' />
+	[40] (509,144)<div  />
+		[41] (509,155)<div  />
+			[42] (503,149)<span >Araçlar />
+			[43] (523,149)<span  />
+Arama Sonuçları
+Looking for results in English?
+[44] (967,265)<a href='#' />
+	[45] (967,262)<span  />
+[46] (852,296)<a href='/setprefs?sig=0_AFLdylOmlmYTb9A6MfmhoVa_RsI%3D&source=en_ignored_notification&prev=https://www.google.com/search?q%3Dunified%2Bne%2Bdemek%26oq%3Dunified%26gs_lcrp%3DEgZjaHJvbWUqBwgBEAAYgAQyBggAEEUYOTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDINCAkQLhivARjHARiABNIBCDM2ODBqMGo3qAIAsAIA%26sourceid%3Dchrome%26ie%3DUTF-8&hl=en&sa=X&ved=2ahUKEwjggtGjpMKTAxXVS_EDHaaFJbEQhoQCKAF6BAgJEAQ'>Change to English />
+[47] (875,326)<a href='#'>kullanmaya devam et />
+	[48] (832,326)<span >Türkçe />
+[49] (839,369)<a class='fl' href='/preferences?lang=1&hl=tr&sa=X&ved=2ahUKEwjggtGjpMKTAxXVS_EDHaaFJbEQiIQCKAN6BAgJEAY#languages'>Dil ayarları />
+Çeviri Sonucu
+[50] (251,242)<div  />
+	[51] (251,242)<div  />
+		[52] (243,242)<div class='j1iyq' id='tw-sl' role='button' />
+			[53] (195,242)<span  />
+				[54] (195,242)<span >İngilizce - detected />
+			[55] (329,244)<span  />
+[56] (356,243)<span aria-label='Dilleri değiştir' class='tw-menu-btn' id='tw-swap' role='button' />
+	[57] (355,242)<span  />
+[58] (461,242)<div  />
+	[59] (468,242)<div class='j1iyq' id='tw-tl' role='button' />
+		[60] (397,242)<span >Türkçe />
+		[61] (554,244)<span  />
+[62] (240,321)<textarea class='tw-ta tw-text-large q8U8x goog-textarea' id='tw-source-text-ta' placeholder='Metin girin' />
+[63] (166,472)<span aria-label='Sesle çeviri yap' class='tw-menu-btn' id='tw-mic' role='button' />
+	[64] (165,470)<span  />
+[65] (202,472)<span aria-label='Kaynak metni dinle' class='tw-menu-btn' id='tw-src-spkr-button' role='button' />
+	[66] (202,470)<span  />
+[67] (335,316)<span aria-label='Kaynak metni temizle' class='tw-menu-btn KTDgic' id='tw-cst' role='button' />
+	[68] (334,315)<span  />
+birleşik
+[69] (392,472)<span aria-label='Çevrilmiş metni kopyala' class='tw-menu-btn' id='tw-cpy-btn' role='button' title='Kopyala' />
+	[70] (391,473)<span  />
+[71] (428,472)<span aria-label='Çeviriyi dinle' class='tw-menu-btn' id='tw-spkr-button' role='button' />
+	[72] (427,470)<span  />
+Bunu Google'da ara
+[73] (527,418)<span class='ykhOFb z1asCe wuXmqc' role='button' title='Kapat' />
+[74] (464,472)<span class='tw-menu-btn' id='md3enc' role='button' title='Google'da Ara' />
+	[75] (464,473)<span  />
+		[76] (464,473)<span  />
+unified
+için çeviriler
+sıfat
+[77] (356,643)<div class='tw-bilingual-marked tw-bilingual-entry PZPZlf' role='button' />
+	[78] (360,630)<span  />
+		[79] (168,630)<span >birleşik />
+	[80] (360,656)<div >unified, combined, united, joint, integrated, connected />
+[81] (356,718)<div class='tw-bilingual-entry PZPZlf' role='button' />
+	[82] (356,705)<span  />
+		[83] (169,705)<span >birleştirilmiş />
+	[84] (356,731)<div >unified, consolidated />
+[85] (473,785)<a href='https://translate.google.com/?gs_lcrp=EgZjaHJvbWUqBwgBEAAYgAQyBggAEEUYOTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDINCAkQLhivARjHARiABNIBCDM2ODBqMGo3qAIAsAIA&um=1&ie=UTF-8&hl=tr&client=tw-ob#auto/tr/unified' id='tw-gtlink'>Google Çeviri'de aç />
+•
+[86] (545,785)<div class='mWcf0e' role='button' />
+	[87] (545,785)<div  />
+		[88] (545,785)<span >Geri bildirim />
+Diğer sorular
+[89] (244,869)<div aria-label='Bu sonuç hakkında' class='iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[90] (244,869)<span  />
+		[91] (244,870)<span  />
+[92] (356,934)<div class='dnXCYb' role='button' />
+	Unified ne?
+	[93] (356,934)<div  />
+Undefined ne anlama gelir?
+
+</current_dom>

@@ -1,0 +1,41 @@
+# AI Nutri-Chat Pro Uygulama Planı 🍏
+
+Kullanıcının yemeklerini telefon kamerasıyla çekmesine, sesli komut vermesine ve geçmiş yemeklerini chat ekranında "Tile" (kart) olarak görmesine olanak tanıyan geliştirmeler.
+
+## Kullanıcı İncelemesi Gerekli
+
+> [!IMPORTANT]
+> **Ses Tanıma (Speech Recognition):** Bu özellik tarayıcı bazlıdır ve ilk kullanımda kullanıcıdan mikrofon izni isteyecektir.
+> **Kamera Erişimi:** Bazı eski mobil tarayıcılar `capture="environment"` özniteliğini tam desteklemeyebilir; bu durumda varsayılan dosya seçici açılmaya devam eder.
+
+## Önerilen Değişiklikler
+
+### 1. Görünüm (UI) Katmanı
+
+#### [MODIFY] [index.html](file:///c:/projects/SportApp/public/index.html)
+- `mealPhotoInput`'a `capture="environment"` eklenecek.
+- `chat-body` içine `id="mealChatHistory"` adında bir geçmiş alanı eklenecek.
+- `chat-footer` kısmına `chat-input-area` eklenecek (Input + Mikrofon Butonu).
+
+#### [MODIFY] [style.css](file:///c:/projects/SportApp/public/style.css)
+- `meal-history-belt`: Yatay kaydırılabilir yemek kartları bandı.
+- `history-tile`: Küçük resim, yemek ismi ve kalori içeren minik kart stili.
+- `mic-btn`: Ses dalgası animasyonlu mikrofon butonu.
+
+### 2. Mantık (Logic) Katmanı
+
+#### [MODIFY] [app.js](file:///c:/projects/SportApp/public/app.js)
+- `renderMealChat(dk)`: Geçmiş yemekleri Tile olarak render eden yeni bir yardımcı fonksiyon.
+- `startVoiceTyping()`: `Web Speech API` entegrasyonu.
+- `handleChatMessage(text)`: Sadece metinle (fotoğrafsız) yemek girişi yapabilme desteği.
+- `saveAnalyzedMeal()`: Kaydedilen yemeği anında "Tile" olarak geçmişe ekleme.
+
+## Doğrulama Planı
+
+### Manuel Doğrulama
+- Telefonda butona basınca galerinin değil, doğrudan kameranın açıldığını kontrol etme.
+- Mikrofona basıp "100 gram tavuk yedim" dediğimizde metnin inputa dolduğunu görme.
+- Yemek kaydettikten sonra Chat ekranındaki geçmiş bandında yemeğin Tile olarak belirdiğini kontrol etme.
+
+### Otomatik Testler
+- `S.loggedMeals` verisinin `localStorage` tarafında doğru şekilde serialize edildiğini tarayıcı konsolundan doğrulama.

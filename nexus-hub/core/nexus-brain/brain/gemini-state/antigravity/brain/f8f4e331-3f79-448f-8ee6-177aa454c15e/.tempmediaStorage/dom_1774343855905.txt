@@ -1,0 +1,59 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (94,37)<a aria-label='Microsoft' class='c-logo c-sgl-stk-uhfLogo' href='https://www.microsoft.com' id='uhfLogo'>Microsoft />
+	[1] (91,34)<img class='c-image' role='presentation' />
+	Microsoft
+[2] (173,37)<a aria-label='Destek' class='c-logo c-cat-logo' href='https://support.microsoft.com/tr-tr' id='uhfCatLogo' />
+	[3] (174,34)<span >Destek />
+[4] (228,33)<a class='c-uhf-nav-link' href='https://www.microsoft.com/microsoft-365?ocid=cmmttvzgpuy' id='c-shellmenu_0'>Microsoft 365 />
+[5] (279,33)<a class='c-uhf-nav-link' href='https://www.microsoft.com/microsoft-365/microsoft-office?ocid=cmml7tr0rib' id='c-shellmenu_1'>Office />
+[6] (325,35)<button id='c-shellmenu_2'>Ürünler />
+[7] (378,35)<button id='c-shellmenu_11'>Cihazlar />
+[8] (462,35)<button id='c-shellmenu_19'>Hesap ve faturalandırma />
+[9] (549,35)<button id='c-shellmenu_22'>Kaynaklar />
+[10] (634,35)<a class='c-uhf-nav-link' href='https://go.microsoft.com/fwlink/?linkid=849747' id='buyInstallButton'>Microsoft 365’i satın alın />
+[11] (772,35)<button class='c-button-logo all-ms-nav' />
+	[12] (770,35)<span >Tüm Microsoft />
+[13] (831,34)<button aria-label='Yardım arayın' class='c-glyph' id='search' />
+	[14] (824,36)<span role='presentation'>Ara />
+[15] (910,36)<a aria-label='Hesabınızda oturum açın' class='mectrl_resetStyle mectrl_trigger' href='https://support.microsoft.com/tr-tr/authentication/signin?ru=https%3A%2F%2Fsupport.microsoft.com%2Ftr-tr%2Foffice%2Foffice-%25C3%25A7evrimd%25C4%25B1%25C5%259F%25C4%25B1-y%25C3%25BCkleyiciyi-kullanma-f0a85fe7-118f-41cb-a791-d59cef96ad1c' id='mectrl_main_trigger' />
+	[16] (869,5)<span >Hesabınızda oturum açın />
+	[17] (910,36)<div class='mectrl_topHeader' role='presentation' />
+		[18] (894,36)<div >Oturum aç />
+		[19] (934,36)<div class='mectrl_profilepic mectrl_glyph mectrl_signIn_circle_glyph' id='mectrl_headerPicture' role='presentation' />
+Microsoft 365 veya Office Yükleme
+[20] (173,240)<a class='supLeftNavLink' href='/tr-tr/office/pc-veya-mac-bilgisayara-microsoft-365-veya-office-2024-%C3%BC-indirme-y%C3%BCkleme-veya-yeniden-y%C3%BCkleme-4414eaaf-0478-48be-9c42-23adc4716658'>Microsoft 365 veya Office Yükleme />
+[21] (173,296)<a class='supLeftNavLink' href='/tr-tr/office/bir-%C3%BCr%C3%BCn-anahtar%C4%B1n%C4%B1-kullanma-veya-office-i-etkinle%C5%9Ftirme-e7470bfe-45bd-4d46-90aa-d4237c11d79d'>Ürün anahtarını kullanma />
+[22] (173,351)<a class='supLeftNavLink' href='/tr-tr/office/office-%C3%BCr%C3%BCn-anahtar%C4%B1n%C4%B1z%C4%B1-girece%C4%9Finiz-yer-0a82e5ae-739e-4b92-a6f4-2ec780c185db'>Ürün anahtarları />
+[23] (173,419)<a class='supLeftNavLink' href='/tr-tr/office/windows-i%C3%A7in-office-i-etkinle%C5%9Ftirme-5bd38f38-db92-448b-a982-ad170b1e187e'>Office veya Microsoft 365'i etkinleştirme />
+[24] (163,498)<a class='supLeftNavLink' href='/tr-tr/office/microsoft-365-i%C3%A7in-dil-donat%C4%B1-paketi-82ee1236-0f9a-45ee-9c72-05b026ee809f'>Dil, 32/64 bit ve diğer seçenekler />
+[25] (168,561)<a class='supLeftNavLink' href='/tr-tr/office/microsoft-365-i%C3%A7in-dil-donat%C4%B1-paketi-82ee1236-0f9a-45ee-9c72-05b026ee809f'>Office veya Microsoft 365 için dil paketi />
+[26] (168,641)<a class='supLeftNavLink' href='/tr-tr/office/office-in-64-bit-ile-32-bit-s%C3%BCr%C3%BCm%C3%BC-aras%C4%B1nda-se%C3%A7im-yap%C4%B1n-2dee7807-8f95-4d0c-b5fe-6c6f49b8d261'>Office veya Microsoft 365'in 64 bit ya da 32 bit sürümü />
+[27] (168,708)<a class='supLeftNavLink' href='/tr-tr/office/office-%C3%A7evrimd%C4%B1%C5%9F%C4%B1-y%C3%BCkleyiciyi-kullanma-f0a85fe7-118f-41cb-a791-d59cef96ad1c'>Office yükleyici />
+[28] (173,769)<a class='supLeftNavLink' href='/tr-tr/office/project-i-y%C3%BCkleme-7059249b-d9fe-4d61-ab96-5c5bf435f281'>Diğer uygulamaları yükleme />
+[29] (173,825)<a class='supLeftNavLink' href='/tr-tr/office/mobil-cihazda-office-uygulamalar%C4%B1n%C4%B1-ve-e-posta-hesab%C4%B1n%C4%B1-ayarlama-7dabb6cb-0046-40b6-81fe-767e0b1f014f'>Mobil cihazları ayarlama />
+[30] (173,892)<a class='supLeftNavLink' href='/tr-tr/office/microsoft-365-veya-windows-i%C3%A7in-office-i-g%C3%BCncelle%C5%9Ftirme-2ab296f3-7f03-43a2-8e50-46de917611c5'>Office veya Microsoft 365 güncelleştirmeleri />
+[31] (173,960)<a class='supLeftNavLink' href='/tr-tr/office/office-i-nas%C4%B1l-y%C3%BCkseltirim-ee68f6cf-422f-464a-82ec-385f65391350'>En son sürüme yükseltme />
+Office çevrimdışı yükleyiciyi kullanma
+[32] (439,236)<details id='supAppliesToList' />
+	[33] (439,236)<summary class='contentToggle'>Uygulandığı Öğe />
+Düşük hızlar veya güvenilir olmayan bağlantılar nedeniyle Microsoft 365 yüklerken karşılaşabileceğiniz sorunlara yardımcı olmak için aşağıdaki planınıza özgü adımları izleyin. Bu yükleyici dosyasını indirmek için internete bağlı olmanız gerekir ancak bu işlemi bir kez yaptıktan sonra Microsoft 365 uygulamasını dilediğiniz şekilde bilgisayara yükleyebilirsiniz.
+Çevrimdışı yükleyici adımları
+Aşağıdaki adımlar, Microsoft 365 ürününüzün bir
+ev için Office
+veya
+iş için Office
+planının parçası olmasına göre değişiklik gösterdiğinden Office ürününüz için doğru sekmeyi seçmelisiniz.
+[34] (500,668)<h3  />
+	[35] (500,668)<button class='expandoButtonLink' id='ID0EDBF-button'>Ev veya iş planlarına hangi ürünlerin dahil olduğunu görmek için buraya tıklayın. />
+		Ev veya iş planlarına hangi ürünlerin dahil olduğunu görmek için buraya tıklayın.
+Planınızı seçin
+[36] (301,859)<button class='tabControl__tab' id='section-2_tabControl-OfficePlans_tab-1' role='tab' />
+	[37] (301,857)<span >Ev için Office />
+[38] (387,859)<button class='tabControl__tab' id='section-2_tabControl-OfficePlans_tab-2' role='tab' />
+	[39] (387,858)<span >İş için Office />
+1. Adım. Hesap portalınızdan çevrimdışı yükleyiciyi indirme
+
+</current_dom>

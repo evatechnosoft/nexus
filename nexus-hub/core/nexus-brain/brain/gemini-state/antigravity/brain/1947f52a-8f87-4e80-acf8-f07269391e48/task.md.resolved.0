@@ -1,0 +1,13 @@
+# Tasks
+
+- [ ] Clean up environment
+    - [ ] Terminate all background `build_runner` processes
+    - [ ] Clean `build_runner` cache
+- [ ] Verify configuration
+    - [ ] Check `pubspec.yaml`
+    - [ ] Check `build.yaml` (if exists)
+- [ ] Regenerate code
+    - [ ] Run `flutter pub run build_runner build --delete-conflicting-outputs`
+- [ ] Verify fix
+    - [ ] Check if analyzer errors are gone
+    - [ ] Verify [note.freezed.dart](file:///c:/projects/github/EvAnotes/mobile/lib/models/note.freezed.dart) matches [note.dart](file:///c:/projects/github/EvAnotes/mobile/lib/models/note.dart)

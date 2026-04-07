@@ -1,0 +1,15 @@
+## Registration Test Checklist
+- [x] Open http://localhost:3002/
+- [!] Clear localStorage and reload (FAILURE: Browser API 'target closed' on every interaction)
+- [ ] Click "Hesabın yok mu? Kayıt Ol"
+- [ ] Fill registration details (TestUser, test@example.com, password123)
+- [ ] Hit Enter in the password field
+- [ ] Verify if dashboard loads
+- [ ] Check console logs for errors
+
+**Notes:** 
+- Encountering persistent 'target closed' errors when trying to interact with the page or get DOM.
+- Screenshot shows dashboard is active.
+- `capture_browser_console_logs` works and shows some security errors with iframes.
+- `click_browser_pixel` failed with "zero width or height".
+- Browser context is likely corrupted. Attempting a full page reload or tool reset.

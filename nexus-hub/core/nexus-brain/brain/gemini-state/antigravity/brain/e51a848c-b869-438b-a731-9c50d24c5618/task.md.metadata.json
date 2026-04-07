@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_TASK",
+  "summary": "Initial task list for fixing `freezed` models in the `mobile` app. Included steps for analyzing models, fixing naming mismatches, running the build runner, and verifying the fix.",
+  "updatedAt": "2026-03-21T09:25:29.434752600Z"
+}

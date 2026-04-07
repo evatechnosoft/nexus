@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary": "Plan to restore ZimaOS services after the fresh format to version 1.4.4. Includes re-establishing the Cloudflare tunnel and deploying the Flask and IT Inventory applications.",
+  "updatedAt": "2026-03-25T06:52:41.918654600Z"
+}

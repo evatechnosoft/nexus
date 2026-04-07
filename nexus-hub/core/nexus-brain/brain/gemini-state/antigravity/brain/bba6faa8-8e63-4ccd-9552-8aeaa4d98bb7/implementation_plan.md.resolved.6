@@ -1,0 +1,40 @@
+# [ZimaOS] Akıllı Ev Altyapısı Güçlendirme - Aşama 1 (MQTT & Node-RED)
+
+Donanım bağımlılığı olmayan temel servislerin (MQTT Broker ve Node-RED) kurulumu ve Home Assistant entegrasyonu planıdır.
+
+## Kullanıcı İncelemesi Gerekli
+
+- **Zigbee Dongle**: `zigbee2mqtt` için fiziksel bir adaptör (Sonoff ZBDongle vb.) gereklidir. Dongle olmadan servis başlamayacaktır. Ancak yazılımsal altyapıyı hazır bırakabiliriz.
+- **Port ve Veri Yolu**: Servisler `/DATA/AppData/` altında kendi klasörlerinde, izole bir şekilde saklanacaktır.
+
+## Önerilen Değişiklikler
+
+### 1. [NEW] Mosquitto MQTT Broker
+- **Klasör**: `/DATA/AppData/mosquitto` (config, data, log)
+- **Port**: 1883 (Standard MQTT)
+- **Güvenlik**: Kullanıcı adı/şifre ile kimlik doğrulama yapılandırılacak.
+
+### 2. [NEW] Node-RED
+- **Klasör**: `/DATA/AppData/nodered`
+- **Port**: 1880
+- **Entegrasyon**: Home Assistant "Pallete" eklenecek ve `192.168.1.186` üzerinden HA'ya şifresiz (Internal Token) bağlanacak.
+
+### 3. [NEW] Zigbee2MQTT (Pasif Hazırlık)
+- Donanım takıldığında tek tıkla çalışacak şekilde yapılandırması (`/DATA/AppData/zigbee2mqtt`) hazırlanacak.
+
+## Uygulama Planı
+
+1. **Dizinlerin Oluşturulması**: SSH üzerinden gerekli `/DATA/AppData` klasörleri hazırlanacak.
+2. **Konteynerlerin Kurulumu**: Docker Compose dosyaları ile (ZimaOS standartlarında) servisler ayağa kaldırılacak.
+3. **HA Bağlantısı**: Home Assistant arayüzünde "MQTT Integration" eklenip yeni kurulan Mosquitto'ya bağlanacak.
+4. **Node-RED Konfigürasyonu**: HA-Entity'lerinin Node-RED'e aktarıldığı doğrulanacak.
+
+## Açık Sorular
+
+- **[ÖNEMLİ]**: MQTT için belirleyeceğimiz şifreleme (Username/Password) bilgisini sizinle paylaşayım mı, yoksa şimdilik şifresiz mi (Yerel ağda güvenli kabul edilebilir) olsun?
+
+## Doğrulama Planı
+
+- `docker ps` ile konteynerlerin sağlıklı çalıştığının teyidi.
+- HA içinden MQTT loglarının kontrolü.
+- Node-RED arayüzüne erişim testi.

@@ -1,0 +1,24 @@
+# Tasks
+
+- [x] Clone `superpowers` repository
+- [x] Explore project structure
+- [x] Research build/run instructions
+- [x] Clone `awesome-claude-skills` repository
+- [x] Explore awesome-claude-skills structure
+- [x] Add `frontend-design` skill
+- [x] Verify `frontend-design` content
+- [x] Research OpenCode installation
+- [x] Install OpenCode
+- [x] Commit changes
+- [x] Push to GitHub
+## Phase 2: Workspace Restructure
+- [x] Create `skills` directory
+- [x] Move existing skills to `skills/`
+- [x] Commit & Push restructured workspace
+
+## Phase 3: carDash Project Development
+- [x] Create `projects` directory
+- [x] Initialize Flutter project `carDash`
+- [/] Brainstorming & Requirements (using `brainstorming`)
+- [ ] Architecture Design (SOLID & Clean Architecture)
+- [ ] Implementation

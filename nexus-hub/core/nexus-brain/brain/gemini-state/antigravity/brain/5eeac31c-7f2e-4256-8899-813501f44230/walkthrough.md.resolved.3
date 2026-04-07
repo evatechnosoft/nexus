@@ -1,0 +1,37 @@
+# DeanOS Infrastructure & Service Deployment Completed
+
+We have successfully restored the server infrastructure and deployed the IT Inventory application.
+
+## Changes Implemented
+
+### 1. Networking & Static IP
+- **Static IP:** `192.168.1.186` is now permanently assigned.
+- **DNS:** Set to `1.1.1.1` and `8.8.8.8`.
+
+### 2. Docker Hub Stability
+- **Mirrors:** Configured reliable registry mirrors to prevent pull failures.
+- **MTU Fix:** Optimized the `docker0` bridge MTU to `1400`.
+
+### 3. Persistent Passwordless Access
+- **SSH/Sudo:** Enabled seamless login and `NOPASSWD` access.
+- **Persistence:** Moved [authorized_keys](file:///C:/Users/Deacjx/.ssh/authorized_keys) to the writable `/DATA` partition.
+
+### 4. Nextcloud & IT Inventory Deployment
+- **Nextcloud:** Resolved "untrusted domain" error.
+- **IT Inventory:** 
+  - Cloned from `evatechnosoft/My-Personal-Repository` (dev branch).
+  - Configured with private GitHub SSH keys.
+  - Deployed via Docker on port `8001` (to match Cloudflare Tunnel).
+  - Connected to the PostgreSQL `inventory` database successfully.
+
+## Verification
+- [x] Passwordless SSH login (`ssh deanos`)
+- [x] Docker Hub image pulls (`docker pull busybox`)
+- [x] Nextcloud access (Verified)
+- [x] IT Inventory access (Verified on port 8001)
+
+## Maintenance
+- **Fix Script:** Run `sudo /DATA/fix_deanos.sh` on the server to restore settings.
+- **Config Guide:** Refer to `deanos_config.md` in the root directory for connection details.
+
+Everything is now fully optimized and production-ready. 🚀

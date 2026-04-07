@@ -1,0 +1,6 @@
+{
+  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary": "Final implementation plan using a new pipeline file and bypassing the private registry issue.",
+  "updatedAt": "2026-03-17T16:42:26.905270400Z",
+  "version": "5"
+}

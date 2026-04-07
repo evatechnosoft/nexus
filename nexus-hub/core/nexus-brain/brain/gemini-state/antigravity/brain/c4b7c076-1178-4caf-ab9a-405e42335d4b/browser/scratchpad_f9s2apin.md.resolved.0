@@ -1,0 +1,8 @@
+# Task: Verify character polishing updates
+
+## Verification Checklist
+- [ ] No white eye rectangles on the character.
+- [ ] Walking animation (feet moving) is significantly slower and looks more natural.
+- [ ] Pulsing glow effect around the character.
+- [ ] Correct orientation when moving left/right.
+- [ ] Capture recording showing the polished character and pulsing glow.

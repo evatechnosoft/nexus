@@ -1,0 +1,104 @@
+{
+  "sessionId": "021485fc-4995-4e77-a41e-566cb3e859ae",
+  "projectHash": "371f0df146dd8f5c4d85fc7e382a098411a022a773f3bd3ccb1143db4bc957ae",
+  "startTime": "2026-03-07T11:01:12.984Z",
+  "lastUpdated": "2026-03-07T11:01:40.904Z",
+  "messages": [
+    {
+      "id": "58b7b50c-2b60-4053-9bdf-e07e3819289e",
+      "timestamp": "2026-03-07T11:01:12.984Z",
+      "type": "user",
+      "content": [
+        {
+          "text": "Votol EM150 controller troubleshooting: throttle not working, motor not responding to throttle input even when controller is connected and powered. What parameters to check in VotolPro/Votol app? Common causes: throttle voltage out of range, throttle protect settings, Hall sensor issues, fault codes, protection triggers. How to diagnose and fix."
+        }
+      ]
+    },
+    {
+      "id": "f3b1a3bf-9fd1-4afe-a561-bbbe808c6e2f",
+      "timestamp": "2026-03-07T11:01:17.839Z",
+      "type": "gemini",
+      "content": "",
+      "thoughts": [
+        {
+          "subject": "Examining Throttle Diagnostics",
+          "description": "I've begun outlining the troubleshooting steps for the Votol EM150 throttle issue. I plan to detail parameter checks within the Votol Pro app, focusing on those most likely to cause the problem. Common causes like wiring issues and sensor calibration will be included as well.",
+          "timestamp": "2026-03-07T11:01:15.077Z"
+        },
+        {
+          "subject": "Defining Parameter Investigations",
+          "description": "I've just compiled a list of potential parameters to investigate within the Votol Pro app. I'm focusing on throttle voltage ranges, fault codes, brake cutoff settings, and overall controller status. Wiring and port assignments are also being prioritized. I'll need to research specific parameter names within the Votol Pro interface.",
+          "timestamp": "2026-03-07T11:01:17.633Z"
+        },
+        {
+          "subject": "Mapping Initial Search Queries",
+          "description": "I'm presently building the initial search queries to acquire precise parameter names and troubleshooting steps for the Votol EM150. My focus centers on finding resources that outline throttle voltage ranges, fault code explanations, brake cutoff behaviors, and detailed controller status diagnostics within the Votol Pro app or associated documentation.",
+          "timestamp": "2026-03-07T11:01:17.652Z"
+        }
+      ],
+      "tokens": {
+        "input": 8744,
+        "output": 26,
+        "cached": 6968,
+        "thoughts": 340,
+        "tool": 0,
+        "total": 9110
+      },
+      "model": "gemini-3-flash-preview",
+      "toolCalls": [
+        {
+          "id": "google_web_search_1772881277838_0",
+          "name": "google_web_search",
+          "args": {
+            "query": "Votol EM150 throttle not working troubleshooting VotolPro parameters"
+          },
+          "result": [
+            {
+              "functionResponse": {
+                "id": "google_web_search_1772881277838_0",
+                "name": "google_web_search",
+                "response": {
+                  "output": "Web search results for \"Votol EM150 throttle not working troubleshooting VotolPro parameters\":\n\nTroubleshooting a Votol EM150 throttle issue involves verifying both the physical wiring and the software parameters in **VotolPro**.[1]\n\n### 1. Software Parameter Checks (VotolPro)\nOpen VotolPro and navigate to the **Page 1 (Basic Settings)** and **Display** tabs.[1]\n\n*   **Throttle Voltage Settings (Page 1):**\n    *   **Low Protect:** This is a safety feature.[1] If the throttle voltage is *above* this value when you turn the bike on, the controller will disable the throttle to prevent unintended acceleration. \n        *   *Typical Value:* **3.0V**.[1] If your throttle rests at a high voltage (e.g., 3.5V), the bike won't move.[1]\n    *   **Starting Voltage:** The voltage at which the motor begins to spin.[1]\n        *   *Typical Value:* **1.1V – 1.3V**. If this is set higher than your throttle's output, the motor won't start.[1][2]\n    *   **End Voltage:** The voltage for maximum speed.[1]\n        *   *Typical Value:* **4.2V – 4.5V**.[1]\n    *   **High Protect:** The upper limit.[1][2][3] If the throttle signal exceeds this, the controller may trigger a fault.[1]\n*   **Start Settings:**\n    *   **Soft Start:** If set too low (e.g., 1), the motor might feel like it's not responding.[4][1] Try increasing this to **5–10**.\n    *   **Rate of Rise:** Controls how fast the throttle responds.[1][2] If set to **0**, response will be non-existent or extremely sluggish.[1]\n*   **Speed & Current Limits:**\n    *   **Busbar Current:** Ensure this is not set to **0**.[1][2][5] For an EM150, a typical starting value is **50A–100A**.[1]\n    *   **Three Speed Settings:** Check if you are in a \"Low\" gear mode that is set to **0%**.[1]\n\n### 2. Real-Time Diagnostics (Display Tab)\nGo to the **Display** or **Monitor** page while the throttle is connected:\n*   **Throttle Voltage:** Twist the throttle and watch the voltage value.[2][1] It should smoothly transition from ~0.8V (idle) to ~4.2V (full).[1] If it stays at **0V** or **5V**, you have a wiring issue.[1]\n*   **Fault Codes:** Look for \"Hall Error\" or \"Throttle Error.\"[1]\n*   **Brake/Park Status:** Ensure the \"Brake\" or \"Park\" indicators are **OFF**.[1] If the controller thinks the brake is pulled, it will kill the throttle signal.[1]\n\n### 3. Hardware & Wiring Checks\n*   **E-Lock (Ignition):** The thin orange or red \"Electric Lock\" wire **must** be connected to Battery Positive (B+) for the controller to activate.[1]\n*   **Throttle Wiring:**\n    *   **Red:** +5V (Output from controller)[1]\n    *   **Black:** Ground[6][1]\n    *   **Green/White:** Signal (Input to controller)[1]\n*   **Common Ground:** Ensure the throttle ground and controller ground are shared.[6][1]\n*   **Multimeter Test:** Measure the voltage between the **Black** and **Green** wires.[1] It should be ~0.8V at rest and ~4.2V when twisted.[1]\n\n### 4. Common \"No Response\" Fixes\n1.  **Throttle Deadzone:** If the motor only spins at the very end of the twist, lower the **Starting Voltage** in VotolPro.[1]\n2.  **Controller Won't Arm:** If the \"Low Protect\" is triggered, the controller won't arm.[1][2] Try setting **Low Protect** to **4.5V** temporarily to see if the motor spins (be careful, as this disables the safety check).\n3.  **Phase/Hall Match:** If the throttle shows voltage but the motor just \"grunts\" or vibrates, you likely have a **Phase/Hall wire mismatch**.[1] You may need to run the **Auto-Learn** or manually swap phase wires.[1]\n\nSources:\n[1] endless-sphere.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmKWqyeyhZlYQEM9D1slz3d82mGXVJElZpF42B3EvHB5F2f3fADLGC0CMzwLG1nVPODPM20BQpmLIUoi_oPQLjJ1r9Fd5CkzgMkgQzLwOnKDIx0uylOgpmGS_f1hQIYQb728r-BQWCkylejXLax43J7wyK-_bA-yJpQD1m_2GlNNsCjQ3q)\n[2] youtube.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGPUHQOt_mym2gzrKphCmLxCaFbrtjfcqCfGg88g4WlqkunuYupxjGnR3Klz9ryRC3-gKt4TnrGAwNN1m6kaxQcwLzQuOV7F1B9Xlf8O32hgUTblw2yG1waacq-7i7m-gTr-Ue_m68=)\n[3] votol.cn (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWz-XUAzCTkEbhhhMWNueS_24BRNM0KSohcdDf_BVUR9jyp_WcXhD-xsap35j9sIZnpgGVYicP_z9shRk5ql-Dyn2r7wvyrRy5tTAEw3y8m2Rmst3yPFuMHGGbkjYWiweN34yXumIhzlxYqIOlwJuXhCvS9nWfouZbVQ==)\n[4] manuals.plus (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSiHewQik9cqUGIE3GMf46sTAPraDLH-h2EGJweBIWQxyChh0-oabOdNCdCo1jHJ7WZX9SV6L-_wuZ_QXK3dblRQ5jOEfU-b2vDcu3ibAVX9flu6PkDvlZVB50HYV24610cU8=)\n[5] youtube.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9ytIwJ8KGPVpmLnen82lgZewk6kCMxkqqQJgjsbYHVJ1R_xPST5THhOuUq9j1SrkglXZmmx2WKv_7rurHOSjpMQYUIdUf2V9j_Mrst7-0Fhz8737WuaZGQ8j0NdSbr7TeueEJoFw=)\n[6] endless-sphere.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH5zMFb9jCNYI60onNJYmvHSebx1_CeuaoXy4IuqjRe9OypmyO4tVCt5RaFvEXCRceVEnnDBumewCNMdzLKMq41LotOzRybpC6i9slxSLEAPlHO3tRoQqL9qQWf2B9_FFA5SqFvsXLUw_P1kENhrcX2gj0jR6h37AF0SKFVyKSC6G21uvcxNxsF8n5u3gELmqDzqA==)"
+                }
+              }
+            }
+          ],
+          "status": "success",
+          "timestamp": "2026-03-07T11:01:32.733Z",
+          "resultDisplay": "Search results for \"Votol EM150 throttle not working troubleshooting VotolPro parameters\" returned.",
+          "displayName": "GoogleSearch",
+          "description": "Performs a web search using Google Search (via the Gemini API) and returns the results. This tool is useful for finding information on the internet based on a query.",
+          "renderOutputAsMarkdown": true
+        }
+      ]
+    },
+    {
+      "id": "7875e268-c887-4d32-9b4e-f932569689c4",
+      "timestamp": "2026-03-07T11:01:40.904Z",
+      "type": "gemini",
+      "content": "To troubleshoot a Votol EM150 controller where the throttle is unresponsive, follow these diagnostic steps within the **VotolPro/Votol app** and check the following hardware points.\n\n### 1. Key Software Parameters (Page 1 / Basic Settings)\nIf these values are misconfigured, the controller will ignore the throttle signal for safety.\n\n*   **Throttle Low Protect (V):** This is the most common \"hidden\" cause. If the throttle’s resting voltage is *above* this value when you turn the bike on, the controller disables the throttle to prevent runaway.\n    *   **Check:** Set this to **3.0V** or **3.5V**. If it's set too low (e.g., 1.0V) and your throttle rests at 1.1V, the bike won't move.\n*   **Starting Voltage (V):** The voltage at which the motor starts to turn.\n    *   **Typical Value:** **1.1V – 1.3V**. If this is higher than your throttle's maximum output, the motor will never engage.\n*   **End Voltage (V):** The voltage for 100% throttle.\n    *   **Typical Value:** **3.8V – 4.2V**.\n*   **Rate of Rise / Soft Start:** \n    *   If **Rate of Rise** is set to **0**, the throttle response is effectively disabled.\n    *   If **Soft Start** is set to a very low value (e.g., 1), the motor might feel dead or take several seconds to move.\n*   **Busbar / Phase Current:** Ensure these are not set to **0**. For an EM150, start with a Busbar current of **50A-80A** for testing.\n\n### 2. Real-Time Diagnostics (Display / Monitor Tab)\nConnect the controller and open the **Display** or **Monitor** page to see what the controller \"sees\" in real-time:\n\n*   **Throttle Voltage:** Twist the throttle and watch the value. \n    *   *Normal:* ~0.8V (idle) to ~4.2V (full twist).\n    *   *Fault:* If it stays at **0V**, there is a break in the 5V power or signal wire. If it stays at **5V**, there is likely a short or a disconnected ground.\n*   **Brake / Park Status:** Look for indicators labeled \"Brake\" or \"Park.\" \n    *   If these are **ON** or **Active**, the controller will kill the motor output. Votol controllers can be configured for \"High Level\" or \"Low Level\" braking; if the setting is reversed, the controller thinks the brake is pulled constantly.\n*   **Fault Codes:** Check for \"Hall Error\" or \"Phase Error.\" A Hall sensor fault will prevent the motor from spinning even if the throttle is working perfectly.\n\n### 3. Hardware & Wiring Checks\n*   **Electric Lock (Orange Wire):** The thin orange wire (sometimes red) **must** be connected to Battery Positive (B+) for the controller to arm. If the app connects but the motor doesn't spin, verify this wire has full battery voltage.\n*   **Throttle Wiring:**\n    *   **Red:** +5V Output (Verify with a multimeter).\n    *   **Black:** Ground.\n    *   **Green/White:** Signal.\n*   **Phase & Hall Matching:** If the motor \"grunts,\" vibrates, or spins very slowly/loudly when you give it throttle, the **Phase and Hall wire sequence** is likely wrong. You must either use the **Auto-Learn** function in the app or manually swap the three phase wires (Yellow, Blue, Green) until the motor spins smoothly.\n\n### 4. Quick Troubleshooting Summary\n| Symptom | Likely Cause | Fix |\n| :--- | :--- | :--- |\n| **0.0V in Display tab** | Broken wire or no 5V | Check Red (+5V) and Black (GND) wires. |\n| **App shows voltage, no motion** | Brake/Park active | Check Brake settings (High vs Low level). |\n| **App shows voltage, no motion** | Low Protect triggered | Increase \"Throttle Low Protect\" to 3.0V. |\n| **Motor vibrates/makes noise** | Hall/Phase mismatch | Run Auto-Learn or swap Phase wires. |\n| **Motion only at end of twist** | Starting Voltage too high | Lower \"Starting Voltage\" to ~1.1V. |",
+      "thoughts": [
+        {
+          "subject": "Composing a Response",
+          "description": "I'm synthesizing the provided data. The search results are proving fruitful, I've got a handle on the Votol EM1 50's parameters, like the throttle protections, voltage settings and current limits. I'm focusing on the software side, ensuring I capture the essence of each parameter.",
+          "timestamp": "2026-03-07T11:01:34.780Z"
+        },
+        {
+          "subject": "Crafting the Outline",
+          "description": "I'm structuring the response now, organizing the Votol EM1 50 parameters, which includes throttle protections, voltage settings, and current limits. I'm prioritizing clarity, breaking down software, monitoring, and hardware aspects, including common troubleshooting steps and potential fixes. I will provide a well-organized guide.",
+          "timestamp": "2026-03-07T11:01:35.419Z"
+        }
+      ],
+      "tokens": {
+        "input": 10662,
+        "output": 1003,
+        "cached": 6950,
+        "thoughts": 158,
+        "tool": 0,
+        "total": 11823
+      },
+      "model": "gemini-3-flash-preview"
+    }
+  ],
+  "kind": "main"
+}

@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary": "Implementation plan to fix the \"Expected to find ')'\" syntax error in `scan_screen.dart`.",
+  "updatedAt": "2026-03-15T17:17:45.174236400Z"
+}

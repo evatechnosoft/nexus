@@ -1,0 +1,25 @@
+# VS Code and Coolify Installation Plan
+
+The user wants to install VS Code and Coolify on their Windows machine.
+
+## Proposed Changes
+
+### [Component Name] VS Code
+#### [NEW] [install_vscode.ps1](file:///c:/projects/github/EvAnotes/install_vscode.ps1)
+- Download VS Code User Installer from `https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user`.
+- Run the installer silently with `/verysilent /mergetasks=!runcode`.
+
+### [Component Name] Coolify
+#### [NEW] [install_coolify_wsl.sh](file:///c:/projects/github/EvAnotes/install_coolify_wsl.sh)
+- Since Coolify is designed for Linux, it will be installed inside the default WSL distribution (`Ubuntu`).
+- Command: `wsl -d Ubuntu -u root bash -c "curl -fsSL https://cdn.coollabs.io/coolify/install.sh | bash"`
+
+## Verification Plan
+
+### Automated Tests
+- Run `code --version` to verify VS Code installation.
+- Run `wsl -e curl http://localhost:8000` (or the default Coolify port) to verify Coolify is running.
+
+### Manual Verification
+- User to check VS Code opens.
+- User to access Coolify dashboard in browser at `http://localhost:8000`.

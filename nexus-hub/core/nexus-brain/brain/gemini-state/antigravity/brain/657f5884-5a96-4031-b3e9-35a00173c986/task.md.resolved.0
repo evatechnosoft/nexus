@@ -1,0 +1,8 @@
+# Task: Fix Black Screen and Slow Loading Issues
+
+- [x] Investigate project structure <!-- id: 0 -->
+- [/] Analyze `lib/main.dart` and initialization logic <!-- id: 1 -->
+- [ ] Identify bottlenecks in loading process <!-- id: 2 -->
+- [ ] Implement fixes for black screen <!-- id: 3 -->
+- [ ] Optimize loading performance <!-- id: 4 -->
+- [ ] Verify fixes <!-- id: 5 -->

@@ -1,0 +1,12 @@
+# Task: Docker Deployment Transition
+
+- [/] Planning & Infrastructure
+    - [x] Analyze [server.js](file:///c:/projects/Layers/LayersupCom_v2/server.js) and [package.json](file:///c:/projects/Layers/LayersupCom_v2/package.json)
+    - [/] Create [implementation_plan.md](file:///C:/Users/Deacjx/.gemini/antigravity/brain/355c4204-8eb6-4557-83be-9d61502536d3/implementation_plan.md) for Docker
+    - [ ] Create `Dockerfile`
+- [ ] Pipeline Configuration
+    - [ ] Update [azure-pipelines-1.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-1.yml) with Docker stages
+    - [ ] Coordinate ACR setup with user
+- [ ] Verification
+    - [ ] Verify build and push in Azure DevOps
+    - [ ] Verify deployment to Web App for Containers

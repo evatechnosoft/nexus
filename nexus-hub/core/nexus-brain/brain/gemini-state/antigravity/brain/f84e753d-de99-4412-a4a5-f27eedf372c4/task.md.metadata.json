@@ -1,0 +1,6 @@
+{
+  "artifactType": "ARTIFACT_TYPE_TASK",
+  "summary": "Task for creating PostgreSQL databases and user on ZimaOS.",
+  "updatedAt": "2026-03-24T14:11:00.785790800Z",
+  "version": "3"
+}

@@ -1,0 +1,41 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (300,128)<button class='back-btn'>← Geri Dön />
+Hafta 01: Welcome!
+İlk gün — selamlaşma, sayılar, yaş
+📚 Kitap Referansları
+Student Book:
+Sayfa 4-7
+🗝️ Anahtar Kelimeler (Vocabulary)
+🎯
+Tıkla:
+Okunuşunu dinle | 🖱️
+Basılı Tut:
+Harf harf kodlamasını dinle
+[1] (340,721)<div  />
+	[2] (340,662)<div >hello />
+	[3] (340,701)<div >merhaba />
+	[4] (340,765)<div >[he-low]
+hel-lo />
+		[5] (340,751)<hr  />
+		[6] (301,769)<b >🗣️ Okunuş: />
+		[7] (305,790)<b >🧩 Heceleme: />
+[8] (500,725)<div  />
+	[9] (500,666)<div >goodbye />
+	[10] (500,705)<div >hoşça kal />
+[11] (660,725)<div  />
+	[12] (660,666)<div >one />
+	[13] (660,705)<div >bir />
+[14] (340,916)<div  />
+	[15] (340,900)<div >two />
+	[16] (340,939)<div >iki />
+[17] (500,916)<div  />
+	[18] (500,900)<div >three />
+	[19] (500,939)<div >üç />
+[20] (660,916)<div  />
+	[21] (660,900)<div >four />
+	[22] (660,939)<div >dört />
+
+</current_dom>

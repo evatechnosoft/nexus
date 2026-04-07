@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Runtime outputs
+output/
+logs/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Temp
+*.tmp
+*.temp
+
+# Optional local env copies
+.env.local

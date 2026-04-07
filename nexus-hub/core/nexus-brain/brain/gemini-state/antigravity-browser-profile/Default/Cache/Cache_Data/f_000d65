@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+  <title>EVAITEC — Doğadan Geleceğe: Sonsuz Entegrasyon</title>
+
+  <!-- SEO -->
+  <meta name="description" content="EVAITEC — Yapay zeka, otomasyon ve teknoloji danışmanlığında uzmanlaşmış yazılım şirketi. DevOps, AI entegrasyonu, ESP32 robotik, ev otomasyonu.">
+  <meta name="keywords" content="AI danışmanlık, otomasyon, DevOps, ESP32, Flutter, yapay zeka, IoT, robotik">
+  <meta name="author" content="EVAITEC">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://evaitec.com">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://evaitec.com">
+  <meta property="og:title" content="EVAITEC — Doğadan Geleceğe: Sonsuz Entegrasyon">
+  <meta property="og:description" content="Yapay zeka, otomasyon ve teknoloji danışmanlığında uzmanlaşmış yazılım şirketi. DevOps, AI entegrasyonu, ESP32 robotik, ev otomasyonu.">
+  <meta property="og:image" content="https://evaitec.com/assets/eva2.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EVAITEC — Doğadan Geleceğe: Sonsuz Entegrasyon">
+  <meta name="twitter:description" content="Yapay zeka, otomasyon ve teknoloji danışmanlığında uzmanlaşmış yazılım şirketi. DevOps, AI entegrasyonu, ESP32 robotik, ev otomasyonu.">
+  <meta name="twitter:image" content="https://evaitec.com/assets/eva2.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "EVAITEC",
+    "url": "https://evaitec.com",
+    "description": "Yapay zeka, otomasyon ve teknoloji danışmanlığında uzmanlaşmış yazılım şirketi",
+    "logo": "https://evaitec.com/assets/logo.png",
+    "sameAs": ["https://github.com/evatechnosoft"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="js/i18n.js"></script>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       LOADER
+  ══════════════════════════════════════ -->
+  <div id="loader">
+    <!-- Faz 1: Eva tam ekran bg -->
+    <div id="loader-eva-bg" aria-hidden="true"></div>
+    <!-- Faz 2: Video üstüne gelir -->
+    <video id="loader-video" muted loop playsinline aria-hidden="true">
+      <source src="assets/video.mp4" type="video/mp4">
+    </video>
+
+    <div class="loader-bottom">
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+      <div class="progress-num"><span id="progress-num">0</span><span class="pct">%</span></div>
+    </div>
+
+    <div class="loader-tagline" id="loader-tagline">
+      DOĞADAN GELECEĞE: SONSUZ ENTEGRASYON
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       ANA SAYFA
+  ══════════════════════════════════════ -->
+  <div id="main-site" class="hidden">
+
+    <!-- HEADER -->
+    <!-- EVA tam sayfa arka plan — tam boy, parallax scroll -->
+
+    <header id="header">
+      <div class="header-inner">
+        <a href="#hero" class="header-logo">
+          <img src="assets/logo.png" alt="EVAITEC" class="header-logo-img" loading="eager">
+        </a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menü">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav">
+          <a href="#foundation" data-i18n="nav.foundation">Altyapı</a>
+          <a href="#mobility" data-i18n="nav.mobility">Mobilite</a>
+          <a href="#ai-core" data-i18n="nav.ai">AI Core</a>
+          <a href="#home-auto" data-i18n="nav.home">Otomasyon</a>
+          <a href="#robotics" data-i18n="nav.robotics">Robotik</a>
+          <a href="#consulting" data-i18n="nav.consulting">Danışmanlık</a>
+          <a href="#about" data-i18n="nav.about">Hakkımızda</a>
+          <a href="#projects" data-i18n="nav.projects">Projeler</a>
+          <a href="#references" data-i18n="nav.refs">Referanslar</a>
+        </nav>
+        <div class="header-actions">
+          <button class="lang-btn" id="lang-btn">TR / EN</button>
+          <a href="#contact" class="btn-cta" data-i18n="nav.contact">İletişim</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="hero">
+      <!-- Video arka plan -->
+      <video class="hero-video-bg" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+        <source src="assets/video.mp4" type="video/mp4">
+      </video>
+      <canvas id="hero-canvas"></canvas>
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="hero-badge" data-i18n="hero.badge">Inspired by Eva, Built for Tomorrow</div>
+          <h1 data-i18n="hero.h1">DOĞADAN<br><span class="text-teal">GELECEĞE</span><br>SONSUZ<br><span class="text-green">ENTEGRASYON</span></h1>
+          <p data-i18n="hero.p">Yapay zeka, otomasyon ve teknoloji danışmanlığında yeni bir çığır.<br>Fikirden ürüne — her şeyi entegre ediyoruz.</p>
+          <div class="hero-btns">
+            <a href="#ai-core" class="btn-primary" data-i18n="hero.cta1">Keşfet</a>
+            <a href="#consulting" class="btn-outline" data-i18n="hero.cta2">Danışmanlık Al</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Robot bg: hero sonrası tüm sayfa, JS ile aktive olur -->
+    <div id="page-robot-bg" class="visible" aria-hidden="true"></div>
+
+    <!-- ── SECTION: FOUNDATION ── -->
+    <section id="foundation" class="page-section">
+      <div class="section-eyebrow" data-i18n="foundation.eye"><i class="fa-solid fa-layer-group"></i> SYSTEM FOUNDATIONS</div>
+      <div class="section-grid">
+        <div class="section-text reveal-left">
+          <h2 data-i18n="foundation.h2">Her şey<br>temelden başlar</h2>
+          <p data-i18n="foundation.p">DevOps, CI/CD pipeline'ları, cloud altyapısı ve IT süreç optimizasyonu ile işinizin dijital omurgasını inşa ediyoruz.</p>
+        </div>
+        <div class="cards-col reveal-right">
+          <div class="svc-card">
+            <span class="svc-icon"><i class="fa-solid fa-gears"></i></span>
+            <h3>DevOps & CI/CD</h3>
+            <p>Pipeline kurulum, container yönetimi, otomatik deploy</p>
+          </div>
+          <div class="svc-card">
+            <span class="svc-icon"><i class="fa-solid fa-cloud"></i></span>
+            <h3>Cloud Altyapı</h3>
+            <p>Azure, ölçeklenebilir mimari, servis optimizasyonu</p>
+          </div>
+          <div class="svc-card">
+            <span class="svc-icon"><i class="fa-solid fa-box-open"></i></span>
+            <h3>Inventory & ERP</h3>
+            <p>Stok takip, süreç otomasyonu, raporlama</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION: MOBILITY ── -->
+    <section id="mobility" class="page-section alt">
+      <div class="section-eyebrow" data-i18n="mobility.eye"><i class="fa-solid fa-car-side"></i> MOBILITY & DASHBOARD</div>
+      <div class="section-grid reverse">
+        <div class="cards-col reveal-left">
+          <div class="svc-card">
+            <span class="svc-icon"><i class="fa-solid fa-battery-full"></i></span>
+            <h3>EV Dashboard</h3>
+            <p>Pil voltajı, akım, RPM — gerçek zamanlı araç telemetrisi</p>
+          </div>
+          <div class="svc-card">
+            <span class="svc-icon"><i class="fa-solid fa-mobile-screen"></i></span>
+            <h3>Mobil Uygulama</h3>
+            <p>Flutter ile iOS & Android, AI destekli özellikler</p>
+          </div>
+          <div class="svc-card">
+            <span class="svc-icon"><i class="fa-solid fa-eye"></i></span>
+            <h3>Vision AI</h3>
+            <p>Resimden kalori ölçer, görsel tanıma, analiz</p>
+          </div>
+        </div>
+        <div class="section-text reveal-right">
+          <h2 data-i18n="mobility.h2">Hareket eden<br>her şeyi<br>izliyoruz</h2>
+          <p data-i18n="mobility.p">Elektrikli araçlardan mobil uygulamalara — araç telemetrisi, Vision AI ve Flutter ile hareket eden her şeyi izliyor, analiz ediyoruz.</p>
+          <!-- EV Metrik Göstergesi -->
+          <div class="ev-metrics">
+            <div class="ev-metric">
+              <div class="metric-ring">
+                <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="24" class="ring-bg"/><circle cx="30" cy="30" r="24" class="ring-fill" id="ring-rpm"/></svg>
+                <span class="metric-val" data-target="847" data-unit="RPM">0</span>
+              </div>
+              <span class="metric-label">RPM</span>
+            </div>
+            <div class="ev-metric">
+              <div class="metric-ring">
+                <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="24" class="ring-bg"/><circle cx="30" cy="30" r="24" class="ring-fill" id="ring-volt"/></svg>
+                <span class="metric-val" data-target="72" data-unit="V">0</span>
+              </div>
+              <span class="metric-label">VOLT</span>
+            </div>
+            <div class="ev-metric">
+              <div class="metric-ring">
+                <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="24" class="ring-bg"/><circle cx="30" cy="30" r="24" class="ring-fill" id="ring-bat"/></svg>
+                <span class="metric-val" data-target="98" data-unit="%">0</span>
+              </div>
+              <span class="metric-label">BAT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION: AI CORE ── -->
+    <section id="ai-core" class="page-section core-section">
+      <div class="core-glow"></div>
+      <div class="section-eyebrow centered" data-i18n="aicore.eye"><i class="fa-solid fa-microchip"></i> AI CORE</div>
+      <div class="core-infinity">
+        <div class="core-inf-symbol">∞</div>
+      </div>
+      <div class="core-text reveal-up">
+        <h2 data-i18n="aicore.h2">Zeka burada atar</h2>
+        <p data-i18n="aicore.p">Claude, Gemini, OpenCode entegrasyonları. Model geliştirme, IP havuzu, token/takas modelleri.<br>Danışmanlıktan ürüne — AI gücü her projede.</p>
+      </div>
+      <div class="cards-row reveal-up">
+        <div class="svc-card glow-card">
+          <span class="svc-icon"><i class="fa-solid fa-brain"></i></span>
+          <h3>AI Danışmanlık</h3>
+          <p>Strateji, roadmap ve implementasyon</p>
+        </div>
+        <div class="svc-card glow-card">
+          <span class="svc-icon"><i class="fa-solid fa-robot"></i></span>
+          <h3>Model & IP</h3>
+          <p>Custom model geliştirme, IP havuzu satışı</p>
+        </div>
+        <div class="svc-card glow-card">
+          <span class="svc-icon"><i class="fa-solid fa-lightbulb"></i></span>
+          <h3>Fikir → Ürün</h3>
+          <p>Konsept'ten çalışan sisteme, hızlı adaptasyon</p>
+        </div>
+        <div class="svc-card glow-card">
+          <span class="svc-icon"><i class="fa-solid fa-arrows-rotate"></i></span>
+          <h3>Dijitalleştirme</h3>
+          <p>Analog süreçleri dijital döngüye taşıma</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION: HOME AUTOMATION ── -->
+    <section id="home-auto" class="page-section alt">
+      <div class="section-eyebrow" data-i18n="homeauto.eye"><i class="fa-solid fa-house-signal"></i> HOME & INDUSTRIAL AUTOMATION</div>
+      <div class="section-grid">
+        <div class="section-text reveal-left">
+          <h2 data-i18n="homeauto.h2">Yaşadığın<br>her yer<br>akıllı</h2>
+          <p data-i18n="homeauto.p">Isı, elektrik, rutin kontrol — ev otomasyonundan endüstriyel IoT'ye tüm sistemleri entegre ediyoruz. ESP32, MQTT, Home Assistant.</p>
+        </div>
+        <div class="cards-col reveal-right">
+          <div class="svc-card">
+            <span class="svc-icon"><i class="fa-solid fa-temperature-half"></i></span>
+            <h3>Isı & Enerji</h3>
+            <p>Akıllı ısıtma, soğutma, enerji tasarrufu</p>
+          </div>
+          <div class="svc-card">
+            <span class="svc-icon"><i class="fa-solid fa-bolt"></i></span>
+            <h3>Elektrik Rutinleri</h3>
+            <p>Zamanlayıcılar, sensör tetikleyiciler, otomasyon</p>
+          </div>
+          <div class="svc-card">
+            <span class="svc-icon"><i class="fa-solid fa-link"></i></span>
+            <h3>IoT Entegrasyon</h3>
+            <p>Cihazlar arası haberleşme, merkezi kontrol</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION: ROBOTICS ── -->
+    <section id="robotics" class="page-section">
+      <div class="section-eyebrow" data-i18n="robotics.eye"><i class="fa-solid fa-robot"></i> ROBOTICS & CONTROL</div>
+      <div class="section-grid reverse">
+        <div class="cards-col reveal-left">
+          <div class="svc-card">
+            <span class="svc-icon"><i class="fa-solid fa-robot"></i></span>
+            <h3>Robot Sistemleri</h3>
+            <p>Servo motor kontrol, robot kol, otonom hareket</p>
+          </div>
+          <div class="svc-card">
+            <span class="svc-icon"><i class="fa-solid fa-helicopter"></i></span>
+            <h3>Drone & UAV</h3>
+            <p>Otonom uçuş, görüntü işleme, uzaktan kontrol</p>
+          </div>
+          <div class="svc-card">
+            <span class="svc-icon"><i class="fa-solid fa-tower-broadcast"></i></span>
+            <h3>Haberleşme Yazılımı</h3>
+            <p>Özel protokol, real-time veri, sistem entegrasyonu</p>
+          </div>
+        </div>
+        <div class="section-text reveal-right">
+          <h2 data-i18n="robotics.h2">Uzanan<br>her kola<br>güç katıyoruz</h2>
+          <p data-i18n="robotics.p">ESP32, Arduino ve özel gömülü sistemlerden kurumsal otomasyon çözümlerine kadar — donanım yazılım bütünlüğü.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION: HAKKIMIZDA ── -->
+    <section id="about" class="page-section alt">
+      <div class="section-eyebrow centered" data-i18n="about.eye"><i class="fa-solid fa-users"></i> HAKKIMIZDA</div>
+      <div class="about-inner">
+        <div class="about-text">
+          <h2 data-i18n="about.h2">Biz kimiz?</h2>
+          <p data-i18n="about.p">EVAITEC; yapay zeka, otomasyon ve teknoloji danışmanlığında uzmanlaşmış bir yazılım şirketidir. Kızımız Eva'nın adını taşıyan bu marka, doğadan ilham alarak teknolojiyle sonsuz bir döngü kurar.</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-box"><span class="stat-num">5+</span><span class="stat-label">Yıl Deneyim</span></div>
+          <div class="stat-box"><span class="stat-num">20+</span><span class="stat-label">Proje</span></div>
+          <div class="stat-box"><span class="stat-num">∞</span><span class="stat-label">Entegrasyon</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION: PROJELER ── -->
+    <section id="projects" class="page-section">
+      <div class="section-eyebrow centered" data-i18n="projects.eye"><i class="fa-solid fa-folder-open"></i> PROJELER</div>
+      <h2 class="section-title-center reveal-up" data-i18n="projects.h2">Ne yaptık?</h2>
+      <div class="projects-grid">
+        <div class="proj-card" data-modal="modal-evanotes">
+          <div class="proj-thumb"><i class="fa-solid fa-mobile-screen-button"></i></div>
+          <h3>EvAnotes</h3>
+          <p>Flutter aile not uygulaması — AI entegrasyonlu</p>
+          <div class="proj-tags"><span class="proj-tag">Flutter</span><span class="proj-tag">AI</span></div>
+        </div>
+        <div class="proj-card" data-modal="modal-evdash">
+          <div class="proj-thumb"><i class="fa-solid fa-car-battery"></i></div>
+          <h3>EV Dashboard</h3>
+          <p>Elektrikli araç telemetri sistemi — ESP32</p>
+          <div class="proj-tags"><span class="proj-tag">ESP32</span><span class="proj-tag">IoT</span></div>
+        </div>
+        <div class="proj-card" data-modal="modal-smarthome">
+          <div class="proj-thumb"><i class="fa-solid fa-house-signal"></i></div>
+          <h3>Smart Home Agent</h3>
+          <p>Ev otomasyon sistemi — MQTT + Home Assistant</p>
+          <div class="proj-tags"><span class="proj-tag">IoT</span><span class="proj-tag">Python</span></div>
+        </div>
+        <div class="proj-card" data-modal="modal-layersup">
+          <div class="proj-thumb"><i class="fa-solid fa-building"></i></div>
+          <h3>LayersUp</h3>
+          <p>İK & işe alım SaaS platformu</p>
+          <div class="proj-tags"><span class="proj-tag">SaaS</span><span class="proj-tag">Azure</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION: REFERANSLAR ── -->
+    <section id="references" class="page-section alt">
+      <div class="section-eyebrow centered" data-i18n="refs.eye"><i class="fa-solid fa-star"></i> REFERANSLAR</div>
+      <h2 class="section-title-center reveal-up" data-i18n="refs.h2">Birlikte çalıştıklarımız</h2>
+      <div class="refs-grid">
+        <div class="ref-card">
+          <div class="ref-icon"><i class="fa-solid fa-building"></i></div>
+          <div class="ref-text">
+            <strong>Kurumsal IT Danışmanlığı</strong>
+            <span>Azure altyapısı yeniden yapılandırma</span>
+          </div>
+        </div>
+        <div class="ref-card">
+          <div class="ref-icon"><i class="fa-solid fa-seedling"></i></div>
+          <div class="ref-text">
+            <strong>Startup Teknoloji Ortaklığı</strong>
+            <span>Fikir → MVP, 3 ay</span>
+          </div>
+        </div>
+        <div class="ref-card">
+          <div class="ref-icon"><i class="fa-solid fa-microscope"></i></div>
+          <div class="ref-text">
+            <strong>ARGE Laboratuvarı</strong>
+            <span>Robotik kontrol sistemi</span>
+          </div>
+        </div>
+        <div class="ref-card">
+          <div class="ref-icon"><i class="fa-solid fa-people-roof"></i></div>
+          <div class="ref-text">
+            <strong>Aile Uygulaması</strong>
+            <span>EvAnotes — Flutter iOS/Android</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION: CONSULTING ── -->
+    <section id="consulting" class="page-section consulting-section">
+      <div class="section-eyebrow centered" data-i18n="consulting.eye"><i class="fa-solid fa-brain"></i> STRATEGY & CONSULTING</div>
+      <div class="consulting-inner reveal-up">
+        <h2 data-i18n="consulting.h2">Düşünen teknoloji,<br><span class="text-teal">düşündüren danışmanlık</span></h2>
+        <p data-i18n="consulting.p">Startup'tan enterprise'a — dijital dönüşüm stratejisi, teknoloji seçimi,<br>süreç tasarımı ve uygulama danışmanlığı.</p>
+        <div class="target-pills">
+          <div class="pill"><i class="fa-solid fa-seedling"></i> Startup & ARGE</div>
+          <div class="pill"><i class="fa-solid fa-building"></i> KOBİ</div>
+          <div class="pill"><i class="fa-solid fa-user"></i> Kişisel</div>
+          <div class="pill"><i class="fa-solid fa-industry"></i> Enterprise</div>
+        </div>
+        <a href="#contact" class="btn-primary large" data-i18n="consulting.cta">Danışmanlık Başlat →</a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">EV<span>@</span>ITEC</div>
+          <p data-i18n="footer.tagline">DOĞADAN GELECEĞE: SONSUZ ENTEGRASYON</p>
+          <p class="footer-sub-tag">Inspired by Eva, Built for Tomorrow</p>
+          <div class="footer-domains">
+            <span>evaitec.com</span>
+            <span>evaitec.com.tr</span>
+            <span>evaitec.info</span>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4 data-i18n="footer.services">Hizmetler</h4>
+            <a href="#foundation">Altyapı & DevOps</a>
+            <a href="#mobility">Araç & Mobil</a>
+            <a href="#ai-core">AI Çekirdeği</a>
+            <a href="#home-auto">Ev Otomasyonu</a>
+            <a href="#robotics">Robotik</a>
+            <a href="#consulting">Danışmanlık</a>
+            <a href="#about" data-i18n="nav.about">Hakkımızda</a>
+            <a href="#projects" data-i18n="nav.projects">Projeler</a>
+          </div>
+          <div class="footer-col">
+            <h4 data-i18n="footer.contact">İletişim</h4>
+            <a href="mailto:info@evaitec.com">info@evaitec.com</a>
+            <a href="https://evaitec.com">evaitec.com</a>
+            <a href="#" data-i18n="footer.contact" onclick="return false;">İletişim</a>
+          </div>
+        </div>
+        <div class="footer-cta-block">
+          <h3 data-i18n="contact.h2">Projenizi<br>Konuşalım</h3>
+          <a href="mailto:info@evaitec.com" class="btn-primary">İletişime Geç</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span data-i18n="footer.copyright">© 2026 EVAITEC. Tüm hakları saklıdır.</span>
+        <span data-i18n="footer.motto">∞ Sonsuz döngüde, sürekli ilerliyoruz.</span>
+      </div>
+    </footer>
+
+    <!-- ══════════════════════════════════════
+         MODAL OVERLAY
+    ══════════════════════════════════════ -->
+    <div id="modal-overlay" class="modal-overlay hidden" role="dialog" aria-modal="true">
+      <div class="modal-box">
+        <button class="modal-close" id="modal-close" aria-label="Kapat">✕</button>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+
+    <!-- Modal: EvAnotes -->
+    <template id="modal-evanotes">
+      <h2><i class="fa-solid fa-mobile-screen-button"></i> EvAnotes</h2>
+      <p style="color:var(--text-dim);margin:1rem 0;line-height:1.7">Flutter tabanlı aile not ve görev yönetimi uygulaması. AI entegrasyonu, Google Drive sync, çoklu kullanıcı desteği. iOS & Android.</p>
+      <div class="modal-tags"><span class="proj-tag">Flutter</span><span class="proj-tag">Riverpod</span><span class="proj-tag">Node.js</span><span class="proj-tag">AI</span><span class="proj-tag">SQLite</span></div>
+    </template>
+
+    <!-- Modal: EV Dashboard -->
+    <template id="modal-evdash">
+      <h2><i class="fa-solid fa-car-battery"></i> EV Dashboard</h2>
+      <p style="color:var(--text-dim);margin:1rem 0;line-height:1.7">ESP32 tabanlı elektrikli araç telemetri sistemi. Gerçek zamanlı RPM, voltaj ve batarya izleme. ILI9341 TFT ekran, PlatformIO.</p>
+      <div class="modal-tags"><span class="proj-tag">ESP32</span><span class="proj-tag">C++</span><span class="proj-tag">IoT</span><span class="proj-tag">PlatformIO</span></div>
+    </template>
+
+    <!-- Modal: Smart Home -->
+    <template id="modal-smarthome">
+      <h2><i class="fa-solid fa-house-signal"></i> Smart Home Agent</h2>
+      <p style="color:var(--text-dim);margin:1rem 0;line-height:1.7">MQTT protokolü ile ESP32 sensörler, Home Assistant entegrasyonu ve Flutter mobil kontrol uygulaması. Sıcaklık, nem, ışık kontrolü.</p>
+      <div class="modal-tags"><span class="proj-tag">ESP32</span><span class="proj-tag">MQTT</span><span class="proj-tag">Python</span><span class="proj-tag">Flutter</span><span class="proj-tag">Home Assistant</span></div>
+    </template>
+
+    <!-- Modal: LayersUp -->
+    <template id="modal-layersup">
+      <h2><i class="fa-solid fa-building"></i> LayersUp</h2>
+      <p style="color:var(--text-dim);margin:1rem 0;line-height:1.7">İnsan kaynakları ve işe alım süreçlerini dijitalleştiren SaaS platformu. Azure altyapısı, CI/CD pipeline, çok kiracılı mimari.</p>
+      <div class="modal-tags"><span class="proj-tag">Azure</span><span class="proj-tag">SaaS</span><span class="proj-tag">DevOps</span><span class="proj-tag">CI/CD</span></div>
+      <div style="margin-top:1rem"><a href="https://layersup.com" class="btn-outline" target="_blank" style="display:inline-block;padding:0.4rem 1rem;font-size:0.85rem">layersup.com →</a></div>
+    </template>
+
+    <!-- Modal: Contact -->
+    <template id="modal-contact">
+      <h2><i class="fa-solid fa-envelope"></i> İletişim</h2>
+      <p style="color:var(--text-dim);margin:0.75rem 0 1.25rem;font-size:0.95rem">Projenizi konuşalım. Size 24 saat içinde dönüş yaparız.</p>
+      <form id="contact-form" action="https://formspree.io/f/FORMSPREE_ID" method="POST">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Ad Soyad" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="E-posta" required>
+        </div>
+        <div class="form-group">
+          <textarea name="message" rows="4" placeholder="Mesajınız" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Gönder</button>
+        <p class="form-success hidden" id="form-success" style="color:var(--green);margin-top:0.75rem">✅ Mesajınız iletildi! En kısa sürede dönüş yapacağız.</p>
+      </form>
+    </template>
+
+  </div><!-- /main-site -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/builder.js"></script>
+</body>
+</html>

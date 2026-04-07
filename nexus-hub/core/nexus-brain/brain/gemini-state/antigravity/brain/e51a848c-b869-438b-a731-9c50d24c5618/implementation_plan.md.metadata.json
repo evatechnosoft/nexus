@@ -1,0 +1,6 @@
+{
+  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary": "Plan to align `Note` and `Task` models with the database schema by making fields nullable where the database allows nulls. This fixes runtime type errors during deserialization.",
+  "updatedAt": "2026-03-21T10:47:38.030976800Z",
+  "version": "2"
+}

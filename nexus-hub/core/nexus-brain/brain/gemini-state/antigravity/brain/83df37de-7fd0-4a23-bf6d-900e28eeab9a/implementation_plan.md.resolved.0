@@ -1,0 +1,18 @@
+# Run and Verify E-Car Dashboard
+
+The goal is to run the Flutter application and verify its UI/functionality in the browser.
+
+## Proposed Steps
+
+1.  **Resolve Dependencies**: Run `flutter pub get` in the `flutter_app` directory.
+2.  **Start Web Server**: Run `flutter run -d web-server --web-hostname 0.0.0.0 --web-port 8080`.
+3.  **Verify UI**: Use the browser subagent to navigate to `http://localhost:8080` and capture a screenshot.
+
+## Verification Plan
+
+### Automated Tests
+- None at this stage.
+
+### Manual Verification
+- Use `browser_subagent` to visit the local web server.
+- Capture a screenshot of the dashboard.

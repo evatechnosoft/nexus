@@ -1,0 +1,48 @@
+# IT-Inventory Uygulama Dağıtım Planı
+
+Sunucunda (DeanOS) yeni kurduğumuz Coolify V4 paneli üzerinden IT Envanter uygulamasını (FastAPI + SQLite) ayağa kaldırmak için izlenecek yoldur.
+
+## User Review Required
+
+> [!IMPORTANT]
+> **Erişim Portu:** Uygulamayı dışarıya `9700` portundan açacağız (ZimaOS üzerindeki mevcut yapıya uygun olarak).
+> **Veritabanı:** Başlangıç aşamasında kolaylık olması açısından mevcut SQLite yapısını koruyacağız, ancak ileride istersen Coolify üzerinden tek tıkla PostgreSQL'e geçebiliriz.
+
+## Proposed Changes
+
+### Coolify Yapılandırması
+
+#### [NEW] Project: `IT-Inventory`
+- Coolify panelinde yeni bir proje oluşturulacak.
+- İçerisinde `Production` veya `Test` isminde bir environment kurulacak.
+
+#### [NEW] Resource: `Application`
+- **Source:** GitHub üzerinden `evatechnosoft/My-Personal-Repository` (dev veya main branch) kullanılacak.
+- **Build Pack:** `Docker` seçilecek (Var olan Dockerfile kullanılacak).
+- **Destination:** `DeanOS` server seçilecek.
+
+#### Port ve Volume Ayarları
+- **Port Mapping:** Internal `8000` -> Host `9700`.
+- **Persistent Storage:** `/app/data` dizini sisteme Volume olarak tanıtılacak (SQLite verisinin kaybolmaması için).
+
+#### Environment Variables
+Uygulamanın çalışması için gereken değişkenler tanımlanacak:
+- `DATABASE_URL=sqlite:///./data/inventory.db`
+- `DAPP_ENV=TEST`
+- `APP_PORT=8000`
+- `HOST_PORT=9700`
+- `APP_BASE_URL=http://192.168.1.186:9700`
+
+## Open Questions
+
+- [ ] **GitHub Bağlantısı:** Coolify üzerinden GitHub hesabını (evatechnosoft) daha önce bağlamış mıydın? Eğer bağlamadıysan ilk adımda bunu yapmamız gerekecek.
+- [ ] **Branch:** Hangi branch'ten deploy edelim? `dev` mi yoksa `main` mi?
+
+## Verification Plan
+
+### Automated Tests
+- `curl -I http://192.168.1.186:9700` komutu ile uygulamanın ayağa kalktığı doğrulanacak.
+- Coolify "Health Check" statusu kontrol edilecek.
+
+### Manual Verification
+- Kullanıcı tarayıcıdan arayüze girip giriş yapmayı deneyecek.

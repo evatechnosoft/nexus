@@ -1,0 +1,30 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (300,128)<button class='back-btn'>← Geri Dön />
+Hafta 02: Unit 1: Birthday Fun! — Bölüm 1
+Doğum günü kartı yapımı — renkler ve doğum günü kelimeleri
+📚 Kitap Referansları
+Student Book:
+Sayfa 8-13
+🗝️ Anahtar Kelimeler (Vocalubary)
+[1] (294,598)<span >balloon />
+[2] (351,598)<span >cake />
+[3] (400,598)<span >card />
+[4] (457,598)<span >present />
+[5] (537,598)<span >birthday party />
+[6] (614,598)<span >candle />
+[7] (666,598)<span >red />
+[8] (712,598)<span >blue />
+[9] (290,664)<span >green />
+[10] (347,664)<span >yellow />
+[11] (401,664)<span >pink />
+[12] (455,664)<span >purple />
+[13] (516,664)<span >orange />
+[14] (574,664)<span >white />
+Kelimeleri yüksek sesle tekrar etmeyi unutma!
+🚀 STEM / Proje
+Doğum günü kartı yap (scratch card)
+
+</current_dom>

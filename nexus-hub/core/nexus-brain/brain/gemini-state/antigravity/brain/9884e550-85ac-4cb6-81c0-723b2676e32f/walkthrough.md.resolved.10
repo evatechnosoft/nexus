@@ -1,0 +1,191 @@
+# Walkthrough - Organizing English Code Materials
+
+The English Code materials have been organized by moving them into level-specific folders and renaming them to a cleaner, standardized format.
+
+## Changes Made
+
+### Level-Specific Organization
+
+All PDF files that were previously in the root directory have been moved to their corresponding folders:
+
+- **English code 2**
+    - `Level 2 - Grammar Book.pdf`
+    - `Level 2 - Student's Book.pdf`
+    - `Level 2 - Student's Book 1.pdf`
+    - `Level 2 - Workbook.pdf`
+- **English code 3**
+    - `Level 3 - Student's Book.pdf`
+- **English code 5**
+    - `Level 5 - Unit 1.pdf`
+    - `Level 5 - Workbook.pdf`
+- **English code 6**
+    - `Level 6 - Assessment Book.pdf`
+    - `Level 6 - Student's Book.pdf`
+- **English code starter**
+    - `Starter - Teacher's Edition.pdf`
+
+### Internal Folder Consistency
+
+In addition to organizing the root directory, all files inside the level folders have been renamed to follow a consistent `Level [N] - [Description]` or `Starter - [Description]` format.
+
+- **Naming Convention Applied**:
+    - **Normalization**: Underscores and hyphens replaced with spaces.
+    - **Clean up**: Removed author names (e.g., Morgan Hawys), "pdfcoffee.com_", and "pdf-free".
+    - **Standardized Prefixes**: Added "Level [N] - " or "Starter - " to every file and folder.
+    - **Handling Alternatives**: Added "(Alt)" or numbered suffixes (e.g., "Phonics Book 1", "Phonics Book 2") where multiple versions existed.
+
+- **Specific Examples**:
+    - [english_code_1_flashcards.pdf](file:///c:/Users/Deacjx/Documents/English%20code/English%20code%201/english_code_1_flashcards.pdf) -> `Level 1 - Flashcards.pdf`
+    - [English-Code-1-Phonics-Book.pdf](file:///c:/Users/Deacjx/Documents/English%20code/English%20code%201/English-Code-1-Phonics-Book.pdf) -> `Level 1 - Phonics Book.pdf`
+    - `Starter - Teacher's Edition.pdf` (Moved from root)
+    - `Level 2 - Teacher's Edition.pdf` (Renamed inside folder)
+
+## Verification Results
+
+### Automated Verification
+All file moves and renames were executed via PowerShell and verified by recursive directory listings. 100% of the target files now adhere to the new naming convention.
+
+### Manual Verification
+The entire `English code` directory and its subfolders are now neatly organized and easily searchable.
+## Advanced Learning Hub Features (v2.0)
+
+The Learning Hub has been upgraded with a persistent authentication system and role-based access control.
+
+### Key Enhancements:
+- **Authentication**: Password-protected login for Teacher, Student, and Parent roles.
+- **Curriculum Management**: Teachers can now add new lessons and set the "Active Week".
+- **Dynamic Filtering**: Students only see lessons up to the week designated by the teacher.
+- **Turkish Encoding Fix**: All special characters (ğ, ü, ş, İ, ö, ç) are now correctly rendered.
+
+### Visual Demonstration
+````carousel
+![Teacher Dashboard with Management Controls](C:\Users\Deacjx\.gemini\antigravity\brain\9884e550-85ac-4cb6-81c0-723b2676e32f\teacher_dashboard_view_1773988468541.png)
+<!-- slide -->
+![Restricted Student Dashboard](C:\Users\Deacjx\.gemini\antigravity\brain\9884e550-85ac-4cb6-81c0-723b2676e32f\student_dashboard_view_1773988516439.png)
+<!-- slide -->
+![Verification Recording](C:\Users\Deacjx\.gemini\antigravity\brain\9884e550-85ac-4cb6-81c0-723b2676e32f\verify_auth_and_management_1773988365873.webp)
+````
+
+## Verification Results
+
+### Multi-Role Flow
+1. **Teacher**: Logged in as `teacher`, successfully changed the active week and accessed lesson management.
+2. **Student**: Logged in as `student`, verified that future weeks are hidden (only shows up to the teacher's set active week).
+3. **Encoding**: Verified in the browser that all Turkish text is clean and readable.
+
+## Lesson Evaluation & Satisfaction Surveys (v2.1)
+
+A new bidirectional feedback system has been implemented to track lesson quality and student progress more effectively.
+
+### New Features:
+- **Teacher Evaluations**: Teachers can mark lessons as `Passed`, `Continue`, or `Repeat` and leave specific notes for the student/parent.
+- **Student Surveys**: Students can rate each lesson (1-5 stars) and provide feedback on their experience.
+- **Status Badges**: Visual indicators on lesson cards show the current status at a glance.
+
+### Visual Demonstration
+````carousel
+![Teacher Evaluation Modal](C:\Users\Deacjx\.gemini\antigravity\brain\9884e550-85ac-4cb6-81c0-723b2676e32f\teacher_evaluation_modal_1773988903587.png)
+<!-- slide -->
+![Student Satisfaction Survey](C:\Users\Deacjx\.gemini\antigravity\brain\9884e550-85ac-4cb6-81c0-723b2676e32f\student_survey_modal_1773988965852.png)
+<!-- slide -->
+![Evaluation & Survey Flow Recording](C:\Users\Deacjx\.gemini\antigravity\brain\9884e550-85ac-4cb6-81c0-723b2676e32f\verify_evaluation_and_survey_1773988846558.webp)
+````
+
+## Verification Results
+
+### Feedback Loop Finalized
+1. **Teacher Action**: Successfully assigned `Passed` status and feedback to Hafta 01.
+2. **Student Action**: Confirmed teacher notes were visible and submitted a 5-star satisfaction rating.
+3. **Data Integrity**: Verified that the teacher can see the student's rating directly on their dashboard, completing the loop.
+
+## Final Project Verification (v2.2)
+
+A comprehensive end-to-end test was performed to ensure all roles and features work in harmony.
+
+### Verified Flow:
+1. **Student Study**: Accessed the new [week.html](file:///c:/Users/Deacjx/Documents/English%20code/_learning-plan/web/week.html) detail page for Hafta 01 and Hafta 02, verifying vocabulary lists.
+2. **Teacher Grading**: Evaluated Hafta 01 as `Passed`.
+3. **Parent Analytics**: Confirmed the new progress bar dynamically reflects the `Passed` status (showing 50% completion for the currently active material).
+
+### Visual Demonstration
+````carousel
+![Hafta 01 Lesson Detail](C:\Users\Deacjx\.gemini\antigravity\brain\9884e550-85ac-4cb6-81c0-723b2676e32f\student_lesson_detail_w1_1773989250153.png)
+<!-- slide -->
+![Hafta 02 Word List (Colors)](C:\Users\Deacjx\.gemini\antigravity\brain\9884e550-85ac-4cb6-81c0-723b2676e32f\student_lesson_detail_w2_vocabulary_1773989438464.png)
+<!-- slide -->
+![Parent Progress Bar (50% Completion)](C:\Users\Deacjx\.gemini\antigravity\brain\9884e550-85ac-4cb6-81c0-723b2676e32f\parent_progress_bar_50pct_1773989505118.png)
+<!-- slide -->
+![End-to-End System Recording](C:\Users\Deacjx\.gemini\antigravity\brain\9884e550-85ac-4cb6-81c0-723b2676e32f\final_verification_v2_1_1773989166189.webp)
+````
+
+## Interactive Vocabulary & Speech (v3.0)
+The vocabulary section in [week.html](file:///c:/Users/Deacjx/Documents/English%20code/_learning-plan/web/week.html) has been transformed into an interactive "Smart Card" system.
+
+### Key Features
+- **Smart Cards**: Visual word cards with Turkish translations, phonetic guides, and syllable breakdown.
+- **Pronunciation (TTS)**: Clicking a card triggers a high-quality English pronunciation using the Web Speech API.
+- **Spelling Mode (Kodlama)**: Long-pressing a card (0.6s) triggers a letter-by-letter spelling mode (e.g., "R... E... D") to aid in spelling practice.
+- **Dynamic Visuals**: Cards pulse and highlight while speaking.
+
+````carousel
+![Expanded Word Card](C:\Users\Deacjx\.gemini\antigravity\brain\9884e550-85ac-4cb6-81c0-723b2676e32f\expanded_hello_card_1773992009511.png)
+<!-- slide -->
+![Long-press Pulse Effect](C:\Users\Deacjx\.gemini\antigravity\brain\9884e550-85ac-4cb6-81c0-723b2676e32f\red_card_pulse_check_1773992257411.png)
+<!-- slide -->
+![Rich Curriculum JSON Data](C:\Users\Deacjx\.gemini\antigravity\brain\9884e550-85ac-4cb6-81c0-723b2676e32f\api_week_1_json_1773992207660.png)
+````
+
+### Validation Summary
+- [x] **Data Synchronization**: Verified that [curriculum.json](file:///c:/Users/Deacjx/Documents/English%20code/_learning-plan/curriculum.json) edits are correctly served via the `/api/week` endpoint.
+- [x] **Speech Engine**: Confirmed that `SpeechSynthesisUtterance` correctly identifies the text and speaks in `en-US`.
+- [x] **Interaction Fidelity**: Long-press detection is localized and prevents default context menus.
+- [x] **Compatibility**: Tested across Week 1 (mixed data) and Week 2 (formatted data).
+
+## Interactive Vocabulary Refinement (v3.1)
+Based on user feedback, the vocabulary interaction has been further refined for better accessibility and visual feedback.
+
+### Enhancements:
+- **Always-Open Card Details**: Turkish meanings, phonetics, and syllables are now visible by default on every card. No additional click is required to see the "Okunuş" and "Heceleme" info.
+- **Real-time Spelling Visualizer**: When long-pressing a card for spelling (Kodlama), a large high-contrast letter overlay appears, showing each letter exactly as it is being spoken.
+- **Complete Data Population**: Phonics and syllable data have been fully populated for all words in the first two weeks of the curriculum.
+
+````carousel
+![Always-Open Vocabulary Overview](C:\Users\Deacjx\.gemini\antigravity\brain\9884e550-85ac-4cb6-81c0-723b2676e32f\week1_vocabulary_overview_1773992730753.png)
+<!-- slide -->
+![Letter Visualizer (Long-Press)](C:\Users\Deacjx\.gemini\antigravity\brain\9884e550-85ac-4cb6-81c0-723b2676e32f\long_press_letter_1_1773992791604.png)
+<!-- slide -->
+![Week 2 Detailed View](C:\Users\Deacjx\.gemini\antigravity\brain\9884e550-85ac-4cb6-81c0-723b2676e32f\week2_vocabulary_overview_1773992774763.png)
+````
+
+### Final Validation
+- [x] **Persistent Visibility**: All 16 words in Week 1 and 14 words in Week 2 show full metadata on load.
+- [x] **Visual Encoding**: The spelling visualizer correctly capitalizes and centers the current letter.
+- [x] **Data Accuracy**: Phonetics for multi-word terms (e.g., "birthday party") are correctly mapped and served.
+
+## Advanced Settings & Visual Refinements (v3.2)
+To provide even more control and better visual clarity, a new settings system and a color-coded spelling mode have been added.
+
+### Enhancements:
+- **Settings Drawer (Side Sidebar)**: Accessible via the ⚙️ icon in the top right.
+    - **Speed Control**: Real-time adjustment of TTS reading speed (0.5x - 2.0x).
+    - **Tone Selection**: Toggle between **Child-like** (high pitch) and **Adult** voices to suit the student's preference.
+    - **Persistence**: All settings are automatically saved and remembered across sessions.
+- **Vibrant Color Spelling**: During the letter-by-letter "Kodlama" mode, the background color of the letter changes with every new character. This creates a clear visual boundary between repeating letters (e.g., "O... O" in goodbye).
+
+````carousel
+![Settings Drawer UI](C:\Users\Deacjx\.gemini\antigravity\brain\9884e550-85ac-4cb6-81c0-723b2676e32f\settings_drawer_open_1773993399153.png)
+<!-- slide -->
+![Color Refinement: Letter G](C:\Users\Deacjx\.gemini\antigravity\brain\9884e550-85ac-4cb6-81c0-723b2676e32f\spelling_goodbye_1_1773993484239.png)
+<!-- slide -->
+![Color Refinement: Letter O (Pink)](C:\Users\Deacjx\.gemini\antigravity\brain\9884e550-85ac-4cb6-81c0-723b2676e32f\spelling_goodbye_2_1773993486472.png)
+<!-- slide -->
+![Color Refinement: Letter O (Yellow)](C:\Users\Deacjx\.gemini\antigravity\brain\9884e550-85ac-4cb6-81c0-723b2676e32f\spelling_goodbye_3_1773993488242.png)
+````
+
+### Final Verification Results
+- [x] **Settings Persistence**: Verified that 0.5x speed and Child tone remain set after page reload.
+- [x] **Tone Fidelity**: Confirmed higher pitch for child-like voice.
+- [x] **Visual Distinction**: Confirmed that each letter in "goodbye" flashes a unique color, effectively identifying double letters.
+
+---
+**Status**: All requested features (Auth, Roles, Active Week, Evaluations, Surveys, Detailed Views, Turkish Encoding, Interactive Vocabulary TTS/Spelling/Visualizer/Settings) are implemented and verified.

@@ -1,0 +1,9 @@
+<tool_output_masked>
+{
+  "output": "Successfully modified file: C:\\projects\\agentops-nexus\\email_watcher.py (1 replacements). Here is the updated code:\n\"\"\"\nExchange Mailbox Watcher\n========================\nŞirket Exchange kutusunu dinler; işe başlama / işten çı
+... [TRUNCATED] ...
+"])\n            count += 1\n        \n        if count > 0:\n            log.info(\"%d yeni mesaj kuyruğa eklendi.\", count)\n    except Exception as exc:\n        log.error(\"Exchange tarama hatası: %s\", exc)\n    finally:\n        db.close()\n"
+}
+
+Output too large. Full output available at: C:\Users\Deacjx\.gemini\tmp\projects\tool-outputs\session-a366de38-25fd-4d3a-9bce-f8a0bc9646e6\replace_replace_1775212286094_0_ghcp2h.txt
+</tool_output_masked>

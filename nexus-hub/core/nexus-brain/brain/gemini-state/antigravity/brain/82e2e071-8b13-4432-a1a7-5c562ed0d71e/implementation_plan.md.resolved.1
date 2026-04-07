@@ -1,0 +1,61 @@
+# Implementation Plan: Deploying IT Inventory to DeanOS
+
+This plan outlines the steps to replace the current IT Inventory installation on the DeanOS server (`192.168.1.186`) with the updated "premium" version from the local workspace.
+
+## User Review Required
+
+> [!IMPORTANT]
+> The deployment will involve restarting the `it-inventory` Docker container on the server. This will result in a brief downtime (approx. 30-60 seconds).
+>
+> [!WARNING]
+> We will be syncing the `/DATA/dean/projects/My-Personal-Repository/` directory on the server. A full backup will be created before any changes are applied.
+
+## Proposed Changes
+
+### Phase 1: Server Cleanup (Destructive)
+
+#### [TASK] Stop & Remove Container
+- SSH into DeanOS.
+- Stop and remove the existing container:
+  `sudo docker stop it-inventory || true`
+  `sudo docker rm it-inventory || true`
+- (Optional) Remove the associated image to ensure a fresh build:
+  `sudo docker rmi it-inventory || true`
+
+#### [TASK] Wipe Project Directory
+- Delete the existing application folder on the server:
+  `sudo rm -rf /DATA/dean/projects/My-Personal-Repository/inventory_app/`
+
+---
+
+### Phase 2: Local Synchronization
+
+#### [TASK] Git Commit & Push
+- Ensure all local changes in `C:\projects\it-inventory` are committed.
+- Push to GitHub origin (`evatechnosoft/My-Personal-Repository`).
+
+---
+
+### Phase 3: Fresh Deployment
+
+#### [TASK] Pull & Rebuild
+- Re-create the folder structure or pull from Git:
+  `cd /DATA/dean/projects/My-Personal-Repository/`
+  `git pull origin main` (This will restore the `inventory_app` folder if it was tracked).
+- Rebuild and start the container:
+  `sudo docker compose up -d --build it-inventory`
+
+## Open Questions
+
+- Are there any specific database migrations we need to be aware of? (Currently, the app uses SQLite/SQLAlchemy with `Base.metadata.create_all`, which should handle additions automatically).
+- Do you want me to keep the existing `data/` folder (database, etc.) or reset it? (Plan assumes keeping it).
+
+## Verification Plan
+
+### Automated Verification
+- Check container logs on the server: `sudo docker logs it-inventory`
+- Verify the container status: `sudo docker ps | grep it-inventory`
+
+### Manual Verification
+- Access the `it-inventory` UI via the browser (internal IP or Cloudflare tunnel).
+- **CRITICAL**: Test the "Add New Device" and "Add Request" buttons to ensure the glassmorphism UI is fully functional and responsive (verified fix for the previous "unresponsive buttons" issue).

@@ -1,0 +1,16 @@
+# Global Shared Directory
+
+Bu dizin tum projeler icin ortak bilgi merkezidir.
+
+## Klasorler
+- 01-guides: genel kurallar ve calisma kilavuzlari
+- 02-decisions: proje-ustu teknik kararlar
+- 03-templates: handoff, issue, deploy ve rapor sablonlari
+- 04-scripts: tekrar kullanilabilir scriptler
+- 05-handoffs: oturum ve proje handoff notlari
+- 06-shared-data: ortak konfig ve veri dosyalari
+
+## Kullanim Kurali
+- Projeye ozel olmayan konular buraya yazilir.
+- Proje ici dokumanlar yine proje klasorunde kalir.
+- Her oturum sonunda ilgili ozet 05-handoffs altina eklenir.

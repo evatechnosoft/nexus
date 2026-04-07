@@ -1,0 +1,27 @@
+# ZimaOS Setup Migration - Walkthrough
+
+I have successfully organized the ZimaOS restoration and setup resources in a dedicated directory on your `D:` drive for a clean start.
+
+## 📁 New Directory: `D:\OS`
+
+The following files have been prepared and moved to `D:\OS`:
+
+1. **[zimasetup.md](file:///D:/OS/zimasetup.md)**: Your primary setup guide containing the "One-Line Internet & SSH Fix".
+2. **[cloudflare_token.txt](file:///D:/OS/cloudflare_token.txt)**: Your existing Cloudflare Tunnel token for easy restoration.
+3. **[setup.sh](file:///D:/OS/setup.sh)**: The core ZimaOS/CasaOS installation script.
+4. **[daemon.json](file:///D:/OS/daemon.json)**: Optimized Docker DNS configuration (`1.1.1.1`, `8.8.8.8`).
+
+## 🚀 How to use [zimasetup.md](file:///D:/OS/zimasetup.md)
+
+1. Open **[zimasetup.md](file:///D:/OS/zimasetup.md)**.
+2. Replace `<USERNAME>` and `<PUBLIC_KEY>` with your values (The file includes a "Current Suggestion" based on our session).
+3. Copy the command and paste it into the DeanOS terminal.
+
+## ✅ Verified
+- [x] DNS/Internet Fix (1.1.1.1 / 8.8.8.8)
+- [x] SSH User `dean` setup command
+- [x] Sudo NOPASSWD access
+- [x] SSH Host Key reset (`ssh-keygen -R 192.168.1.186`)
+- [x] Local SSH Config updated (Supports `ssh dean`)
+
+You are now ready to operate from a clean slate on `D:\OS`. 

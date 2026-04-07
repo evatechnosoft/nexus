@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary": "Implementation plan to fix the ZimaOS cloud backup error by clearing misconfigured tasks and guiding the user on correct setup. Includes steps to verify the cloud connection and clean up the backup database.",
+  "updatedAt": "2026-03-27T11:26:03.773825700Z"
+}

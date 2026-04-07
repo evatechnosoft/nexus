@@ -1,0 +1,18 @@
+# Task: Test SpeechSynthesis for Child and Adult tones
+
+## Checklist
+- [ ] Open http://localhost:5000/week/1
+- [ ] Test Child simulation (Pitch 1.6, Rate 1.1)
+- [ ] Test Child simulation (Pitch 1.8, Rate 1.1)
+- [ ] Compare Child simulations
+- [ ] Test Adult simulation (Pitch 1.0, Rate 1.0)
+- [ ] Test Adult simulation (Pitch 0.9, Rate 1.0)
+- [ ] Compare Adult simulations
+- [ ] Identify the most distinct pair
+- [ ] Return the recommended Pitch/Rate values
+
+## Findings
+- Child Simulation (1.6, 1.1):
+- Child Simulation (1.8, 1.1):
+- Adult Simulation (1.0, 1.0):
+- Adult Simulation (0.9, 1.0):

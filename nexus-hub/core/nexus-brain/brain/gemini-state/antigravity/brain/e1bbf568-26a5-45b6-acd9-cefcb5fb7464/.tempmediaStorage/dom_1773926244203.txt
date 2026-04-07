@@ -1,0 +1,60 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (0,376)<a class='skip-link screen-reader-text' href='#main'>Skip to content />
+Ebook Tiếng Anh - English ebooks
+[1] (246,399)<a aria-label='Follow on Twitter' class='icon button circle is-outline  twitter tooltip' href='https://twitter.com/ebookenglish222' title='Follow on Twitter' />
+	[2] (246,397)<i  />
+[3] (264,399)<a aria-label='Send us an email' class='icon button circle is-outline  email tooltip' href='mailto:info@ebook-tienganh.com' title='Send us an email' />
+	[4] (264,397)<i  />
+[5] (282,399)<a aria-label='Follow on Telegram' class='icon button circle is-outline telegram tooltip' href='https://t.me/ebooktienganh' title='Follow on Telegram' />
+	[6] (282,397)<i  />
+[7] (818,399)<a class='nav-top-link' href='https://ebook-tienganh.com/dang-nhap/'>Đăng nhập />
+[8] (863,399)<a class='nav-top-link' href='https://ebook-tienganh.com/dang-ky/'>Đăng ký />
+[9] (901,399)<a class='nav-top-link' href='https://ebook-tienganh.com/lien-he/'>Liên hệ />
+[10] (500,481)<a href='https://ebook-tienganh.com/' title='ebook-tienganh.com - eBooks for English Learners' />
+	[11] (500,481)<img  />
+[12] (113,568)<a class='mega-menu-link' href='https://ebook-tienganh.com/'>HOME />
+	[13] (128,568)<span  />
+[14] (193,568)<a class='mega-menu-link' href='https://ebook-tienganh.com/itools-online/'>ITOOLS ONLINE />
+[15] (279,568)<a class='mega-menu-link' href='https://ebook-tienganh.com/download/'>DOWNLOAD />
+[16] (375,568)<a class='mega-menu-link' href='https://ebook-tienganh.com/'>CLASSIFICATION />
+	[17] (414,568)<span  />
+[18] (476,568)<a class='mega-menu-link' href='https://ebook-tienganh.com/'>PUBLISHER />
+	[19] (504,568)<span  />
+[20] (574,568)<a class='mega-menu-link' href='https://ebook-tienganh.com/presentation/'>PRESENTATION />
+	[21] (611,568)<span  />
+[22] (659,568)<a class='mega-menu-link' href='https://ebook-tienganh.com/'>YEAR />
+	[23] (673,568)<span  />
+[24] (789,568)<input class='search-field mb-0' id='s' placeholder='Search on Ebook-tienganh.com' />
+[25] (904,568)<button aria-label='Submit' class='ux-search-submit submit-button secondary button icon mb-0' />
+	[26] (904,566)<i  />
+[27] (121,669)<a href='https://ebook-tienganh.com/download/'>Download />
+,
+[28] (163,669)<a href='https://ebook-tienganh.com/pearson/'>Pearson />
+Download Pearson English Code (7 Levels) Pdf Audio 2021
+Online iTools English Code (iTools Online dành cho gói thành viên)
+[29] (392,905)<a class='accordion-title plain' href='#' />
+	[30] (112,908)<button class='toggle' />
+		[31] (112,906)<i  />
+	[32] (171,905)<span >English Code Starter />
+[33] (392,965)<a class='accordion-title plain' href='#' />
+	[34] (112,968)<button class='toggle' />
+		[35] (112,966)<i  />
+	[36] (158,965)<span >English Code 1 />
+[37] (392,1025)<a class='accordion-title plain' href='#' />
+[38] (802,649)<a href='https://ebook-tienganh.com/1000-basic-english-words/'>1000 Basic English Words (Compass) />
+[39] (801,680)<a href='https://ebook-tienganh.com/2000-core-english-words/'>2000 Core English Words (Compass) />
+[40] (808,710)<a href='https://ebook-tienganh.com/4000-essential-english-words/'>4000 Essential English Words (Compass) />
+[41] (798,741)<a href='https://ebook-tienganh.com/21st-century-communication/'>21st Century Communication (NGL) />
+[42] (784,772)<a href='https://ebook-tienganh.com/tieu-hoc/academy-stars/'>Academy Stars (Macmillan) />
+[43] (771,802)<a href='https://ebook-tienganh.com/thcs/access-grade-6-7-8-9/'>Access Grade 6789 />
+[44] (773,833)<a href='https://ebook-tienganh.com/achieve-2nd-edition/'>Achieve 2nd (Oxford) />
+[45] (790,863)<a href='https://ebook-tienganh.com/active-skills-for-reading/'>Active Skills for Reading (NGL) />
+[46] (781,894)<a href='https://ebook-tienganh.com/cambridge-english-advanced-result/'>Advanced Result (Oxford) />
+[47] (767,924)<a href='https://ebook-tienganh.com/aim-high/'>Aim High (Oxford) />
+[48] (775,955)<a href='https://ebook-tienganh.com/all-around-new-edition/'>All Around (Richmond) />
+[49] (768,985)<a href='https://ebook-tienganh.com/all-together/'>All Together (NGL) />
+
+</current_dom>

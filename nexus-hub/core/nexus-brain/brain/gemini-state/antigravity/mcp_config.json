@@ -1,0 +1,36 @@
+{
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "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"
+      }
+    },
+    "dart-mcp-server": {
+      "command": "C:\\flutter\\bin\\cache\\dart-sdk\\bin\\",
+      "args": [
+        "run",
+        "mcp-server"
+      ]
+    },
+    "cloudrun": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@google-cloud/cloud-run-mcp"
+      ]
+    },
+    "firebase-mcp-server": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "firebase-tools@latest",
+        "mcp"
+      ]
+    }
+  }
+}

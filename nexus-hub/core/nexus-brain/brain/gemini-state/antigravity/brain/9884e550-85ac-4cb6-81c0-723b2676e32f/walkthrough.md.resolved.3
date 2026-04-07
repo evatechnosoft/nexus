@@ -1,0 +1,102 @@
+# Walkthrough - Organizing English Code Materials
+
+The English Code materials have been organized by moving them into level-specific folders and renaming them to a cleaner, standardized format.
+
+## Changes Made
+
+### Level-Specific Organization
+
+All PDF files that were previously in the root directory have been moved to their corresponding folders:
+
+- **English code 2**
+    - `Level 2 - Grammar Book.pdf`
+    - `Level 2 - Student's Book.pdf`
+    - `Level 2 - Student's Book 1.pdf`
+    - `Level 2 - Workbook.pdf`
+- **English code 3**
+    - `Level 3 - Student's Book.pdf`
+- **English code 5**
+    - `Level 5 - Unit 1.pdf`
+    - `Level 5 - Workbook.pdf`
+- **English code 6**
+    - `Level 6 - Assessment Book.pdf`
+    - `Level 6 - Student's Book.pdf`
+- **English code starter**
+    - `Starter - Teacher's Edition.pdf`
+
+### Internal Folder Consistency
+
+In addition to organizing the root directory, all files inside the level folders have been renamed to follow a consistent `Level [N] - [Description]` or `Starter - [Description]` format.
+
+- **Naming Convention Applied**:
+    - **Normalization**: Underscores and hyphens replaced with spaces.
+    - **Clean up**: Removed author names (e.g., Morgan Hawys), "pdfcoffee.com_", and "pdf-free".
+    - **Standardized Prefixes**: Added "Level [N] - " or "Starter - " to every file and folder.
+    - **Handling Alternatives**: Added "(Alt)" or numbered suffixes (e.g., "Phonics Book 1", "Phonics Book 2") where multiple versions existed.
+
+- **Specific Examples**:
+    - [english_code_1_flashcards.pdf](file:///c:/Users/Deacjx/Documents/English%20code/English%20code%201/english_code_1_flashcards.pdf) -> `Level 1 - Flashcards.pdf`
+    - [English-Code-1-Phonics-Book.pdf](file:///c:/Users/Deacjx/Documents/English%20code/English%20code%201/English-Code-1-Phonics-Book.pdf) -> `Level 1 - Phonics Book.pdf`
+    - `Starter - Teacher's Edition.pdf` (Moved from root)
+    - `Level 2 - Teacher's Edition.pdf` (Renamed inside folder)
+
+## Verification Results
+
+### Automated Verification
+All file moves and renames were executed via PowerShell and verified by recursive directory listings. 100% of the target files now adhere to the new naming convention.
+
+### Manual Verification
+The entire `English code` directory and its subfolders are now neatly organized and easily searchable.
+## Advanced Learning Hub Features (v2.0)
+
+The Learning Hub has been upgraded with a persistent authentication system and role-based access control.
+
+### Key Enhancements:
+- **Authentication**: Password-protected login for Teacher, Student, and Parent roles.
+- **Curriculum Management**: Teachers can now add new lessons and set the "Active Week".
+- **Dynamic Filtering**: Students only see lessons up to the week designated by the teacher.
+- **Turkish Encoding Fix**: All special characters (ğ, ü, ş, İ, ö, ç) are now correctly rendered.
+
+### Visual Demonstration
+````carousel
+![Teacher Dashboard with Management Controls](C:\Users\Deacjx\.gemini\antigravity\brain\9884e550-85ac-4cb6-81c0-723b2676e32f\teacher_dashboard_view_1773988468541.png)
+<!-- slide -->
+![Restricted Student Dashboard](C:\Users\Deacjx\.gemini\antigravity\brain\9884e550-85ac-4cb6-81c0-723b2676e32f\student_dashboard_view_1773988516439.png)
+<!-- slide -->
+![Verification Recording](C:\Users\Deacjx\.gemini\antigravity\brain\9884e550-85ac-4cb6-81c0-723b2676e32f\verify_auth_and_management_1773988365873.webp)
+````
+
+## Verification Results
+
+### Multi-Role Flow
+1. **Teacher**: Logged in as `teacher`, successfully changed the active week and accessed lesson management.
+2. **Student**: Logged in as `student`, verified that future weeks are hidden (only shows up to the teacher's set active week).
+3. **Encoding**: Verified in the browser that all Turkish text is clean and readable.
+
+## Lesson Evaluation & Satisfaction Surveys (v2.1)
+
+A new bidirectional feedback system has been implemented to track lesson quality and student progress more effectively.
+
+### New Features:
+- **Teacher Evaluations**: Teachers can mark lessons as `Passed`, `Continue`, or `Repeat` and leave specific notes for the student/parent.
+- **Student Surveys**: Students can rate each lesson (1-5 stars) and provide feedback on their experience.
+- **Status Badges**: Visual indicators on lesson cards show the current status at a glance.
+
+### Visual Demonstration
+````carousel
+![Teacher Evaluation Modal](C:\Users\Deacjx\.gemini\antigravity\brain\9884e550-85ac-4cb6-81c0-723b2676e32f\teacher_evaluation_modal_1773988903587.png)
+<!-- slide -->
+![Student Satisfaction Survey](C:\Users\Deacjx\.gemini\antigravity\brain\9884e550-85ac-4cb6-81c0-723b2676e32f\student_survey_modal_1773988965852.png)
+<!-- slide -->
+![Evaluation & Survey Flow Recording](C:\Users\Deacjx\.gemini\antigravity\brain\9884e550-85ac-4cb6-81c0-723b2676e32f\verify_evaluation_and_survey_1773988846558.webp)
+````
+
+## Verification Results
+
+### Feedback Loop Finalized
+1. **Teacher Action**: Successfully assigned `Passed` status and feedback to Hafta 01.
+2. **Student Action**: Confirmed teacher notes were visible and submitted a 5-star satisfaction rating.
+3. **Data Integrity**: Verified that the teacher can see the student's rating directly on their dashboard, completing the loop.
+
+---
+*Note: The platform is fully operational with these enhancements.*

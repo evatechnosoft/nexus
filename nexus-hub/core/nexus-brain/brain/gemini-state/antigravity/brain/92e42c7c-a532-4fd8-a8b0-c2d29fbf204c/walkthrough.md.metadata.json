@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_WALKTHROUGH",
+  "summary": "Walkthrough of the ZimaOS cloud backup fix. Documents the identified root cause (misconfigured tasks), the steps taken to clear the broken tasks from the database, and the verification of the service's stability. Provides instructions for the user to set up a correct Local-to-Cloud backup.",
+  "updatedAt": "2026-03-27T11:35:46.935518500Z"
+}

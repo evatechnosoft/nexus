@@ -1,0 +1,21 @@
+# Walkthrough - Fixing MCP Config Error
+
+I have corrected the configuration in [mcp_config.json](file:///c:/Users/Deacjx/.gemini/antigravity/mcp_config.json) to resolve the schema validation error and ensure all servers are correctly registered.
+
+## Changes Made
+
+### Configuration Fixes
+#### [mcp_config.json](file:///c:/Users/Deacjx/.gemini/antigravity/mcp_config.json)
+- **Removed Invalid Property**: The `"path"` property was removed from the `dart-mcp-server` configuration as it is not part of the MCP schema.
+- **Absolute Command Path**: Updated the `"command"` for `dart-mcp-server` to use the full path to the executable: `C:\Program Files\Dart\dart-sdk\bin\dart.exe`. I previously had just the directory path, which caused an "executable not found" error. This is now fixed.
+- **Structural Cleanup**: Moved `cloudrun` and `firebase-mcp-server` from the top-level of the JSON file into the `"mcpServers"` object, which is the correct parent for server definitions.
+
+## Verification Results
+
+### Manual Verification
+- Checked the JSON structure to ensure it matches the expected MCP configuration format.
+- Verified that `dart-mcp-server` now uses a valid command path.
+- Confirmed that all servers are now logically grouped under `mcpServers`.
+
+> [!TIP]
+> You may need to restart your MCP client (or the application using these servers) for the changes to take effect.

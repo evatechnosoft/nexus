@@ -1,0 +1,3 @@
+{
+  "output": "# Global Shared Directory\n\nBu dizin tum projeler icin ortak bilgi merkezidir.\n\n## Klasorler\n- 01-guides: genel kurallar ve calisma kilavuzlari\n- 02-decisions: proje-ustu teknik kararlar\n- 03-templates: handoff, issue, deploy ve rapor sablonlari\n- 04-scripts: tekrar kullanilabilir scriptler\n- 05-handoffs: oturum ve proje handoff notlari\n- 06-shared-data: ortak konfig ve veri dosyalari\n\n## Kullanim Kurali\n- Projeye ozel olmayan konular buraya yazilir.\n- Proje ici dokumanlar yine proje klasorunde kalir.\n- Her oturum sonunda ilgili ozet 05-handoffs altina eklenir.\n"
+}

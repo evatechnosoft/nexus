@@ -1,0 +1,25 @@
+Successfully overwrote file: C:\projects\agentops-nexus\.env.template. Here is the updated code:
+# AgentOps-Nexus Environment Configuration Template
+# Instructions: Copy this to .env and fill in the values. 
+# DO NOT COMMIT THE .env FILE.
+
+# Server Settings
+APP_PORT=4500
+APP_ENV=PROD  # DEV / TEST / PROD
+
+# Database (PostgreSQL for Production)
+# Format: postgresql://user:password@db_host:5432/dbname
+DATABASE_URL=postgresql://nexus_user:secure_password@localhost:5432/agentops_nexus
+
+# Microsoft Graph API (For Email Integration)
+AZURE_CLIENT_ID=your_client_id_here
+AZURE_CLIENT_SECRET=your_client_secret_here
+AZURE_TENANT_ID=your_tenant_id_here
+EXCHANGE_EMAIL=support@findtalent.net
+
+# Email Watcher Settings
+WATCH_INTERVAL_MIN=5
+WATCH_SENDER_FILTER=hr@company.com,ops@company.com
+
+# Deployment Secrets (Optional for CI/CD)
+GITHUB_TOKEN=your_github_token_for_private_repos

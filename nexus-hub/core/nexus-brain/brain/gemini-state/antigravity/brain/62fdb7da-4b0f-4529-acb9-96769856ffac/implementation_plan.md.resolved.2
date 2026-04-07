@@ -1,0 +1,26 @@
+# ZimaOS Service Restoration Plan
+
+Following the fresh format of ZimaOS to version 1.4.4, we need to restore the connectivity and applications.
+
+## User Review Required
+
+> [!IMPORTANT]
+> The ZimaOS device is currently reachable via IPv6 at `zimaos.local` port 80, but the IPv4 address `192.168.1.44` is not responding. Please verify if the IP has changed or if DHCP is still assigning it.
+
+## Proposed Changes
+
+### 1. ZimaOS Internet / DNS Fix (Turkey Specific)
+The "Unable to access Docker Hub" error is usually caused by DNS issues. We will apply the same fix as before.
+- **Action**: Set system DNS and Docker DNS to `1.1.1.1` and `8.8.8.8`.
+
+### 2. Application Deployment
+We will re-deploy the core services using the existing scripts in the `casaos-home-server` repository.
+- **Casatozima (Flask App)**: Re-deploy the localized dashboard.
+- **IT Inventory**: Restore the inventory management service.
+
+## Verification Plan
+
+### Manual Verification
+1. Access the ZimaOS dashboard at `http://zimaos.local`.
+2. Verify SSH access to the device.
+3. Check if the public domains (e.g., `casatozima.evaitec.com`) are reachable once the tunnel is restored.

@@ -1,0 +1,7 @@
+{
+  "artifactType":  "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary":  "TEST ve PROD ortamlarının aynı dizinde (folder) çakışmasını engellemek için her ortamı kendi klasörüne (`it-inventory-test`, `it-inventory-prod`) ayırma ve yerel (local) ortamın başlatılması planı.",
+  "updatedAt":  "2026-04-01T16:26:08.774736600Z",
+  "version":  "6",
+  "requestFeedback":  true
+}

@@ -1,0 +1,47 @@
+# Health Integration Modernization (v11.0.0+ Migration)
+
+The `health` package has been updated to version 11.0.0, which introduces significant breaking changes: the removal of the legacy Google Fit API and the shift to **Google Health Connect** on Android. The `HealthFactory` class has also been replaced by the `Health` class.
+
+## User Review Required
+
+> [!IMPORTANT]
+> **Health Connect App Requirement**: Since Google Fit support is removed, you MUST have the **Health Connect** app installed on your Android device (it is built-in on Android 14+, but might need to be downloaded from the Play Store on older versions).
+> 
+> **Permissions**: You will need to grant "All permissions" in the Health Connect sync settings on your phone after the first launch.
+
+## Proposed Changes
+
+The following changes have already been prepared/applied to ensure compatibility:
+
+### Core Logic
+
+#### [MODIFY] [health_service.dart](file:///c:/projects/SportApp/mobile_app/lib/services/health_service.dart)
+- Migrated legacy `HealthFactory` usage to the new `Health` class.
+- Added mandatory `_health.configure()` call for initialization.
+- Updated `hasPermissions` and `requestAuthorization` to include explicit `HealthDataAccess` permissions required by the new SDK.
+
+---
+
+### Android Configuration
+
+#### [MODIFY] [AndroidManifest.xml](file:///c:/projects/SportApp/mobile_app/android/app/src/main/AndroidManifest.xml)
+- Added mandatory `<uses-permission>` tags for Health Connect data types (`READ_STEPS`, `READ_HEART_RATE`, `READ_SLEEP`).
+- Added `<queries>` tag to allow interaction with the Google Health Connect app.
+
+#### [MODIFY] [build.gradle.kts](file:///c:/projects/SportApp/mobile_app/android/app/build.gradle.kts)
+- Increased `minSdkVersion` to `26` (Android 8.0) as required by the Health Connect SDK.
+
+## Open Questions
+
+- None at the moment. The migration follows the official documentation for the version upgrade.
+
+## Verification Plan
+
+### Automated Tests
+- Run `flutter run` on the connected S24 Ultra (SM S928B).
+- Verify that the app builds successfully with the new `minSdkVersion`.
+
+### Manual Verification
+- Test the `requestPermissions()` flow in the mobile app.
+- Confirm that the Health Connect authorization dialog appears.
+- Trigger `syncData()` and verify backend logs for successfully transmitted biometrics.

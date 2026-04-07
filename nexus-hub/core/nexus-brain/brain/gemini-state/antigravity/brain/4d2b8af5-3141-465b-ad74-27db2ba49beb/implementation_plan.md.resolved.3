@@ -1,0 +1,50 @@
+# Sesli Sohbet (TTS & STT) Uygulama Planı
+
+Bu plan, "Kızımın Arkadaşı" uygulamasına sesli komut verme (Speech-to-Text) ve AI'nın sesli yanıt vermesi (Text-to-Speech) özelliklerini eklemeyi kapsar.
+
+## User Review Required
+
+> [!IMPORTANT]
+> Sesli özelliklerin çalışması için Android cihazında Mikrofon izni manuel olarak onaylanmalıdır.
+> TTS (Yapay Zeka Sesi) varsayılan olarak cihazın sistem sesini kullanacaktır.
+
+## Proposed Changes
+
+### 1. Bağımlılıklar ve İzinler
+#### [MODIFY] [pubspec.yaml](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/pubspec.yaml)
+- `speech_to_text`: Ses tanıma için.
+- `flutter_tts`: Metni sese çevirmek için.
+
+#### [MODIFY] [AndroidManifest.xml](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/android/app/src/main/AndroidManifest.xml)
+- `RECORD_AUDIO` ve `INTERNET` izinlerinin eklenmesi.
+- `queries` kısmına STT servislerinin eklenmesi.
+
+### 2. Servis Katmanı
+#### [NEW] [voice_service.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/services/voice_service.dart)
+- `SpeechToText` ve `FlutterTts` nesnelerinin yönetimi.
+- Ses seviyesi takibi ve hata yönetimi.
+
+### 3. State Yönetimi
+#### [MODIFY] [app_provider.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/providers/app_provider.dart)
+- Yapay zeka cevabını otomatik seslendirme ayarı (`isVoiceEnabled`).
+- Gelen mesajları seslendirme tetikleyicisi.
+
+### 4. Kullanıcı Arayüzü
+#### [MODIFY] [chat_screen.dart](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/lib/screens/chat/chat_screen.dart)
+- Metin kutusunun yanına **Mikrofon** butonu.
+- Basılı tutarak veya tıklayarak dinleme modu.
+- Animasyonlu ses dalgası görseli (isteğe bağlı).
+
+## Open Questions
+
+1. AI cevabını **her zaman otomatik mi** okusun, yoksa bir butonla mı tetiklensin?
+2. Seslendirme dili uygulama diline (TR/EN) göre mi otomatik değişsin?
+
+## Verification Plan
+
+### Automated Tests
+- `VoiceService` birim testleri (Mocking).
+
+### Manual Verification
+- Fiziksel Android cihazda ses tanıma ve sesli yanıt testi.
+- İzin reddedildiğinde uygulamanın çökmediğinin doğrulanması.

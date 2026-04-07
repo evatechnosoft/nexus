@@ -1,0 +1,36 @@
+# AI Antrenör Kişiselleştirme Planı
+
+Bu plan, AI Antrenör Hikmet'in Dashboard üzerindeki tavsiyelerini kullanıcının o günkü verilerine (adım, kalori, uyku) göre Gemini AI kullanarak dinamik hale getirmeyi hedefler.
+
+## User Review Required
+
+> [!IMPORTANT]
+> - Tavsiyeler kullanıcının o günkü `steps`, `calories`, `water` ve `sleep` verilerine dayalı olacaktır.
+> - Gemini API anahtarı ayarlar kısmından girilmiş olmalıdır.
+> - Her dashboard açılışında API çağrısı yapmamak için tavsiyeler 1 saat boyunca cache'lenecektir.
+
+## Proposed Changes
+
+### [Component] AI Service
+
+#### [MODIFY] [GeminiService](file:///c:/projects/SportApp/mobile_app/lib/services/gemini_service.dart)
+- **[NEW] `getCoachAdvice(stats)`**: Kullanıcı istatistiklerine göre 1-2 cümlelik motivasyonel ve aksiyon odaklı bir tavsiye üreten metot ekle.
+
+### [Component] Dashboard UI
+
+#### [MODIFY] [DashboardScreen](file:///c:/projects/SportApp/mobile_app/lib/screens/dashboard_screen.dart)
+- `_refreshData` içinde `GeminiService.getCoachAdvice(_stats)` çağrısı yapılarak coach banner'ı güncellenecek.
+- Veri yüklenene kadar "Hikmet düşünüyor..." gibi geçici bir metin gösterilecek.
+
+## Open Questions
+
+- Hikmet'in tavsiye tonu nasıl olsun? (Örn: Sert/Disiplinli, Motivasyonel/Yumuşak, Bilimsel/Analitik).
+- Tavsiyeleri sadece Dashboard banner'ında mı yoksa NutriChat içinde de mi görmek istersiniz?
+
+## Verification Plan
+
+### Automated Tests
+- Farklı istatistik kombinasyonları (düşük adım + yüksek kalori vb.) için üretilen tavsiyelerin tutarlılığı kontrol edilecek.
+
+### Manual Verification
+- Ayarlardan Gemini anahtarı girildiğinde Coach banner'ının statik metinden canlı AI tavsiyesine geçtiği doğrulanacak.

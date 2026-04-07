@@ -1,0 +1,5 @@
+- [x] 'nexus-efficiency/output' klasörünün oluşturulması
+- [/] 'analysis_results.md', 'implementation_plan.md' ve 'task.md' dosyalarının 'output/' klasörüne taşınması
+- [ ] 'work.md' (ham veri) kopyasının 'input/' klasörüne yerleştirilmesi
+- [ ] 'zimaos_rules.md' (server) dosyasının 'Nexus Proje I/O Protokolü' ile güncellenmesi
+- [ ] Doğrulama ve final raporu

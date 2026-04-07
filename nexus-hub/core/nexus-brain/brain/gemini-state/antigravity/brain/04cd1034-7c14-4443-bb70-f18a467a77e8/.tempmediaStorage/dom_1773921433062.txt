@@ -1,0 +1,56 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (228,15)<a href='https://dy.d-ld.net/ed9e73b5c7' title='free download'>English Code Coding Mindset />
+[1] (237,45)<a href='https://dy.d-ld.net/e61625b1b3' title='free download'>English Code Parent Information />
+English Code British Starter Pupils Book -  ISBN: 9781292352565
+[2] (267,129)<a href='https://dy.d-ld.net/b41bf0b003' title='free download'>English Code British Starter Class Audio Cds />
+English Code British Starter Activity Book -  ISBN: 9781292322872
+[3] (276,188)<a href='https://dy.d-ld.net/d7cb8a15b1' title='free download'>English Code British Starter Activity Book Audio />
+[4] (269,218)<a href='https://dy.d-ld.net/af4b42663c' title='free download'>English Code British Starter Teachers Edition />
+-  ISBN: 9781292354507
+[5] (253,248)<a href='https://dy.d-ld.net/9d2046cc11' title='free download'>English Code British Starter Flashcards />
+-  ISBN: 9781292323688
+English Code British All Levels Posters -  ISBN: 9781292322216
+[6] (241,332)<a href='https://dy.d-ld.net/1538a588a4' title='free download'>English Code British 1 Pupils Book />
+-  ISBN: 9781292352305
+[7] (252,362)<a href='https://dy.d-ld.net/d452ddee6a' title='free download'>English Code British 1 Class Audio Cds />
+[8] (245,391)<a href='https://dy.d-ld.net/b3f92993a7' title='free download'>English Code British 1 Activity Book />
+-  ISBN: 9781292322711
+[9] (261,421)<a href='https://dy.d-ld.net/2ea3f2b817' title='free download'>English Code British 1 Activity Book Audio />
+[10] (227,451)<a href='https://dy.d-ld.net/7845314a77' title='free download'>English Code 1 Phonics Book />
+-  ISBN: 9781292322513
+[11] (262,480)<a href='https://dy.d-ld.net/060f559f66' title='free download'>English Code British 1 Phonics Book Audio />
+[12] (262,510)<a href='https://dy.d-ld.net/13bd8e379c' title='free download'>English Code British 1 Phonics Book Video />
+[13] (250,540)<a href='https://dy.d-ld.net/c9a8fc7f61' title='free download'>English Code British 1 Grammar Book />
+-  ISBN: 9781292354514
+[14] (254,570)<a href='https://dy.d-ld.net/648b87447c' title='free download'>English Code British 1 Teachers Edition />
+-  ISBN: 9781292354446
+[15] (238,599)<a href='https://dy.d-ld.net/7cf263abc2' title='free download'>English Code British 1 Flashcards />
+-  ISBN: 9781292323626
+[16] (286,629)<a href='https://dy.d-ld.net/855a1a6a20' title='free download'>English Code British 1 Assessment Book with Audio />
+-  ISBN: 9781292352411
+[17] (241,683)<a href='https://dy.d-ld.net/cfab0f1392' title='free download'>English Code British 2 Pupils Book />
+-  ISBN: 9781292352312
+[18] (252,713)<a href='https://dy.d-ld.net/f05ff398b9' title='free download'>English Code British 2 Class Audio Cds />
+[19] (245,743)<a href='https://dy.d-ld.net/b3a0cb2049' title='free download'>English Code British 2 Activity Book />
+-  ISBN: 9781292353937
+[20] (261,773)<a href='https://dy.d-ld.net/981a056692' title='free download'>English Code British 2 Activity Book Audio />
+[21] (227,802)<a href='https://dy.d-ld.net/eb868a4076' title='free download'>English Code 2 Phonics Book />
+-  ISBN: 9781292322544
+[22] (262,832)<a href='https://dy.d-ld.net/488ee21192' title='free download'>English Code British 2 Phonics Book Audio />
+[23] (262,862)<a href='https://dy.d-ld.net/7aadc425a1' title='free download'>English Code British 2 Phonics Book Video />
+English Code British 2 Grammar Book
+-  ISBN: 9781292354521
+English Code British 2 Grammar Video
+English Code British 2 Teachers Edition
+-  ISBN: 9781292354453
+English Code British 2 Flashcards
+-  ISBN: 9781292323633
+English Code British 2 Assessment Book with Audio
+-  ISBN: 9781292352428
+[24] (975,854)<div  />
+Reklam
+
+</current_dom>

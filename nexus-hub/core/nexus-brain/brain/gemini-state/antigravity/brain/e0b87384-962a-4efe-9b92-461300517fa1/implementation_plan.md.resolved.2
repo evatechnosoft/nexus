@@ -1,0 +1,22 @@
+# API ve Database Alt Alan Adı Entegrasyon Planı
+
+Kapsamlı modern web altyapımızda API ve Veritabanı yönetimini kolaylaştırmak için aşağıdaki planı uygulayacağız:
+
+## Veritabanı Yönetimi (`db` subdomain'i)
+Şu anda CasaOS üzerinde PostgreSQL veritabanın çalışıyor (Port `5432`). Ayrıca bu veritabanına görsel olarak bağlanıp tablolarını yönetebilmeni sağlayan **Adminer** eklentisi de çalışıyor (Port `8080`).
+
+- Doğrudan veritabanı portunu (5432) internete açmak büyük bir güvenlik riski taşıdığı için, **Adminer** arayüzünü (8080) `db.evaitec.com.tr` adresine yönlendireceğiz. Böylece tarayıcından `db` alt alan adına girip kolayca veritabanını yönetebileceksin.
+
+## API Geliştirme (`api` subdomain'i)
+Flask uygulamamıza (şu anki PROD portu olan `5005`'te çalışan kodumuza) gerçek bir PostgreSQL bağlantısı ve örnek REST API uç noktaları (endpoint) entegre edeceğiz:
+
+1. **[MODIFY] [flask-app/requirements.txt](file:///c:/projects/github/casaos-home-server/flask-app/requirements.txt)**: PostgreSQL ile konuşabilmesi için `psycopg2-binary` (veya `pg8000`) ve `Flask-SQLAlchemy` eklenecek.
+2. **[MODIFY] [flask-app/src/app.py](file:///c:/projects/github/casaos-home-server/flask-app/src/app.py)**: Veritabanına bağlanan ve örnek bir veri döndüren (`GET /api/status` ve `GET /api/users`) modern bir API kurgusu yazılacak.
+3. Docker Compose yeniden başlatılarak (Dev ortamında otomatik, Prod'da rebuild ile) sistem canlıya alınacak.
+
+## Senin (Kullanıcının) Yapması Gerekenler:
+Bu işlemler tamamlandıktan sonra Cloudflare üzerinden şu rotaları eklemen gerekecek:
+- `db.evaitec.com.tr` -> `http://localhost:8080` (Adminer veritabanı paneli)
+- `api.evaitec.com.tr` -> `http://localhost:5005` (Flask Prod API)
+
+Eğer planı onaylarsan hemen API kodlarını yazmaya ve veritabanı bağlantılarını yapılandırmaya başlıyorum!

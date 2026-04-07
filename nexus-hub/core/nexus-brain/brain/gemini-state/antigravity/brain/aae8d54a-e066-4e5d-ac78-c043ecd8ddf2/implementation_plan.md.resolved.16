@@ -1,0 +1,34 @@
+# Infrastructure Fix: Resolving Read-Only and Permission Denied issues on ZimaOS
+
+## User Review Required
+
+> [!IMPORTANT]
+> The `coolify-v4` container is running as user `www-data` (UID 9999). It cannot even access the `/root/` directory inside the container, let alone write to `/root/.ssh/`. We must redirect the SSH key storage to the existing writable application storage at `/var/www/html/storage/app/ssh`.
+
+## Proposed Changes
+
+### [Component] Coolify V4 Infrastructure (DeanOS)
+
+#### [MODIFY] [docker-compose.yml](file:///DATA/AppData/coolify-v4/docker-compose.yml)
+- **Environment:** Update `HOME=/var/www/html` (Attempt 2).
+- **Volumes:** Add a symlink or a bind-mount that tricks the OS into writing to the writable storage.
+- **Command Override:** If necessary, use a `command` override in docker-compose to fix the internal symlink before the app starts.
+
+#### [EXECUTE] [Server Commands]
+1. **Force Permissions:** `sudo chmod -R 777 /DATA/AppData/coolify-v4/ssh` (The actual app storage).
+2. **Symlink Fix:** `sudo docker exec coolify-v4 ln -sf /var/www/html/storage/app/ssh /root/.ssh` (Or equivalent on host before startup).
+3. **Stack Restart:** `docker compose up -d --force-recreate`.
+
+## Open Questions
+
+> [!NOTE]
+> - Hocam, bu işlemden sonra Coolify'ın ayarlarından SSH dizini olarak `/var/www/html/storage/app/ssh` gibi bir yol görebilirsen orada da değişikliğe gidebiliriz.
+
+## Verification Plan
+
+### Automated Verification
+- We will monitor the `coolify-v4` logs for any further `tee` or `permission denied` errors during Git/SSH operations.
+- We will check if the `it-inventory` status turns GREEN (Healthy) in the Coolify UI.
+
+### Manual Verification
+- User to re-attempt the "Save Key" or "Deploy" action in the Coolify dashboard.

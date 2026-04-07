@@ -1,0 +1,38 @@
+# Gemini Model & Kota Sistemi Güncelleme Planı (Nisan 2026)
+
+Kullanıcının isteği doğrultusunda, Gemini API model isimlerini en son dökümantasyonuna göre (3.x ve 2.5 serisi dahil) güncelleyeceğiz. Ayrıca, kullanıcının seçtiği modelin limitlerini (kota) takip edebileceği bir gösterge sistemi ekleyeceğiz.
+
+## Güncel Model Listesi & Limitler
+Araştırmalarım sonucunda şu anki "tam adlandırmalar" ve ücretsiz katman limitleri şöyledir:
+
+| Model ID | Açıklama | Kotası (RPM) |
+| :--- | :--- | :--- |
+| `gemini-1.5-flash-latest` | Legacy / Hızlı | 15 RPM |
+| `gemini-2.0-flash` | Güncel / Dengeli | 15 RPM |
+| `gemini-2.5-flash` | Yeni Standart | 15 RPM |
+| `gemini-2.5-pro` | Gelişmiş Zeka | 2 RPM |
+| `gemini-3.1-flash-preview` | En Yeni Nesil | 10 RPM |
+
+## Önerilen Değişiklikler
+
+### 1. Kota Göstergesi (Quota Indicator)
+API anahtarlarının kalanı doğrudan sorgulanamadığından, uygulama tarafında **"Sayaçlı Kota"** sistemi kuracağız:
+- **Web:** `localStorage` üzerinde dakikalık bir sayaç tutup, AI Coach kartında "İstek Kotası: 12/15 rpm" şeklinde progress bar göstereceğiz.
+- **Mobil:** `flutter_secure_storage` ile benzer bir sayaç mekanizması kurup, ayarlar ekranında modelin yanında limit bilgisini belirteceğiz.
+
+### 2. Backend Değişiklikleri ([ai.js](file:///c:/projects/SportApp/routes/ai.js))
+- Backend'e gönderilen isteklere `model` parametresi eklenecek.
+- Eğer model belirtilmemişse varsayılan olarak `gemini-2.5-flash` kullanılacak.
+
+### 3. Mobil Uygulama ([gemini_service.dart](file:///c:/projects/SportApp/mobile_app/lib/services/gemini_service.dart) & [settings_screen.dart](file:///c:/projects/SportApp/mobile_app/lib/screens/settings_screen.dart))
+- **Model Seçimi:** Ayarlar ekranına şık bir `DropdownButton` (Oktan seçmeli) eklenecek.
+- **Servis:** `GeminiService`, her istekten önce yerel sayacı kontrol edecek ve istek başarıyla sonuçlandığında sayacı artıracak.
+
+### 4. Web Frontend ([app.js](file:///c:/projects/SportApp/public/app.js) & [index.html](file:///c:/projects/SportApp/public/index.html))
+- **Dashboard:** AI Coach kartının altına, o anki modelin adını ve dakikalık kullanım barını ekleyeceğiz.
+- **Settings:** Model seçimi için `<select>` eklenecek ve her model tıklandığında özellikleri (RPM, TPM) kullanıcıya gösterilecek.
+
+## Doğrulama Planı
+1. **API Onayı:** Her yeni model adıyla birer başarılı test isteği gönderilecek.
+2. **Limit Kontrolü:** İstek sınırı aşıldığında sistemin "Kritik Kota Uyarısı" verip vermediği test edilecek.
+3. **Kalıcılık (Persistence):** Sayfanın yenilenmesi durumunda model tercihinin kaybolmadığı doğrulanacak.

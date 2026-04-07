@@ -1,0 +1,22 @@
+# IT Inventory OAuth2 & Turkish Support Task List
+
+- [x] Research & Planning
+    - [x] Investigate OAuth2 requirements for Graph API
+    - [x] Review existing [email_watcher.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/email_watcher.py) logic
+- [x] Graph API Integration
+    - [x] Create [ms_oauth.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/ms_oauth.py) for token management
+    - [x] Implement [graph_watcher.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/graph_watcher.py) using `O365` library
+    - [x] Hook `graph_watcher` into [main.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/main.py)
+- [x] Database Migration
+    - [x] Configure PostgreSQL connection in [.env](file:///c:/projects/it-inventory/it-inventory/.env)
+    - [x] Verify table creation in PostgreSQL
+- [/] Email Parsing Refinement (Turkish & Tables)
+    - [x] Implement table-aware HTML stripping (colon trick)
+    - [/] Improve regex robustness for Turkish names/headers
+    - [ ] Handle "Horizontal" table layouts (optional but recommended)
+    - [x] Clean up accidental test data (Boss name removal)
+- [/] Verification & Test Generation
+    - [x] Verify "Ali Veli" end-to-end processing
+    - [x] Verify "Tuğret" table processing
+    - [/] Create Random Turkish Test Generator (Random names/phones in HTML table)
+    - [ ] Final end-to-end documentation

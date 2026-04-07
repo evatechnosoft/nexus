@@ -1,0 +1,44 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (749,24)<button aria-label='Update All' class='mdc-button   ' id='button'>Update All />
+	system_update
+	Update All
+[1] (830,24)<button aria-label='Clean All Files' class='mdc-button   ' id='button'>Clean All Files />
+	Clean All Files
+[2] (905,24)<button aria-label='Secrets' class='mdc-button   ' id='button'>Secrets />
+	lock
+	Secrets
+search
+[3] (974,24)<button aria-label='more_vert' class='mdc-icon-button mdc-icon-button--display-flex' />
+	[4] (974,24)<i >more_vert />
+bluetooth-proxy
+bluetooth-proxy.yaml
+[5] (79,178)<button aria-label='Update' class='mdc-button   ' id='button'>Update />
+	system_update
+	Update
+[6] (124,178)<button aria-label='Edit' class='mdc-button   ' id='button'>Edit />
+	Edit
+[7] (158,178)<button aria-label='Logs' class='mdc-button   ' id='button'>Logs />
+	Logs
+[8] (331,178)<button aria-label='more_vert' class='mdc-icon-button mdc-icon-button--display-flex' />
+	[9] (331,178)<i >more_vert />
+Smart Station
+smart-station.yaml
+[10] (373,178)<button aria-label='Edit' class='mdc-button   ' id='button'>Edit />
+	Edit
+[11] (408,178)<button aria-label='Logs' class='mdc-button   ' id='button'>Logs />
+	Logs
+[12] (635,178)<button aria-label='more_vert' class='mdc-icon-button mdc-icon-button--display-flex' />
+	[13] (635,178)<i >more_vert />
+[14] (944,959)<button aria-label='New device' class='mdc-fab  mdc-fab--extended ' />
+	[15] (913,959)<span  />
+	[16] (951,959)<span >New device />
+ESPHome by Open Home Foundation |
+[17] (274,978)<a href='https://esphome.io/guides/supporters.html'>Fund development />
+|
+[18] (358,978)<a href='https://www.esphome.io/'>2026.3.2
+Documentation />
+
+</current_dom>

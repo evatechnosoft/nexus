@@ -1,0 +1,31 @@
+# Walkthrough: Evario Odyssey (Animation & Orientation Fix)
+
+I have successfully fixed the character's looking direction and implemented a walking animation.
+
+## Key Improvements
+- **Orientation Fix**: The character now correctly faces the direction she is moving (Right when moving right, Left when moving left).
+- **Walking Animation**: Implemented a two-frame "feet moving" animation that triggers during movement.
+- **Fluidity**: The transition between idle and walking states is smooth and responsive.
+
+## Visual Verification
+
+````carousel
+![Moving Right Corrected](/C:/Users/Deacjx/.gemini/antigravity/brain/c4b7c076-1178-4caf-ab9a-405e42335d4b/walking_right_animation_1773594540470.png)
+<!-- slide -->
+![Moving Left Corrected](/C:/Users/Deacjx/.gemini/antigravity/brain/c4b7c076-1178-4caf-ab9a-405e42335d4b/walking_left_animation_1773594549371.png)
+````
+
+### Animation Demo
+![Character Animation & Direction Fix](/C:/Users/Deacjx/.gemini/antigravity/brain/c4b7c076-1178-4caf-ab9a-405e42335d4b/verify_character_animation_1773594396319.webp)
+*This recording demonstrates the character correctly facing her destination and the "feet moving" animation in action.*
+
+## How to Play
+1. The game is live at `http://localhost:5173/`.
+2. **Controls**:
+   - `Arrow Keys` or `WASD`: Move and Jump.
+   - `Space`: Jump.
+
+## Technical Details
+- **Engine**: Canvas API.
+- **Physics**: Custom implemented in [src/main.js](file:///c:/projects/Antigravity/EvaGames/evario/src/main.js).
+- **Styling**: [src/style.css](file:///c:/projects/Antigravity/EvaGames/evario/src/style.css) provides the glassmorphism and neon effects.

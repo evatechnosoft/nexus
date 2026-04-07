@@ -1,0 +1,10 @@
+# Flutter Web App Verification Plan
+
+- [ ] Navigate to http://localhost:8080
+- [ ] Wait for the application to load
+- [ ] Take a full-page screenshot of the dashboard/scan screen
+- [ ] Describe the UI and check for "Scan" button
+- [ ] Click "Scan" button if present
+- [ ] Take a screenshot if the view changes
+- [ ] Identify UI issues or placeholders
+- [ ] Report findings and screenshot paths

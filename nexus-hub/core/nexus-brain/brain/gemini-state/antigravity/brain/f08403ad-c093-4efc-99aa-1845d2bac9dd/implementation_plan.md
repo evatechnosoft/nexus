@@ -1,0 +1,66 @@
+# Fix BuildContext across async gaps in SplashScreen
+
+The lint warning "Don't use 'BuildContext's across async gaps" occurs when a `BuildContext` is used after an `await` statement. In Flutter, the `BuildContext` belongs to a widget that may no longer be part of the widget tree (i.e., it has been "unmounted") by the time the asynchronous operation completes.
+
+## Proposed Changes
+
+### [mobile] (file:///c:/projects/github/EvATasks/mobile/lib/features/splash/splash_screen.dart)
+
+#### [MODIFY] [splash_screen.dart](file:///c:/projects/github/EvATasks/mobile/lib/features/splash/splash_screen.dart)
+
+Add a `mounted` check immediately before using `context.go()` to ensure the widget is still in the tree after the `SharedPreferences.getInstance()` call.
+
+```dart
+// Before
+final prefs = await SharedPreferences.getInstance();
+final userId = prefs.getString('user_id');
+
+if (userId != null) {
+  context.go('/todos');
+} else {
+  context.go('/user-name');
+}
+
+// After
+final prefs = await SharedPreferences.getInstance();
+if (!mounted) return; // Check if the widget is still in the tree
+final userId = prefs.getString('user_id');
+
+if (userId != null) {
+  context.go('/todos');
+} else {
+  context.go('/user-name');
+}
+```
+
+### [mobile] (file:///c:/projects/github/EvATasks/mobile/lib/features/auth/two_fa_screen.dart)
+
+#### [MODIFY] [two_fa_screen.dart](file:///c:/projects/github/EvATasks/mobile/lib/features/auth/two_fa_screen.dart)
+
+- In `_handleVerify`, add `if (!mounted) return;` inside the `catch` block before calling `setState`.
+- Although `context.go()` is already guarded by `if (mounted)`, it is better practice to guard entire blocks after an `await` if they rely on the widget state.
+
+```dart
+// Before
+} catch (e) {
+  setState(() {
+    _isLoading = false;
+    _error = 'Invalid code. Try again.';
+  });
+}
+
+// After
+} catch (e) {
+  if (!mounted) return;
+  setState(() {
+    _isLoading = false;
+    _error = 'Invalid code. Try again.';
+  });
+}
+```
+
+## Verification Plan
+
+### Manual Verification
+- Run the 2FA flow and ensure that errors are still displayed correctly and navigation happens as expected.
+- Verify that the lint warning for `two_fa_screen.dart` is resolved.

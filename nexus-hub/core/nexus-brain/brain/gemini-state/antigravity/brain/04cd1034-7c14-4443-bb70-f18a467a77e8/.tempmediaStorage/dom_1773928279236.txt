@@ -1,0 +1,152 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Erişilebilirlik Bağlantıları
+Ana içeriğe geç
+Erişilebilirlik yardımı
+Erişilebilirlikle ilgili geri bildirim
+[0] (77,70)<a aria-label='Google Anasayfası'na Git' href='https://www.google.com/webhp?hl=tr&sa=X&ved=0ahUKEwjRk__ljayTAxWS_7sIHb9uMzQQPAgI' id='logo' title='Google Anasayfası'na Git' />
+[1] (345,68)<textarea aria-label='Ara' class='gLFyf' id='APjFqb' role='combobox' />
+[2] (560,68)<div  />
+	[3] (558,68)<div aria-label='Temizle' class='M2vV3 vOY7J' role='button' />
+		[4] (558,68)<span  />
+	[5] (574,68)<span  />
+[6] (590,68)<div aria-label='Harf çevirme aracı' class='Umvnrc' role='button' />
+	[7] (590,68)<span  />
+[8] (615,68)<div aria-label='Sesle arama yapın' class='XDyW0e' role='button' />
+[9] (641,68)<div aria-label='Görselle arama' class='nDcEnd' role='button' />
+[10] (670,68)<button aria-label='Ara' class='HZVG1b Tg7LZd' />
+	[11] (666,68)<div  />
+		[12] (666,68)<span  />
+[13] (878,69)<div aria-label='Ayarlar' class='fLciMb' id='og-te' role='button' />
+	[14] (878,71)<div  />
+		[15] (878,69)<span  />
+[16] (907,69)<a aria-label='Google uygulamaları' class='gb_B' href='https://www.google.com.tr/intl/tr/about/products?tab=wh' role='button' />
+[17] (955,69)<a aria-label='Oturum açın' class='gb_A' href='https://accounts.google.com/ServiceLogin?hl=tr&passive=true&continue=https://www.google.com/search%3Fq%3Dtienganhedu.com%2Benglish%2Bcode%2Bame%2Bbre%2B7%2Blevels&ec=futura_srp_og_si_72236_p'>Oturum açın />
+	Oturum açın
+Filtreler ve Konular
+[18] (164,144)<a class='XVMlrc C6AK7c' href='/search?q=tienganhedu.com+english+code+ame+bre+7+levels&sca_esv=f818ef0c6d37c692&udm=50&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLfDIfEXPwaXG5eHvO7qyO_mxvB-_pt2ZyNJIVa-ipFUKt3RZxjPyy9_lJoP0EMANwMGFhxd1jPxFh92g-mglKBNvEdIQ5vMvdFPaJOFChRJEk1nfbzGdvxWM2tMGitt6xPsRrIj_fNndABDr2ylnHIRRdFwsalfs95OYn73KLMx6W8JRfv-8WMP48SaXZEYXursjDfxGckhBeoh0QJ8XE4WNZOF8&aep=1&ntc=1&sa=X&ved=2ahUKEwjRk__ljayTAxWS_7sIHb9uMzQQ2J8OegQIDhAE' />
+	[19] (164,144)<div  />
+		[20] (164,155)<div  />
+			[21] (164,149)<span >AI Modu />
+[22] (207,144)<a class='C6AK7c' role='link' />
+	Tümü
+[23] (252,144)<a class='C6AK7c' href='/search?sca_esv=f818ef0c6d37c692&udm=2&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLfDIfEXPwaXG5eHvO7qyO_mxvB-_pt2ZyNJIVa-ipFUKt3RZxjPyy9_lJoP0EMANwMGFhxd1jPxFh92g-mglKBNvEdIQ5vMvdFPaJOFChRJEk1nfbzGdvxWM2tMGitt6xPsRrIj_fNndABDr2ylnHIRRdFwsalfs95OYn73KLMx6W8JRfv-8WMP48SaXZEYXursjDfxGckhBeoh0QJ8XE4WNZOF8&q=tienganhedu.com+english+code+ame+bre+7+levels&sa=X&ved=2ahUKEwjRk__ljayTAxWS_7sIHb9uMzQQtKgLegQIExAB' />
+	[24] (252,144)<div  />
+		[25] (252,155)<span >Görseller />
+[26] (303,144)<a class='C6AK7c' href='/search?sca_esv=f818ef0c6d37c692&udm=28&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLfDIfEXPwaXG5eHvO7qyO_mxvB-_pt2ZyNJIVa-ipFUKt3RZxjPyy9_lJoP0EMANwMGFhxd1jPxFh92g-mglKBNvEdIQ5vMvdFPaJOFChRJEk1nfbzGdvxWM2tMGitt6xPsRrIj_fNndABDr2ylnHIRRdFwsalfs95OYn73KLMx6W8JRfv-8WMP48SaXZEYXursjDfxGckhBeoh0QJ8XE4WNZOF8&q=tienganhedu.com+english+code+ame+bre+7+levels&ved=1t:220175&ictx=111' />
+	[27] (303,144)<div  />
+		[28] (303,155)<span >Alışveriş />
+[29] (351,144)<a class='C6AK7c' href='/search?sca_esv=f818ef0c6d37c692&udm=7&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLfDIfEXPwaXG5eHvO7qyO_mxvB-_pt2ZyNJIVa-ipFUKt3RZxjPyy9_lJoP0EMANwMGFhxd1jPxFh92g-mglKBNvEdIQ5vMvdFPaJOFChRJEk1nfbzGdvxWM2tMGitt6xPsRrIj_fNndABDr2ylnHIRRdFwsalfs95OYn73KLMx6W8JRfv-8WMP48SaXZEYXursjDfxGckhBeoh0QJ8XE4WNZOF8&q=tienganhedu.com+english+code+ame+bre+7+levels&sa=X&ved=2ahUKEwjRk__ljayTAxWS_7sIHb9uMzQQtKgLegQIEhAB' />
+	[30] (351,144)<div  />
+		[31] (351,155)<span >Videolar />
+[32] (409,144)<a class='C6AK7c' href='/search?sca_esv=f818ef0c6d37c692&udm=39&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLfDIfEXPwaXG5eHvO7qyO_mxvB-_pt2ZyNJIVa-ipFUKt3RZxjPyy9_lJoP0EMANwMGFhxd1jPxFh92g-mglKBNvEdIQ5vMvdFPaJOFChRJEk1nfbzGdvxWM2tMGitt6xPsRrIj_fNndABDr2ylnHIRRdFwsalfs95OYn73KLMx6W8JRfv-8WMP48SaXZEYXursjDfxGckhBeoh0QJ8XE4WNZOF8&q=tienganhedu.com+english+code+ame+bre+7+levels&sa=X&ved=2ahUKEwjRk__ljayTAxWS_7sIHb9uMzQQs6gLegQIERAB' />
+	[33] (409,144)<div  />
+		[34] (409,155)<span >Kısa videolar />
+[35] (467,144)<a class='C6AK7c' href='/search?sca_esv=f818ef0c6d37c692&q=tienganhedu.com+english+code+ame+bre+7+levels&tbm=nws&source=lnms&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLfDIfEXPwaXG5eHvO7qyO_mxvB-_pt2ZyNJIVa-ipFUKt3RZxjPyy9_lJoP0EMANwMGFhxd1jPxFh92g-mglKBNvEdIQ5vMvdFPaJOFChRJEk1nfbzGdvxWM2tMGitt6xPsRrIj_fNndABDr2ylnHIRRdFwsalfs95OYn73KLMx6W8JRfv-8WMP48SaXZEYXursjDfxGckhBeoh0QJ8XE4WNZOF8&sa=X&ved=2ahUKEwjRk__ljayTAxWS_7sIHb9uMzQQ0pQJegQIEBAB' />
+	[36] (467,144)<div  />
+		[37] (467,155)<span >Haberler />
+[38] (527,144)<div class='mTpL7c' role='button' />
+	[39] (527,144)<div  />
+		[40] (527,155)<div  />
+			[41] (521,149)<span >Daha fazla />
+			[42] (548,149)<span  />
+[43] (589,144)<div class='mOKdDc' id='hdtb-tls' role='button' />
+	[44] (589,144)<div  />
+		[45] (589,155)<div  />
+			[46] (584,149)<span >Araçlar />
+			[47] (604,149)<span  />
+Looking for results in English?
+[48] (967,265)<a href='#' />
+	[49] (967,262)<span  />
+[50] (853,296)<a href='/setprefs?sig=0_AFLdylOmlmYTb9A6MfmhoVa_RsI%3D&source=en_ignored_notification&prev=https://www.google.com/search?q%3Dtienganhedu.com%2Benglish%2Bcode%2Bame%2Bbre%2B7%2Blevels&hl=en&sa=X&ved=2ahUKEwjRk__ljayTAxWS_7sIHb9uMzQQhoQCKAF6BAgLEAQ'>Change to English />
+[51] (876,326)<a href='#'>kullanmaya devam et />
+	[52] (833,326)<span >Türkçe />
+[53] (841,369)<a class='fl' href='/preferences?lang=1&hl=tr&sa=X&ved=2ahUKEwjRk__ljayTAxWS_7sIHb9uMzQQiIQCKAN6BAgLEAY#languages'>Dil ayarları />
+Arama Sonuçları
+[54] (299,257)<a class='zReHs' href='https://tienganhedu.com/english-code-ame-bre-7-levels/' />
+	[55] (299,286)<h3 >English Code | AmE, BrE - 7 Levels (PDF Resources) />
+	[56] (222,240)<div  />
+		[57] (222,240)<div  />
+			[58] (156,240)<span  />
+				[59] (156,240)<div  />
+					[60] (156,240)<img  />
+			[61] (234,240)<div  />
+				[62] (234,228)<div  />
+					[63] (234,228)<span >TienganhEDU />
+				[64] (234,253)<div  />
+					[65] (234,253)<cite class='qLRx3b tjvcx GvPZzd dTxz9 cHaqb' role='text'>https://tienganhedu.com />
+						[66] (263,253)<span class='ylgVCe ob9lvb' role='text'>› e... />
+·
+[67] (325,253)<a class='dEEN8c' href='https://tienganhedu.com/english-code-ame-bre-7-levels/' />
+	[68] (325,253)<span >Bu sayfanın çevirisini yap />
+[69] (383,252)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[70] (383,252)<span  />
+		[71] (383,253)<span  />
+19 Şub 2024
+—
+In
+English Code
+language learning takes place through hands-on creative tasks, investigation, projects, and experiments.
+[72] (314,450)<a class='zReHs' href='https://tienganhedu.com/home/' />
+	[73] (314,479)<h3 >TienganhEDU - Download Ebook English | TOEIC | TOEFL />
+	[74] (219,433)<div  />
+		[75] (219,433)<div  />
+			[76] (156,433)<span  />
+				[77] (156,433)<div  />
+					[78] (156,433)<img  />
+			[79] (232,433)<div  />
+				[80] (232,421)<div  />
+					[81] (232,421)<span >TienganhEDU />
+				[82] (232,446)<div  />
+					[83] (232,446)<cite class='qLRx3b tjvcx GvPZzd dTxz9 cHaqb' role='text'>https://tienganhedu.com />
+						[84] (261,445)<span class='ylgVCe ob9lvb' role='text'>› ... />
+·
+[85] (321,446)<a class='dEEN8c' href='https://tienganhedu.com/home/' />
+	[86] (321,445)<span >Bu sayfanın çevirisini yap />
+[87] (379,445)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[88] (379,445)<span  />
+		[89] (379,446)<span  />
+New Update · Featured New Books · Adult
+&
+Young Adult · Business
+English &
+ESP · Exam Preparation · Language Component · Skills · Teenagers ...
+Diğer sorular
+[90] (244,618)<div aria-label='Bu sonuç hakkında' class='iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[91] (244,618)<span  />
+		[92] (244,619)<span  />
+[93] (355,682)<div class='dnXCYb' role='button' />
+	What are the 7 levels of English?
+	[94] (355,682)<div  />
+[95] (355,752)<div class='dnXCYb' role='button' />
+	What is the English code?
+	[96] (355,752)<div  />
+[97] (543,797)<div class='mWcf0e nKHyTc BJ1Ird' role='button' />
+	[98] (543,797)<div  />
+		[99] (543,797)<span >Geri bildirim />
+[100] (222,908)<a class='zReHs' href='https://tienganhedu.com/about/' />
+	[101] (164,936)<h3 >About />
+	[102] (222,891)<div  />
+		[103] (222,891)<div  />
+			[104] (156,891)<span  />
+				[105] (156,891)<div  />
+					[106] (156,891)<img  />
+			[107] (234,891)<div  />
+				[108] (234,879)<div  />
+					[109] (234,879)<span >TienganhEDU />
+				[110] (234,904)<div  />
+					[111] (234,904)<cite class='qLRx3b tjvcx GvPZzd dTxz9 cHaqb' role='text'>https://tienganhedu.com />
+						[112] (263,903)<span class='ylgVCe ob9lvb' role='text'>› a... />
+·
+[113] (325,904)<a class='dEEN8c' href='https://tienganhedu.com/about/' />
+	[114] (325,903)<span >Bu sayfanın çevirisini yap />
+[115] (383,902)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[116] (383,902)<span  />
+		[117] (383,904)<span  />
+New Big Fun (3 Levels) PDF, Sources, ActiveTeach #2 ·
+English Code | AmE, BrE - 7 Levels
+(PDF Resources) | Pearson · High Note (4 Levels) #2 · World Link 3rd ...
+
+</current_dom>

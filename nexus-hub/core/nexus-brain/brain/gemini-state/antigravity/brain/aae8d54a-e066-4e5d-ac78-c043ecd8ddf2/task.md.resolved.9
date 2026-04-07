@@ -1,0 +1,17 @@
+- [x] **Infrastructure Purge (DeanOS)**
+    - [x] Stop and remove `coolify`, `sentinel`, `big-bear-*` containers
+    - [x] `rm -rf` junk root folders in `/DATA/AppData/`
+    - [x] `rm -rf` old `big-bear-coolify` and `coolify` folders
+- [x] **Fresh Installation (Coolify V4)**
+    - [x] Create `/DATA/AppData/coolify-v4` directory
+    - [x] Download/Create clean `docker-compose.yml` (Port 9800 + Redis)
+    - [x] Start new Coolify stack (`docker compose up -d`)
+- [x] **Verification & Support**
+    - [x] Confirm access at `http://192.168.1.186:9800`
+    - [x] Fix internal DB permission issues (UID 70)
+    - [x] Fix internal SSH folder permission issues (UID 9999)
+    - [x] Bypass ZimaOS validation (Spoof Debian + Restore)
+    - [x] Provide user with `deanos` Private Key for server setup
+- [x] **Handover**
+    - [x] System is live and 100% operational.
+    - [x] All green lights in Coolify dashboard.

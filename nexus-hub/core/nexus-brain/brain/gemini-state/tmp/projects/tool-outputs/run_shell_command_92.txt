@@ -1,0 +1,28 @@
+<tool_output_masked>
+Output: FullName
+--------
+C:\projects\Agentic-cooding-setup\docs
+C:\projects\Agentic-cooding-setup\evaitec\docs        
+C:\projects\Antigravity\EvaGames\evario\.agents\skills
+C:\projects\Antigravity\shmarthouse\.agents\skills    
+C:\projects\Antigravity\skills
+C:\projects\Antigravity\skills\docs
+C:\projects\Antigravity\skills\loki-mode\docs
+C:\projects\Antigravity\skills\spline-3d-integratio...
+
+... [22 lines omitted] ...
+
+C:\projects\github\EvATasks-T01\mobile\.claude\skills
+C:\projects\lvgl\New folder\lv_port_linux\lvgl\docs   
+C:\projects\lvgl\test\lv_port_pc_vscode\lvgl\docs     
+C:\projects\motor-ctrl\docs
+C:\projects\new_project\quiz_bank\docs
+C:\projects\ops-automation-system\docs
+C:\projects\saas-starter-kit\node_modules\@typescri...
+C:\projects\saas-starter-kit\node_modules\eslint-pl...
+C:\projects\saas-starter-kit\node_modules\eslint-pl...
+C:\projects\skills
+Process Group PGID: 35968
+
+Output too large. Full output available at: C:\Users\Deacjx\.gemini\tmp\projects\tool-outputs\session-a366de38-25fd-4d3a-9bce-f8a0bc9646e6\run_shell_command_run_shell_command_1775208885729_1_ge3c5t.txt
+</tool_output_masked>

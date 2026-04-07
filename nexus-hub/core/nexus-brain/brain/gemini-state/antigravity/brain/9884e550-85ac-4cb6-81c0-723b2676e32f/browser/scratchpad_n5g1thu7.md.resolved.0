@@ -1,0 +1,12 @@
+# Task Checklist
+
+- [x] Open http://localhost:5000
+- [x] Login as 'student' with password '123'
+- [x] Navigate to http://localhost:5000/week/1
+- [ ] Verify "hello" card has "merhaba"
+- [ ] Click "hello" and verify details (phonetic and syllables: [he-low])
+- [ ] Take screenshot of expanded card
+- [ ] Navigate to http://localhost:5000/week/2
+- [ ] Verify "red" card has "kırmızı"
+- [ ] Long-press "red" and verify 'speaking' CSS class
+- [ ] Check console for errors

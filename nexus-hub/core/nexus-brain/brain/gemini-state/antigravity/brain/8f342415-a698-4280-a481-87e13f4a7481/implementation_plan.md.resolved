@@ -1,0 +1,35 @@
+# Settings Reorganization and Gauge Alignment Plan
+
+The goal is to improve the Settings screen's organization and ensure the vertical gauge alignment (shifting) is intuitive and functional.
+
+## Proposed Changes
+
+### 1. Settings Screen Reorganization
+*   **Modularize Sections**: Break down the long `ListView` into logical modules or use `ExpansionTile` to reduce visual clutter.
+    *   **Module 1: Gauges & Specifics**: Gauge styles, scales, and vertical alignment.
+    *   **Module 2: Layout & Slots**: Panel layout, inner gauges, and metric zones.
+    *   **Module 3: Aesthetics**: Background, accent color, and theme.
+    *   **Module 4: General**: Speed units, number positions, etc.
+*   **Enhanced UI Components**:
+    *   Improve [_SelectableBox](file:///c:/projects/claude/e-car-dashboard/flutter_app/lib/screens/settings_screen.dart#1337-1386) for better feedback.
+    *   Clean up sliders and labels.
+
+### 2. Vertical Alignment (Shifting) Logic
+*   **Verification**: Ensure `verticalAlign` values in [AppSettings](file:///c:/projects/claude/e-car-dashboard/flutter_app/lib/providers/settings_provider.dart#55-165) correctly translate to the [Align](file:///c:/projects/claude/e-car-dashboard/flutter_app/lib/providers/settings_provider.dart#357-362) widget's `y` coordinate in [dashboard_screen.dart](file:///c:/projects/claude/e-car-dashboard/flutter_app/lib/screens/dashboard_screen.dart).
+*   **UX Improvement**: Ensure the sliders for vertical alignment are clearly labeled and provide immediate visual feedback (maybe through the preview in settings).
+
+### 3. Flutter Expert Patterns
+*   Use `const` constructors where possible.
+    *   Ensure Riverpod providers are used efficiently.
+*   Refactor long build methods into smaller, focused widgets.
+
+## Verification Plan
+
+### Automated Tests
+*   N/A (Visual/UI task)
+
+### Browser/Manual Verification
+1.  Run the app and open Settings.
+2.  Test the vertical alignment sliders for Hız, RPM, and Batarya.
+3.  Verify that the changes are reflected in the Dashboard.
+4.  Navigate through the reorganized Settings page to ensure it's more intuitive.

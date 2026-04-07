@@ -1,0 +1,4 @@
+# IT Inventory ZimaOS Deployment Task
+- [ ] Connect to ZimaOS via SSH
+- [ ] Locate the IT Inventory project directory
+- [ ] Ensure Docker Compose services are running

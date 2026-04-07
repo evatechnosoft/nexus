@@ -1,0 +1,34 @@
+# PostgreSQL Remote Database Setup and Integration
+
+This plan outlines the steps to configure a PostgreSQL database on the `dean` server and connect the `SportApp` to it.
+
+## User Review Required
+
+> [!IMPORTANT]
+> The database connection string requires a password. I will check for any environment variables on the `dean` server or assume a default password (such as 'postgres' or 'deanfit') if none is specified. Please provide the desired password if you have a preference.
+
+## Proposed Changes
+
+### Database Setup (Remote)
+
+- **Create Database**: Create a new database named `deanfit` inside the `postgresql` Docker container on the `dean` server.
+- **Initialize Schema**: Run the local `schema.sql` against the new remote database.
+
+### Environment Configuration (Local)
+
+#### [MODIFY] [.env](file:///c:/projects/SportApp/.env)
+- Update `DATABASE_URL` to: `postgresql://postgres:password@192.168.1.186:5432/deanfit?sslmode=disable` (or the actual credentials found).
+
+## Open Questions
+
+- What is the password for the `postgres` user in the Docker container?
+- Is there a specific database name you prefer? (Defaulting to `deanfit`)
+
+## Verification Plan
+
+### Automated Tests
+- Restart the server and check the `/api/health` endpoint.
+- Verify that `ok: true` is returned and any database errors are gone.
+
+### Manual Verification
+- Check the `adminer` interface at `http://192.168.1.186` (if accessible) to verify table creation.

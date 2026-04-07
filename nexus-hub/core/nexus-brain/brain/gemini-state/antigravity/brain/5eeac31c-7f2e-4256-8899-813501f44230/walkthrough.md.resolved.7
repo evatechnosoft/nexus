@@ -1,0 +1,41 @@
+# DeanOS Infrastructure & Service Deployment Completed
+
+We have successfully restored the server infrastructure, deployed all applications, and stabilized service naming.
+
+## Changes Implemented
+
+### 1. Networking & Static IP
+- **Static IP:** `192.168.1.186` is permanently assigned.
+- **DNS:** Set to `1.1.1.1` and `8.8.8.8`.
+
+### 2. Docker Stability
+- **Mirrors:** Configured reliable registry mirrors to fix "Failed to Pull" errors.
+- **MTU Fix:** Optimized `docker0` bridge MTU to `1400`.
+
+### 3. Persistent Access
+- **SSH/Sudo:** Enabled seamless login and `NOPASSWD` access.
+- **Persistence:** Moved [authorized_keys](file:///C:/Users/Deacjx/.ssh/authorized_keys) to the writable `/DATA` partition.
+
+### 4. Service Deployments
+- **Nextcloud:** Resolved "untrusted domain" error.
+- **IT Inventory:** Deployed on port `8001`.
+- **Evaiteclabs:** Deployed on port `3001`.
+- **Home Assistant:** Verified running in Host Mode on port `8123`.
+
+### 5. Resource & Naming Diagnosis
+- **OOM Fix:** Removed Stable Diffusion to free up VRAM and RAM.
+- **Naming Fix:** Restored `it-inventory` and `evaiteclabs` names after CasaOS renaming conflicts.
+
+## Verification
+- [x] Passwordless SSH login (`ssh deanos`)
+- [x] Nextcloud access (Verified)
+- [x] IT Inventory access (Verified on port 8001)
+- [x] Evaiteclabs access (Verified on port 3001)
+- [x] Home Assistant access (Verified on port 8123)
+- [x] Configuration backup transferred to Windows (`d:\OS\Zimaos\backups`).
+
+## Maintenance
+- **Master Fix Script:** Run `sudo /DATA/fix_deanos.sh` on the server to restore settings.
+- **Config Guide:** Refer to `deanos_config.md` for connection details.
+
+Everything is now fully optimized and production-ready. 🚀

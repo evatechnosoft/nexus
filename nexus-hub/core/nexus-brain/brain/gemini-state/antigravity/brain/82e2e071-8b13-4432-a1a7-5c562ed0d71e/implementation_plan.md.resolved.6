@@ -1,0 +1,99 @@
+# Implementation Plan: Deploying IT Inventory to DeanOS
+
+This plan outlines the steps to replace the current IT Inventory installation on the DeanOS server (`192.168.1.186`) with the updated "premium" version from the local workspace.
+
+## User Review Required
+
+> [!IMPORTANT]
+> The deployment will involve restarting the `it-inventory` Docker container on the server. This will result in a brief downtime (approx. 30-60 seconds).
+>
+> [!WARNING]
+> We will be syncing the `/DATA/dean/projects/My-Personal-Repository/` directory on the server. A full backup will be created before any changes are applied.
+
+## Proposed Changes
+
+### IT Inventory Deployment [DeanOS]
+
+1.  **Preparation**:
+    - [x] Verify local repository status (`C:\projects\it-inventory`).
+    - [x] Identify deployment path on server: `/DATA/projects/it-inventory`.
+2.  **Server Cleanup**:
+    - [x] SSH into DeanOS (`192.168.1.186`).
+    - [x] Remove existing container `it-inventory` (if any).
+    - [x] Remove old project directory `/DATA/projects/it-inventory` (if any).
+3.  **Fresh Deployment**:
+    - [x] Clone the repository: `git clone https://github.com/evatechnosoft/My-Personal-Repository.git /DATA/projects/it-inventory`.
+    - [x] Create `.env` from `.env.example` and configure `APP_BASE_URL`.
+    - [x] Build and start the service: `sudo docker compose up -d --build app`.
+    - [ ] Set final permissions: `sudo chown -R dean:samba /DATA/projects/it-inventory`.
+4.  **Verification**:
+    - [x] Check container logs: `sudo docker logs it-inventory`.
+    - [ ] Confirm web access: `http://192.168.1.186:8001`.
+    - [ ] Test UI buttons ("Add New Device", "Add Request").
+
+---
+
+### Phase 2: BigBear Coolify Installation & Configuration
+
+1.  **Preparation [DeanOS]**:
+    - Identify existing BigBear Coolify directory: `/DATA/AppData/big-bear-coolify`.
+    - Locate CasaOS app definition: `/var/lib/casaos/apps/big-bear-coolify/docker-compose.yml`.
+2.  **Service Activation**:
+    - [ ] Run `docker compose up -d` in the app directory.
+    - [ ] Monitor logs for `big-bear-coolify` and `big-bear-coolify-postgres`.
+    - [ ] Resolve any port conflicts (default: 8000).
+3.  **SSH Infrastructure**:
+    - [ ] Configure `coolify` to use the provided `coolos.pub` for host management.
+4.  **Local SSH Config**:
+    - [ ] Add the following to `C:\Users\Deacjx\.ssh\config`:
+      ```text
+      Host coolos
+          HostName 192.168.1.186
+          User dean
+          Port 8000 (UI) / 22 (SSH)
+          IdentityFile C:\Users\Deacjx\.ssh\coolos
+      ```
+5.  **Verification**:
+    - [ ] Access UI: `http://192.168.1.186:8000`.
+    - [ ] Perform initial administrative setup.
+
+---
+
+### Phase 3: UI Interactivity & Layout Polish
+
+#### 1. Resolve Stacking Context (Click Blocking)
+- **Problem**: `backdrop-filter` and `animation` on containers are trapping modals in a lower stacking context, causing the backdrop to block clicks.
+-   **[MODIFY] [base.html](file:///C:/projects/it-inventory/templates/base.html)**:
+    - Add `{% block modals %}{% endblock %}` at the very end of `<body>`, outside of `container-fluid`.
+    - Reduce `.navbar` z-index to `1000` (below modals but above content).
+-   **[MODIFY] [inventory.html](file:///C:/projects/it-inventory/templates/inventory.html)** & **[requests.html](file:///C:/projects/it-inventory/templates/requests.html)**:
+    - Move modal code to the newly created `modals` block.
+
+#### 2. Layout Optimization (Cramping Fixes)
+-   **[MODIFY] [style.css](file:///C:/projects/it-inventory/static/style.css)**:
+    - Increase `gap` in `.dashboard-grid` and card rows.
+    - Adjust `.navbar` padding and dropdown behavior to prevent "cramped" look.
+    - Ensure `.stats-card` (adetler) have better padding and responsive behavior.
+-   **[MODIFY] [inventory.html](file:///C:/projects/it-inventory/templates/inventory.html)**:
+    - Improve the "Stats" and "Filter Form" rows for better spacing.
+    - Add `table-responsive` explicitly where needed.
+
+#### 3. Verification
+- Access `http://192.168.1.186:8001/inventory/`.
+- Verify the modal can be interacted with using the mouse.
+- Confirm dashboard stats and Excel buttons look premium and spaced out.
+
+## Open Questions
+
+- Are there any specific database migrations we need to be aware of? (Currently, the app uses SQLite/SQLAlchemy with `Base.metadata.create_all`, which should handle additions automatically).
+- Do you want me to keep the existing `data/` folder (database, etc.) or reset it? (Plan assumes keeping it).
+
+## Verification Plan
+
+### Automated Verification
+- Check container logs on the server: `sudo docker logs it-inventory`
+- Verify the container status: `sudo docker ps | grep it-inventory`
+
+### Manual Verification
+- Access the `it-inventory` UI via the browser (internal IP or Cloudflare tunnel).
+- **CRITICAL**: Test the "Add New Device" and "Add Request" buttons to ensure the glassmorphism UI is fully functional and responsive (verified fix for the previous "unresponsive buttons" issue).

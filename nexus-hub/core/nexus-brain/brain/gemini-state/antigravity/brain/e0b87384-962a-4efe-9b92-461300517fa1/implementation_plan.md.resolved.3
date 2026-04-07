@@ -1,0 +1,26 @@
+# CasaOS'tan ZimaOS'a Göç Planı (casatozima)
+
+Bu plan, mevcut çalışan Flask ve Docker yapısını "temiz ve şişmemiş" (lean) bir şekilde yeni bir bilgisayardaki ZimaOS kurulumuna taşımak için hazırlanmıştır.
+
+## Taşınacak Temel Parçalar
+
+Yeni `casatozima` klasörüne sadece sistemin çalışması için gereken kritik dosyalar alınacaktır:
+- [Dockerfile](file:///c:/projects/github/casaos-home-server/flask-app/Dockerfile) ve [docker-compose.yml](file:///c:/projects/github/casaos-home-server/flask-app/docker-compose.yml) (Altyapı)
+- [requirements.txt](file:///c:/projects/github/casaos-home-server/flask-app/requirements.txt) (Bağımlılıklar)
+- `src/` klasörü (Tüm uygulama kodu, CSS ve HTML şablonları)
+
+## Uygulama Adımları
+
+### 🏗️ Yeni Yapının Kurulması
+1. **[NEW]** `c:\projects\github\casatozima` dizini oluşturulacak.
+2. Mevcut projedeki temiz içerikler bu klasöre kopyalanacak.
+3. **[NEW]** `.gitignore` dosyası eklenerek gereksiz dosyalar (logs, pycache vb.) temiz tutulacak.
+
+### 🐙 Git ve GitHub Hazırlığı
+1. Yeni klasörde `git init` komutu çalıştırılacak.
+2. Tüm dosyalar ilk commit olarak eklenecek.
+3. **[NEW]** [README.md](file:///c:/projects/github/casaos-home-server/README.md) dosyasına ZimaOS'ta projeyi tek komutla nasıl ayağa kaldıracağına dair (örneğin: `docker compose up -d`) basit bir rehber yazılacak.
+
+## Kullanıcı Onayı Gerekenler
+- GitHub'a otomatik yükleme yapmamı ister misiniz yoksa sadece yerelde dosyaları hazır mı edeyim?
+- Eğer GitHub ise, yeni repository'nin adı `casatozima` olarak kalsın mı?

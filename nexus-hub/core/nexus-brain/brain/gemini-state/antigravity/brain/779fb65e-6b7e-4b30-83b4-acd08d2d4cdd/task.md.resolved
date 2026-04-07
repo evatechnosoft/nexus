@@ -1,0 +1,14 @@
+# Task: Implement/Fix End-to-End 2FA Flow
+
+- [ ] Backend: Update Login logic to support 2FA [/]
+    - [ ] Update [auth.js](file:///c:/projects/github/EvATasks/backend/src/routes/auth.js) login route to check `two_fa_enabled`
+    - [ ] Create a "pre-auth" token system for 2FA verification
+    - [ ] Update [2fa.js](file:///c:/projects/github/EvATasks/backend/src/routes/2fa.js) to return a full JWT upon successful OTP verification
+- [ ] Frontend: Update Login and 2FA UI [/]
+    - [ ] Fix [LoginScreen](file:///c:/projects/github/EvATasks/mobile/lib/features/auth/login_screen.dart#5-11) to handle 2FA required status and navigate to [TwoFaScreen](file:///c:/projects/github/EvATasks/mobile/lib/features/auth/two_fa_screen.dart#6-14)
+    - [ ] Fix [TwoFaScreen](file:///c:/projects/github/EvATasks/mobile/lib/features/auth/two_fa_screen.dart#6-14) to use the `apiClientProvider` and store the authenticated token
+    - [ ] Improve UI/UX of the 2FA screen (loading states, error messages)
+- [ ] Verification [/]
+    - [ ] Verify login flow with 2FA disabled
+    - [ ] Verify login flow with 2FA enabled
+    - [ ] Verify resend functionality

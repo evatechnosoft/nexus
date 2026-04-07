@@ -1,0 +1,35 @@
+# Tomorrow's Session Plan: Advanced Dashboard Refinement
+
+## Session Context
+We have completed the **Phase 12: Concentric "Gauge-in-Gauge" Architecture**. The dashboard now supports nested gauges (e.g., Analog Speedometer with an Inner Neon SOC Ring). We also implemented a true "Classic" matte needle design.
+
+## Current State
+- **Branch**: `dev` (Checked out and pushed to origin)
+- **Status**: Stable. Hybrid data flow between parent and nested gauges is functional.
+- **Key Files**: 
+  - `speedometer_painter.dart`: Tapered matte needle + hollow center logic.
+  - `futuristic_gauge.dart`: Scale-based nesting slot.
+  - `generic_gauge.dart`: Recursive widget builder.
+
+## Tasks for Tomorrow
+
+### 1. Multi-Ring Backgrounds (Visual Polish)
+- [ ] Add "Glass" backgrounds to inner and outer ring tracks.
+- [ ] Implement subtle "Tick Depth" (Inner bevels) for the middle ring track.
+- [ ] Create a "Sports" variant with dynamic red zones and pulsing hubs.
+
+### 2. Dashboard Theme System (Efficiency)
+- [ ] Create a "Global Theme" selector (Neon/Dark, Luxury/Beige, Minimal/White).
+- [ ] Add "Synced Accents": Change all gauge colors simultaneously from a top-level picker.
+
+### 3. Layout Optimization
+- [ ] Implement "Grid Snapping" for dashboard gauges.
+- [ ] Add "Layout Presets" (Sport Mode, Eco Mode, Map-centric).
+
+### 4. Digital Gauge refinements
+- [ ] Add more "Digital Fonts" (Segmented LED, Dot Matrix).
+- [ ] Implement "History Sparklines" inside digital gauges.
+
+## Notes
+- The "Classic" mode should strictly maintain its matte appearance.
+- Nested gauges currently use a `0.6` scale; this might need to be configurable if we add bar gauges in the center.

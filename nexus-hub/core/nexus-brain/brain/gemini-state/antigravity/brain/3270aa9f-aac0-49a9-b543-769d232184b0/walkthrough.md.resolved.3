@@ -1,0 +1,38 @@
+# Local Development & SSH Walkthrough
+
+## 1. Local Development (Flask)
+- **Host**: `localhost:5007`
+- **Database**: Local Postgres container (`flask-db`) is integrated.
+- **Verification**: Containers are up and running healthily.
+
+## 2. Remote Access (DeanOS)
+
+### Environment Clarification
+- Run `nmcli` and `nmtui` only on the **DeanOS terminal** (via SSH or physical access).
+- Use `sudo` for system-level changes if you get "Permission denied".
+
+### Passwordless Sudo
+To stop the password prompt:
+```bash
+echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/90-passwordless-sudo
+```
+
+### SSH Configuration (Windows)
+File: [C:\Users\Deacjx\.ssh\config](file:///C:/Users/Deacjx/.ssh/config)
+```text
+Host DeanOS
+    HostName 192.168.1.163
+    User dean
+    IdentityFile ~/.ssh/zimaos_key
+```
+
+### Manual Key Installation (DeanOS)
+If you get permission errors, use `sudo` and ensure you are in the correct home directory:
+```bash
+sudo mkdir -p ~/.ssh
+sudo touch ~/.ssh/authorized_keys
+echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHTfMWfVHu0gHrY7dB3OdNVbum//AofdGCh9ur/bgSru7 deancjx@Workstation" | sudo tee -a ~/.ssh/authorized_keys
+sudo chmod 700 ~/.ssh
+sudo chmod 600 ~/.ssh/authorized_keys
+sudo chown -R $USER:$USER ~/.ssh
+```

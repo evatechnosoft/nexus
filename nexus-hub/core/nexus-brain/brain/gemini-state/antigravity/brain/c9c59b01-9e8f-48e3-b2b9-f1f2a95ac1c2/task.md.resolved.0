@@ -1,0 +1,16 @@
+# Gemini Model & Kota Sistemi Uygulama Görevleri
+
+- [ ] **Backend Güncellemesi**
+    - [ ] `routes/ai.js` dosyasında model parametresini dinamikleştir.
+    - [ ] Varsayılan modeli `gemini-2.5-flash` olarak güncelle.
+- [ ] **Mobil Uygulama Güncellemesi (Flutter)**
+    - [ ] `gemini_service.dart`'da model adını hafızadan/ayarlardan alacak şekilde güncelle.
+    - [ ] `settings_screen.dart`'a model seçim Dropdown'ı ekle.
+    - [ ] Kota (RPM) takip mekanizmasını servise entegre et.
+- [ ] **Web Uygulaması Güncellemesi**
+    - [ ] `index.html`'de ayarlar tabına model seçimini ve kota barını ekle.
+    - [ ] `app.js`'de seçilen modeli kullanacak şekilde `GoogleGenerativeAI` başlatmasını güncelle.
+    - [ ] `localStorage` tabanlı dakikalık sayaç (quota tracker) ekle.
+- [ ] **Doğrulama ve Test**
+    - [ ] Farklı modellerle AI analizi yapıldığını doğrula.
+    - [ ] Kota aşımı durumunda kullanıcı uyarısını kontrol et.

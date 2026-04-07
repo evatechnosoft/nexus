@@ -1,0 +1,27 @@
+# OpenCode & Superpowers Installation
+
+Install and configure the OpenCode.ai CLI tool and the Superpowers plugin on Windows.
+
+## Proposed Changes
+
+### System Environment
+#### [MODIFY] PATH
+- Add `C:\Users\Deacjx\AppData\Roaming\npm` to the User PATH to enable the `opencode` command.
+
+### OpenCode Configuration
+#### [NEW] [superpowers](file:///C:/Users/Deacjx/.config/opencode/superpowers)
+- Clone the Superpowers repository: `git clone https://github.com/obra/superpowers.git "$env:USERPROFILE\.config\opencode\superpowers"`
+
+#### [MODIFY] [superpowers.js](file:///C:/Users/Deacjx/.config/opencode/plugins/superpowers.js)
+- Replace existing file with a Symbolic Link to `superpowers\.opencode\plugins\superpowers.js`.
+
+#### [MODIFY] [superpowers](file:///C:/Users/Deacjx/.config/opencode/skills/superpowers)
+- Replace existing directory with a Junction to `superpowers\skills`.
+
+## Verification Plan
+
+### Automated Tests
+- Run `opencode --version` to verify command recognition.
+- Run `Get-ChildItem "$env:USERPROFILE\.config\opencode\plugins" | Where-Object { $_.LinkType }` to verify symlink.
+- Run `Get-ChildItem "$env:USERPROFILE\.config\opencode\skills" | Where-Object { $_.LinkType }` to verify junction.
+- Check if `opencode` runs without errors in a new terminal session.

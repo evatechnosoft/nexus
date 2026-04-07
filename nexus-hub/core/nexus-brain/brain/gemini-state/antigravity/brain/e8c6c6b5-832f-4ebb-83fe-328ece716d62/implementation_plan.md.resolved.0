@@ -1,0 +1,53 @@
+# EvANotes Project Setup & Branding Implementation Plan
+
+> **For agentic workers:** REQUIRED: Use superpowers:executing-plans to implement this plan. Steps use checkbox (`- [ ]`) syntax for tracking.
+
+**Goal:** Scaffold a new React web application using Vite, and implement the foundational CSS variables, typography, and logo components based on the finalized EvANotes Brand Guidelines.
+
+**Architecture:** We will create a fresh React+Vite project. We will use Vanilla CSS for styling as per our core principles, establishing a robust `index.css` with CSS variables for the "Productive Blue" palette and "Poppins" typography. The logo will be a reusable React component.
+
+**Tech Stack:** React, Vite, Vanilla CSS, Google Fonts
+
+---
+
+## Proposed Changes
+
+### 1. Project Scaffolding
+- Initialize the application in `C:\projects\Evanotes` using `npx create-vite@latest . --template react`.
+- Install dependencies and clean up default Vite boilerplate (e.g., remove `App.css`, reset `App.jsx`).
+
+### 2. Design System Foundation (CSS & HTML)
+#### [MODIFY] `index.html`
+- Import Google Fonts: `Poppins` (for general UI) and `Outfit` (for the logo).
+- Set background color to the dark slate brand color immediately to prevent flash of white screen.
+
+#### [MODIFY] `src/index.css`
+- Define CSS Variables for the **Productive Blue** palette:
+  - `--bg-color: #0f172a`
+  - `--surface-color: #1e293b`
+  - `--primary-accent-1: #3b82f6`
+  - `--primary-accent-2: #60a5fa`
+  - `--text-primary: #f8fafc`
+  - `--text-secondary: #cbd5e1`
+  - `--border-color: #334155`
+- Set base `body` styles: font-family `Poppins`, background color, text color, and reset margins.
+
+### 3. Core Components
+#### [NEW] `src/components/Logo.jsx`
+- Create a Logo component using the "Modern Tech" styling (Outfit font, `letter-spacing: -2px`, and the `#6366f1` to `#a855f7` text gradient).
+
+#### [NEW] `src/components/EmptyState.jsx`
+- Create an Empty State component showcasing the Sentry Voice tone (e.g., "Inbox zero. Take a deep breath, or create a task to ruin the peace.").
+
+#### [MODIFY] `src/App.jsx`
+- Assemble the `Logo` and the `EmptyState` in a clean, modern layout to verify the branding application.
+
+## Verification Plan
+
+### Automated Tests
+- N/A for CSS/Scaffolding, though we can add basic unit tests later.
+
+### Manual Verification
+- Run `npm run dev`.
+- Open the local dev server URL in the browser.
+- Verify that the background is `#0f172a`, the font is `Poppins`, the logo looks like the approved "Modern Tech" gradient logo using `Outfit`, and the empty state uses the correct brand tone.

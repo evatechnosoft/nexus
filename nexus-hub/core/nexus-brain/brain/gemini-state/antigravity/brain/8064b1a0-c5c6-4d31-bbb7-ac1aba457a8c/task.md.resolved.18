@@ -1,0 +1,21 @@
+# Tasks
+
+- [x] Clone `superpowers` repository
+- [x] Explore project structure
+- [x] Research build/run instructions
+- [x] Clone `awesome-claude-skills` repository
+- [x] Explore awesome-claude-skills structure
+- [x] Add `frontend-design` skill
+- [x] Verify `frontend-design` content
+- [x] Research OpenCode installation
+- [x] Install OpenCode
+- [x] Commit changes
+- [x] Push to GitHub
+- [x] Create `dev` branch
+
+## Phase 2: EV Dashboard Development
+- [/] Brainstorming & Requirements (using `brainstorming`)
+- [ ] Visual Mockups (using `frontend-design` & Visual Companion)
+- [ ] Architecture Design (SOLID & Clean Architecture)
+- [ ] Implementation Plan (using `writing-plans`)
+- [ ] TDD Implementation (using `test-driven-development`)

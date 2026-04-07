@@ -1,0 +1,52 @@
+# Stage 4: AI Health Intelligence & Backend Validation
+
+This stage focuses on transforming SportApp into a "Pro" wellness assistant by leveraging AI to analyze user performance and securing the backend against malicious or malformed data.
+
+## User Review Required
+
+> [!IMPORTANT]
+> **Gemini Usage**: This feature will use the Gemini API key provided by the user in settings. If no key is provided, the AI report will show a placeholder or prompt the user.
+> [!NOTE]
+> **Input Validation**: We will introduce `express-validator`. This means any API calls with incorrect data types (e.g., text in weight field) will be strictly rejected with 400 Bad Request.
+
+## Proposed Changes
+
+### 🛡️ Backend Security (Hardening Part 2)
+
+#### [MODIFY] [auth.js](file:///c:/projects/SportApp/routes/auth.js), [sync.js](file:///c:/projects/SportApp/routes/sync.js)
+- Add `express-validator` middleware to check types, lengths, and formats for all incoming data (weights, tasks, notes, etc.).
+
+### 🤖 AI Health Intelligence
+
+#### [NEW] [ai_coach.js](file:///c:/projects/SportApp/routes/ai_coach.js)
+- Create a new router for AI-driven insights.
+- **Endpoint**: `GET /api/ai/weekly-summary`
+- **Logic**: 
+  - Fetch user's data for the last 7 days.
+  - Construct a detailed prompt for Gemini (Markdown formatted).
+  - Return a professional "Coach's Report".
+
+#### [MODIFY] [server.js](file:///c:/projects/SportApp/server.js)
+- Mount the new `/api/ai` route.
+
+### 🌐 Web & Mobile Frontend
+
+#### [MODIFY] [app.js](file:///c:/projects/SportApp/public/app.js) & [Mobile Dashboard]
+- Add an "AI Coach Summary" card to the dashboard.
+- Display a "Generating..." shimmer while the report is being calculated.
+
+---
+
+## Open Questions
+
+- **Language**: Should the AI report strictly be in Turkish, or follow the user's language setting?
+- **Tone**: Professional/Strict or Friendly/Motivator?
+
+## Verification Plan
+
+### Automated Tests
+-   **Security**: Send strings to the weight endpoint and verify `400 Bad Request`.
+-   **AI**: Mock the Gemini response to verify the frontend displays the report correctly.
+
+### Manual Verification
+-   Trigger a "Weekly Report" from the dashboard and verify the content is relevant to the logged data.

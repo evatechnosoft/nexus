@@ -1,0 +1,14 @@
+# IT Inventory V3 Task List
+
+- [x] Modern Authentication (OAuth2) - COMPLETE
+- [x] PostgreSQL Migration - COMPLETE
+- [/] Premium UI Upgrade
+    - [ ] Create modern `style.css` with glassmorphism
+    - [ ] Update [base.html](file:///c:/projects/it-inventory/it-inventory/inventory_app/templates/base.html) with modern navigation and fonts
+    - [ ] Polish `dashboard.html` with vibrant stat cards
+- [/] Parsing & Logic Refinement
+    - [ ] Implement Horizontal Table Support in [email_parser.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/email_parser.py)
+    - [ ] Add `APP_BASE_URL` to [.env](file:///c:/projects/it-inventory/it-inventory/.env) and [notifier.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/notifier.py)
+- [ ] Final Verification
+    - [ ] Visual audit (screenshot)
+    - [ ] End-to-end test with Horizontal Table

@@ -1,0 +1,36 @@
+# Implementation Plan - Fix Black Screen and Slow Loading
+
+The user is experiencing a black screen and long loading times, especially on the web. This is primarily due to the default Flutter Web bootstrap behavior and the very dark initial theme of the application.
+
+## Proposed Changes
+
+### [Component] Web Initialization
+#### [MODIFY] [index.html](file:///c:/projects/claude/e-car-dashboard/flutter_app/web/index.html)
+- Add a CSS-based splash screen with a gradient background and a loading spinner. This will appear instantly when the page loads, before the Flutter engine starts.
+- Add meta tags for better loading perception.
+
+### [Component] App Theme & Assets
+#### [MODIFY] [pubspec.yaml](file:///c:/projects/claude/e-car-dashboard/flutter_app/pubspec.yaml)
+- Register the `pics/` directory in the `assets` section so the images can be used in the UI.
+
+#### [MODIFY] [app_theme.dart](file:///c:/projects/claude/e-car-dashboard/flutter_app/lib/theme/app_theme.dart)
+- Update `scaffoldBackgroundColor` in `dark` theme to a slightly lighter, more "metallic" dark grey or a very subtle dark-to-black gradient (via a background widget in screens).
+
+### [Component] UI Enhancements
+#### [MODIFY] [scan_screen.dart](file:///c:/projects/claude/e-car-dashboard/flutter_app/lib/screens/scan_screen.dart)
+- Replace the flat black background with a subtle radial gradient using the accent color.
+- Add a "loading" message if BLE initialization takes too long.
+
+#### [MODIFY] [dashboard_screen.dart](file:///c:/projects/claude/e-car-dashboard/flutter_app/lib/screens/dashboard_screen.dart)
+- Ensure the background isn't just flat black if no `backgroundStyle` is selected.
+
+## Verification Plan
+
+### Automated Tests
+- Since this is primarily a UI/UX and initialization issue, automated tests will verify that the app still builds and starts without errors.
+- Run `flutter test` to ensure existing smoke tests pass.
+
+### Manual Verification
+- **Web Splash Screen**: Open the app in a browser (or use the `browser` tool) and verify that a loading screen appears immediately instead of a black screen.
+- **Visual Check**: Toggle between `ScanScreen` and `DashboardScreen` (using Mock mode) to verify the new background gradients.
+- **Asset Check**: Verify that images from `pics/` can now be loaded without errors.

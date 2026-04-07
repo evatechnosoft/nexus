@@ -1,0 +1,22 @@
+# Task: DeanOS Infrastructure & Service Deployment
+
+- [x] Analyze current Docker Hub connectivity issues <!-- id: 0 -->
+- [x] Research/Update Docker configuration with mirrors <!-- id: 1 -->
+- [x] Analyze network configuration and routes <!-- id: 2 -->
+- [x] Fix default route and nameserver configuration <!-- id: 3 -->
+- [x] Verify internet and retry Docker Hub fix <!-- id: 4 -->
+- [x] Configure persistent static IP (192.168.1.186) and DNS <!-- id: 5 -->
+- [x] Enable Passwordless SSH and Sudo <!-- id: 6 -->
+- [x] Resolve Nextcloud "Untrusted Domain" error <!-- id: 7 -->
+- [x] Deploy IT Inventory (v2) from GitHub <!-- id: 8 -->
+- [x] Deploy Evaiteclabs from GitHub <!-- id: 9 -->
+- [x] Create Configuration Backup for Windows <!-- id: 10 -->
+- [x] Diagnose and Fix VRAM/OOM Exhaustion Issues <!-- id: 11 -->
+- [x] Fix Home Assistant 400 Bad Request (Trusted Proxies) <!-- id: 12 -->
+- [x] Automate Self-Healing with Monitor Script <!-- id: 13 -->
+- [x] Automate Daily Cloud Backups to Nextcloud <!-- id: 14 -->
+- [x] Deploy Monitoring (Uptime Kuma) and Logging (Dozzle) <!-- id: 15 -->
+- [x] Push Final Stable Setup to GitHub (zimaSetup) <!-- id: 16 -->
+- [x] Final System Stabilization and Verification <!-- id: 17 -->
+
+Everything is 100% operational, monitored, and safely stored on GitHub. 🚀

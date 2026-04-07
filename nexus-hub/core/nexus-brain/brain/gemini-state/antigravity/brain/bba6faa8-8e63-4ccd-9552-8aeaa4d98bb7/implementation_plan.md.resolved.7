@@ -1,0 +1,39 @@
+# [ZimaOS] Akıllı Ev Altyapı Genişletme - Faz 2 (Gelişmiş Otomasyon)
+
+Bu faz, sistemin güvenliğini artırmak, ESP32 tabanlı kendi cihazlarımızı geliştirmek ve verileri görselleştirmek için gerekli araçları kapsar.
+
+## Kullanıcı İncelemesi Gerekli
+
+- **Ağ Değişikliği**: AdGuard Home'un aktif olması için evinizdeki modem/router DNS ayarlarını ZimaOS IP'sine (192.168.1.186) yönlendirmeniz gerekecektir.
+- **ESP32 Bağlantısı**: İlk kurulumda ESP32'yi ZimaOS'un USB portuna takmanız veya web üzerinden ilk yazılımı (flash) atmanız gerekecek.
+
+---
+
+## Önerilen Önemli Bileşenler
+
+### 1. ESPHome (Kendi Cihazlarını Yap!)
+- **Port**: 6052 (Web UI)
+- **Görev**: ESP32 kartlarını saniyeler içinde akıllı sensörlere, Bluetooth köprülerine veya ekranlara dönüştürmek için.
+- **İlk Proje**: Elinizdeki ESP32 için bir **"Bluetooth Proxy"** (Bluetooth Köprüsü) yapılandırması hazırlayacağız.
+
+### 2. AdGuard Home (Ağ Güvenliği)
+- **Port**: 3000 (Kurulum), 53 (DNS)
+- **Görev**: Evdeki tüm TV, Telefon ve Bilgisayarlardaki reklamları ağ düzeyinde engellemek ve çocuk kilidi/güvenli internet sağlamak.
+
+### 3. InfluxDB & Grafana (Veri Analizi)
+- **Görev**: Evdeki sıcaklık, nem ve enerji verilerini yıllarca saklamak ve profesyonel grafikler (Dashboard) oluşturmak.
+
+---
+
+## Uygulama Planı (Otonom İlerleyiş)
+
+1.  **ESPHome Kurulumu**: Konteynerin ayağa kaldırılması ve HA Entegrasyonu.
+2.  **AdGuard Home Kurulumu**: Temel DNS filtrelerinin ayarlanması.
+3.  **Bluetooth Proxy Hazırlığı**: Mevcut ESP32'niz için bir `.yaml` taslağı oluşturulup size sunulması.
+4.  **InfluxDB & Grafana**: Veri tabanı altyapısının kurulması.
+
+## Doğrulama Planı
+
+- `192.168.1.186:6052` üzerinden ESPHome paneline erişim.
+- AdGuard üzerinden bir test domaininin engellendiğinin teyidi.
+- Grafana'nın InfluxDB'ye bağlandığının testi.

@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_WALKTHROUGH",
+  "summary": "ZimaOS üzerinde Nginx Proxy Manager (NPM) kurulumu, port çakışması çözümü ve domain bağlantısı başarıyla tamamlandı. ZimaOS portu 85'e çekilerek 80 portu NPM için özgürleştirildi. SSL sertifikası alımı ve domain yönlendirmesi doğrulandı.",
+  "updatedAt": "2026-03-24T14:56:39.872367700Z"
+}

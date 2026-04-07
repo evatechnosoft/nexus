@@ -1,0 +1,9 @@
+<tool_output_masked>
+{
+  "output": "Successfully modified file: C:\\projects\\agentops-nexus\\models.py (1 replacements). Here is the updated code:\nfrom sqlalchemy import Column, Integer, String, DateTime, ForeignKey, Text\nfrom sqlalchemy.orm import relationship\nfrom 
+... [TRUNCATED] ...
+ullable=False)\n    is_global = Column(Integer, default=1)  # 1=global-shared'dan linkli, 0=local skill\n\n    project = relationship(\"Project\", back_populates=\"skills\")\n    skill = relationship(\"GlobalSkill\", back_populates=\"projects\")\n"
+}
+
+Output too large. Full output available at: C:\Users\Deacjx\.gemini\tmp\projects\tool-outputs\session-a366de38-25fd-4d3a-9bce-f8a0bc9646e6\replace_replace_1775210341942_0_vkrk6g.txt
+</tool_output_masked>

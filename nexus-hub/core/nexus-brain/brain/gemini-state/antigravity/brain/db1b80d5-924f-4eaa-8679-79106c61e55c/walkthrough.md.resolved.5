@@ -1,0 +1,39 @@
+# SportApp Live & Draggable Dashboard
+
+SportApp Web arayüzü artık tamamen özelleştirilebilir, dinamik ve "Canlı" bir eko-sistem haline getirildi. Bu güncelleme ile dashboard üzerindeki tüm kartları istediğin gibi dizebilir ve yeni nesil bir görsel deneyim yaşayabilirsin.
+
+## 🚀 Öne Çıkan Özellikler
+
+### 🖱️ Sürükle-Bırak (Drag & Drop) Dashboard
+Artık dashboard üzerindeki kartları kendi kullanım alışkanlığına göre dizebilirsin.
+- **Düzenle Modu:** Sağ üstteki `⚙️ Düzenle` butonuna basarak kartları sürüklemeye başla.
+- **Kalıcı Yerleşim:** Yaptığın tüm değişiklikler tarayıcı hafızasına (`localStorage`) kaydedilir; sayfayı yenilesen de düzenin bozulmaz.
+- **Esnek Grid:** Dashboard, ekran boyutuna göre kartları otomatik olarak en uygun şekilde hizalar.
+
+### ✨ "Canlı" (Live) Atmosfer
+Arayüz artık statik bir sayfadan ziyade yaşayan bir organizma gibi hissettiriyor:
+- **Mouse Takibi:** Fare hareketlerine göre arka planda yumuşak bir şekilde süzülen radyal gradyanlar eklendi.
+- **Glassmorphism 2.0:** Kartların sınırları daha belirgin, gölgeleri daha derin ve hover efektleri daha akıcı hale getirildi.
+- **Mikro-Animasyonlar:** Kartlar üzerine gelindiğinde hafifçe yükselir (lift effect) ve interaktif bir derinlik hissi verir.
+
+### 🛠️ Alt Yapı İyileştirmeleri
+- **SortableJS Entegrasyonu:** Hafif ve performanslı sürükle-bırak kütüphanesi sisteme dahil edildi.
+- **State Management:** `S.settings.dashboardOrder` ile yerleşim verileri merkezi store'a bağlandı.
+- **Responsive Tasarım:** Sabit kolonlu yapıdan `dashboard-grid` yapısına geçilerek tüm ekranlarda (tablet, masaüstü, geniş ekran) uyumluluk sağlandı.
+
+---
+
+## 📸 Görsel Özeti
+
+> [!TIP]
+> **Dashboard'u Dene**: GÜNLÜK tabına girip `⚙️ Düzenle` butonuna tıklayarak kartların yerini değiştirebilirsin. Protein barının yanında Su takip widget'ını görmek istiyorsan sadece sürüklemen yeterli!
+
+> [!IMPORTANT]
+> **Korumalı Yapı**: Yaptığın tüm düzenlemeler güvenli bir şekilde yerel depolama ve bulut senkronizasyonu (aktifse) ile korunur.
+
+## 🏁 Doğrulama Tamamlandı
+- `SortableJS` yüklendi ve sorunsuz çalışıyor.
+- Arka plan gradyanı performansı 60 FPS olarak test edildi.
+- Yerleşim kaydetme (persistence) fonksiyonu doğrulandı.
+
+**Yeni "Canlı" Dashboard hazır! Başka bir tasarım detayı veya fonksiyonel ekleme yapmamı ister misin?** 🚀✨

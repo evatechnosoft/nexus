@@ -1,0 +1,7 @@
+# Task: Migrating to Microsoft Graph API
+
+- [ ] Guide user to add Graph permissions in Azure [/]
+- [ ] Add `O365` dependency [ ]
+- [ ] Create `graph_watcher.py` [ ]
+- [ ] Update [main.py](file:///c:/projects/it-inventory/it-inventory/inventory_app/main.py) scheduler [ ]
+- [ ] Verify connection and processing [ ]

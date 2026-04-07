@@ -1,0 +1,12 @@
+- [ ] Fix Cloudflare Tunnel Connectivity
+    - [/] Identify `config.yml` or ingress method on DeanOS
+    - [ ] Update ingress rules for all subdomains
+    - [ ] Restart `cloudflared` and verify DNS resolution
+- [ ] Create Premium Status Dashboard
+    - [/] Design and implement `index.html` (GlassMorphism)
+    - [/] Create `monitor.sh` script for live status updates
+    - [ ] Deploy dashboard as a static site (port 8088)
+- [ ] Final Documentation & Memory Update
+    - [ ] Create `access_list.md` for the user
+    - [ ] Update `handoff_memory.md` with recovery instructions
+    - [ ] Verify all links and status indicators

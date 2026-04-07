@@ -1,0 +1,21 @@
+# English Learning Hub: Gelişmiş Özellikler İş Listesi
+
+- [x] Mimari ve Güvenlik Planlaması [x]
+    - [x] [users.json](file:///c:/Users/Deacjx/Documents/English%20code/_learning-plan/users.json) yapısını tasarla
+    - [x] [server.py](file:///c:/Users/Deacjx/Documents/English%20code/_learning-plan/server.py) auth (giriş/çıkış) mekanizmasını planla
+- [x] Müfredat Kontrolü (Öğretmen)
+    - [x] `active_week` (aktif hafta) alanı ekle
+    - [x] Öğretmenin yeni ders ekleyebilmesi için API ekle
+- [x] Frontend Güncellemeleri
+    - [x] Login ekranı (Kullanıcı adı/Şifre)
+    - [x] Rol bazlı görünüm kısıtlaması (Öğrenci sadece aktif haftayı görür)
+    - [x] Öğretmen için "Hafta Ekle" formu
+- [x] Ders Değerlendirme Sistemi (Öğretmen)
+    - [x] "Passed", "Continue", "Repeat" durumlarını ekle
+    - [x] Öğretmen için geri bildirim (feedback) alanı
+- [x] Memnuniyet Anketi (Öğrenci/Veli)
+    - [x] Her ders için basit bir anket/rating sistemi
+- [x] Raporlama Görünümü
+    - [x] Veli panelinde bu durumların görsel gösterimi
+    - [x] Eklenen: Ders Detay Sayfası ([week.html](file:///c:/Users/Deacjx/Documents/English%20code/_learning-plan/web/week.html))
+    - [x] Eklenen: Veli İlerleme Çubuğu

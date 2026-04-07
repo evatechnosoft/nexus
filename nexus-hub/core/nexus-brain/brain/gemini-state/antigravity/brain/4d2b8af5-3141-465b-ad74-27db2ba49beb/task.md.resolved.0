@@ -1,0 +1,15 @@
+- [ ] Localization System Implementation
+    - [ ] Create `lib/core/localization/app_strings.dart`
+    - [ ] Update `AppProvider` with `Locale` state
+- [ ] Theme and Font Improvements
+    - [ ] Update `AppTheme` for full Turkish character support
+    - [ ] Add subtle micro-animations to key elements
+- [ ] UI Localization
+    - [ ] Update `ProfileScreen` with language/theme toggles
+    - [ ] Localize `HomeScreen` and other key screens
+- [ ] API and Performance Optimizations
+    - [ ] Improve API 401 error handling and provide placeholder for a real key
+    - [ ] Ensure chat history is persisted correctly for 'memory'
+- [ ] Verification
+    - [ ] Test all toggles
+    - [ ] Verify Turkish character rendering

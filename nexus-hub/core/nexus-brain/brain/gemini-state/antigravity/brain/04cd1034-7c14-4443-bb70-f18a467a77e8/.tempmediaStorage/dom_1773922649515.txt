@@ -1,0 +1,37 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (261,75)<a class='page-header__logo' href='/' />
+	[1] (261,75)<div  />
+		[2] (261,75)<img  />
+[3] (541,75)<a class='page-header__link page-header__link_primary page-header__link_first' href='/premium?gaid=head'>Premium Access />
+[4] (624,75)<a class='page-header__link page-header__link_login' href='/login' />
+	[5] (624,75)<div >Login />
+[6] (705,75)<a class='v-btn v-btn--elevated v-theme--light bg-primary v-btn--density-default elevation-0 rounded-pill v-btn--size-x-large v-btn--variant-elevated page-header__btn' href='/reg' />
+	[7] (705,75)<span >Registration />
+[8] (786,75)<div  />
+	[9] (779,75)<div  />
+Download file:
+English-Code-American-Stater-Students-Book-frenglish.rar
+22.07 MB
+In turbo mode
+from only $0.12/day!
+Maximum download speed
+Ad-free and no waiting time
+With download managers support
+Resuming downloads and multiple streams
+Watch videos online
+[10] (426,682)<a class='v-btn v-btn--elevated v-theme--light bg-third v-btn--density-default elevation-0 rounded-pill v-btn--size-x-large v-btn--variant-elevated download-promo__button-slow' href='/download/free/6I27mJ0' id='download-slowly-btn' />
+	[11] (426,682)<span >Regular Download />
+[12] (573,682)<a class='v-btn v-btn--elevated v-theme--light bg-primary v-btn--density-default elevation-0 rounded-pill v-btn--size-x-large v-btn--variant-elevated download-promo__button-fast' href='/premium?gaid=gate_downquick' />
+	[13] (573,682)<span >Download file quickly />
+[14] (236,978)<a class='page-footer__nav-link' href='/premium?gaid=footer'>Premium Access />
+[15] (334,978)<a class='page-footer__nav-link' href='https://htfl.net/zendesk/redirect?path=https://help2.hitfile.net'>Contacts />
+[16] (422,978)<a class='page-footer__nav-link' href='https://htfl.net/zendesk/redirect?path=https://help2.hitfile.net'>Help />
+[17] (614,978)<a class='page-footer__nav-link' href='https://hitfile.net/reseller'>For resellers />
+[18] (773,978)<div  />
+	[19] (745,978)<div  />
+	[20] (776,978)<div >English />
+
+</current_dom>

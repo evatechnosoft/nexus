@@ -1,0 +1,6 @@
+{
+  "artifactType": "ARTIFACT_TYPE_WALKTHROUGH",
+  "summary": "Walkthrough of the resilience and UI improvements.\n\n- Fixed Email Queue: Now processes emails even if specific keywords are missing.\n- Fixed UI: Resolved the \"stuck\" Excel dropdown bug and improved visibility.\n- Port Update: Switched to 9292 to avoid conflicts with Dart/DeanOS services.",
+  "updatedAt": "2026-03-29T08:16:23.265994Z",
+  "version": "1"
+}

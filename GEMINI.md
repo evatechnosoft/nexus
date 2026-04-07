@@ -1,22 +1,26 @@
-# Nexus State Anchor (2026-04-04)
+# Nexus System Protocol (2026-04-06)
 
-## Current State (Vaziyet: Universal Nexus Brain)
-- **Hub:** 192.168.1.186 (DeanOS).
-- **Intelligence (8900/4601/4602):** Successfully centralized. Port 8900 is the gateway for ALL external tools.
-- **Universal Memory:** ChromaDB is persistent on DeanOS and synced across all interfaces (Open WebUI, VS Code, Claude Code).
-- **Dockerized CLI:** `npm`, `npx` and `claude` are now server-side services accessible via MCP.
+## Mimari: Micro-Satellite & SOLID
+Nexus, merkezi bir beyin (Brain) ve ona bağlı uzman uydulardan (Satellites) oluşur.
 
-## Hard-Learned Lessons (Mühürlü Tecrübeler)
-- **Server-First:** Never rely on local paths; always use /DATA/AppData/ nexus-brain/ structure.
-- **Surgical SSH:** Use 'paramiko' or direct SSH for autonomous server management.
-- **ZimaOS Survival:** Use 'node:20-slim' containers for all Node-based CLI operations.
+### 1. Nexus Brain (Port 8900)
+- **Kimlik:** Ana Karar Mekanizması.
+- **Bellek:** ChromaDB (Universal Memory).
+- **Kritik Araç:** `save_memory` -> Tüm uydular bu aracı kullanarak beyne bilgi aktarır.
 
-## Next Steps (Sıradaki Adımlar)
-- [ ] **Universal Integration:** Add Claude and Gemini API keys to the server-side `claude.sh` wrapper.
-- [ ] **Global Dashboard:** Launch the "Beyin Bedava" Grafana (3100) counter.
-- [ ] **MCP Expansion:** Expose server-side 'npm' and 'npx' commands as MCP tools on Port 8900.
+### 2. Nexus Fetcher (Port 8902)
+- **Kimlik:** Dış Dünya (Internet) Sensörü.
+- **Yetkinlik:** Web Search (DDGS), URL Fetch, Reddit Analysis.
+- **Kural:** Kazandığı bilgiyi `save_memory` protokolüyle beyne raporlar.
 
-## Critical Constraints
-- **Dual Environment Protocol:** Commands for ZimaOS (Server, Linux/Bash) must use Linux paths (/DATA/AppData/...) and Bash syntax (cat << 'EOF'). Commands for Windows (Desktop, PowerShell) must use PowerShell syntax (Out-File, $env:). Never mix them. If the target environment is ambiguous, I MUST ask for clarification.
-- **Universal Access:** All memory and tool access MUST be via Port 8900 (MCP).
-- **Zero Localism:** Treat local 'C:\projects\skills' only as a git mirror.
+### 3. Nexus Sales (Port 8903)
+- **Kimlik:** Ticari Zeka.
+
+## Veri Senkronizasyonu
+- **Server:** `/DATA/AppData/nexus-brain/`
+- **Mirror:** `c:/projects/skills/data/`
+
+## Kod Standartları
+- **SOLID:** Her uydu kendi içinde modülerdir (Interfaces, Services, Utils).
+- **Communication:** MCP (Stdio/SSE) üzerinden merkezi hub'a bağlıdır.
+- **Language:** Kod yorumları İngilizce, iletişim her zaman TÜRKÇE.

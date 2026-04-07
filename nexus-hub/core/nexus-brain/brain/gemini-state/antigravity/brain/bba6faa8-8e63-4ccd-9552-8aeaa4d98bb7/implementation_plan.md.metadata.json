@@ -1,0 +1,7 @@
+{
+  "artifactType":  "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary":  "Plan to restore the installed ESPHome configuration by re-mapping the container volume to the verified data directory (/var/lib/casaos_data/AppData/esphome/) and repairing the ZimaOS dashboard shortcuts (HA, ESPHome, AdGuard, Grafana) via SQLite database updates to ensure direct, functional access.",
+  "updatedAt":  "2026-04-02T15:58:13.917742800Z",
+  "version":  "10",
+  "requestFeedback":  true
+}

@@ -1,0 +1,9 @@
+# Project: Food Delivery Mock Redesign Verification
+
+## Tasks
+- [ ] Open [c:\projects\food-delivery-mock\index.html](file:///projects/food-delivery-mock/index.html) in the browser
+- [ ] Verify hero section has a large burger image
+- [ ] Verify restaurant cards (Pizza, Sushi, Dessert) have realistic images
+- [ ] Verify premium and 3D-inspired design
+- [ ] Check if the floating animation for the burger is working
+- [ ] Take a screenshot of the hero section

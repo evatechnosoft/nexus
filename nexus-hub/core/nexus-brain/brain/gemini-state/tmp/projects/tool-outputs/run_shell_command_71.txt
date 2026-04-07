@@ -1,0 +1,5 @@
+Output: fatal: not a valid object name: 'main'
+fatal: not a valid object name: 'main'
+error: pathspec 'dev' did not match any file(s) known to git
+Switched to a new branch 'feature/ops-discovery'
+Process Group PGID: 34260

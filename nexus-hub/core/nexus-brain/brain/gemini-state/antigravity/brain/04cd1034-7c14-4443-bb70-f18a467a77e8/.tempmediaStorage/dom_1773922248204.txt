@@ -1,0 +1,41 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (260,75)<a class='page-header__logo' href='/' />
+	[1] (260,75)<div  />
+		[2] (260,75)<img  />
+[3] (541,75)<a class='page-header__link page-header__link_primary page-header__link_first' href='/premium?gaid=head'>Premium Access />
+[4] (624,75)<a class='page-header__link page-header__link_login' href='/login' />
+	[5] (624,75)<div >Login />
+[6] (705,75)<a class='v-btn v-btn--elevated v-theme--light bg-primary v-btn--density-default elevation-0 rounded-pill v-btn--size-x-large v-btn--variant-elevated page-header__btn' href='/reg' />
+	[7] (705,75)<span >Registration />
+[8] (787,75)<div  />
+	[9] (779,75)<div  />
+Download file:
+English-Code-1-Pupils-Book-frenglish.rar
+20.94 MB
+In turbo mode
+from only $0.12/day!
+Maximum download speed
+Ad-free and no waiting time
+With download managers support
+Resuming downloads and multiple streams
+Watch videos online
+[10] (426,654)<a class='v-btn v-btn--elevated v-theme--light bg-third v-btn--density-default elevation-0 rounded-pill v-btn--size-x-large v-btn--variant-elevated download-promo__button-slow' href='/download/free/FM5eSnv' id='download-slowly-btn' />
+	[11] (426,654)<span >Regular Download />
+[12] (572,654)<a class='v-btn v-btn--elevated v-theme--light bg-primary v-btn--density-default elevation-0 rounded-pill v-btn--size-x-large v-btn--variant-elevated download-promo__button-fast' href='/premium?gaid=gate_downquick' />
+	[13] (572,654)<span >Download file quickly />
+[14] (235,951)<a class='page-footer__nav-link' href='/premium?gaid=footer'>Premium Access />
+[15] (218,996)<a class='page-footer__nav-link' href='/linkchecker'>File Check />
+[16] (333,951)<a class='page-footer__nav-link' href='https://htfl.net/zendesk/redirect?path=https://help2.hitfile.net'>Contacts />
+[17] (344,996)<a class='page-footer__nav-link' href='/rules/abuse'>Report Abuse />
+[18] (422,951)<a class='page-footer__nav-link' href='https://htfl.net/zendesk/redirect?path=https://help2.hitfile.net'>Help />
+Frequently Asked Questions
+[19] (614,951)<a class='page-footer__nav-link' href='https://hitfile.net/reseller'>For resellers />
+[20] (616,996)<a class='page-footer__nav-link' href='/rules'>Terms of use />
+[21] (773,951)<div  />
+	[22] (746,951)<div  />
+	[23] (776,951)<div >English />
+
+</current_dom>

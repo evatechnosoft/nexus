@@ -1,0 +1,3 @@
+{
+  "output": "Successfully created and wrote to new file: C:\\projects\\agentops-nexus\\.env. Here is the updated code:\nAPP_PORT=4550\r\nAPP_ENV=DEV\r\nDATABASE_URL=sqlite:///./data/inventory.db\r\n"
+}

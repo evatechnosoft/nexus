@@ -1,0 +1,21 @@
+# Tasks
+
+- [x] Project Setup and Understanding
+    - [x] Read `handoff.md` and project structure
+    - [x] Analyze `app.py` and `docker-compose.yml`
+- [x] User Authentication Implementation
+    - [x] Design Auth architecture (JWT-based)
+    - [x] Update `requirements.txt` and `app.py` models
+    - [x] Implement Register/Login routes in `app.py`
+    - [x] Update `index.html` with Auth UI/Logic/Styling
+    - [x] Secure existing API endpoints
+- [ ] Dashboard Log Monitoring
+    - [ ] Research Flask real-time logging/WebSocket options
+    - [ ] Implement log streaming
+    - [ ] Update dashboard UI for logs
+- [ ] Cloudflare Tunnel Configuration
+    - [ ] Add `cloudflared` service to `docker-compose.yml`
+    - [ ] Update network settings for tunnel access
+- [ ] API Extension
+    - [ ] Define new models and schemas
+    - [ ] Implement CRUD for new models

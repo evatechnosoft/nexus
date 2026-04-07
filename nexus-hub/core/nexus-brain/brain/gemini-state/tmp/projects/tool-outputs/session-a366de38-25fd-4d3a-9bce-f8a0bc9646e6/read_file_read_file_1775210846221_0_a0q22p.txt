@@ -1,0 +1,3 @@
+{
+  "output": "fastapi==0.110.0\nuvicorn[standard]==0.29.0\nsqlalchemy==2.0.29\njinja2==3.1.3\npython-multipart==0.0.9\nopenpyxl==3.1.2\nfastapi==0.110.0\nuvicorn[standard]==0.29.0\nsqlalchemy==2.0.29\njinja2==3.1.3\npython-multipart==0.0.9\nopenpyxl==3.1.2\naiofiles==23.2.1\n# PostgreSQL sürücüsü (SQLite için gerekmez ama imaj içinde hazır olsun)\npsycopg2-binary==2.9.9\n# HTTP istemcisi (Teams webhook + ileriki API çağrıları)\nhttpx==0.27.0\n# Exchange / Outlook bağlantısı\nexchangelib==5.2.0\nmsal==1.25.0\nO365==2.0.34\n# Zamanlayıcı (e-posta izleyici)\nAPScheduler==3.10.4\n"
+}

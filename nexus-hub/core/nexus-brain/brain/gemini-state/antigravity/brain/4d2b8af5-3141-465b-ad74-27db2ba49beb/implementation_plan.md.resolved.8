@@ -1,0 +1,28 @@
+# Ev@iTec: Android Build Fix & Deployment Plan 🚀📲🤖
+
+Samsung Galaxy S24 Ultra (Kablosuz) üzerine yükleme yaparken `speech_to_text` paketinde karşılaştığımız **Kotlin derleme hatasını** (Unresolved reference 'Registrar') fixleyip uygulamayı telefonunuza ayağa kaldırıyoruz.
+
+## 🛠️ Yapılacak Değişiklikler
+
+### [Android Yapılandırması]
+
+#### [MODIFY] [gradle.properties](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/android/gradle.properties)
+- `android.enableJetifier = true` ayarını ekleyerek paket uyumluluğunu sağlıyoruz.
+
+#### [MODIFY] [build.gradle.kts (App)](file:///c:/projects/kizimin_arkadasi/kizimin_arkadasi/android/app/build.gradle.kts)
+- `compileSdk` ve `targetSdk` değerlerini **34** (Android 14) olarak sabitleyerek modern cihaz uyumluluğunu garantiliyoruz.
+
+### [Temizlik & Dağıtım]
+- `flutter clean` ve `flutter pub get` ile kilit dosyalarını temizliyoruz.
+- `flutter run -d [Samsung_ID]` ile uygulamayı telefonunuza yüklüyoruz.
+
+## 🧪 Doğrulama Planı
+### Manuel Doğrulama
+- Uygulamanın Samsung S24 Ultra cihazında pürüzsüzce açıldığını ve **Ev@iTec**'in sizi selamladığını göreceğiz.
+- Ses tanıma (speech_to_text) modülünün hatasız derlendiğini teyit edeceğiz.
+
+## ❓ Açık Sorular
+- Telefonunuzda "USB Hata Ayıklama" ve "Kablosuz Hata Ayıklama" aktif mi? (Eğer aktifse `flutter run` hemen başlayacaktır).
+
+> [!IMPORTANT]
+> Bu değişiklikler sadece derleme (build) aşamasını düzeltecek olup uygulamanın kod yapısını bozmayacaktır.

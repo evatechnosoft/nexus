@@ -1,0 +1,27 @@
+# Refining Interactive Vocabulary UI & Data
+
+Address user feedback regarding card visibility and spelling visualization.
+
+## Proposed Changes
+
+### Curriculum Data
+#### [MODIFY] [curriculum.json](file:///c:/Users/Deacjx/Documents/English code/_learning-plan/curriculum.json)
+- Populate `tr`, `ph`, and `sy` for all words in Week 1 and Week 2.
+
+### Frontend
+#### [MODIFY] [week.html](file:///c:/Users/Deacjx/Documents/English code/_learning-plan/web/week.html)
+- **Settings Drawer**: Add a right-side sliding drawer with:
+    - Speed Slider (0.5x to 2.0x).
+    - Tone/Voice Toggle (Child-like vs Adult).
+    - Persist settings in `localStorage`.
+- **Spelling Color Transitions**: Change the `spelling-display` background or text color for each new letter to distinguish consecutive repetitions (e.g., L... L).
+- **Control Overlay**: Display a settings icon in the top-right corner.
+
+## Verification Plan
+
+### Automated Tests
+- Browser subagent to verify that cards are expanded on load.
+- Browser subagent to simulate long-press and check for the "Letter Visualizer".
+
+### Manual Verification
+- User to test the spelling mode and confirm letters are displayed as they are spoken.

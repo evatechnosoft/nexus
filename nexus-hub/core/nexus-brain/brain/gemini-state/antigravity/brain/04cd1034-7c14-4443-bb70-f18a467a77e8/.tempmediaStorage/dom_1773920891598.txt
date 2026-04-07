@@ -1,0 +1,38 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Skip to content
+Ebook Tiếng Anh - English ebooks
+[0] (246,23)<a aria-label='Follow on Twitter' class='icon button circle is-outline  twitter tooltip' href='https://twitter.com/ebookenglish222' title='Follow on Twitter' />
+	[1] (246,21)<i  />
+[2] (264,23)<a aria-label='Send us an email' class='icon button circle is-outline  email tooltip' href='mailto:info@ebook-tienganh.com' title='Send us an email' />
+	[3] (264,21)<i  />
+[4] (282,23)<a aria-label='Follow on Telegram' class='icon button circle is-outline telegram tooltip' href='https://t.me/ebooktienganh' title='Follow on Telegram' />
+	[5] (282,21)<i  />
+[6] (818,23)<a class='nav-top-link' href='https://ebook-tienganh.com/dang-nhap/'>Đăng nhập />
+[7] (863,23)<a class='nav-top-link' href='https://ebook-tienganh.com/dang-ky/'>Đăng ký />
+[8] (901,23)<a class='nav-top-link' href='https://ebook-tienganh.com/lien-he/'>Liên hệ />
+[9] (500,105)<a href='https://ebook-tienganh.com/' title='ebook-tienganh.com - eBooks for English Learners' />
+	[10] (500,105)<img  />
+[11] (113,191)<a class='mega-menu-link' href='https://ebook-tienganh.com/'>HOME />
+	[12] (128,191)<span  />
+[13] (193,191)<a class='mega-menu-link' href='https://ebook-tienganh.com/itools-online/'>ITOOLS ONLINE />
+[14] (279,191)<a class='mega-menu-link' href='https://ebook-tienganh.com/download/'>DOWNLOAD />
+[15] (375,191)<a class='mega-menu-link' href='https://ebook-tienganh.com/#'>CLASSIFICATION />
+	[16] (414,191)<span  />
+[17] (476,191)<a class='mega-menu-link' href='https://ebook-tienganh.com/#'>PUBLISHER />
+	[18] (504,191)<span  />
+[19] (574,191)<a class='mega-menu-link' href='https://ebook-tienganh.com/presentation/'>PRESENTATION />
+	[20] (611,191)<span  />
+[21] (659,191)<a class='mega-menu-link' href='https://ebook-tienganh.com/#'>YEAR />
+	[22] (673,191)<span  />
+[23] (789,191)<input class='search-field mb-0' id='s' placeholder='Search on Ebook-tienganh.com' />
+[24] (904,191)<button aria-label='Submit' class='ux-search-submit submit-button secondary button icon mb-0' />
+	[25] (904,189)<i  />
+[26] (500,549)<div class='slider slider-nav-circle slider-nav-large slider-nav-dark slider-style-normal' scrollable='true' />
+	HỌC MỌI LÚC MỌI NƠI
+	Xem và học tập trên các thiết bị thông dụng: Máy tính, laptop, table, và mobile một cách dễ dàng
+Những bộ giáo trình mới nhất
+
+</current_dom>

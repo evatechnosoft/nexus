@@ -1,0 +1,21 @@
+# Final Yayına Alma ve Yerel Doğrulama
+
+Uygulamanın hem yerelde çalışmasını sağladım hem de Azure üzerindeki "401" yetki hatalarını kökten çözecek son pipeline dosyasını hazırladım.
+
+## 1. Yerel Çalıştırma Başarılı
+Hatalı [package-lock.json](file:///c:/projects/Layers/LayersupCom_v2/package-lock.json) dosyasını devre dışı bırakarak uygulamayı ayağa kaldırdım. Şu an arka planda çalışıyor:
+**[http://localhost:3000](http://localhost:3000)**
+
+Eğer bu adrese girdiğinizde site açılmıyorsa, lütfen tarayıcınızın gizli sekmesini (Incognito) deneyin veya terminalde bir hata mesajı olup olmadığını kontrol edin (benim gördüğüm kadarıyla server başarıyla ayağa kalktı).
+
+## 2. Kesin Çözüm: [azure-pipelines-final.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-final.yml)
+Azure DevOps'taki "401 Unauthorized" hatalarını bitirmek için yeni bir dosya ekledim. Bu dosya:
+- Build sırasında hatalı lock dosyasını siler.
+- Paketleri temiz bir şekilde genel npm deposundan çeker.
+- Her şeyi zipleuip Azure'a gönderir.
+
+### Azure'da Son Adım:
+- Pipelines kısmından yeni bir Build başlatın ve YAML dosyası olarak **[azure-pipelines-final.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-final.yml)** dosyasını seçtiğinize emin olun.
+- Build bittikten sonra Release planınızın hala bu yeni Build'e bağlı olduğunu (daha önce yaptığımız gibi) teyit edin.
+
+Bu adımlardan sonra siteniz sorunsuz bir şekilde yayında olacaktır.

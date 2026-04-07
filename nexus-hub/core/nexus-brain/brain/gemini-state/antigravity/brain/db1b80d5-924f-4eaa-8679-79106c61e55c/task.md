@@ -1,0 +1,14 @@
+- [x] `[x]` Mobile Wearable Integration
+    - [x] `[x]` Update `pubspec.yaml` with `health` package
+    - [x] `[x]` Add Android/iOS health permissions (AndroidManifest/Info.plist)
+    - [x] `[x]` Create `HealthService` for data syncing
+- [x] `[x]` Web Advanced Charting
+    - [x] `[x]` Add Chart.js to `index.html`
+    - [x] `[x]` Implement `initCharts()` in `app.js`
+    - [x] `[x]` Replace static progress bars with interactive graphs
+- [x] `[x]` Deep AI Analysis
+    - [x] `[x]` Update `routes/ai.js` to factor in wearable metrics (Steps, Sleep phases)
+    - [x] `[x]` Enhance AI Trainer prompt with real-time biometric data
+- [/] `[/]` Verification
+    - [x] `[x]` Test mobile sync to backend
+    - [x] `[x]` Verify Chart.js responsiveness on all viewports

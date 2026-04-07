@@ -1,0 +1,19 @@
+# Tasks
+
+- [/] Project Setup and Understanding
+    - [x] Read [handoff.md](file:///c:/projects/github/casatozima/handoff.md) and project structure
+    - [/] Analyze [app.py](file:///c:/projects/github/casatozima/src/app.py) and [docker-compose.yml](file:///c:/projects/github/casatozima/docker-compose.yml)
+- [ ] User Authentication Implementation
+    - [ ] Design Auth architecture (OAuth vs JWT)
+    - [ ] Implement Auth routes and models
+    - [ ] Secure existing API endpoints
+- [ ] Dashboard Log Monitoring
+    - [ ] Research Flask real-time logging/WebSocket options
+    - [ ] Implement log streaming
+    - [ ] Update dashboard UI for logs
+- [ ] Cloudflare Tunnel Configuration
+    - [ ] Add `cloudflared` service to [docker-compose.yml](file:///c:/projects/github/casatozima/docker-compose.yml)
+    - [ ] Update network settings for tunnel access
+- [ ] API Extension
+    - [ ] Define new models and schemas
+    - [ ] Implement CRUD for new models

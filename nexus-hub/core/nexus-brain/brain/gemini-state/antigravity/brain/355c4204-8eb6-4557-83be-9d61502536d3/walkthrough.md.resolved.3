@@ -1,0 +1,27 @@
+# Walkthrough: Azure DevOps Deployment Fixes
+
+Yaptığım değişikliklerle Azure DevOps üzerindeki "No package found" (paket bulunamadı) hatasını ve olası konfigürasyon uyumsuzluklarını giderdim.
+
+## Yapılan Değişiklikler
+
+### CI/CD Pipeline Güncellemeleri
+
+#### [azure-pipelines-1.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-1.yml)
+- **Paket Yolu Düzeltmesi**: `package` parametresi `$(Pipeline.Workspace)/drop/*.zip` olarak güncellendi.
+- **Tetikleyici**: `Dev` branch'i için otomatik tetikleme eklendi.
+
+### Manuel Dağıtım (Zip & FTP)
+- **`deployment.zip`**: Tüm gereksiz dosyalar (.git vb.) ayıklanarak 124MB boyutunda temiz bir dağıtım paketi oluşturuldu.
+
+## KRİTİK: Devam Eden Hata ve Çözümü (Releases)
+...
+
+### Manuel Dağıtım (FTP Adımları):
+1. Proje kök dizinindeki **`deployment.zip`** dosyasını bulun.
+2. FTP istemcinizle `ftps://waws-prod-fra-023.ftp.azurewebsites.windows.net/site/wwwroot` adresine bağlanın.
+3. Zip içindeki tüm dosyaları `/site/wwwroot` altına yükleyin.
+
+## Sonraki Adımlar
+1. Değişiklikleri DevOps deponuza gönderin (Push).
+2. Azure DevOps üzerinden pipeline'ı manuel olarak tetikleyin.
+3. Logları takip ederek "Deploy" aşamasının başarıyla tamamlandığını doğrulayın.

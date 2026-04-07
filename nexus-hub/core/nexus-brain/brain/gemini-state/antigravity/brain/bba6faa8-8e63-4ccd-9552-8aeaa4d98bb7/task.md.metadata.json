@@ -1,0 +1,6 @@
+{
+  "artifactType":  "ARTIFACT_TYPE_TASK",
+  "summary":  "Checklist for fixing ZimaOS dashboard links via PostgreSQL and system port mapping.",
+  "updatedAt":  "2026-04-02T14:05:17.926312700Z",
+  "version":  "14"
+}

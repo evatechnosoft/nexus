@@ -1,0 +1,36 @@
+# Test Ortamı Çalıştırma Sorunu Giderilmesi
+
+Kullanıcı geri bildirimine göre, "test" ortamı açılmıyor. Yapılan incelemede `entrypoint.sh` dosyasının boş olduğu ve `.env.test` içindeki port yapılandırmasının Docker eşlemeleriyle çeliştiği saptanmıştır.
+
+## Kullanıcı İncelemesi Gerekli
+
+> [!IMPORTANT]
+> Uygulama konteynır içerisinde her zaman 8000 portunda çalışmalıdır. Dışarıdan erişim (Host) portları (9600/9700) Docker tarafından bu iç porta yönlendirilmektedir.
+
+## Önerilen Değişiklikler
+
+### Uygulama Başlatma Yapılandırması
+
+#### [MODIFY] [entrypoint.sh](file:///c:/projects/it-inventory/entrypoint.sh)
+- Uygulamayı `python main.py` veya `uvicorn` ile başlatacak komut eklenecek.
+
+### Ortam Değişkenleri ve Docker
+
+#### [MODIFY] [.env.test](file:///c:/projects/it-inventory/.env.test)
+- `APP_PORT=9600` değeri `APP_PORT=8000` olarak değiştirilecek.
+
+#### [MODIFY] [.env.prod](file:///c:/projects/it-inventory/.env.prod)
+- `APP_PORT=9700` değeri `APP_PORT=8000` olarak değiştirilecek.
+
+#### [MODIFY] [docker-compose.yml](file:///c:/projects/it-inventory/docker-compose.yml)
+- `HOST_PORT` varsayılan değerleri tutarlılık için 9700 olarak güncellenecek.
+
+## Açık Sorular
+
+- `entrypoint.sh` içine eklememizi istediğiniz özel bir ön hazırlık komutu (migrasyon, seed vb.) var mı? Varsayılan olarak direkt uygulamayı başlatacağım.
+
+## Doğrulama Planı
+
+### Manuel Doğrulama
+- Yerel Docker üzerinde `docker compose up` ile `APP_PORT=8000` ve `HOST_PORT=9600` test edilecek.
+- `deploy_deanos.sh` scriptinin bu değişikliklerle düzgün çalışıp çalışmadığı kontrol edilecek.

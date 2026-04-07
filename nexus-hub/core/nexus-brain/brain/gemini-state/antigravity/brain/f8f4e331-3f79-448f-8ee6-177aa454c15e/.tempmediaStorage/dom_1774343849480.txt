@@ -1,0 +1,142 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Erişilebilirlik Bağlantıları
+Ana içeriğe geç
+Erişilebilirlik yardımı
+Erişilebilirlikle ilgili geri bildirim
+[0] (73,70)<a aria-label='Google Anasayfası'na Git' href='https://www.google.com/webhp?hl=tr&sa=X&ved=0ahUKEwi8mNz2mbiTAxWpR_EDHRH2NA0QPAgI' id='logo' title='Google Anasayfası'na Git' />
+[1] (345,69)<textarea aria-label='Ara' class='gLFyf' id='APjFqb' role='combobox' />
+[2] (562,69)<div  />
+	[3] (560,69)<div aria-label='Temizle' class='M2vV3 vOY7J' role='button' />
+		[4] (560,69)<span  />
+	[5] (576,69)<span  />
+[6] (592,69)<div aria-label='Harf çevirme aracı' class='Umvnrc' role='button' />
+	[7] (592,69)<span  />
+[8] (618,69)<div aria-label='Sesle arama yapın' class='XDyW0e' role='button' />
+[9] (644,69)<div aria-label='Görselle arama' class='nDcEnd' role='button' />
+[10] (674,69)<button aria-label='Ara' class='HZVG1b Tg7LZd' />
+	[11] (669,69)<div  />
+		[12] (669,69)<span  />
+[13] (876,69)<div aria-label='Ayarlar' class='fLciMb' id='og-te' role='button' />
+	[14] (876,72)<div  />
+		[15] (876,69)<span  />
+[16] (906,69)<a aria-label='Google uygulamaları' class='gb_B' href='https://www.google.com.tr/intl/tr/about/products?tab=wh' role='button' />
+[17] (954,69)<a aria-label='Oturum açın' class='gb_A' href='https://accounts.google.com/ServiceLogin?hl=tr&passive=true&continue=https://www.google.com/search%3Fq%3Dsite:support.microsoft.com%2BOffice%2Boffline%2Binstaller%2BTurkish&ec=futura_srp_og_si_72236_p'>Oturum açın />
+	Oturum açın
+Filtreler ve Konular
+[18] (161,145)<a class='XVMlrc C6AK7c' href='/search?q=site:support.microsoft.com+Office+offline+installer+Turkish&sca_esv=cdf1ae9af23e2b08&udm=50&fbs=ADc_l-ZGEWqX3Iog4tNqyArArdDB84EnceB-frajVq-djo1pIG1_mnBtthXIhZkO7bkyiWWKkHnIVisiq7uyCYqXLoo4-9ufNi5RgfhGCJb9nt40TEVaRIibqaQ9Zxa42cR17MrPu6Eds10RwHJae6yld4RIxFlGM3Cg6aPDZpHcMGUDgsRcrYEiMqZx_0gmxQ7CaeE1dW4jG9SS5M6Fsw1ehfZi0oIwe-9p3fbGeq7wByidz0MSv6cDhmrIp_nWHdxzIYU2zm3a&aep=1&ntc=1&sa=X&ved=2ahUKEwi8mNz2mbiTAxWpR_EDHRH2NA0Q2J8OegQIDhAE' />
+	[19] (161,145)<div  />
+		[20] (161,156)<div  />
+			[21] (161,149)<span >AI Modu />
+[22] (205,145)<a class='C6AK7c' role='link' />
+	Tümü
+[23] (248,145)<a class='C6AK7c' href='/search?sca_esv=cdf1ae9af23e2b08&udm=7&fbs=ADc_l-ZGEWqX3Iog4tNqyArArdDB84EnceB-frajVq-djo1pIG1_mnBtthXIhZkO7bkyiWWKkHnIVisiq7uyCYqXLoo4-9ufNi5RgfhGCJb9nt40TEVaRIibqaQ9Zxa42cR17MrPu6Eds10RwHJae6yld4RIxFlGM3Cg6aPDZpHcMGUDgsRcrYEiMqZx_0gmxQ7CaeE1dW4jG9SS5M6Fsw1ehfZi0oIwe-9p3fbGeq7wByidz0MSv6cDhmrIp_nWHdxzIYU2zm3a&q=site:support.microsoft.com+Office+offline+installer+Turkish&sa=X&ved=2ahUKEwi8mNz2mbiTAxWpR_EDHRH2NA0QtKgLegQIFBAB' />
+	[24] (248,145)<div  />
+		[25] (248,156)<span >Videolar />
+[26] (299,145)<a class='C6AK7c' href='/search?sca_esv=cdf1ae9af23e2b08&udm=2&fbs=ADc_l-ZGEWqX3Iog4tNqyArArdDB84EnceB-frajVq-djo1pIG1_mnBtthXIhZkO7bkyiWWKkHnIVisiq7uyCYqXLoo4-9ufNi5RgfhGCJb9nt40TEVaRIibqaQ9Zxa42cR17MrPu6Eds10RwHJae6yld4RIxFlGM3Cg6aPDZpHcMGUDgsRcrYEiMqZx_0gmxQ7CaeE1dW4jG9SS5M6Fsw1ehfZi0oIwe-9p3fbGeq7wByidz0MSv6cDhmrIp_nWHdxzIYU2zm3a&q=site:support.microsoft.com+Office+offline+installer+Turkish&sa=X&ved=2ahUKEwi8mNz2mbiTAxWpR_EDHRH2NA0QtKgLegQIExAB' />
+	[27] (299,145)<div  />
+		[28] (299,156)<span >Görseller />
+[29] (350,145)<a class='C6AK7c' href='/search?sca_esv=cdf1ae9af23e2b08&udm=28&fbs=ADc_l-ZGEWqX3Iog4tNqyArArdDB84EnceB-frajVq-djo1pIG1_mnBtthXIhZkO7bkyiWWKkHnIVisiq7uyCYqXLoo4-9ufNi5RgfhGCJb9nt40TEVaRIibqaQ9Zxa42cR17MrPu6Eds10RwHJae6yld4RIxFlGM3Cg6aPDZpHcMGUDgsRcrYEiMqZx_0gmxQ7CaeE1dW4jG9SS5M6Fsw1ehfZi0oIwe-9p3fbGeq7wByidz0MSv6cDhmrIp_nWHdxzIYU2zm3a&q=site:support.microsoft.com+Office+offline+installer+Turkish&ved=1t:220175&ictx=111' />
+	[30] (350,145)<div  />
+		[31] (350,156)<span >Alışveriş />
+[32] (400,145)<a class='C6AK7c' href='/search?sca_esv=cdf1ae9af23e2b08&q=site:support.microsoft.com+Office+offline+installer+Turkish&tbm=nws&source=lnms&fbs=ADc_l-ZGEWqX3Iog4tNqyArArdDB84EnceB-frajVq-djo1pIG1_mnBtthXIhZkO7bkyiWWKkHnIVisiq7uyCYqXLoo4-9ufNi5RgfhGCJb9nt40TEVaRIibqaQ9Zxa42cR17MrPu6Eds10RwHJae6yld4RIxFlGM3Cg6aPDZpHcMGUDgsRcrYEiMqZx_0gmxQ7CaeE1dW4jG9SS5M6Fsw1ehfZi0oIwe-9p3fbGeq7wByidz0MSv6cDhmrIp_nWHdxzIYU2zm3a&sa=X&ved=2ahUKEwi8mNz2mbiTAxWpR_EDHRH2NA0Q0pQJegQIEhAB' />
+	[33] (400,145)<div  />
+		[34] (400,156)<span >Haberler />
+[35] (459,145)<a class='C6AK7c' href='/search?sca_esv=cdf1ae9af23e2b08&udm=39&fbs=ADc_l-ZGEWqX3Iog4tNqyArArdDB84EnceB-frajVq-djo1pIG1_mnBtthXIhZkO7bkyiWWKkHnIVisiq7uyCYqXLoo4-9ufNi5RgfhGCJb9nt40TEVaRIibqaQ9Zxa42cR17MrPu6Eds10RwHJae6yld4RIxFlGM3Cg6aPDZpHcMGUDgsRcrYEiMqZx_0gmxQ7CaeE1dW4jG9SS5M6Fsw1ehfZi0oIwe-9p3fbGeq7wByidz0MSv6cDhmrIp_nWHdxzIYU2zm3a&q=site:support.microsoft.com+Office+offline+installer+Turkish&sa=X&ved=2ahUKEwi8mNz2mbiTAxWpR_EDHRH2NA0Qs6gLegQIERAB' />
+	[36] (459,145)<div  />
+		[37] (459,156)<span >Kısa videolar />
+[38] (529,145)<div class='mTpL7c' role='button' />
+	[39] (529,145)<div  />
+		[40] (529,156)<div  />
+			[41] (523,149)<span >Daha fazla />
+			[42] (550,149)<span  />
+[43] (592,145)<div class='mOKdDc' id='hdtb-tls' role='button' />
+	[44] (592,145)<div  />
+		[45] (592,156)<div  />
+			[46] (586,149)<span >Araçlar />
+			[47] (606,149)<span  />
+Looking for results in English?
+[48] (966,266)<a href='#' />
+	[49] (966,264)<span  />
+[50] (851,297)<a href='/setprefs?sig=0_AFLdylOmlmYTb9A6MfmhoVa_RsI%3D&source=en_ignored_notification&prev=https://www.google.com/search?q%3Dsite:support.microsoft.com%2BOffice%2Boffline%2Binstaller%2BTurkish&hl=en&sa=X&ved=2ahUKEwi8mNz2mbiTAxWpR_EDHRH2NA0QhoQCKAF6BAgNEAQ'>Change to English />
+[51] (875,328)<a href='#'>kullanmaya devam et />
+	[52] (831,327)<span >Türkçe />
+[53] (839,371)<a class='fl' href='/preferences?lang=1&hl=tr&sa=X&ved=2ahUKEwi8mNz2mbiTAxWpR_EDHRH2NA0QiIQCKAN6BAgNEAY#languages'>Dil ayarları />
+Arama Sonuçları
+[54] (252,259)<a class='zReHs' href='https://support.microsoft.com/tr-tr/office/office-%C3%A7evrimd%C4%B1%C5%9F%C4%B1-y%C3%BCkleyiciyi-kullanma-f0a85fe7-118f-41cb-a791-d59cef96ad1c' />
+	[55] (251,288)<h3 >Office çevrimdışı yükleyiciyi kullanma />
+	[56] (252,241)<div  />
+		[57] (252,241)<div  />
+			[58] (153,241)<span  />
+				[59] (153,241)<div  />
+					[60] (153,241)<img  />
+			[61] (264,241)<div  />
+				[62] (264,229)<div  />
+					[63] (264,229)<span >Microsoft Support />
+				[64] (264,255)<div  />
+					[65] (264,255)<cite class='qLRx3b tjvcx GvPZzd cHaqb' role='text'>https://support.microsoft.com />
+						[66] (314,254)<span class='ylgVCe ob9lvb' role='text'>› tr-tr › office › office-çev... />
+[67] (374,253)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[68] (374,253)<span  />
+		[69] (374,255)<span  />
+Sanal sürücüde
+Office
+klasörünü açın ve ardından Microsoft 365 32 bit sürümünü yüklemek için Setup32.exe seçin veya çevrimdışı yüklemeye başlamak için 64 bit ...
+[70] (252,454)<a class='zReHs' href='https://translate.google.com/translate?u=https://support.microsoft.com/en-us/office/language-accessory-pack-for-microsoft-365-82ee1236-0f9a-45ee-9c72-05b026ee809f&hl=tr&sl=en&tl=tr&client=srp' />
+	[71] (252,483)<h3 >Microsoft 365 için Dil Aksesuar Paketi />
+	[72] (232,436)<div  />
+		[73] (232,436)<div  />
+			[74] (153,436)<span  />
+				[75] (153,436)<div  />
+					[76] (153,436)<img  />
+			[77] (245,436)<div  />
+				[78] (245,424)<div  />
+					[79] (245,424)<span >Microsoft Support />
+				[80] (245,449)<div  />
+					[81] (245,449)<cite class='qLRx3b tjvcx GvPZzd cHaqb' role='text'>https://support.microsoft.com />
+						[82] (295,449)<span class='ylgVCe ob9lvb' role='text'>› en-us › office />
+[83] (335,448)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[84] (335,448)<span  />
+		[85] (335,449)<span  />
+Microsoft 365'e ek görüntüleme, yardım ve yazım denetleme araçları eklemek için Microsoft 365 Dil Aksesuar Paketlerini nasıl indireceğinizi, kuracağınızı ve ...
+Google tarafından çevrildi
+·
+[86] (297,594)<span class='i2L09e WHcndc' role='button'>Orijinali göster (English) />
+[87] (244,688)<a class='zReHs' href='https://support.microsoft.com/tr-tr/office/microsoft-365-i%C3%A7in-dil-donat%C4%B1-paketi-82ee1236-0f9a-45ee-9c72-05b026ee809f' />
+	[88] (244,717)<h3 >Microsoft 365 için Dil Donatı Paketi />
+	[89] (229,671)<div  />
+		[90] (229,671)<div  />
+			[91] (153,671)<span  />
+				[92] (153,671)<div  />
+					[93] (153,671)<img  />
+			[94] (241,671)<div  />
+				[95] (241,659)<div  />
+					[96] (241,659)<span >Microsoft Support />
+				[97] (241,684)<div  />
+					[98] (241,684)<cite class='qLRx3b tjvcx GvPZzd cHaqb' role='text'>https://support.microsoft.com />
+						[99] (291,683)<span class='ylgVCe ob9lvb' role='text'>› tr-tr › office />
+[100] (328,682)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[101] (328,682)<span  />
+		[102] (328,684)<span  />
+Dil paketleri; Microsoft 365'e ek görünüm, yardım ve yazım denetleme araçları ekler. Microsoft 365'i yükledikten sonra ek dil paketleri yükleyebilirsiniz.
+[103] (260,883)<a class='zReHs' href='https://support.microsoft.com/tr-tr/windows/windows-dil-paketleri-a5094319-a92d-18de-5b53-1cfc697cfca8' />
+	[104] (260,912)<h3 >Windows dil paketleri - Microsoft Desteği />
+	[105] (234,865)<div  />
+		[106] (234,865)<div  />
+			[107] (153,865)<span  />
+				[108] (153,865)<div  />
+					[109] (153,865)<img  />
+			[110] (247,865)<div  />
+				[111] (247,853)<div  />
+					[112] (247,853)<span >Microsoft Support />
+				[113] (247,879)<div  />
+					[114] (247,879)<cite class='qLRx3b tjvcx GvPZzd cHaqb' role='text'>https://support.microsoft.com />
+						[115] (297,878)<span class='ylgVCe ob9lvb' role='text'>› tr-tr › windows />
+[116] (339,877)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[117] (339,877)<span  />
+		[118] (339,879)<span  />
+Başlangıç > Ayarları > Saat & dili> Dil & bölgesi'ni seçin. · Tercih edilen diller'e gidin, Dil ekle'yi seçin. · Yüklenecek dili seçin bölümünde, yüklemek ...
+
+</current_dom>

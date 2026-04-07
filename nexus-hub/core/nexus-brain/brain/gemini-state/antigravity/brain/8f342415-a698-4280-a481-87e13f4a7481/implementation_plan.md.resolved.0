@@ -1,0 +1,35 @@
+# Tablet Optimization and Testing Plan
+
+The goal is to test the dashboard on a tablet-sized display, identify layout issues, and implement improvements to take advantage of the larger screen real estate.
+
+## Proposed Changes
+
+### Setup and Audit
+1.  **Run Application**: Launch the Flutter web application.
+2.  **Mock Mode**: Enable `mockModeProvider` by default in [main.dart](file:///c:/projects/claude/e-car-dashboard/flutter_app/lib/main.dart) or via a UI interaction to view the dashboard.
+3.  **Simulate Tablet**: Use the browser subagent to simulate various tablet resolutions (e.g., 1024x768, 1280x800).
+4.  **Layout Audit**: Check for:
+    *   Gauge sizes (too small/large).
+    *   Text readability.
+    *   Metric chip spacing.
+    *   Padding and margins.
+
+### Improvements (If needed)
+1.  **Modify [_AdaptiveLayout](file:///c:/projects/claude/e-car-dashboard/flutter_app/lib/screens/dashboard_screen.dart#149-249)**: Adjust `baseSize` and [toFlex](file:///c:/projects/claude/e-car-dashboard/flutter_app/lib/screens/dashboard_screen.dart#179-180) logic in [lib/screens/dashboard_screen.dart](file:///c:/projects/claude/e-car-dashboard/flutter_app/lib/screens/dashboard_screen.dart) if the current heuristics don't scale well to larger screens.
+2.  **Adjust Gauges**: If gauges appear too small on tablets, increase their max size limits.
+3.  **Optimize Metrics**: Improve the three-column metric layout for better information density on wide screens.
+
+## Verification Plan
+
+### Automated Tests
+*   N/A (Visual/UI task)
+
+### Browser Verification
+1.  Run `npm run dev` (or `flutter run -d chrome`).
+2.  Open the app in the browser.
+3.  Simulate "iPad" (768x1024) and "iPad Pro" (1024x1366) in DevTools.
+4.  Verify that all gauges are visible and correctly sized.
+5.  Verify that the dashboard is functional in both portrait and landscape.
+
+### Manual Verification
+*   The USER can check the provided screenshots and recordings of the tablet view.

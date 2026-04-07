@@ -1,0 +1,9 @@
+- [ ] **Aşama 1: Fonksiyonel İyileştirmeler (Parser/Watcher)**
+    - [ ] `email_parser.py`: Çoklu satır (tablo) ve Departman extraction desteği ekle
+    - [ ] `email_watcher.py`: Parser'dan dönen tüm kişileri ayrı talep olarak işle
+- [ ] **Aşama 2: Sunucu Senkronizasyonu (Deployment)**
+    - [ ] Yerel dosyaları DeanOS `/DATA/AppData/it-inventory` dizinine aktar (scp/sync)
+    - [ ] Sunucuda `docker-compose up -d --build` komutunu çalıştır
+- [ ] **Aşama 3: Doğrulama ve Test**
+    - [ ] `docker logs it-inventory` ile Graph API ve Parser çıktılarını kontrol et
+    - [ ] `it.evaitec.com` üzerinden yeni tasarımı ve verileri doğrula

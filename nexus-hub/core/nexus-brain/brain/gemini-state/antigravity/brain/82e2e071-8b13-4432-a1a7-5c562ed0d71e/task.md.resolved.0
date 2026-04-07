@@ -1,0 +1,15 @@
+# Task: IT Inventory Fresh Deployment to DeanOS
+
+- [ ] **Phase 1: Server Cleanup (Destructive)**
+    - [/] SSH into DeanOS and stop/remove container
+    - [ ] Delete `/DATA/dean/projects/My-Personal-Repository/inventory_app/` on server
+- [ ] **Phase 2: Local Synchronization**
+    - [ ] Commit local changes in `C:\projects\it-inventory`
+    - [ ] Push to GitHub origin main
+- [ ] **Phase 3: Fresh Deployment**
+    - [ ] CD into `/DATA/dean/projects/My-Personal-Repository/` on server
+    - [ ] Git Pull origin main
+    - [ ] Rebuild container: `sudo docker compose up -d --build it-inventory`
+- [ ] **Phase 4: Verification**
+    - [ ] Verify container logs
+    - [ ] Manual Check: Test "Add Device" / "Add Request" buttons

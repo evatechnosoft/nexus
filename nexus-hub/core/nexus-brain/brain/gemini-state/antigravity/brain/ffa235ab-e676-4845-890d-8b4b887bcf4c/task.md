@@ -1,0 +1,18 @@
+- [ ] **InfluxDB v2 Data Pipeline**
+    - [ ] Generate InfluxDB Admin Token
+    - [ ] Create `homeassistant` Bucket
+    - [ ] Configure `influxdb:` integration in HA `configuration.yaml`
+    - [ ] Verify Data Flow in InfluxDB UI
+- [ ] **Grafana Integration**
+    - [ ] Add InfluxDB Data Source to Grafana
+    - [ ] Create "Environmental & Biometric" Dashboard
+    - [ ] Set up auto-refreshing charts for Mi Temp sensor
+- [ ] **Premium Home Assistant Dashboard**
+    - [ ] Check/Install `Mushroom Cards` via HACS
+    - [ ] Create `Mobile` Dashboard (Dashboard YAML)
+    - [ ] Design Quick Action chips (Start Vacuum, etc.)
+    - [ ] Add Premium Temperature/Humidity glance cards
+- [ ] **Final Polish & Walkthrough**
+    - [ ] Dark Mode theme verification
+    - [ ] Tablet/Phone responsive check
+    - [ ] Final Walkthrough report

@@ -1,0 +1,90 @@
+[
+  {
+    "type": "file",
+    "size": 60,
+    "name": ".gitignore",
+    "path": ".gitignore",
+    "sha": "bbc17860ddbf84caa4f5562f6c9ca178d1686cf4",
+    "url": "https://api.github.com/repos/evatechnosoft/casatozima-v2/contents/.gitignore?ref=dev",
+    "git_url": "https://api.github.com/repos/evatechnosoft/casatozima-v2/git/blobs/bbc17860ddbf84caa4f5562f6c9ca178d1686cf4",
+    "html_url": "https://github.com/evatechnosoft/casatozima-v2/blob/dev/.gitignore",
+    "download_url": "https://raw.githubusercontent.com/evatechnosoft/casatozima-v2/dev/.gitignore"
+  },
+  {
+    "type": "file",
+    "size": 281,
+    "name": "Dockerfile",
+    "path": "Dockerfile",
+    "sha": "8e8016e849f11d8811ecdc5f36b925d871b6fb70",
+    "url": "https://api.github.com/repos/evatechnosoft/casatozima-v2/contents/Dockerfile?ref=dev",
+    "git_url": "https://api.github.com/repos/evatechnosoft/casatozima-v2/git/blobs/8e8016e849f11d8811ecdc5f36b925d871b6fb70",
+    "html_url": "https://github.com/evatechnosoft/casatozima-v2/blob/dev/Dockerfile",
+    "download_url": "https://raw.githubusercontent.com/evatechnosoft/casatozima-v2/dev/Dockerfile"
+  },
+  {
+    "type": "file",
+    "size": 1650,
+    "name": "README.md",
+    "path": "README.md",
+    "sha": "f8f6ce918536e70655006c3aa0bb57b0ecaad2c5",
+    "url": "https://api.github.com/repos/evatechnosoft/casatozima-v2/contents/README.md?ref=dev",
+    "git_url": "https://api.github.com/repos/evatechnosoft/casatozima-v2/git/blobs/f8f6ce918536e70655006c3aa0bb57b0ecaad2c5",
+    "html_url": "https://github.com/evatechnosoft/casatozima-v2/blob/dev/README.md",
+    "download_url": "https://raw.githubusercontent.com/evatechnosoft/casatozima-v2/dev/README.md"
+  },
+  {
+    "type": "file",
+    "size": 2011,
+    "name": "docker-compose.yml",
+    "path": "docker-compose.yml",
+    "sha": "e01be4609da847078525625eff09502bb090ca55",
+    "url": "https://api.github.com/repos/evatechnosoft/casatozima-v2/contents/docker-compose.yml?ref=dev",
+    "git_url": "https://api.github.com/repos/evatechnosoft/casatozima-v2/git/blobs/e01be4609da847078525625eff09502bb090ca55",
+    "html_url": "https://github.com/evatechnosoft/casatozima-v2/blob/dev/docker-compose.yml",
+    "download_url": "https://raw.githubusercontent.com/evatechnosoft/casatozima-v2/dev/docker-compose.yml"
+  },
+  {
+    "type": "file",
+    "size": 1869,
+    "name": "handoff.md",
+    "path": "handoff.md",
+    "sha": "86465588e89d049d36f01c580503c87bb94c4d7f",
+    "url": "https://api.github.com/repos/evatechnosoft/casatozima-v2/contents/handoff.md?ref=dev",
+    "git_url": "https://api.github.com/repos/evatechnosoft/casatozima-v2/git/blobs/86465588e89d049d36f01c580503c87bb94c4d7f",
+    "html_url": "https://github.com/evatechnosoft/casatozima-v2/blob/dev/handoff.md",
+    "download_url": "https://raw.githubusercontent.com/evatechnosoft/casatozima-v2/dev/handoff.md"
+  },
+  {
+    "type": "file",
+    "size": 108,
+    "name": "requirements.txt",
+    "path": "requirements.txt",
+    "sha": "72bb1d166d4902bdde220ec1082c54e3921acd8d",
+    "url": "https://api.github.com/repos/evatechnosoft/casatozima-v2/contents/requirements.txt?ref=dev",
+    "git_url": "https://api.github.com/repos/evatechnosoft/casatozima-v2/git/blobs/72bb1d166d4902bdde220ec1082c54e3921acd8d",
+    "html_url": "https://github.com/evatechnosoft/casatozima-v2/blob/dev/requirements.txt",
+    "download_url": "https://raw.githubusercontent.com/evatechnosoft/casatozima-v2/dev/requirements.txt"
+  },
+  {
+    "type": "file",
+    "size": 16138,
+    "name": "setup.sh",
+    "path": "setup.sh",
+    "sha": "a26c3f69915173dbc6c100659f3ada421d616853",
+    "url": "https://api.github.com/repos/evatechnosoft/casatozima-v2/contents/setup.sh?ref=dev",
+    "git_url": "https://api.github.com/repos/evatechnosoft/casatozima-v2/git/blobs/a26c3f69915173dbc6c100659f3ada421d616853",
+    "html_url": "https://github.com/evatechnosoft/casatozima-v2/blob/dev/setup.sh",
+    "download_url": "https://raw.githubusercontent.com/evatechnosoft/casatozima-v2/dev/setup.sh"
+  },
+  {
+    "type": "dir",
+    "size": 0,
+    "name": "src",
+    "path": "src",
+    "sha": "2bd2a29ef9c3d9ec854af29714e3905d51a5e28d",
+    "url": "https://api.github.com/repos/evatechnosoft/casatozima-v2/contents/src?ref=dev",
+    "git_url": "https://api.github.com/repos/evatechnosoft/casatozima-v2/git/trees/2bd2a29ef9c3d9ec854af29714e3905d51a5e28d",
+    "html_url": "https://github.com/evatechnosoft/casatozima-v2/tree/dev/src",
+    "download_url": null
+  }
+]

@@ -1,0 +1,17 @@
+# Üçüncü parti skill repo'ları submodule olarak yönetiliyor
+# (skills/awesome-claude-skills, skills/Superpowers, skills/antigravity-awesome-skills)
+
+# Projeler (ayrı repo'lar)
+projects/
+
+# Assets (repo'ya dahil değil)
+assets/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+node_modules

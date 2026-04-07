@@ -1,0 +1,32 @@
+# SSH Standardization & Deployment Simplified Plan
+
+The user requested a unified SSH configuration using the `coolos` key for all environments (Windows, DeanOS, GitHub) to resolve "Permission denied" errors and simplify the deployment workflow.
+
+## User Review Required
+
+> [!IMPORTANT]
+> **GitHub SSH Key:** For the unification to work, you MUST add the contents of `C:\Users\Deacjx\.ssh\coolos.pub` to your GitHub account under **Settings -> SSH and GPG keys**. Otherwise, the `git pull` will still fail even after we adjust the config.
+
+## Proposed Changes
+
+### [MODIFY] [Windows ~/.ssh/config](file:///c:/Users/Deacjx/.ssh/config)
+- Correct the `IdentityFile` for all entries (`deanos`, `dean`, `zima`, `coolos`, `github.com`) to use `C:\Users\Deacjx\.ssh\coolos`. (Fixing a previous typo that set it to `id_rsa`).
+
+### [MODIFY] [DeanOS Server]
+- Provide a command to fix directory ownership (`sudo chown -R dean:dean ~/projects/it-inventory`). This allows the `dean` user to perform `git` operations directly, leveraging its existing SSH agent/access without needing `sudo`, which was causing the GitHub "Permission denied" error.
+
+### [MODIFY] [Deployment Workflow]
+- Provide a simplified, non-sudo deployment command for the server that handles the port migration (9400 -> 9500) and restarts the containers.
+
+### [NEW] [ssh_standardization.md](file:///C:/Users/Deacjx/.gemini/antigravity/brain/aae8d54a-e066-4e5d-ac78-c043ecd8ddf2/ssh_standardization.md)
+- Create a persistent documentation artifact summarizing the SSH architecture, port assignments, and deployment patterns.
+
+## Verification Plan
+
+### Automated Tests
+- Provide a test command (`ssh -T git@github.com`) to verify the Windows config.
+
+### Manual Verification
+- User to verify they can `ssh dean` from Windows without a password.
+- User to run the ownership and deployment command on DeanOS.
+- Verify status on `http://192.168.1.186:9500`.

@@ -1,0 +1,40 @@
+# Kızımın Arkadaşı - Proje Güncellemesi
+
+Tüm kritik hatalar giderildi ve istediğin modüller (XP, Notlar, Harita) başarıyla aktif edildi.
+
+## Yapılan Değişiklikler
+
+### 1. API Kotası ve Hız Optimizasyonu ⚡
+- **Hata Giderildi**: `Gemini 2.0 Flash` modelindeki kota sorunu (429 Hatası) giderildi.
+- **Stabilite**: Uygulama şu an çok daha stabil ve hızlı olan **Gemini 1.5 Flash** modeline geçirildi.
+
+### 2. XP ve Seviye Sistemi (Oyunlaştırma) 🎮
+- **Puan Kazanma**: Her sohbet mesajı kullanıcıya **10 XP** kazandırır.
+- **Seviye Atlama**: Her 100 XP'de bir seviye atlanır (Lvl 1, Lvl 2...).
+- **Profil Arayüzü**: Profil ekranına şık bir XP ilerleme çubuğu ve seviye rozeti eklendi.
+
+### 3. Notlarım (Günlük) Modülü ✍️
+- **Kişisel Günlük**: Çocukların düşüncelerini yazabileceği tam fonksiyonel bir not defteri eklendi.
+- **Yönetim**: Not ekleme, düzenleme ve silme (sağa kaydırarak) özellikleri aktif.
+- **Kalıcı Veri**: Yazılan tüm notlar cihazda güvenli bir şekilde saklanır.
+
+### 4. Akıllı Harita ve Güvenli Alan 📍
+- **OpenStreetMap**: Google Haritalar'a ihtiyaç duymadan ücretsiz ve açık kaynaklı harita desteği eklendi.
+- **Konum Takibi**: `geolocator` ile gerçek zamanlı konum gösterme.
+- **Güvenli Bölge**: Mevcut konumun etrafında **500 metrelik görsel bir "Güvenli Bölge"** dairesi oluşturuldu.
+
+## Navigasyon Güncellemesi
+Alt menü (Navigation Bar) artık 5 ana sekmeden oluşuyor:
+1. **Ana Sayfa**
+2. **Sohbet**
+3. **Harita** (Yeni!)
+4. **Notlarım** (Yeni!)
+5. **Profil**
+
+## Teknik Notlar
+> [!IMPORTANT]
+> Harita özelliğinin çalışması için telefonunda konum izni vermen gerekecektir.
+> `latlong2` ve `flutter_map` paketleri pubspec.yaml'a doğru şekilde entegre edildi.
+
+---
+**Walkthrough Tamamlandı.** Şimdi uygulamayı test edebilirsin!

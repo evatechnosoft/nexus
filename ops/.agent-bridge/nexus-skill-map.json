@@ -1,0 +1,35 @@
+{
+  "version": "1.0",
+  "default": [
+    "C:/projects/deanos/.agent-bridge/source-map.json",
+    "C:/projects/deanos/guides/NEXUS-UPDATE-GUIDE.md",
+    "C:/projects/deanos/.gpt/GPT.md"
+  ],
+  "tools": {
+    "mcp": [
+      "C:/projects/deanos/.agent-bridge/mcp-bridge.json",
+      "C:/Users/Deacjx/.gpt/mcp.json"
+    ],
+    "nexusupdate": [
+      "C:/projects/deanos/scripts/update-nexus-knowledge.ps1",
+      "C:/projects/deanos/guides/NEXUS-UPDATE-GUIDE.md"
+    ],
+    "gptsync": [
+      "C:/projects/deanos/.gpt/scripts/sync-gpt.ps1",
+      "C:/projects/deanos/.gpt/GPT.md"
+    ],
+    "skill": [
+      "C:/Users/Deacjx/.claude/skills",
+      "C:/projects/deanos/.gpt/skills"
+    ],
+    "rule": [
+      "C:/Users/Deacjx/.claude/rules",
+      "C:/projects/deanos/.gpt/memory"
+    ]
+  },
+  "citationPrefixes": {
+    "@rule:": "C:/Users/Deacjx/.claude/rules",
+    "@guide:": "C:/projects/deanos/guides",
+    "@skill:": "C:/Users/Deacjx/.claude/skills"
+  }
+}

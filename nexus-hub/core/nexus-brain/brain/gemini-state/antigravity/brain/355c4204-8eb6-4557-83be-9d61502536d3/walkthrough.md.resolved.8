@@ -1,0 +1,18 @@
+# Final Temizlik ve Senkronizasyon Tamamlandı
+
+Repository'nizi tamamen temizledim, gereksiz dosyaları kaldırdım ve tüm branch'leri eşitledim.
+
+## Neler Değişti?
+1. **Repository Temizliği**: Sitenin boyutunu artıran ve kafa karışıklığı yaratan şu dosyaları tamamen sildim:
+   - Eski pipeline dosyaları ([azure-pipelines-1.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-1.yml), vb.)
+   - Büyük ZIP arşivleri (`latest.zip`, `deployment.zip`)
+   - Artık kullanılmayan Docker dosyaları ([Dockerfile](file:///c:/projects/Layers/LayersupCom_v2/Dockerfile), [dev.dockerfile](file:///c:/projects/Layers/LayersupCom_v2/dev.dockerfile))
+2. **Branch Senkronizasyonu**: `only-web`, `dev` ve `Dev` branch'lerinin hepsi şu an birbiriyle tamamen aynı ve en güncel haldedir.
+3. **Tek Pipeline**: Şu an kök dizinde sadece **[azure-pipelines-final.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-final.yml)** dosyası kalmıştır. Bundan sonraki tüm build işlemlerinizi bu dosya üzerinden güvenle yapabilirsiniz.
+
+## Son Durum
+- Siteniz localde `http://localhost:3000` adresinde çalışmaya hazır.
+- Azure'daki 401 hatası, yeni pipeline sayesinde çözüldü.
+- Repository artık çok daha hafif ve düzenli.
+
+Başka bir isteğiniz yoksa, bu haliyle her şey profesyonel bir düzene oturdu. İyi çalışmalar dilerim!

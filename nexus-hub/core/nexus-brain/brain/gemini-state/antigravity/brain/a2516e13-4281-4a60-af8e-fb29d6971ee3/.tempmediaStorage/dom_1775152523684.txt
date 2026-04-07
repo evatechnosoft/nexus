@@ -1,0 +1,210 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (15,24)<ha-svg-icon  />
+Home Assistant
+[1] (69,73)<ha-md-list-item class=' selected ' />
+	[2] (15,73)<ha-svg-icon  />
+	[3] (80,73)<span >Ana Ekran />
+[4] (69,115)<ha-md-list-item class='  ' />
+	[5] (15,115)<ha-svg-icon  />
+	[6] (80,115)<span >Harita />
+[7] (69,157)<ha-md-list-item class='  ' />
+	[8] (15,157)<ha-svg-icon  />
+	[9] (80,157)<span >Enerji />
+[10] (69,198)<ha-md-list-item class='  ' />
+	[11] (15,198)<ha-svg-icon  />
+	[12] (80,198)<span >Günlük />
+[13] (69,240)<ha-md-list-item class='  ' />
+	[14] (15,240)<ha-svg-icon  />
+	[15] (80,240)<span >Geçmiş />
+[16] (69,282)<ha-md-list-item class='  ' />
+	[17] (15,282)<ha-icon  />
+		[18] (15,282)<ha-svg-icon  />
+	[19] (80,282)<span >HACS />
+[20] (69,323)<ha-md-list-item class='  ' />
+	[21] (15,323)<ha-svg-icon  />
+	[22] (80,323)<span >Medya />
+[23] (69,365)<ha-md-list-item class='  ' />
+	[24] (15,365)<ha-svg-icon  />
+	[25] (80,365)<span >Yapılacaklar listeleri />
+[26] (69,819)<ha-md-list-item class='  ' />
+	[27] (15,819)<ha-svg-icon  />
+	[28] (80,819)<span >Geliştirici araçları />
+[29] (69,861)<ha-md-list-item class='configuration' href='/config' />
+	[30] (15,861)<ha-svg-icon  />
+	[31] (80,861)<span >Ayarlar />
+[32] (69,927)<ha-md-list-item class='notifications' />
+	[33] (15,927)<ha-svg-icon  />
+	[34] (80,927)<span >Bildirimler />
+[35] (69,969)<ha-md-list-item class='user ' href='/profile' />
+	[36] (15,969)<ha-user-badge  />
+		[37] (15,969)<div >D />
+	[38] (80,969)<span >Dean />
+Ana Ekran
+[39] (929,24)<ha-svg-icon  />
+[40] (955,24)<ha-svg-icon  />
+[41] (981,24)<ha-svg-icon  />
+MyRoom
+[42] (545,89)<input class='mdc-switch__native-control' id='basic-switch' role='switch' />
+[43] (434,133)<div class='row  pointer ' />
+	[44] (322,133)<state-badge  />
+		[45] (322,133)<ha-state-icon  />
+			[46] (322,132)<ha-icon  />
+				[47] (322,133)<ha-svg-icon  />
+	[48] (433,133)<div >43" Monitor />
+[49] (545,133)<ha-entity-toggle  />
+	[50] (545,133)<ha-switch  />
+		[51] (545,133)<div  />
+			[52] (550,133)<div  />
+				[53] (550,133)<div  />
+					[54] (545,133)<input aria-label='Toggle 43" Monitor off' class='mdc-switch__native-control' id='basic-switch' role='switch' />
+[55] (434,175)<div class='row  pointer ' />
+	[56] (322,175)<state-badge  />
+		[57] (322,175)<ha-state-icon  />
+			[58] (322,173)<ha-icon  />
+				[59] (322,175)<ha-svg-icon  />
+	[60] (433,175)<div >Back light Soket 1 />
+[61] (545,175)<ha-entity-toggle  />
+	[62] (545,175)<ha-switch  />
+		[63] (545,175)<div  />
+			[64] (541,175)<div  />
+				[65] (541,175)<div  />
+					[66] (545,175)<input aria-label='Toggle Back light Soket 1 on' class='mdc-switch__native-control' id='basic-switch' role='switch' />
+[67] (434,216)<div class='row  pointer ' />
+	[68] (322,216)<state-badge  />
+		[69] (322,216)<ha-state-icon  />
+			[70] (322,215)<ha-icon  />
+				[71] (322,216)<ha-svg-icon  />
+	[72] (433,216)<div >Computer Soket 1 />
+[73] (545,216)<ha-entity-toggle  />
+	[74] (545,216)<ha-switch  />
+		[75] (545,216)<div  />
+			[76] (550,216)<div  />
+				[77] (550,216)<div  />
+					[78] (545,216)<input aria-label='Toggle Computer Soket 1 off' class='mdc-switch__native-control' id='basic-switch' role='switch' />
+[79] (434,258)<div class='row  pointer ' />
+	[80] (322,258)<state-badge  />
+		[81] (322,258)<ha-state-icon  />
+			[82] (322,257)<ha-icon  />
+				[83] (322,258)<ha-svg-icon  />
+	[84] (433,258)<div >ev charger Soket 1 />
+[85] (545,258)<ha-entity-toggle  />
+	[86] (545,258)<ha-switch  />
+		[87] (545,258)<div  />
+			[88] (541,258)<div  />
+				[89] (541,258)<div  />
+					[90] (545,258)<input aria-label='Toggle ev charger Soket 1 on' class='mdc-switch__native-control' id='basic-switch' role='switch' />
+[91] (434,300)<div class='row  pointer ' />
+	[92] (322,300)<state-badge  />
+		[93] (322,300)<ha-state-icon  />
+			[94] (322,299)<ha-icon  />
+				[95] (322,300)<ha-svg-icon  />
+	[96] (433,300)<div >mybox />
+[97] (545,300)<ha-entity-toggle  />
+	[98] (545,300)<ha-switch  />
+[99] (434,342)<div class='row  pointer ' />
+	[100] (322,342)<state-badge  />
+		[101] (322,342)<ha-state-icon  />
+			[102] (322,340)<ha-icon  />
+				[103] (322,342)<ha-svg-icon  />
+	[104] (433,342)<div >Night light Soket 1 />
+[105] (545,342)<ha-entity-toggle  />
+	[106] (545,342)<ha-switch  />
+		[107] (545,342)<div  />
+			[108] (541,342)<div  />
+				[109] (541,342)<div  />
+					[110] (545,342)<input aria-label='Toggle Night light Soket 1 on' class='mdc-switch__native-control' id='basic-switch' role='switch' />
+[111] (434,383)<div class='row  pointer ' />
+	[112] (322,383)<state-badge  />
+		[113] (322,383)<ha-state-icon  />
+			[114] (322,382)<ha-icon  />
+				[115] (322,383)<ha-svg-icon  />
+	[116] (428,383)<div >Modem-Huntercjx İndirme hızı />
+17,7 KiB/s
+[117] (434,425)<div class='row  pointer ' />
+	[118] (322,425)<state-badge  />
+		[119] (322,425)<ha-state-icon  />
+			[120] (322,424)<ha-icon  />
+				[121] (322,425)<ha-svg-icon  />
+	[122] (428,425)<div >Modem-Huntercjx Yükleme hızı />
+85,8 KiB/s
+43" Smart Monitor M7
+[123] (551,489)<ha-svg-icon  />
+[124] (319,538)<ha-svg-icon  />
+[125] (546,538)<ha-svg-icon  />
+43" Monitor
+[126] (551,595)<ha-svg-icon  />
+[127] (319,644)<ha-svg-icon  />
+[128] (350,644)<ha-svg-icon  />
+mybox
+[129] (551,701)<ha-svg-icon  />
+mybox 2
+[130] (551,758)<ha-svg-icon  />
+MyTV
+[131] (551,816)<ha-svg-icon  />
+[132] (704,88)<div class='row  pointer ' />
+	[133] (591,88)<state-badge  />
+		[134] (591,88)<ha-state-icon  />
+			[135] (591,86)<ha-icon  />
+				[136] (591,88)<ha-svg-icon  />
+	[137] (696,88)<div >Dean />
+Bilinmeyen
+[138] (704,163)<ha-card  />
+	[139] (704,163)<div  />
+		[140] (593,163)<div  />
+		[141] (721,163)<div  />
+			[142] (706,163)<div  />
+				[143] (702,154)<div >Açık, gece />
+				[144] (702,173)<div >Forecast Evim />
+			[145] (812,163)<div  />
+				[146] (805,154)<div >14 />
+					[147] (821,155)<span >°C />
+				[148] (812,176)<div >73% />
+					[149] (806,176)<ha-svg-icon  />
+Sensör
+[150] (704,283)<div class='row  pointer ' />
+	[151] (591,283)<state-badge  />
+		[152] (591,283)<ha-state-icon  />
+			[153] (591,282)<ha-icon  />
+				[154] (591,284)<ha-svg-icon  />
+	[155] (693,283)<div >Tahmini mesafe />
+Kullanım dışı
+[156] (704,325)<div class='row  pointer ' />
+	[157] (591,325)<state-badge  />
+		[158] (591,325)<ha-state-icon  />
+			[159] (591,324)<ha-icon  />
+				[160] (591,325)<ha-svg-icon  />
+	[161] (693,325)<div >Tahmini mesafe />
+Kullanım dışı
+[162] (704,367)<div class='row  pointer ' />
+	[163] (591,367)<state-badge  />
+		[164] (591,367)<ha-state-icon  />
+			[165] (591,366)<ha-icon  />
+				[166] (591,367)<ha-svg-icon  />
+	[167] (693,367)<div >Tahmini mesafe />
+Kullanım dışı
+[168] (704,409)<div class='row  pointer ' />
+	[169] (591,409)<state-badge  />
+		[170] (591,409)<ha-state-icon  />
+			[171] (591,408)<ha-icon  />
+				[172] (591,409)<ha-svg-icon  />
+	[173] (693,409)<div >Tahmini mesafe />
+Kullanım dışı
+[174] (704,450)<div class='row  pointer ' />
+	[175] (591,450)<state-badge  />
+		[176] (591,450)<ha-state-icon  />
+			[177] (591,449)<ha-icon  />
+				[178] (591,451)<ha-svg-icon  />
+	[179] (693,450)<div >Tahmini mesafe />
+Kullanım dışı
+[180] (704,492)<div class='row  pointer ' />
+	[181] (591,492)<state-badge  />
+		[182] (591,492)<ha-state-icon  />
+			[183] (591,491)<ha-icon  />
+				[184] (591,492)<ha-svg-icon  />
+	[185] (693,492)<div >Tahmini mesafe />
+Kullanım dışı
+
+</current_dom>

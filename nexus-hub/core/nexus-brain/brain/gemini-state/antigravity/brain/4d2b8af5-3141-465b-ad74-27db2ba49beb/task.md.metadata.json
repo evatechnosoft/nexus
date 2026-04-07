@@ -1,0 +1,6 @@
+{
+  "artifactType":  "ARTIFACT_TYPE_TASK",
+  "summary":  "Executing Build Fix & Deployment V2.1 for Ev@iTec. Upgrading speech_to_text to 7.3.0, setting minSdk to 25, compileSdk to 36, and targeting Samsung S24 Ultra. Final cleanup and deployment included.",
+  "updatedAt":  "2026-04-01T17:49:43.325573500Z",
+  "version":  "10"
+}

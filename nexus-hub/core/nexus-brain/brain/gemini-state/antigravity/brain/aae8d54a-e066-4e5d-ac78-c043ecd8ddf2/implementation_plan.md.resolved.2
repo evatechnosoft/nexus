@@ -1,0 +1,33 @@
+# IT Inventory UI & UX Modernizasyon Planı
+
+Kullanıcının belirttiği "tıklanmama" sorunlarını gidermek ve arayüzü "Premium PRO" seviyesine taşımak için aşağıdaki değişiklikleri planlıyorum.
+
+## User Review Required
+
+> [!IMPORTANT]
+> - **Buton Erişilebilirliği:** "Yeni Cihaz Ekle" butonunun bazı durumlarda tıklanmama sorununu, `z-index` ve `backdrop-filter` katmanlarını optimize ederek çözeceğim.
+> - **Görsel Stil:** Mevcut glassmorphism temasını daha rafine, karanlık mod (Dark Mode) uyumlu ve "Sleek" bir görünüme kavuşturacağım.
+
+## Önerilen Değişiklikler
+
+### 💡 [STYLE] [style.css](file:///c:/projects/it-inventory/static/style.css)
+- **Glassmorphism Optimizasyonu:** `backdrop-filter` kullanımını performans ve erişilebilirlik açısından iyileştireceğim.
+- **Micro-Animations:** Butonlar ve kartlar için yumuşak geçiş efektleri (hover scale, glow) ekleyeceğim.
+- **Typography:** Google Fonts (Outfit veya Inter) entegrasyonu ile daha modern bir font yapısına geçeceğim.
+
+### 🏗️ [LAYOUT] [base.html](file:///c:/projects/it-inventory/templates/base.html)
+- **Z-Index Layering:** Modalların ve dropdown'ların her zaman en üstte kalmasını sağlayacak katman düzenlemesi.
+- **Glow Effects:** Arka planda hareketli ama göz yormayan "Glow" ışık efektleri ekleyerek derinlik hissi yaratacağım.
+
+### 📱 [UI] [inventory.html](file:///c:/projects/it-inventory/templates/inventory.html)
+- **Modal Re-design:** "Yeni Cihaz Ekle" modalını daha geniş, okunaklı ve modern bir form yapısına dönüştüreceğim.
+- **Table Polish:** Tablo satırlarına hover efektleri ve daha belirgin durum (Status) etiketleri ekleyeceğim.
+
+## Doğrulama Planı
+
+### Görsel Kontrol
+- Tarayıcı üzerinden butonların tıklanabilirliğini (`pointer-events`) test edeceğim.
+- Modalların açılış animasyonlarını ve mobil uyumluluğunu kontrol edeceğim.
+
+### Fonksiyonel Kontrol
+- Yeni cihaz ekleme formunun veri gönderdiğini teyit edeceğim.

@@ -1,0 +1,6 @@
+{
+  "artifactType": "ARTIFACT_TYPE_WALKTHROUGH",
+  "summary": "Summary of the Evaitec Dashboard frontend with screenshot proof, plus Cloudflare routing instructions for api and db subdomains.",
+  "updatedAt": "2026-03-23T09:23:04.341174900Z",
+  "version": "3"
+}

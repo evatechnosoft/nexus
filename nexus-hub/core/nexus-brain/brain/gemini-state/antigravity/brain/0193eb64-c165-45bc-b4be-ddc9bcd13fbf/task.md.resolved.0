@@ -1,0 +1,16 @@
+# Task Management
+
+- [ ] Planning Dockerization & Deployment <!-- id: 0 -->
+    - [ ] Research project structural requirements <!-- id: 1 -->
+    - [ ] Create implementation plan <!-- id: 2 -->
+- [ ] Implementation <!-- id: 3 -->
+    - [ ] Update [server.js](file:///c:/projects/evaiteclabs/server.js) to default to port 3001 <!-- id: 4 -->
+    - [ ] Create `Dockerfile` <!-- id: 5 -->
+    - [ ] Create `docker-compose.yml` <!-- id: 6 -->
+- [ ] Deployment to DeanOS <!-- id: 7 -->
+    - [ ] Verify SSH access to `dean@deanos.local` <!-- id: 8 -->
+    - [ ] Transfer files to DeanOS <!-- id: 9 -->
+    - [ ] Start Docker Compose on DeanOS <!-- id: 10 -->
+- [ ] Verification <!-- id: 11 -->
+    - [ ] Check if the server is running on port 3001 <!-- id: 12 -->
+    - [ ] Create walkthrough <!-- id: 13 -->

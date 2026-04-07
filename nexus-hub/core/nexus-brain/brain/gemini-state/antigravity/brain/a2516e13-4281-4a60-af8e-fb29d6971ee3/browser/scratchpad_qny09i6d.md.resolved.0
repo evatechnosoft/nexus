@@ -1,0 +1,8 @@
+# Task: Find Xiaomi Mi Temp sensor in Home Assistant
+
+## Checklist
+- [ ] Navigate to Home Assistant (http://192.168.1.186:8123)
+- [ ] Check for notifications or new devices
+- [ ] Go to Settings -> Devices & Services
+- [ ] Search for Xiaomi/BTHome/Smart Station
+- [ ] Report temperature and humidity values if found

@@ -1,0 +1,26 @@
+# Dashboard ve Sağlık Entegrasyonu Walkthrough
+
+SportApp mobil uygulamasında kullanıcı deneyimini iyileştiren kritik geliştirmeler tamamlandı.
+
+## Tamamlanan Özellikler
+
+### 1. Dinamik ve Kişiselleştirilebilir Dashboard
+- **Özelleştirme:** Ayarlar ekranına "Dashboard Yönetimi" eklendi. Kullanıcılar kartları (Adım/Kalori, AI Antrenör, Aktiviteler, Kilo Grafiği) aktif/pasif yapabilir.
+- **Sıralama:** Dashboard öğeleri artık `AppState` üzerinden yönetilen dinamik bir listeden besleniyor.
+
+### 2. Gerçek Sağlık Verileri Entegrasyonu (Health Connect)
+- **Canlı Veri:** `HealthService` üzerinden bugünün Adım, Kalp Hızı, Kalori ve Su verileri çekilerek Dashboard'da görselleştirildi.
+- **Eşleştirme/Sync:** Dashboard'un sağ üst köşesine eklenen "Sağlık İkonu" ile izinler tetiklenebilir ve veriler backend ile manuel olarak eşitlenebilir.
+
+### 3. Tema ve Görünüm Seçimleri Fix
+- **Stil Desteği:** Ayarlar ekranındaki Glassmorphism, Neomorphic, Flat ve Outline tasarım seçimleri artık sorunsuz çalışıyor.
+- **Anlık Değişim:** Tema değişikliği yapıldığında uygulama geneline anında yansıyor ve kalıcı olarak kaydediliyor.
+
+## Teknik Değişiklikler
+- **State Management:** `AppState` sınıfı `themeStyle` ve `dashboardOrder` alanlarıyla genişletildi.
+- **Theming:** `AppTheme` sınıfına dinamik dekorasyon (`getDecoration`) ve tema (`getTheme`) metotları eklendi.
+- **Service:** `HealthService`'e UI için özet veri sağlayan `fetchTodayStats` metodu eklendi.
+
+---
+> [!TIP]
+> Sağlık verilerini görmek için Dashboard'daki **Sağlık İkonuna** (🛡️) basarak izinleri onaylamanız ve eşitleme yapmanız yeterlidir.

@@ -1,0 +1,6 @@
+{
+  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary": "Swapping IT Inventory ports on ZimaOS (Production -> 9700, Test -> 9600) and synchronizing deployment scripts.",
+  "updatedAt": "2026-04-01T09:22:36.024958600Z",
+  "requestFeedback": true
+}

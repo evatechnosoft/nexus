@@ -1,0 +1,128 @@
+[0] (20,30)<button class='relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-2.5 border-1 outline-none focus-visible:ring-2 bg-transparent border-transparent text-surface-900 dark:text-surface-0 hover:bg-surface-800/10 active:bg-surface-800/20 focus-visible:ring-surface-900/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[1] (20,30)<span  />
+[2] (44,30)<button class='relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-2.5 border-1 outline-none focus-visible:ring-2 bg-transparent border-transparent text-surface-900 dark:text-surface-0 hover:bg-surface-800/10 active:bg-surface-800/20 focus-visible:ring-surface-900/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[3] (44,30)<span  />
+13:31
+Monday, March 23, 2026
+System
+2
+CPU
+1.7W / 44.00°C
+4
+RAM
+31 GB
+CPU
+RAM
+Quadro P620
+GPU 0W
+[4] (120,755)<div >41°C />
+1
+VRAM
+61.9 MB / 4 GB
+Storage
+Healthy
+Used: 11.1 GB
+Total: 490 GB
+Stable Diffusion
+Stable Diffusion is a deep learning, text-to-image model, It is primarily used to generate detailed images conditioned on text descriptions
+Try now
+Remote Access
+[5] (922,245)<button class='ml-1 flex-shrink-0 text-white relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-full border-1 outline-none focus-visible:ring-2 bg-transparent border-transparent text-surface-500 dark:text-surface-300 hover:bg-[#333333]/5 active:bg-[#333333]/9 dark:hover:bg-white/5 dark:active:bg-white/9 focus-visible:ring-primary-500/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[6] (922,245)<span  />
+Configure Remote Access to access your home cloud remotely from anywhere.
+[7] (905,423)<button aria-label='Learn more' class='float-right relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-2.5 border-1 border-[#333333]/5 hover:border-[#333333]/9 outline-none focus-visible:ring-2 text-white bg-primary-500 hover:bg-primary-600 active:bg-primary-700 dark:hover:bg-primary-400 dark:active:bg-primary-300 focus-visible:ring-primary-500/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[8] (905,423)<span >Learn more />
+File Management
+[9] (925,354)<span  />
+	[10] (925,354)<img  />
+Drag icons to sort.
+[11] (421,550)<div  />
+	[12] (421,550)<span  />
+		[13] (421,550)<i  />
+Apps
+[14] (931,550)<div class='dropdown-trigger' />
+	[15] (931,549)<span  />
+		[16] (931,549)<i  />
+[17] (351,701)<figure  />
+	[18] (351,701)<img  />
+[19] (351,773)<a class='block one-line max-w-36'>App Store />
+[20] (483,701)<figure  />
+	[21] (483,701)<img  />
+[22] (483,773)<a class='block one-line max-w-36'>Files />
+[23] (616,701)<figure  />
+	[24] (616,701)<img  />
+[25] (616,773)<a class='block one-line max-w-36'>Backup />
+[26] (748,701)<figure  />
+	[27] (748,701)<img  />
+[28] (748,773)<a class='block one-line max-w-36'>ZVM />
+[29] (881,701)<figure  />
+	[30] (881,701)<img  />
+[31] (881,773)<a class='block one-line max-w-36'>PeerDrop />
+[32] (351,971)<figure  />
+	[33] (351,971)<img  />
+[34] (531,892)<div class='dropdown-trigger' />
+[35] (483,971)<figure  />
+	[36] (483,971)<img  />
+ZimaCube 2 Pioneer Program Is Live — 10 Free Units + Pre-Order Now Open
+Zima Hardware 3D Printed Setup Challenge is now live🔥 Win ZimaCube 2!
+Chinese New Year Holiday Break + Giveaway Time 🎁
+ZimaOS v1.5.4 Released: Encrypted Folders Introduced, Storage and File Experience Upgraded
+📢 IW Biweekly #2: ZimaBoard Builds, ZORM Open Source, and ZimaOS Updates
+ZimaBoard 2 Pricing Update (Effective Feb 6, 2026)
+📢 IW Biweekly #1: 350TB Build, Alpha Tests & Community Highlights
+Value In, Value Out: IceWhale 2025 Year-End Letter & the Launch of IceWhale Makes Fund
+Holiday Notice: See you back on October 9th!
+[37] (148,980)<a class='intro-text' href='https://community.zimaspace.com/t/introducing-zimaos-1-5-a-simplified-focused-and-open-nas-os/6042'>Introducing ZimaOS 1.5: A Simplified, Focused and Open NAS OS />
+[38] (910,970)<button class='rounded-full relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-2.5 border-1 border-[#333333]/5 hover:border-[#333333]/9 outline-none focus-visible:ring-2 text-surface-900 dark:text-white bg-surface-100 hover:bg-surface-200 active:bg-surface-300 dark:bg-surface-800 dark:hover:bg-surface-700 dark:active:bg-surface-600 focus-visible:ring-primary-500/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[39] (910,970)<span  />
+[40] (940,970)<button class='rounded-full relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-2.5 border-1 border-[#333333]/5 hover:border-[#333333]/9 outline-none focus-visible:ring-2 text-surface-900 dark:text-white bg-surface-100 hover:bg-surface-200 active:bg-surface-300 dark:bg-surface-800 dark:hover:bg-surface-700 dark:active:bg-surface-600 focus-visible:ring-primary-500/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[41] (940,970)<span  />
+[42] (970,970)<button class='rounded-full relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-2.5 border-1 border-[#333333]/5 hover:border-[#333333]/9 outline-none focus-visible:ring-2 text-surface-900 dark:text-white bg-surface-100 hover:bg-surface-200 active:bg-surface-300 dark:bg-surface-800 dark:hover:bg-surface-700 dark:active:bg-surface-600 focus-visible:ring-primary-500/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[43] (970,970)<span  />
+[44] (283,147)<div  />
+	[45] (245,147)<img  />
+	[46] (273,147)<div  />
+		[47] (273,147)<div >dean />
+[48] (283,235)<div  />
+	[49] (267,235)<span >General />
+[50] (283,288)<div  />
+	[51] (268,288)<span >Storage />
+[52] (283,342)<div  />
+	[53] (269,342)<span >Network />
+[54] (283,396)<div  />
+	[55] (263,396)<span >Apps />
+[56] (241,867)<button class='rounded relative items-center inline-flex text-center align-bottom justify-center flex-row text-base p-2 gap-2 rounded-2.5 border-1 outline-none focus-visible:ring-2 bg-transparent border-transparent text-surface-900 dark:text-surface-0 hover:bg-surface-800/10 active:bg-surface-800/20 focus-visible:ring-surface-900/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[57] (241,867)<span  />
+General
+[58] (761,138)<button aria-label='Check' class='flex-shrink-0 relative items-center inline-flex text-center align-bottom justify-center flex-row text-base p-2 gap-2 rounded-2.5 border-1 outline-none focus-visible:ring-2 bg-transparent border-transparent text-surface-900 dark:text-surface-0 hover:bg-surface-800/10 active:bg-surface-800/20 focus-visible:ring-surface-900/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[59] (761,138)<span  />
+[60] (560,532)<div class='flex-grow overflow-y-scroll border rounded-xl bg-white p-3' id='settings-page' scrollable='true' />
+	Get ZimaOS+ for unlimited expansion
+	0/3 Used
+	Member accounts
+	0/4 Used
+	Disks
+	[61] (715,237)<button aria-label='Get ZimaOS+' class='h-7 relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-2.5 border-1 border-[#333333]/5 hover:border-[#333333]/9 outline-none focus-visible:ring-2 text-white bg-primary-500 hover:bg-primary-600 active:bg-primary-700 dark:hover:bg-primary-400 dark:active:bg-primary-300 focus-visible:ring-primary-500/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+		[62] (715,237)<span >Get ZimaOS+ />
+	[63] (486,353)<div class='focus-visible:outline-none' role='button' />
+		[64] (486,353)<div >ZimaOS />
+	[65] (396,403)<button aria-label='Device info' class='h-7 relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-2.5 border-1 border-[#333333]/5 hover:border-[#333333]/9 outline-none focus-visible:ring-2 text-surface-900 dark:text-white bg-surface-100 hover:bg-surface-200 active:bg-surface-300 dark:bg-surface-800 dark:hover:bg-surface-700 dark:active:bg-surface-600 focus-visible:ring-primary-500/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+		[66] (396,403)<span >Device info />
+	ZimaOS
+	v1.5.4
+	Customize your dashboard
+	[67] (418,640)<button aria-label='Change wallpaper' class='w-full mobile:w-fit relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-2.5 border-1 border-[#333333]/5 hover:border-[#333333]/9 outline-none focus-visible:ring-2 text-surface-900 dark:text-white bg-surface-100 hover:bg-surface-200 active:bg-surface-300 dark:bg-surface-800 dark:hover:bg-surface-700 dark:active:bg-surface-600 focus-visible:ring-primary-500/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+		[68] (380,640)<span  />
+		[69] (426,640)<span >Change wallpaper />
+	Language
+	[70] (663,728)<div  />
+		[71] (652,728)<span aria-label='English US' class='leading-5 block flex-auto bg-transparent border-0 text-surface-800 dark:text-white/80 placeholder:text-surface-400 dark:placeholder:text-surface-500 w-[1%] py-1.5 px-3 rounded-none transition duration-200 focus:outline-none focus:shadow-none relative cursor-pointer overflow-hidden overflow-ellipsis whitespace-nowrap appearance-none' role='combobox'>English US />
+		[72] (730,728)<div  />
+	TimeZone
+	[73] (663,816)<div  />
+		[74] (652,816)<span aria-label='(GMT+3) Europe/Istanbul' class='leading-5 block flex-auto bg-transparent border-0 text-surface-800 dark:text-white/80 placeholder:text-surface-400 dark:placeholder:text-surface-500 w-[1%] py-1.5 px-3 rounded-none transition duration-200 focus:outline-none focus:shadow-none relative cursor-pointer overflow-hidden overflow-ellipsis whitespace-nowrap appearance-none' role='combobox'>(GMT+3) Europe/Istanbul />
+		[75] (730,816)<div  />
+	Time Format
+	24-hour format
+	Search Engine
+	DuckDuckGo

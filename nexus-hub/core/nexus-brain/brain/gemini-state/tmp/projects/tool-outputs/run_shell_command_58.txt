@@ -1,0 +1,4 @@
+Output: [feature/ops-discovery 294d9c4] feature: Add project and skill auto-discovery script
+ 1 file changed, 90 insertions(+)
+ create mode 100644 scripts/discovery.py
+Process Group PGID: 5164

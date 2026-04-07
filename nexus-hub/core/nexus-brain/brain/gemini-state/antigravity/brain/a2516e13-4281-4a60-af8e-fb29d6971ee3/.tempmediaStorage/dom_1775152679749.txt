@@ -1,0 +1,236 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (15,24)<ha-svg-icon  />
+Home Assistant
+[1] (69,73)<ha-md-list-item class='  ' />
+	[2] (15,73)<ha-svg-icon  />
+	[3] (80,73)<span >Ana Ekran />
+[4] (69,115)<ha-md-list-item class='  ' />
+	[5] (15,115)<ha-svg-icon  />
+	[6] (80,115)<span >Harita />
+[7] (69,157)<ha-md-list-item class='  ' />
+	[8] (15,157)<ha-svg-icon  />
+	[9] (80,157)<span >Enerji />
+[10] (69,198)<ha-md-list-item class='  ' />
+	[11] (15,198)<ha-svg-icon  />
+	[12] (80,198)<span >Günlük />
+[13] (69,240)<ha-md-list-item class='  ' />
+	[14] (15,240)<ha-svg-icon  />
+	[15] (80,240)<span >Geçmiş />
+[16] (69,282)<ha-md-list-item class='  ' />
+	[17] (15,282)<ha-icon  />
+		[18] (15,282)<ha-svg-icon  />
+	[19] (80,282)<span >HACS />
+[20] (69,323)<ha-md-list-item class='  ' />
+	[21] (15,323)<ha-svg-icon  />
+	[22] (80,323)<span >Medya />
+[23] (69,365)<ha-md-list-item class='  ' />
+	[24] (15,365)<ha-svg-icon  />
+	[25] (80,365)<span >Yapılacaklar listeleri />
+[26] (69,819)<ha-md-list-item class='  ' />
+	[27] (15,819)<ha-svg-icon  />
+	[28] (80,819)<span >Geliştirici araçları />
+[29] (69,861)<ha-md-list-item class='configuration selected' href='/config' />
+	[30] (15,861)<ha-svg-icon  />
+	[31] (80,861)<span >Ayarlar />
+[32] (69,927)<ha-md-list-item class='notifications' />
+	[33] (15,927)<ha-svg-icon  />
+	[34] (80,927)<span >Bildirimler />
+[35] (69,969)<ha-md-list-item class='user ' href='/profile' />
+	[36] (15,969)<ha-user-badge  />
+		[37] (15,969)<div >D />
+	[38] (80,969)<span >Dean />
+[39] (157,24)<a href='/config' />
+	[40] (157,24)<ha-icon-button-arrow-prev  />
+		[41] (157,24)<ha-icon-button  />
+			[42] (157,24)<mwc-icon-button  />
+				[43] (157,24)<ha-svg-icon  />
+[44] (471,24)<a href='/config/integrations' />
+	[45] (471,24)<ha-tab  />
+		[46] (471,24)<div aria-label='Entegrasyonlar' role='tab' />
+			[47] (471,24)<span >Entegrasyonlar />
+[48] (544,24)<a href='/config/devices' />
+	[49] (544,24)<ha-tab  />
+		[50] (544,24)<div aria-label='Cihazlar' role='tab' />
+			[51] (544,24)<span >Cihazlar />
+[52] (606,24)<a href='/config/entities' />
+	[53] (606,24)<ha-tab  />
+		[54] (606,24)<div aria-label='Varlıklar' role='tab' />
+			[55] (606,23)<span >Varlıklar />
+[56] (673,24)<a href='/config/helpers' />
+	[57] (673,24)<ha-tab  />
+		[58] (673,24)<div aria-label='Yardımcılar' role='tab' />
+			[59] (673,24)<span >Yardımcılar />
+[60] (270,122)<div class='mdc-data-table__header-cell  sortable ' role='columnheader' title='Varlık' />
+	[61] (185,121)<ha-svg-icon  />
+	[62] (202,122)<span >Varlık />
+[63] (467,122)<div class='mdc-data-table__header-cell  sortable not-sorted ' role='columnheader' title='Cihaz' />
+	[64] (385,122)<span >Cihaz />
+[65] (663,122)<div class='mdc-data-table__header-cell  sortable not-sorted ' role='columnheader' title='Alan' />
+	[66] (580,122)<span >Alan />
+[67] (859,122)<div class='mdc-data-table__header-cell  sortable not-sorted ' role='columnheader' title='Entegrasyon' />
+	[68] (788,122)<span >Entegrasyon />
+[69] (978,122)<div class='mdc-data-table__header-cell  mdc-data-table__header-cell--icon sortable not-sorted ' role='columnheader' title='Durum' />
+	[70] (978,122)<span >Durum />
+[71] (569,173)<div class='mdc-data-table__cell group-header' role='cell'>Backup />
+	[72] (157,178)<ha-icon-button  />
+		[73] (157,178)<mwc-icon-button  />
+			[74] (157,178)<ha-svg-icon  />
+[75] (569,225)<div class='mdc-data-table__row  clickable ' role='row' />
+	[76] (155,225)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell' />
+		[77] (157,224)<ha-state-icon  />
+			[78] (157,224)<ha-icon  />
+				[79] (157,225)<ha-svg-icon  />
+	[80] (270,225)<div class='mdc-data-table__cell   ' role='rowheader'>Son otomatik yedekleme girişimi />
+	[81] (467,225)<div class='mdc-data-table__cell   ' role='cell'>Backup />
+	[82] (663,225)<div class='mdc-data-table__cell   ' role='cell'>— />
+	[83] (859,225)<div class='mdc-data-table__cell   ' role='cell'>Backup />
+	[84] (978,225)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell'>— />
+[85] (569,278)<div class='mdc-data-table__cell group-header' role='cell'>BY-011e61b68cd0 2D10 />
+	[86] (157,283)<ha-icon-button  />
+		[87] (157,283)<mwc-icon-button  />
+			[88] (157,283)<ha-svg-icon  />
+[89] (569,329)<div class='mdc-data-table__row  clickable ' role='row' />
+	[90] (155,330)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell' />
+		[91] (157,329)<ha-state-icon  />
+			[92] (157,329)<ha-icon  />
+				[93] (157,330)<ha-svg-icon  />
+	[94] (270,330)<div class='mdc-data-table__cell   ' role='rowheader'>Tahmini mesafe />
+	[95] (467,330)<div class='mdc-data-table__cell   ' role='cell'>BY-011e61b68cd0 2D10 />
+	[96] (663,330)<div class='mdc-data-table__cell   ' role='cell'>— />
+	[97] (859,330)<div class='mdc-data-table__cell   ' role='cell'>iBeacon Tracker />
+	[98] (978,330)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell' />
+		[99] (978,330)<div  />
+			[100] (978,330)<ha-svg-icon  />
+[101] (569,382)<div class='mdc-data-table__cell group-header' role='cell'>BY-011e61b68cd0 3EAA />
+	[102] (157,387)<ha-icon-button  />
+		[103] (157,387)<mwc-icon-button  />
+			[104] (157,387)<ha-svg-icon  />
+[105] (569,434)<div class='mdc-data-table__row  clickable ' role='row' />
+	[106] (155,434)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell' />
+		[107] (157,433)<ha-state-icon  />
+			[108] (157,433)<ha-icon  />
+				[109] (157,434)<ha-svg-icon  />
+	[110] (270,434)<div class='mdc-data-table__cell   ' role='rowheader'>Tahmini mesafe />
+	[111] (467,434)<div class='mdc-data-table__cell   ' role='cell'>BY-011e61b68cd0 3EAA />
+	[112] (663,434)<div class='mdc-data-table__cell   ' role='cell'>— />
+	[113] (859,434)<div class='mdc-data-table__cell   ' role='cell'>iBeacon Tracker />
+	[114] (978,434)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell' />
+		[115] (978,434)<div  />
+			[116] (978,434)<ha-svg-icon  />
+[117] (569,486)<div class='mdc-data-table__cell group-header' role='cell'>BY-011e61b68cd0 7ADC />
+	[118] (157,491)<ha-icon-button  />
+		[119] (157,491)<mwc-icon-button  />
+			[120] (157,491)<ha-svg-icon  />
+[121] (569,538)<div class='mdc-data-table__row  clickable ' role='row' />
+	[122] (155,538)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell' />
+		[123] (157,537)<ha-state-icon  />
+			[124] (157,537)<ha-icon  />
+				[125] (157,538)<ha-svg-icon  />
+	[126] (270,538)<div class='mdc-data-table__cell   ' role='rowheader'>Tahmini mesafe />
+	[127] (467,538)<div class='mdc-data-table__cell   ' role='cell'>BY-011e61b68cd0 7ADC />
+	[128] (663,538)<div class='mdc-data-table__cell   ' role='cell'>— />
+	[129] (859,538)<div class='mdc-data-table__cell   ' role='cell'>iBeacon Tracker />
+	[130] (978,538)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell' />
+		[131] (978,538)<div  />
+			[132] (978,538)<ha-svg-icon  />
+[133] (569,591)<div class='mdc-data-table__cell group-header' role='cell'>BY-011e61b68cd0 959B />
+	[134] (157,596)<ha-icon-button  />
+		[135] (157,596)<mwc-icon-button  />
+			[136] (157,596)<ha-svg-icon  />
+[137] (569,642)<div class='mdc-data-table__row  clickable ' role='row' />
+	[138] (155,643)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell' />
+		[139] (157,642)<ha-state-icon  />
+			[140] (157,642)<ha-icon  />
+				[141] (157,643)<ha-svg-icon  />
+	[142] (270,643)<div class='mdc-data-table__cell   ' role='rowheader'>Tahmini mesafe />
+	[143] (467,643)<div class='mdc-data-table__cell   ' role='cell'>BY-011e61b68cd0 959B />
+	[144] (663,643)<div class='mdc-data-table__cell   ' role='cell'>— />
+	[145] (859,643)<div class='mdc-data-table__cell   ' role='cell'>iBeacon Tracker />
+	[146] (978,643)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell' />
+		[147] (978,643)<div  />
+			[148] (978,643)<ha-svg-icon  />
+[149] (569,695)<div class='mdc-data-table__cell group-header' role='cell'>S4b65eca4af14f603C 0FB4 />
+	[150] (157,700)<ha-icon-button  />
+		[151] (157,700)<mwc-icon-button  />
+			[152] (157,700)<ha-svg-icon  />
+[153] (569,747)<div class='mdc-data-table__row  clickable ' role='row' />
+	[154] (155,747)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell' />
+		[155] (157,746)<ha-state-icon  />
+			[156] (157,746)<ha-icon  />
+				[157] (157,747)<ha-svg-icon  />
+	[158] (270,747)<div class='mdc-data-table__cell   ' role='rowheader'>Tahmini mesafe />
+	[159] (467,747)<div class='mdc-data-table__cell   ' role='cell'>S4b65eca4af14f603C 0FB4 />
+	[160] (663,747)<div class='mdc-data-table__cell   ' role='cell'>— />
+	[161] (859,747)<div class='mdc-data-table__cell   ' role='cell'>iBeacon Tracker />
+	[162] (978,747)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell' />
+		[163] (978,747)<div  />
+			[164] (978,747)<ha-svg-icon  />
+[165] (569,799)<div class='mdc-data-table__cell group-header' role='cell'>S6911a4ae3fcdf52bC FD64 />
+	[166] (157,805)<ha-icon-button  />
+		[167] (157,805)<mwc-icon-button  />
+			[168] (157,805)<ha-svg-icon  />
+[169] (569,851)<div class='mdc-data-table__row  clickable ' role='row' />
+	[170] (155,851)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell' />
+		[171] (157,850)<ha-state-icon  />
+			[172] (157,850)<ha-icon  />
+				[173] (157,851)<ha-svg-icon  />
+	[174] (270,851)<div class='mdc-data-table__cell   ' role='rowheader'>Tahmini mesafe />
+	[175] (467,851)<div class='mdc-data-table__cell   ' role='cell'>S6911a4ae3fcdf52bC FD64 />
+	[176] (663,851)<div class='mdc-data-table__cell   ' role='cell'>— />
+	[177] (859,851)<div class='mdc-data-table__cell   ' role='cell'>iBeacon Tracker />
+	[178] (978,851)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell' />
+		[179] (978,851)<div  />
+			[180] (978,851)<ha-svg-icon  />
+[181] (569,904)<div class='mdc-data-table__cell group-header' role='cell'>Sun />
+	[182] (157,909)<ha-icon-button  />
+		[183] (157,909)<mwc-icon-button  />
+			[184] (157,909)<ha-svg-icon  />
+[185] (569,955)<div class='mdc-data-table__row  clickable ' role='row' />
+	[186] (155,956)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell' />
+		[187] (157,955)<ha-state-icon  />
+			[188] (157,955)<ha-icon  />
+				[189] (157,956)<ha-svg-icon  />
+	[190] (270,956)<div class='mdc-data-table__cell   ' role='rowheader'>Sonraki gece yarısı />
+	[191] (467,956)<div class='mdc-data-table__cell   ' role='cell'>Sun />
+	[192] (663,956)<div class='mdc-data-table__cell   ' role='cell'>— />
+	[193] (859,956)<div class='mdc-data-table__cell   ' role='cell'>Güneş />
+	[194] (978,956)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell'>— />
+[195] (171,73)<ha-assist-chip  />
+	[196] (171,73)<div  />
+		[197] (171,73)<button class='primary action' id='button'>Filtreler />
+			Filtreler
+			[198] (171,73)<span  />
+1
+[199] (213,73)<ha-assist-chip  />
+	[200] (213,73)<div  />
+		[201] (213,73)<button class='primary action' id='button' />
+			[202] (213,73)<span  />
+[203] (519,73)<ha-outlined-field  />
+	[204] (519,73)<div  />
+		[205] (519,73)<input class='input' placeholder='65 ara  entities ' />
+[206] (242,73)<ha-svg-icon class='prefix' />
+[207] (796,73)<ha-icon-button  />
+	[208] (796,73)<mwc-icon-button  />
+		[209] (796,73)<ha-svg-icon  />
+[210] (854,73)<ha-assist-chip  />
+	[211] (854,73)<div  />
+		[212] (854,73)<button class='primary action' id='button'>Gruplandır:  Cihaz />
+			Gruplandır:  Cihaz
+			[213] (854,73)<span  />
+	[214] (884,73)<ha-svg-icon  />
+[215] (933,73)<ha-assist-chip  />
+	[216] (933,73)<div  />
+		[217] (933,73)<button class='primary action' id='button'>Sırala:  Varlık />
+			Sırala:  Varlık
+			[218] (933,73)<span  />
+	[219] (955,73)<ha-svg-icon  />
+[220] (982,73)<ha-assist-chip  />
+	[221] (982,73)<div  />
+		[222] (982,73)<button class='primary action' id='button' />
+			[223] (982,73)<span  />
+[224] (981,24)<ha-svg-icon  />
+
+</current_dom>

@@ -1,0 +1,12 @@
+# Task Checklist
+
+- [ ] Open http://localhost:5000 and Login (student/123)
+- [ ] Navigate to /week/1
+- [ ] Verify vocabulary cards (Turkish, Okunuş, Heceleme)
+- [ ] Screenshot Week 1 vocabulary
+- [ ] Long-press "hello" and observe Letter Visualizer
+- [ ] Screenshot Letter Visualizer
+- [ ] Navigate to /week/2
+- [ ] Verify colored words and detailed data
+- [ ] Verify "birthday party" phonetics/syllables
+- [ ] Check console errors

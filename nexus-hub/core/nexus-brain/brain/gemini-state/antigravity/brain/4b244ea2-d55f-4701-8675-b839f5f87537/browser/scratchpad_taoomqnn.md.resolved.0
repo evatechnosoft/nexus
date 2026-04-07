@@ -1,0 +1,13 @@
+# Task: Verify Food Delivery Mock Redesign
+
+## Checklist
+- [ ] Open `file:///C:/projects/food-delivery-mock/index.html`
+- [ ] Verify Turkish by default
+- [ ] Toggle Dark Mode (moon icon) and screenshot
+- [ ] Toggle Language (EN button) and screenshot
+- [ ] Verify English text: "Discover your favorite food." & Navbar
+- [ ] Switch back to Light Mode and Turkish
+- [ ] Summarize appearance and functionality
+
+## Findings
+- 

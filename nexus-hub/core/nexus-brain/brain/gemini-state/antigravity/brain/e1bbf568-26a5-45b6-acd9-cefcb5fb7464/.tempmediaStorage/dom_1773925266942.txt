@@ -1,0 +1,21 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Enter your  link
+Enter your link in the generator.
+Generate  premium links
+Click on
+Get Premium Link
+button to continue
+Generated link is ready
+Once your resource is unrestricted, we will grant you a  downloadable link
+OkDebrid premium link generator
+OkDebrid offers a free and unlimited premium link generator solution that helps users around the world to download and grab premium links without annoying speed throttling, file size limitations or waiting limits. With OkDebrid you will be able to relish the most powerful premium downloader tool available on the internet, because our free leech will help you to download all your files with the advantage of premium features. The best thing is that OkDebrid is available from anywhere because our premium leecher works online on the cloud, all you need is a compatible web browser to enjoy our suite of download tools.
+Features
+OkDebrid premium link generator is free, unlimited and secure.
+Download your files at max full speed. 100% unfastened!
+We do give support through email in case you have problems.
+We don't have any kind of file size restrictions, no matter the size of your files.
+
+</current_dom>

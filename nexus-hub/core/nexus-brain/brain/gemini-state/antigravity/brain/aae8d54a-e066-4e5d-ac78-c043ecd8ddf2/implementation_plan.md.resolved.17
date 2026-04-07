@@ -1,0 +1,34 @@
+# Infrastructure Fix: Resolving Read-Only and Permission Denied issues on ZimaOS [FINAL]
+
+## User Review Required
+
+> [!IMPORTANT]
+> ZimaOS seems to mount the container's root filesystem (`/root`, `/var/cache`, etc.) as strictly read-only. We will resolve this by mapping the entire `/root` directory to our host and adding `tmpfs` mounts for restricted system paths. This is the "Nuclear Option" to ensure Coolify can write its SSH keys and temporary files.
+
+## Proposed Changes
+
+### [Component] Coolify V4 Infrastructure (DeanOS)
+
+#### [MODIFY] [docker-compose.yml](file:///DATA/AppData/coolify-v4/docker-compose.yml)
+- **Volumes:** 
+    - Replace the partial `./ssh-root:/root/.ssh` with a full `./ssh-root:/root` mapping.
+    - Add `tmpfs` for `/tmp` and `/var/cache/nginx`.
+- **User:** Maintain `user: "0:0"` (root) to ensure permission inheritance.
+
+#### [EXECUTE] [Server Commands]
+1. **Force Host Writable:** `sudo chmod -R 777 /DATA/AppData/coolify-v4/ssh-root`.
+2. **Stack Nuclear Restart:** `docker compose down && docker compose up -d`.
+
+## Open Questions
+
+> [!NOTE]
+> - Hocam, bu değişiklikten sonra SSH anahtarı isminin ne olduğunun önemi kalmayacak, sistem her türlü yazabilecek. Ama `deanos` ismini Coolify içinde konfigüre edebiliyorsak onu da yaparız.
+
+## Verification Plan
+
+### Automated Verification
+- We will monitor the `coolify-v4` logs for any further `tee` or `permission denied` errors during Git/SSH operations.
+- We will check if the `it-inventory` status turns GREEN (Healthy) in the Coolify UI.
+
+### Manual Verification
+- User to re-attempt the "Save Key" or "Deploy" action in the Coolify dashboard.

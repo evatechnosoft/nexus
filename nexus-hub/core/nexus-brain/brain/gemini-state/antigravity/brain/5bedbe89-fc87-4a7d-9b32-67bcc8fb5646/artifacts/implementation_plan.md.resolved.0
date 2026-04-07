@@ -1,0 +1,40 @@
+# Soru Bankası Projesi - Tek Tıkla Kurulum Planı
+
+Bu plan, `setup.txt` dosyasındaki klasör yapısını ve `code.txt` dosyasındaki (ancak bozuk olan) kod parçacıklarını birleştirerek, projenin hem Frontend (Flutter) hem de Backend (Node.js) kısımlarını tek seferde kuracak bir `setup.ps1` dosyası oluşturmayı hedefler.
+
+## Kullanıcı İncelemesi Gerekli
+
+> [!IMPORTANT]
+> `code.txt` dosyasındaki bazı kod parçaları bozulmuş (satırlar karışmış veya eksik). Bu kodları temizleyip, eksik kısımları Flutter ve Node.js standartlarına göre tamamlayarak yerleştireceğim.
+
+> [!WARNING]
+> Kurulum scripti, sisteminizde `flutter`, `node`, `npm` ve `gh` (GitHub CLI) kurulu olduğunu varsayar. Eğer eksikse script bunları raporlayacaktır.
+
+## Önerilen Değişiklikler
+
+### Kurulum Scripti
+Yeni bir `setup.ps1` dosyası oluşturulacak. Bu script şu işlemleri yapacak:
+1. Proje ana dizinini oluşturacak (`SoruBankasi`).
+2. **Frontend (Flutter)**:
+   - `flutter create` ile projeyi başlatacak.
+   - `setup.txt` içerisinde belirtilen tüm ekran klasörlerini (`lib/screens/...`) oluşturacak.
+   - `pubspec.yaml` ve diğer kod dosyalarını (`main.dart`, modeller, servisler) doğru içeriklerle oluşturacak.
+3. **Backend (Node.js)**:
+   - `backend` klasörü oluşturup `npm init` yapacak.
+   - Gerekli paketleri (`express`, `firebase-admin`, `openai`, `multer`, `cors` vb.) yükleyecek.
+   - `server.js` ve rotaları (`routes/`) oluşturacak.
+4. **GitHub**:
+   - Eğer istenirse projeyi GitHub'a pushlayacak.
+
+### [NEW] [setup.ps1](file:///C:/Users/Deacjx/.gemini/antigravity/brain/5bedbe89-fc87-4a7d-9b32-67bcc8fb5646/artifacts/setup.ps1)
+Bu dosya projenin kalbi olacak ve her şeyi otomatik kuracak.
+
+## Doğrulama Planı
+
+### Otomatik Testler
+- Scriptin hata almadan tamamlandığı kontrol edilecek.
+- `flutter pub get` ve `npm install` komutlarının başarısı doğrulanacak.
+
+### Manuel Doğrulama
+- Oluşturulan Flutter projesinin `lib` yapısı `setup.txt` ile karşılaştırılacak.
+- Kodların syntax (yazım) hataları içermediği kontrol edilecek.

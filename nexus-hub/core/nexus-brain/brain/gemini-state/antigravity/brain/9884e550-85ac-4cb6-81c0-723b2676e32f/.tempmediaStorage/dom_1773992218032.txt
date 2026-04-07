@@ -1,0 +1,30 @@
+[0] (300,128)<button class='back-btn'>← Geri Dön />
+Hafta 01: Welcome!
+İlk gün — selamlaşma, sayılar, yaş
+📚 Kitap Referansları
+Student Book:
+Sayfa 4-7
+🗝️ Anahtar Kelimeler (Vocabulary)
+🎯
+Tıkla:
+Okunuşunu dinle | 🖱️
+Basılı Tut:
+Harf harf kodlamasını dinle
+[1] (340,669)<div  />
+	[2] (340,666)<div >hello />
+[3] (500,669)<div  />
+	[4] (500,666)<div >goodbye />
+[5] (660,669)<div  />
+	[6] (660,666)<div >teacher />
+[7] (340,792)<div  />
+	[8] (340,789)<div >girl />
+[9] (500,792)<div  />
+	[10] (500,789)<div >boy />
+[11] (660,792)<div  />
+	[12] (660,789)<div >good />
+[13] (340,916)<div  />
+	[14] (340,912)<div >one />
+[15] (500,916)<div  />
+	[16] (500,912)<div >two />
+[17] (660,916)<div  />
+	[18] (660,912)<div >three />

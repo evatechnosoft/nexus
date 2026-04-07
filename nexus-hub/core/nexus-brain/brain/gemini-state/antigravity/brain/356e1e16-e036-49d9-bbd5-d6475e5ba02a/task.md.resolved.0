@@ -1,0 +1,5 @@
+# Task: Fix syntax error in providers_test.dart
+
+- [ ] Analyze the code around line 500 in `providers_test.dart` [/]
+- [ ] Fix the missing comma or syntax error [ ]
+- [ ] Verify the fix with `flutter analyze` [ ]

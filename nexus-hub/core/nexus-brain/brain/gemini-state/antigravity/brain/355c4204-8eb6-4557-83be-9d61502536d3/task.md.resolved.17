@@ -1,0 +1,14 @@
+# Task: Docker Deployment Transition
+
+- [x] Planning & Infrastructure
+    - [x] Analyze [server.js](file:///c:/projects/Layers/LayersupCom_v2/server.js) and [package.json](file:///c:/projects/Layers/LayersupCom_v2/package.json)
+    - [x] Create [implementation_plan.md](file:///C:/Users/Deacjx/.gemini/antigravity/brain/355c4204-8eb6-4557-83be-9d61502536d3/implementation_plan.md) for Docker
+    - [x] Create [Dockerfile](file:///c:/projects/Layers/LayersupCom_v2/Dockerfile) and [.dockerignore](file:///c:/projects/Layers/LayersupCom_v2/.dockerignore)
+- [x] Initial Docker Transition
+    - [x] Create [Dockerfile](file:///c:/projects/Layers/LayersupCom_v2/Dockerfile) and [.dockerignore](file:///c:/projects/Layers/LayersupCom_v2/.dockerignore)
+    - [x] Update [azure-pipelines-1.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-1.yml)
+    - [x] Push initial Docker configuration
+- [/] Debugging Build Failure
+    - [x] Check [package-lock.json](file:///c:/projects/Layers/LayersupCom_v2/package-lock.json) and local dry-run
+    - [x] Update to [dev.dockerfile](file:///c:/projects/Layers/LayersupCom_v2/dev.dockerfile) and switch to `npm install`
+    - [ ] Verify build with user and analyze new logs if needed

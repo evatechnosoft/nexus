@@ -1,0 +1,29 @@
+<tool_output_masked>
+Output: 2026-04-03 13:06:00,268 - INFO - Scanning C:/projects for projects...
+Traceback (most recent call last):
+  File "C:\Users\Deacjx\.platformio\penv\Lib\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\Deacjx\.platformio\penv\Lib\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: projects
+
+The above exception was the direct cause of the following exception:
+
+
+... [38 lines omitted] ...
+
+    self.dialect.do_execute(
+  File "C:\Users\Deacjx\.platformio\penv\Lib\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute 
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: projects
+[SQL: SELECT projects.id AS projects_id, projects.name AS projects_name, projects.root_path AS projects_root_path, projects.description AS projects_description, projects.git_url AS projects_git_url, projects.is_active AS projects_is_active, projects.created_at AS projects_created_at
+FROM projects
+WHERE projects.name = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('Agentic-cooding-setup', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Exit Code: 1
+Process Group PGID: 20036
+
+Output too large. Full output available at: C:\Users\Deacjx\.gemini\tmp\projects\tool-outputs\session-a366de38-25fd-4d3a-9bce-f8a0bc9646e6\run_shell_command_run_shell_command_1775210757862_0_qbhbpj.txt
+</tool_output_masked>

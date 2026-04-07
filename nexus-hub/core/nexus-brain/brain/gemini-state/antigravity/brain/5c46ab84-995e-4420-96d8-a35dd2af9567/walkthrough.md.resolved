@@ -1,0 +1,62 @@
+# Yemek Sipariş Sitesi Model & Mock Design
+
+Bu rapor, proje workspace'indeki standartlara uygun olarak (@architect, @ux-ui-designer, @mocksite-builder ajanları ve ilgili skiller kullanılarak) hazırlanmış bir yemek sipariş platformu modelini ve görsel tasarımlarını sunar.
+
+## 🏗️ Mimari Model (@architect)
+**Skill:** `bmad-create-architecture`
+
+### Core Entities (Varlıklar)
+1. **User (Kullanıcı):** Müşteri, Restoran Sahibi ve Kurye rolleri.
+2. **Restaurant (Restoran):** İsim, logo, lokasyon, puanlama, çalışma saatleri.
+3. **Category (Kategori):** Burger, Pizza, Ev Yemekleri vb.
+4. **Product (Menü Öğesi):** İsim, içerik, fiyat, opsiyonlar (sos, içecek).
+5.- **Order (Sipariş):** Sepet içeriği, toplam tutar, durum.
+- **Payment (Ödeme):** Online Kredi Kartı veya Kapıda Ödeme.
+- **Delivery (Teslimat):** Kurye-sipariş eşleşmesi.
+
+### Veritabanı Şeması (Basitleştirilmiş)
+```mermaid
+erDiagram
+    USER ||--o{ ORDER : "verir"
+    RESTAURANT ||--o{ PRODUCT : "sahiptir"
+    CATEGORY ||--o{ PRODUCT : "içerir"
+    ORDER ||--|{ ORDER_ITEM : "içerir"
+    PRODUCT ||--o{ ORDER_ITEM : "seçilir"
+    ORDER ||--|| PAYMENT : "ödenir"
+}
+```
+
+---
+
+## 🎨 Görsel Tasarım (@ux-ui-designer)
+**Skill:** `interface-design`
+
+Tasarım felsefesi olarak **Modern Premium**, **Glassmorphism** ve **Vibrant Colors** (Canlı Renkler) benimsenmiştir. Ana renk iştah açıcı "Canlı Turuncu" (#FF6B00) olarak belirlenmiştir.
+
+````carousel
+![Landing Page Design](food_delivery_landing_page_1774619739787.png)
+<!-- slide -->
+![Restaurant Menu Design](food_delivery_restaurant_menu_1774619800708.png)
+<!-- slide -->
+![Checkout Flow Design](food_delivery_checkout_summary_1774619859389.png)
+````
+
+---
+
+## 🚀 Sayfa Yapısı & Mock Planı (@mocksite-builder)
+**Skill:** `solid`
+
+1. **Ana Sayfa:** Arama, Popüler Restoranlar, Mutfak Kategorileri.
+2. **Restoran Detay:** Menü gruplama (Başlangıçlar, Ana Yemekler, Tatlılar).
+3. **Sepet:** Ürün ekleme/çıkarma, tutar hesaplama.
+4. **Ödeme:** Adres seçimi, ödeme yöntemi, sipariş onayı.
+
+---
+
+## 🛠️ Teknik Standartlar
+- **Frontend:** Next.js 14, Tailwind CSS, Framer Motion.
+- **Backend:** Supabase / PostgreSQL.
+- **Agent Sorumluluk Tablosu:**
+    - `@architect`: Mimari sınırlar ve ADR kararları.
+    - `@ux-ui-designer`: Görsel hiyerarşi ve animasyon planı.
+    - `@mocksite-builder`: Sayfa ağacı ve komponent backlogu.

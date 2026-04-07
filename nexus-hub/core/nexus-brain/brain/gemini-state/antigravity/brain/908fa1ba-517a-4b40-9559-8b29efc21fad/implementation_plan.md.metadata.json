@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary": "Implementation plan for adding JWT-based user authentication to the `casatozima` Flask application. This includes updating the `User` model, adding authentication routes, and securing API endpoints.",
+  "updatedAt": "2026-03-24T00:20:44.069430200Z"
+}

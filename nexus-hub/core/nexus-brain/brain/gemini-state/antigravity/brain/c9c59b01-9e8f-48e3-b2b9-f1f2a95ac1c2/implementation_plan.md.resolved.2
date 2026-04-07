@@ -1,0 +1,50 @@
+# Dashboard Özelleştirme ve Sağlık Verileri Entegrasyonu Planı
+
+Bu plan, kullanıcının Dashboard öğelerini seçebilmesini, sağlık verilerinin (adım, kalp hızı) görselleştirilmesini ve ayarlar menüsündeki görünüm seçimlerinin çalışır hale getirilmesini kapsar.
+
+## User Review Required
+
+> [!IMPORTANT]
+> - Health permissions (Google Fit / Health Connect) on Android require specific configurations in `AndroidManifest.xml` and `build.gradle`.
+> - The 'Matching' step will be implemented as a 'Sync & Grant' button on the Dashboard.
+
+## Proposed Changes
+
+### [Component] State Management & Theme
+
+#### [MODIFY] [AppState](file:///c:/projects/SportApp/mobile_app/lib/main.dart)
+- `themeStyle` ve `dashboardOrder` durumlarını ekle.
+- Ayarları `FlutterSecureStorage` üzerinden yükle ve kaydet.
+
+#### [MODIFY] [AppTheme](file:///c:/projects/SportApp/mobile_app/lib/theme.dart)
+- `neoDecoration`, `glassDecoration` ve `flatDecoration` yardımcılarını ekle.
+- Seçilen stile göre bileşenlerin görünümünü dinamikleştir.
+
+### [Component] Health & Dashboard
+
+#### [MODIFY] [HealthService](file:///c:/projects/SportApp/mobile_app/lib/services/health_service.dart)
+- `fetchTodayStats` metodunu ekle (UI'da gösterilmek üzere steps, hr_avg vb. dönecek).
+
+#### [MODIFY] [DashboardScreen](file:///c:/projects/SportApp/mobile_app/lib/screens/dashboard_screen.dart)
+- Gerçek sağlık verilerini gösteren "Hızlı Bakış" kartlarını ekle.
+- `ReorderableListView` veya bir 'Customize' modu ile öğelerin sırasını/görünürlüğünü ayarlanabilir yap.
+- 'Eşleştirme' (Sync Health) butonu ekle.
+
+### [Component] Settings & UI Fixes
+
+#### [MODIFY] [SettingsScreen](file:///c:/projects/SportApp/mobile_app/lib/screens/settings_screen.dart)
+- Görünüm seçimlerini (`_themeOption`) `onTap` ile tetiklenebilir yap.
+- Seçimin `AppState` üzerinden tüm uygulamaya yayılmasını sağla.
+
+## Open Questions
+
+- Dashboard öğeleri için 'aktif/pasif' seçimi mi istersiniz yoksa sadece sıralama mı? (Kullanıcı 'aktif seçilebilir olsun' dediği için ikisini de desteklemeyi planlıyorum).
+
+## Verification Plan
+
+### Automated Tests
+- `AppState`'in tema değişimlerini doğru şekilde `notifyListeners` yapıp yapmadığı kontrol edilecek.
+
+### Manual Verification
+- Bir telefonda/emülatörde tema seçiminin anında yansıyıp yansımadığı test edilecek.
+- Sağlık izinleri uyarısının çıkıp çıkmadığı ve verilerin dashboard'a gelip gelmediği kontrol edilecek.

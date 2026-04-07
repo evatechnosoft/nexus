@@ -1,0 +1,6 @@
+{
+  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary": "Plan to automate Git operations (Commit -> Dev -> Test) and local deployment with a single script and a reusable AI workflow.",
+  "updatedAt": "2026-03-29T05:52:09.078807900Z",
+  "requestFeedback": true
+}

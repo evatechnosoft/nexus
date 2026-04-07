@@ -1,0 +1,51 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Last updated: 7:46:40 PM
+Evaiteclabs Infrastructure
+Status Dashboard
+CPU Usage
+%
+Memory
+Disk (DATA)
+9%
+System Uptime
+8 hours, 21 minutes
+[0] (283,406)<a class='service-card' href='http://it.evaitec.com' />
+	[1] (283,374)<div  />
+		[2] (232,374)<div >it inventory />
+		[3] (342,374)<div >online />
+			[4] (325,374)<div  />
+	[5] (283,412)<div >Port: 8001   |   running />
+	[6] (283,442)<div >it.evaitec.com → />
+[7] (500,406)<a class='service-card' href='http://evaitec.com' />
+	[8] (500,374)<div  />
+		[9] (449,374)<div >evaiteclabs />
+		[10] (558,374)<div >online />
+			[11] (542,374)<div  />
+	[12] (500,412)<div >Port: 3001   |   running />
+	[13] (500,442)<div >evaitec.com → />
+[14] (717,406)<a class='service-card' href='http://next.evaitec.com' />
+	[15] (717,374)<div  />
+		[16] (661,374)<div >nextcloud />
+		[17] (775,374)<div >online />
+			[18] (759,374)<div  />
+	[19] (717,412)<div >Port: 80   |   running />
+	[20] (717,442)<div >next.evaitec.com → />
+[21] (283,576)<a class='service-card' href='http://ha.evaitec.com' />
+	[22] (283,544)<div  />
+		[23] (241,544)<div >homeassistant />
+		[24] (342,544)<div >online />
+			[25] (325,544)<div  />
+	[26] (283,583)<div >Port: 8123   |   running />
+	[27] (283,613)<div >ha.evaitec.com → />
+[28] (500,576)<a class='service-card' href='http://status.evaitec.com' />
+	[29] (500,544)<div  />
+		[30] (454,544)<div >uptime kuma />
+		[31] (558,544)<div >online />
+			[32] (542,544)<div  />
+	[33] (500,583)<div >Port: 3002   |   running />
+	[34] (500,613)<div >status.evaitec.com → />
+
+</current_dom>

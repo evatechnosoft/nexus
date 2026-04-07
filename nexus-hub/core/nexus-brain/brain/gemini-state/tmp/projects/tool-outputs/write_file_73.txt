@@ -1,0 +1,9 @@
+<tool_output_masked>
+{
+  "output": "Successfully created and wrote to new file: C:\\projects\\agentops-nexus\\templates\\dashboard_ops.html. Here is the updated code:\n<!DOCTYPE html>\r\n<html lang=\"tr\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"vie
+... [TRUNCATED] ...
+üz proje eklenmedi.</td></tr>\r\n                            {% endfor %}\r\n                        </tbody>\r\n                    </table>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</body>\r\n</html>\r\n"
+}
+
+Output too large. Full output available at: C:\Users\Deacjx\.gemini\tmp\projects\tool-outputs\session-a366de38-25fd-4d3a-9bce-f8a0bc9646e6\write_file_write_file_1775210371456_0_rt8dri.txt
+</tool_output_masked>

@@ -1,0 +1,10 @@
+# Cloudflare Tunnel Integration
+
+- [ ] Install `cloudflared` in the WSL environment [/]
+- [ ] Authenticate `cloudflared` with the user's Cloudflare account [ ]
+- [ ] Create a new tunnel for the home server [ ]
+- [ ] Configure the tunnel (config.yml) to route traffic: [ ]
+    - [ ] Root domain -> CasaOS (port 80)
+    - [ ] `api.domain` -> Flask App (port 5001)
+- [ ] Set up the tunnel as a systemd service for persistence [ ]
+- [ ] Verify external access via the new domain [ ]

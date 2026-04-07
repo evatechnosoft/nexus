@@ -1,0 +1,43 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (300,128)<button class='back-btn'>← Geri Dön />
+[1] (720,135)<button class='settings-btn'>⚙️ />
+Hafta 01: Welcome!
+İlk gün — selamlaşma, sayılar, yaş
+📚 Kitap Referansları
+Student Book:
+Sayfa 4-7
+🗝️ Anahtar Kelimeler (Vocabulary)
+🎯
+Tıkla:
+Okunuşunu dinle | 🖱️
+Basılı Tut:
+Harf harf kodlamasını dinle
+[2] (340,772)<div  />
+	[3] (340,680)<div >hello />
+	[4] (340,732)<div >merhaba />
+	[5] (340,809)<div >[he-low]
+hel-lo />
+		[6] (310,800)<b >🗣️ Okunuş: />
+		[7] (315,833)<b >🧩 Heceleme: />
+[8] (500,772)<div  />
+	[9] (500,680)<div >goodbye />
+	[10] (500,732)<div >hoşça kal />
+	[11] (500,825)<div >[gud-bay]
+good-bye />
+		[12] (469,800)<b >🗣️ Okunuş: />
+		[13] (475,833)<b >🧩 Heceleme: />
+[14] (660,772)<div  />
+	[15] (660,680)<div >teacher />
+	[16] (660,732)<div >öğretmen />
+	[17] (660,809)<div >[tii-çır]
+teach-er />
+		[18] (629,800)<b >🗣️ Okunuş: />
+		[19] (635,833)<b >🧩 Heceleme: />
+[20] (340,981)<div >girl />
+boy
+[21] (660,981)<div >good />
+
+</current_dom>

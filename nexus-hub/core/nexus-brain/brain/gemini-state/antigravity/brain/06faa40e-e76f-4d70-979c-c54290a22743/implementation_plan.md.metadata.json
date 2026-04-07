@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary": "Implementation plan to fix constructor column/parameter mismatch in `Note` and `Task` models by removing redundant manual overrides and letting `freezed` manage the fields.",
+  "updatedAt": "2026-03-21T16:00:50.404421300Z"
+}

@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_TASK",
+  "summary": "Initial task list for fixing deprecated `withOpacity` calls. Individually track the files that need to be updated.",
+  "updatedAt": "2026-03-18T10:32:25.978958400Z"
+}

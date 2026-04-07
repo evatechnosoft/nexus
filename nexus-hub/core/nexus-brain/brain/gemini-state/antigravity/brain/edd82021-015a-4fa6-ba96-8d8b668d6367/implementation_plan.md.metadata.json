@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary": "Implementation plan for a fresh deployment of the IT Inventory V2 application onto the DeanOS server. Details the steps for cloning the repository, configuring the environment, and launching the services via Docker Compose.",
+  "updatedAt": "2026-03-26T09:39:53.230747700Z"
+}

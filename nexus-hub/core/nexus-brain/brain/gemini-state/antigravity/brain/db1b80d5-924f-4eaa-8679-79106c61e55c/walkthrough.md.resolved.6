@@ -1,0 +1,30 @@
+# SportApp Stage 4: AI Zekası ve Tam Güvenlik
+
+SportApp artık sadece veri tutan bir uygulama değil, senin verilerini analiz eden bir **"Akıllı Sağlık Koçu"**! Bu aşamada Gemini PRO zekasını sistemin kalbine yerleştirdik ve backend tarafını en üst düzey güvenlik standartlarına (Input Validation) taşıdık.
+
+## 🤖 AI Sağlık Koçu Yayında!
+
+Yeni eklenen **AI Sağlık Koçu** widget'ı, son 1 haftalık performansını saniyeler içinde analiz eder:
+- **Haftalık Özet:** Antrenman sıklığın, uyku kaliten ve su tüketimin üzerinden genel bir puanlama yapar.
+- **Kişiye Özel Tavsiyeler:** Verilerine dayanarak (örneğin uykun düşükse veya kilon artış eğilimindeyse) önümüzdeki hafta için 3 somut strateji belirler.
+- **Kendi Anahtarını Kullan:** Ayarlar kısmına girdiğin Gemini API anahtarı ile çalışır, böylece tamamen senin kontrolündedir.
+
+### Nasıl Kullanılır?
+Dashboard üzerindeki `🤖 AI Sağlık Koçu` kartına git ve **'Yenile'** butonuna bas. "Analiz ediliyor..." parıltısından (`Shimmer Effect`) sonra koçun sana özel raporunu hazırlayacaktır.
+
+---
+
+## 🛡️ Backend Sertleştirme (Input Validation)
+
+Uygulamanın veri bütünlüğünü ve güvenliğini en üst seviyeye çıkardık:
+- **Hatalı Veri Koruması:** Kilo, uyku süresi veya su bardağı gibi alanlara mantıksız (negatif sayılar, çok yüksek değerler veya metinler) veri girişi API seviyesinde engellendi.
+- **`express-validator` Entegrasyonu:** Tüm kayıt (`Register`) ve giriş (`Login`) işlemleri artık e-posta formatı ve şifre uzunluğu gibi kriterlere göre sıkı bir denetimden geçiyor.
+- **Sistem Kararlılığı:** Hatalı verilerin veritabanına girmesi engellenerek, istatistiklerin ve grafiklerin her zaman doğru kalması garanti altına alındı.
+
+## 🏁 Yapılan İşlemler ve Testler
+- [x] **AI Router:** `routes/ai.js` oluşturuldu ve Gemini API entegrasyonu tamamlandı.
+- [x] **Validation Layer:** `auth.js` ve `sync.js` rotaları için tipli veri kontrolü eklendi.
+- [x] **UI Polish:** Dashboard'a AI kartı ve yükleme animasyonları (`shimmer`) eklendi.
+- [x] **MD to HTML:** AI coach'un verdiği markdown yanıtlarını güzel bir formatta okuyabilmen için render motoru güncellendi.
+
+**Sistemin yeni zekası hazır! Bir sonraki aşamada ne yapalım? Sosyal özellikler mi yoksa daha gelişmiş grafikler mi?** 🚀✨

@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_TASK",
+  "summary": "OpenCode CLI üzerinden agent ekiplerini ve skill'leri kullanma süreci. Ana adımlar: 1. `teams/` ve `skills/` dizinlerinin OpenCode'a tanıtılması (symlink), 2. `@teams/` veya `skill` aracıyla çağırma.",
+  "updatedAt": "2026-03-18T12:29:37.639567300Z"
+}

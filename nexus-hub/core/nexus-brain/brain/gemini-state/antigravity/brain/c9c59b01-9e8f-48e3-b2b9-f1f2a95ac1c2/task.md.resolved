@@ -1,0 +1,7 @@
+- [x] `main.dart`: `AppState` sınıfına `primaryColorValue` eklendi ve persistence sağlandı.
+- [x] `theme.dart`: `AppTheme` sınıfı dinamik birincil rengi (Primary Color) destekleyecek şekilde güncellendi.
+- [x] `settings_screen.dart`: Kullanıcıya 5 premium renk sunan palet UI bölümü eklendi.
+- [x] `dashboard_screen.dart`: Grafikler, ikonlar ve durum göstergeleri dinamik renge geçirildi.
+- [x] `coach_screen.dart` & `chat_screen.dart`: Chat balonları ve butonlar yeni altyapı ile senkronize edildi.
+- [x] Tüm UI bileşenlerinde `AppTheme.primary` referansları `Theme.of(context).primaryColor` ile değiştirildi.
+- [x] Tamamlama ve Walkthrough hazırlandı. ✅

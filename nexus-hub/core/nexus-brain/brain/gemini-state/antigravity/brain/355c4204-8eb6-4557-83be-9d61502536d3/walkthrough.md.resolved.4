@@ -1,0 +1,25 @@
+# Docker Geçişi Tamamlandı
+
+Zip dosyası boyutu ve Azure Build hatalarını aşmak için projeyi tamamen Docker altyapısına geçirdim.
+
+## Yapılan Değişiklikler
+
+### 1. Docker Yapılandırması
+- **[Dockerfile](file:///c:/projects/Layers/LayersupCom_v2/Dockerfile)**: Uygulamayı konteyner içinde çalıştıracak şekilde yapılandırdım.
+- **[.dockerignore](file:///c:/projects/Layers/LayersupCom_v2/.dockerignore)**: `.git` ve zip dosyaları gibi imajı büyüten gereksiz dosyaları dışarıda bıraktım.
+
+### 2. Pipeline Güncellemesi ([azure-pipelines-1.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-1.yml))
+- Build/Archive adımları kaldırıldı; yerine **Docker Build & Push** adımları eklendi.
+- Dağıtım (Deploy) adımı `AzureWebAppContainer` görevine dönüştürüldü.
+
+## Önemli Not: Tamamlamanız Gereken Adımlar
+
+Pipeline'da bazı yerleri placeholder (`YOUR_...`) olarak bıraktım çünkü Azure Container Registry (ACR) bilgilerinize erişimim yok.
+
+**Lütfen Azure DevOps'ta şunları güncelleyin:**
+1. **Service Connection**: Azure DevOps'ta "Project Settings > Service Connections" kısmından bir "Docker Registry" bağlantısı oluşturun (ACR'nizi seçin).
+2. **YAML Değişkenleri**: [azure-pipelines-1.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-1.yml) içindeki şu değişkenleri kendi ACR bilgilerinizle değiştirin:
+   - `dockerRegistryServiceConnection`: Oluşturduğunuz Service Connection'ın ismi.
+   - `containerRegistry`: ACR adresiniz (örnek: `layersacr.azurecr.io`).
+
+Bu ayarları yaptıktan sonra pipeline sorunsuz çalışacak ve uygulama Docker üzerinden çok daha hızlı ve güvenli bir şekilde ayağa kalkacaktır.

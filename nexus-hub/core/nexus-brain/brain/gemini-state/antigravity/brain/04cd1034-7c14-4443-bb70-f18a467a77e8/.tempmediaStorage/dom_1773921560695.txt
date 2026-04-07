@@ -1,0 +1,57 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (238,6)<a href='https://dy.d-ld.net/965ea8e860' title='free download'>English Code British 3 Flashcards />
+-  ISBN: 9781292323640
+English Code British 3 Posters
+[1] (286,65)<a href='https://dy.d-ld.net/aabfc79448' title='free download'>English Code British 3 Assessment Book with Audio />
+-  ISBN: 9781292352435
+English Code British 4 Pupils Book -  ISBN: 9781292352336
+[2] (252,150)<a href='https://dy.d-ld.net/38f0e906b2' title='free download'>English Code British 4 Class Audio Cds />
+[3] (245,179)<a href='https://dy.d-ld.net/8799f4c26f' title='free download'>English Code British 4 Activity Book />
+-  ISBN: 9781292322803
+[4] (261,209)<a href='https://dy.d-ld.net/4e9b16482d' title='free download'>English Code British 4 Activity Book Audio />
+[5] (246,239)<a href='https://dy.d-ld.net/eea0073c05' title='free download'>English Code British 4 Phonics Book />
+-  ISBN: 9781292322605
+[6] (262,268)<a href='https://dy.d-ld.net/befbd47273' title='free download'>English Code British 4 Phonics Book Audio />
+[7] (262,298)<a href='https://dy.d-ld.net/0762446f6a' title='free download'>English Code British 4 Phonics Book Video />
+[8] (250,328)<a href='https://dy.d-ld.net/4509e9800f' title='free download'>English Code British 4 Grammar Book />
+-  ISBN: 9781292354545
+[9] (254,358)<a href='https://dy.d-ld.net/3ac9ae6c6b' title='free download'>English Code British 4 Teachers Edition />
+-  ISBN: 9781292354477
+[10] (238,387)<a href='https://dy.d-ld.net/38f0e906b2' title='free download'>English Code British 4 Flashcards />
+-  ISBN: 9781292323657
+[11] (285,417)<a href='https://dy.d-ld.net/aacb42cf84' title='free download'>English Code British 4 Assessment Book and Audio />
+-  ISBN: 9781292352442
+English Code British 5 Pupils Book -  ISBN: 9781292352343
+[12] (252,501)<a href='https://dy.d-ld.net/75f6e90bf1' title='free download'>English Code British 5 Class Audio Cds />
+[13] (245,531)<a href='https://dy.d-ld.net/9f4a937a0e' title='free download'>English Code British 5 Activity Book />
+-  ISBN: 9781292322834
+[14] (261,561)<a href='https://dy.d-ld.net/02c0e87ee9' title='free download'>English Code British 5 Activity Book Audio />
+[15] (246,590)<a href='https://dy.d-ld.net/7ae83286f1' title='free download'>English Code British 5 Phonics Book />
+-  ISBN: 9781292322636
+[16] (250,620)<a href='https://dy.d-ld.net/cafb40a278' title='free download'>English Code British 5 Grammar Book />
+-  ISBN: 9781292354552
+[17] (254,650)<a href='https://dy.d-ld.net/1fef1f2a84' title='free download'>English Code British 5 Teachers Edition />
+-  ISBN: 9781292354484
+[18] (238,679)<a href='https://dy.d-ld.net/d9aa73496e' title='free download'>English Code British 5 Flashcards />
+-  ISBN: 9781292323664
+English Code British 5 Assessment Book and Audio -  ISBN: 9781292352510
+English Code British 6 Pupils Book -  ISBN: 9781292352350
+[19] (252,793)<a href='https://dy.d-ld.net/ab550922e8' title='free download'>English Code British 6 Class Audio Cds />
+[20] (245,823)<a href='https://dy.d-ld.net/fe1392de59' title='free download'>English Code British 6 Activity Book />
+-  ISBN: 9781292322865
+[21] (261,853)<a href='https://dy.d-ld.net/3227605a31' title='free download'>English Code British 6 Activity Book Audio />
+English Code British 6 Phonics Book
+-  ISBN: 9781292322667
+English Code British 6 Phonics Book Audio
+English Code British 6 Phonics Book Video
+English Code British 6 Grammar Book
+-  ISBN: 9781292354569
+English Code British 6 Teachers Edition
+-  ISBN: 9781292354491
+[22] (975,854)<div  />
+Reklam
+
+</current_dom>

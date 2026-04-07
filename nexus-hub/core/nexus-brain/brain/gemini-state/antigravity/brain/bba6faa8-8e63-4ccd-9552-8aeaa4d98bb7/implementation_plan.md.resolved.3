@@ -1,0 +1,46 @@
+# [ZimaOS] Altyapı Yönetim Standartları (Docker, Coolify, Portainer, Dockhand)
+
+Bu plan, ZimaOS (DeanOS) üzerindeki Docker ekosisteminin karmaşıklığını gidermek, araçların rollerini netleştirmek ve "bozmadan kontrol etme" prensibiyle bir altyapı şartnamesi oluşturmayı amaçlar.
+
+## Kullanıcı İncelemesi Gerekli
+
+- **Araç Rolleri**: Hangi aracın hangi senaryo için öncelikli olacağı konusunda mutabık kalmalıyız.
+- **Port ve Klasör Standartları**: Mevcut port yapısını (örn. Production 9XXX, Test 8XXX) resmileştiriyoruz.
+- **Güvenlik**: Docker Socket (`/var/run/docker.sock`) erişimi olan araçların (Portainer, Dockhand) kullanım kısıtlamaları.
+
+## Önerilen Strateji ve Standartlar (Şartname)
+
+### 1. Araç Kullanım Matrisi (Hangisi Ne İçin?)
+
+| Araç | Birincil Senaryo | Hedef Kitle / Kullanım |
+| :--- | :--- | :--- |
+| **Coolify** | Özel Yazılım Geliştirme (CI/CD) | Git tabanlı projeler (Quiz-Bank, IT-Inventory), Otomatik Buildlar. |
+| **Portainer** | Altyapı ve Alt-Seviye Kontrol | Volume yönetimi, ağ (network) yapılandırması, detaylı konteyner logları. |
+| **Dockhand** | Stack ve Toplu Güncelleme | CasaOS/BigBear ekosistemi uygulamalarının toplu yönetimi ve stack kurulumları. |
+| **CasaOS** | Kullanıcı Dostu Uygulamalar | Nextcloud, Home Assistant gibi hazır "App Store" uygulamaları. |
+
+### 2. Klasör ve Veri Standartları
+- Tüm kalıcı veriler (volumes) `/DATA/AppData/<Uygulama_Adı>` altında tutulmalıdır.
+- Proje kodları `/DATA/projects/<Proje_Adı>` altında tutulmalıdır.
+
+### 3. Port Yapılandırma Kuralı
+- **Production (Canlı)**: 9000 - 9999 arası portlar.
+- **Development/Test**: 8000 - 8999 arası portlar.
+- **Sistem/Altyapı**: 3000 - 3999 arası portlar.
+
+## Uygulama Planı
+
+1. **Rehber Oluşturma**: `infrastructure_standards.md` adında bir ana doküman hazırlayacağız.
+2. **Sağlık Kontrolü**: Mevcut konteynerlerin bu standartlara (özellikle port ve volume) uygunluğunu SSH üzerinden kontrol edeceğiz.
+3. **Optimizasyon**: Çakışan veya verimsiz çalışan bağlantıları tespit edip (bozmadan) düzeltme önerileri sunacağız.
+
+## Açık Sorular
+
+- **[ÖNEMLİ]**: Coolify üzerinden yönetilen uygulamaların Portainer'da görünmesi ama oradan düzenlenmemesi (Coolify state'ini bozmamak için) kuralını netleştirelim mi?
+- **[ÖNEMLİ]**: Mevcut düzende `Dockhand`'i sadece CasaOS stack'leri için mi saklayalım, yoksa genel bir stack yöneticisi olarak mı konumlandıralım?
+
+## Doğrulama Planı
+
+### Manuel Doğrulama
+- `infrastructure_standards.md` dosyasının içeriğinin kullanıcı tarafından onaylanması.
+- Mevcut uygulamaların port listesinin bu standartlara göre revize edilmesi.

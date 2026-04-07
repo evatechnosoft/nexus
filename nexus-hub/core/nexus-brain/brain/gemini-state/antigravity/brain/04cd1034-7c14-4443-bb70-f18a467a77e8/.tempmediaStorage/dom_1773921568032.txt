@@ -1,0 +1,35 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+язык (language): английский (American and British English)
+формат (format):
+PDF, Mp3, AVI
+Описание: Ультрасовременный учебно-методический комплекс английского языка для школьников English Code от издательства Лонгман состоит из семи уровней сложности и выделен в два издания для Британского и Американского английского. Богатая мультимедийная составляющая подкрепляет актуальную оригинальную методику и делает это курс 
+всеобъемлющим.
+В English Code изучение языка происходит посредством практических творческих задач, исследований, проектов и экспериментов.
+Дети развивают мышление программирования, решение проблем и навыки совместной работы. Все они включены в учебную программу, которая включает встроенный STEAM, стимулирующий естественное любопытство учащихся к окружающему миру.
+Четкая ориентация на функциональный язык дает учащимся инструменты, позволяющие эффективно и уверенно говорить на английском в классе и за его пределами.
+Особенности учебника:
+• Образ мышления кодирования побуждает студентов экспериментировать и учит их устойчивости, сотрудничеству и решению проблем из области вычислительного мышления.
+• Креативность помогает учащимся развивать свой творческий потенциал посредством практических занятий, знакомя учащихся с различными видами искусства и побуждая учащихся мыслить и работать творчески.
+• Уроки STEAM в каждом разделе позволяют студентам изучать английский язык по предмету: наука, технология, инженерия, искусство и дизайн, а также математика (STEAM). Это помогает в вовлечении, а также позволяет студентам консолидировать свои знания по предметам. По каждому предмету есть видео, чтобы продлить урок.
+• Проектная работа вдохновляет и фокусирует обучение с самого начала, а также дает учащимся чувство контроля и направления в их учебном путешествии.
+• Критическое мышление помогает учащимся развить навыки критического мышления, предоставляя учащимся возможность собирать и выявлять доказательства, приводить аргументы, выявлять сильные и слабые стороны и предлагать возможности для улучшения.
+• Совместная работа предоставляет студентам различные возможности для развития их навыков презентации и слушания, а также помогает им обрести уверенность в разговоре по-английски с помощью групповых занятий.
+• Глобальная шкала английского языка - это источник для целей обучения, которые включены в каждую единицу в версии для учителя по навыкам чтения, аудирования, разговорной речи и письма.
+In
+English Code
+language learning takes place through hands-on creative tasks, investigation, projects, and experiments.
+Children develop a coding mindset, problem solving, and collaborative skills. These all feature in a syllabus that includes built-in STEAM, driving learners’ natural curiosity about the world around them.
+A clear focus on functional language gives learners the tools to become effective and confident speakers of English inside and outside the classroom.
+Key Features:
+The coding mindset encourages students to experiment and teaches them resilience, collaboration and problem-solving from the domain of computational thinking.
+Creativity helps students to develop their creative potential through hands-on activities, exposing students to a variety of arts, and encouraging students to think and work imaginatively.
+STEAM lessons in each unit enables students to learn English through a subject: science, technology, engineering, art and design, and math (STEAM). This helps with engagement as well as enabling students to consolidate their knowledge across subjects. There are videos on each subject to extend the lesson.
+Project-work inspires and focuses the learning from the very start, and gives students a sense of control and direction in their learning journey.
+Critical thinking activities help students to develop their critical thinking skills by providing opportunities for students to collect and identify evidence, create arguments, identify strengths and weaknesses, and suggest opportunities for improvement.
+[0] (975,854)<div  />
+Reklam
+
+</current_dom>

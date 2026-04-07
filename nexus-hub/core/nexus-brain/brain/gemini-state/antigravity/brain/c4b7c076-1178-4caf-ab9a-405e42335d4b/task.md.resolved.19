@@ -1,0 +1,19 @@
+# Task: Refine Stars and Ground
+
+- [x] Design and implement a "girl child character" sprite <!-- id: 8 -->
+- [x] Fix character orientation (looking direction) <!-- id: 10 -->
+- [x] Implement walking animation (feet moving) <!-- id: 11 -->
+- [x] Remove white box and slow down animation <!-- id: 12 -->
+- [x] Add pulsing glow effect to character <!-- id: 14 -->
+- [x] Generate cloud sprite <!-- id: 15 -->
+- [x] Implement initial sky background gradient <!-- id: 16 -->
+- [x] Replace platform blocks with cloud sprites <!-- id: 17 -->
+- [x] Add background clouds decoration <!-- id: 18 -->
+- [x] Remove white background from sprites (Transparency) <!-- id: 20 -->
+- [x] Update sky to blue and generate grass/lava sprites <!-- id: 21 -->
+- [x] Implement wave-like animation for lava/water <!-- id: 26 -->
+- [x] Update Level 1 map with ground and lava <!-- id: 23 -->
+- [x] Verify the enhanced visuals <!-- id: 24 -->
+- [/] Generate white/blue glowing star sprite <!-- id: 27 -->
+- [ ] Implement continuous ground rendering (removing tile grid look) <!-- id: 30 -->
+- [ ] Update UI text to "STARS" and add pulsing star animation <!-- id: 28 -->

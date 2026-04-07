@@ -1,0 +1,51 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Student Book:
+Sayfa 8-13
+🗝️ Anahtar Kelimeler (Vocabulary)
+🎯
+Tıkla:
+Okunuşunu dinle | 🖱️
+Basılı Tut:
+Harf harf kodlamasını dinle
+[0] (340,271)<div  />
+	[1] (340,268)<div >balloon />
+[2] (500,271)<div  />
+	[3] (500,268)<div >cake />
+[4] (660,271)<div  />
+	[5] (660,268)<div >card />
+[6] (340,395)<div  />
+	[7] (340,391)<div >present />
+[8] (500,395)<div  />
+	[9] (500,391)<div >birthday party />
+[10] (660,395)<div  />
+	[11] (660,391)<div >candle />
+[12] (340,530)<div  />
+	[13] (340,514)<div >red />
+	[14] (340,553)<div >kırmızı />
+[15] (500,530)<div  />
+	[16] (500,514)<div >blue />
+	[17] (500,553)<div >mavi />
+[18] (660,530)<div  />
+	[19] (660,514)<div >green />
+	[20] (660,553)<div >yeşil />
+[21] (340,679)<div  />
+	[22] (340,663)<div >yellow />
+	[23] (340,702)<div >sarı />
+[24] (500,679)<div  />
+	[25] (500,663)<div >pink />
+	[26] (500,702)<div >pembe />
+[27] (660,679)<div  />
+	[28] (660,663)<div >purple />
+	[29] (660,702)<div >mor />
+[30] (340,827)<div  />
+	[31] (340,811)<div >orange />
+	[32] (340,850)<div >turuncu />
+[33] (500,827)<div  />
+	[34] (500,811)<div >white />
+🚀 STEM / Proje
+Doğum günü kartı yap (scratch card)
+
+</current_dom>

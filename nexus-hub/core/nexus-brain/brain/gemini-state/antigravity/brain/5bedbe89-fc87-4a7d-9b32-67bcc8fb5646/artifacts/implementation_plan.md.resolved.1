@@ -1,0 +1,42 @@
+# Arkadaşım AI (Kızımın Arkadaşı) Projesi - Kurulum Planı
+
+Bu plan, `setup.txt`'deki 32 ekranlık devasa klasör yapısını ve `code.sh` dosyasındaki gelişmiş AI asistan (Kızımın Arkadaşı) modellerini birleştirerek, projenin tamamını tek tıkla kuracak bir `setup.ps1` oluşturmayı hedefler.
+
+## Kullanıcı İncelemesi Gerekli
+
+> [!IMPORTANT]
+> Proje ismi olarak `code.sh` dosyasındaki "kizimin_arkadasi" (Arkadaşım AI) ismi kullanılacaktır. `code.txt`'deki "Soru Bankası" projesi bu yapıya göre daha eski veya farklı bir proje olduğu için, `setup.txt` yönergeleriyle uyumlu olan `code.sh` baz alınacaktır.
+
+> [!TIP]
+> `setup.ps1` scripti, Flutter projesini sıfırdan oluşturup tüm modelleri, servisleri ve ekran taslaklarını yerleştirecek, ardından `flutter pub get` yaparak projeyi hazır hale getirecektir.
+
+## Önerilen Değişiklikler
+
+### Kurulum Scripti (`setup.ps1`)
+Script şu bileşenleri içerecek:
+1. **Flutter Proje Başlatma**: `flutter create kizimin_arkadasi`
+2. **Klasör Yapısı**: `lib/screens` altında `onboarding`, `home`, `chat`, `notes`, `quiz`, `map`, `pharmacy` dahil toplam 32 klasör.
+3. **Modeller (15 Adet)**:
+   - `UserProfile`, `ChatMessage`, `ContentItem`, `AiModel`, `DiaryEntry`, `Achievement`, `LocationTask`, `Store`, `Pharmacy` ve diğerleri.
+4. **Servisler (5 Adet)**:
+   - `StorageService` (SharedPreferences/Hive)
+   - `ApiService` (OpenAI, Anthropic, Gemini, DeepSeek destekli)
+   - `LocationService` & `GeofenceMonitor` (Konum bazlı hatırlatıcılar)
+   - `PharmacyService` (Nöbetçi eczane entegrasyonu)
+5. **Görünüm Katmanı**:
+   - `AppTheme`: Mor ve Turkuaz ağırlıklı modern koyu/açık tema.
+   - `AppProvider`: Tüm uygulama durumunu yöneten tekil sağlayıcı.
+   - **Ekranlar**: Splash, Onboarding, Home, Chat ve Profile ekranlarının tam uygulaması; diğer ekranların taslakları.
+
+### [NEW] [setup.ps1](file:///C:/Users/Deacjx/.gemini/antigravity/brain/5bedbe89-fc87-4a7d-9b32-67bcc8fb5646/artifacts/setup.ps1)
+Tüm kodu bir araya getiren ana kurulum dosyası.
+
+## Doğrulama Planı
+
+### Otomatik Testler
+- `flutter pub get` komutunun bağımlılıkları (geolocator, flutter_animate, etc.) hatasız yüklediği kontrol edilecek.
+- Klasör yapısının `setup.txt` ile birebir eşleştiği doğrulanacak.
+
+### Manuel Doğrulama
+- Modellerdeki (örneğin `UserProfile`) emoji listelerinin ve iletişim stillerinin doğru yüklendiği kontrol edilecek.
+- `ApiService` içerisindeki OpenAI ve Gemini parametrelerinin (system instructions) doğruluğu denetlenecek.

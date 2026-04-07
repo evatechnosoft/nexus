@@ -1,0 +1,169 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Erişilebilirlik Bağlantıları
+Ana içeriğe geç
+Erişilebilirlik yardımı
+Erişilebilirlikle ilgili geri bildirim
+[0] (73,70)<a aria-label='Google Anasayfası'na Git' href='https://www.google.com/webhp?hl=tr&sa=X&ved=0ahUKEwiwl6OImriTAxVmB9sEHSUZKngQPAgI' id='logo' title='Google Anasayfası'na Git' />
+[1] (345,69)<textarea aria-label='Ara' class='gLFyf' id='APjFqb' role='combobox' />
+[2] (562,69)<div  />
+	[3] (560,69)<div aria-label='Temizle' class='M2vV3 vOY7J' role='button' />
+		[4] (560,69)<span  />
+	[5] (576,69)<span  />
+[6] (592,69)<div aria-label='Harf çevirme aracı' class='Umvnrc' role='button' />
+	[7] (592,69)<span  />
+[8] (618,69)<div aria-label='Sesle arama yapın' class='XDyW0e' role='button' />
+[9] (644,69)<div aria-label='Görselle arama' class='nDcEnd' role='button' />
+[10] (674,69)<button aria-label='Ara' class='HZVG1b Tg7LZd' />
+	[11] (669,69)<div  />
+		[12] (669,69)<span  />
+[13] (876,69)<div aria-label='Ayarlar' class='fLciMb' id='og-te' role='button' />
+	[14] (876,72)<div  />
+		[15] (876,69)<span  />
+[16] (906,69)<a aria-label='Google uygulamaları' class='gb_B' href='https://www.google.com.tr/intl/tr/about/products?tab=wh' role='button' />
+[17] (954,69)<a aria-label='Oturum açın' class='gb_A' href='https://accounts.google.com/ServiceLogin?hl=tr&passive=true&continue=https://www.google.com/search%3Fq%3DMicrosoft%2B365%2Boffline%2Binstaller%2Bdirect%2Bdownload%2Blinks%2B2025%2Bofficecdn.microsoft.com&ec=futura_srp_og_si_72236_p'>Oturum açın />
+	Oturum açın
+Filtreler ve Konular
+[18] (161,145)<a class='XVMlrc C6AK7c' href='/search?q=Microsoft+365+offline+installer+direct+download+links+2025+officecdn.microsoft.com&sca_esv=cdf1ae9af23e2b08&udm=50&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXarNgseJfkljimozBzUrIDvWX8VZWE5v7-RVkKTesCuyTlf3P1IQBsOSOdileVINcu-D9YuKiCkeRxc_df7j_OYYKmJaD14K9VqxYTDoqnCeE0sN2m-PE-tnaVB6vE23tFpkhRzMFatrdGh2QIHeB8a_UBnY0s4RZNgvb3tsGQkDjwOoQBM6OE9T5oJgB1TmgbHHBmoJNN0up1RwitQ_BQ3s9XwBBpjfNhuMiXH5AxkiUYidb&aep=1&ntc=1&sa=X&ved=2ahUKEwiwl6OImriTAxVmB9sEHSUZKngQ2J8OegQIDhAE' />
+	[19] (161,145)<div  />
+		[20] (161,156)<div  />
+			[21] (161,149)<span >AI Modu />
+[22] (206,145)<a class='C6AK7c' role='link' />
+	Tümü
+[23] (251,145)<a class='C6AK7c' href='/search?sca_esv=cdf1ae9af23e2b08&udm=7&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXarNgseJfkljimozBzUrIDvWX8VZWE5v7-RVkKTesCuyTlf3P1IQBsOSOdileVINcu-D9YuKiCkeRxc_df7j_OYYKmJaD14K9VqxYTDoqnCeE0sN2m-PE-tnaVB6vE23tFpkhRzMFatrdGh2QIHeB8a_UBnY0s4RZNgvb3tsGQkDjwOoQBM6OE9T5oJgB1TmgbHHBmoJNN0up1RwitQ_BQ3s9XwBBpjfNhuMiXH5AxkiUYidb&q=Microsoft+365+offline+installer+direct+download+links+2025+officecdn.microsoft.com&sa=X&ved=2ahUKEwiwl6OImriTAxVmB9sEHSUZKngQtKgLegQIFBAB' />
+	[24] (251,145)<div  />
+		[25] (251,156)<span >Videolar />
+[26] (302,145)<a class='C6AK7c' href='/search?sca_esv=cdf1ae9af23e2b08&udm=28&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXarNgseJfkljimozBzUrIDvWX8VZWE5v7-RVkKTesCuyTlf3P1IQBsOSOdileVINcu-D9YuKiCkeRxc_df7j_OYYKmJaD14K9VqxYTDoqnCeE0sN2m-PE-tnaVB6vE23tFpkhRzMFatrdGh2QIHeB8a_UBnY0s4RZNgvb3tsGQkDjwOoQBM6OE9T5oJgB1TmgbHHBmoJNN0up1RwitQ_BQ3s9XwBBpjfNhuMiXH5AxkiUYidb&q=Microsoft+365+offline+installer+direct+download+links+2025+officecdn.microsoft.com&ved=1t:220175&ictx=111' />
+	[27] (302,145)<div  />
+		[28] (302,156)<span >Alışveriş />
+[29] (355,145)<a class='C6AK7c' href='/search?sca_esv=cdf1ae9af23e2b08&udm=2&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXarNgseJfkljimozBzUrIDvWX8VZWE5v7-RVkKTesCuyTlf3P1IQBsOSOdileVINcu-D9YuKiCkeRxc_df7j_OYYKmJaD14K9VqxYTDoqnCeE0sN2m-PE-tnaVB6vE23tFpkhRzMFatrdGh2QIHeB8a_UBnY0s4RZNgvb3tsGQkDjwOoQBM6OE9T5oJgB1TmgbHHBmoJNN0up1RwitQ_BQ3s9XwBBpjfNhuMiXH5AxkiUYidb&q=Microsoft+365+offline+installer+direct+download+links+2025+officecdn.microsoft.com&sa=X&ved=2ahUKEwiwl6OImriTAxVmB9sEHSUZKngQtKgLegQIERAB' />
+	[30] (355,145)<div  />
+		[31] (355,156)<span >Görseller />
+[32] (417,145)<a class='C6AK7c' href='/search?sca_esv=cdf1ae9af23e2b08&udm=39&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXarNgseJfkljimozBzUrIDvWX8VZWE5v7-RVkKTesCuyTlf3P1IQBsOSOdileVINcu-D9YuKiCkeRxc_df7j_OYYKmJaD14K9VqxYTDoqnCeE0sN2m-PE-tnaVB6vE23tFpkhRzMFatrdGh2QIHeB8a_UBnY0s4RZNgvb3tsGQkDjwOoQBM6OE9T5oJgB1TmgbHHBmoJNN0up1RwitQ_BQ3s9XwBBpjfNhuMiXH5AxkiUYidb&q=Microsoft+365+offline+installer+direct+download+links+2025+officecdn.microsoft.com&sa=X&ved=2ahUKEwiwl6OImriTAxVmB9sEHSUZKngQs6gLegQIEhAB' />
+	[33] (417,145)<div  />
+		[34] (417,156)<span >Kısa videolar />
+[35] (479,145)<a class='C6AK7c' href='/search?sca_esv=cdf1ae9af23e2b08&q=Microsoft+365+offline+installer+direct+download+links+2025+officecdn.microsoft.com&tbm=nws&source=lnms&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXarNgseJfkljimozBzUrIDvWX8VZWE5v7-RVkKTesCuyTlf3P1IQBsOSOdileVINcu-D9YuKiCkeRxc_df7j_OYYKmJaD14K9VqxYTDoqnCeE0sN2m-PE-tnaVB6vE23tFpkhRzMFatrdGh2QIHeB8a_UBnY0s4RZNgvb3tsGQkDjwOoQBM6OE9T5oJgB1TmgbHHBmoJNN0up1RwitQ_BQ3s9XwBBpjfNhuMiXH5AxkiUYidb&sa=X&ved=2ahUKEwiwl6OImriTAxVmB9sEHSUZKngQ0pQJegQIEBAB' />
+	[36] (479,145)<div  />
+		[37] (479,156)<span >Haberler />
+[38] (541,145)<div class='mTpL7c' role='button' />
+	[39] (541,145)<div  />
+		[40] (541,156)<div  />
+			[41] (536,149)<span >Daha fazla />
+			[42] (564,149)<span  />
+[43] (607,145)<div class='mOKdDc' id='hdtb-tls' role='button' />
+	[44] (607,145)<div  />
+		[45] (607,156)<div  />
+			[46] (601,149)<span >Araçlar />
+			[47] (622,149)<span  />
+Looking for results in English?
+[48] (966,266)<a href='#' />
+	[49] (966,264)<span  />
+[50] (851,297)<a href='/setprefs?sig=0_AFLdylOmlmYTb9A6MfmhoVa_RsI%3D&source=en_ignored_notification&prev=https://www.google.com/search?q%3DMicrosoft%2B365%2Boffline%2Binstaller%2Bdirect%2Bdownload%2Blinks%2B2025%2Bofficecdn.microsoft.com&hl=en&sa=X&ved=2ahUKEwiwl6OImriTAxVmB9sEHSUZKngQhoQCKAF6BAgKEAQ'>Change to English />
+[51] (875,328)<a href='#'>kullanmaya devam et />
+	[52] (831,327)<span >Türkçe />
+[53] (839,371)<a class='fl' href='/preferences?lang=1&hl=tr&sa=X&ved=2ahUKEwiwl6OImriTAxVmB9sEHSUZKngQiIQCKAN6BAgKEAY#languages'>Dil ayarları />
+Arama Sonuçları
+[54] (230,259)<a class='zReHs' href='https://support.microsoft.com/en-gb/office/use-the-office-offline-installer-f0a85fe7-118f-41cb-a791-d59cef96ad1c' />
+	[55] (230,287)<h3 >Use the Office offline installer />
+	[56] (225,241)<div  />
+		[57] (225,241)<div  />
+			[58] (153,241)<span  />
+				[59] (153,241)<div  />
+					[60] (153,241)<img  />
+			[61] (238,241)<div  />
+				[62] (238,229)<div  />
+					[63] (238,229)<span >Microsoft Support />
+				[64] (238,255)<div  />
+					[65] (238,255)<cite class='qLRx3b tjvcx GvPZzd dTxz9 cHaqb' role='text'>https://support.microsoft.com />
+						[66] (276,254)<span class='ylgVCe ob9lvb' role='text'>› ... />
+·
+[67] (337,255)<a class='dEEN8c' href='https://support.microsoft.com/en-gb/office/use-the-office-offline-installer-f0a85fe7-118f-41cb-a791-d59cef96ad1c' />
+	[68] (337,254)<span >Bu sayfanın çevirisini yap />
+[69] (395,253)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[70] (395,253)<span  />
+		[71] (395,255)<span  />
+Step 1.
+Download the offline installer from your account portal
+· Select the download button below: · In the Install window, select Offline installer from the ...
+Eksik:
+direct
+‎
+officecdn.
+[72] (252,482)<a class='zReHs' href='https://support.microsoft.com/tr-tr/office/office-%C3%A7evrimd%C4%B1%C5%9F%C4%B1-y%C3%BCkleyiciyi-kullanma-f0a85fe7-118f-41cb-a791-d59cef96ad1c' />
+	[73] (252,510)<h3 >Office çevrimdışı yükleyiciyi kullanma />
+	[74] (229,464)<div  />
+		[75] (229,464)<div  />
+			[76] (153,464)<span  />
+				[77] (153,464)<div  />
+					[78] (153,464)<img  />
+			[79] (241,464)<div  />
+				[80] (241,452)<div  />
+					[81] (241,452)<span >Microsoft Support />
+				[82] (241,477)<div  />
+					[83] (241,477)<cite class='qLRx3b tjvcx GvPZzd cHaqb' role='text'>https://support.microsoft.com />
+						[84] (291,477)<span class='ylgVCe ob9lvb' role='text'>› tr-tr › office />
+[85] (328,476)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[86] (328,476)<span  />
+		[87] (328,477)<span  />
+Install Microsoft 365
+... Çalıştır iletişim kutusunda aşağıdakileri tam olarak gösterildiği gibi yazın. c:\odt\
+setup
+.exe /
+download
+installOfficeProPlus32.xml.
+Eksik:
+direct
+‎
+links
+‎
+officecdn.
+[88] (318,705)<a class='zReHs' href='https://support.microsoft.com/en-us/office/download-install-or-reinstall-microsoft-365-or-office-2024-on-a-pc-or-mac-4414eaaf-0478-48be-9c42-23adc4716658' />
+	[89] (318,733)<h3 >Download, install, or reinstall Microsoft 365 or Office 2024 ... />
+	[90] (225,687)<div  />
+		[91] (225,687)<div  />
+			[92] (153,687)<span  />
+				[93] (153,687)<div  />
+					[94] (153,687)<img  />
+			[95] (238,687)<div  />
+				[96] (238,675)<div  />
+					[97] (238,675)<span >Microsoft Support />
+				[98] (238,700)<div  />
+					[99] (238,700)<cite class='qLRx3b tjvcx GvPZzd dTxz9 cHaqb' role='text'>https://support.microsoft.com />
+						[100] (276,699)<span class='ylgVCe ob9lvb' role='text'>› ... />
+·
+[101] (337,700)<a class='dEEN8c' href='https://support.microsoft.com/en-us/office/download-install-or-reinstall-microsoft-365-or-office-2024-on-a-pc-or-mac-4414eaaf-0478-48be-9c42-23adc4716658' />
+	[102] (337,699)<span >Bu sayfanın çevirisini yap />
+[103] (395,699)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[104] (395,699)<span  />
+		[105] (395,700)<span  />
+Sign in to download Microsoft 365 or Office 2024 on a PC
+· From the home page select Install apps. (Or, you might need to select Apps from the left navigation ...
+Eksik:
+direct
+‎
+2025
+[106] (300,927)<a class='zReHs' href='https://www.microsoft.com/en-us/microsoft-365/download-office' />
+	[107] (300,956)<h3 >Download Microsoft Office 365 for Windows and Mac />
+	[108] (221,910)<div  />
+		[109] (221,910)<div  />
+			[110] (153,910)<span  />
+				[111] (153,910)<div  />
+					[112] (153,910)<img  />
+			[113] (234,910)<div  />
+				[114] (234,898)<div  />
+					[115] (234,898)<span >Microsoft />
+				[116] (234,923)<div  />
+					[117] (234,923)<cite class='qLRx3b tjvcx GvPZzd dTxz9 cHaqb' role='text'>https://www.microsoft.com />
+						[118] (266,922)<span class='ylgVCe ob9lvb' role='text'>› ... />
+·
+[119] (328,923)<a class='dEEN8c' href='https://www.microsoft.com/en-us/microsoft-365/download-office' />
+	[120] (328,922)<span >Bu sayfanın çevirisini yap />
+[121] (386,922)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[122] (386,922)<span  />
+		[123] (386,923)<span  />
+Download the latest version of Microsoft Office for Windows PCs
+. Microsoft Office provides the best experience for work, creation, and collaboration.
+
+</current_dom>

@@ -1,0 +1,185 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Erişilebilirlik Bağlantıları
+Ana içeriğe geç
+Erişilebilirlik yardımı
+Erişilebilirlikle ilgili geri bildirim
+[0] (73,70)<a aria-label='Google Anasayfası'na Git' href='https://www.google.com/webhp?hl=tr&sa=X&ved=0ahUKEwiE1pqMmriTAxVtQPEDHWQEJ4AQPAgI' id='logo' title='Google Anasayfası'na Git' />
+[1] (345,69)<textarea aria-label='Ara' class='gLFyf' id='APjFqb' role='combobox' />
+[2] (562,69)<div  />
+	[3] (560,69)<div aria-label='Temizle' class='M2vV3 vOY7J' role='button' />
+		[4] (560,69)<span  />
+	[5] (576,69)<span  />
+[6] (592,69)<div aria-label='Harf çevirme aracı' class='Umvnrc' role='button' />
+	[7] (592,69)<span  />
+[8] (618,69)<div aria-label='Sesle arama yapın' class='XDyW0e' role='button' />
+[9] (644,69)<div aria-label='Görselle arama' class='nDcEnd' role='button' />
+[10] (674,69)<button aria-label='Ara' class='HZVG1b Tg7LZd' />
+	[11] (669,69)<div  />
+		[12] (669,69)<span  />
+[13] (876,69)<div aria-label='Ayarlar' class='fLciMb' id='og-te' role='button' />
+	[14] (876,72)<div  />
+		[15] (876,69)<span  />
+[16] (906,69)<a aria-label='Google uygulamaları' class='gb_B' href='https://www.google.com.tr/intl/tr/about/products?tab=wh' role='button' />
+[17] (954,69)<a aria-label='Oturum açın' class='gb_A' href='https://accounts.google.com/ServiceLogin?hl=tr&passive=true&continue=https://www.google.com/search%3Fq%3Dofficecdn.microsoft.com%2Btr-tr%2B%2522O365HomePremRetail.img%2522&ec=futura_srp_og_si_72236_p'>Oturum açın />
+	Oturum açın
+Filtreler ve Konular
+[18] (161,145)<a class='XVMlrc C6AK7c' href='/search?q=officecdn.microsoft.com+tr-tr+%22O365HomePremRetail.img%22&sca_esv=cdf1ae9af23e2b08&udm=50&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLfa8y8TDcNYX0oihjHX-_gZQCNq6Vf4hz1XgcqH4O5ya0jjzdZRo5ZnD8SndeDnM3YkTc7DIAu1A6mI5CNEbXb8CYKEM4-yWOgxyZSqNoYrLMelYk1uhkpvOeZs8Silj233TL0gmrOq5k6CxV34ljhW8pb9ikEOzWlsVWneBX_9xeqx7PJ7Oo-3AnOAlbHJ2WjTPG-g2X9i0YD2akA-3fZIc7FKS&aep=1&ntc=1&sa=X&ved=2ahUKEwiE1pqMmriTAxVtQPEDHWQEJ4AQ2J8OegQIDBAE' />
+	[19] (161,145)<div  />
+		[20] (161,156)<div  />
+			[21] (161,149)<span >AI Modu />
+[22] (206,145)<a class='C6AK7c' role='link' />
+	Tümü
+[23] (253,145)<a class='C6AK7c' href='/search?sca_esv=cdf1ae9af23e2b08&udm=2&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLfa8y8TDcNYX0oihjHX-_gZQCNq6Vf4hz1XgcqH4O5ya0jjzdZRo5ZnD8SndeDnM3YkTc7DIAu1A6mI5CNEbXb8CYKEM4-yWOgxyZSqNoYrLMelYk1uhkpvOeZs8Silj233TL0gmrOq5k6CxV34ljhW8pb9ikEOzWlsVWneBX_9xeqx7PJ7Oo-3AnOAlbHJ2WjTPG-g2X9i0YD2akA-3fZIc7FKS&q=officecdn.microsoft.com+tr-tr+%22O365HomePremRetail.img%22&sa=X&ved=2ahUKEwiE1pqMmriTAxVtQPEDHWQEJ4AQtKgLegQIDxAB' />
+	[24] (253,145)<div  />
+		[25] (253,156)<span >Görseller />
+[26] (307,145)<a class='C6AK7c' href='/search?sca_esv=cdf1ae9af23e2b08&q=officecdn.microsoft.com+tr-tr+%22O365HomePremRetail.img%22&tbm=nws&source=lnms&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLfa8y8TDcNYX0oihjHX-_gZQCNq6Vf4hz1XgcqH4O5ya0jjzdZRo5ZnD8SndeDnM3YkTc7DIAu1A6mI5CNEbXb8CYKEM4-yWOgxyZSqNoYrLMelYk1uhkpvOeZs8Silj233TL0gmrOq5k6CxV34ljhW8pb9ikEOzWlsVWneBX_9xeqx7PJ7Oo-3AnOAlbHJ2WjTPG-g2X9i0YD2akA-3fZIc7FKS&sa=X&ved=2ahUKEwiE1pqMmriTAxVtQPEDHWQEJ4AQ0pQJegQIExAB' />
+	[27] (307,145)<div  />
+		[28] (307,156)<span >Haberler />
+[29] (359,145)<a class='C6AK7c' href='/search?sca_esv=cdf1ae9af23e2b08&udm=28&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLfa8y8TDcNYX0oihjHX-_gZQCNq6Vf4hz1XgcqH4O5ya0jjzdZRo5ZnD8SndeDnM3YkTc7DIAu1A6mI5CNEbXb8CYKEM4-yWOgxyZSqNoYrLMelYk1uhkpvOeZs8Silj233TL0gmrOq5k6CxV34ljhW8pb9ikEOzWlsVWneBX_9xeqx7PJ7Oo-3AnOAlbHJ2WjTPG-g2X9i0YD2akA-3fZIc7FKS&q=officecdn.microsoft.com+tr-tr+%22O365HomePremRetail.img%22&ved=1t:220175&ictx=111' />
+	[30] (359,145)<div  />
+		[31] (359,156)<span >Alışveriş />
+[32] (410,145)<a class='C6AK7c' href='/search?sca_esv=cdf1ae9af23e2b08&udm=7&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLfa8y8TDcNYX0oihjHX-_gZQCNq6Vf4hz1XgcqH4O5ya0jjzdZRo5ZnD8SndeDnM3YkTc7DIAu1A6mI5CNEbXb8CYKEM4-yWOgxyZSqNoYrLMelYk1uhkpvOeZs8Silj233TL0gmrOq5k6CxV34ljhW8pb9ikEOzWlsVWneBX_9xeqx7PJ7Oo-3AnOAlbHJ2WjTPG-g2X9i0YD2akA-3fZIc7FKS&q=officecdn.microsoft.com+tr-tr+%22O365HomePremRetail.img%22&sa=X&ved=2ahUKEwiE1pqMmriTAxVtQPEDHWQEJ4AQtKgLegQIERAB' />
+	[33] (410,145)<div  />
+		[34] (410,156)<span >Videolar />
+[35] (470,145)<a class='C6AK7c' href='/search?sca_esv=cdf1ae9af23e2b08&udm=39&fbs=ADc_l-Yk7dC9rTocjjwI5T_IO7ZXgdRLhUG8pk-pM063RkPlLfa8y8TDcNYX0oihjHX-_gZQCNq6Vf4hz1XgcqH4O5ya0jjzdZRo5ZnD8SndeDnM3YkTc7DIAu1A6mI5CNEbXb8CYKEM4-yWOgxyZSqNoYrLMelYk1uhkpvOeZs8Silj233TL0gmrOq5k6CxV34ljhW8pb9ikEOzWlsVWneBX_9xeqx7PJ7Oo-3AnOAlbHJ2WjTPG-g2X9i0YD2akA-3fZIc7FKS&q=officecdn.microsoft.com+tr-tr+%22O365HomePremRetail.img%22&sa=X&ved=2ahUKEwiE1pqMmriTAxVtQPEDHWQEJ4AQs6gLegQIEhAB' />
+	[36] (470,145)<div  />
+		[37] (470,156)<span >Kısa videolar />
+[38] (541,145)<div class='mTpL7c' role='button' />
+	[39] (541,145)<div  />
+		[40] (541,156)<div  />
+			[41] (536,149)<span >Daha fazla />
+			[42] (564,149)<span  />
+[43] (607,145)<div class='mOKdDc' id='hdtb-tls' role='button' />
+	[44] (607,145)<div  />
+		[45] (607,156)<div  />
+			[46] (601,149)<span >Araçlar />
+			[47] (622,149)<span  />
+Looking for results in English?
+[48] (966,266)<a href='#' />
+	[49] (966,264)<span  />
+[50] (851,297)<a href='/setprefs?sig=0_AFLdylOmlmYTb9A6MfmhoVa_RsI%3D&source=en_ignored_notification&prev=https://www.google.com/search?q%3Dofficecdn.microsoft.com%2Btr-tr%2B%2522O365HomePremRetail.img%2522&hl=en&sa=X&ved=2ahUKEwiE1pqMmriTAxVtQPEDHWQEJ4AQhoQCKAF6BAgVEAQ'>Change to English />
+[51] (875,328)<a href='#'>kullanmaya devam et />
+	[52] (831,327)<span >Türkçe />
+[53] (839,371)<a class='fl' href='/preferences?lang=1&hl=tr&sa=X&ved=2ahUKEwiE1pqMmriTAxVtQPEDHWQEJ4AQiIQCKAN6BAgVEAY#languages'>Dil ayarları />
+Arama Sonuçları
+[54] (252,259)<a class='zReHs' href='https://support.microsoft.com/tr-tr/office/office-%C3%A7evrimd%C4%B1%C5%9F%C4%B1-y%C3%BCkleyiciyi-kullanma-f0a85fe7-118f-41cb-a791-d59cef96ad1c' />
+	[55] (252,287)<h3 >Office çevrimdışı yükleyiciyi kullanma />
+	[56] (229,241)<div  />
+		[57] (229,241)<div  />
+			[58] (153,241)<span  />
+				[59] (153,241)<div  />
+					[60] (153,241)<img  />
+			[61] (241,241)<div  />
+				[62] (241,229)<div  />
+					[63] (241,229)<span >Microsoft Support />
+				[64] (241,255)<div  />
+					[65] (241,255)<cite class='qLRx3b tjvcx GvPZzd cHaqb' role='text'>https://support.microsoft.com />
+						[66] (291,254)<span class='ylgVCe ob9lvb' role='text'>› tr-tr › office />
+[67] (328,253)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[68] (328,253)<span  />
+		[69] (328,255)<span  />
+O365HomePremRetail.img
+dosyasına çift tıklayın. İstenirse Aç'ı seçin. Bu, bir sanal sürücü penceresi açmalıdır. IMG dosyasını açtıktan sonra sanal sürücü ...
+Eksik:
+officecdn.
+‎| Şu terimi ara:
+[70] (292,384)<a href='/search?sca_esv=cdf1ae9af23e2b08&q=%22officecdn.%22+microsoft.com+tr-tr+%22O365HomePremRetail.img%22&sa=X&ved=2ahUKEwiE1pqMmriTAxVtQPEDHWQEJ4AQ5t4CegQIJxAB' />
+	[71] (292,384)<span >officecdn. />
+[72] (315,482)<a class='zReHs' href='https://learn.microsoft.com/tr-tr/answers/questions/5333033/bilgisayar-mdan-office-uygulamalar-silindi' />
+	[73] (315,510)<h3 >Bilgisayarımdan Office uygulamaları silindi - Microsoft Q&A />
+	[74] (250,464)<div  />
+		[75] (250,464)<div  />
+			[76] (153,464)<span  />
+				[77] (153,464)<div  />
+					[78] (153,464)<img  />
+			[79] (263,464)<div  />
+				[80] (263,452)<div  />
+					[81] (263,452)<span >Microsoft Learn />
+				[82] (263,477)<div  />
+					[83] (263,477)<cite class='qLRx3b tjvcx GvPZzd cHaqb' role='text'>https://learn.microsoft.com />
+						[84] (308,477)<span class='ylgVCe ob9lvb' role='text'>› tr-tr › answers › questions />
+[85] (370,476)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[86] (370,476)<span  />
+		[87] (370,477)<span  />
+25 Haz 2024
+—
+https://
+officecdn
+.
+microsoft.com
+/sg/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/
+tr
+-
+tr
+/
+O365HomePremRetail.img
+. Yukarıdakileri yaptıktan sonra ...
+[88] (307,675)<a class='zReHs' href='https://learn.microsoft.com/tr-tr/answers/questions/5366758/office-365-uygulamalar-n-indir-dedim-ve-indirme-i' />
+	[89] (307,704)<h3 >office 365 uygulamalarını indir dedim ve indirme işlemi ... />
+	[90] (250,658)<div  />
+		[91] (250,658)<div  />
+			[92] (153,658)<span  />
+				[93] (153,658)<div  />
+					[94] (153,658)<img  />
+			[95] (263,658)<div  />
+				[96] (263,646)<div  />
+					[97] (263,646)<span >Microsoft Learn />
+				[98] (263,671)<div  />
+					[99] (263,671)<cite class='qLRx3b tjvcx GvPZzd cHaqb' role='text'>https://learn.microsoft.com />
+						[100] (308,670)<span class='ylgVCe ob9lvb' role='text'>› tr-tr › answers › questions />
+[101] (370,670)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[102] (370,670)<span  />
+		[103] (370,671)<span  />
+25 Ağu 2024
+—
+https://
+officecdn
+.
+microsoft.com
+/sg/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/
+tr
+-
+tr
+/
+O365HomePremRetail.img
+. Umarım yukarıdaki bilgiler size ...
+[104] (286,869)<a class='zReHs' href='https://learn.microsoft.com/tr-tr/answers/questions/5333222/m-crosoft-365-hesap-hatasi' />
+	[105] (286,897)<h3 >MİCROSOFT 365 HESAP HATASI - Microsoft Q&A />
+	[106] (253,851)<div  />
+		[107] (253,851)<div  />
+			[108] (153,851)<span  />
+				[109] (153,851)<div  />
+					[110] (153,851)<img  />
+			[111] (266,851)<div  />
+				[112] (266,840)<div  />
+					[113] (266,840)<span >Microsoft Learn />
+				[114] (266,865)<div  />
+					[115] (266,865)<cite class='qLRx3b tjvcx GvPZzd cHaqb' role='text'>https://learn.microsoft.com />
+						[116] (312,864)<span class='ylgVCe ob9lvb' role='text'>› m-crosoft-365-hesap-hatasi />
+[117] (377,863)<div aria-label='Bu sonuç hakkında' class='MJ8UF iTPLzd rNSxBe eY4mx lUn2nc' role='button' />
+	[118] (377,863)<span  />
+		[119] (377,865)<span  />
+30 Tem 2024
+—
+https://
+officecdn
+.
+microsoft.com
+/sg/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/
+tr
+-
+tr
+/
+O365HomePremRetail.img
+. Not: Sürümü geri aldıktan ve ...
+[120] (157,995)<a class='Zv9Ied' href='https://learn.microsoft.com/tr-tr/answers/a/11811747'>3 yanıt />
+·
+En iyi yanıt:
+Bu yanıt otomatik olarak çevrildi. Bu nedenle dil bilgisi hataları veya tuhaf ifade biçimi görülebilir. 
+ Merhaba, Mesut Perk 
+ Cevabınız ...
+
+</current_dom>

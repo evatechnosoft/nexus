@@ -1,0 +1,29 @@
+# Walkthrough - 2FA Implementation & Bug Fixes
+
+I've completed the 2FA flow and addressed the critical bug related to `Future.catchError`. This ensures a smoother and more secure authentication experience.
+
+## Changes Made
+
+### Bug Fixes
+- **Resolve `Future.catchError` type mismatch**: Replaced problematic `catchError` calls with `try-catch` blocks in [user_name_screen.dart](file:///c:/projects/github/EvAnotes/mobile/lib/features/onboarding/user_name_screen.dart) and [main.dart](file:///c:/projects/github/EvAnotes/mobile/lib/main.dart). This prevents runtime errors where the error handler return type didn't match the expected `Future` result.
+- **Fixed illegal double `else` block**: Repaired a syntax error introduced during the refactoring of [splash_screen.dart](file:///c:/projects/github/EvAnotes/mobile/lib/features/splash/splash_screen.dart).
+
+### 2FA & Auth Implementation
+- **Completed 2FA flow**: [TwoFaScreen](file:///c:/projects/github/EvAnotes/mobile/lib/features/auth/two_fa_screen.dart#7-15) now correctly extracts the auth token from the verification response and stores it.
+- **Improved [LoginScreen](file:///c:/projects/github/EvAnotes/mobile/lib/features/auth/login_screen.dart#7-13)**: Refactored to use Riverpod and correctly handle the initial login response. It now redirects to the 2FA screen if the backend requires it.
+- **Authentication Persistence**: The `auth_token` is now stored in `SharedPreferences` upon successful login or 2FA verification.
+- **State Restoration**: [SplashScreen](file:///c:/projects/github/EvAnotes/mobile/lib/features/splash/splash_screen.dart#8-14) now restores the authentication token from local storage on app launch, maintaining the user's session.
+- **Centralized API Client**: All auth-related screens now use `apiClientProvider` instead of local `Dio` instances, ensuring consistent headers and timeout settings.
+
+## Verification
+
+### Code Review
+- Verified all async operations use `try-catch` where appropriate.
+- Confirmed all components are correctly using `ConsumerStatefulWidget` where access to `ref` is needed.
+- Ensured all newly added imports are present and correct.
+
+### Manual Verification Steps (For User)
+1. **App Launch**: Open the app; it should show the splash screen and transition to `todos` if already logged in.
+2. **Login**: Perform a login; if 2FA is required, you should be redirected to the verification screen.
+3. **2FA Verification**: Enter the code; upon success, you should be navigated to the task list.
+4. **App Restart**: Close and reopen the app; you should remain authenticated.

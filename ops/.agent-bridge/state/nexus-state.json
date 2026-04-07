@@ -1,0 +1,3030 @@
+{
+  "syncedAt": "2026-04-03T19:18:47.1911254+03:00",
+  "items": [
+    {
+      "path": "C:/Users/Deacjx/.claude/CLAUDE.md",
+      "length": 5503,
+      "lastWriteTimeUtc": "2026-04-03T08:23:26.5347602Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\rules\\best-practices.md",
+      "length": 4214,
+      "lastWriteTimeUtc": "2026-04-03T08:23:26.5409680Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\rules\\hooks-playbook.md",
+      "length": 5119,
+      "lastWriteTimeUtc": "2026-04-03T08:23:26.5449650Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\rules\\memory-decisions.md",
+      "length": 21495,
+      "lastWriteTimeUtc": "2026-04-03T08:23:26.5369528Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\rules\\memory-preferences.md",
+      "length": 1386,
+      "lastWriteTimeUtc": "2026-03-20T08:36:22.5242221Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\rules\\memory-profile.md",
+      "length": 1495,
+      "lastWriteTimeUtc": "2026-03-19T12:08:56.8569475Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\rules\\memory-sessions.md",
+      "length": 19569,
+      "lastWriteTimeUtc": "2026-04-03T08:23:26.5389638Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\rules\\projects.md",
+      "length": 2665,
+      "lastWriteTimeUtc": "2026-04-03T08:23:26.5399637Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\rules\\security-mcp-notes.md",
+      "length": 2833,
+      "lastWriteTimeUtc": "2026-04-03T08:23:26.5429660Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\rules\\speckit.md",
+      "length": 3360,
+      "lastWriteTimeUtc": "2026-04-03T08:23:26.5439642Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\ansible-generator\\SKILL.md",
+      "length": 9168,
+      "lastWriteTimeUtc": "2026-03-18T18:06:41.3478937Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\ansible-validator\\SKILL.md",
+      "length": 41065,
+      "lastWriteTimeUtc": "2026-03-18T18:06:41.9672123Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\azure-pipelines-generator\\SKILL.md",
+      "length": 7606,
+      "lastWriteTimeUtc": "2026-03-18T18:06:42.5730625Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\azure-pipelines-validator\\SKILL.md",
+      "length": 6188,
+      "lastWriteTimeUtc": "2026-03-18T18:06:43.1337614Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bash-script-generator\\SKILL.md",
+      "length": 6812,
+      "lastWriteTimeUtc": "2026-03-18T18:06:43.8266654Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bash-script-validator\\SKILL.md",
+      "length": 7642,
+      "lastWriteTimeUtc": "2026-03-18T18:06:44.5518235Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\best-practices\\SKILL.md",
+      "length": 1749,
+      "lastWriteTimeUtc": "2026-03-20T10:58:22.9211432Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-advanced-elicitation\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.4578895Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-advanced-elicitation\\SKILL.md",
+      "length": 165,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.4634194Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-advanced-elicitation\\workflow.md",
+      "length": 5620,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.4654488Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-analyst\\SKILL.md",
+      "length": 612,
+      "lastWriteTimeUtc": "2026-03-20T08:23:45.1801160Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-architect\\SKILL.md",
+      "length": 618,
+      "lastWriteTimeUtc": "2026-03-20T08:23:45.1991825Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-brainstorming\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.4674941Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-brainstorming\\SKILL.md",
+      "length": 254,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.4716013Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-brainstorming\\template.md",
+      "length": 245,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.4913460Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-brainstorming\\workflow.md",
+      "length": 2748,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.4953580Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-brainstorming\\steps\\step-01-session-setup.md",
+      "length": 7489,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.4742072Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-brainstorming\\steps\\step-01b-continue.md",
+      "length": 3942,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.4762505Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-brainstorming\\steps\\step-02a-user-selected.md",
+      "length": 7581,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.4787917Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-brainstorming\\steps\\step-02b-ai-recommended.md",
+      "length": 7980,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.4813000Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-brainstorming\\steps\\step-02c-random-selection.md",
+      "length": 7735,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.4832060Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-brainstorming\\steps\\step-02d-progressive-flow.md",
+      "length": 9811,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.4852576Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-brainstorming\\steps\\step-03-technique-execution.md",
+      "length": 16684,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.4867840Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-brainstorming\\steps\\step-04-idea-organization.md",
+      "length": 10801,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.4893145Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-check-implementation-readiness\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:15:45.9566116Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-check-implementation-readiness\\SKILL.md",
+      "length": 226,
+      "lastWriteTimeUtc": "2026-03-20T08:15:39.6588407Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-check-implementation-readiness\\workflow.md",
+      "length": 2826,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.8282445Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-check-implementation-readiness\\steps\\step-01-document-discovery.md",
+      "length": 4956,
+      "lastWriteTimeUtc": "2026-03-20T08:15:40.5361963Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-check-implementation-readiness\\steps\\step-02-prd-analysis.md",
+      "length": 4461,
+      "lastWriteTimeUtc": "2026-03-20T08:15:41.2424131Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-check-implementation-readiness\\steps\\step-03-epic-coverage-validation.md",
+      "length": 4075,
+      "lastWriteTimeUtc": "2026-03-20T08:15:41.6377759Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-check-implementation-readiness\\steps\\step-04-ux-alignment.md",
+      "length": 3306,
+      "lastWriteTimeUtc": "2026-03-20T08:15:42.1490242Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-check-implementation-readiness\\steps\\step-05-epic-quality-review.md",
+      "length": 6716,
+      "lastWriteTimeUtc": "2026-03-20T08:15:42.2724065Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-check-implementation-readiness\\steps\\step-06-final-assessment.md",
+      "length": 3304,
+      "lastWriteTimeUtc": "2026-03-20T08:15:42.4565953Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-check-implementation-readiness\\templates\\readiness-report-template.md",
+      "length": 95,
+      "lastWriteTimeUtc": "2026-03-20T08:15:38.9377517Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-code-review\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:15:46.0402360Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-code-review\\SKILL.md",
+      "length": 319,
+      "lastWriteTimeUtc": "2026-03-20T08:15:39.7433357Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-code-review\\workflow.md",
+      "length": 2019,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.8676697Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-code-review\\steps\\step-01-gather-context.md",
+      "length": 4824,
+      "lastWriteTimeUtc": "2026-03-20T08:15:40.5592919Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-code-review\\steps\\step-02-review.md",
+      "length": 2366,
+      "lastWriteTimeUtc": "2026-03-20T08:15:41.2618482Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-code-review\\steps\\step-03-triage.md",
+      "length": 2658,
+      "lastWriteTimeUtc": "2026-03-20T08:15:41.7937045Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-code-review\\steps\\step-04-present.md",
+      "length": 1778,
+      "lastWriteTimeUtc": "2026-03-20T08:15:42.0322385Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-correct-course\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:15:46.0578169Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-correct-course\\checklist.md",
+      "length": 11638,
+      "lastWriteTimeUtc": "2026-03-20T08:15:37.8200131Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-correct-course\\SKILL.md",
+      "length": 211,
+      "lastWriteTimeUtc": "2026-03-20T08:15:39.7964747Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-correct-course\\workflow.md",
+      "length": 11371,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.8853402Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-architecture\\architecture-decision-template.md",
+      "length": 337,
+      "lastWriteTimeUtc": "2026-03-20T08:15:37.6587229Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-architecture\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:15:45.9899496Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-architecture\\SKILL.md",
+      "length": 284,
+      "lastWriteTimeUtc": "2026-03-20T08:15:39.7072347Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-architecture\\workflow.md",
+      "length": 1547,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.8413634Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-architecture\\steps\\step-01-init.md",
+      "length": 6584,
+      "lastWriteTimeUtc": "2026-03-20T08:15:40.7704130Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-architecture\\steps\\step-01b-continue.md",
+      "length": 6232,
+      "lastWriteTimeUtc": "2026-03-20T08:15:40.9418327Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-architecture\\steps\\step-02-context.md",
+      "length": 8621,
+      "lastWriteTimeUtc": "2026-03-20T08:15:41.0042328Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-architecture\\steps\\step-03-starter.md",
+      "length": 11976,
+      "lastWriteTimeUtc": "2026-03-20T08:15:41.7396458Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-architecture\\steps\\step-04-decisions.md",
+      "length": 10269,
+      "lastWriteTimeUtc": "2026-03-20T08:15:41.9072872Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-architecture\\steps\\step-05-patterns.md",
+      "length": 10918,
+      "lastWriteTimeUtc": "2026-03-20T08:15:42.3271870Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-architecture\\steps\\step-06-structure.md",
+      "length": 11177,
+      "lastWriteTimeUtc": "2026-03-20T08:15:42.8108278Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-architecture\\steps\\step-07-validation.md",
+      "length": 11636,
+      "lastWriteTimeUtc": "2026-03-20T08:15:42.9256982Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-architecture\\steps\\step-08-complete.md",
+      "length": 3133,
+      "lastWriteTimeUtc": "2026-03-20T08:15:42.9450593Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-epics-and-stories\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:15:46.0135012Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-epics-and-stories\\SKILL.md",
+      "length": 209,
+      "lastWriteTimeUtc": "2026-03-20T08:15:39.7337392Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-epics-and-stories\\workflow.md",
+      "length": 3020,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.8540455Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-epics-and-stories\\steps\\step-01-validate-prerequisites.md",
+      "length": 10048,
+      "lastWriteTimeUtc": "2026-03-20T08:15:40.8667000Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-epics-and-stories\\steps\\step-02-design-epics.md",
+      "length": 7238,
+      "lastWriteTimeUtc": "2026-03-20T08:15:41.0621500Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-epics-and-stories\\steps\\step-03-create-stories.md",
+      "length": 8351,
+      "lastWriteTimeUtc": "2026-03-20T08:15:41.5760761Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-epics-and-stories\\steps\\step-04-final-validation.md",
+      "length": 4477,
+      "lastWriteTimeUtc": "2026-03-20T08:15:41.9376866Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-epics-and-stories\\templates\\epics-template.md",
+      "length": 1105,
+      "lastWriteTimeUtc": "2026-03-20T08:15:38.4451535Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-prd\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5844980Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-prd\\SKILL.md",
+      "length": 216,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5935468Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-prd\\workflow.md",
+      "length": 2855,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.6330719Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-prd\\data\\prd-purpose.md",
+      "length": 7246,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5894793Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-prd\\steps-c\\step-01-init.md",
+      "length": 7785,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5966970Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-prd\\steps-c\\step-01b-continue.md",
+      "length": 5751,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5992281Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-prd\\steps-c\\step-02-discovery.md",
+      "length": 8096,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.6019419Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-prd\\steps-c\\step-02b-vision.md",
+      "length": 6775,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.6039533Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-prd\\steps-c\\step-02c-executive-summary.md",
+      "length": 7250,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.6060199Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-prd\\steps-c\\step-03-success.md",
+      "length": 9189,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.6090164Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-prd\\steps-c\\step-04-journeys.md",
+      "length": 9040,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.6115395Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-prd\\steps-c\\step-05-domain.md",
+      "length": 6919,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.6130582Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-prd\\steps-c\\step-06-innovation.md",
+      "length": 8680,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.6155836Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-prd\\steps-c\\step-07-project-type.md",
+      "length": 8799,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.6176862Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-prd\\steps-c\\step-08-scoping.md",
+      "length": 7870,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.6202100Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-prd\\steps-c\\step-09-functional.md",
+      "length": 9199,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.6217228Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-prd\\steps-c\\step-10-nonfunctional.md",
+      "length": 9000,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.6237356Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-prd\\steps-c\\step-11-polish.md",
+      "length": 9329,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.6257321Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-prd\\steps-c\\step-12-complete.md",
+      "length": 4861,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.6285053Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-prd\\templates\\prd-template.md",
+      "length": 164,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.6305066Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-product-brief\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:15:45.7194548Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-product-brief\\product-brief.template.md",
+      "length": 210,
+      "lastWriteTimeUtc": "2026-03-20T08:15:38.8759232Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-product-brief\\SKILL.md",
+      "length": 241,
+      "lastWriteTimeUtc": "2026-03-20T08:15:39.2680655Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-product-brief\\workflow.md",
+      "length": 2915,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.7504334Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-product-brief\\steps\\step-01-init.md",
+      "length": 6803,
+      "lastWriteTimeUtc": "2026-03-20T08:15:40.5859597Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-product-brief\\steps\\step-01b-continue.md",
+      "length": 5617,
+      "lastWriteTimeUtc": "2026-03-20T08:15:40.8931144Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-product-brief\\steps\\step-02-vision.md",
+      "length": 6900,
+      "lastWriteTimeUtc": "2026-03-20T08:15:41.3688018Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-product-brief\\steps\\step-03-users.md",
+      "length": 7402,
+      "lastWriteTimeUtc": "2026-03-20T08:15:41.8247630Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-product-brief\\steps\\step-04-metrics.md",
+      "length": 7778,
+      "lastWriteTimeUtc": "2026-03-20T08:15:42.0181986Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-product-brief\\steps\\step-05-scope.md",
+      "length": 8040,
+      "lastWriteTimeUtc": "2026-03-20T08:15:42.3676127Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-product-brief\\steps\\step-06-complete.md",
+      "length": 6444,
+      "lastWriteTimeUtc": "2026-03-20T08:15:42.4083809Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-story\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:15:46.0729439Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-story\\checklist.md",
+      "length": 14349,
+      "lastWriteTimeUtc": "2026-03-20T08:15:37.9045403Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-story\\discover-inputs.md",
+      "length": 3911,
+      "lastWriteTimeUtc": "2026-03-20T08:15:38.3502719Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-story\\SKILL.md",
+      "length": 269,
+      "lastWriteTimeUtc": "2026-03-20T08:15:39.8254968Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-story\\template.md",
+      "length": 948,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.6923203Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-story\\workflow.md",
+      "length": 19932,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.9049605Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-ux-design\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:15:45.8480634Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-ux-design\\SKILL.md",
+      "length": 240,
+      "lastWriteTimeUtc": "2026-03-20T08:15:39.5506776Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-ux-design\\ux-design-template.md",
+      "length": 236,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.7157589Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-ux-design\\workflow.md",
+      "length": 1234,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.7994946Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-ux-design\\steps\\step-01-init.md",
+      "length": 5784,
+      "lastWriteTimeUtc": "2026-03-20T08:15:40.7360766Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-ux-design\\steps\\step-01b-continue.md",
+      "length": 4867,
+      "lastWriteTimeUtc": "2026-03-20T08:15:40.9196586Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-ux-design\\steps\\step-02-discovery.md",
+      "length": 6671,
+      "lastWriteTimeUtc": "2026-03-20T08:15:41.0884919Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-ux-design\\steps\\step-03-core-experience.md",
+      "length": 8205,
+      "lastWriteTimeUtc": "2026-03-20T08:15:41.5610511Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-ux-design\\steps\\step-04-emotional-response.md",
+      "length": 8265,
+      "lastWriteTimeUtc": "2026-03-20T08:15:41.9212551Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-ux-design\\steps\\step-05-inspiration.md",
+      "length": 8612,
+      "lastWriteTimeUtc": "2026-03-20T08:15:42.3060607Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-ux-design\\steps\\step-06-design-system.md",
+      "length": 8801,
+      "lastWriteTimeUtc": "2026-03-20T08:15:42.4247396Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-ux-design\\steps\\step-07-defining-experience.md",
+      "length": 8750,
+      "lastWriteTimeUtc": "2026-03-20T08:15:42.8423248Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-ux-design\\steps\\step-08-visual-foundation.md",
+      "length": 8404,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.0061127Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-ux-design\\steps\\step-09-design-directions.md",
+      "length": 8582,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.0240014Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-ux-design\\steps\\step-10-user-journeys.md",
+      "length": 8349,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.0761264Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-ux-design\\steps\\step-11-component-strategy.md",
+      "length": 8694,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.0955642Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-ux-design\\steps\\step-12-ux-patterns.md",
+      "length": 7963,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.1715538Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-ux-design\\steps\\step-13-responsive-accessibility.md",
+      "length": 9061,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.1865573Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-create-ux-design\\steps\\step-14-complete.md",
+      "length": 6845,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.2001458Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-dev\\SKILL.md",
+      "length": 600,
+      "lastWriteTimeUtc": "2026-03-20T08:23:45.2071229Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-dev-story\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:15:46.0892998Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-dev-story\\checklist.md",
+      "length": 4389,
+      "lastWriteTimeUtc": "2026-03-20T08:15:37.9496657Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-dev-story\\SKILL.md",
+      "length": 262,
+      "lastWriteTimeUtc": "2026-03-20T08:15:39.9239613Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-dev-story\\workflow.md",
+      "length": 23320,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.9178892Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-distillator\\bmad-skill-manifest.yaml",
+      "length": 518,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5050333Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-distillator\\SKILL.md",
+      "length": 9059,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5257312Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-distillator\\agents\\distillate-compressor.md",
+      "length": 4951,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.4993970Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-distillator\\agents\\round-trip-reconstructor.md",
+      "length": 2802,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5029406Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-distillator\\resources\\compression-rules.md",
+      "length": 2662,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5075584Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-distillator\\resources\\distillate-format-reference.md",
+      "length": 11874,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5099456Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-distillator\\resources\\splitting-strategy.md",
+      "length": 3337,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5124693Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-document-project\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:15:46.1388388Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-document-project\\checklist.md",
+      "length": 10101,
+      "lastWriteTimeUtc": "2026-03-20T08:15:38.0167531Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-document-project\\instructions.md",
+      "length": 5164,
+      "lastWriteTimeUtc": "2026-03-20T08:15:38.5660728Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-document-project\\SKILL.md",
+      "length": 213,
+      "lastWriteTimeUtc": "2026-03-20T08:15:40.0351191Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-document-project\\workflow.md",
+      "length": 534,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.9952891Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-document-project\\templates\\deep-dive-template.md",
+      "length": 5854,
+      "lastWriteTimeUtc": "2026-03-20T08:15:38.1896984Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-document-project\\templates\\index-template.md",
+      "length": 4510,
+      "lastWriteTimeUtc": "2026-03-20T08:15:38.5524281Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-document-project\\templates\\project-overview-template.md",
+      "length": 1951,
+      "lastWriteTimeUtc": "2026-03-20T08:15:38.9203780Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-document-project\\templates\\project-scan-report-schema.json",
+      "length": 4836,
+      "lastWriteTimeUtc": "2026-03-20T08:15:37.5361820Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-document-project\\templates\\source-tree-template.md",
+      "length": 2160,
+      "lastWriteTimeUtc": "2026-03-20T08:15:40.4100024Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-document-project\\workflows\\deep-dive-instructions.md",
+      "length": 11909,
+      "lastWriteTimeUtc": "2026-03-20T08:15:38.1492817Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-document-project\\workflows\\deep-dive-workflow.md",
+      "length": 979,
+      "lastWriteTimeUtc": "2026-03-20T08:15:38.2182991Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-document-project\\workflows\\full-scan-instructions.md",
+      "length": 43200,
+      "lastWriteTimeUtc": "2026-03-20T08:15:38.4830723Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-document-project\\workflows\\full-scan-workflow.md",
+      "length": 970,
+      "lastWriteTimeUtc": "2026-03-20T08:15:38.4916881Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-domain-research\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:15:45.7618194Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-domain-research\\research.template.md",
+      "length": 581,
+      "lastWriteTimeUtc": "2026-03-20T08:15:39.0174944Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-domain-research\\SKILL.md",
+      "length": 210,
+      "lastWriteTimeUtc": "2026-03-20T08:15:39.3061809Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-domain-research\\workflow.md",
+      "length": 2280,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.7622507Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-domain-research\\domain-steps\\step-01-init.md",
+      "length": 5394,
+      "lastWriteTimeUtc": "2026-03-20T08:15:40.6431825Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-domain-research\\domain-steps\\step-02-domain-analysis.md",
+      "length": 8640,
+      "lastWriteTimeUtc": "2026-03-20T08:15:41.1467540Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-domain-research\\domain-steps\\step-03-competitive-landscape.md",
+      "length": 9525,
+      "lastWriteTimeUtc": "2026-03-20T08:15:41.5205652Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-domain-research\\domain-steps\\step-04-regulatory-focus.md",
+      "length": 6967,
+      "lastWriteTimeUtc": "2026-03-20T08:15:42.0598751Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-domain-research\\domain-steps\\step-05-technical-trends.md",
+      "length": 7506,
+      "lastWriteTimeUtc": "2026-03-20T08:15:42.3899341Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-domain-research\\domain-steps\\step-06-research-synthesis.md",
+      "length": 16973,
+      "lastWriteTimeUtc": "2026-03-20T08:15:42.6053183Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-edit-prd\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:15:45.8946828Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-edit-prd\\SKILL.md",
+      "length": 148,
+      "lastWriteTimeUtc": "2026-03-20T08:15:39.6195582Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-edit-prd\\workflow.md",
+      "length": 2881,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.8097594Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-edit-prd\\steps-e\\step-e-01-discovery.md",
+      "length": 7967,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.2223912Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-edit-prd\\steps-e\\step-e-01b-legacy-conversion.md",
+      "length": 6589,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.2400925Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-edit-prd\\steps-e\\step-e-02-review.md",
+      "length": 7721,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.2558399Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-edit-prd\\steps-e\\step-e-03-edit.md",
+      "length": 7350,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.2736413Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-edit-prd\\steps-e\\step-e-04-complete.md",
+      "length": 5105,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.2889302Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-editorial-review-prose\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5285036Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-editorial-review-prose\\SKILL.md",
+      "length": 222,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5296484Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-editorial-review-prose\\workflow.md",
+      "length": 4920,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5316487Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-editorial-review-structure\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5341719Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-editorial-review-structure\\SKILL.md",
+      "length": 283,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5357810Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-editorial-review-structure\\workflow.md",
+      "length": 10577,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5377934Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-generate-project-context\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:15:46.1478727Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-generate-project-context\\project-context-template.md",
+      "length": 543,
+      "lastWriteTimeUtc": "2026-03-20T08:15:38.9041069Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-generate-project-context\\SKILL.md",
+      "length": 221,
+      "lastWriteTimeUtc": "2026-03-20T08:15:40.0530918Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-generate-project-context\\workflow.md",
+      "length": 1668,
+      "lastWriteTimeUtc": "2026-03-20T08:15:44.0063672Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-generate-project-context\\steps\\step-01-discover.md",
+      "length": 6016,
+      "lastWriteTimeUtc": "2026-03-20T08:15:40.5073328Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-generate-project-context\\steps\\step-02-generate.md",
+      "length": 9135,
+      "lastWriteTimeUtc": "2026-03-20T08:15:41.1703303Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-generate-project-context\\steps\\step-03-complete.md",
+      "length": 8122,
+      "lastWriteTimeUtc": "2026-03-20T08:15:41.5506925Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-help\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5392878Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-help\\SKILL.md",
+      "length": 276,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5423520Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-help\\workflow.md",
+      "length": 4561,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5453509Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-index-docs\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5474266Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-index-docs\\SKILL.md",
+      "length": 242,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5500882Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-index-docs\\workflow.md",
+      "length": 1441,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5506396Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-market-research\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:15:45.7807858Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-market-research\\research.template.md",
+      "length": 581,
+      "lastWriteTimeUtc": "2026-03-20T08:15:39.0398463Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-market-research\\SKILL.md",
+      "length": 227,
+      "lastWriteTimeUtc": "2026-03-20T08:15:39.3405258Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-market-research\\workflow.md",
+      "length": 2237,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.7744311Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-market-research\\steps\\step-01-init.md",
+      "length": 6422,
+      "lastWriteTimeUtc": "2026-03-20T08:15:40.6737048Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-market-research\\steps\\step-02-customer-behavior.md",
+      "length": 9265,
+      "lastWriteTimeUtc": "2026-03-20T08:15:41.0263094Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-market-research\\steps\\step-03-customer-pain-points.md",
+      "length": 9581,
+      "lastWriteTimeUtc": "2026-03-20T08:15:41.5923694Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-market-research\\steps\\step-04-customer-decisions.md",
+      "length": 10020,
+      "lastWriteTimeUtc": "2026-03-20T08:15:41.8605041Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-market-research\\steps\\step-05-competitive-analysis.md",
+      "length": 5756,
+      "lastWriteTimeUtc": "2026-03-20T08:15:42.1935749Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-market-research\\steps\\step-06-research-completion.md",
+      "length": 19146,
+      "lastWriteTimeUtc": "2026-03-20T08:15:42.5149761Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-party-mode\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5531813Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-party-mode\\SKILL.md",
+      "length": 233,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5551835Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-party-mode\\workflow.md",
+      "length": 5444,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5633695Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-party-mode\\steps\\step-01-agent-loading.md",
+      "length": 5172,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5573146Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-party-mode\\steps\\step-02-discussion-orchestration.md",
+      "length": 6633,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5598223Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-party-mode\\steps\\step-03-graceful-exit.md",
+      "length": 7084,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5613482Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-pm\\SKILL.md",
+      "length": 597,
+      "lastWriteTimeUtc": "2026-03-20T08:23:45.2126921Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-product-brief-preview\\bmad-manifest.json",
+      "length": 494,
+      "lastWriteTimeUtc": "2026-03-20T08:15:37.4865216Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-product-brief-preview\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:15:45.7270235Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-product-brief-preview\\SKILL.md",
+      "length": 5712,
+      "lastWriteTimeUtc": "2026-03-20T08:15:39.2937093Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-product-brief-preview\\agents\\artifact-analyzer.md",
+      "length": 2501,
+      "lastWriteTimeUtc": "2026-03-20T08:15:37.7309445Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-product-brief-preview\\agents\\opportunity-reviewer.md",
+      "length": 1755,
+      "lastWriteTimeUtc": "2026-03-20T08:15:38.7896503Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-product-brief-preview\\agents\\skeptic-reviewer.md",
+      "length": 1562,
+      "lastWriteTimeUtc": "2026-03-20T08:15:39.2258337Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-product-brief-preview\\agents\\web-researcher.md",
+      "length": 1674,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.7242122Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-product-brief-preview\\prompts\\contextual-discovery.md",
+      "length": 2596,
+      "lastWriteTimeUtc": "2026-03-20T08:15:38.1214351Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-product-brief-preview\\prompts\\draft-and-review.md",
+      "length": 4038,
+      "lastWriteTimeUtc": "2026-03-20T08:15:38.4308847Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-product-brief-preview\\prompts\\finalize.md",
+      "length": 3933,
+      "lastWriteTimeUtc": "2026-03-20T08:15:38.4597335Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-product-brief-preview\\prompts\\guided-elicitation.md",
+      "length": 3418,
+      "lastWriteTimeUtc": "2026-03-20T08:15:38.5149396Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-product-brief-preview\\resources\\brief-template.md",
+      "length": 2304,
+      "lastWriteTimeUtc": "2026-03-20T08:15:37.7723454Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-qa\\SKILL.md",
+      "length": 597,
+      "lastWriteTimeUtc": "2026-03-20T08:23:45.2187394Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-qa-generate-e2e-tests\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:15:46.1593875Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-qa-generate-e2e-tests\\checklist.md",
+      "length": 894,
+      "lastWriteTimeUtc": "2026-03-20T08:15:38.0390692Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-qa-generate-e2e-tests\\SKILL.md",
+      "length": 223,
+      "lastWriteTimeUtc": "2026-03-20T08:15:40.0856772Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-qa-generate-e2e-tests\\workflow.md",
+      "length": 3424,
+      "lastWriteTimeUtc": "2026-03-20T08:15:44.0160917Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-quick-dev\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:15:46.1818950Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-quick-dev\\SKILL.md",
+      "length": 282,
+      "lastWriteTimeUtc": "2026-03-20T08:15:40.1355646Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-quick-dev\\workflow.md",
+      "length": 1155,
+      "lastWriteTimeUtc": "2026-03-20T08:15:44.0437047Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-quick-dev\\steps\\step-01-mode-detection.md",
+      "length": 4894,
+      "lastWriteTimeUtc": "2026-03-20T08:15:40.8065638Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-quick-dev\\steps\\step-02-context-gathering.md",
+      "length": 2279,
+      "lastWriteTimeUtc": "2026-03-20T08:15:40.9869900Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-quick-dev\\steps\\step-03-execute.md",
+      "length": 2248,
+      "lastWriteTimeUtc": "2026-03-20T08:15:41.6597148Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-quick-dev\\steps\\step-04-self-check.md",
+      "length": 2156,
+      "lastWriteTimeUtc": "2026-03-20T08:15:42.1338970Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-quick-dev\\steps\\step-05-adversarial-review.md",
+      "length": 2966,
+      "lastWriteTimeUtc": "2026-03-20T08:15:42.1648620Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-quick-dev\\steps\\step-06-resolve-findings.md",
+      "length": 2946,
+      "lastWriteTimeUtc": "2026-03-20T08:15:42.6904178Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-quick-dev-new-preview\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:15:46.1691440Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-quick-dev-new-preview\\SKILL.md",
+      "length": 393,
+      "lastWriteTimeUtc": "2026-03-20T08:15:40.1081243Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-quick-dev-new-preview\\tech-spec-template.md",
+      "length": 3300,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.6763187Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-quick-dev-new-preview\\workflow.md",
+      "length": 3329,
+      "lastWriteTimeUtc": "2026-03-20T08:15:44.0294137Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-quick-dev-new-preview\\steps\\step-01-clarify-and-route.md",
+      "length": 3902,
+      "lastWriteTimeUtc": "2026-03-20T08:15:40.4896116Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-quick-dev-new-preview\\steps\\step-02-plan.md",
+      "length": 1797,
+      "lastWriteTimeUtc": "2026-03-20T08:15:41.2222221Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-quick-dev-new-preview\\steps\\step-03-implement.md",
+      "length": 1050,
+      "lastWriteTimeUtc": "2026-03-20T08:15:41.7019860Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-quick-dev-new-preview\\steps\\step-04-review.md",
+      "length": 4370,
+      "lastWriteTimeUtc": "2026-03-20T08:15:42.0775322Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-quick-dev-new-preview\\steps\\step-05-present.md",
+      "length": 573,
+      "lastWriteTimeUtc": "2026-03-20T08:15:42.3460957Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-quick-flow-solo-dev\\SKILL.md",
+      "length": 648,
+      "lastWriteTimeUtc": "2026-03-20T08:23:45.2233121Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-quick-spec\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:15:46.1955213Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-quick-spec\\SKILL.md",
+      "length": 258,
+      "lastWriteTimeUtc": "2026-03-20T08:15:40.1689887Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-quick-spec\\tech-spec-template.md",
+      "length": 776,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.6846884Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-quick-spec\\workflow.md",
+      "length": 3233,
+      "lastWriteTimeUtc": "2026-03-20T08:15:44.1958406Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-quick-spec\\steps\\step-01-understand.md",
+      "length": 6355,
+      "lastWriteTimeUtc": "2026-03-20T08:15:40.8472565Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-quick-spec\\steps\\step-02-investigate.md",
+      "length": 4462,
+      "lastWriteTimeUtc": "2026-03-20T08:15:41.2011652Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-quick-spec\\steps\\step-03-generate.md",
+      "length": 3092,
+      "lastWriteTimeUtc": "2026-03-20T08:15:41.6775604Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-quick-spec\\steps\\step-04-review.md",
+      "length": 6649,
+      "lastWriteTimeUtc": "2026-03-20T08:15:42.0938011Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-retrospective\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:15:46.1095233Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-retrospective\\SKILL.md",
+      "length": 224,
+      "lastWriteTimeUtc": "2026-03-20T08:15:39.9540100Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-retrospective\\workflow.md",
+      "length": 62463,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.9348677Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-review-adversarial-general\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5664617Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-review-adversarial-general\\SKILL.md",
+      "length": 218,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5679773Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-review-adversarial-general\\workflow.md",
+      "length": 1237,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5699835Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-review-edge-case-hunter\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5718249Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-review-edge-case-hunter\\SKILL.md",
+      "length": 340,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5738407Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-review-edge-case-hunter\\workflow.md",
+      "length": 3726,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5758401Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-shard-doc\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5778260Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-shard-doc\\SKILL.md",
+      "length": 230,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5803508Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-shard-doc\\workflow.md",
+      "length": 3954,
+      "lastWriteTimeUtc": "2026-03-20T08:23:43.5824459Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-sm\\SKILL.md",
+      "length": 597,
+      "lastWriteTimeUtc": "2026-03-20T08:23:45.2278225Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-sprint-planning\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:15:46.1202429Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-sprint-planning\\checklist.md",
+      "length": 1298,
+      "lastWriteTimeUtc": "2026-03-20T08:15:37.9894578Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-sprint-planning\\SKILL.md",
+      "length": 208,
+      "lastWriteTimeUtc": "2026-03-20T08:15:39.9816823Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-sprint-planning\\sprint-status-template.yaml",
+      "length": 1783,
+      "lastWriteTimeUtc": "2026-03-20T08:15:46.3955243Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-sprint-planning\\workflow.md",
+      "length": 8903,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.9673710Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-sprint-status\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:15:46.1286625Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-sprint-status\\SKILL.md",
+      "length": 203,
+      "lastWriteTimeUtc": "2026-03-20T08:15:40.0082316Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-sprint-status\\workflow.md",
+      "length": 10029,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.9850119Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-tech-writer\\SKILL.md",
+      "length": 636,
+      "lastWriteTimeUtc": "2026-03-20T08:23:45.2370450Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-technical-research\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:15:45.8079710Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-technical-research\\research.template.md",
+      "length": 581,
+      "lastWriteTimeUtc": "2026-03-20T08:15:39.1061093Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-technical-research\\SKILL.md",
+      "length": 229,
+      "lastWriteTimeUtc": "2026-03-20T08:15:39.3751101Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-technical-research\\workflow.md",
+      "length": 2311,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.7862550Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-technical-research\\technical-steps\\step-01-init.md",
+      "length": 5581,
+      "lastWriteTimeUtc": "2026-03-20T08:15:40.6982065Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-technical-research\\technical-steps\\step-02-technical-overview.md",
+      "length": 9447,
+      "lastWriteTimeUtc": "2026-03-20T08:15:41.2914729Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-technical-research\\technical-steps\\step-03-integration-patterns.md",
+      "length": 9995,
+      "lastWriteTimeUtc": "2026-03-20T08:15:41.7204458Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-technical-research\\technical-steps\\step-04-architectural-patterns.md",
+      "length": 7212,
+      "lastWriteTimeUtc": "2026-03-20T08:15:41.8430799Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-technical-research\\technical-steps\\step-05-implementation-research.md",
+      "length": 7774,
+      "lastWriteTimeUtc": "2026-03-20T08:15:42.2912718Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-technical-research\\technical-steps\\step-06-research-synthesis.md",
+      "length": 21056,
+      "lastWriteTimeUtc": "2026-03-20T08:15:42.6439044Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-ux-designer\\SKILL.md",
+      "length": 624,
+      "lastWriteTimeUtc": "2026-03-20T08:23:45.2400960Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-validate-prd\\bmad-skill-manifest.yaml",
+      "length": 12,
+      "lastWriteTimeUtc": "2026-03-20T08:15:45.9172523Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-validate-prd\\SKILL.md",
+      "length": 191,
+      "lastWriteTimeUtc": "2026-03-20T08:15:39.6352753Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-validate-prd\\workflow.md",
+      "length": 2918,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.8207969Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-validate-prd\\data\\prd-purpose.md",
+      "length": 7246,
+      "lastWriteTimeUtc": "2026-03-20T08:15:38.8103983Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-validate-prd\\steps-v\\step-v-01-discovery.md",
+      "length": 7177,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.3190326Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-validate-prd\\steps-v\\step-v-02-format-detection.md",
+      "length": 6507,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.3552462Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-validate-prd\\steps-v\\step-v-02b-parity-check.md",
+      "length": 6419,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.3826729Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-validate-prd\\steps-v\\step-v-03-density-validation.md",
+      "length": 5755,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.4087490Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-validate-prd\\steps-v\\step-v-04-brief-coverage-validation.md",
+      "length": 7189,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.4355433Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-validate-prd\\steps-v\\step-v-05-measurability-validation.md",
+      "length": 7109,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.4577689Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-validate-prd\\steps-v\\step-v-06-traceability-validation.md",
+      "length": 7238,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.4866031Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-validate-prd\\steps-v\\step-v-07-implementation-leakage-validation.md",
+      "length": 7005,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.5085303Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-validate-prd\\steps-v\\step-v-08-domain-compliance-validation.md",
+      "length": 7691,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.5319275Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-validate-prd\\steps-v\\step-v-09-project-type-validation.md",
+      "length": 8603,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.5602106Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-validate-prd\\steps-v\\step-v-10-smart-validation.md",
+      "length": 6785,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.5863924Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-validate-prd\\steps-v\\step-v-11-holistic-quality-validation.md",
+      "length": 8736,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.6083354Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-validate-prd\\steps-v\\step-v-12-completeness-validation.md",
+      "length": 8233,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.6293565Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\bmad-validate-prd\\steps-v\\step-v-13-report-complete.md",
+      "length": 8134,
+      "lastWriteTimeUtc": "2026-03-20T08:15:43.6569280Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\brainstorming\\SKILL.md",
+      "length": 10571,
+      "lastWriteTimeUtc": "2026-03-18T18:06:26.2696428Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\commit-smart\\SKILL.md",
+      "length": 3476,
+      "lastWriteTimeUtc": "2026-03-18T14:48:41.8606923Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\context-prep\\SKILL.md",
+      "length": 2842,
+      "lastWriteTimeUtc": "2026-03-20T08:46:17.6589245Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\dispatching-parallel-agents\\SKILL.md",
+      "length": 6441,
+      "lastWriteTimeUtc": "2026-03-18T18:06:26.9128379Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\dockerfile-generator\\SKILL.md",
+      "length": 30852,
+      "lastWriteTimeUtc": "2026-03-18T18:06:45.1746227Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\dockerfile-validator\\SKILL.md",
+      "length": 9250,
+      "lastWriteTimeUtc": "2026-03-18T18:06:45.7151676Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\excalidraw\\SKILL.md",
+      "length": 23461,
+      "lastWriteTimeUtc": "2026-03-20T09:10:10.4000277Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\executing-plans\\SKILL.md",
+      "length": 2459,
+      "lastWriteTimeUtc": "2026-03-18T18:06:27.5283036Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\file-organizer\\SKILL.md",
+      "length": 3894,
+      "lastWriteTimeUtc": "2026-03-18T14:49:09.7158086Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\finishing-a-development-branch\\SKILL.md",
+      "length": 4250,
+      "lastWriteTimeUtc": "2026-03-18T18:06:28.1416773Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\fluentbit-generator\\SKILL.md",
+      "length": 8447,
+      "lastWriteTimeUtc": "2026-03-18T18:06:46.4195760Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\fluentbit-validator\\SKILL.md",
+      "length": 5614,
+      "lastWriteTimeUtc": "2026-03-18T18:06:47.1779348Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\github-actions-generator\\SKILL.md",
+      "length": 12215,
+      "lastWriteTimeUtc": "2026-03-18T18:06:48.1006872Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\github-actions-validator\\SKILL.md",
+      "length": 18891,
+      "lastWriteTimeUtc": "2026-03-18T18:06:48.7527961Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\gitlab-ci-generator\\SKILL.md",
+      "length": 43464,
+      "lastWriteTimeUtc": "2026-03-18T18:06:49.3660495Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\gitlab-ci-validator\\SKILL.md",
+      "length": 6461,
+      "lastWriteTimeUtc": "2026-03-18T18:06:49.8964725Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\helm-generator\\SKILL.md",
+      "length": 11696,
+      "lastWriteTimeUtc": "2026-03-18T18:06:50.4456635Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\helm-validator\\SKILL.md",
+      "length": 35061,
+      "lastWriteTimeUtc": "2026-03-18T18:06:50.9881383Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\humanizer\\README.md",
+      "length": 8194,
+      "lastWriteTimeUtc": "2026-03-20T09:01:42.5877150Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\humanizer\\SKILL.md",
+      "length": 24353,
+      "lastWriteTimeUtc": "2026-03-20T09:01:42.5887224Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\humanizer\\WARP.md",
+      "length": 2175,
+      "lastWriteTimeUtc": "2026-03-20T09:01:42.5887224Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\interface-design\\SKILL.md",
+      "length": 20047,
+      "lastWriteTimeUtc": "2026-03-20T09:10:10.4077607Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\jenkinsfile-generator\\SKILL.md",
+      "length": 14875,
+      "lastWriteTimeUtc": "2026-03-18T18:06:51.6378472Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\jenkinsfile-validator\\SKILL.md",
+      "length": 10697,
+      "lastWriteTimeUtc": "2026-03-18T18:06:52.2689540Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\k8s-debug\\SKILL.md",
+      "length": 11433,
+      "lastWriteTimeUtc": "2026-03-18T18:06:52.8665796Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\k8s-yaml-generator\\SKILL.md",
+      "length": 8866,
+      "lastWriteTimeUtc": "2026-03-18T18:06:53.4705497Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\k8s-yaml-validator\\SKILL.md",
+      "length": 33101,
+      "lastWriteTimeUtc": "2026-03-18T18:06:54.2167669Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-adaptyv\\SKILL.md",
+      "length": 3742,
+      "lastWriteTimeUtc": "2026-03-18T18:08:30.6276764Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-aeon\\SKILL.md",
+      "length": 10587,
+      "lastWriteTimeUtc": "2026-03-18T18:08:31.2341462Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-alpha-vantage\\SKILL.md",
+      "length": 6259,
+      "lastWriteTimeUtc": "2026-03-18T18:08:31.8110161Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-alphafold-database\\SKILL.md",
+      "length": 16401,
+      "lastWriteTimeUtc": "2026-03-18T18:08:32.4527272Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-anndata\\SKILL.md",
+      "length": 10214,
+      "lastWriteTimeUtc": "2026-03-18T18:08:33.1163195Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-arboreto\\SKILL.md",
+      "length": 6929,
+      "lastWriteTimeUtc": "2026-03-18T18:08:33.7761226Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-arxiv-database\\SKILL.md",
+      "length": 9774,
+      "lastWriteTimeUtc": "2026-03-18T18:08:34.3335933Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-astropy\\SKILL.md",
+      "length": 11534,
+      "lastWriteTimeUtc": "2026-03-18T18:08:34.9942520Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-benchling-integration\\SKILL.md",
+      "length": 13063,
+      "lastWriteTimeUtc": "2026-03-18T18:08:35.6303568Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-bgpt-paper-search\\SKILL.md",
+      "length": 2872,
+      "lastWriteTimeUtc": "2026-03-18T18:08:36.2924839Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-bindingdb-database\\SKILL.md",
+      "length": 12069,
+      "lastWriteTimeUtc": "2026-03-18T18:08:36.8963022Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-biopython\\SKILL.md",
+      "length": 13829,
+      "lastWriteTimeUtc": "2026-03-18T18:08:37.4009360Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-biorxiv-database\\SKILL.md",
+      "length": 12584,
+      "lastWriteTimeUtc": "2026-03-18T18:08:38.0303414Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-bioservices\\SKILL.md",
+      "length": 9947,
+      "lastWriteTimeUtc": "2026-03-18T18:08:38.7060284Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-brenda-database\\SKILL.md",
+      "length": 22165,
+      "lastWriteTimeUtc": "2026-03-18T18:08:39.3009260Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-cbioportal-database\\SKILL.md",
+      "length": 13100,
+      "lastWriteTimeUtc": "2026-03-18T18:08:39.8976576Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-cellxgene-census\\SKILL.md",
+      "length": 15439,
+      "lastWriteTimeUtc": "2026-03-18T18:08:40.6388914Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-chembl-database\\SKILL.md",
+      "length": 10250,
+      "lastWriteTimeUtc": "2026-03-18T18:08:41.2802528Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-cirq\\SKILL.md",
+      "length": 10648,
+      "lastWriteTimeUtc": "2026-03-18T18:08:41.8866451Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-citation-management\\SKILL.md",
+      "length": 32596,
+      "lastWriteTimeUtc": "2026-03-18T18:08:42.5669414Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-clinical-decision-support\\SKILL.md",
+      "length": 26497,
+      "lastWriteTimeUtc": "2026-03-18T18:08:43.1109371Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-clinical-reports\\SKILL.md",
+      "length": 39696,
+      "lastWriteTimeUtc": "2026-03-18T18:08:43.7908864Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-clinicaltrials-database\\SKILL.md",
+      "length": 14988,
+      "lastWriteTimeUtc": "2026-03-18T18:08:44.3815552Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-clinpgx-database\\SKILL.md",
+      "length": 20948,
+      "lastWriteTimeUtc": "2026-03-18T18:08:45.0426292Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-clinvar-database\\SKILL.md",
+      "length": 13284,
+      "lastWriteTimeUtc": "2026-03-18T18:08:45.6928102Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-cobrapy\\SKILL.md",
+      "length": 12450,
+      "lastWriteTimeUtc": "2026-03-18T18:08:46.3396758Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-consciousness-council\\SKILL.md",
+      "length": 8728,
+      "lastWriteTimeUtc": "2026-03-18T18:08:46.9442582Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-cosmic-database\\SKILL.md",
+      "length": 10032,
+      "lastWriteTimeUtc": "2026-03-18T18:08:47.5963935Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-dask\\SKILL.md",
+      "length": 14303,
+      "lastWriteTimeUtc": "2026-03-18T18:08:48.3174879Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-datacommons-client\\SKILL.md",
+      "length": 7986,
+      "lastWriteTimeUtc": "2026-03-18T18:08:48.9988274Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-datamol\\SKILL.md",
+      "length": 18867,
+      "lastWriteTimeUtc": "2026-03-18T18:08:49.5483446Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-deepchem\\SKILL.md",
+      "length": 17783,
+      "lastWriteTimeUtc": "2026-03-18T18:08:50.2637741Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-deeptools\\SKILL.md",
+      "length": 17985,
+      "lastWriteTimeUtc": "2026-03-18T18:08:50.8310923Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-denario\\SKILL.md",
+      "length": 6000,
+      "lastWriteTimeUtc": "2026-03-18T18:08:51.3868004Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-depmap\\SKILL.md",
+      "length": 11277,
+      "lastWriteTimeUtc": "2026-03-18T18:08:51.8830536Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-dhdna-profiler\\SKILL.md",
+      "length": 10081,
+      "lastWriteTimeUtc": "2026-03-18T18:08:52.3882907Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-diffdock\\SKILL.md",
+      "length": 15487,
+      "lastWriteTimeUtc": "2026-03-18T18:08:52.9740689Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-dnanexus-integration\\SKILL.md",
+      "length": 10650,
+      "lastWriteTimeUtc": "2026-03-18T18:08:53.7536169Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-docx\\SKILL.md",
+      "length": 20084,
+      "lastWriteTimeUtc": "2026-03-18T18:08:54.3913194Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-drugbank-database\\SKILL.md",
+      "length": 9398,
+      "lastWriteTimeUtc": "2026-03-18T18:08:54.9643995Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-edgartools\\SKILL.md",
+      "length": 5604,
+      "lastWriteTimeUtc": "2026-03-18T18:08:55.4789965Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-ena-database\\SKILL.md",
+      "length": 7034,
+      "lastWriteTimeUtc": "2026-03-18T18:08:55.9953247Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-ensembl-database\\SKILL.md",
+      "length": 8259,
+      "lastWriteTimeUtc": "2026-03-18T18:08:56.5057446Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-esm\\SKILL.md",
+      "length": 10562,
+      "lastWriteTimeUtc": "2026-03-18T18:08:57.0454293Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-etetoolkit\\SKILL.md",
+      "length": 17884,
+      "lastWriteTimeUtc": "2026-03-18T18:08:57.5817118Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-exploratory-data-analysis\\SKILL.md",
+      "length": 14316,
+      "lastWriteTimeUtc": "2026-03-18T18:08:58.1028297Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-fda-database\\SKILL.md",
+      "length": 14423,
+      "lastWriteTimeUtc": "2026-03-18T18:08:58.7587176Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-flowio\\SKILL.md",
+      "length": 16772,
+      "lastWriteTimeUtc": "2026-03-18T18:08:59.4528825Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-fluidsim\\SKILL.md",
+      "length": 9396,
+      "lastWriteTimeUtc": "2026-03-18T18:08:59.9558791Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-fred-economic-data\\SKILL.md",
+      "length": 11987,
+      "lastWriteTimeUtc": "2026-03-18T18:09:00.4726165Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-gene-database\\SKILL.md",
+      "length": 6396,
+      "lastWriteTimeUtc": "2026-03-18T18:09:01.0067498Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-generate-image\\SKILL.md",
+      "length": 7048,
+      "lastWriteTimeUtc": "2026-03-18T18:09:01.6082040Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-geniml\\SKILL.md",
+      "length": 10092,
+      "lastWriteTimeUtc": "2026-03-18T18:09:02.1676001Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-geo-database\\SKILL.md",
+      "length": 24529,
+      "lastWriteTimeUtc": "2026-03-18T18:09:02.7557002Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-geomaster\\SKILL.md",
+      "length": 12110,
+      "lastWriteTimeUtc": "2026-03-18T18:09:03.3488700Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-geopandas\\SKILL.md",
+      "length": 7117,
+      "lastWriteTimeUtc": "2026-03-18T18:09:03.9640270Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-get-available-resources\\SKILL.md",
+      "length": 9837,
+      "lastWriteTimeUtc": "2026-03-18T18:09:04.5166844Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-gget\\SKILL.md",
+      "length": 25088,
+      "lastWriteTimeUtc": "2026-03-18T18:09:05.1272232Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-ginkgo-cloud-lab\\SKILL.md",
+      "length": 3469,
+      "lastWriteTimeUtc": "2026-03-18T18:09:05.6532810Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-glycoengineering\\SKILL.md",
+      "length": 12462,
+      "lastWriteTimeUtc": "2026-03-18T18:09:06.1945838Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-gnomad-database\\SKILL.md",
+      "length": 12505,
+      "lastWriteTimeUtc": "2026-03-18T18:09:06.8309364Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-gtars\\SKILL.md",
+      "length": 7806,
+      "lastWriteTimeUtc": "2026-03-18T18:09:07.4028489Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-gtex-database\\SKILL.md",
+      "length": 11034,
+      "lastWriteTimeUtc": "2026-03-18T18:09:07.9832810Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-gwas-database\\SKILL.md",
+      "length": 20085,
+      "lastWriteTimeUtc": "2026-03-18T18:09:08.6262341Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-hedgefundmonitor\\SKILL.md",
+      "length": 6824,
+      "lastWriteTimeUtc": "2026-03-18T18:09:09.2371821Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-histolab\\SKILL.md",
+      "length": 20152,
+      "lastWriteTimeUtc": "2026-03-18T18:09:09.8571295Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-hmdb-database\\SKILL.md",
+      "length": 8006,
+      "lastWriteTimeUtc": "2026-03-18T18:09:10.5792924Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-hypogenic\\SKILL.md",
+      "length": 21654,
+      "lastWriteTimeUtc": "2026-03-18T18:09:11.4217930Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-hypothesis-generation\\SKILL.md",
+      "length": 13847,
+      "lastWriteTimeUtc": "2026-03-18T18:09:12.0695870Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-imaging-data-commons\\SKILL.md",
+      "length": 34425,
+      "lastWriteTimeUtc": "2026-03-18T18:09:12.6720637Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-infographics\\SKILL.md",
+      "length": 18071,
+      "lastWriteTimeUtc": "2026-03-18T18:09:13.2844695Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-interpro-database\\SKILL.md",
+      "length": 10785,
+      "lastWriteTimeUtc": "2026-03-18T18:09:13.8748020Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-iso-13485-certification\\SKILL.md",
+      "length": 23249,
+      "lastWriteTimeUtc": "2026-03-18T18:09:14.4567522Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-jaspar-database\\SKILL.md",
+      "length": 11986,
+      "lastWriteTimeUtc": "2026-03-18T18:09:15.0360258Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-kegg-database\\SKILL.md",
+      "length": 11768,
+      "lastWriteTimeUtc": "2026-03-18T18:09:15.4565653Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-labarchive-integration\\SKILL.md",
+      "length": 9443,
+      "lastWriteTimeUtc": "2026-03-18T18:09:16.0646865Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-lamindb\\SKILL.md",
+      "length": 14370,
+      "lastWriteTimeUtc": "2026-03-18T18:09:16.6535006Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-latchbio-integration\\SKILL.md",
+      "length": 9816,
+      "lastWriteTimeUtc": "2026-03-18T18:09:17.2911175Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-latex-posters\\SKILL.md",
+      "length": 59801,
+      "lastWriteTimeUtc": "2026-03-18T18:09:18.0287659Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-literature-review\\SKILL.md",
+      "length": 23789,
+      "lastWriteTimeUtc": "2026-03-18T18:09:18.7355780Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-markdown-mermaid-writing\\SKILL.md",
+      "length": 14888,
+      "lastWriteTimeUtc": "2026-03-18T18:09:19.3825227Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-market-research-reports\\SKILL.md",
+      "length": 28743,
+      "lastWriteTimeUtc": "2026-03-18T18:09:19.9982157Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-markitdown\\SKILL.md",
+      "length": 12632,
+      "lastWriteTimeUtc": "2026-03-18T18:09:20.5960463Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-matchms\\SKILL.md",
+      "length": 7010,
+      "lastWriteTimeUtc": "2026-03-18T18:09:21.2760387Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-matlab\\SKILL.md",
+      "length": 10044,
+      "lastWriteTimeUtc": "2026-03-18T18:09:21.9458563Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-matplotlib\\SKILL.md",
+      "length": 11454,
+      "lastWriteTimeUtc": "2026-03-18T18:09:22.7627350Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-medchem\\SKILL.md",
+      "length": 10153,
+      "lastWriteTimeUtc": "2026-03-18T18:09:23.3750755Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-metabolomics-workbench-database\\SKILL.md",
+      "length": 10310,
+      "lastWriteTimeUtc": "2026-03-18T18:09:24.0495725Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-modal\\SKILL.md",
+      "length": 10635,
+      "lastWriteTimeUtc": "2026-03-18T18:09:24.5510528Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-molecular-dynamics\\SKILL.md",
+      "length": 14700,
+      "lastWriteTimeUtc": "2026-03-18T18:09:25.1426809Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-molfeat\\SKILL.md",
+      "length": 14811,
+      "lastWriteTimeUtc": "2026-03-18T18:09:25.7516428Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-monarch-database\\SKILL.md",
+      "length": 12828,
+      "lastWriteTimeUtc": "2026-03-18T18:09:26.4569443Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-networkx\\SKILL.md",
+      "length": 12714,
+      "lastWriteTimeUtc": "2026-03-18T18:09:27.0293747Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-neurokit2\\SKILL.md",
+      "length": 12020,
+      "lastWriteTimeUtc": "2026-03-18T18:09:27.6110500Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-neuropixels-analysis\\SKILL.md",
+      "length": 11551,
+      "lastWriteTimeUtc": "2026-03-18T18:09:28.2934031Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-offer-k-dense-web\\SKILL.md",
+      "length": 870,
+      "lastWriteTimeUtc": "2026-03-18T18:09:28.9545667Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-omero-integration\\SKILL.md",
+      "length": 8044,
+      "lastWriteTimeUtc": "2026-03-18T18:09:29.4647643Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-open-notebook\\SKILL.md",
+      "length": 10451,
+      "lastWriteTimeUtc": "2026-03-18T18:09:30.0222373Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-openalex-database\\SKILL.md",
+      "length": 12072,
+      "lastWriteTimeUtc": "2026-03-18T18:09:30.6426602Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-opentargets-database\\SKILL.md",
+      "length": 14077,
+      "lastWriteTimeUtc": "2026-03-18T18:09:31.3084189Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-opentrons-integration\\SKILL.md",
+      "length": 14721,
+      "lastWriteTimeUtc": "2026-03-18T18:09:31.9695299Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-paper-2-web\\SKILL.md",
+      "length": 16447,
+      "lastWriteTimeUtc": "2026-03-18T18:09:32.6311399Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-parallel-web\\SKILL.md",
+      "length": 11656,
+      "lastWriteTimeUtc": "2026-03-18T18:09:33.2180187Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-pathml\\SKILL.md",
+      "length": 7367,
+      "lastWriteTimeUtc": "2026-03-18T18:09:33.8290650Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-pdb-database\\SKILL.md",
+      "length": 9231,
+      "lastWriteTimeUtc": "2026-03-18T18:09:34.4160418Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-pdf\\SKILL.md",
+      "length": 8072,
+      "lastWriteTimeUtc": "2026-03-18T18:09:35.0726247Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-peer-review\\SKILL.md",
+      "length": 23120,
+      "lastWriteTimeUtc": "2026-03-18T18:09:35.7466037Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-pennylane\\SKILL.md",
+      "length": 7397,
+      "lastWriteTimeUtc": "2026-03-18T18:09:36.3356375Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-perplexity-search\\SKILL.md",
+      "length": 14085,
+      "lastWriteTimeUtc": "2026-03-18T18:09:36.9189067Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-phylogenetics\\SKILL.md",
+      "length": 13914,
+      "lastWriteTimeUtc": "2026-03-18T18:09:37.4926670Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-plotly\\SKILL.md",
+      "length": 7199,
+      "lastWriteTimeUtc": "2026-03-18T18:09:38.0545743Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-polars\\SKILL.md",
+      "length": 9431,
+      "lastWriteTimeUtc": "2026-03-18T18:09:38.5557910Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-pptx\\SKILL.md",
+      "length": 9182,
+      "lastWriteTimeUtc": "2026-03-18T18:09:39.1467612Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-pptx-posters\\SKILL.md",
+      "length": 14146,
+      "lastWriteTimeUtc": "2026-03-18T18:09:39.7313507Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-primekg\\SKILL.md",
+      "length": 3821,
+      "lastWriteTimeUtc": "2026-03-18T18:09:40.2684885Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-protocolsio-integration\\SKILL.md",
+      "length": 14900,
+      "lastWriteTimeUtc": "2026-03-18T18:09:40.7647623Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-pubchem-database\\SKILL.md",
+      "length": 16313,
+      "lastWriteTimeUtc": "2026-03-18T18:09:41.3731282Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-pubmed-database\\SKILL.md",
+      "length": 15570,
+      "lastWriteTimeUtc": "2026-03-18T18:09:41.9798948Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-pufferlib\\SKILL.md",
+      "length": 13501,
+      "lastWriteTimeUtc": "2026-03-18T18:09:42.6072336Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-pydeseq2\\SKILL.md",
+      "length": 16166,
+      "lastWriteTimeUtc": "2026-03-18T18:09:43.1966253Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-pydicom\\SKILL.md",
+      "length": 13189,
+      "lastWriteTimeUtc": "2026-03-18T18:09:43.8524530Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-pyhealth\\SKILL.md",
+      "length": 17653,
+      "lastWriteTimeUtc": "2026-03-18T18:09:44.4539724Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-pylabrobot\\SKILL.md",
+      "length": 8194,
+      "lastWriteTimeUtc": "2026-03-18T18:09:45.0184192Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-pymatgen\\SKILL.md",
+      "length": 20034,
+      "lastWriteTimeUtc": "2026-03-18T18:09:45.5887545Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-pymc\\SKILL.md",
+      "length": 15780,
+      "lastWriteTimeUtc": "2026-03-18T18:09:46.2916396Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-pymoo\\SKILL.md",
+      "length": 16753,
+      "lastWriteTimeUtc": "2026-03-18T18:09:47.0134728Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-pyopenms\\SKILL.md",
+      "length": 5629,
+      "lastWriteTimeUtc": "2026-03-18T18:09:47.5819758Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-pysam\\SKILL.md",
+      "length": 9995,
+      "lastWriteTimeUtc": "2026-03-18T18:09:48.2654925Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-pytdc\\SKILL.md",
+      "length": 12700,
+      "lastWriteTimeUtc": "2026-03-18T18:09:49.0900389Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-pytorch-lightning\\SKILL.md",
+      "length": 6675,
+      "lastWriteTimeUtc": "2026-03-18T18:09:49.5372208Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-pyzotero\\SKILL.md",
+      "length": 4398,
+      "lastWriteTimeUtc": "2026-03-18T18:09:50.2196601Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-qiskit\\SKILL.md",
+      "length": 8755,
+      "lastWriteTimeUtc": "2026-03-18T18:09:50.9935642Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-qutip\\SKILL.md",
+      "length": 9048,
+      "lastWriteTimeUtc": "2026-03-18T18:09:51.5484279Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-rdkit\\SKILL.md",
+      "length": 20421,
+      "lastWriteTimeUtc": "2026-03-18T18:09:51.9470165Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-reactome-database\\SKILL.md",
+      "length": 7836,
+      "lastWriteTimeUtc": "2026-03-18T18:09:52.6057580Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-research-grants\\SKILL.md",
+      "length": 37217,
+      "lastWriteTimeUtc": "2026-03-18T18:09:53.2325956Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-research-lookup\\SKILL.md",
+      "length": 16232,
+      "lastWriteTimeUtc": "2026-03-18T18:09:53.8980267Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-rowan\\SKILL.md",
+      "length": 12510,
+      "lastWriteTimeUtc": "2026-03-18T18:09:54.4015449Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-scanpy\\SKILL.md",
+      "length": 11323,
+      "lastWriteTimeUtc": "2026-03-18T18:09:54.8230707Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-scholar-evaluation\\SKILL.md",
+      "length": 12258,
+      "lastWriteTimeUtc": "2026-03-18T18:09:55.4303420Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-scientific-brainstorming\\SKILL.md",
+      "length": 8179,
+      "lastWriteTimeUtc": "2026-03-18T18:09:55.9883977Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-scientific-critical-thinking\\SKILL.md",
+      "length": 23705,
+      "lastWriteTimeUtc": "2026-03-18T18:09:56.5375251Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-scientific-schematics\\SKILL.md",
+      "length": 23850,
+      "lastWriteTimeUtc": "2026-03-18T18:09:57.1760175Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-scientific-slides\\SKILL.md",
+      "length": 47291,
+      "lastWriteTimeUtc": "2026-03-18T18:09:57.8955704Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-scientific-visualization\\SKILL.md",
+      "length": 25528,
+      "lastWriteTimeUtc": "2026-03-18T18:09:58.4775943Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-scientific-writing\\SKILL.md",
+      "length": 33781,
+      "lastWriteTimeUtc": "2026-03-18T18:09:59.0168371Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-scikit-bio\\SKILL.md",
+      "length": 14751,
+      "lastWriteTimeUtc": "2026-03-18T18:09:59.5384245Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-scikit-learn\\SKILL.md",
+      "length": 15533,
+      "lastWriteTimeUtc": "2026-03-18T18:10:00.1364274Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-scikit-survival\\SKILL.md",
+      "length": 15078,
+      "lastWriteTimeUtc": "2026-03-18T18:10:00.6734778Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-scvelo\\SKILL.md",
+      "length": 10288,
+      "lastWriteTimeUtc": "2026-03-18T18:10:01.2089662Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-scvi-tools\\SKILL.md",
+      "length": 7239,
+      "lastWriteTimeUtc": "2026-03-18T18:10:01.7944830Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-seaborn\\SKILL.md",
+      "length": 19601,
+      "lastWriteTimeUtc": "2026-03-18T18:10:02.3928874Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-shap\\SKILL.md",
+      "length": 18413,
+      "lastWriteTimeUtc": "2026-03-18T18:10:02.9111365Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-simpy\\SKILL.md",
+      "length": 12165,
+      "lastWriteTimeUtc": "2026-03-18T18:10:03.3942344Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-stable-baselines3\\SKILL.md",
+      "length": 9507,
+      "lastWriteTimeUtc": "2026-03-18T18:10:04.0967282Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-statistical-analysis\\SKILL.md",
+      "length": 19766,
+      "lastWriteTimeUtc": "2026-03-18T18:10:04.6442851Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-statsmodels\\SKILL.md",
+      "length": 19692,
+      "lastWriteTimeUtc": "2026-03-18T18:10:05.1935605Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-string-database\\SKILL.md",
+      "length": 18225,
+      "lastWriteTimeUtc": "2026-03-18T18:10:05.7568219Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-sympy\\SKILL.md",
+      "length": 13467,
+      "lastWriteTimeUtc": "2026-03-18T18:10:06.3478522Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-tiledbvcf\\SKILL.md",
+      "length": 15359,
+      "lastWriteTimeUtc": "2026-03-18T18:10:06.9320665Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-timesfm-forecasting\\SKILL.md",
+      "length": 30155,
+      "lastWriteTimeUtc": "2026-03-18T18:10:07.4786767Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-torch-geometric\\SKILL.md",
+      "length": 20382,
+      "lastWriteTimeUtc": "2026-03-18T18:10:07.9942210Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-torchdrug\\SKILL.md",
+      "length": 14146,
+      "lastWriteTimeUtc": "2026-03-18T18:10:08.5873920Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-transformers\\SKILL.md",
+      "length": 5084,
+      "lastWriteTimeUtc": "2026-03-18T18:10:09.1458492Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-treatment-plans\\SKILL.md",
+      "length": 52693,
+      "lastWriteTimeUtc": "2026-03-18T18:10:09.7428179Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-umap-learn\\SKILL.md",
+      "length": 15394,
+      "lastWriteTimeUtc": "2026-03-18T18:10:10.2490067Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-uniprot-database\\SKILL.md",
+      "length": 6788,
+      "lastWriteTimeUtc": "2026-03-18T18:10:10.8233756Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-usfiscaldata\\SKILL.md",
+      "length": 7297,
+      "lastWriteTimeUtc": "2026-03-18T18:10:11.6630617Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-uspto-database\\SKILL.md",
+      "length": 18719,
+      "lastWriteTimeUtc": "2026-03-18T18:10:12.1722328Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-vaex\\SKILL.md",
+      "length": 6596,
+      "lastWriteTimeUtc": "2026-03-18T18:10:12.7801166Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-venue-templates\\SKILL.md",
+      "length": 23296,
+      "lastWriteTimeUtc": "2026-03-18T18:10:13.3814691Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-what-if-oracle\\SKILL.md",
+      "length": 9481,
+      "lastWriteTimeUtc": "2026-03-18T18:10:13.9587578Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-xlsx\\SKILL.md",
+      "length": 11463,
+      "lastWriteTimeUtc": "2026-03-18T18:10:14.4614691Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-zarr-python\\SKILL.md",
+      "length": 20047,
+      "lastWriteTimeUtc": "2026-03-18T18:10:15.1899178Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\kdense-zinc-database\\SKILL.md",
+      "length": 13885,
+      "lastWriteTimeUtc": "2026-03-18T18:10:16.1706904Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\logql-generator\\SKILL.md",
+      "length": 15358,
+      "lastWriteTimeUtc": "2026-03-18T18:06:55.1782938Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\loki-config-generator\\SKILL.md",
+      "length": 18381,
+      "lastWriteTimeUtc": "2026-03-18T18:06:55.7838796Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\makefile-generator\\SKILL.md",
+      "length": 22063,
+      "lastWriteTimeUtc": "2026-03-18T18:06:56.4022350Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\makefile-validator\\SKILL.md",
+      "length": 7215,
+      "lastWriteTimeUtc": "2026-03-18T18:06:57.1260966Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\promql-generator\\SKILL.md",
+      "length": 36864,
+      "lastWriteTimeUtc": "2026-03-18T18:06:57.8941439Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\promql-validator\\SKILL.md",
+      "length": 15990,
+      "lastWriteTimeUtc": "2026-03-18T18:06:58.5557153Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\receiving-code-review\\SKILL.md",
+      "length": 6314,
+      "lastWriteTimeUtc": "2026-03-18T18:06:28.9008595Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\requesting-code-review\\SKILL.md",
+      "length": 2935,
+      "lastWriteTimeUtc": "2026-03-18T18:06:29.5414653Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\speckit\\SKILL.md",
+      "length": 3505,
+      "lastWriteTimeUtc": "2026-03-18T13:23:23.1382032Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\subagent-driven-development\\SKILL.md",
+      "length": 12139,
+      "lastWriteTimeUtc": "2026-03-18T18:06:30.3293266Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\systematic-debugging\\SKILL.md",
+      "length": 9884,
+      "lastWriteTimeUtc": "2026-03-18T18:06:31.0593487Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\terraform-generator\\SKILL.md",
+      "length": 31423,
+      "lastWriteTimeUtc": "2026-03-18T18:06:59.1303047Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\terraform-validator\\SKILL.md",
+      "length": 19977,
+      "lastWriteTimeUtc": "2026-03-18T18:06:59.8784094Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\terragrunt-generator\\SKILL.md",
+      "length": 31905,
+      "lastWriteTimeUtc": "2026-03-18T18:07:00.4987037Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\terragrunt-validator\\SKILL.md",
+      "length": 34800,
+      "lastWriteTimeUtc": "2026-03-18T18:07:01.1389425Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\test-driven-development\\SKILL.md",
+      "length": 9867,
+      "lastWriteTimeUtc": "2026-03-18T18:06:31.6642209Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\tob-agentic-actions-auditor\\SKILL.md",
+      "length": 21542,
+      "lastWriteTimeUtc": "2026-03-18T18:07:10.7252339Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\tob-ask-questions-if-underspecified\\SKILL.md",
+      "length": 3987,
+      "lastWriteTimeUtc": "2026-03-18T18:07:11.5270186Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\tob-audit-context-building\\SKILL.md",
+      "length": 9804,
+      "lastWriteTimeUtc": "2026-03-18T18:07:12.2084919Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\tob-burpsuite-project-parser\\SKILL.md",
+      "length": 12494,
+      "lastWriteTimeUtc": "2026-03-18T18:07:13.5427232Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\tob-claude-in-chrome-troubleshooting\\SKILL.md",
+      "length": 10280,
+      "lastWriteTimeUtc": "2026-03-18T18:07:14.1931793Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\tob-constant-time-analysis\\SKILL.md",
+      "length": 9948,
+      "lastWriteTimeUtc": "2026-03-18T18:07:14.8502223Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\tob-debug-buttercup\\SKILL.md",
+      "length": 9921,
+      "lastWriteTimeUtc": "2026-03-18T18:07:16.0378075Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\tob-devcontainer-setup\\SKILL.md",
+      "length": 7842,
+      "lastWriteTimeUtc": "2026-03-18T18:07:16.7901865Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\tob-differential-review\\SKILL.md",
+      "length": 6590,
+      "lastWriteTimeUtc": "2026-03-18T18:07:17.3070759Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\tob-dwarf-expert\\SKILL.md",
+      "length": 4921,
+      "lastWriteTimeUtc": "2026-03-18T18:07:17.9121872Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\tob-entry-point-analyzer\\SKILL.md",
+      "length": 9609,
+      "lastWriteTimeUtc": "2026-03-18T18:07:18.5934430Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\tob-firebase-apk-scanner\\SKILL.md",
+      "length": 6849,
+      "lastWriteTimeUtc": "2026-03-18T18:07:19.5540945Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\tob-fp-check\\SKILL.md",
+      "length": 6598,
+      "lastWriteTimeUtc": "2026-03-18T18:07:20.4015183Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\tob-git-cleanup\\SKILL.md",
+      "length": 12331,
+      "lastWriteTimeUtc": "2026-03-18T18:07:22.3502413Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\tob-insecure-defaults\\SKILL.md",
+      "length": 5251,
+      "lastWriteTimeUtc": "2026-03-18T18:07:23.0057385Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\tob-let-fate-decide\\SKILL.md",
+      "length": 5564,
+      "lastWriteTimeUtc": "2026-03-18T18:07:23.5948737Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\tob-modern-python\\SKILL.md",
+      "length": 10015,
+      "lastWriteTimeUtc": "2026-03-18T18:07:24.1504088Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\tob-property-based-testing\\SKILL.md",
+      "length": 6084,
+      "lastWriteTimeUtc": "2026-03-18T18:07:24.6674209Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\tob-seatbelt-sandboxer\\SKILL.md",
+      "length": 12124,
+      "lastWriteTimeUtc": "2026-03-18T18:07:25.1434474Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\tob-second-opinion\\SKILL.md",
+      "length": 9955,
+      "lastWriteTimeUtc": "2026-03-18T18:07:25.7140431Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\tob-semgrep-rule-creator\\SKILL.md",
+      "length": 7343,
+      "lastWriteTimeUtc": "2026-03-18T18:07:26.3087548Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\tob-semgrep-rule-variant-creator\\SKILL.md",
+      "length": 8073,
+      "lastWriteTimeUtc": "2026-03-18T18:07:26.9150132Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\tob-sharp-edges\\SKILL.md",
+      "length": 11426,
+      "lastWriteTimeUtc": "2026-03-18T18:07:27.4865640Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\tob-skill-improver\\SKILL.md",
+      "length": 5940,
+      "lastWriteTimeUtc": "2026-03-18T18:07:28.1220794Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\tob-spec-to-code-compliance\\SKILL.md",
+      "length": 10778,
+      "lastWriteTimeUtc": "2026-03-18T18:07:28.7255590Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\tob-supply-chain-risk-auditor\\SKILL.md",
+      "length": 5790,
+      "lastWriteTimeUtc": "2026-03-18T18:07:29.8485604Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\tob-variant-analysis\\SKILL.md",
+      "length": 5651,
+      "lastWriteTimeUtc": "2026-03-18T18:07:31.3384464Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\tob-zeroize-audit\\SKILL.md",
+      "length": 21057,
+      "lastWriteTimeUtc": "2026-03-18T18:07:33.1590166Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\using-git-worktrees\\SKILL.md",
+      "length": 5635,
+      "lastWriteTimeUtc": "2026-03-18T18:06:32.3782480Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\using-superpowers\\SKILL.md",
+      "length": 5219,
+      "lastWriteTimeUtc": "2026-03-18T18:06:32.9536958Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\verification-before-completion\\SKILL.md",
+      "length": 4201,
+      "lastWriteTimeUtc": "2026-03-18T18:06:33.4810143Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\writing-plans\\SKILL.md",
+      "length": 5399,
+      "lastWriteTimeUtc": "2026-03-18T18:06:34.0513814Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\skills\\writing-skills\\SKILL.md",
+      "length": 22465,
+      "lastWriteTimeUtc": "2026-03-18T18:06:34.6833353Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\commands\\agents.md",
+      "length": 1342,
+      "lastWriteTimeUtc": "2026-03-20T09:11:10.3972041Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\commands\\bootstrap.md",
+      "length": 990,
+      "lastWriteTimeUtc": "2026-03-20T08:50:24.6901515Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\commands\\cicd-orchestrator.md",
+      "length": 6226,
+      "lastWriteTimeUtc": "2026-03-20T09:11:07.9819463Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\commands\\context-prep.md",
+      "length": 1912,
+      "lastWriteTimeUtc": "2026-03-20T08:45:27.6451637Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\commands\\deep-research.md",
+      "length": 2890,
+      "lastWriteTimeUtc": "2026-03-20T08:11:55.9625061Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\commands\\docker run -d --name apiflow-monitor --r.sh",
+      "length": 97,
+      "lastWriteTimeUtc": "2026-04-01T18:32:09.3110872Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\commands\\documentation.md",
+      "length": 5672,
+      "lastWriteTimeUtc": "2026-03-20T09:11:08.7329187Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\commands\\enhance.md",
+      "length": 11367,
+      "lastWriteTimeUtc": "2026-03-18T10:03:56.7284701Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\commands\\execute.md",
+      "length": 2648,
+      "lastWriteTimeUtc": "2026-03-20T09:11:09.1159665Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\commands\\executer.md",
+      "length": 1649,
+      "lastWriteTimeUtc": "2026-03-20T08:48:51.9166474Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\commands\\guide.md",
+      "length": 1886,
+      "lastWriteTimeUtc": "2026-03-20T09:11:09.9876123Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\commands\\help-hooks.md",
+      "length": 1538,
+      "lastWriteTimeUtc": "2026-03-31T17:02:56.6303904Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\commands\\help-me.md",
+      "length": 17958,
+      "lastWriteTimeUtc": "2026-03-20T11:04:52.6178191Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\commands\\incident-commander.md",
+      "length": 6137,
+      "lastWriteTimeUtc": "2026-03-20T09:11:07.6340541Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\commands\\interface-design_audit.md",
+      "length": 1582,
+      "lastWriteTimeUtc": "2026-03-18T16:04:59.7787176Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\commands\\interface-design_critique.md",
+      "length": 4383,
+      "lastWriteTimeUtc": "2026-03-18T16:04:59.9829995Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\commands\\interface-design_extract.md",
+      "length": 1684,
+      "lastWriteTimeUtc": "2026-03-18T16:05:00.2240467Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\commands\\interface-design_init.md",
+      "length": 2991,
+      "lastWriteTimeUtc": "2026-03-18T16:05:00.4457388Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\commands\\interface-design_status.md",
+      "length": 1031,
+      "lastWriteTimeUtc": "2026-03-18T16:05:00.6536944Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\commands\\planner.md",
+      "length": 1727,
+      "lastWriteTimeUtc": "2026-03-20T08:47:54.6022648Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\commands\\prompt-engineer.md",
+      "length": 5216,
+      "lastWriteTimeUtc": "2026-03-20T09:11:08.3473587Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\commands\\tester.md",
+      "length": 1821,
+      "lastWriteTimeUtc": "2026-03-20T08:49:53.5200299Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\commands\\validate-skills.md",
+      "length": 462,
+      "lastWriteTimeUtc": "2026-03-20T09:07:52.2852208Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\commands\\workflows.md",
+      "length": 794,
+      "lastWriteTimeUtc": "2026-03-20T09:11:09.5338492Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\library\\INDEX.md",
+      "length": 1661,
+      "lastWriteTimeUtc": "2026-03-20T07:49:20.1673805Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\library\\adapters\\riverpod.md",
+      "length": 2378,
+      "lastWriteTimeUtc": "2026-03-20T07:48:44.9420531Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\library\\auth\\token-persistence.md",
+      "length": 1563,
+      "lastWriteTimeUtc": "2026-03-20T07:49:01.9767388Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\library\\patterns\\notifier.md",
+      "length": 2569,
+      "lastWriteTimeUtc": "2026-03-20T07:47:45.5283438Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\library\\patterns\\provider-di.md",
+      "length": 2307,
+      "lastWriteTimeUtc": "2026-03-20T07:48:03.8259864Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\library\\patterns\\repository.md",
+      "length": 3463,
+      "lastWriteTimeUtc": "2026-03-20T07:48:24.6646877Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.claude\\library\\patterns\\state-container.md",
+      "length": 1752,
+      "lastWriteTimeUtc": "2026-03-20T07:47:28.1039972Z"
+    },
+    {
+      "path": "C:/Users/Deacjx/.gemini/GEMINI.md",
+      "length": 22206,
+      "lastWriteTimeUtc": "2026-04-03T15:43:28.4917682Z"
+    },
+    {
+      "path": "C:/Users/Deacjx/.gpt/GPT.md",
+      "length": 660,
+      "lastWriteTimeUtc": "2026-04-03T14:30:37.7360649Z"
+    },
+    {
+      "path": "C:/Users/Deacjx/.gpt/manifest.yaml",
+      "length": 676,
+      "lastWriteTimeUtc": "2026-04-03T14:30:37.7294842Z"
+    },
+    {
+      "path": "C:/Users/Deacjx/.gpt/mcp.json",
+      "length": 294,
+      "lastWriteTimeUtc": "2026-04-03T14:30:54.8199652Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.gpt\\memory\\decisions.md",
+      "length": 194,
+      "lastWriteTimeUtc": "2026-04-03T14:27:33.0162670Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.gpt\\memory\\preferences.md",
+      "length": 187,
+      "lastWriteTimeUtc": "2026-04-03T14:27:32.9911686Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.gpt\\memory\\profile.md",
+      "length": 230,
+      "lastWriteTimeUtc": "2026-04-03T14:27:32.9911686Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.gpt\\memory\\projects.md",
+      "length": 218,
+      "lastWriteTimeUtc": "2026-04-03T14:27:33.0167764Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.gpt\\guides\\README.md",
+      "length": 142,
+      "lastWriteTimeUtc": "2026-04-03T14:27:33.0167764Z"
+    },
+    {
+      "path": "C:\\Users\\Deacjx\\.gpt\\skills\\README.md",
+      "length": 123,
+      "lastWriteTimeUtc": "2026-04-03T14:27:33.0167764Z"
+    },
+    {
+      "path": "C:\\projects\\deanos\\guides\\NEXUS-UPDATE-GUIDE.md",
+      "length": 980,
+      "lastWriteTimeUtc": "2026-04-03T15:52:09.5787735Z"
+    },
+    {
+      "path": "C:\\projects\\deanos\\scripts\\setup-agent-bridge.ps1",
+      "length": 1643,
+      "lastWriteTimeUtc": "2026-04-03T14:06:16.6994227Z"
+    },
+    {
+      "path": "C:\\projects\\deanos\\scripts\\update-nexus-knowledge.ps1",
+      "length": 7989,
+      "lastWriteTimeUtc": "2026-04-03T16:18:23.4669643Z"
+    },
+    {
+      "path": "C:/projects/deanos/.agent-bridge/README.md",
+      "length": 873,
+      "lastWriteTimeUtc": "2026-04-03T14:03:17.8176237Z"
+    },
+    {
+      "path": "C:/projects/deanos/.agent-bridge/mcp-bridge.json",
+      "length": 308,
+      "lastWriteTimeUtc": "2026-04-03T14:04:55.1169557Z"
+    },
+    {
+      "path": "C:/projects/deanos/.agent-bridge/source-map.json",
+      "length": 585,
+      "lastWriteTimeUtc": "2026-04-03T14:04:55.1159126Z"
+    }
+  ]
+}

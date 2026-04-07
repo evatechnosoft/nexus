@@ -1,0 +1,26 @@
+# Walkthrough - Domain and Service Resolution
+
+I have resolved the domain redirection issue and verified all services on ZimaOS.
+
+## Domain Fix (.com.tr -> .com)
+
+- **App Logic:** Updated [src/app.py](file:///c:/projects/github/casatozima/src/app.py) to remove the automatic redirect from `evaitec.com` to `evaitec.com.tr`. The application now correctly serves the `.com` domain as primary.
+- **Frontend:** Updated the e-mail placeholder in [index.html](file:///c:/projects/github/casatozima/src/templates/index.html) to `dean@evaitec.com`.
+
+## Service Status & Ports
+
+I performed a clean restart of the `casatozima` project. All services are active on the following ports:
+
+- `flask-prod` (Port 5005) -> **prod.evaitec.com**
+- `flask-test` (Port 5006) -> **test.evaitec.com**
+- `flask-dev` (Port 5007) -> **dev.evaitec.com**
+- `flask-api` (Port 5010)
+- `flask-db` (Port 5432)
+
+## PostgreSQL Management
+
+Created the following databases and user in the `postgresql` (17.4) container:
+- **User:** `dean` (Password set as requested)
+- **Databases:** `evaitec`, `evanotes`, `inventory`
+
+You can now use `evaitec.com` and its subdomains without being redirected to the `.com.tr` extension.

@@ -1,0 +1,8 @@
+# Task Plan
+- [ ] Open http://localhost:5173/
+- [ ] Demonstrate walking (Arrow keys) and capture screenshot
+- [ ] Demonstrate jumping (Space)
+- [ ] Move against a wall and capture screenshot
+- [ ] Inspect ground for stripes and capture screenshot
+- [ ] Collect a star and capture screenshot
+- [ ] Confirm if 'pink orbs' or 'stripes' remain

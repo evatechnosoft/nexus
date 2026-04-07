@@ -1,0 +1,168 @@
+Successfully modified file: C:\projects\agentops-nexus\main.py (1 replacements). Here is the updated code:
+import os
+import logging
+from dotenv import load_dotenv
+
+# .env dosyasını yükle
+load_dotenv()
+
+from fastapi import FastAPI, Request, Depends
+from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
+from sqlalchemy.orm import Session
+
+from database import engine, get_db
+import models
+from routers import inventory, requests, assignments, departments
+from routers.approval import router as approval_router
+from excel_sync import router as excel_router
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+log = logging.getLogger(__name__)
+print(">>> MAIN.PY STARTING <<<", flush=True)
+
+models.Base.metadata.create_all(bind=engine)
+
+app = FastAPI(title="IT Envanter Yönetimi")
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
+templates = Jinja2Templates(directory="templates")
+templates.env.globals.update({"APP_ENV": os.getenv("APP_ENV", "DEV")})
+
+app.include_router(inventory.router)
+app.include_router(requests.router)
+app.include_router(assignments.router)
+app.include_router(departments.router)
+app.include_router(approval_router)
+app.include_router(excel_router)
+
+
+# ── E-posta İzleyici Zamanlayıcısı ───────────────────────────────────────────
+
+@app.on_event("startup")
+async def _start_email_watcher() -> None:
+    """E-posta izleyiciyi (Exchange veya Gmail) APScheduler ile başlatır."""
+    has_exchange = bool(os.getenv("EXCHANGE_EMAIL"))
+    has_gmail    = bool(os.getenv("GMAIL_EMAIL"))
+
+    if not (has_exchange or has_gmail):
+        log.info("E-posta adresleri (EXCHANGE_EMAIL/GMAIL_EMAIL) tanımlı değil — izleyici devre dışı.")
+        return
+
+    try:
+        from apscheduler.schedulers.asyncio import AsyncIOScheduler
+        import email_watcher
+        import graph_watcher
+
+        interval = int(os.getenv("WATCH_INTERVAL_MIN", "5"))
+        scheduler = AsyncIOScheduler()
+        from datetime import datetime
+        
+        # Eğer Azure bilgileri varsa Graph API kullanalım
+        if os.getenv("AZURE_CLIENT_ID"):
+            log.info("Microsoft Graph API izleyici (Modern Auth) seçildi.")
+            target_func = graph_watcher.check_new_emails_graph
+        else:
+            log.info("Standart Exchange/IMAP izleyici seçildi.")
+            target_func = email_watcher.check_new_emails
+
+        scheduler.add_job(
+            target_func,
+            "interval",
+            minutes=interval,
+            id="email_watcher",
+            replace_existing=True,
+            next_run_time=datetime.now(),
+        )
+        scheduler.start()
+        app.state.scheduler = scheduler
+        log.info("E-posta izleyici başlatıldı — her %d dakikada bir çalışır.", interval)
+    except ImportError:
+        log.warning("apscheduler veya gerekli kütüphaneler kurulu değil — izleyici başlatılamadı.")
+
+
+@app.on_event("shutdown")
+async def _stop_email_watcher() -> None:
+    scheduler = getattr(app.state, "scheduler", None)
+    if scheduler:
+        scheduler.shutdown(wait=False)
+
+
+@app.get("/", response_class=HTMLResponse)
+def dashboard(request: Request, db: Session = Depends(get_db)):
+    devices = db.query(models.Device).all()
+    reqs = db.query(models.Request).all()
+    assignments_all = db.query(models.Assignment).all()
+
+    stats = {
+        "total_devices": len(devices),
+        "in_stock": sum(1 for d in devices if d.status == models.DeviceStatus.in_stock),
+        "assigned": sum(1 for d in devices if d.status == models.DeviceStatus.assigned),
+        "pending_requests": sum(1 for r in reqs if r.status in [models.RequestStatus.pending, models.RequestStatus.pending_approval]),
+        "shipped": sum(1 for r in reqs if r.status == models.RequestStatus.shipped),
+        "total_assignments": len(assignments_all),
+    }
+
+    import email_watcher
+    import graph_watcher
+    last_scan = email_watcher.get_last_scan_time() or graph_watcher.get_last_scan_time()
+    
+    # Son 10 talebi getir
+    recent_requests = db.query(models.Request).order_by(models.Request.created_at.desc()).limit(10).all()
+
+    stats["last_scan"] = last_scan
+
+    return templates.TemplateResponse("dashboard.html", {
+        "request": request,
+        "stats": stats,
+        "recent_requests": recent_requests,
+    })
+
+
+@app.get("/health")
+def health_check():
+    """Uptime Kuma ve izleme araçları için sağlık kontrolü."""
+    from datetime import datetime
+    return {"status": "ok", "timestamp": datetime.utcnow().isoformat()}
+
+
+@app.get("/api/stats")
+def api_stats(db: Session = Depends(get_db)):
+    """Dış dashboardlar için özet istatistikler."""
+    import email_watcher
+    import graph_watcher
+    
+    last_scan = email_watcher.get_last_scan_time() or graph_watcher.get_last_scan_time()
+    
+    devices = db.query(models.Device).all()
+    reqs = db.query(models.Request).all()
+    queue = db.query(models.EmailQueue).all()
+    return {
+        "sistem": {
+            "durum": "online",
+            "son_tarama": last_scan.isoformat() if last_scan else None,
+        },
+        "envanter": {
+            "toplam": len(devices),
+            "stokta": sum(1 for d in devices if d.status == models.DeviceStatus.in_stock),
+            "atanmis": sum(1 for d in devices if d.status == models.DeviceStatus.assigned),
+        },
+        "talepler": {
+            "toplam": len(reqs),
+            "bekleyen": sum(1 for r in reqs if r.status in [models.RequestStatus.pending, models.RequestStatus.pending_approval]),
+        },
+        "kuyruk": {
+            "bekleyen": sum(1 for i in queue if i.status == "pending"),
+            "hatali": sum(1 for i in queue if i.status == "failed"),
+        }
+    }
+
+
+if __name__ == "__main__":
+    import uvicorn
+    # APP_PORT inside container should usually be 8000 to match Dockerfile/Compose
+    env = os.getenv("APP_ENV", "DEV")
+    # For local dev without docker, it uses 9600. Inside docker, it defaults to 8000.
+    port = int(os.getenv("APP_PORT", 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=(env == "DEV"))

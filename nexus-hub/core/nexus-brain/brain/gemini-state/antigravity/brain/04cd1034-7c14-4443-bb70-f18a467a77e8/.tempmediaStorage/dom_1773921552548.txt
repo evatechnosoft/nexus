@@ -1,0 +1,47 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+English Code American All Levels Posters -  ISBN: 9781292322209
+[0] (257,52)<a href='https://dy.d-ld.net/c3038ed7a1' title='free download'>English Code American 1 Students Book />
+-  ISBN: 9781292352244
+[1] (260,82)<a href='https://dy.d-ld.net/e4a37179ce' title='free download'>English Code American 1 Class Audio Cds />
+[2] (245,111)<a href='https://dy.d-ld.net/6a0c268574' title='free download'>English Code American 1 Workbook />
+-  ISBN: 9781292322520
+[3] (262,141)<a href='https://dy.d-ld.net/c189c7d83a' title='free download'>English Code American 1 Teachers Edition />
+-  ISBN: 9781292354378
+English Code American 1 Picture Cards -  ISBN: 9781292323558
+English Code American 1 Assessment Book -  ISBN: 9781292352237
+English Code 1 Phonics Book -  ISBN: 9781292322513
+[4] (270,260)<a href='https://dy.d-ld.net/b41225d15b' title='free download'>English Code American 1 Phonics Book Audio />
+[5] (270,290)<a href='https://dy.d-ld.net/9286d38588' title='free download'>English Code American 1 Phonics Book Video />
+[6] (279,319)<a href='https://dy.d-ld.net/1f07c05dc4' title='free download'>English Code American 1 Parent Support English />
+[7] (281,349)<a href='https://dy.d-ld.net/803d746f6e' title='free download'>English Code American 1 Parent Support Espanol />
+[8] (259,379)<a href='https://dy.d-ld.net/cdd22b7956' title='free download'>English Code American 1 Home Activities />
+[9] (233,408)<a href='https://dy.d-ld.net/0d7402fc63' title='free download'>English Code American 1 Video />
+[10] (257,463)<a href='https://dy.d-ld.net/cba79ca1cf' title='free download'>English Code American 2 Students Book />
+-  ISBN: 9781292352251
+[11] (260,493)<a href='https://dy.d-ld.net/2ab647c9fb' title='free download'>English Code American 2 Class Audio Cds />
+English Code American 2 Workbook -  ISBN: 9781292322551
+[12] (262,552)<a href='https://dy.d-ld.net/07e7e9865f' title='free download'>English Code American 2 Teachers Edition />
+-  ISBN: 9781292354385
+[13] (270,582)<a href='https://dy.d-ld.net/255c047558' title='free download'>English Code American 2 Phonics Book Audio />
+[14] (270,611)<a href='https://dy.d-ld.net/746af3b94e' title='free download'>English Code American 2 Phonics Book Video />
+English Code American 2 Picture Cards -  ISBN: 9781292323565
+English Code American 2 Assessment Book -  ISBN: 9781292352367
+[15] (257,725)<a href='https://dy.d-ld.net/a8eba0e12e' title='free download'>English Code American 3 Students Book />
+-  ISBN: 9781292352268
+[16] (260,755)<a href='https://dy.d-ld.net/bd14fc5214' title='free download'>English Code American 3 Class Audio Cds />
+English Code American 3 Workbook -  ISBN: 9781292322582
+[17] (262,815)<a href='https://dy.d-ld.net/f3a247181b' title='free download'>English Code American 3 Teachers Edition />
+-  ISBN: 9781292354392
+[18] (270,844)<a href='https://dy.d-ld.net/0fa3646b26' title='free download'>English Code American 3 Phonics Book Audio />
+[19] (270,874)<a href='https://dy.d-ld.net/5159af931a' title='free download'>English Code American 3 Phonics Book Video />
+English Code American 3 Picture Cards -  ISBN: 9781292323572
+English Code American 3 Assessment Book -  ISBN: 9781292352374
+English Code American 4 Students Book
+-  ISBN: 9781292352275
+[20] (975,854)<div  />
+Reklam
+
+</current_dom>

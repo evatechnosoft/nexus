@@ -1,0 +1,8 @@
+# Task Plan
+- [ ] Open http://localhost:59480
+- [ ] Interact with an Analog gauge
+- [ ] Open Mini Settings
+- [ ] Set "Inner Display" to "Battery"
+- [ ] Take a screenshot
+- [ ] Analyze visual layout (nested gauge vs changing text)
+- [ ] Summary of findings

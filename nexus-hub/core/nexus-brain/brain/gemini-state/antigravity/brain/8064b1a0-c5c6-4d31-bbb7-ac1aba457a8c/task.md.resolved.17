@@ -1,0 +1,19 @@
+# Tasks
+
+- [x] Clone `superpowers` repository
+- [x] Explore project structure
+- [x] Research build/run instructions
+- [x] Clone `awesome-claude-skills` repository
+- [x] Explore awesome-claude-skills structure
+- [x] Add `frontend-design` skill
+- [x] Verify `frontend-design` content
+- [x] Research OpenCode installation
+- [x] Install OpenCode
+- [x] Commit changes
+- [x] Push to GitHub
+- [x] Create `dev` branch
+
+## Phase 2: Project Development
+- [/] Brainstorm project idea (using `brainstorming` skill)
+- [ ] Create implementation plan (using `writing-plans` skill)
+- [ ] Develop project using TDD and Frontend Design principles

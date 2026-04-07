@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Learning Hub — Evaluation & Feedback</title>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #ec4899;
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --glass: rgba(255, 255, 255, 0.9);
+            --text-main: #1f2937;
+            --text-muted: #6b7280;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg-gradient);
+            min-height: 100vh;
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+            display: none;
+        }
+
+        #login-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--bg-gradient);
+            display: flex; justify-content: center; align-items: center; z-index: 1000;
+        }
+
+        .login-card {
+            background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 100%; max-width: 400px; text-align: center;
+        }
+
+        .login-card h2 { margin-bottom: 20px; color: var(--primary); }
+        .login-card input { width: 100%; padding: 12px 16px; margin: 10px 0; border: 1px solid #e5e7eb; border-radius: 10px; font-size: 1rem; }
+
+        .btn { padding: 12px 24px; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.2s; font-size: 0.95rem; }
+        .btn-primary { background: var(--primary); color: white; width: 100%; margin-top: 10px; }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); }
+        .btn-sm { padding: 6px 12px; font-size: 0.8rem; border-radius: 6px; }
+
+        header { padding: 40px; background: white; border-bottom: 1px solid #f3f4f6; text-align: center; position: relative; }
+        header h1 { font-size: 2rem; margin-bottom: 8px; background: linear-gradient(to right, #6366f1, #ec4899); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        nav { display: flex; justify-content: center; gap: 15px; padding: 20px; background: rgba(249, 250, 251, 0.5); }
+        .nav-btn { background: transparent; color: var(--text-muted); border: 2px solid transparent; padding: 8px 16px; border-radius: 12px; font-weight: 500; cursor: pointer; }
+        .nav-btn.active { background: white; color: var(--primary); border-color: var(--primary); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+
+        .content { padding: 40px; }
+        .view { display: none; }
+        .view.active { display: block; animation: slideUp 0.4s ease-out; }
+
+        @keyframes slideUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .week-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; margin-top: 20px; }
+        
+        .card { background: white; padding: 24px; border-radius: 20px; border: 1px solid #f3f4f6; transition: all 0.3s; cursor: pointer; position: relative; }
+        .card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); border-color: var(--primary); }
+        .card h3 { color: var(--primary); margin-bottom: 8px; }
+        .card .tag { font-size: 0.7rem; padding: 4px 8px; border-radius: 6px; background: #eef2ff; color: var(--primary); font-weight: bold; margin-bottom: 10px; display: inline-block; }
+
+        /* Status Badges */
+        .status-badge { font-size: 0.7rem; padding: 4px 8px; border-radius: 6px; font-weight: bold; display: block; text-transform: uppercase; float: right; }
+        .status-passed { background: #d1fae5; color: #065f46; }
+        .status-continue { background: #fef3c7; color: #92400e; }
+        .status-repeat { background: #fee2e2; color: #991b1b; }
+
+        .admin-controls { background: #fdf2f8; padding: 20px; border-radius: 16px; margin-bottom: 30px; border: 1px dashed var(--secondary); display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+        .admin-controls select { padding: 8px; border-radius: 8px; border: 1px solid #ddd; }
+
+        /* Modals */
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 2000; justify-content: center; align-items: center; }
+        .modal-content { background: white; padding: 30px; border-radius: 24px; width: 90%; max-width: 600px; max-height: 90vh; overflow-y: auto; }
+        .modal-content input, .modal-content textarea, .modal-content select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #e5e7eb; border-radius: 10px; }
+
+        .logout-btn { position: absolute; top: 20px; right: 20px; color: var(--text-muted); background: #f3f4f6; border: none; padding: 8px 16px; border-radius: 10px; cursor: pointer; }
+        
+        /* Survey Styles */
+        .survey-box { margin-top: 20px; padding: 15px; background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0; }
+        .rating-btn { padding: 8px 12px; border: 1px solid #ddd; border-radius: 8px; background: white; cursor: pointer; margin-right: 5px; }
+        .rating-btn.selected { background: var(--primary); color: white; border-color: var(--primary); }
+
+        .feedback-text { font-size: 0.85rem; color: #4b5563; margin-top: 10px; padding: 10px; background: #fff; border-left: 4px solid var(--primary); border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+    <div id="login-overlay">
+        <div class="login-card">
+            <h2>English Hub Giriş</h2>
+            <input type="text" id="login-user" placeholder="Kullanıcı Adı">
+            <input type="password" id="login-pass" placeholder="Şifre">
+            <button class="btn btn-primary" onclick="handleLogin()">Giriş Yap</button>
+            <p id="login-err" style="color: red; margin-top: 10px; font-size: 0.8rem; display: none;"></p>
+        </div>
+    </div>
+
+    <div class="container" id="app-container">
+        <header>
+            <button class="logout-btn" onclick="handleLogout()">Çıkış Yap 🚪</button>
+            <h1>📚 English Learning Hub</h1>
+            <p id="sub-title">Müfredat Takip ve Değerlendirme</p>
+        </header>
+
+        <nav id="main-nav"></nav>
+
+        <div class="content">
+            <!-- Universal Lists with specific cards per role -->
+            <div class="view" id="student-view">
+                <h2 style="margin-bottom: 20px;">Derslerim 👦</h2>
+                <div class="week-grid" id="student-list"></div>
+            </div>
+
+            <div class="view" id="teacher-view">
+                <div class="admin-controls">
+                    <div>
+                        <strong>Aktif Hafta:</strong>
+                        <select id="active-week-select" onchange="setActiveWeek()"></select>
+                    </div>
+                    <button class="btn btn-primary btn-sm" style="width: auto; margin: 0;" onclick="showAddLesson()">➕ Yeni Ders</button>
+                    <div style="flex-grow: 1; text-align: right;">
+                        <span style="font-size: 0.8rem; color: var(--text-muted);">Öğrenci: <strong>student</strong></span>
+                    </div>
+                </div>
+                <h3>Tüm Haftalar ve Değerlendirme</h3>
+                <div class="week-grid" id="teacher-list"></div>
+            </div>
+
+            <div class="view" id="parent-view">
+                <h2>Veli Raporu 👨‍👩‍👧</h2>
+                <div style="margin: 20px 0; background: white; padding: 25px; border-radius: 20px; border: 1px solid #e2e8f0;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                        <strong>Toplam İlerleme</strong>
+                        <span id="p-total-percent">0%</span>
+                    </div>
+                    <div style="width: 100%; height: 12px; background: #f1f5f9; border-radius: 6px; overflow: hidden;">
+                        <div id="p-progress-bar" style="width: 0%; height: 100%; background: var(--success); transition: width 1s;"></div>
+                    </div>
+                </div>
+                <div class="week-grid" id="parent-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="lesson-modal" class="modal">
+        <div class="modal-content" id="lesson-form-content"></div>
+    </div>
+
+    <div id="eval-modal" class="modal">
+        <div class="modal-content">
+            <h3>Ders Yönetimi ve Değerlendirme</h3>
+            <p id="eval-week-title" style="margin-bottom: 15px; color: var(--primary); font-weight: bold;"></p>
+            
+            <div style="background: #fdf2f8; padding: 15px; border-radius: 12px; margin-bottom: 20px; border: 1px solid #fbcfe8;">
+                <h4 style="font-size: 0.9rem; margin-bottom: 10px;">Ders İçeriğini Düzenle</h4>
+                <input type="text" id="e-topik" placeholder="Ders Konusu">
+                <textarea id="e-kelimeler" placeholder="Kelimeler (virgülle ayırın)" rows="2"></textarea>
+            </div>
+
+            <label>Ders Durumu:</label>
+            <select id="e-status">
+                <option value="none">Seçilmedi</option>
+                <option value="passed">✅ PASSED (Geçti)</option>
+                <option value="continue">🟡 CONTINUE (Devam Ediyor)</option>
+                <option value="repeat">🔴 REPEAT (Tekrar Etmeli)</option>
+            </select>
+            <label>Geri Bildirim / Notlar:</label>
+            <textarea id="e-notes" placeholder="Öğrenciye not bırakın..." rows="3"></textarea>
+            
+            <div style="display: flex; gap: 10px; margin-top: 20px;">
+                <button class="btn btn-primary" onclick="saveEvaluation()">Kaydet</button>
+                <button class="btn" style="background: #eee;" onclick="closeModals()">İptal</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="survey-modal" class="modal">
+        <div class="modal-content">
+            <h3>Ders Memnuniyet Anketi</h3>
+            <p id="survey-week-title" style="margin-bottom: 15px;"></p>
+            <label>Bu ders nasıl geçti?</label>
+            <div style="margin: 15px 0;" id="rating-container">
+                <button class="rating-btn" onclick="setRating(1)">1 😞</button>
+                <button class="rating-btn" onclick="setRating(2)">2 😐</button>
+                <button class="rating-btn" onclick="setRating(3)">3 🙂</button>
+                <button class="rating-btn" onclick="setRating(4)">4 😊</button>
+                <button class="rating-btn" onclick="setRating(5)">5 🤩</button>
+            </div>
+            <textarea id="s-comment" placeholder="Varsa görüşlerin..." rows="3"></textarea>
+            <div style="display: flex; gap: 10px; margin-top: 20px;">
+                <button class="btn btn-primary" onclick="saveSurvey()">Gönder</button>
+                <button class="btn" style="background: #eee;" onclick="closeModals()">Kapat</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentUser = null;
+        let curriculum = null;
+        let allProgress = {};
+        let currentEvalWeek = null;
+        let currentRating = 0;
+
+        window.onload = checkAuth;
+
+        async function checkAuth() {
+            const res = await fetch('/api/me');
+            if (res.ok) {
+                currentUser = await res.json();
+                initApp();
+            } else {
+                document.getElementById('login-overlay').style.display = 'flex';
+            }
+        }
+
+        async function handleLogin() {
+            const username = document.getElementById('login-user').value;
+            const password = document.getElementById('login-pass').value;
+            const res = await fetch('/api/login', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({username, password})
+            });
+            if (res.ok) location.reload();
+            else alert("Hatalı giriş!");
+        }
+
+        function handleLogout() { fetch('/api/logout', {method:'POST'}).then(() => location.reload()); }
+
+        async function initApp() {
+            document.getElementById('login-overlay').style.display = 'none';
+            document.getElementById('app-container').style.display = 'block';
+            
+            const [curRes, progRes] = await Promise.all([fetch('/api/curriculum'), fetch('/api/progress')]);
+            curriculum = await curRes.json();
+            allProgress = await progRes.json();
+
+            setupNav();
+            renderView(currentUser.role === 'teacher' ? 'teacher' : 'student');
+        }
+
+        function setupNav() {
+            const nav = document.getElementById('main-nav');
+            let tabs = [{id:'student', label:'👦 Öğrenci'}];
+            if(currentUser.role==='teacher') tabs.push({id:'teacher', label:'👨‍🏫 Öğretmen'});
+            tabs.push({id:'parent', label:'👨‍👩‍👧 Veli'});
+            
+            nav.innerHTML = tabs.map(t => `<button class="nav-btn ${t.id===currentUser.role?'active':''}" onclick="renderView('${t.id}')">${t.label}</button>`).join('');
+        }
+
+        function renderView(viewId) {
+            document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(`${viewId}-view`).classList.add('active');
+            
+            const btn = document.querySelector(`[onclick="renderView('${viewId}')"]`);
+            if (btn) btn.classList.add('active');
+
+            const list = document.getElementById(`${viewId}-list`);
+            const studentProg = (currentUser.role === 'student') ? allProgress : (allProgress['student'] || {weeks:{}});
+            
+            list.innerHTML = curriculum.weeks.map(w => {
+                const prog = studentProg.weeks[w.id] || {};
+                const statusHtml = prog.status ? `<span class="status-badge status-${prog.status}">${prog.status}</span>` : '';
+                const feedbackHtml = prog.teacher_notes ? `<div class="feedback-text">💬 ${prog.teacher_notes}</div>` : '';
+                
+                let actionHtml = '';
+                if(viewId === 'teacher') actionHtml = `<button class="btn btn-primary btn-sm" onclick="openEval(${w.id}, event)">📝 Değerlendir</button>`;
+                else if(viewId === 'student' && !prog.student_rating) actionHtml = `<button class="btn btn-primary btn-sm" onclick="openSurvey(${w.id}, event)">🌟 Anket</button>`;
+
+                return `
+                    <div class="card" onclick="location.href='/week/${w.id}'">
+                        ${statusHtml}
+                        <span class="tag">Hafta ${w.hafta}</span>
+                        <h3>${w.unite}</h3>
+                        <p>${w.topik}</p>
+                        ${feedbackHtml}
+                        <div style="margin-top:20px; display:flex; justify-content:space-between; align-items:center;">
+                            ${actionHtml}
+                            <span style="font-size:0.75rem; color:#888;">${prog.student_rating ? '⭐ Student: '+prog.student_rating : ''}</span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            if(viewId === 'teacher') {
+                const sel = document.getElementById('active-week-select');
+                sel.innerHTML = curriculum.weeks.map(w => `<option value="${w.id}" ${w.id==curriculum.program.active_week?'selected':''}>Hafta ${w.hafta}</option>`).join('');
+            }
+            
+            if(viewId === 'parent') {
+                const total = curriculum.weeks.length;
+                const completed = Object.values(studentProg.weeks).filter(w => w.status === 'passed').length;
+                const percent = Math.round((completed / total) * 100);
+                document.getElementById('p-progress-bar').style.width = percent + '%';
+                document.getElementById('p-total-percent').innerText = percent + '%';
+            }
+        }
+
+        // --- Teacher Ops ---
+        async function setActiveWeek() {
+            const val = document.getElementById('active-week-select').value;
+            await fetch('/api/teacher/curriculum', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({active_week: val}) });
+            location.reload();
+        }
+
+        function openEval(weekId, e) {
+            e.stopPropagation();
+            currentEvalWeek = weekId;
+            const week = curriculum.weeks.find(w => w.id === weekId);
+            const prog = (allProgress['student'] || {weeks:{}}).weeks[weekId] || {};
+            
+            document.getElementById('eval-week-title').innerText = `Hafta ${week.hafta}: ${week.unite}`;
+            document.getElementById('e-topik').value = week.topik || '';
+            document.getElementById('e-kelimeler').value = (week.kelimeler || []).join(', ');
+            document.getElementById('e-status').value = prog.status || 'none';
+            document.getElementById('e-notes').value = prog.teacher_notes || '';
+            document.getElementById('eval-modal').style.display = 'flex';
+        }
+
+        async function saveEvaluation() {
+            const status = document.getElementById('e-status').value;
+            const notes = document.getElementById('e-notes').value;
+            const topik = document.getElementById('e-topik').value;
+            const kelimeler = document.getElementById('e-kelimeler').value.split(',').map(s => s.trim());
+            
+            // Save Progress
+            await fetch('/api/progress', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    username: 'student',
+                    weeks: { [currentEvalWeek]: { status, teacher_notes: notes } }
+                })
+            });
+
+            // Save Curriculum Changes
+            const weekIdx = curriculum.weeks.findIndex(w => w.id === currentEvalWeek);
+            if(weekIdx !== -1) {
+                const updatedWeek = {...curriculum.weeks[weekIdx], topik, kelimeler};
+                await fetch('/api/teacher/curriculum', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({update_week: updatedWeek})
+                });
+            }
+
+            alert("Değişiklikler başarıyla kaydedildi!");
+            location.reload();
+        }
+
+        // --- Student Ops ---
+        function openSurvey(weekId, e) {
+            e.stopPropagation();
+            currentEvalWeek = weekId;
+            const week = curriculum.weeks.find(w => w.id === weekId);
+            document.getElementById('survey-week-title').innerText = `Hafta ${week.hafta}: ${week.unite}`;
+            document.getElementById('survey-modal').style.display = 'flex';
+            setRating(0);
+        }
+
+        function setRating(r) {
+            currentRating = r;
+            document.querySelectorAll('.rating-btn').forEach((b, i) => {
+                b.classList.toggle('selected', i + 1 === r);
+            });
+        }
+
+        async function saveSurvey() {
+            if(currentRating === 0) return alert("Lütfen bir puan seçin!");
+            const comment = document.getElementById('s-comment').value;
+            
+            await fetch('/api/progress', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    weeks: { [currentEvalWeek]: { student_rating: currentRating, student_comment: comment } }
+                })
+            });
+            alert("Geri bildiriminiz için teşekkürler!");
+            location.reload();
+        }
+
+        function closeModals() { document.querySelectorAll('.modal').forEach(m => m.style.display = 'none'); }
+        window.onclick = (e) => { if(e.target.classList.contains('modal')) closeModals(); }
+
+        function showAddLesson() { 
+            const html = `
+                <h3>Yeni Ders Ekle</h3>
+                <input type="text" id="m-unite" placeholder="Ünite Adı">
+                <input type="text" id="m-topik" placeholder="Ders Konusu">
+                <textarea id="m-kelimeler" placeholder="Kelimeler (virgülle ayırın)" rows="3"></textarea>
+                <div style="display: flex; gap: 10px; margin-top:10px;">
+                    <button class="btn btn-primary" onclick="saveNewLesson()">Kaydet</button>
+                    <button class="btn" style="background: #eee;" onclick="closeModals()">İptal</button>
+                </div>
+            `;
+            document.getElementById('lesson-form-content').innerHTML = html;
+            document.getElementById('lesson-modal').style.display = 'flex'; 
+        }
+
+        async function saveNewLesson() {
+            const newWeek = {
+                unite: document.getElementById('m-unite').value,
+                topik: document.getElementById('m-topik').value,
+                kelimeler: document.getElementById('m-kelimeler').value.split(',').map(s => s.trim())
+            };
+            await fetch('/api/teacher/curriculum', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({new_week: newWeek}) });
+            location.reload();
+        }
+    </script>
+</body>
+</html>

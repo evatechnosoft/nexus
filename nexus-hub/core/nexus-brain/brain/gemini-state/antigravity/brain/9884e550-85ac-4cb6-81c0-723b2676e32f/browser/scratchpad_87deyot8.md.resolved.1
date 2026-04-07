@@ -1,0 +1,18 @@
+# Task: Verify English Hub Week Details
+
+## Progress
+- [x] Open http://localhost:5000/week/1 (Failed verification: no translations)
+- [ ] Verify "hello" / "merhaba" -> FAILED: word-tr is empty.
+- [ ] Click / Verify "Okunuş" ([he-low]), "Heceleme" (hel-lo) -> FAILED: placeholders [...] and ... shown.
+- [x] Screenshot expanded "hello" -> Done.
+- [ ] Open http://localhost:5000/week/2
+- [ ] Verify "red" / "kırmızı"
+- [ ] Long-press "red" / check "speaking" class
+- [ ] Screenshot "red"
+- [ ] Check console for SpeechSynthesis errors
+
+## Findings
+- API `/api/week/1` returns `kelimeler` as a list of strings: `["hello", "goodbye", ...]`.
+- The frontend `renderWords` function expects objects like `{w: "hello", tr: "merhaba", ph: "he-low", sy: "hel-lo"}` to show details.
+- Since it receives strings, it falls back to empty translations and placeholders.
+- This suggests `curriculum.json` is either not updated or the server is not serving the updated format.

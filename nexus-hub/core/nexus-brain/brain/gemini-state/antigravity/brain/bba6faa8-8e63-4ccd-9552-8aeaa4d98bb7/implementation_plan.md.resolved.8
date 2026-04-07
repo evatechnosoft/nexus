@@ -1,0 +1,43 @@
+# [ZimaOS] ESP32 Çok Fonksiyonlu İstasyon Yapılandırma Planı (Faz 3)
+
+Bu plan, elinizdeki ESP32'yi kapsamlı bir veri terminaline dönüştürecek modüler bir ESPHome konfigürasyonu içerir.
+
+## Kullanıcı İncelemesi Gerekli
+
+- **Pin Bağlantıları (Wiring)**: GPIO seçimlerini en yaygın standartlara göre yaptım. Fiziksel bağlantı yaparken bu pinlere dikkat etmeniz gerekecektir.
+- **Ekran Modeli**: 2.4" ve 2.8" ekranlar genellikle **ILI9341** sürücüsünü kullanır. Eğer ekranınız farklıysa sürücü tipini değiştirmemiz gerekebilir.
+- **Enerji Metre Güvenliği**: PZEM-004T modülü yüksek voltaj (AC) ile çalışır. Bağlantı yaparken mutlaka enerjiyi kesin!
+
+---
+
+## Önerilen Yapılandırma Bileşenleri
+
+### 1. Ekran (2.4" / 2.8" TFT)
+- **Sürücü**: ILI9341 (SPI protokolü)
+- **İçerik**: Sıcaklık, Watt, Voltaj ve Hareket durumu ekranda canlı olarak gösterilecek.
+
+### 2. Enerji İzleme (PZEM-004T)
+- **Protokol**: UART (Seri iletişim)
+- **Veriler**: Akım (A), Güç (W), Voltaj (V), Frekans (Hz) ve Toplam Enerji (kWh).
+
+### 3. Çevresel Sensörler
+- **Sıcaklık/Nem**: BME280 veya DHT22 desteği (I2C).
+- **Hareket (PIR)**: Dijital giriş üzerinden anlık tetikleme.
+
+---
+
+## Uygulama Adımları
+
+1.  **Modüler YAML Tasarımı**: Tüm bileşenlerin olduğu `smart-station.yaml` dosyasının oluşturulması.
+2.  **Kütüphane Önbelleği**: Gerekli font ve sürücülerin ESPHome tarafında hazırlanması.
+3.  **Flash Hazırlığı**: Oluşturulan konfigürasyonun ZimaOS üzerindeki `/DATA/AppData/esphome` dizinine kaydedilmesi.
+
+## Açık Sorular
+
+- **[ÖNEMLİ]**: Enerji metreniz PZEM-004T mi yoksa farklı bir model mi?
+- **[ÖNEMLİ]**: Ekranınız dokunmatik mi? (Dokunmatik ise XPT2046 sürücüsünü de ekleyebiliriz).
+
+## Doğrulama Planı
+
+- ESPHome "Validate" işlemi ile YAML hatası olmadığının teyidi.
+- Kullanıcıya flash işlemi için tam konfigürasyonun sunulması.

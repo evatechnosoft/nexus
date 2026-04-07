@@ -1,0 +1,61 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (15,24)<ha-svg-icon  />
+Home Assistant
+[1] (69,73)<ha-md-list-item class='  ' />
+	[2] (15,73)<ha-svg-icon  />
+	[3] (80,73)<span >Ana Ekran />
+[4] (69,115)<ha-md-list-item class='  ' />
+	[5] (15,115)<ha-svg-icon  />
+	[6] (80,115)<span >Harita />
+[7] (69,157)<ha-md-list-item class='  ' />
+	[8] (15,157)<ha-svg-icon  />
+	[9] (80,157)<span >Enerji />
+[10] (69,198)<ha-md-list-item class='  ' />
+	[11] (15,198)<ha-svg-icon  />
+	[12] (80,198)<span >Günlük />
+[13] (69,240)<ha-md-list-item class='  ' />
+	[14] (15,240)<ha-svg-icon  />
+	[15] (80,240)<span >Geçmiş />
+[16] (69,282)<ha-md-list-item class='  ' />
+	[17] (15,282)<ha-icon  />
+		[18] (15,282)<ha-svg-icon  />
+	[19] (80,282)<span >HACS />
+[20] (69,323)<ha-md-list-item class='  ' />
+	[21] (15,323)<ha-svg-icon  />
+	[22] (80,323)<span >Medya />
+[23] (69,365)<ha-md-list-item class='  ' />
+	[24] (15,365)<ha-svg-icon  />
+	[25] (80,365)<span >Yapılacaklar listeleri />
+[26] (69,819)<ha-md-list-item class='  ' />
+	[27] (15,819)<ha-svg-icon  />
+	[28] (80,819)<span >Geliştirici araçları />
+[29] (69,861)<ha-md-list-item class='configuration selected' href='/config' />
+	[30] (15,861)<ha-svg-icon  />
+	[31] (80,861)<span >Ayarlar />
+[32] (69,927)<ha-md-list-item class='notifications' />
+	[33] (15,927)<ha-svg-icon  />
+	[34] (80,927)<span >Bildirimler />
+[35] (69,969)<ha-md-list-item class='user ' href='/profile' />
+	[36] (15,969)<ha-user-badge  />
+		[37] (15,969)<div >D />
+	[38] (80,969)<span >Dean />
+[39] (157,24)<ha-svg-icon  />
+[40] (955,24)<a href='https://www.home-assistant.io/integrations/esphome' />
+	[41] (955,24)<ha-icon-button  />
+		[42] (955,24)<mwc-icon-button  />
+			[43] (955,24)<ha-svg-icon  />
+[44] (981,24)<ha-svg-icon  />
+ESPHome
+[45] (392,129)<a href='https://www.home-assistant.io/docs/quality_scale/#-platinum'>Platin kalite />
+	[46] (366,129)<ha-svg-icon  />
+	[47] (419,129)<ha-svg-icon  />
+Cihaz ekle
+Cihazlar
+ESPHome
+[48] (782,227)<ha-svg-icon  />
+[49] (816,227)<ha-svg-icon  />
+
+</current_dom>

@@ -1,0 +1,24 @@
+# Task: Adapt Home Server Setup for ZimaOS
+
+## Research and Planning
+- [ ] Research ZimaOS installation/deployment methods for generic Linux systems [/]
+- [ ] Determine if ZimaOS components (ZimaHub, etc.) are available as standalone installers [/]
+- [ ] Check if the current [setup.sh](file:///c:/projects/github/casaos-home-server/setup.sh) (Docker, GPU, etc.) is relevant/functional on ZimaOS [/]
+
+## Implementation
+## Implementation
+## Implementation
+- [x] Create a new `zimaos_setup.sh` or modify [setup.sh](file:///c:/projects/github/casaos-home-server/setup.sh) to include ZimaOS options
+- [x] Update App Store list to include Zima-specific repositories
+- [x] Add --yes and --flavor flags for non-interactive installation
+- [x] Resolve official installer 404 root cause
+- [x] Perform clean WSL2 Ubuntu 22.04 installation
+- [x] Perform Total Reset (Unregister old distros)
+- [x] Fresh Install Ubuntu 22.04 as 'ZimaOS' host
+- [x] Install v0.5.1 ZimaOS Dashboard (Partial/Failed)
+- [ ] **[CURRENT]** Perform Full Cleanup and Stable Re-install [ ]
+- [ ] Verify Dashboard access on port 80 [ ]
+
+## Verification
+- [x] Verify ZimaOS v0.5.x dashboard access
+- [x] Verify Zima app store content

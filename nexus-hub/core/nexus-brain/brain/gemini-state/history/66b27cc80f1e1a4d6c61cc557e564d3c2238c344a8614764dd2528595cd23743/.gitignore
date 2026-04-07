@@ -1,0 +1,25 @@
+# Logs
+*.log
+.playwright-mcp/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependencies
+node_modules/
+
+# Screenshot / test artifacts
+screenshot-*.png
+screen-*.png
+s-*.png
+s2-*.png
+v2-*.png
+hero-*.png
+full-*.png
+full-page-*.png
+loader-*.png
+aicore-*.png
+check-*.png
+eva-bg.png
+full-tr.png

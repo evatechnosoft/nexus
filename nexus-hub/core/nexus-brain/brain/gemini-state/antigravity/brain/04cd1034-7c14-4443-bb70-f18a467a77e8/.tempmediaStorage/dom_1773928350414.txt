@@ -1,0 +1,46 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Skip to content
+[0] (136,51)<a href='https://tienganhedu.com/home/' title='TienganhEDU - Download Ebook English | TOEIC | TOEFL | IELTS….'>TienganhEDU />
+[1] (247,59)<a class='nav-top-link' href='https://tienganhedu.com/my-account/'>My account />
+[2] (295,59)<a class='nav-top-link' href='https://tienganhedu.com/blog/'>Blog />
+Products search
+[3] (537,59)<input class='dgwt-wcas-search-input' id='dgwt-wcas-search-input-1' placeholder='Search for products...' />
+[4] (713,59)<button aria-label='Search' class='dgwt-wcas-search-submit' />
+[5] (857,59)<a class='nav-top-link nav-top-not-logged-in ' href='https://tienganhedu.com/my-account/' />
+	[6] (857,59)<span >Login />
+[7] (909,59)<a class='header-cart-link is-small' href='https://tienganhedu.com/cart/' title='Cart' />
+	[8] (900,59)<span  />
+		[9] (900,58)<span  />
+			[10] (900,58)<span >0.00 />
+				[11] (891,58)<span >$ />
+	[12] (921,59)<i  />
+[13] (208,534)<a href='https://ngoaingu365.com/' />
+	[14] (208,534)<img  />
+Download link is starting…
+You will download in
+0
+seconds…
+Please enter the characters shown below to proceed:
+KMamo3
+[15] (543,385)<button id='refresh-captcha-button'>⟳ />
+[16] (500,464)<input id='captcha-input' placeholder='Enter Captcha' />
+[17] (495,550)<button id='captcha-button'>Submit />
+[18] (495,636)<button id='back-button'>Return to previous page />
+[19] (792,534)<a href='https://ngoaingu365.com/' />
+	[20] (792,534)<img  />
+0
+[21] (28,120)<button id='custom-show-cart-popup' />
+	[22] (28,120)<img  />
+Your shopping cart has been updated.
+[23] (965,927)<div  />
+	[24] (965,927)<div  />
+		[25] (957,927)<div  />
+			[26] (965,927)<span  />
+[27] (985,787)<div  />
+Please use this button
+to contact us!
+
+</current_dom>

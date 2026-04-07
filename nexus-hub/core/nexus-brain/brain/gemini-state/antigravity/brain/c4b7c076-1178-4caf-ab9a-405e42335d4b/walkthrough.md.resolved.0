@@ -1,0 +1,34 @@
+# Walkthrough: Evario Odyssey (Mario-Style Platformer)
+
+I have successfully initialized and implemented a premium 2D Mario-style platformer in `c:/projects/Antigravity/EvaGames/evario`.
+
+## Features Implemented
+- **Core Mechanics**: 
+  - Smooth AABB collision detection.
+  - Classic "Mario" gravity and jump physics (variable jump height based on key press).
+  - Horizontal movement with momentum.
+- **Visuals**:
+  - Custom Canvas-based renderer.
+  - Modern "Neon Noir" aesthetic with glowing character and collectibles.
+  - Interactive UI overlay showing node count and stage.
+- **Assets & Structure**:
+  - Integrated `game-development` and `2d-games` skills for best practices.
+  - Vite-powered development environment for fast iteration.
+
+## Screenshots & Demonstrations
+
+### Gameplay Session
+![Mario Game Interaction](file:///C:/Users/Deacjx/.gemini/antigravity/brain/c4b7c076-1178-4caf-ab9a-405e42335d4b/test_mario_game_1773593848283.webp)
+*The recording shows the player moving, jumping, and successfully collecting a node, which updates the score in the UI.*
+
+## How to Play
+1. The game is currently running at `http://localhost:5173/`.
+2. **Controls**:
+   - `Arrow Keys` or `WASD`: Move and Jump.
+   - `Space`: Jump.
+3. **Objective**: Collect the pink digital nodes and navigate the platforms.
+
+## Technical Details
+- **Engine**: Canvas API.
+- **Physics**: Custom implemented in `src/main.js`.
+- **Styling**: `src/style.css` provides the glassmorphism and neon effects.

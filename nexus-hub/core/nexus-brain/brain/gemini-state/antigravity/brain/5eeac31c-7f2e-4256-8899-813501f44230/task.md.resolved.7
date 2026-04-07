@@ -1,0 +1,16 @@
+# Task: Fix Docker Hub Connectivity for ZimaOS
+
+- [x] Analyze current Docker Hub connectivity issues <!-- id: 0 -->
+- [x] Research/Update Docker configuration with mirrors <!-- id: 1 -->
+- [x] Analyze network configuration and routes <!-- id: 2 -->
+- [x] Fix default route and nameserver configuration <!-- id: 3 -->
+- [x] Verify internet and retry Docker Hub fix <!-- id: 4 -->
+- [/] Configure persistent static IP (192.168.1.186) and DNS <!-- id: 5 -->
+    - [ ] Identify active connection name
+    - [ ] Set IPv4 method to manual
+    - [ ] Set Static IP, Gateway and DNS
+- [ ] Update documentation for future reference <!-- id: 6 -->
+    - [!] CRITICAL: /etc is overlayfs and reporting stale handle
+    - [ ] Test writing to other directories (/tmp, /home)
+    - [ ] Suggest reboot if filesystem remains stale
+- [ ] Update documentation for future reference <!-- id: 5 -->

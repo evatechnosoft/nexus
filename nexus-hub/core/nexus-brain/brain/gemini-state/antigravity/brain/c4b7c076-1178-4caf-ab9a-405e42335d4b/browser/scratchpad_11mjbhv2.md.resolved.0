@@ -1,0 +1,7 @@
+# Task Checklist
+- [ ] Open http://localhost:5173/
+- [ ] Verify stars are glowing white/blue and animating
+- [ ] Verify ground is a single continuous structure
+- [ ] Verify character is visible and animating
+- [ ] Verify UI says "STARS"
+- [ ] Capture recording of results

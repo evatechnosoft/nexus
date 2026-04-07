@@ -1,0 +1,37 @@
+# Plan: Add Game Development Skills
+
+The goal is to provide the user with relevant game development skills from the central skills repository and integrate them into the project workspace `c:/projects/Antigravity/EvaGames/evario`.
+
+## Proposed Changes
+
+### Project Structure
+- [NEW] `.agents/skills` directory to store project-specific skills.
+
+### Skills to be Added
+- [x] **game-development**: General principles and routing.
+- [x] **game-development/2d-games**: Specific principles for 2D development (sprites, tilemaps, etc.).
+
+## 2D Game Design: "Evario 2D"
+Since we are starting from scratch in an empty directory, we'll design a premium 2D experience.
+
+### Technical Stack
+- **Engine**: Vite + Vanilla JS + Canvas API (for a fast, lightweight, and customizable 2D engine).
+- **Design Style**: Sleek dark mode with glassmorphism UI overlays and vibrant particle effects.
+
+### Core Gameplay Idea
+A fast-paced "infinite runner" or "platformer" where the player controls a light pulse navigating through a digital void.
+
+## Implementation Steps
+1. [x] Create `.agents/skills` directory.
+2. [x] Copy `game-development` and `game-development/2d-games` skills.
+3. [ ] Initialize Vite project structure.
+4. [ ] Implement core game loop with Canvas API.
+5. [ ] Create a "WOW" visual prototype with modern styling.
+
+## Verification Plan
+### Automated Tests
+- `npm run dev` to verify the game loads and the loop runs at 60 FPS.
+
+### Manual Verification
+- Verify files in `.agents/skills`.
+- Check browser console for any errors during startup.

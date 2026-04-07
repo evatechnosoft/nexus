@@ -1,0 +1,9 @@
+<tool_output_masked>
+{
+  "output": "Successfully created and wrote to new file: C:\\Users\\Deacjx\\.gemini\\tmp\\projects\\a366de38-25fd-4d3a-9bce-f8a0bc9646e6\\plans\\agentops-nexus-prod-deployment.md. Here is the updated code:\n# AgentOps-Nexus Production Deployment Pl
+... [TRUNCATED] ...
+erver-ip>:4550` (or via the configured reverse proxy).\r\n\r\n## Rollback Strategy\r\nIf the deployment fails, use `docker compose down` and revert the Git commit, then rebuild. Data persistence is ensured via Docker volumes (`postgres_data`).\r\n"
+}
+
+Output too large. Full output available at: C:\Users\Deacjx\.gemini\tmp\projects\tool-outputs\session-a366de38-25fd-4d3a-9bce-f8a0bc9646e6\write_file_write_file_1775211077152_0_la8sge.txt
+</tool_output_masked>

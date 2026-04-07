@@ -1,0 +1,60 @@
+İlk gün — selamlaşma, sayılar, yaş
+📚 Kitap Referansları
+Student Book:
+Sayfa 4-7
+🗝️ Anahtar Kelimeler (Vocabulary)
+🎯
+Tıkla:
+Okunuşunu dinle | 🖱️
+Basılı Tut:
+Harf harf kodlamasını dinle
+[0] (340,481)<div  />
+	[1] (340,415)<div >hello />
+	[2] (340,467)<div >merhaba />
+	[3] (340,534)<div >[he-low]
+hel-lo />
+		[4] (303,530)<b >🗣️ Okunuş: />
+		[5] (307,553)<b >🧩 Heceleme: />
+[6] (500,481)<div  />
+	[7] (500,415)<div >goodbye />
+	[8] (500,467)<div >hoşça kal />
+	[9] (500,534)<div >[gud-bay]
+good-bye />
+		[10] (462,530)<b >🗣️ Okunuş: />
+		[11] (466,553)<b >🧩 Heceleme: />
+[12] (660,481)<div  />
+	[13] (660,415)<div >teacher />
+	[14] (660,467)<div >öğretmen />
+	[15] (660,534)<div >[tii-çır]
+teach-er />
+		[16] (622,530)<b >🗣️ Okunuş: />
+		[17] (626,553)<b >🧩 Heceleme: />
+[18] (340,729)<div  />
+	[19] (340,663)<div >girl />
+	[20] (340,715)<div >kız />
+	[21] (340,782)<div >[görl]
+girl />
+		[22] (303,778)<b >🗣️ Okunuş: />
+		[23] (307,802)<b >🧩 Heceleme: />
+[24] (500,729)<div  />
+	[25] (500,663)<div >boy />
+	[26] (500,715)<div >erkek çocuk />
+	[27] (500,782)<div >[boy]
+boy />
+		[28] (462,778)<b >🗣️ Okunuş: />
+		[29] (466,802)<b >🧩 Heceleme: />
+[30] (660,729)<div  />
+	[31] (660,663)<div >good />
+	[32] (660,715)<div >iyi />
+	[33] (660,782)<div >[gud]
+good />
+		[34] (622,778)<b >🗣️ Okunuş: />
+		[35] (626,802)<b >🧩 Heceleme: />
+[36] (340,977)<div  />
+	[37] (340,911)<div >one />
+	[38] (340,963)<div >bir />
+[39] (500,911)<div >two />
+iki
+[40] (660,977)<div  />
+	[41] (660,911)<div >three />
+	[42] (660,963)<div >üç />

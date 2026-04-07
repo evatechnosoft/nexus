@@ -1,0 +1,9 @@
+# Task List - Resolving Model Constructor Conflict
+
+- [/] Create implementation plan <!-- id: 7 -->
+- [ ] Fix [lib/models/note.dart](file:///c:/projects/github/EvAnotes/mobile/lib/models/note.dart) <!-- id: 8 -->
+    - [ ] Remove redundant manual overrides <!-- id: 9 -->
+    - [ ] Ensure field nullability matches between constructor and intended use <!-- id: 10 -->
+- [ ] Fix [lib/models/task.dart](file:///c:/projects/github/EvAnotes/mobile/lib/models/task.dart) <!-- id: 11 -->
+    - [ ] Remove redundant manual overrides <!-- id: 12 -->
+- [ ] Verify build_runner completion and resolve remaining errors <!-- id: 13 -->

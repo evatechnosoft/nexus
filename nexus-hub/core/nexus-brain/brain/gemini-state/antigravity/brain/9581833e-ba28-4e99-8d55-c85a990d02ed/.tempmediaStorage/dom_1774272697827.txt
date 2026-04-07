@@ -1,0 +1,127 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+13:31
+Monday, March 23, 2026
+System
+2
+CPU
+1.7W / 44.00°C
+4
+RAM
+31 GB
+CPU
+RAM
+Quadro P620
+GPU 0W
+41°C
+1
+VRAM
+61.9 MB / 4 GB
+Storage
+Healthy
+Used: 11.1 GB
+Total: 490 GB
+App Installing
+Installing PostgreSQL
+Stable Diffusion
+Stable Diffusion is a deep learning, text-to-image model, It is primarily used to generate detailed images conditioned on text descriptions
+Try now
+Remote Access
+Drag icons to sort.
+[0] (421,550)<div  />
+	[1] (421,550)<span  />
+		[2] (421,550)<i  />
+Apps
+[3] (931,550)<div class='dropdown-trigger' />
+	[4] (931,549)<span  />
+		[5] (931,549)<i  />
+[6] (351,701)<figure  />
+	[7] (351,701)<img  />
+[8] (351,773)<a class='block one-line max-w-36'>App Store />
+[9] (483,701)<figure  />
+	[10] (483,701)<img  />
+[11] (483,773)<a class='block one-line max-w-36'>Files />
+[12] (616,701)<figure  />
+	[13] (616,701)<img  />
+[14] (616,773)<a class='block one-line max-w-36'>Backup />
+[15] (748,701)<figure  />
+	[16] (748,701)<img  />
+[17] (748,773)<a class='block one-line max-w-36'>ZVM />
+[18] (881,701)<figure  />
+	[19] (881,701)<img  />
+[20] (881,773)<a class='block one-line max-w-36'>PeerDrop />
+[21] (351,971)<figure  />
+	[22] (351,971)<img  />
+[23] (531,892)<div class='dropdown-trigger' />
+[24] (483,971)<figure  />
+	[25] (483,971)<img  />
+ZimaCube 2 Pioneer Program Is Live — 10 Free Units + Pre-Order Now Open
+Zima Hardware 3D Printed Setup Challenge is now live🔥 Win ZimaCube 2!
+Chinese New Year Holiday Break + Giveaway Time 🎁
+ZimaOS v1.5.4 Released: Encrypted Folders Introduced, Storage and File Experience Upgraded
+📢 IW Biweekly #2: ZimaBoard Builds, ZORM Open Source, and ZimaOS Updates
+ZimaBoard 2 Pricing Update (Effective Feb 6, 2026)
+📢 IW Biweekly #1: 350TB Build, Alpha Tests & Community Highlights
+dean
+General
+Storage
+Network
+Apps
+Network
+Connection
+Ethernet
+eth0
+100 Mbps
+/
+1 Gbps
+DHCP
+Virtual Network (Remote)
+zt3lfpgodn
+Static IP
+10.147.12.1
+Wireless
+wlan0
+DHCP
+Remote access
+Zima Client
+enables seamless access to your essential data and applications anytime, anywhere. Your Network ID is unique and critical to the security of your device—please keep it confidential and avoid sharing it with untrusted individuals.
+Remote ID:
+a9ed7873278b4b4a
+Copy ID
+wlan0-Wireless
+[26] (661,128)<button aria-label='Close' class='relative items-center inline-flex text-center align-bottom justify-center flex-row text-base p-2 rounded-2.5 border-1 outline-none focus-visible:ring-2 bg-transparent border-transparent text-surface-900 dark:text-surface-300 hover:bg-[#F5F5F5] hover:border-[#333333]/5 active:bg-[#F5F5F5] active:border-[#333333]/5 dark:hover:bg-white/5 dark:active:bg-white/9 focus-visible:ring-primary-500/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+Configure IPv4
+[27] (591,203)<button class='relative flex items-center justify-center py-2 px-4 rounded-md border bg-surface-100 dark:bg-surface-950 text-surface-800 dark:text-white/80 before:bg-surface-0 dark:before:bg-surface-800 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 border-surface-100 dark:border-surface-950 before:content-empty before:absolute before:left-1 before:top-1 before:w-[calc(100%-0.5rem)] before:h-[calc(100%-0.5rem)] before:rounded-[4px] before:z-0 transition-all duration-200 cursor-pointer' />
+	[28] (591,203)<span  />
+		[29] (591,203)<span >DHCP />
+[30] (638,203)<button class='relative flex items-center justify-center py-2 px-4 rounded-md border bg-surface-100 dark:bg-surface-950 text-surface-600 dark:text-white/60 before:bg-transparent hover:text-surface-800 dark:hover:text-white/80 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 border-surface-100 dark:border-surface-950 before:content-empty before:absolute before:left-1 before:top-1 before:w-[calc(100%-0.5rem)] before:h-[calc(100%-0.5rem)] before:rounded-[4px] before:z-0 transition-all duration-200 cursor-pointer' />
+	[31] (638,203)<span  />
+		[32] (638,203)<span >Manual />
+IP
+Subnet Mask
+Gateway Address
+DNS
+Configure IPv6
+[33] (548,532)<button class='relative flex items-center justify-center py-2 px-4 rounded-md border bg-surface-100 dark:bg-surface-950 text-surface-800 dark:text-white/80 before:bg-surface-0 dark:before:bg-surface-800 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 border-surface-100 dark:border-surface-950 before:content-empty before:absolute before:left-1 before:top-1 before:w-[calc(100%-0.5rem)] before:h-[calc(100%-0.5rem)] before:rounded-[4px] before:z-0 transition-all duration-200 cursor-pointer' />
+	[34] (548,532)<span  />
+		[35] (548,532)<span >DHCP />
+[36] (595,532)<button class='relative flex items-center justify-center py-2 px-4 rounded-md border bg-surface-100 dark:bg-surface-950 text-surface-600 dark:text-white/60 before:bg-transparent hover:text-surface-800 dark:hover:text-white/80 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 border-surface-100 dark:border-surface-950 before:content-empty before:absolute before:left-1 before:top-1 before:w-[calc(100%-0.5rem)] before:h-[calc(100%-0.5rem)] before:rounded-[4px] before:z-0 transition-all duration-200 cursor-pointer' />
+	[37] (595,532)<span  />
+		[38] (595,532)<span >Manual />
+[39] (641,532)<button class='relative flex items-center justify-center py-2 px-4 rounded-md border bg-surface-100 dark:bg-surface-950 text-surface-600 dark:text-white/60 before:bg-transparent hover:text-surface-800 dark:hover:text-white/80 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 border-surface-100 dark:border-surface-950 before:content-empty before:absolute before:left-1 before:top-1 before:w-[calc(100%-0.5rem)] before:h-[calc(100%-0.5rem)] before:rounded-[4px] before:z-0 transition-all duration-200 cursor-pointer' />
+	[40] (641,532)<span  />
+		[41] (641,532)<span >Close />
+IP
+Subnet Mask
+Gateway Address
+DNS
+[42] (405,871)<button aria-label='Restore the original configuration' class='mr-auto relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-2.5 border-1 outline-none focus-visible:ring-2 bg-transparent border-transparent text-surface-500 dark:text-surface-300 hover:bg-[#333333]/5 active:bg-[#333333]/9 dark:hover:bg-white/5 dark:active:bg-white/9 focus-visible:ring-primary-500/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[43] (339,871)<span  />
+	[44] (413,871)<span >Restore the original configuration />
+[45] (620,871)<button aria-label='Cancel' class='relative items-center inline-flex text-center align-bottom justify-center flex-row text-sm p-1.5 gap-2 rounded-2.5 border-1 border-[#333333]/5 hover:border-[#333333]/9 outline-none focus-visible:ring-2 text-surface-900 dark:text-white bg-surface-100 hover:bg-surface-200 active:bg-surface-300 dark:bg-surface-800 dark:hover:bg-surface-700 dark:active:bg-surface-600 focus-visible:ring-primary-500/50 transition duration-200 ease-in-out cursor-pointer overflow-hidden select-none' />
+	[46] (620,871)<span >Cancel />
+Save
+
+</current_dom>

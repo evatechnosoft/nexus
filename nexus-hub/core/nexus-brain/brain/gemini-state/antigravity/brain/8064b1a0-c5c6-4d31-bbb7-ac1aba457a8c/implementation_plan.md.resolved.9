@@ -1,0 +1,45 @@
+# Professional Interaction Polish Plan
+
+Refine the dashboard customization experience with advanced controls, improved interaction logic, and visual polish.
+
+## User Review Required
+
+> [!IMPORTANT]
+> - **Glow Effect Implementation**: The "Glow" selection will likely be implemented as a glow/bloom intensity property in [GaugeConfig](file:///c:/projects/claude+antigravity/projects/car_dash/lib/domain/models/gauge_config.dart#22-68), affecting how colors are rendered (e.g., shadow blur or glow radius).
+> - **Exclusive Selection**: Long-pressing one gauge will now automatically deselect any previously selected gauge to reduce UI clutter.
+
+## Proposed Changes
+
+### Domain & State
+#### [MODIFY] [gauge_config.dart](file:///c:/projects/claude+antigravity/projects/car_dash/lib/domain/models/gauge_config.dart)
+- Add `glowIntensity` (double) to [GaugeConfig](file:///c:/projects/claude+antigravity/projects/car_dash/lib/domain/models/gauge_config.dart#22-68).
+- Update [copyWith](file:///c:/projects/claude+antigravity/projects/car_dash/lib/domain/models/gauge_config.dart#47-67) and `toMap`/`fromMap`.
+
+#### [MODIFY] [dashboard_controller.dart](file:///c:/projects/claude+antigravity/projects/car_dash/lib/presentation/controllers/dashboard_controller.dart)
+- Add `isLocked` (bool) state to toggle dashboard editing.
+- Add `selectedGaugeId` (String?) to manage exclusive selection.
+- Implement [selectGauge(String? id)](file:///c:/projects/claude+antigravity/projects/car_dash/lib/presentation/controllers/dashboard_controller.dart#55-60) and [toggleLock()](file:///c:/projects/claude+antigravity/projects/car_dash/lib/presentation/controllers/dashboard_controller.dart#47-54).
+
+### UI Components
+#### [MODIFY] [gauge_layout_wrapper.dart](file:///c:/projects/claude+antigravity/projects/car_dash/lib/presentation/widgets/gauge_layout_wrapper.dart)
+- Reposition settings icon to bottom-right.
+- Add a small [Slider](file:///c:/projects/claude+antigravity/projects/car_dash/lib/presentation/widgets/gauge_mini_settings.dart#292-328) at bottom-left for quick resizing (visible only when selected).
+- Connect to [DashboardController](file:///c:/projects/claude+antigravity/projects/car_dash/lib/presentation/controllers/dashboard_controller.dart#27-231) for selection/lock state.
+
+#### [MODIFY] [gauge_mini_settings.dart](file:///c:/projects/claude+antigravity/projects/car_dash/lib/presentation/widgets/gauge_mini_settings.dart)
+- Update color picker UI to include "Glow" and "Opacity" sliders alongside the Hue picker.
+- Improve the layout to look like a professional color package.
+
+#### [MODIFY] [main.dart](file:///c:/projects/claude+antigravity/projects/car_dash/lib/main.dart)
+- Remove the special case rendering for the centered speedometer.
+- Wrap all gauges (including speed) in [DraggableGauge](file:///c:/projects/claude+antigravity/projects/car_dash/lib/presentation/widgets/gauge_layout_wrapper.dart#4-31) to allow movement and scaling.
+- Add a Lock/Unlock button in the top-left corner of the dashboard screen.
+
+## Verification Plan
+
+### Manual Verification
+- Long-press Gauge A, then long-press Gauge B: Verify Gauge A deselects.
+- Click lock icon: Verify gauges can no longer be dragged or resized.
+- Use quick resize slider: Verify gauge size changes instantly.
+- Test "Glow" slider in settings: Verify visual bloom effect on gauge elements.
+- Verify settings icon location (bottom-right).

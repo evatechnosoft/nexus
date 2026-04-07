@@ -1,0 +1,49 @@
+# DeanOS Infrastructure & Service Deployment Completed
+
+We have successfully restored the server infrastructure, deployed all requested applications, and created a configuration backup.
+
+## Changes Implemented
+
+### 1. Networking & Static IP
+- **Static IP:** `192.168.1.186` is now permanently assigned to the server.
+- **DNS:** Set to `1.1.1.1` and `8.8.8.8` for all services.
+- **Routing:** Conflicts resolved to ensure stable internet access.
+
+### 2. Docker Stability
+- **Mirrors:** Configured reliable registry mirrors in [daemon.json](file:///d:/OS/Zimaos/daemon.json).
+- **MTU Fix:** Optimized the `docker0` bridge MTU to `1400` to prevent pull hang-ups.
+
+### 3. Persistent Access
+- **SSH/Sudo:** Enabled seamless login and `NOPASSWD` access.
+- **Persistence:** Moved [authorized_keys](file:///C:/Users/Deacjx/.ssh/authorized_keys) to the writable `/DATA` partition.
+
+### 4. Service Deployments
+- **Nextcloud:** Resolved "untrusted domain" error.
+- **IT Inventory:** 
+  - Cloned from `evatechnosoft/My-Personal-Repository` (dev branch).
+  - Deployed via Docker on port `8001`.
+- **Evaiteclabs:** 
+  - Cloned from `evatechnosoft/evaiteclabs`.
+  - Created a custom Dockerfile for the Node.js server.
+  - Deployed on port `3001` (to match Cloudflare Tunnel).
+
+### 5. Configuration Backup
+- **Archive:** Created a backup tarball (`deanos_config_backup_*.tar.gz`) containing:
+  - Docker, SSH, and Sudo configs.
+  - SSH keys (including GitHub keys).
+  - All project source code.
+- **Location:** Stored locally at `d:\OS\Zimaos\backups\`.
+
+## Verification
+- [x] Passwordless SSH login (`ssh deanos`)
+- [x] Docker Hub image pulls (`docker pull busybox`)
+- [x] Nextcloud access (Verified)
+- [x] IT Inventory access (Verified on port 8001)
+- [x] Evaiteclabs access (Verified on port 3001)
+- [x] Configuration backup transferred to Windows.
+
+## Maintenance
+- **Master Fix Script:** Run `sudo /DATA/fix_deanos.sh` on the server to restore all settings and restart all services.
+- **Config Guide:** Refer to `deanos_config.md` in the root directory for connection secrets and paths.
+
+Everything is now fully optimized and production-ready. 🚀

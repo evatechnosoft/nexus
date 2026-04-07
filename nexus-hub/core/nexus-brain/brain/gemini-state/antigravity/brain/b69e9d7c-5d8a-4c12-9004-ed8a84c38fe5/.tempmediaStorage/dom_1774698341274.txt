@@ -1,0 +1,75 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Skip to content
+Navigation Menu
+[0] (31,47)<a aria-label='Homepage' class='tmp-mr-lg-3 color-fg-inherit flex-order-2 js-prevent-focus-on-mobile-nav' href='/' />
+[1] (82,47)<button class='NavDropdown-module__button__PEHWX js-details-target'>Platform />
+[2] (146,47)<button class='NavDropdown-module__button__PEHWX js-details-target'>Solutions />
+[3] (213,47)<button class='NavDropdown-module__button__PEHWX js-details-target'>Resources />
+[4] (288,47)<button class='NavDropdown-module__button__PEHWX js-details-target'>Open Source />
+[5] (364,47)<button class='NavDropdown-module__button__PEHWX js-details-target'>Enterprise />
+[6] (419,47)<a class='NavLink-module__link__EG3d4 MarketingNavigation-module__navLink__hUomM' href='https://github.com/pricing' />
+	[7] (419,47)<span >Pricing />
+[8] (744,47)<button aria-label='Search or jump to…' class='header-search-button placeholder input-button form-control d-flex flex-1 flex-self-stretch flex-items-center no-wrap width-full py-0 pl-2 pr-0 text-left border-0 box-shadow-none' placeholder='Search or jump to...' />
+	[9] (652,47)<div  />
+	[10] (743,47)<span >Search or jump to... />
+	[11] (838,47)<div  />
+[12] (876,47)<a class='HeaderMenu-link HeaderMenu-link--sign-in HeaderMenu-button flex-shrink-0 no-underline d-none d-lg-inline-flex border border-lg-0 rounded px-2 py-1' href='/login?return_to=https%3A%2F%2Fgithub.com%2Fhboon%3Ftab%3Drepositories'>Sign in />
+[13] (928,47)<a class='HeaderMenu-link HeaderMenu-link--sign-up HeaderMenu-button flex-shrink-0 d-flex d-lg-inline-flex no-underline border color-border-default rounded px-2 py-1' href='/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2Fhboon&source=header'>Sign up />
+[14] (969,47)<button class='Button Button--iconOnly Button--invisible Button--medium AppHeader-button HeaderMenu-link border' id='icon-button-a2b70d4e-15c3-4b5e-84bd-25534ac2f1b0' />
+[15] (356,158)<a class='UnderlineNav-item js-responsive-underlinenav-item js-selected-navigation-item' href='/hboon'>Overview />
+[16] (444,158)<a class='UnderlineNav-item js-responsive-underlinenav-item js-selected-navigation-item selected' href='/hboon?tab=repositories'>Repositories />
+	[17] (479,158)<span >237 />
+[18] (529,158)<a class='UnderlineNav-item js-responsive-underlinenav-item js-selected-navigation-item' href='/hboon?tab=projects'>Projects />
+[19] (594,158)<a class='UnderlineNav-item js-responsive-underlinenav-item js-selected-navigation-item' href='/hboon?tab=packages'>Packages />
+[20] (665,158)<a class='UnderlineNav-item js-responsive-underlinenav-item js-selected-navigation-item' href='/hboon?tab=stars'>Stars />
+	[21] (685,158)<span >1.1k />
+[22] (750,158)<a class='UnderlineNav-item js-responsive-underlinenav-item js-selected-navigation-item' href='/hboon?tab=sponsoring' />
+	[23] (749,158)<span >Sponsoring />
+	[24] (783,158)<span >1 />
+hboon
+Follow
+[25] (204,344)<a class='d-block' href='https://avatars.githubusercontent.com/u/56189?v=4' />
+	[26] (204,344)<img  />
+✨
+Hwee-Boon Yar
+hboon
+[27] (204,674)<a class='btn btn-block' href='/login?return_to=https%3A%2F%2Fgithub.com%2Fhboon%3Ftab%3Drepositories'>Follow />
+Indie developer
+[28] (143,782)<a class='Link--secondary no-underline no-wrap' href='https://github.com/hboon?tab=followers'>followers />
+	[29] (129,782)<span >154 />
+·
+[30] (205,782)<a class='Link--secondary no-underline no-wrap' href='https://github.com/hboon?tab=following'>following />
+	[31] (186,782)<span >38 />
+Indie developer
+Singapore
+[32] (175,913)<a class='Link--primary wb-break-all' href='https://hboon.com/about'>https://hboon.com/about />
+[33] (142,951)<a class='Link--primary wb-break-all' href='https://twitter.com/hboon'>@hboon />
+[34] (178,989)<a class='Link--primary wb-break-all' href='https://mastodon.social/@hboon'>@hboon@mastodon.social />
+[35] (509,233)<input aria-label='Find a repository…' class='form-control width-full focus-visible' id='your-repos-filter' placeholder='Find a repository…' />
+[36] (735,233)<details class='details-reset details-overlay position-relative mt-1 mt-lg-0' id='type-options' />
+	[37] (735,233)<summary class='btn' role='button' />
+		[38] (730,233)<span >Type />
+		[39] (747,236)<span  />
+[40] (801,233)<details class='details-reset details-overlay position-relative mt-1 mt-lg-0' id='language-options' />
+	[41] (801,233)<summary class='btn' role='button' />
+		[42] (796,233)<span >Language />
+		[43] (824,236)<span  />
+[44] (867,233)<details class='details-reset details-overlay position-relative mt-1 mt-lg-0' id='sort-options' />
+	[45] (867,233)<summary class='btn' role='button' />
+		[46] (862,233)<span >Sort />
+		[47] (878,236)<span  />
+0
+results
+        for
+        repositories
+          matching
+naut
+sorted by
+last updated
+[48] (863,313)<a class='issues-reset-query text-normal d-inline-block tmp-ml-3' href='/hboon?tab=repositories'>Clear filter />
+hboon doesn’t have any repositories that match.
+
+</current_dom>

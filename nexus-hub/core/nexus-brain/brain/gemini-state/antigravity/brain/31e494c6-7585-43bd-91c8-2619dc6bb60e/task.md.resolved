@@ -1,0 +1,15 @@
+# Tasks
+
+- [ ] Create implementation plan for replacing deprecated `withOpacity` [/]
+- [ ] Replace `withOpacity` in [main.dart](file:///c:/projects/claude+antigravity/projects/car_dash/lib/main.dart) [ ]
+- [ ] Replace `withOpacity` in other files [ ]
+  - [ ] `presentation/widgets/vertical_info_bar.dart` [ ]
+  - [ ] `presentation/widgets/gauge_mini_settings.dart` [ ]
+  - [ ] `presentation/widgets/gauge_layout_wrapper.dart` [ ]
+  - [ ] `presentation/widgets/futuristic_gauge.dart` [ ]
+  - [ ] `presentation/widgets/digital_gauge.dart` [ ]
+  - [ ] `presentation/screens/settings_screen.dart` [ ]
+  - [ ] `presentation/painters/vertical_bar_gauge_painter.dart` [ ]
+  - [ ] `presentation/painters/speed_particles_painter.dart` [ ]
+  - [ ] `presentation/painters/speedometer_painter.dart` [ ]
+- [ ] Verify changes [ ]

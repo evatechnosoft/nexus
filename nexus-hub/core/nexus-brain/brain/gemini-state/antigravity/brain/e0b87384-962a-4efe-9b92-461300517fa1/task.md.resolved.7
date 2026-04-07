@@ -1,0 +1,9 @@
+# API & Database Subdomain Setup
+
+- [ ] Identify the exact ports of the running PostgreSQL and/or Adminer containers in CasaOS
+- [ ] Write a modern, sample RESTful API structure in [src/app.py](file:///c:/projects/github/casaos-home-server/flask-app/src/app.py) connecting (or ready to connect) to PostgreSQL
+- [ ] Update [requirements.txt](file:///c:/projects/github/casaos-home-server/flask-app/requirements.txt) to include PostgreSQL drivers (`psycopg2-binary`, `SQLAlchemy`, etc.)
+- [ ] Implement a sample API endpoint (e.g. `GET /api/status` or `GET /api/users`)
+- [ ] Create a strategy for the `db.evaitec.com.tr` subdomain (e.g., pointing it to Adminer for secure web-based DB management)
+- [ ] Restart the `dev` container to apply changes
+- [ ] Provide the user with the exact Cloudflare routing instructions for `api` and `db`

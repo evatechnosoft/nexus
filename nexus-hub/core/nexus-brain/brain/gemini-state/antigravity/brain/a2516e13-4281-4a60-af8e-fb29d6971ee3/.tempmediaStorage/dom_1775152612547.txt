@@ -1,0 +1,264 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (15,24)<ha-svg-icon  />
+Home Assistant
+[1] (69,73)<ha-md-list-item  />
+	[2] (15,73)<ha-svg-icon  />
+	[3] (80,73)<span >Ana Ekran />
+[4] (69,115)<ha-md-list-item class='  ' />
+	[5] (15,115)<ha-svg-icon  />
+	[6] (80,115)<span >Harita />
+[7] (69,157)<ha-md-list-item class='  ' />
+	[8] (15,157)<ha-svg-icon  />
+	[9] (80,157)<span >Enerji />
+[10] (69,198)<ha-md-list-item class='  ' />
+	[11] (15,198)<ha-svg-icon  />
+	[12] (80,198)<span >Günlük />
+[13] (69,240)<ha-md-list-item class='  ' />
+	[14] (15,240)<ha-svg-icon  />
+	[15] (80,240)<span >Geçmiş />
+[16] (69,282)<ha-md-list-item class='  ' />
+	[17] (15,282)<ha-icon  />
+		[18] (15,282)<ha-svg-icon  />
+	[19] (80,282)<span >HACS />
+[20] (69,323)<ha-md-list-item class='  ' />
+	[21] (15,323)<ha-svg-icon  />
+	[22] (80,323)<span >Medya />
+[23] (69,365)<ha-md-list-item class='  ' />
+	[24] (15,365)<ha-svg-icon  />
+	[25] (80,365)<span >Yapılacaklar listeleri />
+[26] (69,819)<ha-md-list-item class='  ' />
+	[27] (15,819)<ha-svg-icon  />
+	[28] (80,819)<span >Geliştirici araçları />
+[29] (69,861)<ha-md-list-item class='configuration selected' href='/config' />
+	[30] (15,861)<ha-svg-icon  />
+	[31] (80,861)<span >Ayarlar />
+[32] (69,927)<ha-md-list-item class='notifications' />
+	[33] (15,927)<ha-svg-icon  />
+	[34] (80,927)<span >Bildirimler />
+[35] (69,969)<ha-md-list-item class='user ' href='/profile' />
+	[36] (15,969)<ha-user-badge  />
+		[37] (15,969)<div >D />
+	[38] (80,969)<span >Dean />
+[39] (157,24)<a href='/config' />
+	[40] (157,24)<ha-icon-button-arrow-prev  />
+		[41] (157,24)<ha-icon-button  />
+			[42] (157,24)<mwc-icon-button  />
+				[43] (157,24)<ha-svg-icon  />
+[44] (471,24)<a href='/config/integrations' />
+	[45] (471,24)<ha-tab  />
+		[46] (471,24)<div aria-label='Entegrasyonlar' role='tab' />
+			[47] (471,24)<span >Entegrasyonlar />
+[48] (544,24)<a href='/config/devices' />
+	[49] (544,24)<ha-tab  />
+		[50] (544,24)<div aria-label='Cihazlar' role='tab' />
+			[51] (544,23)<span >Cihazlar />
+[52] (606,24)<a href='/config/entities' />
+	[53] (606,24)<ha-tab  />
+		[54] (606,24)<div aria-label='Varlıklar' role='tab' />
+			[55] (606,24)<span >Varlıklar />
+[56] (673,24)<a href='/config/helpers' />
+	[57] (673,24)<ha-tab  />
+		[58] (673,24)<div aria-label='Yardımcılar' role='tab' />
+			[59] (673,24)<span >Yardımcılar />
+[60] (296,122)<div class='mdc-data-table__header-cell  sortable ' role='columnheader' title='Cihaz' />
+	[61] (185,121)<ha-svg-icon  />
+	[62] (202,122)<span >Cihaz />
+[63] (485,122)<div class='mdc-data-table__header-cell  sortable not-sorted ' role='columnheader' title='Alan' />
+	[64] (434,122)<span >Alan />
+[65] (616,122)<div class='mdc-data-table__header-cell  sortable not-sorted ' role='columnheader' title='Entegrasyon' />
+	[66] (577,122)<span >Entegrasyon />
+[67] (748,122)<div class='mdc-data-table__header-cell  sortable not-sorted ' role='columnheader' title='Üretici' />
+	[68] (700,122)<span >Üretici />
+[69] (880,122)<div class='mdc-data-table__header-cell  sortable not-sorted ' role='columnheader' title='Model' />
+	[70] (832,122)<span >Model />
+[71] (973,122)<div class='mdc-data-table__header-cell  mdc-data-table__header-cell--numeric sortable not-sorted ' role='columnheader' title='Pil' />
+	[72] (988,122)<span >Pil />
+[73] (569,573)<lit-virtualizer class='mdc-data-table__content scroller ha-scrollbar' scrollable='true' />
+	[74] (566,173)<div class='mdc-data-table__row  clickable ' role='row' />
+		[75] (155,173)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell' />
+			[76] (157,171)<img  />
+		[77] (295,173)<div class='mdc-data-table__cell   ' role='rowheader'>43" Monitor />
+		[78] (482,173)<div class='mdc-data-table__cell   ' role='cell'>MyRoom />
+		[79] (613,173)<div class='mdc-data-table__cell   ' role='cell'>Samsung Smart TV, DLNA Digital Media Renderer />
+		[80] (744,173)<div class='mdc-data-table__cell   ' role='cell'>Samsung />
+		[81] (875,173)<div class='mdc-data-table__cell   ' role='cell'>LS43BM700UPXUF />
+		[82] (967,173)<div class='mdc-data-table__cell  mdc-data-table__cell--numeric ' role='cell'>— />
+	[83] (566,225)<div class='mdc-data-table__row  clickable ' role='row' />
+		[84] (155,225)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell' />
+			[85] (157,224)<img  />
+		[86] (295,225)<div class='mdc-data-table__cell   ' role='rowheader'>Back light />
+		[87] (482,225)<div class='mdc-data-table__cell   ' role='cell'>MyRoom />
+		[88] (613,225)<div class='mdc-data-table__cell   ' role='cell'>Tuya />
+		[89] (744,225)<div class='mdc-data-table__cell   ' role='cell'>Tuya />
+		[90] (875,225)<div class='mdc-data-table__cell   ' role='cell'>Fonri - Smart Plug />
+		[91] (967,225)<div class='mdc-data-table__cell  mdc-data-table__cell--numeric ' role='cell'>— />
+	[92] (566,277)<div class='mdc-data-table__row  clickable ' role='row' />
+		[93] (155,278)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell' />
+			[94] (157,276)<img  />
+		[95] (295,278)<div class='mdc-data-table__cell   ' role='rowheader'>Backup />
+		[96] (482,278)<div class='mdc-data-table__cell   ' role='cell'>— />
+		[97] (613,278)<div class='mdc-data-table__cell   ' role='cell'>Backup />
+		[98] (744,278)<div class='mdc-data-table__cell   ' role='cell'>Home Assistant />
+		[99] (875,278)<div class='mdc-data-table__cell   ' role='cell'>Home Assistant Backup />
+		[100] (967,278)<div class='mdc-data-table__cell  mdc-data-table__cell--numeric ' role='cell'>— />
+	[101] (566,329)<div class='mdc-data-table__row  clickable ' role='row' />
+		[102] (155,330)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell' />
+			[103] (157,328)<img  />
+		[104] (295,330)<div class='mdc-data-table__cell   ' role='rowheader'>BY-011e61b68cd0 2D10 />
+		[105] (482,330)<div class='mdc-data-table__cell   ' role='cell'>— />
+		[106] (613,330)<div class='mdc-data-table__cell   ' role='cell'>iBeacon Tracker />
+		[107] (744,330)<div class='mdc-data-table__cell   ' role='cell'><bilinmeyen> />
+		[108] (875,330)<div class='mdc-data-table__cell   ' role='cell'><bilinmeyen> />
+		[109] (967,330)<div class='mdc-data-table__cell  mdc-data-table__cell--numeric ' role='cell'>— />
+	[110] (566,382)<div class='mdc-data-table__row  clickable ' role='row' />
+		[111] (155,382)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell' />
+			[112] (157,380)<img  />
+		[113] (295,382)<div class='mdc-data-table__cell   ' role='rowheader'>BY-011e61b68cd0 3EAA />
+		[114] (482,382)<div class='mdc-data-table__cell   ' role='cell'>— />
+		[115] (613,382)<div class='mdc-data-table__cell   ' role='cell'>iBeacon Tracker />
+		[116] (744,382)<div class='mdc-data-table__cell   ' role='cell'><bilinmeyen> />
+		[117] (875,382)<div class='mdc-data-table__cell   ' role='cell'><bilinmeyen> />
+		[118] (967,382)<div class='mdc-data-table__cell  mdc-data-table__cell--numeric ' role='cell'>— />
+	[119] (566,434)<div class='mdc-data-table__row  clickable ' role='row' />
+		[120] (155,434)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell' />
+			[121] (157,433)<img  />
+		[122] (295,434)<div class='mdc-data-table__cell   ' role='rowheader'>BY-011e61b68cd0 7ADC />
+		[123] (482,434)<div class='mdc-data-table__cell   ' role='cell'>— />
+		[124] (613,434)<div class='mdc-data-table__cell   ' role='cell'>iBeacon Tracker />
+		[125] (744,434)<div class='mdc-data-table__cell   ' role='cell'><bilinmeyen> />
+		[126] (875,434)<div class='mdc-data-table__cell   ' role='cell'><bilinmeyen> />
+		[127] (967,434)<div class='mdc-data-table__cell  mdc-data-table__cell--numeric ' role='cell'>— />
+	[128] (566,486)<div class='mdc-data-table__row  clickable ' role='row' />
+		[129] (155,486)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell' />
+			[130] (157,485)<img  />
+		[131] (295,486)<div class='mdc-data-table__cell   ' role='rowheader'>BY-011e61b68cd0 959B />
+		[132] (482,486)<div class='mdc-data-table__cell   ' role='cell'>— />
+		[133] (613,486)<div class='mdc-data-table__cell   ' role='cell'>iBeacon Tracker />
+		[134] (744,486)<div class='mdc-data-table__cell   ' role='cell'><bilinmeyen> />
+		[135] (875,486)<div class='mdc-data-table__cell   ' role='cell'><bilinmeyen> />
+		[136] (967,486)<div class='mdc-data-table__cell  mdc-data-table__cell--numeric ' role='cell'>— />
+	[137] (566,538)<div class='mdc-data-table__row  clickable ' role='row' />
+		[138] (155,538)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell' />
+			[139] (157,537)<img  />
+		[140] (295,538)<div class='mdc-data-table__cell   ' role='rowheader'>Computer />
+		[141] (482,538)<div class='mdc-data-table__cell   ' role='cell'>MyRoom />
+		[142] (613,538)<div class='mdc-data-table__cell   ' role='cell'>Tuya />
+		[143] (744,538)<div class='mdc-data-table__cell   ' role='cell'>Tuya />
+		[144] (875,538)<div class='mdc-data-table__cell   ' role='cell'>Fonri - Smart Plug />
+		[145] (967,538)<div class='mdc-data-table__cell  mdc-data-table__cell--numeric ' role='cell'>— />
+	[146] (566,590)<div class='mdc-data-table__row  clickable ' role='row' />
+		[147] (155,591)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell' />
+			[148] (157,589)<img  />
+		[149] (295,591)<div class='mdc-data-table__cell   ' role='rowheader'>ev charger />
+		[150] (482,591)<div class='mdc-data-table__cell   ' role='cell'>MyRoom />
+		[151] (613,591)<div class='mdc-data-table__cell   ' role='cell'>Tuya />
+		[152] (744,591)<div class='mdc-data-table__cell   ' role='cell'>Tuya />
+		[153] (875,591)<div class='mdc-data-table__cell   ' role='cell'>Fonri - Smart Plug />
+		[154] (967,591)<div class='mdc-data-table__cell  mdc-data-table__cell--numeric ' role='cell'>— />
+	[155] (566,642)<div class='mdc-data-table__row  clickable ' role='row' />
+		[156] (155,643)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell' />
+			[157] (157,641)<img  />
+		[158] (295,643)<div class='mdc-data-table__cell   ' role='rowheader'>Forecast />
+		[159] (482,643)<div class='mdc-data-table__cell   ' role='cell'>— />
+		[160] (613,643)<div class='mdc-data-table__cell   ' role='cell'>Meteorologisk institutt (Met.no) />
+		[161] (744,643)<div class='mdc-data-table__cell   ' role='cell'>Met.no />
+		[162] (875,643)<div class='mdc-data-table__cell   ' role='cell'>Forecast />
+		[163] (967,643)<div class='mdc-data-table__cell  mdc-data-table__cell--numeric ' role='cell'>— />
+	[164] (566,695)<div class='mdc-data-table__row  clickable ' role='row' />
+		[165] (155,695)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell' />
+			[166] (157,693)<img  />
+		[167] (295,695)<div class='mdc-data-table__cell   ' role='rowheader'>Galaxy Watch6 Classic (2WCT) />
+		[168] (482,695)<div class='mdc-data-table__cell   ' role='cell'>— />
+		[169] (613,695)<div class='mdc-data-table__cell   ' role='cell'>Mobil uygulama />
+		[170] (744,695)<div class='mdc-data-table__cell   ' role='cell'>samsung />
+		[171] (875,695)<div class='mdc-data-table__cell   ' role='cell'>SM-R960 />
+		[172] (967,695)<div class='mdc-data-table__cell  mdc-data-table__cell--numeric ' role='cell'>100% />
+			[173] (979,694)<ha-battery-icon  />
+				[174] (979,694)<ha-icon  />
+					[175] (979,695)<ha-svg-icon  />
+	[176] (566,747)<div class='mdc-data-table__row  clickable ' role='row' />
+		[177] (155,747)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell' />
+			[178] (157,746)<img  />
+		[179] (295,747)<div class='mdc-data-table__cell   ' role='rowheader'>HACS />
+		[180] (482,747)<div class='mdc-data-table__cell   ' role='cell'>— />
+		[181] (613,747)<div class='mdc-data-table__cell   ' role='cell'>HACS />
+		[182] (744,747)<div class='mdc-data-table__cell   ' role='cell'>hacs.xyz />
+		[183] (875,747)<div class='mdc-data-table__cell   ' role='cell'><bilinmeyen> />
+		[184] (967,747)<div class='mdc-data-table__cell  mdc-data-table__cell--numeric ' role='cell'>— />
+	[185] (566,799)<div class='mdc-data-table__row  clickable ' role='row' />
+		[186] (155,799)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell' />
+			[187] (157,798)<img  />
+		[188] (295,799)<div class='mdc-data-table__cell   ' role='rowheader'>Modem-Huntercjx />
+		[189] (482,799)<div class='mdc-data-table__cell   ' role='cell'>MyRoom />
+		[190] (613,799)<div class='mdc-data-table__cell   ' role='cell'>UPnP/IGD />
+		[191] (744,799)<div class='mdc-data-table__cell   ' role='cell'>TEKNOTEL />
+		[192] (875,799)<div class='mdc-data-table__cell   ' role='cell'>CBW-383Z4 />
+		[193] (967,799)<div class='mdc-data-table__cell  mdc-data-table__cell--numeric ' role='cell'>— />
+	[194] (566,851)<div class='mdc-data-table__row  clickable ' role='row' />
+		[195] (155,851)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell' />
+			[196] (157,850)<img  />
+		[197] (295,851)<div class='mdc-data-table__cell   ' role='rowheader'>MyBoX />
+		[198] (482,851)<div class='mdc-data-table__cell   ' role='cell'>MyRoom />
+		[199] (613,851)<div class='mdc-data-table__cell   ' role='cell'>Google Cast />
+		[200] (744,851)<div class='mdc-data-table__cell   ' role='cell'>Xiaomi />
+		[201] (875,851)<div class='mdc-data-table__cell   ' role='cell'>MIBOX4 />
+		[202] (967,851)<div class='mdc-data-table__cell  mdc-data-table__cell--numeric ' role='cell'>— />
+	[203] (566,903)<div class='mdc-data-table__row  clickable ' role='row' />
+		[204] (155,904)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell' />
+			[205] (157,902)<img  />
+		[206] (295,904)<div class='mdc-data-table__cell   ' role='rowheader'>MyBoX />
+		[207] (482,904)<div class='mdc-data-table__cell   ' role='cell'>MyRoom />
+		[208] (613,904)<div class='mdc-data-table__cell   ' role='cell'>Android TV Remote />
+		[209] (744,904)<div class='mdc-data-table__cell   ' role='cell'>Xiaomi />
+		[210] (875,904)<div class='mdc-data-table__cell   ' role='cell'>MIBOX4 />
+		[211] (967,904)<div class='mdc-data-table__cell  mdc-data-table__cell--numeric ' role='cell'>— />
+	[212] (566,955)<div class='mdc-data-table__row  clickable ' role='row'>— />
+		[213] (155,956)<div class='mdc-data-table__cell  mdc-data-table__cell--icon ' role='cell' />
+			[214] (157,954)<img  />
+		[215] (295,956)<div class='mdc-data-table__cell   ' role='rowheader'>MyTV />
+		[216] (482,956)<div class='mdc-data-table__cell   ' role='cell'>MyRoom />
+		[217] (613,956)<div class='mdc-data-table__cell   ' role='cell'>LG webOS TV />
+		[218] (744,956)<div class='mdc-data-table__cell   ' role='cell'>LG />
+		[219] (875,956)<div class='mdc-data-table__cell   ' role='cell'>65A6500USWF />
+		—
+[220] (171,73)<ha-assist-chip  />
+	[221] (171,73)<div  />
+		[222] (171,73)<button class='primary action' id='button'>Filtreler />
+			Filtreler
+			[223] (171,73)<span  />
+[224] (213,73)<ha-assist-chip  />
+	[225] (213,73)<div  />
+		[226] (213,73)<button class='primary action' id='button' />
+			[227] (213,73)<span  />
+[228] (528,73)<ha-outlined-field  />
+	[229] (528,73)<div  />
+		[230] (528,73)<input class='input' placeholder='22  devices  arayın' />
+[231] (242,73)<ha-svg-icon class='prefix' />
+[232] (814,73)<ha-icon-button  />
+	[233] (814,73)<mwc-icon-button  />
+		[234] (814,73)<ha-svg-icon  />
+[235] (863,73)<ha-assist-chip  />
+	[236] (863,73)<div  />
+		[237] (863,73)<button class='primary action' id='button'>Gruplandır: />
+			Gruplandır:
+			[238] (863,73)<span  />
+	[239] (884,73)<ha-svg-icon  />
+[240] (933,73)<ha-assist-chip  />
+	[241] (933,73)<div  />
+		[242] (933,73)<button class='primary action' id='button'>Sırala:  Cihaz />
+			Sırala:  Cihaz
+			[243] (933,73)<span  />
+	[244] (955,73)<ha-svg-icon  />
+[245] (982,73)<ha-assist-chip  />
+	[246] (982,73)<div  />
+		[247] (982,73)<button class='primary action' id='button' />
+			[248] (982,73)<span  />
+[249] (981,24)<ha-svg-icon  />
+[250] (952,965)<button aria-label='Cihaz ekle' class='mdc-fab  mdc-fab--extended ' />
+	[251] (960,965)<span >Cihaz ekle />
+[252] (926,965)<ha-svg-icon  />
+
+</current_dom>

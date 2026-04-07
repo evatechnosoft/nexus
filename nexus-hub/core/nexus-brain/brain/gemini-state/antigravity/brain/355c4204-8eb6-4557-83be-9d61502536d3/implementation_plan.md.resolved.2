@@ -1,0 +1,37 @@
+# Fix Azure DevOps Deployment to Azure Web Service
+
+The user is unable to deploy to Azure Web Service from the DevOps repo. The investigation of [azure-pipelines-1.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-1.yml) and [azure-pipelines.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines.yml) revealed differing `azureSubscription` service connection IDs and potential configuration mismatches.
+
+## User Review Required
+
+> [!IMPORTANT]
+> Hata mesajındaki `/home/vsts/work/r1/a/` yolu, Azure DevOps'ta **Classic Release** (Pipelines > Releases sekmesi) kullandığınızı gösteriyor. 
+> 
+> Yaptığımız YAML değişiklikleri "Pipelines" sekmesindeki akışı düzeltir, ancak "Releases" sekmesindeki ayarları etkilemez.
+
+### Çözüm Seçenekleri:
+
+1. **Classic Release'i Düzeltmek:**
+   - Azure DevOps'ta **Pipelines > Releases** sekmesine gidin.
+   - Kullandığınız Release'i seçip **Edit** diyin.
+   - **Azure App Service Deploy** görevini (Task) açın.
+   - **Package or folder** kısmını şu şekilde güncelleyin: `$(System.DefaultWorkingDirectory)/**/*.zip`
+
+2. **YAML ile Devam Etmek (Önerilen):**
+   - Eğer her şeyi tek bir yerden (YAML'dan) yönetmek istiyorsanız, Classic Release'i iptal edip, sadece "Pipelines" sekmesinden [azure-pipelines-1.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-1.yml) dosyasının çalışmasını takip etmelisiniz.
+
+## Proposed Changes
+
+### CI/CD Pipeline Configuration
+
+#### [MODIFY] [azure-pipelines-1.yml](file:///c:/projects/Layers/LayersupCom_v2/azure-pipelines-1.yml)
+
+- `download` adımını açıkça belirtmiştik (deployment job bunu otomatik yapar), ancak path çakışmasını önlemek için `package` yolunu `$(Pipeline.Workspace)/drop/*.zip` olarak daha spesifik hale getirebiliriz.
+
+## Verification Plan
+
+### Manual Verification
+1. **Trigger Pipeline**: Run the pipeline manually in Azure DevOps on the `only-web` branch.
+2. **Check Logs**: Monitor the `Deploy` stage logs in Azure DevOps.
+3. **Verify Site**: If the deployment succeeds, verify that `https://layersupv2.azurewebsites.net` is live.
+4. **Confirm App Settings**: If it still fails, check the "Configuration" -> "General settings" in the Azure Portal for the Web App to ensure the "Stack settings" match Node 20.

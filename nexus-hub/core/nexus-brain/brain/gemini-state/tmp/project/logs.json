@@ -1,0 +1,9 @@
+[
+  {
+    "sessionId": "5a34d4a9-51b0-440c-a316-4a965c53d1ae",
+    "messageId": 0,
+    "type": "user",
+    "message": "Please fetch and summarize this Reddit post including ALL comments. Give me the full content of the post and the most upvoted comments: https://www.reddit.com/r/ClaudeAI/comments/1lpv7h9/found_a_magic_way_to_work_with_claude/",
+    "timestamp": "2026-03-20T08:02:50.648Z"
+  }
+]

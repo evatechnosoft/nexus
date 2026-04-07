@@ -1,0 +1,47 @@
+# SportApp Pro Güvenlik & Kritik Analiz Planı 🛡️🔍
+
+Geliştirme aşamasında "Premium" bir deneyim sunduk. Şimdi bu deneyimi "Kurumsal Seviye" güvenlik standartlarına taşıma zamanı.
+
+## Kullanıcı İncelemesi Gerekli
+
+> [!WARNING]
+> **Hata Sızıntısı:** Mevcut durumda backend hataları (`res.status(500).json({ error: err.message })`) doğrudan kullanıcıya iletiliyor. Bu, veritabanı yapınızın saldırganlar tarafından görülmesine neden olabilir.
+> **CORS Ayarları:** `origin: '*'` ayarı mobil için kolaylık sağlasa da, web tarafında `CSRF` risklerini artırır. Bunu belirli domainlere kısıtlamalıyız.
+
+## Önerilen Güvenlik İyileştirmeleri
+
+### 1. Backend Sertleştirme (Hardening)
+
+#### [MODIFY] [server.js](file:///c:/projects/SportApp/server.js)
+- **Rate Limiting:** `express-rate-limit` eklenerek brute-force saldırıları engellenecek.
+- **CORS Policy:** Güvenli bir `whitelist` yapısına geçilecek.
+- **Helmet:** CSP (Content Security Policy) ayarları Gemini API için optimize edilerek sıkılaştırılacak.
+
+#### [MODIFY] [routes/*.js](file:///c:/projects/SportApp/routes)
+- **Generic Errors:** Hata mesajları "Bir şeyler ters gitti" gibi genel ifadelere dönüştürülecek, loglar arka planda tutulacak.
+- **Input Sanitization:** `express-validator` ile gelen verilerin tipi ve uzunluğu kontrol edilecek.
+
+### 2. Mobil Güvenlik (Flutter)
+
+#### [MODIFY] [mobile_app/pubspec.yaml](file:///c:/projects/SportApp/mobile_app/pubspec.yaml)
+- `shared_preferences` yerine `flutter_secure_storage` paketi eklenecek.
+
+#### [MODIFY] [mobile_app/lib/services/gemini_service.dart](file:///c:/projects/SportApp/mobile_app/lib/services/gemini_service.dart)
+- Gemini API Key, telefonun "Secure Enclave" (iOS) veya "Keystore" (Android) gibi güvenli alanlarında şifreli saklanacak.
+
+### 3. Kritik Test Senaryoları
+- **SQLi Testi:** Parametreli sorguların (pg) sınır durumları test edilecek.
+- **Auth Bypass:** Token olmadan `/api/sync/pull` denemeleri yapılacak.
+- **Limit Testi:** Çok büyük resim (10MB+) yükleme denemeleri ve backend direnci ölçülecek.
+
+## Doğrulama Planı
+
+### Automated Security Scan
+- `npm audit` ve `snyk` (varsa) ile bağımlılık kontrolü.
+
+### Manuel Sızma Testi
+- Başka bir kullanıcının `userId`'si ile veri çekme denemesi yapılacak (Logic check).
+
+## Açık Sorular
+- **IP Kısıtlaması:** Admin veya kritik işlemler için belirli IP bloklarına kısıtlama getirelim mi?
+- **Log Yönetimi:** Hataları merkezi bir log sistemine (Sentry/Winston) mi aktaralım yoksa basit dosya logu yeterli mi?

@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_WALKTHROUGH",
+  "summary": "Detailed walkthrough of the IT Inventory V2 deployment to ZimaOS, including Cloudflare 522 fixes, Exchange email watcher configuration, and service port mapping.",
+  "updatedAt": "2026-03-24T17:08:06.509939400Z"
+}

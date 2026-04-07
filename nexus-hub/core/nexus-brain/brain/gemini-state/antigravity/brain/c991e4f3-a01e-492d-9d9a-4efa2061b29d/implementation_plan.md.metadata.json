@@ -1,0 +1,6 @@
+{
+  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary": "This plan outlines the fixes for the `mobile` project's state management inconsistencies, missing providers, and incorrect API client references. It aims to unify the architecture under the `Notifier` / `AsyncNotifier` pattern and resolve all compilation errors.",
+  "updatedAt": "2026-03-20T13:55:03.567432900Z",
+  "version": "1"
+}
