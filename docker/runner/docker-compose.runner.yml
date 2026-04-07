@@ -1,0 +1,24 @@
+# Self-hosted GitHub Actions runner on ZimaOS
+# Deploy: scp this file to /DATA/AppData/nexus-runner/
+# Start:  RUNNER_TOKEN=<token> docker compose -f docker-compose.runner.yml up -d
+# Token:  GitHub → evatechnosoft/nexus → Settings → Actions → Runners → New runner
+
+services:
+  github-runner:
+    image: myoung34/github-runner:latest
+    container_name: nexus-github-runner
+    restart: unless-stopped
+    environment:
+      REPO_URL: "https://github.com/evatechnosoft/nexus"
+      RUNNER_TOKEN: "${RUNNER_TOKEN}"
+      RUNNER_NAME: "zimaos-runner"
+      RUNNER_WORKDIR: "/runner/_work"
+      LABELS: "self-hosted,zimaos,linux"
+      RUNNER_GROUP: "Default"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /DATA/AppData/nexus:/DATA/AppData/nexus
+      - runner_work:/runner/_work
+
+volumes:
+  runner_work:

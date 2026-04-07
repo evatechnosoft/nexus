@@ -1,0 +1,80 @@
+name: CD — Integration Tests (test branch)
+
+on:
+  push:
+    branches: [test]
+
+jobs:
+  deploy-and-test:
+    runs-on: [self-hosted, zimaos]
+    environment: test
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy src to ZimaOS
+        run: |
+          cp nexus-hub/core/*.py /DATA/AppData/nexus/src/
+          cp nexus-hub/core/requirements.txt /DATA/AppData/nexus/
+
+      - name: Restart Nexus container
+        run: docker restart nexus-mcp
+
+      - name: Wait for health
+        run: |
+          for i in $(seq 1 20); do
+            STATUS=$(curl -sf http://127.0.0.1:8900/health \
+              | python3 -c "import sys,json; print(json.load(sys.stdin).get('status',''))" 2>/dev/null)
+            [ "$STATUS" = "ok" ] && echo "Healthy" && exit 0
+            echo "Attempt $i: waiting..."
+            sleep 3
+          done
+          echo "ERROR: Server did not become healthy" && exit 1
+
+      - name: Install test deps
+        run: pip3 install --break-system-packages pytest httpx --quiet
+
+      - name: Run integration tests (50 tests)
+        env:
+          NEXUS_BASE_URL: "http://192.168.1.186:8900"
+        run: |
+          pytest tests/ -v --tb=long \
+            --junitxml=/tmp/nexus-test-results.xml -x
+
+      - name: Write deploy info to memory
+        if: success()
+        run: |
+          curl -sf -X PUT http://127.0.0.1:8900/api/memory/last-deploy \
+            -H "Content-Type: application/json" \
+            -d "{\"content\": \"branch: test\ncommit: ${{ github.sha }}\ndeployed_at: $(date -u +%Y-%m-%dT%H:%M:%SZ)\nstatus: success\nenvironment: test\"}"
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: integration-test-${{ github.sha }}
+          path: /tmp/nexus-test-results.xml
+
+  backup-memory:
+    runs-on: [self-hosted, zimaos]
+    needs: deploy-and-test
+    if: success()
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.BACKUP_GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Sync memory and skills from ZimaOS
+        run: |
+          rsync -av /DATA/AppData/nexus/src/data/memory/ data/memory/ 2>/dev/null || true
+          rsync -av /DATA/AppData/nexus/src/data/skills/ data/skills/ \
+            --exclude="*.tmp" --max-size=500k 2>/dev/null || true
+
+      - name: Commit and push backup
+        run: |
+          git config user.email "nexus-bot@evatechnosoft"
+          git config user.name "Nexus CI Bot"
+          git add data/memory/ data/skills/
+          git diff --cached --quiet || \
+            git commit -m "backup(test): memory+skills [${GITHUB_SHA:0:8}] $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push origin test

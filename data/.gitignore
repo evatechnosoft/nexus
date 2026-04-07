@@ -1,0 +1,13 @@
+# Large index — rebuild with build-skill-index.py
+skill-index.json
+
+# Vector DB — rebuild with embed_local_skills.py
+chroma/
+*.sqlite3
+*.db
+
+# Temp
+*.tmp
+*.cache
+__pycache__/
+test_nexus_*/

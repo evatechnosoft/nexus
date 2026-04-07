@@ -1,0 +1,17 @@
+# Nexus MCP Server + Phase 2 Fetch/Embed Pipeline
+
+# Core
+fastapi
+uvicorn
+pydantic>=2.6
+
+# HTTP clients (Phase 2)
+httpx
+requests
+
+# Phase 2: Embeddings & Search
+fastembed
+Levenshtein
+
+# Phase 3: DDGS fetch (stable API, replaces HTML scraping)
+duckduckgo-search

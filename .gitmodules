@@ -1,3 +1,3 @@
-[submodule "projects/nexus/projects/nexus-sales"]
-	path = projects/nexus/projects/nexus-sales
+[submodule "projects/nexus-sales"]
+	path = projects/nexus-sales
 	url = https://github.com/evatechnosoft/nexus-sales.git
