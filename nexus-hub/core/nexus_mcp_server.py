@@ -213,13 +213,13 @@ async def health():
 async def reconcile_report(request: Request):
     """Receive nightly reconcile stats from Windows client."""
     data = await request.json()
-    metrics_state["reconcile_last_ts"]       = data.get("ts", int(time.time()))
-    metrics_state["reconcile_files_local"]   = data.get("files_local", 0)
-    metrics_state["reconcile_files_github"]  = data.get("files_github", 0)
-    metrics_state["reconcile_pushed"]        = data.get("pushed", 0)
-    metrics_state["reconcile_nexus_synced"]  = data.get("nexus_synced", 0)
-    metrics_state["reconcile_duration_s"]    = data.get("duration_s", 0.0)
-    metrics_state["reconcile_runs"]         += 1
+    metrics_state["reconcile_last_ts"] = data.get("ts", int(time.time()))
+    metrics_state["reconcile_files_local"] = data.get("files_local", 0)
+    metrics_state["reconcile_files_github"] = data.get("files_github", 0)
+    metrics_state["reconcile_pushed"] = data.get("pushed", 0)
+    metrics_state["reconcile_nexus_synced"] = data.get("nexus_synced", 0)
+    metrics_state["reconcile_duration_s"] = data.get("duration_s", 0.0)
+    metrics_state["reconcile_runs"] += 1
     # Persist run count so restarts don't lose history
     try:
         runs_file = DATA_DIR / "data" / "reconcile_runs.txt"
