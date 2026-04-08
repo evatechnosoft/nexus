@@ -34,9 +34,15 @@ jobs:
       - name: Install test deps
         run: pip3 install pytest httpx --quiet --user
 
+      - name: Warm up embedding model
+        run: |
+          curl -sf "http://192.168.1.186:8900/api/search/hybrid?q=warmup&top_k=1&use_vector=false" || true
+          sleep 3
+
       - name: Run integration tests (50 tests)
         env:
           NEXUS_BASE_URL: "http://192.168.1.186:8900"
+          NEXUS_TIMEOUT: "60.0"
         run: |
           python3 -m pytest tests/ -v --tb=long \
             --junitxml=/tmp/nexus-test-results.xml -x
