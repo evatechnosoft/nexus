@@ -108,7 +108,10 @@ VAULT_DIR = DATA_DIR / "data" / "vault"
 _VAULT_TOKEN_ENV = os.environ.get("NEXUS_VAULT_TOKEN", "")
 if not _VAULT_TOKEN_ENV:
     _VAULT_TOKEN_ENV = secrets.token_hex(32)
-    print(f"[nexus-vault] No NEXUS_VAULT_TOKEN set — generated ephemeral token: {_VAULT_TOKEN_ENV}", flush=True)
+    print(
+        f"[nexus-vault] No NEXUS_VAULT_TOKEN set — generated ephemeral token: {_VAULT_TOKEN_ENV}",
+        flush=True,
+    )
 VAULT_TOKEN: str = _VAULT_TOKEN_ENV
 
 # Ensure directories exist
@@ -788,11 +791,13 @@ async def vault_list(request: Request):
         if f.is_file() and f.suffix == ".json":
             try:
                 meta = json.loads(f.read_text(encoding="utf-8"))
-                keys.append({
-                    "key": f.stem,
-                    "updated": meta.get("updated", 0),
-                    "tags": meta.get("tags", []),
-                })
+                keys.append(
+                    {
+                        "key": f.stem,
+                        "updated": meta.get("updated", 0),
+                        "tags": meta.get("tags", []),
+                    }
+                )
             except Exception:
                 keys.append({"key": f.stem, "updated": 0, "tags": []})
     return {"total": len(keys), "keys": keys}
@@ -828,12 +833,15 @@ async def vault_put(key: str, request: Request):
     metrics_state["vault_writes"] += 1
     VAULT_DIR.mkdir(parents=True, exist_ok=True)
     vault_file.write_text(
-        json.dumps({
-            "key": key,
-            "value": body["value"],
-            "tags": body.get("tags", []),
-            "updated": time.time(),
-        }, ensure_ascii=False),
+        json.dumps(
+            {
+                "key": key,
+                "value": body["value"],
+                "tags": body.get("tags", []),
+                "updated": time.time(),
+            },
+            ensure_ascii=False,
+        ),
         encoding="utf-8",
     )
     return {"status": "ok", "key": key}
@@ -1090,7 +1098,10 @@ async def mcp_endpoint(request: Request):
                         "inputSchema": {
                             "type": "object",
                             "properties": {
-                                "key": {"type": "string", "description": "Vault key (e.g. 'dockerhub-token')"},
+                                "key": {
+                                    "type": "string",
+                                    "description": "Vault key (e.g. 'dockerhub-token')",
+                                },
                             },
                             "required": ["key"],
                         },
@@ -1278,12 +1289,15 @@ async def mcp_endpoint(request: Request):
             VAULT_DIR.mkdir(parents=True, exist_ok=True)
             vault_file = VAULT_DIR / f"{vault_key}.json"
             vault_file.write_text(
-                json.dumps({
-                    "key": vault_key,
-                    "value": vault_value,
-                    "tags": vault_tags,
-                    "updated": time.time(),
-                }, ensure_ascii=False),
+                json.dumps(
+                    {
+                        "key": vault_key,
+                        "value": vault_value,
+                        "tags": vault_tags,
+                        "updated": time.time(),
+                    },
+                    ensure_ascii=False,
+                ),
                 encoding="utf-8",
             )
             return {
