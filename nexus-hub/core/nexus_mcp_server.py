@@ -8,13 +8,16 @@ Endpoints:
   /api/memory/index — memory file list
   /api/memory/{key} — memory content (read/write)
   /api/capabilities — model capabilities map
+  /api/vault/{key} — secret vault (LAN-only, bearer auth)
   /mcp — MCP protocol endpoint
 """
 
 import asyncio
+import hmac
 import json
 import os
 import re
+import secrets
 import sys
 import time
 import uuid
@@ -98,10 +101,23 @@ DATA_DIR = Path(os.environ.get("NEXUS_DATA_DIR", "/app"))
 SKILLS_INDEX_PATH = DATA_DIR / "data" / "skill-index.json"
 MEMORY_DIR = DATA_DIR / "data" / "memory"
 SKILLS_CONTENT_DIR = DATA_DIR / "data" / "skills"
+VAULT_DIR = DATA_DIR / "data" / "vault"
+
+# Vault token — set via NEXUS_VAULT_TOKEN env var.
+# If unset, a random token is generated at startup (shown in logs once, then inaccessible).
+_VAULT_TOKEN_ENV = os.environ.get("NEXUS_VAULT_TOKEN", "")
+if not _VAULT_TOKEN_ENV:
+    _VAULT_TOKEN_ENV = secrets.token_hex(32)
+    print(
+        f"[nexus-vault] No NEXUS_VAULT_TOKEN set — generated ephemeral token: {_VAULT_TOKEN_ENV}",
+        flush=True,
+    )
+VAULT_TOKEN: str = _VAULT_TOKEN_ENV
 
 # Ensure directories exist
 MEMORY_DIR.mkdir(parents=True, exist_ok=True)
 SKILLS_CONTENT_DIR.mkdir(parents=True, exist_ok=True)
+VAULT_DIR.mkdir(parents=True, exist_ok=True)
 (DATA_DIR / "data").mkdir(parents=True, exist_ok=True)
 
 # Metrics state
@@ -128,6 +144,17 @@ metrics_state = {
     "reconcile_nexus_synced": 0,
     "reconcile_duration_s": 0.0,
     "reconcile_runs": 0,
+    # Phase 4: Autodream (nightly pattern analysis)
+    "dream_last_ts": 0,
+    "dream_runs": 0,
+    "dream_patterns_detected": 0,
+    "dream_promotions_suggested": 0,
+    "dream_memories_analyzed": 0,
+    "dream_duration_s": 0.0,
+    # Phase 5: Vault (secret storage)
+    "vault_reads": 0,
+    "vault_writes": 0,
+    "vault_auth_failures": 0,
 }
 
 # Load persisted reconcile run count
@@ -135,6 +162,14 @@ try:
     _runs_file = DATA_DIR / "data" / "reconcile_runs.txt"
     if _runs_file.exists():
         metrics_state["reconcile_runs"] = int(_runs_file.read_text())
+except Exception:
+    pass
+
+# Load persisted dream run count
+try:
+    _dream_runs_file = DATA_DIR / "data" / "dream_runs.txt"
+    if _dream_runs_file.exists():
+        metrics_state["dream_runs"] = int(_dream_runs_file.read_text())
 except Exception:
     pass
 
@@ -195,7 +230,7 @@ async def metrics_middleware(request: Request, call_next):
 
 @app.get("/")
 async def root():
-    return {"status": "Nexus MCP Server running", "version": "2.0.0"}
+    return {"status": "Nexus MCP Server running", "version": "3.0.0"}
 
 
 @app.get("/health")
@@ -204,8 +239,8 @@ async def health():
     return {
         "status": "ok",
         "uptime_seconds": uptime,
-        "version": "2.0.0",
-        "features": ["skills", "memory", "capabilities"],
+        "version": "3.0.0",
+        "features": ["skills", "memory", "capabilities", "vault"],
     }
 
 
@@ -231,6 +266,28 @@ async def reconcile_report(request: Request):
     except Exception:
         pass
     return {"status": "ok", "run": metrics_state["reconcile_runs"]}
+
+
+@app.post("/api/dream/report")
+async def dream_report(request: Request):
+    """Receive nightly autodream stats from Windows client."""
+    data = await request.json()
+    metrics_state["dream_last_ts"] = data.get("ts", int(time.time()))
+    metrics_state["dream_patterns_detected"] = data.get("patterns_detected", 0)
+    metrics_state["dream_promotions_suggested"] = data.get("promotions_suggested", 0)
+    metrics_state["dream_memories_analyzed"] = data.get("memories_analyzed", 0)
+    metrics_state["dream_duration_s"] = data.get("duration_s", 0.0)
+    # Persist run count so restarts don't lose history
+    try:
+        dream_runs_file = DATA_DIR / "data" / "dream_runs.txt"
+        dream_runs_file.parent.mkdir(parents=True, exist_ok=True)
+        prev = int(dream_runs_file.read_text()) if dream_runs_file.exists() else 0
+        total = prev + 1
+        dream_runs_file.write_text(str(total))
+        metrics_state["dream_runs"] = total
+    except Exception:
+        metrics_state["dream_runs"] += 1
+    return {"status": "ok", "run": metrics_state["dream_runs"]}
 
 
 @app.get("/metrics")
@@ -306,6 +363,30 @@ nexus_reconcile_nexus_synced_total {metrics_state["reconcile_nexus_synced"]}
 # HELP nexus_reconcile_duration_seconds Duration of last reconcile in seconds
 # TYPE nexus_reconcile_duration_seconds gauge
 nexus_reconcile_duration_seconds {metrics_state["reconcile_duration_s"]:.1f}
+# HELP nexus_dream_last_timestamp Unix timestamp of last nightly autodream
+# TYPE nexus_dream_last_timestamp gauge
+nexus_dream_last_timestamp {metrics_state["dream_last_ts"]}
+# HELP nexus_dream_runs_total Total autodream runs since restart
+# TYPE nexus_dream_runs_total counter
+nexus_dream_runs_total {metrics_state["dream_runs"]}
+# HELP nexus_dream_patterns_detected Patterns detected in last autodream
+# TYPE nexus_dream_patterns_detected gauge
+nexus_dream_patterns_detected {metrics_state["dream_patterns_detected"]}
+# HELP nexus_dream_promotions_suggested Promotions suggested in last autodream
+# TYPE nexus_dream_promotions_suggested gauge
+nexus_dream_promotions_suggested {metrics_state["dream_promotions_suggested"]}
+# HELP nexus_dream_memories_analyzed Memories analyzed in last autodream
+# TYPE nexus_dream_memories_analyzed gauge
+nexus_dream_memories_analyzed {metrics_state["dream_memories_analyzed"]}
+# HELP nexus_vault_reads_total Total vault secret reads
+# TYPE nexus_vault_reads_total counter
+nexus_vault_reads_total {metrics_state["vault_reads"]}
+# HELP nexus_vault_writes_total Total vault secret writes
+# TYPE nexus_vault_writes_total counter
+nexus_vault_writes_total {metrics_state["vault_writes"]}
+# HELP nexus_vault_auth_failures_total Total vault auth failures
+# TYPE nexus_vault_auth_failures_total counter
+nexus_vault_auth_failures_total {metrics_state["vault_auth_failures"]}
 """)
 
 
@@ -677,6 +758,106 @@ async def memory_delete(key: str):
     return {"status": "ok", "key": key, "deleted": True}
 
 
+# --- Vault (Phase 5) ---
+
+_VAULT_KEY_RE = re.compile(r"^[a-zA-Z0-9_\-\.]{1,64}$")
+
+
+def _vault_authorize(request: Request) -> None:
+    """Check bearer token. Raise 401 on failure."""
+    auth = request.headers.get("Authorization", "")
+    token = auth.removeprefix("Bearer ").strip()
+    if not hmac.compare_digest(token, VAULT_TOKEN):
+        metrics_state["vault_auth_failures"] += 1
+        raise HTTPException(status_code=401, detail="Vault: invalid or missing token")
+
+
+def _vault_key_file(key: str) -> Path:
+    """Validate and return vault file path. Raise 400 on bad key."""
+    if not key or not _VAULT_KEY_RE.match(key):
+        raise HTTPException(
+            status_code=400,
+            detail=f"Invalid vault key: '{key}'. Use a-z, A-Z, 0-9, _, -, . (max 64 chars)",
+        )
+    return VAULT_DIR / f"{key}.json"
+
+
+@app.get("/api/vault/")
+async def vault_list(request: Request):
+    """List vault keys (no values). Requires bearer auth."""
+    _vault_authorize(request)
+    keys = []
+    for f in sorted(VAULT_DIR.iterdir()):
+        if f.is_file() and f.suffix == ".json":
+            try:
+                meta = json.loads(f.read_text(encoding="utf-8"))
+                keys.append(
+                    {
+                        "key": f.stem,
+                        "updated": meta.get("updated", 0),
+                        "tags": meta.get("tags", []),
+                    }
+                )
+            except Exception:
+                keys.append({"key": f.stem, "updated": 0, "tags": []})
+    return {"total": len(keys), "keys": keys}
+
+
+@app.get("/api/vault/{key}")
+async def vault_get(key: str, request: Request):
+    """Read a vault secret. Requires bearer auth."""
+    _vault_authorize(request)
+    vault_file = _vault_key_file(key)
+    if not vault_file.exists():
+        raise HTTPException(status_code=404, detail=f"Vault key '{key}' not found")
+    metrics_state["vault_reads"] += 1
+    meta = json.loads(vault_file.read_text(encoding="utf-8"))
+    return {"key": key, "value": meta["value"], "updated": meta.get("updated", 0)}
+
+
+@app.put("/api/vault/{key}")
+@app.post("/api/vault/{key}")
+async def vault_put(key: str, request: Request):
+    """Write a vault secret. Requires bearer auth.
+
+    Body: {"value": "secret-string", "tags": ["optional", "list"]}
+    """
+    _vault_authorize(request)
+    vault_file = _vault_key_file(key)
+    try:
+        body = await request.json()
+    except Exception:
+        raise HTTPException(status_code=400, detail="Invalid JSON body")
+    if "value" not in body:
+        raise HTTPException(status_code=400, detail="Missing 'value' field")
+    metrics_state["vault_writes"] += 1
+    VAULT_DIR.mkdir(parents=True, exist_ok=True)
+    vault_file.write_text(
+        json.dumps(
+            {
+                "key": key,
+                "value": body["value"],
+                "tags": body.get("tags", []),
+                "updated": time.time(),
+            },
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+    return {"status": "ok", "key": key}
+
+
+@app.delete("/api/vault/{key}")
+async def vault_delete(key: str, request: Request):
+    """Delete a vault secret. Requires bearer auth."""
+    _vault_authorize(request)
+    vault_file = _vault_key_file(key)
+    if not vault_file.exists():
+        raise HTTPException(status_code=404, detail=f"Vault key '{key}' not found")
+    vault_file.unlink()
+    return {"status": "ok", "key": key, "deleted": True}
+
+
 # --- Capabilities ---
 
 
@@ -911,6 +1092,37 @@ async def mcp_endpoint(request: Request):
                             },
                         },
                     },
+                    {
+                        "name": "nexus_vault_get",
+                        "description": "Read a secret from the Nexus vault",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {
+                                "key": {
+                                    "type": "string",
+                                    "description": "Vault key (e.g. 'dockerhub-token')",
+                                },
+                            },
+                            "required": ["key"],
+                        },
+                    },
+                    {
+                        "name": "nexus_vault_put",
+                        "description": "Write a secret to the Nexus vault",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {
+                                "key": {"type": "string", "description": "Vault key"},
+                                "value": {"type": "string", "description": "Secret value"},
+                                "tags": {
+                                    "type": "array",
+                                    "items": {"type": "string"},
+                                    "description": "Optional tags",
+                                },
+                            },
+                            "required": ["key", "value"],
+                        },
+                    },
                 ],
             },
         }
@@ -1033,6 +1245,65 @@ async def mcp_endpoint(request: Request):
                 "result": {
                     "content": [{"type": "text", "text": json.dumps(caps, ensure_ascii=False)}],
                 },
+            }
+
+        if tool_name == "nexus_vault_get":
+            vault_key = tool_args.get("key", "")
+            # Validate key
+            if not vault_key or not _VAULT_KEY_RE.match(vault_key):
+                return {
+                    "jsonrpc": "2.0",
+                    "id": body.get("id"),
+                    "error": {"code": -32602, "message": f"Invalid vault key: '{vault_key}'"},
+                }
+            vault_file = VAULT_DIR / f"{vault_key}.json"
+            if not vault_file.exists():
+                result_text = f"Vault key '{vault_key}' not found"
+            else:
+                metrics_state["vault_reads"] += 1
+                meta = json.loads(vault_file.read_text(encoding="utf-8"))
+                result_text = meta["value"]
+            return {
+                "jsonrpc": "2.0",
+                "id": body.get("id"),
+                "result": {"content": [{"type": "text", "text": result_text}]},
+            }
+
+        if tool_name == "nexus_vault_put":
+            vault_key = tool_args.get("key", "")
+            vault_value = tool_args.get("value", "")
+            vault_tags = tool_args.get("tags", [])
+            if not vault_key or not _VAULT_KEY_RE.match(vault_key):
+                return {
+                    "jsonrpc": "2.0",
+                    "id": body.get("id"),
+                    "error": {"code": -32602, "message": f"Invalid vault key: '{vault_key}'"},
+                }
+            if not vault_value:
+                return {
+                    "jsonrpc": "2.0",
+                    "id": body.get("id"),
+                    "error": {"code": -32602, "message": "Missing 'value'"},
+                }
+            metrics_state["vault_writes"] += 1
+            VAULT_DIR.mkdir(parents=True, exist_ok=True)
+            vault_file = VAULT_DIR / f"{vault_key}.json"
+            vault_file.write_text(
+                json.dumps(
+                    {
+                        "key": vault_key,
+                        "value": vault_value,
+                        "tags": vault_tags,
+                        "updated": time.time(),
+                    },
+                    ensure_ascii=False,
+                ),
+                encoding="utf-8",
+            )
+            return {
+                "jsonrpc": "2.0",
+                "id": body.get("id"),
+                "result": {"content": [{"type": "text", "text": f"Vault '{vault_key}' written"}]},
             }
 
     # Default response
