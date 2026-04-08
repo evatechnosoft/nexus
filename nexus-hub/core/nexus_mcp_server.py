@@ -13,7 +13,6 @@ Endpoints:
 """
 
 import asyncio
-import hashlib
 import hmac
 import json
 import os
