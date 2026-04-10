@@ -18,11 +18,18 @@ except ImportError:
     logging.basicConfig(level=logging.INFO)
     logger = logging.getLogger("nexus-doctor")
 
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
 class NexusDoctor:
     def __init__(self):
         self.issues = []
-        self.root_dir = Path(__file__).parent.parent.parent
-        self.nexus_hub_dir = Path(__file__).parent.parent
+        # Current file is in /scripts, so parent is project root
+        self.root_dir = Path(__file__).parent.parent
+        self.nexus_hub_dir = self.root_dir
 
     def check_python(self):
         logger.info("Checking Python environment...")
@@ -30,7 +37,7 @@ class NexusDoctor:
         logger.info(f"Platform: {platform.system()} {platform.release()}")
         
         # Check if running in Docker
-        is_docker = os.path.exists('/.dockerenv') or os.path.exists('/proc/1/cgroup') and 'docker' in open('/proc/1/cgroup').read()
+        is_docker = os.path.exists('/.dockerenv') or (os.path.exists('/proc/1/cgroup') and 'docker' in open('/proc/1/cgroup').read())
         if is_docker:
             logger.info("Running inside a Docker container. Venv check skipped.")
             return
@@ -50,15 +57,15 @@ class NexusDoctor:
         base = Path("/app") if is_docker else self.root_dir
 
         required_dirs = [
-            "nexus-hub/core" if not is_docker else ".",
-            "nexus-hub/scripts" if not is_docker else ".",
+            "core",
+            "scripts",
             "data/memory",
             "data/skills",
             "data/vault"
         ]
         
         for d in required_dirs:
-            p = base / d if d != "." else base
+            p = base / d
             if p.exists():
                 logger.debug(f"Found directory: {d}")
             else:
@@ -72,11 +79,11 @@ class NexusDoctor:
     def check_files(self):
         logger.info("Checking critical files...")
         required_files = [
-            "nexus-hub/core/nexus_mcp_server.py",
-            "nexus-hub/core/nexus_store.py",
-            "nexus-hub/core/nexus_logger.py",
-            "nexus-hub/core/nexus_schema.json",
-            "nexus-hub/core/.env.example"
+            "core/nexus_mcp_server.py",
+            "core/nexus_store.py",
+            "core/nexus_logger.py",
+            "core/nexus_schema.json",
+            "core/.env.example"
         ]
         
         for f in required_files:
@@ -107,14 +114,14 @@ class NexusDoctor:
         logger.info("Checking Nexus MCP Server status...")
         # Since we are likely on the same machine, we can check if it's reachable or if the process is running
         # This is a bit complex for a script, but we can try a simple ping if a URL is provided
-        url = os.getenv("NEXUS_HUB_URL", "http://localhost:8900")
+        url = os.getenv("NEXUS_HUB_URL", "http://192.168.1.186:8900")
         try:
             # We use subprocess to avoid adding another dependency like 'requests' if it's not there
             # But wait, we should assume basic python tools. Let's use urllib.
             from urllib import request
             with request.urlopen(url + "/health", timeout=2) as response:
                 if response.getcode() == 200:
-                    logger.info("Nexus MCP Server is UP and Healthy.")
+                    logger.info(f"Nexus MCP Server ({url}) is UP and Healthy.")
                 else:
                     logger.warning(f"Nexus MCP Server returned status {response.getcode()}")
         except Exception as e:

@@ -1,0 +1,35 @@
+name: CI — Lint + Unit Tests
+
+on:
+  push:
+    branches: [dev]
+  pull_request:
+    branches: [dev]
+
+jobs:
+  lint-and-test:
+    runs-on: [self-hosted, zimaos]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          submodules: recursive
+
+      - name: Set up Python
+        run: python3 --version
+
+      - name: Install dependencies
+        run: |
+          pip3 install -r {{SOURCE_DIR}}/requirements.txt --quiet --user
+          pip3 install ruff pytest pytest-asyncio httpx --quiet --user
+
+      - name: Lint
+        run: python3 -m ruff check {{SOURCE_DIR}}/{{MAIN_MODULE}}*.py tests/ --select E,F,W --ignore E501
+
+      - name: Unit tests
+        env:
+          {{DATA_DIR_ENV}}: /tmp/{{PROJECT_SLUG}}-test
+        run: |
+          mkdir -p /tmp/{{PROJECT_SLUG}}-test/data/memory /tmp/{{PROJECT_SLUG}}-test/data/skills
+          echo "# Mock profile" > /tmp/{{PROJECT_SLUG}}-test/data/memory/profile.md
+          PYTHONPATH={{SOURCE_DIR}} python3 -m pytest tests/ -v --tb=short -x

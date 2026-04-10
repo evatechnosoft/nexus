@@ -1,0 +1,77 @@
+name: CD — Integration Tests (test branch)
+
+on:
+  push:
+    branches: [test]
+
+jobs:
+  deploy-test:
+    runs-on: [self-hosted, zimaos]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          submodules: recursive
+
+      - name: Stop old container
+        run: docker stop {{PROJECT_SLUG}}-test 2>/dev/null || true
+
+      - name: Remove old container
+        run: docker rm {{PROJECT_SLUG}}-test 2>/dev/null || true
+
+      - name: Build image
+        run: docker build -t {{PROJECT_SLUG}}:test .
+
+      - name: Start container
+        run: |
+          docker run -d \
+            --name {{PROJECT_SLUG}}-test \
+            --restart unless-stopped \
+            -p {{TEST_PORT}}:{{CONTAINER_PORT}} \
+            -v /DATA/AppData/{{PROJECT_SLUG}}/data:/app/data \
+            -e {{DATA_DIR_ENV}}=/app/data \
+            {{PROJECT_SLUG}}:test
+
+      - name: Wait for health
+        run: |
+          for i in $(seq 1 20); do
+            STATUS=$(curl -sf http://{{ZIMAOS_IP}}:{{TEST_PORT}}/health 2>/dev/null | python3 -c \
+              "import sys,json; d=sys.stdin.read(); print(json.loads(d).get('status','') if d else '')" \
+              2>/dev/null) || true
+            if [ "$STATUS" = "ok" ]; then echo "Healthy after $i attempt(s)"; exit 0; fi
+            echo "Attempt $i: not ready, waiting 3s..."
+            sleep 3
+          done
+          echo "ERROR: Server not healthy after 60s" && exit 1
+
+      - name: Install test deps
+        run: pip3 install pytest httpx --quiet --user
+
+      - name: Run integration tests
+        env:
+          BASE_URL: "http://{{ZIMAOS_IP}}:{{TEST_PORT}}"
+        run: python3 -m pytest tests/ -v --tb=long --junitxml=/tmp/{{PROJECT_SLUG}}-test-results.xml -x
+
+  backup-memory:
+    needs: deploy-test
+    runs-on: ubuntu-latest
+    if: success()
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          token: ${{ secrets.BACKUP_GITHUB_TOKEN }}
+
+      - name: Copy live data
+        run: |
+          mkdir -p data/memory data/skills
+          # Data backed up from container after successful deploy
+
+      - name: Commit backup
+        run: |
+          git config user.email "nexus-bot@evatechnosoft"
+          git config user.name "Nexus CI Bot"
+          git add data/memory/ data/skills/ 2>/dev/null || true
+          git diff --cached --quiet || \
+            git commit -m "backup(test): memory+skills [${GITHUB_SHA:0:8}] $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push origin test
