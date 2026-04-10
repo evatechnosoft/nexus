@@ -43,6 +43,12 @@ jobs:
           python3 -m pytest tests/ -v --tb=long \
             --junitxml=/tmp/nexus-test-results.xml -x
 
+      - name: Run Nexus Doctor (Update Health Metrics)
+        if: success()
+        run: |
+          export NEXUS_HUB_URL=http://192.168.1.186:8900
+          python3 /DATA/AppData/nexus/src/nexus-hub/scripts/nexus-doctor.py
+
       - name: Write deploy info to memory
         if: success()
         run: |
