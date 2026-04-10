@@ -121,13 +121,35 @@ class NexusDoctor:
             logger.error(f"Could not connect to Nexus MCP Server at {url}: {e}")
             self.issues.append(f"Nexus MCP sunucusuna ({url}) erişilemiyor. Servisin çalıştığından emin olun.")
 
-    def run_all(self):
+    def report_to_server(self):
+        """Report issue count to Nexus metrics endpoint."""
+        url = os.getenv("NEXUS_HUB_URL", "http://localhost:8900")
+        try:
+            from urllib import request
+            import json
+            data = json.dumps({"issues_count": len(self.issues)}).encode("utf-8")
+            req = request.Request(
+                f"{url}/api/doctor/report",
+                data=data,
+                headers={"Content-Type": "application/json"},
+                method="POST"
+            )
+            with request.urlopen(req, timeout=2) as response:
+                if response.getcode() == 200:
+                    logger.info("Reported health status to Nexus server.")
+        except Exception as e:
+            logger.debug(f"Failed to report to server: {e}")
+
+    def run_all(self, report=True):
         logger.info("--- NEXUS DOCTOR STARTING ---")
         self.check_python()
         self.check_directories()
         self.check_files()
         self.check_env_vars()
         self.check_mcp_connection()
+        
+        if report:
+            self.report_to_server()
         
         print("\n" + "="*50)
         if not self.issues:

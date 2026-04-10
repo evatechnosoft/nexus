@@ -18,6 +18,7 @@ import json
 import os
 import re
 import secrets
+import shutil
 import sys
 import time
 import uuid
@@ -244,6 +245,15 @@ async def health():
     }
 
 
+@app.post("/api/doctor/report")
+async def doctor_report(request: Request):
+    """Receive health check report from Nexus Doctor."""
+    data = await request.json()
+    metrics_state["doctor_issues"] = data.get("issues_count", 0)
+    metrics_state["doctor_last_ts"] = int(time.time())
+    return {"status": "ok", "issues": metrics_state["doctor_issues"]}
+
+
 @app.post("/api/reconcile/report")
 async def reconcile_report(request: Request):
     """Receive nightly reconcile stats from Windows client."""
@@ -300,7 +310,23 @@ async def metrics():
     )
     error_rate = (metrics_state["errors"] / max(metrics_state["requests"], 1)) * 100
 
-    return PlainTextResponse(f"""# HELP nexus_uptime_seconds Server uptime in seconds
+    # Disk usage
+    try:
+        _, disk_used, _ = shutil.disk_usage(DATA_DIR)
+    except Exception:
+        disk_used = 0
+
+    # Category counts
+    index = load_skill_index()
+    category_counts = index.get("categories", {})
+    category_metrics = ""
+    for cat, count in category_counts.items():
+        category_metrics += (
+            f'nexus_skills_by_category_total{{category="{cat}"}} {count}\n'
+        )
+
+    return PlainTextResponse(
+        f"""# HELP nexus_uptime_seconds Server uptime in seconds
 # TYPE nexus_uptime_seconds gauge
 nexus_uptime_seconds {uptime_s}
 # HELP nexus_requests_total Total HTTP requests
@@ -315,6 +341,12 @@ nexus_request_error_rate_percent {error_rate:.2f}
 # HELP nexus_request_latency_ms Average request latency in ms
 # TYPE nexus_request_latency_ms gauge
 nexus_request_latency_ms {avg_latency:.2f}
+# HELP nexus_data_disk_usage_bytes Total disk usage of data directory in bytes
+# TYPE nexus_data_disk_usage_bytes gauge
+nexus_data_disk_usage_bytes {disk_used}
+# HELP nexus_skills_by_category_total Total skills by category
+# TYPE nexus_skills_by_category_total gauge
+{category_metrics}
 # HELP nexus_skill_loads_total Total skill load requests
 # TYPE nexus_skill_loads_total counter
 nexus_skill_loads_total {metrics_state["skill_loads"]}
@@ -387,7 +419,14 @@ nexus_vault_writes_total {metrics_state["vault_writes"]}
 # HELP nexus_vault_auth_failures_total Total vault auth failures
 # TYPE nexus_vault_auth_failures_total counter
 nexus_vault_auth_failures_total {metrics_state["vault_auth_failures"]}
-""")
+# HELP nexus_doctor_issues_total Total health issues detected by Nexus Doctor
+# TYPE nexus_doctor_issues_total gauge
+nexus_doctor_issues_total {metrics_state["doctor_issues"]}
+# HELP nexus_doctor_last_timestamp Unix timestamp of last doctor run
+# TYPE nexus_doctor_last_timestamp gauge
+nexus_doctor_last_timestamp {metrics_state["doctor_last_ts"]}
+"""
+    )
 
 
 # --- Helpers: Key sanitization ---
