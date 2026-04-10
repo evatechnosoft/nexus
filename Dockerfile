@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Python deps first (layer cache)
-COPY nexus-hub/core/requirements.txt .
+COPY nexus-hub/core/requirements.txt ./requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Pre-download FastEmbed model so image works offline
@@ -22,18 +22,14 @@ print('Downloading embedding model...'); \
 _ = TextEmbedding('BAAI/bge-small-en-v1.5'); \
 print('Model ready.')"
 
-# Copy server source
-COPY nexus-hub/core/nexus_mcp_server.py .
-COPY nexus-hub/core/nexus_embed.py .
-COPY nexus-hub/core/nexus_fetch.py .
-COPY nexus-hub/core/nexus_store.py .
-COPY nexus-hub/core/nexus_utils.py .
-COPY nexus-hub/core/build-skill-index.py .
-COPY nexus-hub/core/embed_local_skills.py .
+# Copy server source (All .py and .json in core)
+COPY nexus-hub/core/*.py .
+COPY nexus-hub/core/*.json .
+COPY nexus-hub/templates /app/templates
 
 # Data dirs
 ENV NEXUS_DATA_DIR=/app/data
-RUN mkdir -p /app/data/memory /app/data/skills
+RUN mkdir -p /app/data/memory /app/data/skills /app/data/vault /app/logs
 
 EXPOSE 8900
 

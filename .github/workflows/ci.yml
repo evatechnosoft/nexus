@@ -46,7 +46,7 @@ jobs:
 
       - name: Prepare mock data dir
         run: |
-          mkdir -p /tmp/nexus-test/data/memory /tmp/nexus-test/data/skills
+          mkdir -p /tmp/nexus-test/data/memory /tmp/nexus-test/data/skills /tmp/nexus-test/data/vault
           echo "# Mock profile" > /tmp/nexus-test/data/memory/profile.md
 
       - name: Start mock Nexus server

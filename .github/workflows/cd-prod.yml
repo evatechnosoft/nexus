@@ -24,7 +24,9 @@ jobs:
 
       - name: Deploy to production
         run: |
-          cp nexus-hub/core/*.py /DATA/AppData/nexus/src/
+          mkdir -p /DATA/AppData/nexus/src/templates
+          cp nexus-hub/core/* /DATA/AppData/nexus/src/
+          cp -r nexus-hub/templates/* /DATA/AppData/nexus/src/templates/
           cp nexus-hub/core/requirements.txt /DATA/AppData/nexus/
 
       - name: Restart container
