@@ -7,8 +7,8 @@ ENV="${1:-test}"
 ZIMAOS_USER="${ZIMAOS_USER:-dean}"
 ZIMAOS_HOST="${ZIMAOS_HOST:-192.168.1.186}"
 ZIMAOS_KEY="${HOME}/.ssh/zimaos_key"
-REMOTE_SRC="/DATA/AppData/nexus/src"
-LOCAL_SRC="nexus-hub/core"
+REMOTE_SRC="/DATA/AppData/nexus-hub"
+LOCAL_SRC="core"
 
 echo "[deploy] Target: ${ENV} @ ${ZIMAOS_HOST}"
 

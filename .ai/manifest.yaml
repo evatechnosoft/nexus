@@ -8,15 +8,15 @@ targets:
     enabled: true
     output: GEMINI.md
 distribution:
-  - source: data/memory/handoffs/handoff--nexus-hub--v3-final.md
+  - source: ../data/memory/handoffs/handoff--nexus-hub--v3-final.md
     targets: [claude, gemini]
-  - source: data/memory/rules/rule--nexus--master.md
+  - source: ../data/memory/rules/rule--nexus--master.md
     targets: [claude, gemini]
-  - source: data/memory/rules/rule--nexus--windows.md
+  - source: ../data/memory/rules/rule--nexus--windows.md
     targets: [claude, gemini]
-  - source: data/memory/rules/rule--nexus--vault.md
+  - source: ../data/memory/rules/rule--nexus--vault.md
     targets: [claude]
-  - source: data/memory/rules/rule--nexus--branching.md
+  - source: ../data/memory/rules/rule--nexus--branching.md
     targets: [claude, gemini]
-  - source: data/memory/rules/rule--nexus--cleanup.md
+  - source: ../data/memory/rules/rule--nexus--cleanup.md
     targets: [claude]

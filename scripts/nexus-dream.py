@@ -1,8 +1,8 @@
 """
-nexus-dream.py (v3.1) — TR Time + Context Alert Enabled
+nexus-dream.py (v3.2) — TR Time + TURN TRACKER + Context Alert
 Scans Nexus memory index, detects patterns, and alerts on context bloat.
 """
-import argparse, json, sys, time, re, urllib.request, urllib.error
+import argparse, json, sys, os, time, re, urllib.request, urllib.error
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 
@@ -10,12 +10,25 @@ from datetime import datetime, timezone, timedelta
 NEXUS_URL    = "http://192.168.1.186:8900"
 TR_TZ        = timezone(timedelta(hours=3))
 SYNC_DIR     = Path("data/memory/sync")
-CONTEXT_THRESHOLD = 0.8 # %80 doluluk uyarısı
+STATE_FILE   = Path(".nexus-session-state")
+TURN_LIMIT   = 5  # 5 soruda bir mola uyarısı
 
-_parser = argparse.ArgumentParser(description="Nexus autodream v3.1")
+_parser = argparse.ArgumentParser(description="Nexus autodream v3.2")
 _parser.add_argument("--light", action="store_true", help="Last 4 hours only")
+_parser.add_argument("--increment", action="store_true", help="Increment turn counter")
 _args = _parser.parse_args()
 LIGHT_MODE = _args.light
+
+def get_session_state():
+    if not STATE_FILE.exists():
+        return {"turns": 0, "start_time": datetime.now(TR_TZ).isoformat()}
+    try:
+        return json.loads(STATE_FILE.read_text())
+    except:
+        return {"turns": 0, "start_time": datetime.now(TR_TZ).isoformat()}
+
+def save_session_state(state):
+    STATE_FILE.write_text(json.dumps(state))
 
 def nexus_put(key: str, content: str, metadata: dict) -> bool:
     frontmatter = "---\n"
@@ -34,30 +47,38 @@ today = now_tr.strftime("%Y-%m-%d")
 hour = now_tr.strftime("%H")
 mode = "light" if LIGHT_MODE else "full"
 
-# Simüle edilmiş context kontrolü (Gerçek API'den çekilebilir)
-current_context_usage = 0.65 # Örnek: %65 dolu
+state = get_session_state()
+if _args.increment:
+    state["turns"] += 1
+    save_session_state(state)
 
-print(f"🚀 Nexus Dream v3.1 [{mode.upper()}] (TR Time: {hour}:00) başlatılıyor...")
+turns_count = state["turns"]
+print(f"🚀 Nexus Dream v3.2 [{mode.upper()}] (Turns: {turns_count}/{TURN_LIMIT})")
 
+alert_triggered = turns_count >= TURN_LIMIT
 report_content = f"""# Nexus Dream Report - {today} {hour}:00
 Mode: {mode}
-Context Usage: {current_context_usage*100}%
-Status: System Healthy
+Session Turns: {turns_count} / {TURN_LIMIT}
+Status: {"⚠️ NEARING BLOAT" if alert_triggered else "Healthy"}
 """
 
-if current_context_usage > CONTEXT_THRESHOLD:
-    report_content += "\n⚠️ **CRITICAL ALERT:** Context usage is above 80%! Consider running /compact or starting a new session."
-    print("⚠️ UYARI: Context şişmiş durumda (%80+)! Kullanıcıya haber verilecek.")
+if alert_triggered:
+    report_content += "\n⚠️ **CRITICAL BLOAT ALERT:** Turn limit reached (5+). WRITE HANDOFF AND START NEW SESSION NOW."
+    print(f"\n[!!!] CONTEXT BLOAT ALERT: {turns_count} turns reached. Please write memory and restart session.")
 
 metadata = {
     "id": f"dream-{mode}-{today}-{hour}",
     "type": "sync_report",
     "context": "global",
     "generated_at": now_tr.isoformat(),
-    "tags": f"dream, {mode}, sync, context-alert"
+    "turns": turns_count,
+    "tags": f"dream, {mode}, context-alert, turn-tracker"
 }
 
 key = f"dream--{mode}--{today}--{hour}"
 if nexus_put(key, report_content, metadata):
     print(f"✅ Rapor yüklendi: {key}")
     (SYNC_DIR / f"{key}.md").write_text(report_content, encoding="utf-8")
+
+if alert_triggered:
+    sys.exit(5) # Özel exit code: Bloat detected
