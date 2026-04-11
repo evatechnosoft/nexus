@@ -24,9 +24,11 @@ jobs:
 
       - name: Deploy to production
         run: |
-          mkdir -p /DATA/AppData/nexus/src/templates
-          cp core/* /DATA/AppData/nexus/src/
-          cp -r templates/* /DATA/AppData/nexus/src/templates/
+          mkdir -p /DATA/AppData/nexus/templates
+          mkdir -p /DATA/AppData/nexus/data/memory/rules
+          cp core/* /DATA/AppData/nexus/
+          cp -r templates/* /DATA/AppData/nexus/templates/
+          cp -r data/memory/* /DATA/AppData/nexus/data/memory/
           cp core/requirements.txt /DATA/AppData/nexus/
 
       - name: Restart container
