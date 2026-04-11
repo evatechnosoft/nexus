@@ -1,0 +1,272 @@
+{% extends "base.html" %}
+{% block title %}Talepler{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-5 mt-2">
+  <div>
+    <h3 class="fw-extrabold mb-1" style="letter-spacing:-1.5px;">Cihaz Talepleri</h3>
+    <p class="text-muted small mb-0">Personel taleplerini, onaylarını ve gönderim sürecini yönetin.</p>
+  </div>
+  <button class="btn btn-primary d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#addModal" style="z-index: 10;">
+    <i class="bi bi-plus-lg fs-5"></i>
+    <span>Yeni Talep Oluştur</span>
+  </button>
+</div>
+
+<!-- Arama & Filtre -->
+<form method="get" action="/requests/" class="card border-0 shadow-sm mb-4 p-4 bg-glass">
+  <div class="row g-2 align-items-end">
+    <div class="col-md-4">
+      <label class="form-label small text-muted mb-1">Ara (isim, email, telefon, KSI kodu)</label>
+      <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-search"></i></span>
+        <input type="text" name="q" class="form-control bg-dark border-secondary text-white" placeholder="Örn: KSI-0001 veya ali@..." value="{{ q }}" />
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label class="form-label small text-muted mb-1">Durum</label>
+      <select name="status" class="form-select bg-dark border-secondary text-white">
+        <option value="">Tümü</option>
+        {% for s in statuses %}
+        <option value="{{ s }}" {% if filter_status == s %}selected{% endif %}>{{ s }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="col-md-3">
+      <label class="form-label small text-muted mb-1">Departman</label>
+      <select name="dept" class="form-select bg-dark border-secondary text-white">
+        <option value="">Tümü</option>
+        {% for d in departments %}
+        <option value="{{ d.name }}" {% if filter_dept == d.name %}selected{% endif %}>{{ d.name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="col-md-2 d-flex gap-2">
+      <button type="submit" class="btn btn-primary flex-fill">Filtrele</button>
+      <a href="/requests/" class="btn btn-outline-secondary"><i class="bi bi-x"></i></a>
+    </div>
+  </div>
+</form>
+
+<div class="card border-0 shadow-2xl table-container">
+  <div class="card-body p-4">
+    <div class="table-responsive">
+      <table class="table table-hover mb-0">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Kişi Kodu</th>
+            <th>Talep Eden</th>
+            <th>Departman</th>
+            <th>Cihaz</th>
+            <th>Durum</th>
+            <th>Tarih</th>
+            <th class="text-end">İşlem</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for r in requests %}
+          <tr class="clickable-row" 
+              onclick="if(!window.isSwiping) window.location.href='/requests/{{ r.id }}/detail'"
+              data-id="{{ r.id }}">
+            <td class="text-muted small">#{{ r.id }}</td>
+            <td>
+              {% if r.person and r.person.person_code %}
+              <span class="badge bg-glass text-primary font-monospace">{{ r.person.person_code }}</span>
+              {% else %}
+              <span class="text-muted">—</span>
+              {% endif %}
+            </td>
+            <td>
+              <div class="fw-semibold">{{ r.requester_name }}</div>
+              <small class="text-muted">{{ r.requester_email }}</small>
+            </td>
+            <td><span class="badge bg-secondary">{{ r.department.name }}</span></td>
+            <td>{{ r.device_type }}</td>
+            <td>
+              {% if r.status == "Beklemede" %}<span class="badge bg-warning">{{ r.status }}</span>
+              {% elif r.status == "Onaylandı" %}<span class="badge bg-primary">{{ r.status }}</span>
+              {% elif r.status == "Gönderildi" %}<span class="badge bg-success">{{ r.status }}</span>
+              {% else %}<span class="badge bg-danger">{{ r.status }}</span>{% endif %}
+            </td>
+            <td><small class="text-muted">{{ r.created_at.strftime('%d.%m.%Y') }}</small></td>
+            <td class="text-end">
+              <div class="d-flex justify-content-end gap-2">
+                <a href="/requests/{{ r.id }}/detail" class="btn btn-sm btn-outline-primary py-1 px-3">
+                  Detay
+                </a>
+                <a href="/requests/delete/{{ r.id }}" class="btn btn-sm btn-outline-danger py-1" 
+                   onclick="return confirm('Bu talebi silmek istediğinize emin misiniz?')">
+                  <i class="bi bi-trash"></i>
+                </a>
+              </div>
+            </td>
+          </tr>
+          {% else %}
+          <tr><td colspan="8" class="text-center text-muted py-4">Talep bulunamadı</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="card-footer bg-transparent border-0 d-md-none">
+    <div class="swipe-hint text-center text-muted small">
+      <i class="bi bi-arrow-left-right me-1"></i> Mobil: Sola kaydır (Detay), Sağa kaydır (Sil)
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block modals %}
+<!-- Yeni Talep Modal -->
+<div class="modal fade shadow-lg" id="addModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content border-0">
+      <form method="post" action="/requests/add" id="requestForm">
+        <div class="modal-header border-bottom border-secondary border-opacity-25 p-4">
+          <h5 class="modal-title fw-bold text-white"><i class="bi bi-envelope-plus me-3 text-primary"></i>Yeni Cihaz Talebi</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4">
+          <!-- Email Parse Aracı -->
+          <div class="mb-4 p-3 bg-dark bg-opacity-50 rounded border border-light border-opacity-10">
+            <label class="form-label fw-semibold small mb-2 d-block">
+              <i class="bi bi-magic me-1 text-primary"></i>Email'den Otomatik Doldur
+            </label>
+            <textarea id="rawEmail" class="form-control bg-dark border-secondary text-white font-monospace mb-2"
+              rows="3" placeholder="Email metnini buraya yapıştırın..."></textarea>
+            <div class="d-flex align-items-center gap-2">
+              <button type="button" id="btnParse" class="btn btn-sm btn-primary" onclick="parseEmail()">
+                <i class="bi bi-cpu me-1"></i>Alanları Analiz Et
+              </button>
+              <span id="parseStatus" class="small text-muted"></span>
+            </div>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label small text-muted">Ad Soyad *</label>
+              <input type="text" name="requester_name" id="f_name" class="form-control bg-dark border-secondary text-white" required />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small text-muted">E-posta *</label>
+              <input type="email" name="requester_email" id="f_email" class="form-control bg-dark border-secondary text-white" required />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small text-muted">Telefon</label>
+              <input type="tel" name="requester_phone" id="f_phone" class="form-control bg-dark border-secondary text-white" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small text-muted">Departman *</label>
+              <select name="department_id" class="form-select bg-dark border-secondary text-white" required>
+                <option value="">Seçiniz...</option>
+                {% for d in departments %}
+                <option value="{{ d.id }}">{{ d.name }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small text-muted">İhtiyaç Duyulan Cihaz *</label>
+              <select name="device_type" id="f_device_type" class="form-select bg-dark border-secondary text-white" required>
+                {% for t in device_types %}
+                <option value="{{ t }}">{{ t }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small text-muted">Teslimat Adresi</label>
+              <input type="text" name="requester_address" id="f_address" class="form-control bg-dark border-secondary text-white" />
+            </div>
+            <div class="col-12">
+              <label class="form-label small text-muted">Notlar</label>
+              <textarea name="notes" class="form-control bg-dark border-secondary text-white" rows="2"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer border-top border-light">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">İptal</button>
+          <button type="submit" class="btn btn-primary px-4">Talebi Kaydet</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Clickable Rows & Swipe Actions
+document.addEventListener('DOMContentLoaded', function() {
+  const rows = document.querySelectorAll('.clickable-row');
+  
+  rows.forEach(row => {
+    let touchstartX = 0;
+    let touchendX = 0;
+    const reqId = row.getAttribute('data-id');
+
+    row.addEventListener('touchstart', e => {
+      touchstartX = e.changedTouches[0].screenX;
+      window.isSwiping = false;
+    }, {passive: true});
+
+    row.addEventListener('touchend', e => {
+      touchendX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, {passive: true});
+
+    function handleSwipe() {
+      const diff = touchendX - touchstartX;
+      if (Math.abs(diff) > 70) { // Threshold
+        window.isSwiping = true;
+        if (diff < -70) {
+          // Swipe Left -> Detail
+          window.location.href = `/requests/${reqId}/detail`;
+        } else if (diff > 70) {
+          // Swipe Right -> Delete
+          if(confirm('Bu talebi silmek istediğinize emin misiniz?')) {
+            window.location.href = `/requests/delete/${reqId}`;
+          }
+        }
+      }
+    }
+  });
+});
+
+async function parseEmail() {
+  const raw = document.getElementById('rawEmail').value.trim();
+  if (!raw) return;
+
+  const status = document.getElementById('parseStatus');
+  status.textContent = 'Analiz ediliyor...';
+
+  try {
+    const resp = await fetch('/requests/parse-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ raw_email: raw }),
+    });
+    const data = await resp.json();
+
+    let filled = 0;
+    if (data.name)  { document.getElementById('f_name').value  = data.name;  filled++; }
+    if (data.email) { document.getElementById('f_email').value = data.email; filled++; }
+    if (data.phone) { document.getElementById('f_phone').value = data.phone; filled++; }
+    if (data.address) { document.getElementById('f_address').value = data.address; filled++; }
+    if (data.device_type) {
+      const sel = document.getElementById('f_device_type');
+      for (const opt of sel.options) {
+        if (opt.value === data.device_type) { opt.selected = true; filled++; break; }
+      }
+    }
+
+    status.textContent = filled > 0
+      ? `✓ ${filled} alan dolduruldu`
+      : '⚠ Alan bulunamadı — manuel girin';
+    status.className = filled > 0 ? 'ms-2 small text-success' : 'ms-2 small text-warning';
+  } catch(e) {
+    status.textContent = 'Hata oluştu';
+    status.className = 'ms-2 small text-danger';
+  }
+}
+</script>
+{% endblock %}

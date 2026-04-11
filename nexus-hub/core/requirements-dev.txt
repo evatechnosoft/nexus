@@ -1,5 +1,0 @@
-# Dev / CI dependencies
-pytest>=8.0
-httpx>=0.27
-ruff>=0.4
-uvicorn[standard]

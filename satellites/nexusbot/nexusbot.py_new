@@ -1,0 +1,162 @@
+import os
+import asyncio
+import logging
+import httpx
+import time
+import re
+from datetime import datetime
+from dotenv import load_dotenv
+
+# .env dosyasını yükle
+load_dotenv()
+
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+log = logging.getLogger("nexusbot")
+
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+# ZimaOS üzerindeki hub adresi
+HUB_URL = os.getenv("HUB_URL", "http://192.168.1.186:8900")
+ALERT_CHAT_ID = os.getenv("TELEGRAM_ALERT_CHAT_ID")
+
+if not TOKEN:
+    log.error("TELEGRAM_BOT_TOKEN bulunamadı. Bot başlatılamıyor.")
+    exit(1)
+
+API_URL = f"https://api.telegram.org/bot{TOKEN}"
+START_TIME = time.time()
+
+async def send_msg(chat_id, text, reply_markup=None):
+    if not chat_id: return
+    payload = {"chat_id": chat_id, "text": text, "parse_mode": "HTML"}
+    if reply_markup:
+        payload["reply_markup"] = reply_markup
+    
+    async with httpx.AsyncClient() as client:
+        try:
+            await client.post(f"{API_URL}/sendMessage", json=payload)
+        except Exception as e:
+            log.error(f"Mesaj gönderme hatası: {e}")
+
+async def get_health_report():
+    uptime = time.time() - START_TIME
+    uptime_str = time.strftime('%H:%M:%S', time.gmtime(uptime))
+    
+    async with httpx.AsyncClient() as client:
+        try:
+            hub_status = "🟢 <b>ONLINE</b>"
+            doctor_issues = 0
+            index_summary = {"rules": 0, "skills": 0, "guides": 0}
+            
+            # Hub Health Check
+            try:
+                r = await client.get(f"{HUB_URL}/health", timeout=5)
+                if r.status_code == 200:
+                    data = r.json()
+                    doctor_issues = data.get("issues", 0)
+                    if doctor_issues > 0: hub_status = f"🟡 <b>UNHEALTHY</b> ({doctor_issues})"
+                else: hub_status = "🔴 <b>ERROR</b>"
+            except: hub_status = "🔴 <b>OFFLINE</b>"
+
+            # Index Summary
+            try:
+                r_idx = await client.get(f"{HUB_URL}/api/memory/index", timeout=5)
+                if r_idx.status_code == 200:
+                    files = r_idx.json().get("files", [])
+                    for f in files:
+                        key = f.get("key", "")
+                        if key.startswith("rule--"): index_summary["rules"] += 1
+                        elif key.startswith("skill--"): index_summary["skills"] += 1
+                        elif key.startswith("guide--"): index_summary["guides"] += 1
+            except: pass
+
+            msg = "<b>🏥 Nexus System Health</b>\n"
+            msg += "───────────────────\n"
+            msg += f"🖥 <b>Hub:</b> {hub_status}\n"
+            msg += f"🤖 <b>Bot:</b> <code>Up ({uptime_str})</code>\n\n"
+            
+            msg += "<b>📚 Memory Index:</b>\n"
+            msg += f"• ⚖️ Rules: <code>{index_summary['rules']}</code>\n"
+            msg += f"• 🛠 Skills: <code>{index_summary['skills']}</code>\n"
+            msg += f"• 📖 Guides: <code>{index_summary['guides']}</code>\n"
+            
+            msg += "\n<i>Tip: Use /index for details or /ask to query AI.</i>"
+            return msg
+        except Exception as e:
+            return f"❌ Health report error: {e}"
+
+async def get_index_report():
+    """Detailed listing of rules, skills and guides."""
+    async with httpx.AsyncClient() as client:
+        try:
+            r = await client.get(f"{HUB_URL}/api/memory/index", timeout=5)
+            if r.status_code == 200:
+                files = r_idx = r.json().get("files", [])
+                
+                categories = {"⚖️ Rules": [], "🛠 Skills": [], "📖 Guides": []}
+                for f in files:
+                    key = f.get("key", "")
+                    if key.startswith("rule--"): categories["⚖️ Rules"].append(key.replace("rule--", ""))
+                    elif key.startswith("skill--"): categories["🛠 Skills"].append(key.replace("skill--", ""))
+                    elif key.startswith("guide--"): categories["📖 Guides"].append(key.replace("guide--", ""))
+                
+                msg = "<b>📂 Nexus Knowledge Index</b>\n"
+                msg += "───────────────────\n"
+                
+                for cat, items in categories.items():
+                    if items:
+                        msg += f"\n<b>{cat}</b>\n"
+                        for item in sorted(items)[:10]: # Max 10 per category for brevity
+                            msg += f"• <code>{item}</code>\n"
+                        if len(items) > 10: msg += f"<i>...and {len(items)-10} more</i>\n"
+                
+                return msg
+            return "❌ Could not fetch index."
+        except Exception as e:
+            return f"❌ Index error: {e}"
+
+async def ai_query(chat_id, prompt):
+    """Query local AI (Qwen/Gemma) via Hub."""
+    await send_msg(chat_id, "🤖 <b>Nexus AI</b> düşünüyor...")
+    async with httpx.AsyncClient() as client:
+        try:
+            # Not: Bu endpoint'in Hub tarafında Ollama/vLLM'e bağlı olduğunu varsayıyoruz
+            # Eğer henüz yoksa, basit bir hata mesajı döner
+            r = await client.post(f"{HUB_URL}/api/ai/query", json={"prompt": prompt}, timeout=60)
+            if r.status_code == 200:
+                answer = r.json().get("response", "Cevap alınamadı.")
+                await send_msg(chat_id, f"🤖 <b>AI Response:</b>\n\n{answer}")
+            else:
+                await send_msg(chat_id, "❌ <b>AI Offline:</b> Sunucunda yerel LLM (Qwen/Gemma) henüz bağlı değil.")
+        except Exception as e:
+            await send_msg(chat_id, f"❌ <b>AI Error:</b> {e}")
+
+async def handle_update(update):
+    if "message" in update:
+        msg = update["message"]
+        chat_id = msg["chat"]["id"]
+        text = msg.get("text", "")
+
+        if text == "/start":
+            menu = "<b>🛰 NexusBot v2.1 - Intelligence Terminal</b>\n\n"
+            menu += "/health - Sistem sağlığı ve özet\n"
+            menu += "/index - Kurallar ve Yetenekler listesi\n"
+            menu += "/ask [soru] - Yerel AI'ya (Qwen/Gemma) sor\n"
+            menu += "/status - Detaylı teknik metrikler"
+            await send_msg(chat_id, menu)
+        elif text == "/health":
+            report = await get_health_report()
+            await send_msg(chat_id, report)
+        elif text == "/index":
+            report = await get_index_report()
+            await send_msg(chat_id, report)
+        elif text.startswith("/ask"):
+            prompt = text.replace("/ask", "").strip()
+            if prompt: await ai_query(chat_id, prompt)
+            else: await send_msg(chat_id, "Lütfen bir soru yazın: /ask [soru]")
+        elif text == "/status":
+            # (Eski status kodunu buraya dahil edebiliriz veya ayrı fonksiyon kalsın)
+            from satellites.nexusbot.nexusbot import get_status_report # Import inside to avoid circularity if split
+            report = await get_status_report()
+            await send_msg(chat_id, report)
+
+# ... (rest of monitor_loop and main remain same)

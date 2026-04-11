@@ -1,0 +1,7 @@
+﻿exchangelib==5.2.0
+O365==2.0.28
+httpx==0.25.1
+apscheduler==3.10.4
+python-dotenv==1.0.0
+beautifulsoup4==4.12.2
+lxml==4.9.3

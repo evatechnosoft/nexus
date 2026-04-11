@@ -1,0 +1,187 @@
+import os
+import asyncio
+import logging
+import httpx
+import time
+import re
+from datetime import datetime
+from dotenv import load_dotenv
+
+# .env dosyasını yükle
+load_dotenv()
+
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+log = logging.getLogger("nexusbot")
+
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+# ZimaOS üzerindeki hub adresi
+HUB_URL = os.getenv("HUB_URL", "http://192.168.1.186:8900")
+ALERT_CHAT_ID = os.getenv("TELEGRAM_ALERT_CHAT_ID")
+
+if not TOKEN:
+    log.error("TELEGRAM_BOT_TOKEN bulunamadı. Bot başlatılamıyor.")
+    exit(1)
+
+API_URL = f"https://api.telegram.org/bot{TOKEN}"
+START_TIME = time.time()
+
+async def send_msg(chat_id, text, reply_markup=None):
+    if not chat_id: return
+    payload = {"chat_id": chat_id, "text": text, "parse_mode": "HTML"}
+    if reply_markup:
+        payload["reply_markup"] = reply_markup
+    
+    async with httpx.AsyncClient() as client:
+        try:
+            await client.post(f"{API_URL}/sendMessage", json=payload)
+        except Exception as e:
+            log.error(f"Mesaj gönderme hatası: {e}")
+
+async def get_health_report():
+    uptime = time.time() - START_TIME
+    uptime_str = time.strftime('%H:%M:%S', time.gmtime(uptime))
+    
+    async with httpx.AsyncClient() as client:
+        try:
+            hub_status = "🟢 <b>ONLINE</b>"
+            doctor_issues = 0
+            try:
+                r = await client.get(f"{HUB_URL}/health", timeout=5)
+                if r.status_code != 200: 
+                    hub_status = "🔴 <b>ERROR</b>"
+                else:
+                    data = r.json()
+                    doctor_issues = data.get("issues", 0)
+                    if doctor_issues > 0: hub_status = f"🟡 <b>UNHEALTHY</b> ({doctor_issues} issues)"
+            except: hub_status = "🔴 <b>OFFLINE</b>"
+
+            msg = "<b>🏥 Nexus System Health Report</b>\n"
+            msg += "───────────────────\n"
+            msg += f"🖥 <b>Hub:</b> {hub_status}\n"
+            msg += f"🤖 <b>Bot Uptime:</b> <code>{uptime_str}</code>\n"
+            msg += f"🕒 <b>Time:</b> <code>{datetime.now().strftime('%H:%M:%S')}</code>\n"
+            
+            if doctor_issues > 0:
+                msg += "\n🚨 <b>Nexus Doctor Warnings:</b>\n"
+                msg += f"<i>{doctor_issues} issue(s) detected. Run /status for info.</i>\n"
+            
+            return msg
+        except Exception as e:
+            return f"❌ Health report error: {e}"
+
+async def get_status_report():
+    """Fetch and format detailed metrics from Hub with colors."""
+    async with httpx.AsyncClient() as client:
+        try:
+            r = await client.get(f"{HUB_URL}/metrics", timeout=5)
+            if r.status_code == 200:
+                metrics_text = r.text
+                msg = "<b>📊 Nexus Detailed Metrics</b>\n"
+                msg += "───────────────────\n"
+                
+                important_keys = {
+                    "nexus_requests_total": ("⚡", "Total Requests"),
+                    "nexus_request_errors_total": ("❌", "Total Errors"),
+                    "nexus_memory_reads_total": ("📖", "Memory Reads"),
+                    "nexus_memory_writes_total": ("✍️", "Memory Writes"),
+                    "nexus_doctor_issues_total": ("🩺", "Doctor Issues")
+                }
+                
+                lines = metrics_text.strip().split("\n")
+                for key, (icon, label) in important_keys.items():
+                    for line in lines:
+                        if line.startswith(key):
+                            val = line.split(" ")[-1].strip()
+                            # Error check for alerts
+                            if key == "nexus_request_errors_total" and int(float(val)) > 0:
+                                msg += f"{icon} <b>{label}:</b> <pre>{val}</pre> ⚠️\n"
+                            else:
+                                msg += f"{icon} <b>{label}:</b> <code>{val}</code>\n"
+                            break
+                
+                msg += "\n🕒 <i>Last Sync: {0}</i>".format(datetime.now().strftime('%H:%M:%S'))
+                return msg
+            return "❌ Metrics could not be fetched (HTTP {0})".format(r.status_code)
+        except Exception as e:
+            return f"❌ Metrics error: {e}"
+
+async def research_request(chat_id, topic):
+    safe_topic = re.sub(r'[^a-zA-Z0-9_-]', '_', topic)
+    key = f"Research_{safe_topic}"
+    
+    await send_msg(chat_id, f"🔍 <b>'{topic}'</b> üzerinde araştırma başlatılıyor...\n<i>Key: {key}</i>")
+    
+    async with httpx.AsyncClient() as client:
+        try:
+            content = f"# Research Request: {topic}\n\nRequested by Telegram at: {datetime.now()}\nStatus: PENDING\n\n---"
+            # Sunucu /api/memory/{key} bekliyor
+            r = await client.post(f"{HUB_URL}/api/memory/{key}", json={"content": content}, timeout=10)
+            
+            if r.status_code in [200, 201]:
+                await send_msg(chat_id, f"✅ <b>Başarılı!</b>\nAraştırma talebi Hub belleğine işlendi.\n\n🔗 <code>/api/memory/{key}</code>")
+            else:
+                await send_msg(chat_id, f"❌ <b>Hata:</b> Sunucu {r.status_code} döndürdü.\n<code>{r.text[:100]}</code>")
+        except Exception as e:
+            await send_msg(chat_id, f"❌ <b>Bağlantı Hatası:</b> {e}")
+
+async def monitor_loop():
+    log.info("Health monitoring loop started.")
+    last_status = "ok"
+    while True:
+        try:
+            async with httpx.AsyncClient() as client:
+                try:
+                    r = await client.get(f"{HUB_URL}/health", timeout=5)
+                    status = "ok" if r.status_code == 200 and r.json().get("issues", 0) == 0 else "issue"
+                except:
+                    status = "offline"
+                
+                if status != last_status and ALERT_CHAT_ID:
+                    if status == "offline":
+                        await send_msg(ALERT_CHAT_ID, "🚨 <b>ALERT:</b> Nexus Hub is <b>OFFLINE</b>!")
+                    elif status == "issue":
+                        await send_msg(ALERT_CHAT_ID, "⚠️ <b>WARNING:</b> Nexus Doctor detected issues in Hub!")
+                    elif status == "ok" and last_status != "ok":
+                        await send_msg(ALERT_CHAT_ID, "✅ <b>RECOVERY:</b> Nexus Hub is back to <b>HEALTHY</b> state.")
+                    last_status = status
+        except Exception as e:
+            log.error(f"Monitor loop error: {e}")
+        await asyncio.sleep(60)
+
+async def handle_update(update):
+    if "message" in update:
+        msg = update["message"]
+        chat_id = msg["chat"]["id"]
+        text = msg.get("text", "")
+
+        if text == "/start":
+            await send_msg(chat_id, "<b>🛰 NexusBot v2.0 - Management Satellite</b>\n\n/health - Sistem sağlık raporu\n/status - Detaylı metrikler\n/research [konu] - Araştırma başlat")
+        elif text == "/health":
+            report = await get_health_report()
+            await send_msg(chat_id, report)
+        elif text == "/status":
+            report = await get_status_report()
+            await send_msg(chat_id, report)
+        elif text.startswith("/research"):
+            topic = text.replace("/research", "").strip()
+            if topic: await research_request(chat_id, topic)
+            else: await send_msg(chat_id, "Konu girin: /research [konu]")
+
+async def main():
+    log.info("NexusBot v2 başlatılıyor...")
+    asyncio.create_task(monitor_loop())
+    offset = 0
+    async with httpx.AsyncClient() as client:
+        while True:
+            try:
+                r = await client.get(f"{API_URL}/getUpdates", params={"offset": offset, "timeout": 30}, timeout=40)
+                if r.status_code == 200:
+                    for update in r.json().get("result", []):
+                        await handle_update(update)
+                        offset = update["update_id"] + 1
+            except:
+                await asyncio.sleep(5)
+            await asyncio.sleep(1)
+
+if __name__ == "__main__":
+    asyncio.run(main())

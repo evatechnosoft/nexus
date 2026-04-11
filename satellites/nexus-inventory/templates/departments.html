@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block title %}Departmanlar & Config{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <h4 class="fw-bold mb-0"><i class="bi bi-diagram-3 me-2 text-primary"></i>Departman Config Profilleri</h4>
+</div>
+
+<div class="row g-4">
+  {% for dept in departments %}
+  <div class="col-md-4">
+    <div class="card border-0 shadow-sm h-100">
+      <div class="card-header fw-semibold">
+        {% if dept.name == "Yazılımcı" %}<i class="bi bi-code-slash me-2 text-primary"></i>
+        {% elif dept.name == "Recruiter" %}<i class="bi bi-people me-2 text-primary"></i>
+        {% else %}<i class="bi bi-person-walking me-2 text-primary"></i>{% endif %}
+        {{ dept.name }}
+        <span class="badge bg-glass text-muted float-end border border-secondary-subtle">{{ dept.config_items|length }} item</span>
+      </div>
+      <div class="card-body p-0">
+        {% set categories = dept.config_items | map(attribute='category') | unique | list %}
+        {% for cat in categories %}
+        <div class="px-3 pt-3">
+          <div class="text-muted small fw-semibold text-uppercase mb-2" style="letter-spacing: 1px;">{{ cat }}</div>
+          {% for item in dept.config_items if item.category == cat %}
+          <div class="d-flex justify-content-between align-items-start py-2 border-bottom border-secondary-subtle">
+            <div>
+              <div class="small fw-semibold">{{ item.name }}</div>
+              {% if item.description %}<div class="text-muted" style="font-size:0.75rem">{{ item.description }}</div>{% endif %}
+            </div>
+            <form method="post" action="/departments/delete-config/{{ item.id }}"
+              onsubmit="return confirm('Silinsin mi?')" class="ms-2">
+              <button class="btn btn-sm btn-link text-danger p-0 border-0"><i class="bi bi-trash-fill small"></i></button>
+            </form>
+          </div>
+          {% endfor %}
+        </div>
+        {% endfor %}
+
+        <!-- Config Ekle -->
+        <div class="p-3">
+          <button class="btn btn-sm btn-outline-primary w-100 rounded-pill"
+            data-bs-toggle="modal" data-bs-target="#addConfig{{ dept.id }}">
+            <i class="bi bi-plus-lg me-1"></i>Config Ekle
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for this dept -->
+  <div class="modal fade" id="addConfig{{ dept.id }}" tabindex="-1">
+    <div class="modal-dialog">
+      <form method="post" action="/departments/add-config">
+        <input type="hidden" name="department_id" value="{{ dept.id }}" />
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">{{ dept.name }} — Config Ekle</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label class="form-label">Kategori</label>
+              <select name="category" class="form-select" required>
+                {% for cat in categories %}
+                <option>{{ cat }}</option>
+                {% endfor %}
+                <option value="Yazılım">Yazılım</option>
+                <option value="Hesap">Hesap</option>
+                <option value="Diğer">Diğer</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Config Adı</label>
+              <input type="text" name="name" class="form-control" required placeholder="örn: Docker Desktop" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Açıklama</label>
+              <input type="text" name="description" class="form-control" placeholder="Opsiyonel" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+            <button type="submit" class="btn btn-primary">Ekle</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

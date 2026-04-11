@@ -25,9 +25,9 @@ jobs:
       - name: Deploy to production
         run: |
           mkdir -p /DATA/AppData/nexus/src/templates
-          cp nexus-hub/core/* /DATA/AppData/nexus/src/
-          cp -r nexus-hub/templates/* /DATA/AppData/nexus/src/templates/
-          cp nexus-hub/core/requirements.txt /DATA/AppData/nexus/
+          cp core/* /DATA/AppData/nexus/src/
+          cp -r templates/* /DATA/AppData/nexus/src/templates/
+          cp core/requirements.txt /DATA/AppData/nexus/
 
       - name: Restart container
         run: docker restart nexus-mcp

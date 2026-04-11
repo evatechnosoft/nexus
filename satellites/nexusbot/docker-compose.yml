@@ -1,0 +1,12 @@
+services:
+  nexusbot:
+    build:
+      context: ../../
+      dockerfile: satellites/nexusbot/Dockerfile
+    container_name: nexusbot
+    restart: always
+    env_file:
+      - ../../.env
+    network_mode: host
+    volumes:
+      - /etc/localtime:/etc/localtime:ro

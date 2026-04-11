@@ -1,0 +1,234 @@
+{% extends "base.html" %}
+{% block title %}Cihaz Envanteri{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-5 mt-2">
+  <div>
+    <h3 class="fw-extrabold mb-1 text-white" style="letter-spacing:-1.5px;">Cihaz Envanteri</h3>
+    <p class="text-muted small mb-0 opacity-75">Kurumsal donanım varlıklarını yönetin ve takip edin.</p>
+  </div>
+  <button class="btn btn-primary d-flex align-items-center gap-2 shadow-lg" data-bs-toggle="modal" data-bs-target="#addModal" style="z-index: 10;">
+    <i class="bi bi-plus-lg fs-5"></i>
+    <span class="fw-bold">Yeni Cihaz Ekle</span>
+  </button>
+</div>
+
+<div class="row g-4 mb-5">
+  <div class="col-6 col-lg-3">
+    <div class="card p-4 text-center">
+      <div class="display-5 fw-bold text-primary mb-1">{{ stats.total }}</div>
+      <div class="text-uppercase small fw-extrabold ls-1 opacity-75 text-shadow-sm">{% if 'Toplam' in TargetContent %}Toplam{% elif 'Depoda' in TargetContent %}Depoda{% elif 'Kullanımda' in TargetContent %}Kullanımda{% else %}Serviste{% endif %}</div>
+    </div>
+  </div>
+  <div class="col-6 col-lg-3">
+    <div class="card p-4 text-center">
+      <div class="display-5 fw-bold text-success mb-1">{{ stats.depo }}</div>
+      <div class="text-uppercase small fw-extrabold ls-1 opacity-50">Depoda</div>
+    </div>
+  </div>
+  <div class="col-6 col-lg-3">
+    <div class="card p-4 text-center">
+      <div class="display-5 fw-bold text-info mb-1">{{ stats.kullanimda }}</div>
+      <div class="text-uppercase small fw-extrabold ls-1 opacity-50">Kullanımda</div>
+    </div>
+  </div>
+  <div class="col-6 col-lg-3">
+    <div class="card p-4 text-center">
+      <div class="display-5 fw-bold text-warning mb-1">{{ stats.servis }}</div>
+      <div class="text-uppercase small fw-extrabold ls-1 opacity-50">Serviste</div>
+    </div>
+  </div>
+</div>
+
+<!-- Arama & Filtre -->
+<form method="get" action="/inventory/" class="card border-0 shadow-sm mb-4 p-4 bg-glass">
+  <div class="row g-3 align-items-end">
+    <div class="col-md-4">
+      <label class="form-label small text-muted mb-1">Cihaz Ara (Seri No, Marka, Model)</label>
+      <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-search"></i></span>
+        <input type="text" name="q" class="form-control bg-dark border-secondary text-white" placeholder="Örn: C123456..." value="{{ q }}" />
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label class="form-label small text-muted mb-1">Durum</label>
+      <select name="status" class="form-select bg-dark border-secondary text-white">
+        <option value="">Tümü</option>
+        {% for s in device_statuses %}
+        <option value="{{ s }}" {% if filter_status == s %}selected{% endif %}>{{ s }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="col-md-3">
+      <label class="form-label small text-muted mb-1">Tür</label>
+      <select name="type" class="form-select bg-dark border-secondary text-white">
+        <option value="">Tümü</option>
+        {% for t in device_types %}
+        <option value="{{ t }}" {% if filter_type == t %}selected{% endif %}>{{ t }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="col-md-2 d-flex gap-2">
+      <button type="submit" class="btn btn-primary flex-fill">Filtrele</button>
+      <a href="/inventory/" class="btn btn-outline-secondary"><i class="bi bi-x"></i></a>
+    </div>
+  </div>
+</form>
+
+<!-- Tablo Konteyneri -->
+<div class="card border-0 shadow-2xl table-container bg-glass">
+  <div class="card-body p-4">
+    <div class="table-responsive">
+      <table class="table table-hover align-middle mb-0">
+        <thead class="bg-dark bg-opacity-50 text-white">
+          <tr class="text-white">
+            <th class="ps-4 text-white">Envanter Kodu</th>
+            <th class="text-white">Tür</th>
+            <th class="text-white">Marka / Model</th>
+            <th class="text-white">Seri No</th>
+            <th class="text-white">IMEI</th>
+            <th class="text-white">Durum</th>
+            <th class="text-white">Notlar</th>
+            <th class="text-end pe-4 text-white">İşlem</th>
+          </tr>
+        </thead>
+        <tbody class="border-top-0">
+          {% for d in devices %}
+          <tr>
+            <td class="ps-4">
+              <span class="badge bg-glass text-primary font-monospace">{{ d.inventory_code or ("ENV-%04d"|format(d.id)) }}</span>
+            </td>
+            <td>
+              {% if d.device_type == "Laptop" %}<i class="bi bi-laptop me-1"></i>
+              {% elif d.device_type == "Phone" %}<i class="bi bi-phone me-1"></i>
+              {% elif d.device_type == "Monitor" %}<i class="bi bi-display me-1"></i>
+              {% elif d.device_type == "Desktop" %}<i class="bi bi-pc-display me-1"></i>
+              {% else %}<i class="bi bi-tools me-1"></i>{% endif %}
+              {{ d.device_type }}
+            </td>
+            <td>
+              <div class="fw-semibold">{{ d.brand }}</div>
+              <small class="text-muted">{{ d.model }}</small>
+            </td>
+            <td><code>{{ d.serial_no }}</code></td>
+            <td>
+              {% if d.imei %}<code class="text-info">{{ d.imei }}</code>
+              {% else %}<span class="text-muted">—</span>{% endif %}
+            </td>
+            <td>
+              {% if d.status == "Depo" %}<span class="badge bg-success bg-opacity-75">{{ d.status }}</span>
+              {% elif d.status == "Kullanımda" %}<span class="badge bg-primary bg-opacity-75">{{ d.status }}</span>
+              {% elif d.status == "Serviste" %}<span class="badge bg-warning bg-opacity-75 text-dark">{{ d.status }}</span>
+              {% else %}<span class="badge bg-secondary bg-opacity-75">{{ d.status }}</span>{% endif %}
+            </td>
+            <td><small class="text-muted">{{ d.notes or "—" }}</small></td>
+            <td class="text-end pe-4">
+              <div class="d-flex justify-content-end gap-2">
+                <button class="btn btn-sm btn-outline-info rounded-pill px-3"
+                  onclick="openStatusModal({{ d.id }}, '{{ d.status }}')">
+                  <i class="bi bi-pencil-square me-1"></i>Güncelle
+                </button>
+                <form method="post" action="/inventory/delete/{{ d.id }}"
+                  onsubmit="return confirm('Cihazı silmek istiyor musunuz?')">
+                  <button class="btn btn-sm btn-outline-danger rounded-circle"><i class="bi bi-trash"></i></button>
+                </form>
+              </div>
+            </td>
+          </tr>
+          {% else %}
+          <tr><td colspan="8" class="text-center text-muted py-5">Cihaz bulunamadı</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block modals %}
+<!-- Add Modal -->
+<div class="modal fade shadow-lg" id="addModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content border-0 bg-dark text-white shadow-2xl">
+      <form id="addInventForm" method="post" action="/inventory/add">
+        <div class="modal-header border-bottom border-secondary border-opacity-25 p-4">
+          <h5 class="modal-title fw-bold"><i class="bi bi-plus-circle me-3 text-primary"></i>Yeni Cihaz Ekle</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4 p-md-5">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <label class="form-label small text-muted text-uppercase fw-bold ls-1 mb-2">Cihaz Türü</label>
+              <select name="device_type" class="form-select bg-dark border-secondary border-opacity-50 text-white p-2" required>
+                {% for t in device_types %}
+                <option value="{{ t }}">{{ t }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small text-muted text-uppercase fw-bold ls-1 mb-2">Marka</label>
+              <input type="text" name="brand" class="form-control bg-dark border-secondary border-opacity-50 text-white p-2" placeholder="Örn: Apple, Dell" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small text-muted text-uppercase fw-bold ls-1 mb-2">Model</label>
+              <input type="text" name="model" class="form-control bg-dark border-secondary border-opacity-50 text-white p-2" placeholder="Örn: MacBook Air M2" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small text-muted text-uppercase fw-bold ls-1 mb-2">Seri Numarası *</label>
+              <input type="text" name="serial_no" class="form-control bg-dark border-secondary border-opacity-50 text-white p-2" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small text-muted text-uppercase fw-bold ls-1 mb-2">IMEI (Opsiyonel)</label>
+              <input type="text" name="imei" class="form-control bg-dark border-secondary border-opacity-50 text-white p-2">
+            </div>
+            <div class="col-12">
+              <label class="form-label small text-muted text-uppercase fw-bold ls-1 mb-2">Notlar</label>
+              <textarea name="notes" class="form-control bg-dark border-secondary border-opacity-50 text-white p-2" rows="3"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer border-top border-secondary border-opacity-25 p-4">
+          <button type="button" class="btn btn-link text-white text-decoration-none" data-bs-dismiss="modal">İptal</button>
+          <button type="submit" class="btn btn-primary px-5 shadow-lg">Cihazı Kaydet</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Durum Modal -->
+<div class="modal fade shadow-lg" id="statusModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <form method="post" id="statusForm" class="modal-content border-0 bg-dark text-white">
+      <div class="modal-header border-bottom border-secondary border-opacity-25">
+        <h5 class="modal-title fw-bold">Durum Güncelle</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <select name="status" id="statusSelect" class="form-select bg-dark border-secondary text-white">
+          {% for s in device_statuses %}
+          <option value="{{ s }}">{{ s }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="modal-footer border-top border-secondary border-opacity-25">
+        <button type="button" class="btn btn-link text-white text-decoration-none" data-bs-dismiss="modal">İptal</button>
+        <button type="submit" class="btn btn-primary px-4">Kaydet</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function openStatusModal(id, currentStatus) {
+  const form = document.getElementById('statusForm');
+  const select = document.getElementById('statusSelect');
+  form.action = '/inventory/update-status/' + id;
+  select.value = currentStatus;
+  const modal = new bootstrap.Modal(document.getElementById('statusModal'));
+  modal.show();
+}
+</script>
+{% endblock %}

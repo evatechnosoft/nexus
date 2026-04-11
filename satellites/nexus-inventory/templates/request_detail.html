@@ -1,0 +1,199 @@
+{% extends "base.html" %}
+{% block title %}Talep Detayı #{{ req.id }}{% endblock %}
+
+{% block content %}
+<div class="mb-3">
+  <a href="/requests/" class="btn btn-outline-secondary btn-sm"><i class="bi bi-arrow-left me-1"></i>Geri</a>
+</div>
+
+<div class="row g-4">
+  <!-- Sol: Talep Bilgileri -->
+  <div class="col-md-5">
+    <div class="card border-0 shadow-sm mb-3">
+      <div class="card-header fw-semibold">
+        <i class="bi bi-person me-2 text-muted"></i>Talep Bilgileri
+      </div>
+      <div class="card-body">
+        {% if req.person and req.person.person_code %}
+        <div class="mb-3 p-3 bg-glass rounded d-flex align-items-center justify-content-between border border-primary-subtle">
+          <span class="small text-muted">Kişi Kodu</span>
+          <span class="font-monospace fw-bold fs-5 text-glow text-primary">{{ req.person.person_code }}</span>
+        </div>
+        {% endif %}
+        <table class="table table-borderless mb-0 small">
+          <tr><th class="text-muted w-40">Ad Soyad</th><td>{{ req.requester_name }}</td></tr>
+          <tr><th class="text-muted">E-posta</th><td>{{ req.requester_email }}</td></tr>
+          <tr><th class="text-muted">Telefon</th><td>{{ req.requester_phone or "-" }}</td></tr>
+          <tr><th class="text-muted">Adres</th><td>{{ req.requester_address or "-" }}</td></tr>
+          <tr><th class="text-muted">Departman</th><td><span class="badge bg-secondary">{{ req.department.name }}</span></td></tr>
+          <tr><th class="text-muted">İhtiyaç</th><td><strong>{{ req.device_type }}</strong></td></tr>
+          <tr><th class="text-muted">Durum</th><td>
+            {% if req.status == "Beklemede" %}<span class="badge bg-warning">{{ req.status }}</span>
+            {% elif req.status == "Onaylandı" %}<span class="badge bg-primary">{{ req.status }}</span>
+            {% elif req.status == "Gönderildi" %}<span class="badge bg-success">{{ req.status }}</span>
+            {% else %}<span class="badge bg-danger">{{ req.status }}</span>{% endif %}
+          </td></tr>
+          <tr><th class="text-muted">Tarih</th><td>{{ req.created_at.strftime('%d.%m.%Y %H:%M') }}</td></tr>
+        </table>
+        {% if req.notes %}
+        <div class="mt-2 p-2 bg-glass rounded small"><i class="bi bi-chat-left-text me-1"></i>{{ req.notes }}</div>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Kişi Geçmişi -->
+    {% if person_requests %}
+    <div class="card border-0 shadow-sm mb-3">
+      <div class="card-header fw-semibold">
+        <i class="bi bi-clock-history me-2 text-muted"></i>Bu Kişinin Önceki Talepleri
+      </div>
+      <div class="card-body p-0">
+        {% for pr in person_requests %}
+        <div class="d-flex justify-content-between align-items-center px-3 py-2 border-bottom border-secondary-subtle">
+          <div>
+            <span class="text-muted small">#{{ pr.id }}</span>
+            <span class="ms-2 small">{{ pr.device_type }}</span>
+            <span class="badge bg-secondary ms-1">{{ pr.department.name }}</span>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            {% if pr.status == "Gönderildi" %}<span class="badge bg-success">{{ pr.status }}</span>
+            {% elif pr.status == "Beklemede" %}<span class="badge bg-warning">{{ pr.status }}</span>
+            {% else %}<span class="badge bg-secondary">{{ pr.status }}</span>{% endif %}
+            <small class="text-muted">{{ pr.created_at.strftime('%d.%m.%Y') }}</small>
+            <a href="/requests/{{ pr.id }}/detail" class="btn btn-sm btn-outline-secondary py-0">
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- Config Profile -->
+    <div class="card border-0 shadow-sm">
+      <div class="card-header fw-semibold">
+        <i class="bi bi-gear me-2 text-muted"></i>{{ req.department.name }} — Config Profili
+      </div>
+      <div class="card-body p-0">
+        {% if config_items %}
+        {% set categories = config_items | map(attribute='category') | unique | list %}
+        {% for cat in categories %}
+        <div class="px-3 pt-2 pb-1">
+          <div class="text-muted small fw-semibold text-uppercase mb-1">{{ cat }}</div>
+          {% for item in config_items if item.category == cat %}
+          <div class="d-flex align-items-start mb-1">
+            <i class="bi bi-check2-circle text-success me-2 mt-1"></i>
+            <div>
+              <div class="fw-semibold small">{{ item.name }}</div>
+              {% if item.description %}<div class="text-muted" style="font-size:0.8rem">{{ item.description }}</div>{% endif %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        {% endfor %}
+        {% else %}
+        <div class="p-3 text-muted small">Bu departman için config tanımlı değil</div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Sağ: Cihaz Atama -->
+  <div class="col-md-7">
+    {% if req.assignment %}
+    <!-- Zaten atanmış -->
+    <div class="card border-0 shadow-sm border-start border-success border-3">
+      <div class="card-body">
+        <h5 class="text-success"><i class="bi bi-check-circle me-2"></i>Cihaz Atandı</h5>
+        <table class="table table-borderless small mb-0">
+          <tr><th class="text-muted">Cihaz</th><td>{{ req.assignment.device.brand }} {{ req.assignment.device.model }}</td></tr>
+          <tr><th class="text-muted">Seri No</th><td><code>{{ req.assignment.device.serial_no }}</code></td></tr>
+          <tr><th class="text-muted">Atama Tarihi</th><td>{{ req.assignment.assigned_at.strftime('%d.%m.%Y %H:%M') }}</td></tr>
+          {% if req.assignment.shipped_at %}
+          <tr><th class="text-muted">Gönderim</th><td>{{ req.assignment.shipped_at.strftime('%d.%m.%Y') }}</td></tr>
+          <tr><th class="text-muted">Kargo No</th><td>{{ req.assignment.tracking_no or "-" }}</td></tr>
+          {% endif %}
+        </table>
+        <a href="/assignments/{{ req.assignment.id }}/shipment" class="btn btn-sm btn-outline-primary mt-2">
+          <i class="bi bi-truck me-1"></i>Sevkiyat Sayfası
+        </a>
+      </div>
+    </div>
+    {% elif available_devices %}
+    <!-- Atama Formu -->
+    <div class="card border-0 shadow-sm">
+      <div class="card-header fw-semibold">
+        <i class="bi bi-box-seam me-2 text-primary"></i>Cihaz Ata ve Gönderiye Hazırla
+      </div>
+      <div class="card-body">
+        <form method="post" action="/assignments/create">
+          <input type="hidden" name="request_id" value="{{ req.id }}" />
+
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Depodaki Uygun Cihazlar ({{ req.device_type }})</label>
+            {% for device in available_devices %}
+            <div class="form-check border rounded p-3 mb-2 bg-glass">
+              <input class="form-input-check" type="radio" name="device_id"
+                value="{{ device.id }}" id="device_{{ device.id }}"
+                {% if loop.first %}checked{% endif %} required />
+              <label class="form-check-label w-100" for="device_{{ device.id }}">
+                <div class="fw-semibold">{{ device.brand }} {{ device.model }}</div>
+                <div class="text-muted small"><code>{{ device.serial_no }}</code></div>
+              </label>
+            </div>
+            {% endfor %}
+          </div>
+
+          <!-- Config Checklist -->
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Yapılacak Konfigürasyonlar</label>
+            <div class="border rounded p-3 bg-glass" id="configList">
+              {% for item in config_items %}
+              <div class="form-check mb-1">
+                <input class="form-check-input config-check" type="checkbox"
+                  value="{{ item.id }}" id="cfg_{{ item.id }}" />
+                <label class="form-check-label small" for="cfg_{{ item.id }}">
+                  <span class="badge bg-glass text-main border me-1 border-secondary-subtle">{{ item.category }}</span>
+                  {{ item.name }}
+                </label>
+              </div>
+              {% endfor %}
+            </div>
+            <input type="hidden" name="checklist" id="checklistInput" value="[]" />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Notlar</label>
+            <textarea name="notes" class="form-control" rows="2"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-success w-100 shadow-sm">
+            <i class="bi bi-check-circle me-1"></i>Cihazı Ata ve Sevkiyat Hazırla
+          </button>
+        </form>
+      </div>
+    </div>
+    {% else %}
+    <div class="card border-0 shadow-sm">
+      <div class="card-body text-center py-5">
+        <i class="bi bi-exclamation-circle text-warning" style="font-size:2.5rem"></i>
+        <h5 class="mt-3">Uygun Cihaz Yok</h5>
+        <p class="text-muted">Depoda <strong>{{ req.device_type }}</strong> türünde stok bulunmuyor.</p>
+        <a href="/inventory/" class="btn btn-primary">Cihaz Ekle</a>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Checklist'i JSON'a çevir
+document.querySelector('form')?.addEventListener('submit', function() {
+  const checked = [...document.querySelectorAll('.config-check:checked')].map(c => parseInt(c.value));
+  document.getElementById('checklistInput').value = JSON.stringify(checked);
+});
+</script>
+{% endblock %}
