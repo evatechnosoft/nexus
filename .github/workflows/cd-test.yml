@@ -11,14 +11,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Deploy src to ZimaOS
+      - name: Sync Repository to ZimaOS (Hierarchical)
         run: |
-          mkdir -p /DATA/AppData/nexus/templates
-          mkdir -p /DATA/AppData/nexus/data/memory/rules
-          cp core/* /DATA/AppData/nexus/
-          cp -r templates/* /DATA/AppData/nexus/templates/
-          cp -r data/memory/* /DATA/AppData/nexus/data/memory/
-          cp core/requirements.txt /DATA/AppData/nexus/
+          # Sunucuda ana dizini hazırla
+          mkdir -p /DATA/AppData/nexus
+          # Klasörleri hiyerarşik olarak kopyala (Mirror)
+          cp -r core /DATA/AppData/nexus/
+          cp -r scripts /DATA/AppData/nexus/
+          cp -r data /DATA/AppData/nexus/
+          cp -r templates /DATA/AppData/nexus/
+          cp Dockerfile /DATA/AppData/nexus/
+          cp requirements.txt /DATA/AppData/nexus/ 2>/dev/null || cp core/requirements.txt /DATA/AppData/nexus/
 
       - name: Restart Nexus container
         run: docker restart nexus-mcp
@@ -35,63 +38,18 @@ jobs:
           done
           echo "ERROR: Server did not become healthy after 60s" && exit 1
 
-      - name: Install test deps
-        run: pip3 install pytest httpx --quiet --user
-
-      - name: Warm up embedding model
-        run: |
-          curl -sf "http://192.168.1.186:8900/api/search/hybrid?q=warmup&top_k=1&use_vector=false" || true
-          sleep 3
-
-      - name: Run integration tests (50 tests)
+      - name: Run v3.1 Integration Tests
         env:
           NEXUS_BASE_URL: "http://192.168.1.186:8900"
-          NEXUS_TIMEOUT: "60.0"
         run: |
-          python3 -m pytest tests/ -v --tb=long \
-            --junitxml=/tmp/nexus-test-results.xml -x
-
-      - name: Run Nexus Doctor (Update Health Metrics)
-        if: success()
-        run: |
-          export NEXUS_HUB_URL=http://192.168.1.186:8900
-          python3 /DATA/AppData/nexus/src/nexus-hub/scripts/nexus-doctor.py
+          # Repo yapısıyla aynı yerdeki scripti çalıştır
+          python3 /DATA/AppData/nexus/core/build_skill_index.py
+          python3 /DATA/AppData/nexus/scripts/nexus-dream.py --light
+          python3 -m pytest tests/ -v --tb=short
 
       - name: Write deploy info to memory
         if: success()
         run: |
           curl -sf -X PUT http://192.168.1.186:8900/api/memory/last-deploy \
             -H "Content-Type: application/json" \
-            -d "{\"content\": \"branch: test\ncommit: ${{ github.sha }}\ndeployed_at: $(date -u +%Y-%m-%dT%H:%M:%SZ)\nstatus: success\nenvironment: test\"}"
-
-      - name: Upload test results
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: integration-test-${{ github.sha }}
-          path: /tmp/nexus-test-results.xml
-
-  backup-memory:
-    runs-on: self-hosted
-    needs: deploy-and-test
-    if: success()
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.BACKUP_GITHUB_TOKEN }}
-          fetch-depth: 1
-
-      - name: Sync memory and skills from ZimaOS
-        run: |
-          rsync -av /DATA/AppData/nexus/src/data/memory/ data/memory/ 2>/dev/null || true
-          rsync -av /DATA/AppData/nexus/src/data/skills/ data/skills/ \
-            --exclude="*.tmp" --max-size=500k 2>/dev/null || true
-
-      - name: Commit and push backup
-        run: |
-          git config user.email "nexus-bot@evatechnosoft"
-          git config user.name "Nexus CI Bot"
-          git add data/memory/ data/skills/
-          git diff --cached --quiet || \
-            git commit -m "backup(test): memory+skills [${GITHUB_SHA:0:8}] $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-          git push origin test
+            -d "{\"content\": \"branch: test\ncommit: ${{ github.sha }}\nstatus: success\nhierarchy: v3-standard\"}"

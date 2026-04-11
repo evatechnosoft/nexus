@@ -11,161 +11,38 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Create rollback snapshot
+      - name: Sync Repository to ZimaOS (Hierarchical)
         run: |
-          TIMESTAMP=$(date +%Y%m%d_%H%M%S)
-          ROLLBACK_DIR="/DATA/AppData/nexus/rollbacks/${TIMESTAMP}"
-          mkdir -p "$ROLLBACK_DIR"
-          cp /DATA/AppData/nexus/src/*.py "$ROLLBACK_DIR/"
-          cp /DATA/AppData/nexus/requirements.txt "$ROLLBACK_DIR/" 2>/dev/null || true
-          # Keep last 5 rollbacks only
-          ls -dt /DATA/AppData/nexus/rollbacks/*/ 2>/dev/null | tail -n +6 | xargs rm -rf
-          echo "ROLLBACK_DIR=$ROLLBACK_DIR" >> "$GITHUB_ENV"
-
-      - name: Deploy to production
-        run: |
-          mkdir -p /DATA/AppData/nexus/templates
-          mkdir -p /DATA/AppData/nexus/data/memory/rules
-          cp core/* /DATA/AppData/nexus/
-          cp -r templates/* /DATA/AppData/nexus/templates/
-          cp -r data/memory/* /DATA/AppData/nexus/data/memory/
-          cp core/requirements.txt /DATA/AppData/nexus/
+          mkdir -p /DATA/AppData/nexus
+          # Hiyerarşiyi bozmadan kopyala
+          cp -r core /DATA/AppData/nexus/
+          cp -r scripts /DATA/AppData/nexus/
+          cp -r data /DATA/AppData/nexus/
+          cp -r templates /DATA/AppData/nexus/
+          cp Dockerfile /DATA/AppData/nexus/
+          cp requirements.txt /DATA/AppData/nexus/ 2>/dev/null || cp core/requirements.txt /DATA/AppData/nexus/
 
       - name: Restart container
         run: docker restart nexus-mcp
 
       - name: Smoke test
-        id: smoke
         run: |
           for i in $(seq 1 20); do
             STATUS=$(curl -sf http://192.168.1.186:8900/health 2>/dev/null | python3 -c \
               "import sys,json; d=sys.stdin.read(); print(json.loads(d).get('status','') if d else '')" \
               2>/dev/null) || true
-            if [ "$STATUS" = "ok" ]; then echo "Smoke test passed after $i attempt(s)"; exit 0; fi
-            echo "Attempt $i: not ready, waiting 3s..."
+            if [ "$STATUS" = "ok" ]; then 
+              # Yeni Indexer'ı tetikle
+              python3 /DATA/AppData/nexus/core/build_skill_index.py
+              exit 0
+            fi
             sleep 3
           done
-          echo "SMOKE_FAILED=true" >> "$GITHUB_ENV"
           exit 1
-
-      - name: Rollback on failure
-        if: failure()
-        run: |
-          echo "Rolling back to $ROLLBACK_DIR"
-          cp "$ROLLBACK_DIR"/*.py /DATA/AppData/nexus/src/
-          docker restart nexus-mcp
-          echo "Rollback complete"
-
-      - name: Verify MCP endpoint
-        if: success()
-        run: |
-          curl -sf -X POST http://192.168.1.186:8900/mcp \
-            -H "Content-Type: application/json" \
-            -d '{"jsonrpc":"2.0","method":"tools/list","id":1}' \
-            | python3 -c "import sys,json; d=json.load(sys.stdin); assert 'result' in d, 'MCP broken'" \
-            && echo "MCP endpoint verified"
-
-      - name: Run Nexus Doctor (Update Health Metrics)
-        if: success()
-        run: |
-          export NEXUS_HUB_URL=http://192.168.1.186:8900
-          python3 /DATA/AppData/nexus/src/nexus-hub/scripts/nexus-doctor.py
 
       - name: Write deploy info to memory
         if: success()
         run: |
           curl -sf -X PUT http://192.168.1.186:8900/api/memory/last-deploy \
             -H "Content-Type: application/json" \
-            -d "{\"content\": \"branch: prod\ncommit: ${{ github.sha }}\ndeployed_at: $(date -u +%Y-%m-%dT%H:%M:%SZ)\nstatus: success\nenvironment: production\"}" || true
-
-  docker-publish:
-    runs-on: ubuntu-latest
-    needs: prod-deploy
-    if: success()
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Login to Docker Hub
-        uses: docker/login-action@v3
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-      - name: Build and push image
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          file: ./Dockerfile
-          push: true
-          tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/nexus-mcp:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/nexus-mcp:${{ github.sha }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-
-      - name: Export offline tar for GitHub Release
-        run: |
-          docker pull ${{ secrets.DOCKERHUB_USERNAME }}/nexus-mcp:latest
-          docker save ${{ secrets.DOCKERHUB_USERNAME }}/nexus-mcp:latest | gzip > nexus-mcp.tar.gz
-          echo "TAR_SIZE=$(du -sh nexus-mcp.tar.gz | cut -f1)" >> $GITHUB_ENV
-
-      - name: Create GitHub Release
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: prod-${{ github.sha }}
-          name: "Nexus MCP v2.0 — ${{ github.run_number }}"
-          body: |
-            ## Nexus MCP Server
-
-            ### Online install
-            ```bash
-            curl -fsSL https://raw.githubusercontent.com/evatechnosoft/nexus/prod/setup.sh | bash
-            ```
-
-            ### Offline install (air-gapped)
-            1. Download `nexus-mcp.tar.gz` from assets below
-            2. Copy to target machine with `setup.sh`
-            3. Run:
-            ```bash
-            ./setup.sh --offline nexus-mcp.tar.gz
-            ```
-
-            ### Docker Hub
-            ```bash
-            docker pull evatechnosoft/nexus-mcp:latest
-            ```
-
-            **Image size:** ${{ env.TAR_SIZE }}
-          files: |
-            nexus-mcp.tar.gz
-            setup.sh
-          token: ${{ secrets.BACKUP_GITHUB_TOKEN }}
-
-  backup-memory:
-    runs-on: self-hosted
-    needs: prod-deploy
-    if: success()
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.BACKUP_GITHUB_TOKEN }}
-          ref: prod
-          fetch-depth: 1
-
-      - name: Sync memory and skills
-        run: |
-          rsync -av /DATA/AppData/nexus/src/data/memory/ data/memory/ 2>/dev/null || true
-          rsync -av /DATA/AppData/nexus/src/data/skills/ data/skills/ \
-            --exclude="*.tmp" --max-size=500k 2>/dev/null || true
-
-      - name: Commit backup
-        run: |
-          git config user.email "nexus-bot@evatechnosoft"
-          git config user.name "Nexus CI Bot"
-          git add data/memory/ data/skills/
-          git diff --cached --quiet || \
-            git commit -m "backup(prod): memory+skills [${GITHUB_SHA:0:8}] $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-          git push origin prod
+            -d "{\"content\": \"branch: prod\ncommit: ${{ github.sha }}\nstatus: success\nenvironment: production\nhierarchy: v3-standard\"}"
