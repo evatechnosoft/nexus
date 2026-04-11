@@ -3,30 +3,30 @@ id: rule--nexus--branching
 type: workflow
 context: global
 extends: rule--nexus--master
-description: Nexus Hub iÃ§in kesinleÅŸmiÅŸ dallanma (branching) ve commit protokolÃ¼.
+description: Nexus Hub için kesinleşmiş dallanma (branching) ve commit protokolü.
 ---
 # NEXUS BRANCHING PROTOCOL (STRICT)
 
-Bu kural 11 Nisan 2026 itibariyle MÃœHÃœRLENMÄ°ÅžTÄ°R. HiÃ§bir AI veya insan operatÃ¶r doÄŸrudan `dev` veya `prod` branch'lerine commit atamaz.
+Bu kural 11 Nisan 2026 itibariyle MÜHÜRLENMİŞTİR. Hiçbir AI veya insan operatör doğrudan `dev` veya `prod` branch'lerine commit atamaz.
 
 ## 🌿 DALLANMA STANDARTLARI
-TÃ¼m deÄŸiÅŸiklikler iÃ§in yeni bir dal (branch) aÃ§Ä±lmasÄ± ZORUNLUDUR:
+Tüm değişiklikler için yeni bir dal (branch) açılması ZORUNLUDUR:
 
-1. **feature/**: Yeni Ã¶zellikler, uydular (satellites) veya bÃ¼yÃ¼k hiyerarÅŸi deÄŸiÅŸiklikleri.
-   - *Ã–rnek:* `feature/nexus-curator-v2`
-2. **fix/**: Bilinen hatalarÄ±n, bozulan script'lerin dÃ¼zeltilmesi.
-   - *Ã–rnek:* `fix/nexus-sync-script`
-3. **bug/**: Beklenmedik davranÄ±ÅŸlarÄ±n, Ã§akÄ±ÅŸmalarÄ±n (conflicts) giderilmesi.
-   - *Ã–rnek:* `bug/index-path-conflict`
+1. **feature/**: Yeni özellikler, uydular (satellites) veya büyük hiyerarşi değişiklikleri.
+   - *Örnek:* `feature/nexus-curator-v2`
+2. **fix/**: Bilinen hataların, bozulan script'lerin düzeltilmesi.
+   - *Örnek:* `fix/nexus-sync-script`
+3. **bug/**: Beklenmedik davranışların, çakışmaların (conflicts) giderilmesi.
+   - *Örnek:* `bug/index-path-conflict`
 
 ## 🔐 MERGE KURALLARI
-- HiÃ§bir dal, `nexus-doctor` raporu %100 "HEALTHY" yanmadan `dev` ile birleÅŸtirilemez.
-- `dev` branch'i her zaman "staging" (test) ortamÄ±dÄ±r.
-- `prod` branch'i sadece CD (Continuous Deployment) onayÄ±yla gÃ¼ncellenir.
+- Hiçbir dal, `nexus-doctor` raporu %100 "HEALTHY" yanmadan `dev` ile birleştirilemez.
+- `dev` branch'i her zaman "staging" (test) ortamıdır.
+- `prod` branch'i sadece CD (Continuous Deployment) onayıyla güncellenir.
 
-## 🖋️ COMMIT PROTOKOLÃœ
-- Commit mesajlarÄ± `feat:`, `fix:`, `refactor:`, `docs:` gibi Conventional Commits standartlarÄ±na uygun olmalÄ±dÄ±r.
-- DeÄŸiÅŸiklik sonrasÄ± `nexus-sync build` ve `build_skill_index.py` Ã§alÄ±ÅŸtÄ±rÄ±lmÄ±ÅŸ olmalÄ±dÄ±r.
+## 🖋️ COMMIT PROTOKOLÜ
+- Commit mesajları `feat:`, `fix:`, `refactor:`, `docs:` gibi Conventional Commits standartlarına uygun olmalıdır.
+- Değişiklik sonrası `nexus-sync build` ve `build_skill_index.py` çalıştırılmış olmalıdır.
 
-**MÃœHÃœR TARÄ°HÄ°:** 11 Nisan 2026, 16:25 (Istanbul UTC+3)
-**DURUM:** AKTÄ°F / ZORUNLU
+**MÜHÜR TARİHİ:** 11 Nisan 2026, 16:25 (Istanbul UTC+3)
+**DURUM:** AKTİF / ZORUNLU
