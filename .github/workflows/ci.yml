@@ -19,13 +19,13 @@ jobs:
           cache: pip
 
       - name: Install dev dependencies
-        run: pip install -r nexus-hub/core/requirements-dev.txt
+        run: pip install -r core/requirements-dev.txt
 
       - name: Ruff lint
-        run: ruff check nexus-hub/core/ tests/
+        run: ruff check core/ tests/
 
       - name: Ruff format check
-        run: ruff format --check nexus-hub/core/ tests/
+        run: ruff format --check core/ tests/
 
   unit-tests:
     runs-on: ubuntu-latest
@@ -41,8 +41,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r nexus-hub/core/requirements.txt
-          pip install -r nexus-hub/core/requirements-dev.txt
+          pip install -r core/requirements.txt
+          pip install -r core/requirements-dev.txt
 
       - name: Prepare mock data dir
         run: |
@@ -52,9 +52,9 @@ jobs:
       - name: Start mock Nexus server
         run: |
           NEXUS_DATA_DIR=/tmp/nexus-test \
-          PYTHONPATH=nexus-hub/core \
+          PYTHONPATH=core \
           uvicorn nexus_mcp_server:app \
-            --app-dir nexus-hub/core --host 127.0.0.1 --port 8900 &
+            --app-dir core --host 127.0.0.1 --port 8900 &
           for i in $(seq 1 20); do
             curl -sf http://127.0.0.1:8900/health && break
             sleep 1

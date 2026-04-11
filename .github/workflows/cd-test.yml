@@ -6,7 +6,7 @@ on:
 
 jobs:
   deploy-and-test:
-    runs-on: [self-hosted, zimaos]
+    runs-on: self-hosted
     environment: test
     steps:
       - uses: actions/checkout@v4
@@ -70,7 +70,7 @@ jobs:
           path: /tmp/nexus-test-results.xml
 
   backup-memory:
-    runs-on: [self-hosted, zimaos]
+    runs-on: self-hosted
     needs: deploy-and-test
     if: success()
     steps:
