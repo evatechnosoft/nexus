@@ -1,0 +1,39 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python scripts/nexus-hooks.py pre-use"
+          }
+        ]
+      },
+      {
+        "matcher": "Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python scripts/nexus-hooks.py pre-use"
+          }
+        ]
+      },
+      {
+        "matcher": "WriteFile",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python scripts/nexus-hooks.py pre-use"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "type": "command",
+        "command": "python scripts/nexus-hooks.py stop"
+      }
+    ]
+  }
+}
