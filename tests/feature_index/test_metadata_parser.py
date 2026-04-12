@@ -9,8 +9,8 @@ from pathlib import Path
 core_path = Path(__file__).parent.parent.parent / "core"
 sys.path.append(str(core_path))
 
-# build-skill-index.py dosyasını asen import et
-spec = importlib.util.spec_from_file_location("build_skill_index", str(core_path / "build-skill-index.py"))
+# build_skill_index.py dosyasını asen import et
+spec = importlib.util.spec_from_file_location("build_skill_index", str(core_path / "build_skill_index.py"))
 build_skill_index = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(build_skill_index)
 
