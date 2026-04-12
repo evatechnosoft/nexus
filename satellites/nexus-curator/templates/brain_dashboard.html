@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus Curator Satellite v1.0</title>
+    <title>Nexus Hub Admin Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/static/style.css">
     <style>
         :root {
             --glass-bg: rgba(255, 255, 255, 0.02);
@@ -14,7 +13,7 @@
             --neon-blue: #38bdf8;
             --neon-purple: #a855f7;
             --neon-green: #22c55e;
-            --neon-yellow: #facc15;
+            --neon-red: #ef4444;
         }
 
         body {
@@ -22,26 +21,83 @@
             color: #f1f5f9;
             font-family: 'Inter', sans-serif;
             min-height: 100vh;
+            margin: 0;
         }
 
-        .curator-arena {
-            padding: 5vh 0;
+        /* --- SATELLITE ADMIN BANNER --- */
+        .admin-banner {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 0.8rem 2rem;
             display: flex;
+            align-items: center;
             gap: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
-        /* Panel Stilleri */
+        .sat-pill {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 50px;
+            padding: 6px 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .sat-pill:hover {
+            border-color: var(--neon-blue);
+            background: rgba(255,255,255,0.08);
+        }
+
+        .sat-pill.active {
+            border-color: var(--neon-green);
+            background: rgba(34, 197, 94, 0.1);
+        }
+
+        .sat-indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            transition: all 0.4s ease;
+        }
+
+        .sat-on { background: var(--neon-green); box-shadow: 0 0 12px var(--neon-green); }
+        .sat-off { background: #475569; }
+
+        .sat-label {
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: #94a3b8;
+        }
+
+        .sat-pill.active .sat-label { color: #f1f5f9; }
+
+        /* --- MAIN CONTENT AREA --- */
+        .curator-arena {
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1.5fr;
+            gap: 20px;
+            height: calc(100vh - 70px);
+        }
+
         .nexus-panel {
             background: var(--glass-bg);
             backdrop-filter: blur(20px);
             border: 1px solid var(--glass-border);
             border-radius: 24px;
             padding: 1.5rem;
-            flex: 1;
-            min-height: 80vh;
-            max-height: 90vh;
-            overflow-y: auto;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
         }
 
         .panel-header {
@@ -56,312 +112,213 @@
         .panel-title {
             font-weight: 900;
             letter-spacing: 2px;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: var(--neon-blue);
+            text-transform: uppercase;
         }
 
-        /* Liste Elemanları */
-        .item-card {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 12px;
-            padding: 15px;
-            margin-bottom: 15px;
-            transition: all 0.3s ease;
+        .scroll-area {
+            flex: 1;
+            overflow-y: auto;
+            padding-right: 5px;
         }
+
+        .scroll-area::-webkit-scrollbar { width: 4px; }
+        .scroll-area::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 10px; }
+
+        /* --- CARDS --- */
+        .item-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 16px;
+            padding: 15px;
+            margin-bottom: 12px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
         .item-card:hover {
-            background: rgba(255,255,255,0.08);
+            background: rgba(255,255,255,0.05);
             border-color: var(--neon-blue);
             transform: translateX(5px);
         }
 
-        .btn-action {
-            font-size: 0.7rem;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: bold;
-            letter-spacing: 1px;
+        .btn-nexus {
+            font-size: 0.65rem;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-weight: 700;
             text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            transition: all 0.2s;
         }
 
-        .btn-ollama { background: var(--neon-purple); border: none; color: white; }
-        .btn-approve { background: var(--neon-green); border: none; color: white; }
-        
+        .btn-blue { background: var(--neon-blue); color: #010409; }
+        .btn-purple { background: var(--neon-purple); color: white; }
+        .btn-green { background: var(--neon-green); color: #010409; }
+
         .loading-overlay {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.8);
+            background: rgba(1, 4, 9, 0.9);
             display: none;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            z-index: 1000;
+            z-index: 2000;
         }
     </style>
 </head>
 <body>
 
     <div class="loading-overlay" id="loading">
-        <div class="text-center">
-            <div class="spinner-border text-primary mb-3" role="status"></div>
-            <div class="fw-bold" id="loading-text">Ollama Processing...</div>
+        <div class="spinner-border text-info mb-3" style="width: 3rem; height: 3rem;"></div>
+        <div class="h5 fw-light" id="loading-text">Intelligence Processing...</div>
+    </div>
+
+    <!-- SATELLITE ADMIN PANEL -->
+    <div class="admin-banner" id="sat-banner">
+        <div style="font-weight: 900; font-size: 0.9rem; letter-spacing: 3px; color: var(--neon-blue); margin-right: 20px; border-right: 1px solid rgba(255,255,255,0.1); padding-right: 25px;">
+            NEXUS HUB <span style="color: white; font-weight: 200;">v3.1</span>
+        </div>
+        <div id="sat-list" class="d-flex gap-3 align-items-center">
+            <!-- Satellites will be injected here -->
+            <span class="text-muted small">Scanning satellites...</span>
         </div>
     </div>
 
-    <div class="container-fluid curator-arena">
+    <div class="curator-arena">
         
-        <!-- SOL: Ham Taslaklar (Scout'lardan) -->
+        <!-- PANEL 1: RAW DRAFTS -->
         <div class="nexus-panel">
             <div class="panel-header">
-                <div class="panel-title"><i class="fas fa-satellite"></i> RAW SCOUT DRAFTS</div>
-                <button class="btn btn-sm btn-outline-info" onclick="loadDrafts()"><i class="fas fa-sync"></i></button>
+                <div class="panel-title"><i class="fas fa-satellite me-2"></i> Raw Drafts</div>
+                <button class="btn btn-sm btn-outline-info border-0" onclick="loadDrafts()"><i class="fas fa-sync-alt"></i></button>
             </div>
-            <div id="drafts-list">
-                <!-- Ham taslaklar buraya -->
+            <div id="drafts-list" class="scroll-area">
+                <!-- Data here -->
             </div>
         </div>
 
-        <!-- ORTA: İşleme Pipeline (Ollama) -->
+        <!-- PANEL 2: AI PIPELINE -->
         <div class="nexus-panel">
             <div class="panel-header">
-                <div class="panel-title"><i class="fas fa-brain"></i> AI PROCESSED (OLLAMA)</div>
-                <button class="btn btn-sm btn-outline-info" onclick="loadProcessed()"><i class="fas fa-sync"></i></button>
+                <div class="panel-title"><i class="fas fa-brain me-2"></i> AI Processed</div>
+                <button class="btn btn-sm btn-outline-info border-0" onclick="loadProcessed()"><i class="fas fa-sync-alt"></i></button>
             </div>
-            <div id="processed-list">
-                <!-- İşlenmiş taslaklar buraya -->
+            <div id="processed-list" class="scroll-area">
+                <!-- Data here -->
             </div>
         </div>
 
-        <!-- SAĞ: Önizleme Paneli -->
-        <div class="nexus-panel" style="flex: 1.5;">
+        <!-- PANEL 3: INTELLIGENCE PREVIEW -->
+        <div class="nexus-panel">
             <div class="panel-header">
-                <div class="panel-title"><i class="fas fa-eye"></i> NEXUS INTELLIGENCE PREVIEW</div>
+                <div class="panel-title"><i class="fas fa-eye me-2"></i> Intelligence Preview</div>
             </div>
-            <div id="preview-content" class="p-3">
-                <p class="text-muted text-center mt-5">Select a draft to preview content</p>
+            <div id="preview-content" class="scroll-area p-2">
+                <div class="text-center text-muted mt-5">
+                    <i class="fas fa-fingerprint fa-3x mb-3 opacity-25"></i>
+                    <p>Select an item to view intelligence data</p>
+                </div>
             </div>
         </div>
 
     </div>
 
     <script>
+        // --- SATELLITE LOGIC ---
+        async function loadSatellites() {
+            try {
+                const r = await fetch('/api/satellites');
+                const data = await r.json();
+                const container = document.getElementById('sat-list');
+                container.innerHTML = '';
+
+                Object.entries(data).forEach(([name, info]) => {
+                    const pill = document.createElement('div');
+                    pill.className = `sat-pill ${info.enabled ? 'active' : ''}`;
+                    pill.onclick = () => toggleSatellite(name, !info.enabled);
+                    pill.innerHTML = `
+                        <div class="sat-indicator ${info.enabled ? 'sat-on' : 'sat-off'}"></div>
+                        <div class="sat-label">${name.replace('nexus-', '').toUpperCase()}</div>
+                    `;
+                    container.appendChild(pill);
+                });
+            } catch (e) { console.error("Sat Error:", e); }
+        }
+
+        async function toggleSatellite(name, enabled) {
+            try {
+                await fetch(`/api/satellites/toggle/${name}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ enabled: enabled })
+                });
+                loadSatellites();
+            } catch (e) { console.error("Toggle Error:", e); }
+        }
+
+        // --- CONTENT LOGIC ---
         async function loadDrafts() {
             const r = await fetch('/api/drafts');
             const data = await r.json();
             const list = document.getElementById('drafts-list');
-            list.innerHTML = '';
-            data.forEach(f => {
-                list.innerHTML += `
-                    <div class="item-card">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="small fw-bold">${f}</span>
-                            <button class="btn btn-action btn-ollama" onclick="processDraft('${f}')">Process</button>
-                        </div>
-                    </div>
-                `;
-            });
+            list.innerHTML = data.map(f => `
+                <div class="item-card d-flex justify-content-between align-items-center">
+                    <div class="small fw-bold text-truncate me-2">${f}</div>
+                    <button class="btn-nexus btn-purple" onclick="processDraft('${f}')">Process</button>
+                </div>
+            `).join('');
         }
 
         async function loadProcessed() {
             const r = await fetch('/api/processed');
             const data = await r.json();
             const list = document.getElementById('processed-list');
-            list.innerHTML = '';
-            data.forEach(f => {
-                list.innerHTML += `
-                    <div class="item-card">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="small fw-bold text-success">${f}</span>
-                            <div class="d-flex gap-2">
-                                <button class="btn btn-action btn-sm btn-outline-light" onclick="previewFile('${f}')">View</button>
-                                <button class="btn btn-action btn-approve" onclick="approveDraft('${f}')">Seal to Nexus</button>
-                            </div>
-                        </div>
+            list.innerHTML = data.map(f => `
+                <div class="item-card">
+                    <div class="small fw-bold text-success mb-2">${f}</div>
+                    <div class="d-flex gap-2">
+                        <button class="btn-nexus btn-blue" style="flex:1" onclick="previewFile('${f}')">View</button>
+                        <button class="btn-nexus btn-green" style="flex:2" onclick="approveDraft('${f}')">Seal to Nexus</button>
                     </div>
-                `;
-            });
+                </div>
+            `).join('');
         }
 
         async function processDraft(filename) {
-            document.getElementById('loading').style.display = 'flex';
-            document.getElementById('loading-text').innerText = 'Ollama Analysing Intelligence...';
+            const overlay = document.getElementById('loading');
+            overlay.style.display = 'flex';
             try {
-                const r = await fetch(`/api/process/${filename}`, { method: 'POST' });
-                const res = await r.json();
-                loadDrafts();
-                loadProcessed();
-            } finally {
-                document.getElementById('loading').style.display = 'none';
-            }
+                await fetch(`/api/process/${filename}`, { method: 'POST' });
+                loadDrafts(); loadProcessed();
+            } finally { overlay.style.display = 'none'; }
         }
 
         async function previewFile(filename) {
-            // Frontend'de basit önizleme (Markdown render edilmeden)
             const r = await fetch(`/api/processed-view/${filename}`);
             const data = await r.json();
             document.getElementById('preview-content').innerHTML = `
-                <div class="bg-black p-4 rounded-4 border border-secondary">
-                    <pre style="white-space: pre-wrap; font-size: 0.85rem; color: #facc15;">${data.content}</pre>
+                <div class="bg-dark p-4 rounded-4 border border-secondary">
+                    <pre style="white-space: pre-wrap; font-family: 'Consolas', monospace; font-size: 0.85rem; color: #facc15;">${data.content}</pre>
                 </div>
             `;
         }
 
         async function approveDraft(filename) {
-            if (!confirm('Seal this intelligence to Nexus Hub?')) return;
-            const r = await fetch(`/api/approve/${filename}`, { method: 'POST' });
-            const res = await r.json();
-            alert('Intelligence Sealed Successfully!');
+            if (!confirm('Seal to Nexus Hub Core?')) return;
+            await fetch(`/api/approve/${filename}`, { method: 'POST' });
             loadProcessed();
         }
 
-        // Init
-        loadDrafts();
-        loadProcessed();
-    </script>
-</body>
-</html>
-
-        <!-- The Curator - Taslak Listesi -->
-        <div class="curator-panel" id="curator-list">
-            <h6 class="mb-4 text-warning fw-black d-flex align-items-center">
-                <i class="fas fa-microchip me-2"></i> THE CURATOR
-            </h6>
-            <div id="drafts-container">
-                <div class="text-muted small">Tarama yapılıyor...</div>
-            </div>
-        </div>
-
-        <!-- Ajan Katı -->
-        <div class="row w-100 justify-content-center">
-            <div class="col-md-4 d-flex justify-content-center">
-                <div class="scout-card">
-                    <div class="sc-title text-info">ALPHA</div>
-                    <div class="l-bar-container">
-                        <div class="l-bar-fill fill-alpha" id="bar-alpha"></div>
-                        <div class="bar-pct" id="t-alpha">0%</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex justify-content-center">
-                <div class="scout-card">
-                    <div class="sc-title text-secondary" style="color: var(--neon-purple) !important;">BETA</div>
-                    <div class="l-bar-container">
-                        <div class="l-bar-fill fill-beta" id="bar-beta"></div>
-                        <div class="bar-pct" id="t-beta">0%</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex justify-content-center">
-                <div class="scout-card">
-                    <div class="sc-title text-success">GAMMA</div>
-                    <div class="l-bar-container">
-                        <div class="l-bar-fill fill-gamma" id="bar-gamma"></div>
-                        <div class="bar-pct" id="t-gamma">0%</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Akış Hatları -->
-        <svg class="stream-svg" viewbox="0 0 1200 800">
-            <path id="p-a" class="flow-line" d="M 300,200 Q 600,300 600,550" />
-            <path id="p-b" class="flow-line" d="M 600,200 Q 600,300 600,550" />
-            <path id="p-g" class="flow-line" d="M 900,200 Q 600,300 600,550" />
-            
-            <circle r="4" fill="var(--neon-blue)" class="glow-pkt"><animateMotion dur="2s" repeatCount="indefinite" path="M 300,200 Q 600,300 600,550" /></circle>
-            <circle r="4" fill="var(--neon-purple)" class="glow-pkt"><animateMotion dur="1.5s" repeatCount="indefinite" path="M 600,200 Q 600,300 600,550" /></circle>
-            <circle r="4" fill="var(--neon-green)" class="glow-pkt"><animateMotion dur="2.5s" repeatCount="indefinite" path="M 900,200 Q 600,300 600,550" /></circle>
-        </svg>
-
-        <!-- Yuvarlatılmış Analizci Tankı -->
-        <div class="analyst-tank">
-            <svg class="triangle-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <defs>
-                    <linearGradient id="grad-liquid" x1="0" y1="1" x2="0" y2="0">
-                        <stop offset="0%" stop-color="#38bdf8" />
-                        <stop offset="50%" stop-color="#a855f7" />
-                        <stop offset="100%" stop-color="#22c55e" />
-                    </linearGradient>
-                    <!-- Maske ile Üçgen Formu (Yuvarlatılmış Köşeler) -->
-                    <clipPath id="tri-mask">
-                        <path d="M 50,5 L 95,90 A 5,5 0 0 1 90,95 L 10,95 A 5,5 0 0 1 5,90 L 45,5 A 5,5 0 0 1 50,5 Z" />
-                    </clipPath>
-                </defs>
-                
-                <!-- Tankın Arkası -->
-                <path d="M 50,5 L 95,90 A 5,5 0 0 1 90,95 L 10,95 A 5,5 0 0 1 5,90 L 45,5 A 5,5 0 0 1 50,5 Z" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.1)" stroke-width="0.5" />
-                
-                <!-- Akışkan Sıvı (Clip-Path ile Üçgen İçinde) -->
-                <rect x="0" id="liquid-rect" y="100" width="100" height="100" clip-path="url(#tri-mask)" class="liquid-wave" />
-            </svg>
-            <div class="analyst-meta">PROCESSING <span id="m-pct">0%</span></div>
-        </div>
-
-        <!-- Küçük Log -->
-        <div class="position-absolute bottom-0 mb-3 small opacity-25" id="log"></div>
-
-    </div>
-
-    <script>
-        function refresh() {
-            fetch('/ops/brain/stats').then(r => r.json()).then(data => {
-                const s = data.scouts;
-                ['alpha', 'beta', 'gamma'].forEach(k => {
-                    const p = Math.min(((s[k] || 0) / 5) * 100, 100);
-                    document.getElementById(`bar-${k}`).style.width = p + '%';
-                    document.getElementById(`t-${k}`).innerText = Math.round(p) + '%';
-                });
-
-                // Doldur-Boşalt Mantığı
-                const total = s.analyst || 0;
-                // SVG'de y ekseni terstir (100 boş, 0 tam dolu)
-                const yPos = 100 - total;
-                document.getElementById('liquid-rect').setAttribute('y', yPos);
-                document.getElementById('m-pct').innerText = Math.round(total) + '%';
-            });
-
-            fetch('/ops/brain/activities').then(r => r.json()).then(acts => {
-                document.getElementById('log').innerText = acts.length ? `Latest: ${acts[0].title}` : '';
-            });
-
+        // Initial Load
+        document.addEventListener('DOMContentLoaded', () => {
+            loadSatellites();
             loadDrafts();
-        }
-
-        function loadDrafts() {
-            fetch('/ops/brain/curate/list').then(r => r.json()).then(drafts => {
-                const container = document.getElementById('drafts-container');
-                if (!drafts || !drafts.length) {
-                    container.innerHTML = '<div class="text-muted small py-4 text-center">Bekleyen taslak yok.</div>';
-                    return;
-                }
-                container.innerHTML = drafts.map(f => `
-                    <div class="draft-item">
-                        <div class="small fw-bold mb-2 text-info" style="font-size: 0.75rem; word-break: break-all;">${f}</div>
-                        <div class="d-flex justify-content-end">
-                            <button class="btn btn-outline-success btn-approve" onclick="approveDraft('${f}')">
-                                <i class="fas fa-check me-1"></i> ONAYLA
-                            </button>
-                        </div>
-                    </div>
-                `).join('');
-            });
-        }
-
-        function approveDraft(file) {
-            if(!confirm('Bu zekâ parçasını ana belleğe mühürlemek istediğinize emin misiniz?')) return;
-            
-            fetch('/ops/brain/curate/approve', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ file })
-            }).then(r => r.json()).then(res => {
-                if(res.status === 'approved') {
-                    loadDrafts();
-                }
-            });
-        }
-
-        setInterval(refresh, 3000);
-        refresh();
+            loadProcessed();
+            setInterval(loadSatellites, 5000); // Sync status every 5s
+        });
     </script>
 </body>
 </html>

@@ -1,7 +1,8 @@
 import os
 import logging
 import httpx
-from fastapi import FastAPI, Request, HTTPException
+import json
+from fastapi import FastAPI, Request, HTTPException, Body
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -10,7 +11,7 @@ from dotenv import load_dotenv
 
 import processor
 
-# .env yükle
+# .env yÃ¼kle
 load_dotenv()
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -18,38 +19,65 @@ log = logging.getLogger("nexus-curator")
 
 app = FastAPI(title="Nexus Curator Satellite")
 
-# Statik ve Template ayarları
-app.mount("/static", StaticFiles(directory="static"), name="static")
-templates = Jinja2Templates(directory="templates")
+# Statik ve Template ayarlarÄ± - Mutlak Yollar
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_DIR = os.path.join(CURRENT_DIR, "static")
+TEMPLATES_DIR = os.path.join(CURRENT_DIR, "templates")
+
+if not os.path.exists(STATIC_DIR): os.makedirs(STATIC_DIR)
+
+app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
+templates = Jinja2Templates(directory=TEMPLATES_DIR)
 
 HUB_URL = os.getenv("NEXUS_HUB_URL")
+# Projenin kök dizinine erişim (satellites/nexus-curator'dan yukarı)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+REGISTRY_PATH = os.path.join(BASE_DIR, "data", "memory", "projects", "satellites.json")
 
 @app.on_event("startup")
 async def startup_event():
     scheduler = AsyncIOScheduler()
-    # TODO: Scout görevlerini buraya ekleyeceğiz (Aşama 1.2)
     scheduler.start()
     app.state.scheduler = scheduler
     log.info("Nexus Curator started. Hub: %s", HUB_URL)
 
 @app.get("/", response_class=HTMLResponse)
 async def read_curator_dashboard(request: Request):
-    """Zekâ Taslakları ve Onay Paneli (The Curator)"""
+    """ZekÃ¢ TaslaklarÄ± ve Onay Paneli (The Curator)"""
     return templates.TemplateResponse("brain_dashboard.html", {"request": request})
 
-@app.get("/api/drafts")
-async def list_drafts():
-    """İşlenmeyi bekleyen ham scout verileri."""
-    draft_path = "./drafts"
-    if not os.path.exists(draft_path): return []
-    return [f for f in os.listdir(draft_path) if f.endswith(".json")]
+# --- SATELLITE CONTROL API ---
 
-@app.get("/api/processed")
-async def list_processed():
-    """Ollama tarafından Nexus formatına getirilmiş, onay bekleyen taslaklar."""
-    processed_path = "./processed"
-    if not os.path.exists(processed_path): return []
-    return [f for f in os.listdir(processed_path) if f.endswith(".md")]
+@app.get("/api/satellites")
+async def get_satellites():
+    """Tüm uyduların durumunu döner."""
+    if not os.path.exists(REGISTRY_PATH):
+        raise HTTPException(status_code=404, detail="Registry not found")
+    with open(REGISTRY_PATH, "r", encoding="utf-8") as f:
+        return json.load(f).get("satellites", {})
+
+@app.post("/api/satellites/toggle/{name}")
+async def toggle_satellite(name: str, enabled: bool = Body(..., embed=True)):
+    """Bir uydunun aktif/pasif durumunu değiştirir."""
+    if not os.path.exists(REGISTRY_PATH):
+        raise HTTPException(status_code=404, detail="Registry not found")
+
+    with open(REGISTRY_PATH, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    if name not in data["satellites"]:
+        raise HTTPException(status_code=404, detail="Satellite not found")
+
+    data["satellites"][name]["enabled"] = enabled
+
+    with open(REGISTRY_PATH, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2)
+
+    log.info(f"Satellite {name} status updated to: {enabled}")
+    return {"status": "success", "name": name, "enabled": enabled}
+
+# --- EXISTING API ENDPOINTS ---
+
 
 @app.post("/api/process/{filename}")
 async def process_with_ollama(filename: str):
