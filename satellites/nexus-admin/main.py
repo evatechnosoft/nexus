@@ -24,7 +24,8 @@ if not os.path.exists(TEMPLATES_DIR): os.makedirs(TEMPLATES_DIR)
 
 # Project Root Paths
 BASE_DIR = os.path.dirname(os.path.dirname(CURRENT_DIR))
-REGISTRY_PATH = os.path.join(BASE_DIR, "data", "memory", "projects", "satellites.json")
+CONFIG_DIR = os.getenv("NEXUS_CONFIG_DIR", os.path.join(BASE_DIR, "nexus-configs"))
+REGISTRY_PATH = os.path.join(CONFIG_DIR, "satellites.json")
 DOCTOR_SCRIPT = os.path.join(BASE_DIR, "scripts", "nexus-doctor.py")
 
 app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
@@ -57,9 +58,10 @@ async def toggle_satellite(name: str, enabled: bool = Body(..., embed=True)):
 
 @app.post("/api/system/ignite")
 async def ignite_satellites():
-    """Tüm aktif uyduları scripts/nexus-panel.py --start üzerinden ateşle."""
+    """Tüm aktif uyduları configs/runner.py --start üzerinden ateşle."""
     try:
-        cmd = [sys.executable, os.path.join(BASE_DIR, "scripts", "nexus-panel.py"), "--start"]
+        runner_path = os.path.join(CONFIG_DIR, "runner.py")
+        cmd = [sys.executable, runner_path, "--start"]
         subprocess.Popen(cmd, cwd=BASE_DIR)
         return {"status": "Ignition command sent"}
     except Exception as e:

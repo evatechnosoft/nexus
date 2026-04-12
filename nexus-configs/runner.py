@@ -4,9 +4,12 @@ import json
 import subprocess
 import time
 
-REGISTRY_PATH = "data/memory/projects/satellites.json"
-LOG_DIR = "logs/satellites"
-PYTHON_EXE = os.path.join(".venv", "Scripts", "python.exe") if os.name == "nt" else os.path.join(".venv", "bin", "python")
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CONFIG_DIR = os.getenv("NEXUS_CONFIG_DIR", os.path.join(BASE_DIR, "nexus-configs"))
+REGISTRY_PATH = os.path.join(CONFIG_DIR, "satellites.json")
+LOG_DIR = os.path.join(BASE_DIR, "logs", "satellites")
+
+PYTHON_EXE = os.path.join(BASE_DIR, ".venv", "Scripts", "python.exe") if os.name == "nt" else os.path.join(BASE_DIR, ".venv", "bin", "python")
 
 if not os.path.exists(PYTHON_EXE):
     PYTHON_EXE = sys.executable
@@ -21,35 +24,36 @@ def start_satellites():
     satellites = load_satellites()
     if not os.path.exists(LOG_DIR):
         os.makedirs(LOG_DIR)
-        
-    print(f"\n🚀 IGNITION: Aktif uydular ateşleniyor...\n")
-    
+
+    print(f"\n🚀 IGNITION: Aktif uydular ateşleniyor... (Config: {CONFIG_DIR})\n")
+
     processes = []
     for name, info in satellites.items():
         if info["enabled"]:
-            entry_path = info["entry"]
+            entry_path = os.path.join(BASE_DIR, info["entry"])
             if not os.path.exists(entry_path):
                 print(f"❌ HATA: {name} için giriş dosyası bulunamadı: {entry_path}")
                 continue
-                
+
             log_file = os.path.join(LOG_DIR, f"{name}.log")
             with open(log_file, "a") as log:
-                # Bağımsız süreç olarak başlat
                 process = subprocess.Popen(
                     [PYTHON_EXE, entry_path],
                     stdout=log,
                     stderr=log,
+                    cwd=BASE_DIR,
                     creationflags=subprocess.CREATE_NEW_CONSOLE if os.name == "nt" else 0
                 )
                 print(f"🟢 {name:<20} | BAŞLATILDI (PID: {process.pid}) | LOG: {log_file}")
                 processes.append(process)
-    
+
     if not processes:
-        print("ℹ️  Aktif edilecek uydu bulunamadı. Lütfen /enable komutunu kullanın.")
+        print("ℹ️  Aktif edilecek uydu bulunamadı.")
     else:
         print(f"\n✅ Toplam {len(processes)} uydu devrede.")
 
 def show_panel():
+
     satellites = load_satellites()
     
     print("\n" + "="*50)

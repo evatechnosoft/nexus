@@ -32,7 +32,8 @@ templates = Jinja2Templates(directory=TEMPLATES_DIR)
 HUB_URL = os.getenv("NEXUS_HUB_URL")
 # Projenin kök dizinine erişim (satellites/nexus-curator'dan yukarı)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-REGISTRY_PATH = os.path.join(BASE_DIR, "data", "memory", "projects", "satellites.json")
+CONFIG_DIR = os.getenv("NEXUS_CONFIG_DIR", os.path.join(BASE_DIR, "nexus-configs"))
+REGISTRY_PATH = os.path.join(CONFIG_DIR, "satellites.json")
 
 @app.on_event("startup")
 async def startup_event():
