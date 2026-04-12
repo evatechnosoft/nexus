@@ -1,3 +1,10 @@
+---
+id: rule--nexus--pointers
+type: rule
+context: global
+version: 1.0
+tags: root, core, pointers
+---
 # ⚠️ NEXUS ROOT POINTERS (MANDATORY HOOKS) ⚠️
 
 Bu dosya sistemdeki EN KRİTİK dosyadır. Tüm AI operatörleri (Claude, Gemini, Cursor vb.) işleme başlamadan önce bu **düğümleri (pointers)** takip etmeli ve ilgili kuralları **on-demand (ihtiyaç anında)** okumalıdır. Hafızanı (context) temiz tutmak için tüm kuralları ezberleme, sadece aşağıdakileri uygula!

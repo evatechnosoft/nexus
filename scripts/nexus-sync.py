@@ -132,10 +132,37 @@ def cmd_build(args):
         print("❌ manifest.yaml bulunamadı.")
         return
 
-    # Basit bir build simülasyonu (manifest'e göre dosyaları birleştir)
-    print(f"🔨 NEXUS BUILD: .ai/ -> Target files")
-    # Bu kısım manifest.yaml içeriğine göre zenginleştirilebilir
-    print("✅ Build tamamlandı.")
+    print(f"🔨 NEXUS BUILD: Canonical kaynaklar hedeflere derleniyor...")
+    manifest = load_yaml(manifest_path)
+    targets = manifest.get("targets", {})
+    distribution = manifest.get("distribution", [])
+    
+    target_content = {t: [] for t in targets}
+    
+    for entry in distribution:
+        source = entry.get("source")
+        dist_targets = entry.get("targets", [])
+        
+        src_path = ai_dir / source
+        if not src_path.exists():
+            print(f"⚠️  Kaynak bulunamadı: {source}")
+            continue
+            
+        content = src_path.read_text(encoding="utf-8")
+        _, body = strip_yaml_frontmatter(content)
+        
+        for t in dist_targets:
+            if t in target_content:
+                target_content[t].append(body.strip())
+                
+    for t_name, t_cfg in targets.items():
+        if not t_cfg.get("enabled", False):
+            continue
+            
+        output_file = root / t_cfg.get("output", f"{t_name.upper()}.md")
+        combined = "\n\n---\n\n".join(target_content[t_name])
+        output_file.write_text(combined, encoding="utf-8")
+        print(f"✅ Üretildi: {output_file}")
 
 def get_metadata(content: str) -> dict:
     """Markdown dosyasındaki Frontmatter bloğunu parse eder."""
