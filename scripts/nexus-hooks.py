@@ -22,6 +22,29 @@ def handle_pre_use():
     print("✅ [NEXUS HOOK] Pre-Use Validation Passed.")
     sys.exit(0)
 
+def handle_post_use():
+    """Tool çalıştıktan sonra (Post-Use) tetiklenir."""
+    # Sadece yeni bir skill veya hafıza (memory) eklendiğinde (veya değiştiğinde) senkronizasyon yap.
+    try:
+        status = subprocess.check_output(["git", "status", "--porcelain"]).decode().strip()
+        if "data/memory/" in status or ".ai/" in status:
+            print("🧠 [NEXUS HOOK] Yeni Hafıza/Skill kazanımı tespit edildi!")
+            print("🚀 Otomatik Distribute ve Push tetikleniyor...")
+            
+            # 1. Distribute (Skill ve Kural tasnifi)
+            subprocess.run([sys.executable, "scripts/nexus-sync.py", "distribute"], capture_output=True)
+            
+            # 2. Push (ZimaOS Hub'a mühürleme)
+            push_res = subprocess.run([sys.executable, "scripts/nexus-sync.py", "push"], capture_output=True, text=True)
+            
+            if "Başarılı" in push_res.stdout or "işlendi" in push_res.stdout:
+                print("✨ Kazanım merkezi hafızaya (Hub) mühürlendi.")
+            else:
+                print("⚠️ Hub'a push edilirken bir sorun oluştu.")
+    except Exception as e:
+        pass
+    sys.exit(0)
+
 def handle_stop():
     """Claude/LLM işlemi bitirmeden önce (StopHook) tetiklenir."""
     print("⚠️ [NEXUS HOOK] Stop Hook Tetiklendi. Hafıza ve limit kontrolü yapılıyor...")
@@ -48,6 +71,8 @@ if __name__ == "__main__":
     
     if hook_type == "pre-use":
         handle_pre_use()
+    elif hook_type == "post-use":
+        handle_post_use()
     elif hook_type == "stop":
         handle_stop()
     else:
