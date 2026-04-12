@@ -32,7 +32,7 @@ templates = Jinja2Templates(directory=TEMPLATES_DIR)
 
 @app.get("/", response_class=HTMLResponse)
 async def read_admin_dashboard(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
+    return templates.TemplateResponse(request, "index.html")
 
 # --- SATELLITE MANAGEMENT ---
 
@@ -71,7 +71,8 @@ async def ignite_satellites():
 async def run_doctor():
     """Nexus Doctor raporunu çalıştır ve sonucu dön."""
     try:
-        result = subprocess.run([sys.executable, DOCTOR_SCRIPT], capture_output=True, text=True)
+        # Encoding UTF-8 zorunlu (Türkçe karakterler için)
+        result = subprocess.run([sys.executable, DOCTOR_SCRIPT], capture_output=True, text=True, encoding='utf-8', errors='replace')
         return {"output": result.stdout + result.stderr}
     except Exception as e:
         return {"output": f"Doctor Error: {str(e)}"}
@@ -82,7 +83,7 @@ async def get_logs(name: str):
     log_file = os.path.join(BASE_DIR, "logs", "satellites", f"{name}.log")
     if not os.path.exists(log_file):
         return {"logs": "Log file not found."}
-    with open(log_file, "r", encoding="utf-8") as f:
+    with open(log_file, "r", encoding="utf-8", errors="replace") as f:
         # Son 100 satırı çek
         lines = f.readlines()
         return {"logs": "".join(lines[-100:])}
@@ -93,9 +94,9 @@ async def get_logs(name: str):
 async def exec_zimaos(command: str = Body(..., embed=True)):
     """ZimaOS (192.168.1.186) üzerinde SSH üzerinden komut çalıştırır."""
     try:
-        # Nexus Windows Protocol: ssh -i ~/.ssh/zimaos_key dean@192.168.1.186 "command"
+        # Encoding UTF-8 zorunlu
         ssh_cmd = f'ssh -i ~/.ssh/zimaos_key -o ConnectTimeout=5 dean@192.168.1.186 "{command}"'
-        result = subprocess.run(ssh_cmd, shell=True, capture_output=True, text=True)
+        result = subprocess.run(ssh_cmd, shell=True, capture_output=True, text=True, encoding='utf-8', errors='replace')
         return {
             "stdout": result.stdout,
             "stderr": result.stderr,
@@ -106,5 +107,5 @@ async def exec_zimaos(command: str = Body(..., embed=True)):
 
 if __name__ == "__main__":
     import uvicorn
-    # Default admin port 4700
-    uvicorn.run("main:app", host="0.0.0.0", port=4700, reload=True)
+    # Port 4900'e taşındı
+    uvicorn.run("main:app", host="0.0.0.0", port=4900, reload=True)

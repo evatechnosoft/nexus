@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus Master Hub Portal v3.1</title>
+    <title>Nexus Master Hub Portal v3.2</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -24,7 +24,6 @@
             overflow-x: hidden;
         }
 
-        /* --- SİDEBAR --- */
         .sidebar {
             width: 280px;
             height: 100vh;
@@ -39,46 +38,41 @@
 
         .main-content { margin-left: 280px; padding: 2rem; }
 
-        /* --- SATELLITE CARDS --- */
         .sat-card {
             background: var(--glass-bg);
             backdrop-filter: blur(10px);
             border: 1px solid var(--border);
             border-radius: 20px;
-            padding: 1.5rem;
+            padding: 1.2rem;
             transition: all 0.3s ease;
             cursor: pointer;
-            position: relative;
-            overflow: hidden;
         }
 
         .sat-card:hover {
             border-color: var(--neon-blue);
-            transform: translateY(-5px);
+            transform: translateY(-3px);
             background: rgba(30, 41, 59, 0.6);
         }
 
         .sat-card.active { border-left: 4px solid var(--neon-green); }
 
         .indicator {
-            width: 12px; height: 12px; border-radius: 50%;
-            margin-bottom: 10px;
-            transition: all 0.3s ease;
+            width: 10px; height: 10px; border-radius: 50%;
+            margin-bottom: 8px;
         }
         .on { background: var(--neon-green); box-shadow: 0 0 10px var(--neon-green); }
         .off { background: #475569; }
 
-        /* --- DASHBOARD ELEMENTS --- */
         .doctor-box {
             background: #000;
             border-radius: 12px;
             padding: 1rem;
             font-family: 'Consolas', monospace;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #94a3b8;
-            max-height: 400px;
             overflow-y: auto;
             border: 1px solid var(--border);
+            white-space: pre-wrap;
         }
 
         .btn-ignite {
@@ -91,26 +85,19 @@
             letter-spacing: 2px;
             transition: all 0.3s;
         }
-        .btn-ignite:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
-        }
-
-        .log-line { border-left: 2px solid var(--border); padding-left: 10px; margin-bottom: 5px; font-size: 0.75rem; }
     </style>
 </head>
 <body>
 
     <div class="sidebar">
         <div class="h4 fw-black text-white" style="letter-spacing: 4px;">NEXUS HUB</div>
-        <div class="text-muted small">v3.1 Final Core</div>
+        <div class="text-muted small">v3.2 Master Core</div>
         <hr class="opacity-10">
         
         <nav class="nav flex-column gap-2">
             <a class="nav-link text-white active" href="#"><i class="fas fa-th-large me-2"></i> Dashboard</a>
-            <a class="nav-link text-muted" href="#"><i class="fas fa-stethoscope me-2"></i> System Doctor</a>
-            <a class="nav-link text-muted" href="#"><i class="fas fa-terminal me-2"></i> Log Viewer</a>
-            <a class="nav-link text-muted" href="#"><i class="fas fa-vault me-2"></i> Vault Manager</a>
+            <a class="nav-link text-muted" href="#"><i class="fas fa-stethoscope me-2"></i> Health</a>
+            <a class="nav-link text-muted" href="#"><i class="fas fa-terminal me-2"></i> Console</a>
         </nav>
 
         <div class="mt-auto">
@@ -121,88 +108,76 @@
     </div>
 
     <div class="main-content">
-        <div class="d-flex justify-content-between align-items-center mb-5">
-            <h2 class="fw-bold"><i class="fas fa-satellite-dish me-3 text-info"></i> Master Satellite Control</h2>
-            <div id="status-badge" class="badge bg-success rounded-pill p-2 px-3">System Healthy</div>
-        </div>
+        <h2 class="fw-bold mb-4"><i class="fas fa-satellite-dish me-3 text-info"></i> Master Control</h2>
 
         <!-- SATELLITE GRID -->
-        <div id="sat-grid" class="row g-4 mb-5">
-            <!-- JS will inject cards here -->
+        <div id="sat-grid" class="row g-3 mb-5">
+            <!-- JS Inject -->
         </div>
 
-        <div class="row">
-            <!-- DOCTOR REPORT -->
-            <div class="col-md-6">
+        <div class="row g-4">
+            <!-- 1. HEALTH -->
+            <div class="col-md-4">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h5 class="fw-bold mb-0">System Health (Doctor)</h5>
-                    <button class="btn btn-sm btn-outline-info" onclick="runDoctor()">Run Checkup</button>
+                    <h6 class="fw-bold mb-0 text-info">SYSTEM HEALTH</h6>
+                    <button class="btn btn-sm btn-outline-info border-0" onclick="runDoctor()"><i class="fas fa-sync"></i></button>
                 </div>
-                <div class="doctor-box" id="doctor-report">
-                    Scanning system integrity...
+                <div class="doctor-box" id="doctor-report" style="height: 400px;">
+                    Scanning...
                 </div>
             </div>
 
-            <!-- ZIMAOS COMMAND CENTER -->
-            <div class="col-md-6">
+            <!-- 2. LOGS -->
+            <div class="col-md-4">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h5 class="fw-bold mb-0 text-warning"><i class="fas fa-server me-2"></i> ZimaOS Command Center</h5>
+                    <h6 class="fw-bold mb-0 text-success">SATELLITE LOGS: <span id="active-log-name">-</span></h6>
+                </div>
+                <div class="doctor-box" id="live-logs" style="color: #10b981; height: 400px;">
+                    Select satellite for logs.
+                </div>
+            </div>
+
+            <!-- 3. ZIMAOS -->
+            <div class="col-md-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h6 class="fw-bold mb-0 text-warning">ZIMAOS BRIDGE</h6>
                     <span class="badge bg-dark border border-warning text-warning small">192.168.1.186</span>
                 </div>
-                <div class="input-group mb-2">
-                    <span class="input-group-text bg-dark border-secondary text-warning small">dean@zimaos:~$</span>
-                    <input type="text" id="zima-cmd" class="form-control bg-dark text-white border-secondary small" placeholder="Enter remote command...">
-                    <button class="btn btn-warning btn-sm px-3" onclick="execZima()"><i class="fas fa-paper-plane"></i></button>
-                </div>
-                <div class="doctor-box" id="zima-output" style="color: #fbbf24; height: 320px;">
-                    Remote console ready.
+                <input type="text" id="zima-cmd" class="form-control bg-dark text-white border-secondary small mb-2" placeholder="Command + Enter">
+                <div class="doctor-box" id="zima-output" style="color: #fbbf24; height: 358px;">
+                    Remote ready.
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        async function execZima() {
-            const cmd = document.getElementById('zima-cmd').value;
-            if(!cmd) return;
-            const output = document.getElementById('zima-output');
-            output.innerText += `\n> ${cmd}\nExecuting...`;
-            
-            try {
-                const r = await fetch('/api/zimaos/exec', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ command: cmd })
-                });
-                const data = await r.json();
-                output.innerText += `\n${data.stdout}${data.stderr}`;
-                output.scrollTop = output.scrollHeight;
-                document.getElementById('zima-cmd').value = '';
-            } catch (e) { output.innerText += `\nError: ${e}`; }
-        }
         async function loadSatellites() {
-            const r = await fetch('/api/satellites');
-            const data = await r.json();
-            const grid = document.getElementById('sat-grid');
-            grid.innerHTML = '';
+            try {
+                const r = await fetch('/api/satellites');
+                const data = await r.json();
+                const grid = document.getElementById('sat-grid');
+                grid.innerHTML = '';
 
-            Object.entries(data).forEach(([name, info]) => {
-                const col = document.createElement('div');
-                col.className = 'col-md-4';
-                col.innerHTML = `
-                    <div class="sat-card ${info.enabled ? 'active' : ''}" onclick="toggleSatellite('${name}', ${!info.enabled})">
-                        <div class="indicator ${info.enabled ? 'on' : 'off'}"></div>
-                        <h5 class="fw-bold text-white mb-1">${name.replace('nexus-', '').toUpperCase()}</h5>
-                        <p class="text-muted small mb-0">${info.role}</p>
-                        <div class="mt-3 d-flex justify-content-between align-items-center">
-                            <span class="badge bg-dark border border-secondary text-info">${info.port || 'Worker'}</span>
-                            <i class="fas fa-cog opacity-25"></i>
+                Object.entries(data).forEach(([name, info]) => {
+                    const col = document.createElement('div');
+                    col.className = 'col-md-4';
+                    col.innerHTML = `
+                        <div class="sat-card ${info.enabled ? 'active' : ''}" onclick="loadLogs('${name}')">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <div class="indicator ${info.enabled ? 'on' : 'off'}"></div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" ${info.enabled ? 'checked' : ''} 
+                                        onclick="event.stopPropagation(); toggleSatellite('${name}', this.checked)">
+                                </div>
+                            </div>
+                            <h6 class="fw-bold text-white mb-1">${name.replace('nexus-', '').toUpperCase()}</h6>
+                            <p class="text-muted small mb-0" style="font-size: 0.65rem;">${info.role}</p>
                         </div>
-                    </div>
-                `;
-                col.onclick = () => loadLogs(name); // Tıklandığında logları da çek
-                grid.appendChild(col);
-            });
+                    `;
+                    grid.appendChild(col);
+                });
+            } catch (e) { console.error(e); }
         }
 
         async function toggleSatellite(name, enabled) {
@@ -214,25 +189,49 @@
             loadSatellites();
         }
 
-        async function ignite() {
-            const r = await fetch('/api/system/ignite', { method: 'POST' });
-            alert('Ignition signal sent to Hub Core!');
+        async function loadLogs(name) {
+            document.getElementById('active-log-name').innerText = name.toUpperCase();
+            const r = await fetch(`/api/system/logs/${name}`);
+            const data = await r.json();
+            const logBox = document.getElementById('live-logs');
+            logBox.innerText = data.logs;
+            logBox.scrollTop = logBox.scrollHeight;
         }
 
+        async function execZima() {
+            const input = document.getElementById('zima-cmd');
+            const cmd = input.value;
+            if(!cmd) return;
+            const output = document.getElementById('zima-output');
+            output.innerText += `\n$ ${cmd}\n`;
+            
+            const r = await fetch('/api/zimaos/exec', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ command: cmd })
+            });
+            const data = await r.json();
+            output.innerText += `${data.stdout}${data.stderr}`;
+            output.scrollTop = output.scrollHeight;
+            input.value = '';
+        }
+
+        document.getElementById('zima-cmd').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') execZima();
+        });
+
         async function runDoctor() {
-            document.getElementById('doctor-report').innerText = 'Doctor is performing checkup...';
+            document.getElementById('doctor-report').innerText = 'Running...';
             const r = await fetch('/api/system/doctor');
             const data = await r.json();
             document.getElementById('doctor-report').innerText = data.output;
         }
 
-        async function loadLogs(name) {
-            const r = await fetch(`/api/system/logs/${name}`);
-            const data = await r.json();
-            document.getElementById('live-logs').innerText = data.logs;
+        async function ignite() {
+            await fetch('/api/system/ignite', { method: 'POST' });
+            alert('Ignition Signal Sent!');
         }
 
-        // Init
         document.addEventListener('DOMContentLoaded', () => {
             loadSatellites();
             runDoctor();
