@@ -3,6 +3,18 @@ import sys
 import os
 import subprocess
 import json
+import urllib.request
+
+def check_nexus_health():
+    """Nexus Hub sunucusunun sağlık durumunu kontrol eder."""
+    url = "http://192.168.1.186:8900/health"
+    try:
+        with urllib.request.urlopen(url, timeout=1) as response:
+            if response.getcode() == 200:
+                return True
+    except Exception:
+        pass
+    return False
 
 def check_branch():
     """Branch kontrolü yapar. 'dev' veya 'prod' ise Exit 2 ile engeller."""
@@ -17,6 +29,11 @@ def check_branch():
 
 def handle_pre_use():
     """Tool çalışmadan önce tetiklenir."""
+    # Nexus Sunucu Sağlığı Kontrolü
+    if not check_nexus_health():
+        print("⚠️ [NEXUS HOOK ALERT] Nexus Hub Sunucusu (192.168.1.186:8900) ulaşılamaz!")
+        print("👉 Lütfen ZimaOS üzerindeki servisleri kontrol et.")
+    
     # Sadece dosya değiştiren komutlarda veya Bash'te çalışsın (örnek olarak tümünde branch kontrolü)
     check_branch()
     print("✅ [NEXUS HOOK] Pre-Use Validation Passed.")

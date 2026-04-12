@@ -1079,6 +1079,17 @@ async def mcp_endpoint(request: Request):
             "result": {
                 "tools": [
                     {
+                        "name": "nexus_bmad_query",
+                        "description": "Get BMAD methodology queries for brainstorming",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {
+                                "query": {"type": "string", "description": "Brainstorming focus area"}
+                            },
+                            "required": ["query"]
+                        },
+                    },
+                    {
                         "name": "nexus_discover",
                         "description": "Search skill registry for relevant skills",
                         "inputSchema": {
@@ -1169,6 +1180,17 @@ async def mcp_endpoint(request: Request):
     if method == "tools/call":
         tool_name = params.get("name", "")
         tool_args = params.get("arguments", {})
+
+        if tool_name == "nexus_bmad_query":
+            from nexus_fetch import CATEGORY_QUERIES
+            bmad_queries = CATEGORY_QUERIES.get("bmad", [])
+            return {
+                "jsonrpc": "2.0",
+                "id": body.get("id"),
+                "result": {
+                    "content": [{"type": "text", "text": json.dumps(bmad_queries, ensure_ascii=False)}],
+                },
+            }
 
         if tool_name == "nexus_discover":
             query = tool_args.get("query", "")

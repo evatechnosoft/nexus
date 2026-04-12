@@ -126,8 +126,19 @@ class RetryPolicy:
 
 
 # ============================================================================
-# HELPERS
+# PATH HELPERS
 # ============================================================================
+
+class NexusPathLoader:
+    """Cross-platform Path resolution for Nexus Hub."""
+    @staticmethod
+    def to_nexus_path(path_str: str) -> Path:
+        """Converts any path string to a platform-consistent Path."""
+        if os.name != 'nt':
+            path_str = path_str.replace('\\', '/')
+        else:
+            path_str = path_str.replace('/', '\\')
+        return Path(path_str)
 
 
 def hash_content(content: str) -> str:

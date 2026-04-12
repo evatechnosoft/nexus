@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nexus Intelligence Dashboard</title>
+    <style>
+        body { font-family: sans-serif; background: #121212; color: #eee; padding: 20px; }
+        .report-card { background: #1e1e1e; padding: 15px; margin-bottom: 10px; border-left: 4px solid #4CAF50; }
+        h1 { color: #4CAF50; }
+    </style>
+</head>
+<body>
+    <h1>Tiasmam Intelligence Reports</h1>
+    <div id="reports">Loading reports...</div>
+    <script>
+        fetch('/api/curator/intelligence')
+            .then(r => r.json())
+            .then(data => {
+                const container = document.getElementById('reports');
+                container.innerHTML = data.reports.map(r => 
+                    `<div class="report-card"><h3>${r.title}</h3><p>${r.content}</p></div>`
+                ).join('');
+            });
+    </script>
+</body>
+</html>

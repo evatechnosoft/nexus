@@ -35,6 +35,10 @@ templates = Jinja2Templates(directory=TEMPLATES_DIR)
 async def read_admin_dashboard(request: Request):
     return templates.TemplateResponse(request, "index.html")
 
+@app.get("/intelligence", response_class=HTMLResponse)
+async def read_intelligence_dashboard(request: Request):
+    return templates.TemplateResponse(request, "intelligence_dashboard.html")
+
 # --- SATELLITE MANAGEMENT ---
 
 @app.get("/api/satellites")
@@ -67,7 +71,20 @@ async def ignite_satellites():
     except Exception as e:
         return {"status": "error", "message": str(e)}
 
-# --- SYSTEM MONITORING ---
+# --- CURATOR DASHBOARD ---
+
+@app.get("/api/curator/intelligence")
+async def get_intelligence():
+    """Curator tarafından işlenmiş raporları listeler."""
+    reports_dir = os.path.join(BASE_DIR, "satellites", "nexus-curator", "processed")
+    reports = []
+    if os.path.exists(reports_dir):
+        files = sorted(os.listdir(reports_dir), reverse=True)[:5]
+        for f in files:
+            path = os.path.join(reports_dir, f)
+            with open(path, "r", encoding="utf-8") as file:
+                reports.append({"title": f, "content": file.read()[:500] + "..."})
+    return {"reports": reports}
 
 @app.get("/api/system/doctor")
 async def run_doctor():

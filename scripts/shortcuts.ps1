@@ -1,7 +1,7 @@
 # Nexus Hub Interactive G-System (Windows PowerShell) v3.4
 # Kullanım: . .\scripts\shortcuts.ps1
 
-function n-compress { python scripts/nexus-compress.py }
+function n-c { python scripts/nexus-compress.py }
 function n-sync { python scripts/nexus-sync.py build }
 function n-doctor { python scripts/nexus-doctor.py }
 function n-index { python core/build_skill_index.py }
