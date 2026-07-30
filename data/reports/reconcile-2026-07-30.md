@@ -1,5 +1,5 @@
 # Nexus Nightly Reconcile — 2026-07-30
-Started: 16:53:42 UTC
+Started: 17:00:07 UTC
 Nexus: offline (GitHub-only mode)
 
 Local files scanned : 235
@@ -8,8 +8,8 @@ Missing on GitHub   : 235
 GitHub push         : push failed: HTTP Error 422: Unprocessable Entity
 Nexus sync          : skipped (offline) — will sync on next session start
 
-Duration : 52.7s
-Finished : 16:54:31 UTC
+Duration : 35.8s
+Finished : 17:00:39 UTC
 
 ## Summary
 - Local files   : 235
